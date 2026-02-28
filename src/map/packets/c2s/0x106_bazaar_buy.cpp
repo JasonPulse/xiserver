@@ -73,7 +73,7 @@ void GP_CLI_COMMAND_BAZAAR_BUY::process(MapSession* PSession, CCharEntity* PChar
     {
         PChar->pushPacket<GP_SERV_COMMAND_BAZAAR_BUY>(PTarget, GP_BAZAAR_BUY_STATE::ERR);
 
-        if (settings::get<bool>("logging.DEBUG_BAZAARS") && PChar->id == PTarget->id)
+        if (settings::get<bool>("logging.DEBUG_BAZAARS"))
         {
             if (PChar->id == PTarget->id)
             {
@@ -164,7 +164,7 @@ void GP_CLI_COMMAND_BAZAAR_BUY::process(MapSession* PSession, CCharEntity* PChar
         charutils::UpdateItem(PTarget, LOC_INVENTORY, this->BazaarItemIndex, -static_cast<int32>(this->BuyNum));
 
         PTarget->pushPacket<GP_SERV_COMMAND_ITEM_ATTR>(PBazaar->GetItem(this->BazaarItemIndex), LOC_INVENTORY, this->BazaarItemIndex);
-        PTarget->pushPacket<GP_SERV_COMMAND_ITEM_SAME>();
+        PTarget->pushPacket<GP_SERV_COMMAND_ITEM_SAME>(PTarget);
 
         DebugBazaarsFmt("Bazaar Interaction [Purchase Successful] - Buyer: {}, Seller: {}, Item: {}, Qty: {}, Cost: {}", PChar->name, PTarget->name, PItem->getName(), this->BuyNum, PriceWithTax);
 

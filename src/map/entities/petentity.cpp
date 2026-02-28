@@ -51,8 +51,8 @@ CPetEntity::CPetEntity(PET_TYPE petType)
 , m_PetID(0)
 , m_PetType(petType)
 , m_spawnLevel(0)
-, m_jugSpawnTime(timer::time_point::min())
-, m_jugDuration(timer::duration::min())
+, m_jugSpawnTime(timer::time_point{})
+, m_jugDuration(timer::duration{})
 {
     TracyZoneScoped;
     objtype                     = TYPE_PET;
@@ -607,9 +607,16 @@ void CPetEntity::OnPetSkillFinished(CPetSkillState& state, action_t& action)
 
     if (PTarget)
     {
-        if (PTarget->objtype == TYPE_MOB && (PTarget->isDead() || (this->getPetType() == PET_TYPE::AVATAR)))
+        if (PTarget->objtype == TYPE_MOB && PTarget->allegiance != this->allegiance)
         {
-            battleutils::ClaimMob(PTarget, this);
+            bool isAvatar      = (this->getPetType() == PET_TYPE::AVATAR);
+            bool isAtomosSkill = (PSkill->getID() == ABILITY_DECONSTRUCTION);
+            bool isDead        = PTarget->isDead();
+
+            if (isDead || (isAvatar && !isAtomosSkill))
+            {
+                battleutils::ClaimMob(PTarget, this);
+            }
         }
         battleutils::DirtyExp(PTarget, this);
     }

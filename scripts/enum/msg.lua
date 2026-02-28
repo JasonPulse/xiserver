@@ -158,7 +158,7 @@ xi.msg.basic =
     USES_JA_TAKE_DAMAGE             = 317, -- The <player> uses .. <target> takes .. points of damage.
     JA_GAIN_EFFECT                  = 266, -- <target> gains the effect of <ability>.
     JA_RECEIVES_EFFECT              = 267, -- <target> receives the effect of <status>.
-    JA_GAIN_EFFECT_2                = 316, -- <user> uses <ability>. <target> gains the effect of <effect>.
+    JA_GAIN_EFFECT_2                = 319, -- <user> uses <ability>. <target> gains the effect of <effect>.
     JA_RECEIVES_EFFECT_2            = 320, -- <user> uses <ability>. <target> receives the effect of <status>.
     JA_RECEIVES_MAB_MDB             = 415, -- <user> uses <ability>. <target> receives the effect of Magic Attack Boost and Magic Defense Boost.
     JA_RECEIVES_MAB_MDB_2           = 414, -- <target> receives the effect of Magic Attack Boost and Magic Defense Boost.
@@ -181,6 +181,7 @@ xi.msg.basic =
 
     -- "Fortified against" messages
     FORTIFIED_DEMONS                = 149, -- <target> is fortified against demons.
+    USES_ABILITY_FORTIFIED_DRAGONS  = 150, -- <user> uses <ability>. <target> is fortified against dragons.
     FORTIFIED_DRAGONS               = 151, -- <target> is fortified against dragons.
     FORTIFIED_UNDEAD                = 286, -- <target> is fortified against undead.
     FORTIFIED_ARCANA                = 287, -- <target> is fortified against arcana.
@@ -208,6 +209,9 @@ xi.msg.basic =
     FAMILIAR_MOB                    = 109, -- The <mob> uses .. Pet's powers increase!
     STEAL_SUCCESS                   = 125, -- <user> uses <ability>. <user> steals <item> from <target>.
     MUG_SUCCESS                     = 129, -- <user> uses <ability>. <user> mugs <amount> gil from <target>.
+    SCAVENGE_FIND_NOTHING           = 139, -- <user> uses <ability>, but finds nothing.
+    SCAVENGE_FIND_ITEM              = 140, -- <user> uses <ability>, and finds <item>.
+    SCAVENGE_FIND_ITEMS             = 674, -- <user> uses <ability>, and finds <quantity> <item>.
     STEAL_FAIL                      = 153, -- <user> uses <ability>. <user> fails to steal from <target>.
     CANNOT_ON_THAT_TARG             = 155, -- You cannot perform that action on the specified target.
     REQUIRES_SHIELD                 = 199, -- That action requires a shield.
@@ -233,6 +237,8 @@ xi.msg.basic =
     STEAL_EFFECT                    = 453, -- <user> uses <ability>. <user> steals the effect of <status> from <target>.
     REQUIRES_COMBAT                 = 525, -- .. can only be performed during battle.
     STATUS_PREVENTS                 = 569, -- Your current status prevents you from using that ability.
+    MAGIC_EFFECT_DRAINED            = 737, -- <num> of the <target>'s magic effects is drained. most likely only used for Atomos (can only absorb 1 effect)
+    RECEIVE_MAGICAL_EFFECT          = 739, -- <player> receives <num> magical effect. most likely only used for Atomos (can only absorb 1 effect)
     OBTAINED_KEY_ITEM               = 758, -- Obtained key item: <key item>.
     ALREADY_HAVE_KEY_ITEM           = 759, -- You already have key item: <key item>.
 
@@ -259,6 +265,7 @@ xi.msg.basic =
     STATUS_INCREASED                = 562, -- The status parameters of <target> have increased.
     PET_CANNOT_DO_ACTION            = 574, -- <player>'s pet is currently unable to perform that action.
     PET_NOT_ENOUGH_TP               = 575, -- <player>'s pet does not have enough TP to perform that action.
+    PET_MAGIC_BURST                 = 747, -- <pet> uses <skill>. Magic Burst! <target> takes <number> points of damage.
     SPIRIT_BOND                     = 800, -- Spirit Bond Activates. <Player> takes <number> points of damage. -- Wyvern Spirit bond
 
     -- Food

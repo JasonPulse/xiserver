@@ -2022,7 +2022,11 @@ int32 TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHY
         damage = -corrected;
     }
 
-    battleutils::ClaimMob(PDefender, PAttacker);
+    // Only claim a mob and if the allegiance is not PLAYER. This prevents mobs from calling ClaimMob on other mobs or themselves.
+    if (PDefender->objtype == TYPE_MOB && PDefender->allegiance != PAttacker->allegiance)
+    {
+        battleutils::ClaimMob(PDefender, PAttacker);
+    }
 
     if (damage > 0)
     {
@@ -2108,7 +2112,7 @@ int32 TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHY
             auto* sub_weapon = dynamic_cast<CItemWeapon*>(PAttacker->m_Weapons[SLOT_SUB]);
 
             if (sub_weapon && sub_weapon->getDmgType() > DAMAGE_TYPE::NONE && sub_weapon->getDmgType() < DAMAGE_TYPE::HTH &&
-                weapon->getSkillType() != SKILL_HAND_TO_HAND)
+                weapon && weapon->getSkillType() != SKILL_HAND_TO_HAND)
             {
                 delay = delay / 2;
             }
@@ -3073,8 +3077,8 @@ uint8 CheckMultiHits(CBattleEntity* PEntity, CItemWeapon* PWeapon)
         num += 1;
     }
 
-    // hasso occasionally triggers Zanshin after landing a normal attack, only active while Samurai is set as Main
-    if (PEntity->GetMJob() == JOB_SAM)
+    // Hasso Zanshin bonus: requires HASSO_ZANSHIN_BONUS mod (applied by Hasso effect when SAM is main job)
+    if (PEntity->getMod(Mod::HASSO_ZANSHIN_BONUS) > 0)
     {
         if (PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_HASSO))
         {
@@ -3467,6 +3471,11 @@ auto GetSkillChainEffect(const CBattleEntity* PDefender, uint8 primary, uint8 se
         }
     }
 
+    if (!PSCEffect)
+    {
+        return ActionProcSkillChain::None;
+    }
+
     Mod resistanceRankMods[] = { Mod::FIRE_RES_RANK, Mod::ICE_RES_RANK, Mod::WIND_RES_RANK, Mod::EARTH_RES_RANK, Mod::THUNDER_RES_RANK, Mod::ICE_RES_RANK, Mod::LIGHT_RES_RANK, Mod::DARK_RES_RANK };
 
     // Reset the effects resistance rank mods
@@ -3838,7 +3847,7 @@ CItemWeapon* GetEntityWeapon(CBattleEntity* PEntity, SLOTTYPE Slot)
         return nullptr;
     }
 
-    return dynamic_cast<CItemWeapon*>(((CMobEntity*)PEntity)->m_Weapons[Slot]);
+    return dynamic_cast<CItemWeapon*>(PEntity->m_Weapons[Slot]);
 }
 
 void MakeEntityStandUp(CBattleEntity* PEntity)
@@ -3958,7 +3967,7 @@ bool HasNinjaTool(CBattleEntity* PEntity, CSpell* PSpell, bool ConsumeTool)
         {
             // Futae Takes 2 of Your Tools
             charutils::UpdateItem(PChar, LOC_INVENTORY, SlotID, -2);
-            PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>();
+            PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>(PChar);
         }
         else
         {
@@ -3974,7 +3983,7 @@ bool HasNinjaTool(CBattleEntity* PEntity, CSpell* PSpell, bool ConsumeTool)
             if (ConsumeTool && xirand::GetRandomNumber(100) > chance)
             {
                 charutils::UpdateItem(PChar, LOC_INVENTORY, SlotID, -1);
-                PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>();
+                PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>(PChar);
             }
         }
     }
@@ -4483,10 +4492,13 @@ void ClaimMob(CBattleEntity* PDefender, CBattleEntity* PAttacker, bool passing)
 {
     TracyZoneScoped;
 
-    if (PDefender == nullptr ||
-        (PDefender && PDefender->objtype != ENTITYTYPE::TYPE_MOB) ||                                                   // Do not try to claim anything but mobs (trusts, pets, players don't count)
-        (PDefender && PDefender->objtype == ENTITYTYPE::TYPE_MOB && PDefender->allegiance == ALLEGIANCE_TYPE::PLAYER)) // Added mobs that are in allied with player
-    {
+    if (PDefender == nullptr || (PDefender && PDefender->objtype != TYPE_MOB))
+    { // Do not try to claim anything but mobs (trusts, pets, players don't count)
+        return;
+    }
+
+    if (PDefender && PDefender->objtype == TYPE_MOB && PDefender->allegiance == PAttacker->allegiance)
+    { // mobs that are allied with the attacker do not need to be claimed and will not update enmity
         return;
     }
 
@@ -4913,7 +4925,7 @@ float HandleTranquilHeart(CBattleEntity* PEntity)
     if (PEntity->objtype == TYPE_PC && charutils::hasTrait((CCharEntity*)PEntity, TRAIT_TRANQUIL_HEART))
     {
         int16 healingSkill = PEntity->GetSkill(SKILL_HEALING_MAGIC);
-        reductionPercent   = ((healingSkill / 10) * .5f);
+        reductionPercent   = ((healingSkill / 10.0f) * 0.5f);
 
         // Reduction Percent Caps at 25%
         if (reductionPercent > 25)
@@ -6231,13 +6243,13 @@ bool RemoveAmmo(CCharEntity* PChar, int quantity)
             charutils::UnequipItem(PChar, SLOT_AMMO);
             PChar->RequestPersist(CHAR_PERSIST::EQUIP);
             charutils::UpdateItem(PChar, loc, slot, -quantity);
-            PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>();
+            PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>(PChar);
             return true;
         }
         else
         {
             charutils::UpdateItem(PChar, PChar->equipLoc[SLOT_AMMO], PChar->equip[SLOT_AMMO], -quantity);
-            PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>();
+            PChar->pushPacket<GP_SERV_COMMAND_ITEM_SAME>(PChar);
             return false;
         }
     }

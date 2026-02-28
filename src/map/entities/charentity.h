@@ -24,6 +24,8 @@
 
 #include "aman.h"
 #include "event_info.h"
+#include "gmcall_container.h"
+#include "inventory_sync_state.h"
 #include "item_container.h"
 #include "map_session.h"
 #include "monstrosity.h"
@@ -35,6 +37,7 @@
 #include <bitset>
 #include <deque>
 #include <map>
+#include <set>
 #include <unordered_map>
 #include <unordered_set>
 
@@ -539,6 +542,8 @@ public:
     // The character is in ANY Mog House (their own or someone else's)
     auto inMogHouse() const -> bool;
 
+    auto gmCallContainer() -> GMCallContainer&;
+
     CharHistory_t m_charHistory{};
 
     int8  getShieldSize();
@@ -550,13 +555,12 @@ public:
     bool getBlockingAid() const;
     void setBlockingAid(bool isBlockingAid);
 
-    // Send updates about dirty containers in post tick
-    std::map<CONTAINER_ID, bool> dirtyInventoryContainers;
-
-    bool              m_EquipSwap; // true if equipment was recently changed
     bool              m_EffectsChanged;
     timer::time_point m_LastSynthTime{};
     timer::time_point m_LastRangedAttackTime{};
+
+    void flushEquipChanges();
+    auto inventorySyncState() -> InventorySyncState&;
 
     CHAR_SUBSTATE m_Substate;
 
@@ -651,7 +655,7 @@ public:
     virtual void           OnDeathTimer() override;
     virtual void           OnRaise() override;
 
-    virtual void OnItemFinish(CItemState&, action_t&);
+    virtual auto OnItemFinish(CItemState&, action_t&) -> bool;
 
     auto getCharVar(const std::string& varName) const -> int32;
     auto getCharVarsWithPrefix(const std::string& prefix) -> std::vector<std::pair<std::string, int32>>;
@@ -677,6 +681,7 @@ protected:
 private:
     // Lazily initialized AMAN data
     xi::optional<CAMANContainer> m_AMAN;
+    GMCallContainer              gmCallContainer_;
 
     std::unique_ptr<CItemContainer> m_Inventory;
     std::unique_ptr<CItemContainer> m_Mogsafe;
@@ -700,6 +705,8 @@ private:
     bool m_isStyleLocked;
     bool m_isBlockingAid;
     bool m_reloadParty;
+
+    InventorySyncState inventorySyncState_;
 
     mutable std::unordered_map<std::string, std::pair<int32, uint32>> charVarCache;
     std::unordered_set<std::string>                                   charVarChanges;
