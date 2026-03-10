@@ -12994,7 +12994,7 @@ INSERT INTO `mob_spawn_points` VALUES (17010693,0,'Llamhigyn_Y_Dwr','Llamhigyn Y
 INSERT INTO `mob_spawn_points` VALUES (17010694,0,'Giant_Orobon','Giant Orobon',6,78,83,1.000,1.000,1.000,0);
 
 -- ISMN: Call to Arms
-INSERT INTO `mob_spawn_points` VALUES (17010695,0,'Imp_Bandsman','Imp Bandsman',7,63,64,0.-180,39.5,185,65);
+INSERT INTO `mob_spawn_points` VALUES (17010695,0,'Imp_Bandsman','Imp Bandsman',7,63,64,-180,39.5,185,65);
 INSERT INTO `mob_spawn_points` VALUES (17010696,0,'Imp_Bandsman_Add','Imp Bandsman',15,60,61,-180,39.5,185,65);
 INSERT INTO `mob_spawn_points` VALUES (17010697,0,'Imp_Bandsman_Add','Imp Bandsman',15,60,61,-180,39.5,185,65);
 INSERT INTO `mob_spawn_points` VALUES (17010698,0,'Imp_Bandsman_Add','Imp Bandsman',15,60,61,-180,39.5,185,65);
