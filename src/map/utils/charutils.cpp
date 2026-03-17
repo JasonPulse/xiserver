@@ -5510,7 +5510,7 @@ void AddExperiencePoints(bool expFromRaise, CCharEntity* PChar, CBaseEntity* PMo
 {
     TracyZoneScoped;
 
-    if (PChar->isDead())
+    if (PChar->isDead() && !expFromRaise)
     {
         return;
     }
