@@ -18,7 +18,7 @@ local zoneObject = {}
 -- it's not like he's supposed to re-zone every in game hour.
 
 -- Best we can tell, the zoneOnGameHour along with the scripts\globals\dark_ixion.lua xi.darkixion.repop() function
--- is what allows Dark Ixion 
+-- is what allows Dark Ixion
 --   To break the rule of "no loading zones and mobs if there are no players in them"
 --   Keeps him constnatly updating the Database `xidb`.`server_variables` table
 
