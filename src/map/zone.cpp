@@ -967,7 +967,6 @@ void CZone::CharZoneIn(CCharEntity* PChar)
     TracyZoneScoped;
 
     PChar->loc.zone        = this;
-    PChar->loc.zoning      = false;
     PChar->loc.destination = 0;
     PChar->clearTriggerAreas();
 
