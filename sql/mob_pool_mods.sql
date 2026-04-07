@@ -32,517 +32,548 @@ CREATE TABLE `mob_pool_mods` (
 LOCK TABLES `mob_pool_mods` WRITE;
 /*!40000 ALTER TABLE `mob_pool_mods` DISABLE KEYS */;
 
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `mob_pool_mods`
+(
+    `poolid`, `modid`, `value`, `is_mob_mod`
+)
+VALUES
 -- Absolute Virtue
-INSERT INTO `mob_pool_mods` VALUES (21,29,100,0); -- MDEF: 100
+    (21,29,100,0), -- MDEF: 100
 
 -- Adamantoise
-INSERT INTO `mob_pool_mods` VALUES (44,368,150,0); -- REGAIN: 150
+    (44,368,150,0), -- REGAIN: 150
 
 -- Agas
-INSERT INTO `mob_pool_mods` VALUES (60,370,20,0); -- REGEN: 20
+    (60,370,20,0), -- REGEN: 20
 
 -- Animated Shield
-INSERT INTO `mob_pool_mods` VALUES (154,163,-1250,0); -- DMGMAGIC: -1250
+    (154,163,-1250,0), -- DMGMAGIC: -1250
 
 -- Aspidochelone
-INSERT INTO `mob_pool_mods` VALUES (268,368,150,0); -- REGAIN: 150
-INSERT INTO `mob_pool_mods` VALUES (268,370,50,0);  -- REGEN: 50
+    (268,368,150,0), -- REGAIN: 150
+    (268,370,50,0),  -- REGEN: 50
 
 -- Aura Statue
-INSERT INTO `mob_pool_mods` VALUES (289,4,4,1); -- SIGHT_RANGE: 4
+    (289,4,4,1), -- SIGHT_RANGE: 4
 
 -- Battle Bugard
-INSERT INTO `mob_pool_mods` VALUES (370,28,5,1); -- EXP_BONUS: 5
+    (370,28,5,1), -- EXP_BONUS: 5
 
 -- Biast
-INSERT INTO `mob_pool_mods` VALUES (410,236,20,0); -- HUMANOID_KILLER: 20
+    (410,236,20,0), -- HUMANOID_KILLER: 20
 
 -- Bladmall
-INSERT INTO `mob_pool_mods` VALUES (444,23,23,1); -- IMMUNITY: 23
+    (444,23,23,1), -- IMMUNITY: 23
 
 -- Bloodlapper
-INSERT INTO `mob_pool_mods` VALUES (459,23,50,0);  -- ATT: 50
-INSERT INTO `mob_pool_mods` VALUES (459,73,25,0);  -- STORETP: 25
-INSERT INTO `mob_pool_mods` VALUES (459,430,20,0); -- QUAD_ATTACK: 20
+    (459,23,50,0),  -- ATT: 50
+    (459,73,25,0),  -- STORETP: 25
+    (459,430,20,0), -- QUAD_ATTACK: 20
 
 -- Bugbby
-INSERT INTO `mob_pool_mods` VALUES (559,62,-50,0);   -- ATTP: -50
+    (559,62,-50,0),   -- ATTP: -50
 -- Byakko
-INSERT INTO `mob_pool_mods` VALUES (592,3,100,1);  -- MP_BASE: 100
-INSERT INTO `mob_pool_mods` VALUES (592,68,15,0);  -- EVA: 15
-INSERT INTO `mob_pool_mods` VALUES (592,302,45,0); -- TRIPLE_ATTACK: 45
+    (592,3,100,1),  -- MP_BASE: 100
+    (592,68,15,0),  -- EVA: 15
+    (592,302,45,0), -- TRIPLE_ATTACK: 45
 
 -- Cargo Crab Colin
-INSERT INTO `mob_pool_mods` VALUES (639,63,25,0); -- DEFP: 25
+    (639,63,25,0), -- DEFP: 25
 
 -- Cerberus
-INSERT INTO `mob_pool_mods` VALUES (680,1,322,0);   -- DEF: 322
-INSERT INTO `mob_pool_mods` VALUES (680,31,200,0);  -- MEVA: 200
-INSERT INTO `mob_pool_mods` VALUES (680,251,-50,0); -- STUNRES: -50
+    (680,1,322,0),   -- DEF: 322
+    (680,31,200,0),  -- MEVA: 200
+    (680,251,-50,0), -- STUNRES: -50
 
 -- Citipati
-INSERT INTO `mob_pool_mods` VALUES (733,302,5,0); -- TRIPLE_ATTACK: 5
+    (733,302,5,0), -- TRIPLE_ATTACK: 5
 
 -- Colorful Treant
-INSERT INTO `mob_pool_mods` VALUES (768,28,5,1); -- EXP_BONUS: 5
+    (768,28,5,1), -- EXP_BONUS: 5
 
 -- Colossus
-INSERT INTO `mob_pool_mods` VALUES (770,4,4,1); -- SIGHT_RANGE: 4
+    (770,4,4,1), -- SIGHT_RANGE: 4
 
 -- Darksteel Golem
-INSERT INTO `mob_pool_mods` VALUES (906,4,4,1); -- SIGHT_RANGE: 4
+    (906,4,4,1), -- SIGHT_RANGE: 4
 
 -- Dea
-INSERT INTO `mob_pool_mods` VALUES (930,370,15,0); -- REGEN: 15
+    (930,370,15,0), -- REGEN: 15
 
 -- Defender
-INSERT INTO `mob_pool_mods` VALUES (955,28,-100,1); -- EXP_BONUS: -100
+    (955,28,-100,1), -- EXP_BONUS: -100
 
 -- Defoliate Treant
-INSERT INTO `mob_pool_mods` VALUES (958,28,5,1); -- EXP_BONUS: 5
+    (958,28,5,1), -- EXP_BONUS: 5
 
 -- Demonic Rose
-INSERT INTO `mob_pool_mods` VALUES (978,28,23,1); -- EXP_BONUS: 23
+    (978,28,23,1), -- EXP_BONUS: 23
 
 -- Demonic Tiphia
-INSERT INTO `mob_pool_mods` VALUES (979,8,60,1); -- HEAL_CHANCE: 60
-INSERT INTO `mob_pool_mods` VALUES (979,9,60,1); -- HP_HEAL_CHANCE: 60
+    (979,8,60,1), -- HEAL_CHANCE: 60
+    (979,9,60,1), -- HP_HEAL_CHANCE: 60
 
 -- Detector
-INSERT INTO `mob_pool_mods` VALUES (1013,28,-100,1); -- EXP_BONUS: -100
+    (1013,28,-100,1), -- EXP_BONUS: -100
 
 -- Effigy Prototype
-INSERT INTO `mob_pool_mods` VALUES (1178,163,-1000,0); -- DMGMAGIC: -1000
+    (1178,163,-1000,0), -- DMGMAGIC: -1000
 
 -- Enkidu
-INSERT INTO `mob_pool_mods` VALUES (1234,4,4,1); -- SIGHT_RANGE: 4
+    (1234,4,4,1), -- SIGHT_RANGE: 4
 
 -- Exoplates
-INSERT INTO `mob_pool_mods` VALUES (1270,39,-1,1); -- SHARE_POS: -1
+    (1270,39,-1,1), -- SHARE_POS: -1
 
 -- Fafnir
-INSERT INTO `mob_pool_mods` VALUES (1280,368,70,0); -- REGAIN: 70
+    (1280,368,70,0), -- REGAIN: 70
 
 -- Faust
-INSERT INTO `mob_pool_mods` VALUES (1306,4,30,1); -- SIGHT_RANGE: 30
+    (1306,4,30,1), -- SIGHT_RANGE: 30
 
 -- Frostmane
-INSERT INTO `mob_pool_mods` VALUES (1429,28,10,1); -- EXP_BONUS: 10
+    (1429,28,10,1), -- EXP_BONUS: 10
 
 -- Gambilox Wanderling
-INSERT INTO `mob_pool_mods` VALUES (1456,368,20,0); -- REGAIN: 20
+    (1456,368,20,0), -- REGAIN: 20
 
 -- Gargantua
-INSERT INTO `mob_pool_mods` VALUES (1461,4,4,1); -- SIGHT_RANGE: 4
+    (1461,4,4,1), -- SIGHT_RANGE: 4
 
 -- Genbu
-INSERT INTO `mob_pool_mods` VALUES (1491,3,100,1); -- MP_BASE: 100
+    (1491,3,100,1), -- MP_BASE: 100
 
 -- Gladiatorial Weapon
-INSERT INTO `mob_pool_mods` VALUES (1620,5,18,1);   -- SOUND_RANGE: 18
-INSERT INTO `mob_pool_mods` VALUES (1620,72,22,1);  -- MAGIC_RANGE: 22
+    (1620,5,18,1),   -- SOUND_RANGE: 18
+    (1620,72,22,1),  -- MAGIC_RANGE: 22
 
 -- Goblin Digger Near
-INSERT INTO `mob_pool_mods` VALUES (1648,17,1,1);  -- NO_DESPAWN: 1
-INSERT INTO `mob_pool_mods` VALUES (1648,224,5,0); -- VERMIN_KILLER: 5
+    (1648,17,1,1),  -- NO_DESPAWN: 1
+    (1648,224,5,0), -- VERMIN_KILLER: 5
 
 -- Goblin Freelance
-INSERT INTO `mob_pool_mods` VALUES (1663,29,3,1); -- ASSIST: 3
+    (1663,29,3,1), -- ASSIST: 3
 
 -- Goblin Swordsman
-INSERT INTO `mob_pool_mods` VALUES (1719,29,2,1); -- ASSIST: 2
+    (1719,29,2,1), -- ASSIST: 2
 
 -- Golden-Tongued Culberry
-INSERT INTO `mob_pool_mods` VALUES (1750,56,1,1); -- HP_STANDBACK: 1
+    (1750,56,1,1), -- HP_STANDBACK: 1
 
 -- Goliath
-INSERT INTO `mob_pool_mods` VALUES (1754,4,4,1); -- SIGHT_RANGE: 4
+    (1754,4,4,1), -- SIGHT_RANGE: 4
 
 -- Gration
-INSERT INTO `mob_pool_mods` VALUES (1792,368,70,0); -- REGAIN: 70
+    (1792,368,70,0), -- REGAIN: 70
 
 -- Greater Manticore
-INSERT INTO `mob_pool_mods` VALUES (1806,28,10,1); -- EXP_BONUS: 10
+    (1806,28,10,1), -- EXP_BONUS: 10
 
 -- Hydras Hound
-INSERT INTO `mob_pool_mods` VALUES (2032,34,20,1);  -- MAGIC_COOL: 20
-INSERT INTO `mob_pool_mods` VALUES (2032,35,0,1);   -- STANDBACK_COOL: 0
-INSERT INTO `mob_pool_mods` VALUES (2032,244,15,0); -- SILENCERES: 15
+    (2032,34,20,1),  -- MAGIC_COOL: 20
+    (2032,35,0,1),   -- STANDBACK_COOL: 0
+    (2032,244,15,0), -- SILENCERES: 15
 
 -- Icon Prototype
-INSERT INTO `mob_pool_mods` VALUES (2047,163,-1000,0); -- DMGMAGIC: -1000
+    (2047,163,-1000,0), -- DMGMAGIC: -1000
 
 -- Intulo
-INSERT INTO `mob_pool_mods` VALUES (2083,29,25,0); -- MDEF: 25
+    (2083,29,25,0), -- MDEF: 25
 
 -- Kaiser Behemoth S
-INSERT INTO `mob_pool_mods` VALUES (2180,3,100,1); -- MP_BASE: 100
+    (2180,3,100,1), -- MP_BASE: 100
 
 -- King Arthro
-INSERT INTO `mob_pool_mods` VALUES (2254,407,100,0); -- UFASTCAST: 100
+    (2254,407,100,0), -- UFASTCAST: 100
 
 -- King Behemoth
-INSERT INTO `mob_pool_mods` VALUES (2255,3,100,1);  -- MP_BASE: 100
-INSERT INTO `mob_pool_mods` VALUES (2255,34,60,1);  -- MAGIC_COOL: 60
-INSERT INTO `mob_pool_mods` VALUES (2255,368,70,0); -- REGAIN: 70
+    (2255,3,100,1),  -- MP_BASE: 100
+    (2255,34,60,1),  -- MAGIC_COOL: 60
+    (2255,368,70,0), -- REGAIN: 70
 
 -- King Vinegarroon
-INSERT INTO `mob_pool_mods` VALUES (2262,370,125,0); -- REGEN: 125
+    (2262,370,125,0), -- REGEN: 125
 
 -- Kirin
-INSERT INTO `mob_pool_mods` VALUES (2265,368,150,0); -- REGAIN: 150
-INSERT INTO `mob_pool_mods` VALUES (2265,370,50,0);  -- REGEN: 50
+    (2265,368,150,0), -- REGAIN: 150
+    (2265,370,50,0),  -- REGEN: 50
 
 -- Knight Crab
-INSERT INTO `mob_pool_mods` VALUES (2271,64,15,0);  -- COMBAT_SKILLUP_RATE: 15
-INSERT INTO `mob_pool_mods` VALUES (2271,65,15,0);  -- MAGIC_SKILLUP_RATE: 15
-INSERT INTO `mob_pool_mods` VALUES (2271,165,15,0); -- CRITHITRATE: 15
+    (2271,64,15,0),  -- COMBAT_SKILLUP_RATE: 15
+    (2271,65,15,0),  -- MAGIC_SKILLUP_RATE: 15
+    (2271,165,15,0), -- CRITHITRATE: 15
 
 -- Ladon
-INSERT INTO `mob_pool_mods` VALUES (2314,28,23,1); -- EXP_BONUS: 23
+    (2314,28,23,1), -- EXP_BONUS: 23
 
 -- Maats Avatar
-INSERT INTO `mob_pool_mods` VALUES (2461,61,25,1); -- HP_SCALE: 25
+    (2461,61,25,1), -- HP_SCALE: 25
 
 -- Maats Pet
-INSERT INTO `mob_pool_mods` VALUES (2462,61,25,1); -- HP_SCALE: 25
+    (2462,61,25,1), -- HP_SCALE: 25
 
 -- Maats Wyvern
-INSERT INTO `mob_pool_mods` VALUES (2463,61,20,1); -- HP_SCALE: 20
+    (2463,61,20,1), -- HP_SCALE: 20
 
 -- Mammet-19 Epsilon
-INSERT INTO `mob_pool_mods` VALUES (2499,240,90,0); -- SLEEPRES: 90
+    (2499,240,90,0), -- SLEEPRES: 90
 
 -- Minotaur
-INSERT INTO `mob_pool_mods` VALUES (2675,4,25,1); -- SIGHT_RANGE: 25
+    (2675,4,25,1), -- SIGHT_RANGE: 25
 
 -- Morbolger
-INSERT INTO `mob_pool_mods` VALUES (2742,37,1,1); -- ALWAYS_AGGRO: 1
+    (2742,37,1,1), -- ALWAYS_AGGRO: 1
 
 -- Morbol Menace
-INSERT INTO `mob_pool_mods` VALUES (2745,28,23,1); -- EXP_BONUS: 23
+    (2745,28,23,1), -- EXP_BONUS: 23
 
 -- Morion Worm
-INSERT INTO `mob_pool_mods` VALUES (2748,370,5,0); -- REGEN: 5
+    (2748,370,5,0), -- REGEN: 5
 
 -- Mythril Golem
-INSERT INTO `mob_pool_mods` VALUES (2793,4,4,1); -- SIGHT_RANGE: 4
+    (2793,4,4,1), -- SIGHT_RANGE: 4
 
 -- Nidhogg
-INSERT INTO `mob_pool_mods` VALUES (2840,368,70,0); -- REGAIN: 70
-INSERT INTO `mob_pool_mods` VALUES (2840,370,50,0); -- REGEN: 50
+    (2840,368,70,0), -- REGAIN: 70
+    (2840,370,50,0), -- REGEN: 50
 
 -- Nunyunuwi
-INSERT INTO `mob_pool_mods` VALUES (2922,370,100,0); -- REGEN: 100
+    (2922,370,100,0), -- REGEN: 100
 
 -- Ore Golem
-INSERT INTO `mob_pool_mods` VALUES (3051,4,4,1); -- SIGHT_RANGE: 4
+    (3051,4,4,1), -- SIGHT_RANGE: 4
 
 -- Parata
-INSERT INTO `mob_pool_mods` VALUES (3099,23,23,1); -- IMMUNITY: 23
+    (3099,23,23,1), -- IMMUNITY: 23
 
 -- Polar Hare
-INSERT INTO `mob_pool_mods` VALUES (3168,28,10,1); -- EXP_BONUS: 10
+    (3168,28,10,1), -- EXP_BONUS: 10
 
 -- Proto-Omega
-INSERT INTO `mob_pool_mods` VALUES (3208,370,20,0); -- REGEN: 20
+    (3208,370,20,0), -- REGEN: 20
 
 -- Qiqirn Archaeologist
-INSERT INTO `mob_pool_mods` VALUES (3245,56,1,1); -- HP_STANDBACK: 1
+    (3245,56,1,1), -- HP_STANDBACK: 1
 
 -- Qiqirn Enterpriser
-INSERT INTO `mob_pool_mods` VALUES (3252,56,1,1); -- HP_STANDBACK: 1
+    (3252,56,1,1), -- HP_STANDBACK: 1
 
 -- Qiqirn Mercenary
-INSERT INTO `mob_pool_mods` VALUES (3257,56,1,1); -- HP_STANDBACK: 1
+    (3257,56,1,1), -- HP_STANDBACK: 1
 
 -- Qiqirn Pecheur
-INSERT INTO `mob_pool_mods` VALUES (3262,56,1,1); -- HP_STANDBACK: 1
+    (3262,56,1,1), -- HP_STANDBACK: 1
 
 -- Qiqirn Rock Hound
-INSERT INTO `mob_pool_mods` VALUES (3264,56,1,1); -- HP_STANDBACK: 1
+    (3264,56,1,1), -- HP_STANDBACK: 1
 
 -- Qiqirn Trailer
-INSERT INTO `mob_pool_mods` VALUES (3265,56,1,1); -- HP_STANDBACK: 1
+    (3265,56,1,1), -- HP_STANDBACK: 1
 
 -- Qiqirn Volcanist
-INSERT INTO `mob_pool_mods` VALUES (3268,56,1,1); -- HP_STANDBACK: 1
+    (3268,56,1,1), -- HP_STANDBACK: 1
 
 -- Race Runner
-INSERT INTO `mob_pool_mods` VALUES (3301,29,100,0); -- MDEF: 100
+    (3301,29,100,0), -- MDEF: 100
 
 -- Rock Golem
-INSERT INTO `mob_pool_mods` VALUES (3379,4,4,1); -- SIGHT_RANGE: 4
+    (3379,4,4,1), -- SIGHT_RANGE: 4
 
 -- Seiryu
-INSERT INTO `mob_pool_mods` VALUES (3540,3,100,1); -- MP_BASE: 100
+    (3540,3,100,1), -- MP_BASE: 100
 
 -- Serket
-INSERT INTO `mob_pool_mods` VALUES (3549,370,50,0); -- REGEN: 50
+    (3549,370,50,0), -- REGEN: 50
 
 -- Slave Globe
-INSERT INTO `mob_pool_mods` VALUES (3667,28,-100,1); -- EXP_BONUS: -100
+    (3667,28,-100,1), -- EXP_BONUS: -100
 
 -- Snoll Tzar
-INSERT INTO `mob_pool_mods` VALUES (3684,3,30,1); -- MP_BASE: 30
+    (3684,3,30,1), -- MP_BASE: 30
 
 -- Statue Prototype
-INSERT INTO `mob_pool_mods` VALUES (3759,163,-1000,0); -- DMGMAGIC: -1000
+    (3759,163,-1000,0), -- DMGMAGIC: -1000
 
 -- Stone Golem
-INSERT INTO `mob_pool_mods` VALUES (3781,4,4,1); -- SIGHT_RANGE: 4
+    (3781,4,4,1), -- SIGHT_RANGE: 4
 
 -- Stray
-INSERT INTO `mob_pool_mods` VALUES (3784,2,-1,1);    -- GIL_MAX: -1
-INSERT INTO `mob_pool_mods` VALUES (3784,28,-100,1); -- EXP_BONUS: -100
+    (3784,2,-1,1),    -- GIL_MAX: -1
+    (3784,28,-100,1), -- EXP_BONUS: -100
 
 -- Stubborn Dredvodd
-INSERT INTO `mob_pool_mods` VALUES (3796,21,97,1); -- PET_SPELL_LIST: 97
+    (3796,21,97,1), -- PET_SPELL_LIST: 97
 
 -- Suzaku
-INSERT INTO `mob_pool_mods` VALUES (3816,3,100,1); -- MP_BASE: 100
+    (3816,3,100,1), -- MP_BASE: 100
 
 -- Swashstox Beadblinker
-INSERT INTO `mob_pool_mods` VALUES (3824,29,2,1); -- ASSIST: 2
+    (3824,29,2,1), -- ASSIST: 2
 
 -- Tavnazian Ram
-INSERT INTO `mob_pool_mods` VALUES (3853,28,23,1); -- EXP_BONUS: 23
+    (3853,28,23,1), -- EXP_BONUS: 23
 
 -- Tiny Mandragora
-INSERT INTO `mob_pool_mods` VALUES (3924,91,1,1); -- H2H_SINGLE_SWING: 1
+    (3924,91,1,1), -- H2H_SINGLE_SWING: 1
 
 -- Tombstone Prototype
-INSERT INTO `mob_pool_mods` VALUES (3941,163,-1000,0); -- DMGMAGIC: -1000
+    (3941,163,-1000,0), -- DMGMAGIC: -1000
 
 -- Tuchulcha
-INSERT INTO `mob_pool_mods` VALUES (4046,23,6191,1); -- IMMUNITY: 6191
+    (4046,23,6191,1), -- IMMUNITY: 6191
 
 -- Ullikummi
-INSERT INTO `mob_pool_mods` VALUES (4082,4,4,1); -- SIGHT_RANGE: 4
+    (4082,4,4,1), -- SIGHT_RANGE: 4
 
 -- Vanguard_Armorer
-INSERT INTO `mob_pool_mods` VALUES (4136,75,3,1); -- CAN_PARRY: 3
+    (4136,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Assassin
-INSERT INTO `mob_pool_mods` VALUES (4137,75,3,1); -- CAN_PARRY: 3
+    (4137,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Backstabber
-INSERT INTO `mob_pool_mods` VALUES (4138,75,3,1); -- CAN_PARRY: 3
+    (4138,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Beasttender
-INSERT INTO `mob_pool_mods` VALUES (4139,75,3,1); -- CAN_PARRY: 3
+    (4139,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Bugler
-INSERT INTO `mob_pool_mods` VALUES (4140,75,3,1); -- CAN_PARRY: 3
+    (4140,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Chanter
-INSERT INTO `mob_pool_mods` VALUES (4141,75,3,1); -- CAN_PARRY: 3
+    (4141,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Defender
-INSERT INTO `mob_pool_mods` VALUES (4143,75,3,1); -- CAN_PARRY: 3
+    (4143,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Drakekeeper
-INSERT INTO `mob_pool_mods` VALUES (4146,75,3,1); -- CAN_PARRY: 3
+    (4146,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Enchanter
-INSERT INTO `mob_pool_mods` VALUES (4147,75,3,1); -- CAN_PARRY: 3
+    (4147,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Exemplar
-INSERT INTO `mob_pool_mods` VALUES (4148,75,3,1); -- CAN_PARRY: 3
+    (4148,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Footsoldier
-INSERT INTO `mob_pool_mods` VALUES (4150,75,3,1); -- CAN_PARRY: 3
+    (4150,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Gutslasher
-INSERT INTO `mob_pool_mods` VALUES (4152,75,3,1); -- CAN_PARRY: 3
+    (4152,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Hatamoto
-INSERT INTO `mob_pool_mods` VALUES (4153,75,3,1); -- CAN_PARRY: 3
+    (4153,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Hawker
-INSERT INTO `mob_pool_mods` VALUES (4154,75,3,1); -- CAN_PARRY: 3
+    (4154,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Hitman
-INSERT INTO `mob_pool_mods` VALUES (4155,75,3,1); -- CAN_PARRY: 3
+    (4155,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Impaler
-INSERT INTO `mob_pool_mods` VALUES (4156,75,3,1); -- CAN_PARRY: 3
+    (4156,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Inciter
-INSERT INTO `mob_pool_mods` VALUES (4157,75,3,1); -- CAN_PARRY: 3
+    (4157,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Kusa
-INSERT INTO `mob_pool_mods` VALUES (4158,75,3,1); -- CAN_PARRY: 3
+    (4158,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Liberator
-INSERT INTO `mob_pool_mods` VALUES (4159,75,3,1); -- CAN_PARRY: 3
+    (4159,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Maestro
-INSERT INTO `mob_pool_mods` VALUES (4160,75,3,1); -- CAN_PARRY: 3
+    (4160,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Minstrel
-INSERT INTO `mob_pool_mods` VALUES (4164,75,3,1); -- CAN_PARRY: 3
+    (4164,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Neckchopper
-INSERT INTO `mob_pool_mods` VALUES (4165,75,3,1); -- CAN_PARRY: 3
+    (4165,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Ogresoother
-INSERT INTO `mob_pool_mods` VALUES (4167,75,3,1); -- CAN_PARRY: 3
+    (4167,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Partisan
-INSERT INTO `mob_pool_mods` VALUES (4169,75,3,1); -- CAN_PARRY: 3
+    (4169,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Pathfinder
-INSERT INTO `mob_pool_mods` VALUES (4170,75,3,1); -- CAN_PARRY: 3
+    (4170,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Persecutor
-INSERT INTO `mob_pool_mods` VALUES (4171,75,3,1); -- CAN_PARRY: 3
+    (4171,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Pillager
-INSERT INTO `mob_pool_mods` VALUES (4172,75,3,1); -- CAN_PARRY: 3
+    (4172,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Protector
-INSERT INTO `mob_pool_mods` VALUES (4177,75,3,1); -- CAN_PARRY: 3
+    (4177,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Purloiner
-INSERT INTO `mob_pool_mods` VALUES (4178,75,3,1); -- CAN_PARRY: 3
+    (4178,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Ronin
-INSERT INTO `mob_pool_mods` VALUES (4179,75,3,1); -- CAN_PARRY: 3
+    (4179,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Skirmisher
-INSERT INTO `mob_pool_mods` VALUES (4183,75,3,1); -- CAN_PARRY: 3
+    (4183,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Smithy
-INSERT INTO `mob_pool_mods` VALUES (4184,75,3,1); -- CAN_PARRY: 3
+    (4184,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguards Crow
-INSERT INTO `mob_pool_mods` VALUES (4186,34,20,1);  -- MAGIC_COOL: 20
-INSERT INTO `mob_pool_mods` VALUES (4186,35,0,1);   -- STANDBACK_COOL: 0
-INSERT INTO `mob_pool_mods` VALUES (4186,244,15,0); -- SILENCERES: 15
+    (4186,34,20,1),  -- MAGIC_COOL: 20
+    (4186,35,0,1),   -- STANDBACK_COOL: 0
+    (4186,244,15,0), -- SILENCERES: 15
 
 -- Vanguards Hecteyes
-INSERT INTO `mob_pool_mods` VALUES (4187,34,20,1);  -- MAGIC_COOL: 20
-INSERT INTO `mob_pool_mods` VALUES (4187,35,0,1);   -- STANDBACK_COOL: 0
-INSERT INTO `mob_pool_mods` VALUES (4187,244,15,0); -- SILENCERES: 15
+    (4187,34,20,1),  -- MAGIC_COOL: 20
+    (4187,35,0,1),   -- STANDBACK_COOL: 0
+    (4187,244,15,0), -- SILENCERES: 15
 
 -- Vanguards Scorpion
-INSERT INTO `mob_pool_mods` VALUES (4188,34,20,1);  -- MAGIC_COOL: 20
-INSERT INTO `mob_pool_mods` VALUES (4188,35,0,1);   -- STANDBACK_COOL: 0
-INSERT INTO `mob_pool_mods` VALUES (4188,244,15,0); -- SILENCERES: 15
+    (4188,34,20,1),  -- MAGIC_COOL: 20
+    (4188,35,0,1),   -- STANDBACK_COOL: 0
+    (4188,244,15,0), -- SILENCERES: 15
 
 -- Vanguards Slime
-INSERT INTO `mob_pool_mods` VALUES (4189,34,20,1);  -- MAGIC_COOL: 20
-INSERT INTO `mob_pool_mods` VALUES (4189,35,0,1);   -- STANDBACK_COOL: 0
-INSERT INTO `mob_pool_mods` VALUES (4189,244,15,0); -- SILENCERES: 15
+    (4189,34,20,1),  -- MAGIC_COOL: 20
+    (4189,35,0,1),   -- STANDBACK_COOL: 0
+    (4189,244,15,0), -- SILENCERES: 15
 
 -- Vanguard_Tinkerer
-INSERT INTO `mob_pool_mods` VALUES (4192,75,3,1); -- CAN_PARRY: 3
+    (4192,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Trooper
-INSERT INTO `mob_pool_mods` VALUES (4193,75,3,1); -- CAN_PARRY: 3
+    (4193,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Vexer
-INSERT INTO `mob_pool_mods` VALUES (4195,75,3,1); -- CAN_PARRY: 3
+    (4195,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Vigilante
-INSERT INTO `mob_pool_mods` VALUES (4196,75,3,1); -- CAN_PARRY: 3
+    (4196,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Vindicator
-INSERT INTO `mob_pool_mods` VALUES (4197,75,3,1); -- CAN_PARRY: 3
+    (4197,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Visionary
-INSERT INTO `mob_pool_mods` VALUES (4198,75,3,1); -- CAN_PARRY: 3
+    (4198,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Welldigger
-INSERT INTO `mob_pool_mods` VALUES (4199,75,3,1); -- CAN_PARRY: 3
+    (4199,75,3,1), -- CAN_PARRY: 3
 
 -- Vanguard_Dragontamer
-INSERT INTO `mob_pool_mods` VALUES (4649,75,3,1); -- CAN_PARRY: 3
+    (4649,75,3,1), -- CAN_PARRY: 3
 
 -- Variable Hare
-INSERT INTO `mob_pool_mods` VALUES (4204,28,10,1); -- EXP_BONUS: 10
+    (4204,28,10,1), -- EXP_BONUS: 10
 
 -- Verglas Golem
-INSERT INTO `mob_pool_mods` VALUES (4222,4,4,1); -- SIGHT_RANGE: 4
+    (4222,4,4,1), -- SIGHT_RANGE: 4
 
 -- Virulent Peiste
-INSERT INTO `mob_pool_mods` VALUES (4238,28,5,1); -- EXP_BONUS: 5
+    (4238,28,5,1), -- EXP_BONUS: 5
 
 -- Woodland Sage
-INSERT INTO `mob_pool_mods` VALUES (4361,5,16,1);   -- SOUND_RANGE: 16
-INSERT INTO `mob_pool_mods` VALUES (4361,288,55,0); -- DOUBLE_ATTACK: 55
+    (4361,5,16,1),   -- SOUND_RANGE: 16
+    (4361,288,55,0), -- DOUBLE_ATTACK: 55
 
 -- Zipacna
-INSERT INTO `mob_pool_mods` VALUES (4504,4,30,1); -- SIGHT_RANGE: 30
+    (4504,4,30,1), -- SIGHT_RANGE: 30
 
 -- Genbu Pet
-INSERT INTO `mob_pool_mods` VALUES (4670,3,100,1); -- MP_BASE: 100
+    (4670,3,100,1), -- MP_BASE: 100
 
 -- Seiryu Pet
-INSERT INTO `mob_pool_mods` VALUES (4671,3,100,1); -- MP_BASE: 100
+    (4671,3,100,1), -- MP_BASE: 100
 
 -- Byakko Pet
-INSERT INTO `mob_pool_mods` VALUES (4672,3,100,1); -- MP_BASE: 100
+    (4672,3,100,1), -- MP_BASE: 100
 
 -- Suzaku Pet
-INSERT INTO `mob_pool_mods` VALUES (4673,3,100,1); -- MP_BASE: 100
+    (4673,3,100,1), -- MP_BASE: 100
 
 -- Maat Blm
-INSERT INTO `mob_pool_mods` VALUES (4836,62,1,1); -- NO_STANDBACK: 1
+    (4836,62,1,1), -- NO_STANDBACK: 1
 
 -- Maat Rng
-INSERT INTO `mob_pool_mods` VALUES (4837,62,1,1); -- NO_STANDBACK: 1
+    (4837,62,1,1), -- NO_STANDBACK: 1
 
 -- Maat Bst
-INSERT INTO `mob_pool_mods` VALUES (4932,30,1017,1); -- SPECIAL_SKILL: 1017
-INSERT INTO `mob_pool_mods` VALUES (4932,33,50,1);   -- SPECIAL_COOL: 50
+    (4932,30,1017,1), -- SPECIAL_SKILL: 1017
+    (4932,33,50,1),   -- SPECIAL_COOL: 50
 
 -- Maat Nin
-INSERT INTO `mob_pool_mods` VALUES (5403,62,1,1); -- NO_STANDBACK: 1
+    (5403,62,1,1), -- NO_STANDBACK: 1
 
 -- Maat Pld
-INSERT INTO `mob_pool_mods` VALUES (5408,30,1036,1); -- SPECIAL_SKILL: 1036
-INSERT INTO `mob_pool_mods` VALUES (5408,33,50,1);   -- SPECIAL_COOL: 50
-INSERT INTO `mob_pool_mods` VALUES (5408,58,40,1);   -- SPECIAL_DELAY: 40
+    (5408,30,1036,1), -- SPECIAL_SKILL: 1036
+    (5408,33,50,1),   -- SPECIAL_COOL: 50
+    (5408,58,40,1),   -- SPECIAL_DELAY: 40
 
 -- Maat Drk
-INSERT INTO `mob_pool_mods` VALUES (5409,30,1036,1); -- SPECIAL_SKILL: 1036
-INSERT INTO `mob_pool_mods` VALUES (5409,33,50,1);   -- SPECIAL_COOL: 50
-INSERT INTO `mob_pool_mods` VALUES (5409,58,40,1);   -- SPECIAL_DELAY: 40
+    (5409,30,1036,1), -- SPECIAL_SKILL: 1036
+    (5409,33,50,1),   -- SPECIAL_COOL: 50
+    (5409,58,40,1),   -- SPECIAL_DELAY: 40
 
 -- Trust: Shikaree Z
-INSERT INTO `mob_pool_mods` VALUES (5915,6,100,0);      -- MPP: 100
+    (5915,6,100,0),      -- MPP: 100
 
 -- Trust: Lehko
-INSERT INTO `mob_pool_mods` VALUES (5922,6,150,0);      -- MPP: 150
+    (5922,6,150,0),      -- MPP: 150
 
 -- Trust: Fablinix
-INSERT INTO `mob_pool_mods` VALUES (5932,6,250,0);    -- MPP: 250
+    (5932,6,250,0),    -- MPP: 250
 
 -- Trust: Karaha-Baruha
-INSERT INTO `mob_pool_mods` VALUES (5936,3,-10,0); -- HPP: -10
-INSERT INTO `mob_pool_mods` VALUES (5936,6,20,0); -- MPP: 20
+    (5936,3,-10,0), -- HPP: -10
+    (5936,6,20,0), -- MPP: 20
 
 -- Trust: Areuhat
-INSERT INTO `mob_pool_mods` VALUES (5939,1046,30,0); -- ENHANCES_BLOOD_RAGE: 30
-INSERT INTO `mob_pool_mods` VALUES (5939,234,8,0);  -- DEMON_KILLER: 8
+    (5939,1046,30,0), -- ENHANCES_BLOOD_RAGE: 30
+    (5939,234,8,0),  -- DEMON_KILLER: 8
 
 -- Trust: Ferreous Coffin
-INSERT INTO `mob_pool_mods` VALUES (5944,3,-10,0);      -- HPP: -10
-INSERT INTO `mob_pool_mods` VALUES (5944,6,35,0);       -- MPP: 35
+    (5944,3,-10,0),      -- HPP: -10
+    (5944,6,35,0),       -- MPP: 35
 
 -- Trust: Rahal
-INSERT INTO `mob_pool_mods` VALUES (5951,233,8,0); -- DRAGON_KILLER: 8
+    (5951,233,8,0), -- DRAGON_KILLER: 8
 
 -- Trust: Prishe II
-INSERT INTO `mob_pool_mods` VALUES (6011,165,25,0);     -- CRITHITRATE: 25
+    (6011,165,25,0),     -- CRITHITRATE: 25
 
 -- Trust: Shantotto II
-INSERT INTO `mob_pool_mods` VALUES (6019,3,-10,0);      -- HPP: -10
+    (6019,3,-10,0),      -- HPP: -10
 
 -- Kaiser Behemoth (Apollyon NW)
-INSERT INTO `mob_pool_mods` VALUES (6732,3,100,1); -- MP_BASE: 100
+    (6732,3,100,1) -- MP_BASE: 100
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `value` = IF(`value` <> VALUES(`value`), VALUES(`value`), `value`),
+    `is_mob_mod` = IF(`is_mob_mod` <> VALUES(`is_mob_mod`), VALUES(`is_mob_mod`), `is_mob_mod`)
+;
 
 /*!40000 ALTER TABLE `mob_pool_mods` ENABLE KEYS */;
 UNLOCK TABLES;

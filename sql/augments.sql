@@ -23,7 +23,7 @@ CREATE TABLE `augments` (
 -- The IDs follow the packet not the dat so windower resources and polutils dumps will not match
 
 
--- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 
         -- the script could be fully incremental and even faster
@@ -2551,10 +2551,5 @@ UPDATE
     -- if the existing value and new value DO NOT equal eachother
         -- return the "new" inserted values "value"
         -- else current column "value"
-    IF(`augmentId` <> VALUES(`augmentId`), VALUES(`augmentId`), `augmentId`),
-    IF(`multiplier` <> VALUES(`multiplier`), VALUES(`multiplier`), `multiplier`),
-    IF(`modId` <> VALUES(`modId`), VALUES(`modId`), `modId`),
-    IF(`value` <> VALUES(`value`), VALUES(`value`), `value`),
-    IF(`isPet` <> VALUES(`isPet`), VALUES(`isPet`), `isPet`),
-    IF(`petType` <> VALUES(`petType`), VALUES(`petType`), `petType`)
+    `value` = IF(`value` <> VALUES(`value`), VALUES(`value`), `value`)
 ;

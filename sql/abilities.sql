@@ -34,7 +34,7 @@ CREATE TABLE `abilities` (
 --
 -- ORDER BY:  `abilityId`
 
--- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 
         -- the script could be fully incremental and even faster
@@ -807,24 +807,24 @@ UPDATE
     -- if the existing value and new value DO NOT equal eachother
         -- return inserted values "value"
         -- else current column "value"
-    IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
-    IF(`job` <> VALUES(`job`), VALUES(`job`), `job`),
-    IF(`level` <> VALUES(`level`), VALUES(`level`), `level`),
-    IF(`validTarget` <> VALUES(`validTarget`), VALUES(`validTarget`), `validTarget`),
-    IF(`recastTime` <> VALUES(`recastTime`), VALUES(`recastTime`), `recastTime`),
-    IF(`recastId` <> VALUES(`recastId`), VALUES(`recastId`), `recastId`),
-    IF(`message1` <> VALUES(`message1`), VALUES(`message1`), `message1`),
-    IF(`message2` <> VALUES(`message2`), VALUES(`message2`), `message2`),
-    IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
-    IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
-    IF(`castTime` <> VALUES(`castTime`), VALUES(`castTime`), `castTime`),
-    IF(`actionType` <> VALUES(`actionType`), VALUES(`actionType`), `actionType`),
-    IF(`range` <> VALUES(`range`), VALUES(`range`), `range`),
-    IF(`isAOE` <> VALUES(`isAOE`), VALUES(`isAOE`), `isAOE`),
-    IF(`radius` <> VALUES(`radius`), VALUES(`radius`), `radius`),
-    IF(`CE` <> VALUES(`CE`), VALUES(`CE`), `CE`),
-    IF(`VE` <> VALUES(`VE`), VALUES(`VE`), `VE`),
-    IF(`meritModID` <> VALUES(`meritModID`), VALUES(`meritModID`), `meritModID`),
-    IF(`addType` <> VALUES(`addType`), VALUES(`addType`), `addType`),
-    IF(`content_tag` <> VALUES(`content_tag`), VALUES(`content_tag`), `content_tag`)
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `job` = IF(`job` <> VALUES(`job`), VALUES(`job`), `job`),
+    `level` = IF(`level` <> VALUES(`level`), VALUES(`level`), `level`),
+    `validTarget` = IF(`validTarget` <> VALUES(`validTarget`), VALUES(`validTarget`), `validTarget`),
+    `recastTime` = IF(`recastTime` <> VALUES(`recastTime`), VALUES(`recastTime`), `recastTime`),
+    `recastId` = IF(`recastId` <> VALUES(`recastId`), VALUES(`recastId`), `recastId`),
+    `message1` = IF(`message1` <> VALUES(`message1`), VALUES(`message1`), `message1`),
+    `message2` = IF(`message2` <> VALUES(`message2`), VALUES(`message2`), `message2`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `castTime` = IF(`castTime` <> VALUES(`castTime`), VALUES(`castTime`), `castTime`),
+    `actionType` = IF(`actionType` <> VALUES(`actionType`), VALUES(`actionType`), `actionType`),
+    `range` = IF(`range` <> VALUES(`range`), VALUES(`range`), `range`),
+    `isAOE` = IF(`isAOE` <> VALUES(`isAOE`), VALUES(`isAOE`), `isAOE`),
+    `radius` = IF(`radius` <> VALUES(`radius`), VALUES(`radius`), `radius`),
+    `CE` = IF(`CE` <> VALUES(`CE`), VALUES(`CE`), `CE`),
+    `VE` = IF(`VE` <> VALUES(`VE`), VALUES(`VE`), `VE`),
+    `meritModID` = IF(`meritModID` <> VALUES(`meritModID`), VALUES(`meritModID`), `meritModID`),
+    `addType` = IF(`addType` <> VALUES(`addType`), VALUES(`addType`), `addType`),
+    `content_tag` = IF(`content_tag` <> VALUES(`content_tag`), VALUES(`content_tag`), `content_tag`)
 ;

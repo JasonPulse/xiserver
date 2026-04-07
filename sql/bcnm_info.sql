@@ -35,7 +35,7 @@ LOCK TABLES `bcnm_records` WRITE;
 /*!40000 ALTER TABLE `bcnm_records` DISABLE KEYS */;
 set autocommit=0;
 
--- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 
         -- the script could be fully incremental and even faster
@@ -310,12 +310,11 @@ UPDATE
     -- if the existing value and new value DO NOT equal eachother
         -- return the "new" inserted values "value"
         -- else current column "value"
-    IF(`bcnmId` <> VALUES(`spellid`), VALUES(`spellid`), `spellid`),
-    IF(`zoneId` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`),
-    IF(`name` <> VALUES(`heads`), VALUES(`heads`), `heads`),
-    IF(`fastestName` <> VALUES(`enfeeble`), VALUES(`enfeeble`), `enfeeble`)
-    IF(`fastestPartySize` <> VALUES(`immunity`), VALUES(`immunity`), `immunity`)
-    IF(`fastestTime` <> VALUES(`removes`), VALUES(`removes`), `removes`)
+    `zoneId` = IF(`zoneId` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`),
+    `name` = IF(`name` <> VALUES(`heads`), VALUES(`heads`), `heads`),
+    `fastestName` = IF(`fastestName` <> VALUES(`enfeeble`), VALUES(`enfeeble`), `enfeeble`)
+    `fastestPartySize` = IF(`fastestPartySize` <> VALUES(`immunity`), VALUES(`immunity`), `immunity`)
+    `fastestTime` = IF(`fastestTime` <> VALUES(`removes`), VALUES(`removes`), `removes`)
 ;
 
 /*!40000 ALTER TABLE `bcnm_records` ENABLE KEYS */;

@@ -34,7 +34,7 @@ CREATE TABLE `automaton_spells` (
 LOCK TABLES `automaton_spells` WRITE;
 /*!40000 ALTER TABLE `automaton_spells` DISABLE KEYS */;
 
--- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 
         -- the script could be fully incremental and even faster
@@ -144,12 +144,11 @@ UPDATE
     -- if the existing value and new value DO NOT equal eachother
         -- return the "new" inserted values "value"
         -- else current column "value"
-    IF(`spellid` <> VALUES(`spellid`), VALUES(`spellid`), `spellid`),
-    IF(`skilllevel` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`),
-    IF(`heads` <> VALUES(`heads`), VALUES(`heads`), `heads`),
-    IF(`enfeeble` <> VALUES(`enfeeble`), VALUES(`enfeeble`), `enfeeble`)
-    IF(`immunity` <> VALUES(`immunity`), VALUES(`immunity`), `immunity`)
-    IF(`removes` <> VALUES(`removes`), VALUES(`removes`), `removes`)
+    `skilllevel` = IF(`skilllevel` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`),
+    `heads` = IF(`heads` <> VALUES(`heads`), VALUES(`heads`), `heads`),
+    `enfeeble` = IF(`enfeeble` <> VALUES(`enfeeble`), VALUES(`enfeeble`), `enfeeble`)
+    `immunity` = IF(`immunity` <> VALUES(`immunity`), VALUES(`immunity`), `immunity`)
+    `removes` = IF(`removes` <> VALUES(`removes`), VALUES(`removes`), `removes`)
 ;
 
 /*!40000 ALTER TABLE `automaton_spells` ENABLE KEYS */;

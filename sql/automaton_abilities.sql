@@ -33,7 +33,7 @@ CREATE TABLE `automaton_abilities` (
 LOCK TABLES `automaton_abilities` WRITE;
 /*!40000 ALTER TABLE `automaton_abilities` DISABLE KEYS */;
 
--- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 
         -- the script could be fully incremental and even faster
@@ -86,10 +86,9 @@ UPDATE
     -- if the existing value and new value DO NOT equal eachother
         -- return the "new" inserted values "value"
         -- else current column "value"
-    IF(`abilityId` <> VALUES(`abilityId`), VALUES(`abilityId`), `abilityId`),
-    IF(`abilityname` <> VALUES(`abilityname`), VALUES(`abilityname`), `abilityname`),
-    IF(`reqframe` <> VALUES(`reqframe`), VALUES(`reqframe`), `reqframe`),
-    IF(`skilllevel` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`)
+    `abilityname` = IF(`abilityname` <> VALUES(`abilityname`), VALUES(`abilityname`), `abilityname`),
+    `reqframe` = IF(`reqframe` <> VALUES(`reqframe`), VALUES(`reqframe`), `reqframe`),
+    `skilllevel` = IF(`skilllevel` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`)
 ;
 
 /*!40000 ALTER TABLE `automaton_abilities` ENABLE KEYS */;

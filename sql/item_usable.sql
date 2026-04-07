@@ -36,2830 +36,2979 @@ CREATE TABLE `item_usable` (
 --
 -- ORDER BY:  `itemid`
 
-INSERT INTO `item_usable` VALUES (4096,'fire_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4097,'ice_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4098,'wind_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4099,'earth_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4100,'lightning_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4101,'water_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4102,'light_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4103,'dark_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4104,'fire_cluster',1,1,38,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4105,'ice_cluster',1,1,42,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4106,'wind_cluster',1,1,40,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4107,'earth_cluster',1,1,45,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4108,'lightning_cluster',1,1,43,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4109,'water_cluster',1,1,39,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4110,'light_cluster',1,1,41,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4111,'dark_cluster',1,1,44,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4112,'potion',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4113,'potion_+1',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4114,'potion_+2',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4115,'potion_+3',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4116,'hi-potion',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4117,'hi-potion_+1',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4118,'hi-potion_+2',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4119,'hi-potion_+3',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4120,'x-potion',1,4,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4121,'x-potion_+1',1,4,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4122,'x-potion_+2',1,4,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4123,'x-potion_+3',1,4,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4124,'max-potion',1,2,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4125,'max-potion_+1',1,2,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4126,'max-potion_+2',1,2,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4127,'max-potion_+3',1,2,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4128,'ether',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4129,'ether_+1',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4130,'ether_+2',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4131,'ether_+3',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4132,'hi-ether',1,8,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4133,'hi-ether_+1',1,8,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4134,'hi-ether_+2',1,8,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4135,'hi-ether_+3',1,8,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4136,'super_ether',1,10,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4137,'super_ether_+1',1,10,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4138,'super_ether_+2',1,10,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4139,'super_ether_+3',1,10,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4140,'pro-ether',1,3,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4141,'pro-ether_+1',1,3,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4142,'pro-ether_+2',1,3,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4143,'pro-ether_+3',1,3,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4144,'hi-elixir',1,10,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4145,'elixir',1,10,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4146,'revitalizer',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4147,'bottle_of_body_boost',1,1,8,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4148,'antidote',1,1,1,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4149,'flask_of_panacea',1,1,66,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4150,'flask_of_eye_drops',1,1,3,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4151,'flask_of_echo_drops',1,1,4,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4153,'bottle_of_antacid',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4154,'flask_of_holy_water',1,1,7,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4155,'remedy',1,1,7,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4156,'bottle_of_mulsum',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4157,'flask_of_poison_potion',1,1,68,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4158,'flask_of_venom_potion',1,1,68,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4159,'flask_of_paralyze_potion',1,1,69,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4160,'flask_of_petrify_potion',1,1,73,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4161,'flask_of_sleeping_potion',1,1,72,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4162,'flask_of_silencing_potion',1,1,71,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4163,'flask_of_blinding_potion',1,1,70,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4164,'pinch_of_prism_powder',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4165,'pot_of_silent_oil',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4166,'flask_of_deodorizer',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4167,'cracker',1,1,35,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4168,'twinkle_shower',1,1,36,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4169,'little_comet',1,1,37,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4170,'wedding_bell',1,1,46,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4171,'flask_of_vitriol',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4172,'reraiser',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4173,'hi-reraiser',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4174,'vile_elixir',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4175,'vile_elixir_+1',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4176,'new_years_gift',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4177,'new_years_gift',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4178,'new_years_gift',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4179,'new_years_gift',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4180,'new_years_gift',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4181,'scroll_of_instant_warp',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4182,'scroll_of_instant_reraise',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4183,'konron_hassen',1,1,47,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4184,'kongou_inaho',1,1,48,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4185,'meifu_goma',1,1,49,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4186,'airborne',1,1,50,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4187,'bastok_mines_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4188,'bastok_markets_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4189,'port_bastok_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4190,'eastern_san_doria_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4191,'western_san_doria_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4192,'northern_san_doria_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4193,'windurst_waters_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4194,'port_windurst_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4195,'windurst_woods_gate_glyph',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4196,'rotten_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4197,'rusty_bolt_case',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4198,'page_from_the_dragon_chronicles',1,5,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4199,'strength_potion',1,2,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4200,'bottle_of_mana_boost',1,1,9,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4201,'dexterity_potion',1,2,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4202,'daedalus_wing',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4203,'vitality_potion',1,2,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4204,'petra_eater',1,2,67,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4205,'agility_potion',1,2,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4206,'bottle_of_catholicon',29,1,64,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4207,'intelligence_potion',1,2,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4208,'bottle_of_catholicon_+1',29,1,66,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4209,'mind_potion',1,2,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4210,'bottle_of_lethe_water',4,2,65,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4211,'charisma_potion',1,2,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4212,'bottle_of_lethe_water_+1',4,2,65,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4213,'icarus_wing',1,2,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4214,'pinch_of_lethe_powder',4,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4215,'popstar',1,1,51,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4216,'brilliant_snow',1,1,52,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4217,'sparkling_hand',1,1,53,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4218,'air_rider',1,1,54,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4219,'stone_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4220,'bone_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4221,'beetle_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4222,'horn_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4223,'scorpion_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4224,'demon_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4225,'iron_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4226,'silver_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4227,'bronze_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4228,'mythril_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4229,'darksteel_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4230,'new_years_gift',1,10,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4231,'new_years_gift',1,10,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4232,'new_years_gift',1,10,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4233,'new_years_gift',1,10,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4234,'bottle_of_cursed_beverage',1,1,75,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4235,'bowl_of_cursed_soup',1,1,75,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4236,'timeless_hourglass',0,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4237,'perpetual_hourglass',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4238,'inferno_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4239,'glacier_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4240,'cyclone_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4241,'terra_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4242,'plasma_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4243,'torrent_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4244,'aurora_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4245,'twilight_crystal',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4246,'bottle_of_cantarella',1,1,68,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4247,'page_from_miratetes_memoirs',1,5,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4248,'copy_of_ginuvas_battle_theory',1,5,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4249,'copy_of_schultz_stratagems',1,5,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4250,'crackler',1,1,58,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4251,'festive_fan',1,1,61,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4252,'summer_fan',1,1,62,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4253,'spirit_masque',1,1,63,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4254,'megalixir',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4255,'pinch_of_mana_powder',1,1,89,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4256,'ouka_ranman',1,1,56,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4257,'papillion',1,1,57,12,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4258,'red_drop',1,2,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4259,'clear_drop',1,2,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4260,'green_drop',1,2,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4261,'yellow_drop',1,2,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4262,'purple_drop',1,2,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4263,'blue_drop',1,2,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4264,'white_drop',1,2,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4265,'black_drop',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4266,'fulm-long_salmon_sub',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4267,'buttered_nebimonite',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4268,'plate_of_sea_spray_risotto',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4269,'bijou_glace',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4270,'sweet_rice_cake',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4271,'rice_dumpling',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4272,'slice_of_dragon_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4273,'kitron',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4274,'persikos',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4275,'serving_of_emperor_roe',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4276,'serving_of_flint_caviar',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4277,'tonosama_rice_ball',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4278,'shogun_rice_ball',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4279,'tavnazian_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4280,'garlic_cracker_+1',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4281,'red_hot_cracker',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4282,'pipin_hot_popoto',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4283,'cup_of_choco-delight',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4284,'bowl_of_tender_navarin',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4285,'bowl_of_ocean_soup',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4286,'cup_of_healing_tea',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4287,'opo-opo_tart',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4288,'zebra_eel',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4289,'forest_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4290,'elshimo_frog',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4291,'sandfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4292,'loaf_of_pain_de_neige',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4293,'serving_of_monastic_saute',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4294,'serving_of_medicinal_quus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4295,'plate_of_royal_saute',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4296,'serving_of_green_curry',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4297,'serving_of_black_curry',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4298,'serving_of_red_curry',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4299,'flask_of_orange_au_lait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4300,'flask_of_apple_au_lait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4301,'flask_of_pear_au_lait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4302,'flask_of_pamama_au_lait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4303,'flask_of_persikos_au_lait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4304,'grimmonite',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4305,'ryugu_titan',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4306,'giant_donko',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4307,'jungle_catfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4308,'giant_chirai',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4309,'cave_cherax',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4310,'tiny_goldfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4311,'black_bubble-eye',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4312,'lionhead',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4313,'blindfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4314,'bibikibo',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4315,'lungfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4316,'armored_pisces',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4317,'trilobite',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4318,'bibiki_urchin',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4319,'tricorn',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4320,'apple_pie_+1',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4321,'timbre_timbers_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4322,'dhalmel_pie_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4323,'bowl_of_vegetable_broth',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4324,'chunk_of_hobgoblin_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4325,'hobgoblin_pie',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4326,'serving_of_frog_flambe',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4327,'bowl_of_emerald_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4328,'loaf_of_hobgoblin_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4329,'serving_of_newt_flambe',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4330,'plate_of_witch_risotto',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4331,'imperial_omelette',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4332,'orange_kuchen_+1',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4333,'bowl_of_witch_soup',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4334,'ear_of_grilled_corn',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4335,'slice_of_juicy_mutton',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4336,'sweet_baked_apple',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4337,'bowl_of_stamina_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4338,'steamed_crayfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4339,'rolanberry_pie_+1',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4340,'bowl_of_optical_soup',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4341,'bowl_of_sunset_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4342,'steamed_crab',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4343,'witch_kabob',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4344,'bowl_of_witch_stew',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4345,'serving_of_flounder_meuniere_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4346,'serving_of_bass_meuniere_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4347,'serving_of_salmon_meuniere_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4348,'mutton_enchilada',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4349,'bunny_ball',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4350,'dragon_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4351,'giddeus_water',1,1,0,0,0,0,0,0); -- TODO: Review animation, charges, delay
-INSERT INTO `item_usable` VALUES (4352,'derfland_pear',1,1,0,26,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4353,'sea_bass_croute',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4354,'shining_trout',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4355,'salmon_sub_sandwich',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4356,'loaf_of_white_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4357,'crawler_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4358,'slice_of_hare_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4359,'slice_of_dhalmel_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4360,'bastore_sardine',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4361,'nebimonite',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4362,'lizard_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4363,'faerie_apple',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4364,'loaf_of_black_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4365,'rolanberry',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4366,'la_theine_cabbage',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4367,'clump_of_batagreens',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4368,'two-leaf_mandragora_bud',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4369,'four-leaf_mandragora_bud',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4370,'pot_of_honey',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4371,'slice_of_grilled_hare',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4372,'slice_of_giant_sheep_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4373,'woozyshroom',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4374,'sleepshroom',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4375,'danceshroom',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4376,'strip_of_meat_jerky',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4377,'slice_of_coeurl_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4378,'jug_of_selbina_milk',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4379,'cheval_salmon',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4380,'smoked_salmon',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4381,'meat_mithkabob',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4382,'frost_turnip',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4383,'gold_lobster',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4384,'black_sole',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4385,'zafmlug_bass',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4386,'king_truffle',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4387,'wild_onion',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4388,'eggplant',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4389,'san_dorian_carrot',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4390,'mithran_tomato',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4391,'bretzel',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4392,'saruta_orange',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4393,'orange_kuchen',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4394,'ginger_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4395,'galkan_sausage',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4396,'sausage_roll',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4397,'cinna-cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4398,'fish_mithkabob',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4399,'bluetail',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4400,'slice_of_land_crab_meat',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4401,'moat_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4402,'red_terrapin',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4403,'yellow_globe',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4404,'roast_trout',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4405,'rice_ball',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4406,'baked_apple',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4407,'carp_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4408,'tortilla',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4409,'hard-boiled_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4410,'roast_mushroom',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4411,'dhalmel_pie',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4412,'thundermelon',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4413,'apple_pie',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4414,'rolanberry_pie',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4415,'ear_of_roasted_corn',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4416,'bowl_of_pea_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4417,'bowl_of_egg_soup',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4418,'bowl_of_turtle_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4419,'bowl_of_mushroom_soup',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4420,'bowl_of_tomato_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4421,'melon_pie',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4422,'bottle_of_orange_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4423,'bottle_of_apple_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4424,'bottle_of_melon_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4425,'bottle_of_tomato_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4426,'tricolored_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4427,'gold_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4428,'dark_bass',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4429,'black_eel',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4430,'bowl_of_pumpkin_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4431,'bunch_of_san_dorian_grapes',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4432,'kazham_pineapple',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4433,'bowl_of_dhalmel_stew',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4434,'plate_of_mushroom_risotto',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4435,'slice_of_cockatrice_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4436,'baked_popoto',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4437,'slice_of_roast_mutton',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4438,'dhalmel_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4439,'bowl_of_navarin',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4440,'bowl_of_whitefish_stew',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4441,'bottle_of_grape_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4442,'bottle_of_pineapple_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4443,'cobalt_jellyfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4444,'rarab_tail',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4445,'yagudo_cherry',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4446,'pumpkin_pie',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4447,'scream_fungus',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4448,'puffball',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4449,'reishi_mushroom',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4450,'coral_fungus',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4451,'silver_shark',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4452,'bowl_of_shark_fin_soup',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4453,'bowl_of_eyeball_soup',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4454,'emperor_fish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4455,'bowl_of_pebble_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4456,'boiled_crab',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4457,'eel_kabob',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4458,'loaf_of_goblin_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4459,'nebimonite_bake',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4460,'block_of_stone_cheese',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4461,'bastore_bream',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4462,'monke-onke',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4463,'takitaro',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4464,'pipira',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4465,'bowl_of_goblin_stew',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4466,'spicy_cracker',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4467,'garlic_cracker',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4468,'bunch_of_pamamas',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4469,'giant_catfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4470,'icefish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4471,'bladefish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4472,'crayfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4473,'crescent_fish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4474,'gigant_squid',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4475,'sea_zombie',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4476,'titanictus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4477,'gavial_fish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4478,'three-eyed_fish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4479,'bhefhel_marlin',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4480,'gugru_tuna',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4481,'ogre_eel',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4482,'nosteau_herring',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4483,'tiger_cod',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4484,'shall_shell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4485,'noble_lady',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4486,'dragon_heart',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4487,'colored_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4488,'jack-o-lantern',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4489,'bowl_of_vegetable_gruel',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4490,'pickled_herring',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4491,'watermelon',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4492,'bowl_of_puls',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4493,'cup_of_windurstian_tea',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4494,'pot_of_san_dorian_tea',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4495,'chunk_of_goblin_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4496,'piece_of_bubble_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4497,'heart_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4498,'cup_of_chocomilk',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4499,'loaf_of_iron_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4500,'greedie',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4501,'fat_greedie',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4502,'marron_glace',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4503,'bunch_of_buburimu_grapes',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4504,'acorn',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4505,'handful_of_sunflower_seeds',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4506,'mutton_tortilla',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4507,'rarab_meatball',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4508,'serving_of_royal_jelly',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4509,'flask_of_distilled_water',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4510,'acorn_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4511,'bowl_of_ambrosia',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4512,'bottle_of_vampire_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4513,'bottle_of_amrita',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4514,'quus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4515,'copper_frog',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4516,'slice_of_grilled_black_hare',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4517,'serving_of_yellow_curry',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4518,'strip_of_sheep_jerky',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4519,'wild_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4520,'coin_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4521,'bowl_of_humpty_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4522,'bowl_of_jack-o-soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4523,'melon_pie_+1',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4524,'pot_of_royal_tea',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4525,'pumpkin_pie_+1',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4526,'silkworm_egg',1,1,0,28,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4527,'jug_of_marys_milk',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4528,'crystal_bass',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4529,'rolanberry_881_ce',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4530,'rolanberry_874_ce',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4531,'rolanberry_864_ce',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4532,'soft-boiled_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4533,'bowl_of_delicious_puls',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4534,'bowl_of_medicinal_gruel',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4535,'boiled_crayfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4536,'blackened_frog',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4537,'roast_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4538,'roast_pipira',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4539,'goblin_pie',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4540,'boiled_tuna_head',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4541,'bottle_of_goblin_drink',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4542,'bowl_of_brain_stew',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4543,'goblin_mushpot',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4544,'bowl_of_mushroom_stew',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4545,'bunch_of_gysahl_greens',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4546,'piece_of_raisin_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4547,'bowl_of_boiled_cockatrice',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4548,'plate_of_coeurl_saute',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4549,'bowl_of_dragon_soup',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4550,'plate_of_bream_risotto',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4551,'salmon_croute',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4552,'serving_of_herb_crawler_eggs',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4553,'serving_of_batagreen_saute',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4554,'serving_of_shallops_tropicale',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4555,'windurst_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4556,'serving_of_icecap_rolanberry',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4557,'steamed_catfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4558,'bottle_of_yagudo_drink',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4559,'serving_of_herb_quus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4560,'bowl_of_vegetable_soup',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4561,'bowl_of_seafood_stew',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4562,'odontotyrannus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4563,'pamama_tart',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4564,'royal_omelette',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4565,'sobbing_fungus',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4566,'deathball',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4567,'moon_carrot',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4568,'moon_ball',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4569,'bowl_of_quadav_stew',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4570,'bird_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4571,'clump_of_beaugreens',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4572,'serving_of_beaugreen_saute',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4573,'loaf_of_steel_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4574,'meat_chiefkabob',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4575,'fish_chiefkabob',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4576,'wizard_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4577,'wild_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4578,'sausage',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4579,'elshimo_newt',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4580,'coral_butterfly',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4581,'blackened_newt',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4582,'serving_of_bass_meuniere',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4583,'serving_of_salmon_meuniere',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4584,'serving_of_flounder_meuniere',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4585,'broiled_pipira',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4586,'broiled_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4587,'broiled_trout',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4588,'broiled_eel',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4589,'bowl_of_wild_stew',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4590,'salmon_rice_ball',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4591,'loaf_of_pumpernickel',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4592,'bowl_of_wisdom_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4593,'block_of_rock_cheese',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4594,'serving_of_snowy_rolanberry',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4595,'party_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4596,'bunch_of_wild_pamamas',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4597,'wild_melon',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4598,'wild_pineapple',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4599,'blackened_toad',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4600,'lucky_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4601,'bowl_of_sopa_de_pez_blanco',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4602,'warm_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4603,'cup_of_chamomile_tea',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4604,'rogue_rice_ball',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4605,'naval_rice_ball',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4606,'scroll_of_dia',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4607,'scroll_of_stone',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4608,'scroll_of_cure',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4609,'scroll_of_cure',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4610,'scroll_of_cure_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4611,'scroll_of_cure_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4612,'scroll_of_cure_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4613,'scroll_of_cure_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4614,'scroll_of_cure_vi',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4615,'scroll_of_curaga',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4616,'scroll_of_curaga_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4617,'scroll_of_curaga_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4618,'scroll_of_curaga_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4619,'scroll_of_curaga_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4620,'scroll_of_raise',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4621,'scroll_of_raise_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4622,'scroll_of_poisona',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4623,'scroll_of_paralyna',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4624,'scroll_of_blindna',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4625,'scroll_of_silena',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4626,'scroll_of_stona',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4627,'scroll_of_viruna',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4628,'scroll_of_cursna',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4629,'scroll_of_holy',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4630,'scroll_of_holy_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4631,'scroll_of_dia',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4632,'scroll_of_dia_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4633,'scroll_of_dia_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4636,'scroll_of_banish',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4637,'scroll_of_banish_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4638,'scroll_of_banish_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4641,'scroll_of_diaga',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4646,'scroll_of_banishga',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4647,'scroll_of_banishga_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4651,'scroll_of_protect',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4652,'scroll_of_protect_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4653,'scroll_of_protect_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4654,'scroll_of_protect_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4655,'scroll_of_protect_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4656,'scroll_of_shell',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4657,'scroll_of_shell_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4658,'scroll_of_shell_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4659,'scroll_of_shell_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4660,'scroll_of_shell_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4661,'scroll_of_blink',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4662,'scroll_of_stoneskin',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4663,'scroll_of_aquaveil',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4664,'scroll_of_slow',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4665,'scroll_of_haste',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4666,'scroll_of_paralyze',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4667,'scroll_of_silence',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4668,'scroll_of_barfire',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4669,'scroll_of_barblizzard',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4670,'scroll_of_baraero',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4671,'scroll_of_barstone',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4672,'scroll_of_barthunder',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4673,'scroll_of_barwater',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4674,'scroll_of_barfira',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4675,'scroll_of_barblizzara',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4676,'scroll_of_baraera',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4677,'scroll_of_barstonra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4678,'scroll_of_barthundra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4679,'scroll_of_barwatera',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4680,'scroll_of_barsleep',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4681,'scroll_of_barpoison',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4682,'scroll_of_barparalyze',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4683,'scroll_of_barblind',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4684,'scroll_of_barsilence',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4685,'scroll_of_barpetrify',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4686,'scroll_of_barvirus',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4687,'scroll_of_recall-jugner',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4688,'scroll_of_recall-pashh',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4689,'scroll_of_recall-meriph',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4690,'scroll_of_baramnesia',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4691,'scroll_of_baramnesra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4692,'scroll_of_haste_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4694,'scroll_of_barsleepra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4695,'scroll_of_barpoisonra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4696,'scroll_of_barparalyzra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4697,'scroll_of_barblindra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4698,'scroll_of_barsilencera',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4699,'scroll_of_barpetra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4700,'scroll_of_barvira',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4701,'scroll_of_cura',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4702,'scroll_of_sacrifice',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4703,'scroll_of_esuna',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4704,'scroll_of_auspice',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4705,'scroll_of_temper',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4706,'scroll_of_enlight',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4707,'scroll_of_endark',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4708,'scroll_of_enfire',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4709,'scroll_of_enblizzard',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4710,'scroll_of_enaero',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4711,'scroll_of_enstone',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4712,'scroll_of_enthunder',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4713,'scroll_of_enwater',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4714,'scroll_of_phalanx',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4715,'scroll_of_reprisal',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4716,'scroll_of_regen',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4717,'scroll_of_refresh',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4718,'scroll_of_regen_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4719,'scroll_of_regen_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4720,'scroll_of_flash',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4721,'scroll_of_repose',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4722,'scroll_of_enfire_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4723,'scroll_of_enblizzard_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4724,'scroll_of_enaero_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4725,'scroll_of_enstone_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4726,'scroll_of_enthunder_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4727,'scroll_of_enwater_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4728,'scroll_of_teleport-yhoat',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4729,'scroll_of_teleport-altep',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4730,'scroll_of_teleport-holla',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4731,'scroll_of_teleport-dem',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4732,'scroll_of_teleport-mea',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4733,'scroll_of_protectra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4734,'scroll_of_protectra_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4735,'scroll_of_protectra_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4736,'scroll_of_protectra_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4737,'scroll_of_protectra_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4738,'scroll_of_shellra',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4739,'scroll_of_shellra_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4740,'scroll_of_shellra_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4741,'scroll_of_shellra_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4742,'scroll_of_shellra_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4743,'scroll_of_reraise',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4744,'scroll_of_invisible',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4745,'scroll_of_sneak',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4746,'scroll_of_deodorize',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4747,'scroll_of_teleport-vahzl',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4748,'scroll_of_raise_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4749,'scroll_of_reraise_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4750,'scroll_of_reraise_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4751,'scroll_of_erase',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4752,'scroll_of_fire',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4753,'scroll_of_fire_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4754,'scroll_of_fire_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4755,'scroll_of_fire_iv',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4756,'scroll_of_fire_v',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4757,'scroll_of_blizzard',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4758,'scroll_of_blizzard_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4759,'scroll_of_blizzard_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4760,'scroll_of_blizzard_iv',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4761,'scroll_of_blizzard_v',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4762,'scroll_of_aero',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4763,'scroll_of_aero_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4764,'scroll_of_aero_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4765,'scroll_of_aero_iv',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4766,'scroll_of_aero_v',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4767,'scroll_of_stone',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4768,'scroll_of_stone_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4769,'scroll_of_stone_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4770,'scroll_of_stone_iv',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4771,'scroll_of_stone_v',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4772,'scroll_of_thunder',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4773,'scroll_of_thunder_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4774,'scroll_of_thunder_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4775,'scroll_of_thunder_iv',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4776,'scroll_of_thunder_v',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4777,'scroll_of_water',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4778,'scroll_of_water_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4779,'scroll_of_water_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4780,'scroll_of_water_iv',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4781,'scroll_of_water_v',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4782,'scroll_of_firaga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4783,'scroll_of_firaga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4784,'scroll_of_firaga_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4787,'scroll_of_blizzaga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4788,'scroll_of_blizzaga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4789,'scroll_of_blizzaga_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4792,'scroll_of_aeroga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4793,'scroll_of_aeroga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4794,'scroll_of_aeroga_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4797,'scroll_of_stonega',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4798,'scroll_of_stonega_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4799,'scroll_of_stonega_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4802,'scroll_of_thundaga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4803,'scroll_of_thundaga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4804,'scroll_of_thundaga_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4807,'scroll_of_waterga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4808,'scroll_of_waterga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4809,'scroll_of_waterga_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4812,'scroll_of_flare',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4813,'scroll_of_flare_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4814,'scroll_of_freeze',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4815,'scroll_of_freeze_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4816,'scroll_of_tornado',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4817,'scroll_of_tornado_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4818,'scroll_of_quake',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4819,'scroll_of_quake_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4820,'scroll_of_burst',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4821,'scroll_of_burst_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4822,'scroll_of_flood',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4823,'scroll_of_flood_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4824,'scroll_of_gravity',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4825,'scroll_of_gravity_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4827,'scroll_of_comet',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4828,'scroll_of_poison',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4829,'scroll_of_poison_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4833,'scroll_of_poisonga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4834,'scroll_of_poisonga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4838,'scroll_of_bio',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4839,'scroll_of_bio_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4840,'scroll_of_bio_iii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4843,'scroll_of_burn',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4844,'scroll_of_frost',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4845,'scroll_of_choke',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4846,'scroll_of_rasp',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4847,'scroll_of_shock',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4848,'scroll_of_drown',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4849,'scroll_of_addle',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4850,'scroll_of_refresh_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4851,'scroll_of_meteor',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4853,'scroll_of_drain',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4854,'scroll_of_drain_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4855,'scroll_of_aspir',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4856,'scroll_of_aspir_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4857,'scroll_of_blaze_spikes',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4858,'scroll_of_ice_spikes',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4859,'scroll_of_shock_spikes',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4860,'scroll_of_stun',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4861,'scroll_of_sleep',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4862,'scroll_of_blind',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4863,'scroll_of_break',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4866,'scroll_of_bind',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4867,'scroll_of_sleep_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4868,'scroll_of_dispel',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4869,'scroll_of_warp',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4870,'scroll_of_warp_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4871,'scroll_of_escape',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4872,'scroll_of_tractor',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4873,'scroll_of_retrace',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4874,'scroll_of_absorb-str',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4875,'scroll_of_absorb-dex',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4876,'scroll_of_absorb-vit',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4877,'scroll_of_absorb-agi',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4878,'scroll_of_absorb-int',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4879,'scroll_of_absorb-mnd',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4880,'scroll_of_absorb-chr',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4881,'scroll_of_sleepga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4882,'scroll_of_sleepga_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4883,'scroll_of_absorb-tp',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4884,'scroll_of_blind_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4885,'scroll_of_dread_spikes',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4886,'scroll_of_absorb-acc',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4887,'scroll_of_absorb-attri',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4889,'scroll_of_breakga',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4890,'scroll_of_firaja',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4891,'scroll_of_blizzaja',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4892,'scroll_of_aeroja',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4893,'scroll_of_stoneja',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4894,'scroll_of_thundaja',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4895,'scroll_of_waterja',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4896,'fire_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4897,'ice_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4898,'air_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4899,'earth_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4900,'thunder_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4901,'water_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4902,'light_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4903,'dark_spirit_pact',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4912,'scroll_of_distract',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4913,'scroll_of_distract_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4914,'scroll_of_frazzle',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4915,'scroll_of_frazzle_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4916,'scroll_of_fira',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4917,'scroll_of_fira_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4918,'scroll_of_blizzara',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4919,'scroll_of_blizzara_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4920,'scroll_of_aerora',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4921,'scroll_of_aerora_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4922,'scroll_of_stonera',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4923,'scroll_of_stonera_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4924,'scroll_of_thundara',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4925,'scroll_of_thundara_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4926,'scroll_of_watera',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4927,'scroll_of_watera_ii',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4928,'scroll_of_katon_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4929,'scroll_of_katon_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4930,'scroll_of_katon_san',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4931,'scroll_of_hyoton_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4932,'scroll_of_hyoton_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4933,'scroll_of_hyoton_san',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4934,'scroll_of_huton_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4935,'scroll_of_huton_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4936,'scroll_of_huton_san',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4937,'scroll_of_doton_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4938,'scroll_of_doton_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4939,'scroll_of_doton_san',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4940,'scroll_of_raiton_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4941,'scroll_of_raiton_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4942,'scroll_of_raiton_san',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4943,'scroll_of_suiton_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4944,'scroll_of_suiton_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4945,'scroll_of_suiton_san',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4946,'scroll_of_utsusemi_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4947,'scroll_of_utsusemi_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4949,'scroll_of_jubaku_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4952,'scroll_of_hojo_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4953,'scroll_of_hojo_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4955,'scroll_of_kurayami_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4956,'scroll_of_kurayami_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4958,'scroll_of_dokumori_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4961,'scroll_of_tonko_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4962,'scroll_of_tonko_ni',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4964,'scroll_of_monomi_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4965,'scroll_of_aisha_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4966,'scroll_of_myoshu_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4967,'scroll_of_yurin_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4968,'scroll_of_kakka_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4969,'scroll_of_migawari_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4970,'scroll_of_gekka_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4971,'scroll_of_yain_ichi',1,1,14,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4976,'scroll_of_foe_requiem',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4977,'scroll_of_foe_requiem_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4978,'scroll_of_foe_requiem_iii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4979,'scroll_of_foe_requiem_iv',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4980,'scroll_of_foe_requiem_v',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4981,'scroll_of_foe_requiem_vi',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4982,'scroll_of_foe_requiem_vii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4984,'scroll_of_horde_lullaby',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4985,'scroll_of_horde_lullaby_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4986,'scroll_of_armys_paeon',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4987,'scroll_of_armys_paeon_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4988,'scroll_of_armys_paeon_iii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4989,'scroll_of_armys_paeon_iv',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4990,'scroll_of_armys_paeon_v',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4991,'scroll_of_armys_paeon_vi',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4994,'scroll_of_mages_ballad',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4995,'scroll_of_mages_ballad_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4996,'scroll_of_mages_ballad_iii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4997,'scroll_of_knights_minne',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4998,'scroll_of_knights_minne_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4999,'scroll_of_knights_minne_iii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5000,'scroll_of_knights_minne_iv',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5001,'scroll_of_knights_minne_v',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5002,'scroll_of_valor_minuet',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5003,'scroll_of_valor_minuet_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5004,'scroll_of_valor_minuet_iii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5005,'scroll_of_valor_minuet_iv',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5006,'scroll_of_valor_minuet_v',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5007,'scroll_of_sword_madrigal',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5008,'scroll_of_blade_madrigal',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5009,'scroll_of_hunters_prelude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5010,'scroll_of_archers_prelude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5011,'scroll_of_sheepfoe_mambo',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5012,'scroll_of_dragonfoe_mambo',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5013,'scroll_of_fowl_aubade',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5014,'scroll_of_herb_pastoral',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5016,'scroll_of_shining_fantasia',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5017,'scroll_of_scops_operetta',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5018,'scroll_of_puppets_operetta',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5020,'scroll_of_gold_capriccio',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5022,'scroll_of_warding_round',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5023,'scroll_of_goblin_gavotte',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5027,'scroll_of_advancing_march',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5028,'scroll_of_victory_march',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5029,'scroll_of_battlefield_elegy',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5030,'scroll_of_carnage_elegy',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5032,'scroll_of_sinewy_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5033,'scroll_of_dextrous_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5034,'scroll_of_vivacious_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5035,'scroll_of_quick_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5036,'scroll_of_learned_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5037,'scroll_of_spirited_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5038,'scroll_of_enchanting_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5039,'scroll_of_herculean_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5040,'scroll_of_uncanny_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5041,'scroll_of_vital_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5042,'scroll_of_swift_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5043,'scroll_of_sage_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5044,'scroll_of_logical_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5045,'scroll_of_bewitching_etude',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5046,'scroll_of_fire_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5047,'scroll_of_ice_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5048,'scroll_of_wind_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5049,'scroll_of_earth_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5050,'scroll_of_lightning_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5051,'scroll_of_water_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5052,'scroll_of_light_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5053,'scroll_of_dark_carol',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5054,'scroll_of_fire_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5055,'scroll_of_ice_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5056,'scroll_of_wind_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5057,'scroll_of_earth_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5058,'scroll_of_lightning_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5059,'scroll_of_water_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5060,'scroll_of_light_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5061,'scroll_of_dark_carol_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5062,'scroll_of_fire_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5063,'scroll_of_ice_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5064,'scroll_of_wind_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5065,'scroll_of_earth_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5066,'scroll_of_lightning_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5067,'scroll_of_water_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5068,'scroll_of_light_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5069,'scroll_of_dark_threnody',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5070,'scroll_of_magic_finale',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5071,'scroll_of_foe_lullaby',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5072,'scroll_of_goddesss_hymnus',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5073,'scroll_of_chocobo_mazurka',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5074,'scroll_of_maidens_virelai',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5075,'scroll_of_raptor_mazurka',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5076,'scroll_of_foe_sirvente',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5077,'scroll_of_adventurers_dirge',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5078,'scroll_of_sentinels_scherzo',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5079,'scroll_of_foe_lullaby_ii',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5080,'scroll_of_pining_nocturne',1,1,15,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5082,'scroll_of_cura_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5083,'scroll_of_cura_iii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5085,'scroll_of_regen_iv',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5086,'scroll_of_regen_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5087,'scroll_of_gain-str',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5088,'scroll_of_gain-dex',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5089,'scroll_of_gain-vit',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5090,'scroll_of_gain-agi',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5091,'scroll_of_gain-int',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5092,'scroll_of_gain-mnd',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5093,'scroll_of_gain-chr',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5094,'scroll_of_boost-str',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5095,'scroll_of_boost-dex',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5096,'scroll_of_boost-vit',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5097,'scroll_of_boost-agi',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5098,'scroll_of_boost-int',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5099,'scroll_of_boost-mnd',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5100,'scroll_of_boost-chr',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5101,'scroll_of_arise',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5102,'scroll_of_foil',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5103,'scroll_of_crusade',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5104,'scroll_of_flurry',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5105,'scroll_of_flurry_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5106,'scroll_of_inundation',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5109,'frayed_sack_of_abundance_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5110,'frayed_sack_of_abundance_+2',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5111,'frayed_sack_of_mortality_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5112,'frayed_sack_of_mortality_+2',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5113,'cracked_nut',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5114,'moist_rolanberry',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5115,'clump_of_ravaged_moko_grass',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5116,'cavorting_worm',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5117,'pinch_of_levigated_rock',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5118,'little_lugworm',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5119,'training_manual',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5120,'titanic_sawfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5121,'moorish_idol',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5122,'bibiki_slug',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5123,'jacknife',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5124,'tropical_clam',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5125,'phanauet_newt',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5126,'muddy_siredon',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5127,'gugrusaurus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5128,'cone_calamary',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5129,'lik',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5130,'tavnazian_goby',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5131,'vongola_clam',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5132,'gurnard',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5133,'pterygotus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5134,'mola_mola',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5135,'rhinochimera',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5136,'istavrit',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5137,'turnabaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5138,'black_ghost',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5139,'betta',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5140,'kalkanbaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5141,'veydal_wrasse',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5142,'serving_of_bison_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5143,'serving_of_goblin_stir-fry',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5144,'serving_of_crimson_jelly',1,1,0,26,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5145,'plate_of_fish_and_chips',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5146,'hedgehog_pie',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5147,'cone_of_snoll_gelato',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5148,'plate_of_squid_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5149,'plate_of_sole_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5150,'plate_of_tuna_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5151,'plate_of_urchin_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5152,'slice_of_buffalo_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5153,'plate_of_fatty_tuna_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5154,'tavnazian_sheep_liver',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5155,'cone_of_sub-zero_gelato',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5156,'porcupine_pie',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5157,'serving_of_marbled_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5158,'serving_of_vermillion_jelly',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5159,'plate_of_friture_de_la_misareaux',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5160,'plate_of_urchin_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5161,'serving_of_leadafry',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5162,'plate_of_squid_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5163,'plate_of_sole_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5164,'jar_of_ground_wasabi',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5165,'bottle_of_movalpolos_water',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5166,'coeurl_sub',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5167,'coeurl_sub_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5168,'bataquiche',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5169,'bataquiche_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5170,'green_quiche',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5171,'emerald_quiche',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5172,'windurst_taco',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5173,'timbre_timbers_taco',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5174,'tavnazian_taco',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5175,'leremieu_taco',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5176,'plate_of_bream_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5177,'plate_of_bream_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5178,'plate_of_dorado_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5179,'plate_of_dorado_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5180,'bowl_of_sophic_stew',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5181,'tortilla_buena',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5182,'salty_bretzel',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5183,'viking_herring',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5184,'plate_of_vegan_saute',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5185,'leremieu_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5186,'plate_of_yahata-style_carp_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5187,'elshimo_coconut',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5188,'dish_of_spaghetti_peperoncino',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5189,'dish_of_spaghetti_vongole_rosso',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5190,'dish_of_spaghetti_carbonara',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5191,'dish_of_spaghetti_pescatora',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5192,'dish_of_spaghetti_boscaiola',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5193,'dish_of_spaghetti_nero_di_seppia',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5194,'bowl_of_pomodoro_sauce',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5195,'sprig_of_misareaux_parsley',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5196,'strip_of_buffalo_jerky',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5197,'dish_of_spaghetti_peperoncino_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5198,'dish_of_spaghetti_vongole_rosso_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5199,'dish_of_spaghetti_carbonara_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5200,'dish_of_spaghetti_pescatora_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5201,'dish_of_spaghetti_boscaiola_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5202,'dish_of_spaghetti_nero_di_seppia_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5203,'piece_of_hume_mochi',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5204,'piece_of_elvaan_mochi',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5205,'piece_of_tarutaru_mochi',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5206,'piece_of_galka_mochi',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5207,'strip_of_bison_jerky',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5208,'slice_of_tavnazian_ram_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5209,'slice_of_diatryma_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5210,'bowl_of_adamantoise_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5211,'dish_of_spaghetti_arrabbiata',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5212,'dish_of_spaghetti_arrabbiata_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5213,'dish_of_spaghetti_melanzane',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5214,'dish_of_spaghetti_melanzane_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5215,'plate_of_tentacle_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5216,'plate_of_tentacle_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5217,'serving_of_salmon_eggs',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5218,'serving_of_salmon_roe',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5219,'plate_of_ikra_gunkan',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5220,'plate_of_ikra_gunkan_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5221,'pitcher_of_homemade_herbal_tea',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5222,'bowl_of_homemade_stew',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5223,'cone_of_homemade_gelato',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5224,'homemade_rice_ball',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5225,'chunk_of_homemade_cheese',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5226,'homemade_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5227,'plate_of_homemade_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5228,'loaf_of_homemade_bread',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5229,'plate_of_homemade_risotto',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5230,'love_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5231,'truelove_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5232,'jug_of_soy_milk',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5233,'cube_of_cotton_tofu',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5234,'sprig_of_cibol',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5235,'head_of_napa',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5236,'clump_of_shungiku',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5237,'bundle_of_shirataki',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5238,'seafood_stewpot',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5239,'prime_seafood_stewpot',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5240,'prized_seafood_stewpot',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5241,'bottle_of_giants_drink',1,2,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5242,'bottle_of_wizards_drink',1,2,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5243,'container_of_carnal_incense',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5244,'container_of_spiritual_incense',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5245,'container_of_celestial_incense',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5246,'vial_of_drachenessence',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5247,'dose_of_barfire_ointment',1,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5248,'dose_of_barblizzard_ointment',1,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5249,'dose_of_baraero_ointment',1,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5250,'dose_of_barstone_ointment',1,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5251,'dose_of_barthunder_ointment',1,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5252,'dose_of_barwater_ointment',1,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5253,'hermes_quencher',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5254,'hyper_potion',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5255,'hyper_ether',1,2,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5256,'fire_feather',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5257,'blaze_feather',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5258,'revive_feather',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5259,'rebirth_feather',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5260,'regain_feather',1,3,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5261,'bottle_of_psychoanima',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5262,'bottle_of_hysteroanima',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5263,'bottle_of_terroanima',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5264,'bottle_of_yellow_liquid',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5265,'mistmelt',4,2,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5266,'blackened_muddy_siredon',4,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5267,'chunk_of_shumeyo_salt',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5268,'ccb_polymer_pump',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5269,'special_present',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5270,'old_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5271,'old_quiver_+1',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5272,'old_quiver_+2',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5273,'old_quiver_+3',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5274,'old_quiver_+4',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5275,'old_quiver_+5',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5276,'old_quiver_+6',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5277,'old_quiver_+7',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5278,'old_bolt_box',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5279,'old_bolt_box_+1',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5280,'old_bolt_box_+2',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5281,'old_bolt_box_+3',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5282,'old_bolt_box_+4',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5283,'old_bolt_box_+5',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5284,'old_bullet_box',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5285,'old_bullet_box_+1',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5286,'cluster_of_burning_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5287,'cluster_of_bitter_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5288,'cluster_of_fleeting_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5289,'cluster_of_profane_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5290,'cluster_of_startling_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5291,'cluster_of_somber_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5292,'cluster_of_radiant_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5293,'cluster_of_malevolent_memories',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5294,'hume_rice_cake',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5295,'elvaan_rice_cake',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5296,'tarutaru_rice_cake',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5297,'mithran_rice_cake',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5298,'flask_of_muting_potion',1,1,71,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5299,'dish_of_salsa',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5300,'copy_of_the_ballista_redbook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5301,'page_of_the_ballista_redbook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5302,'copy_of_the_ballista_whitebook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5303,'page_of_the_ballista_whitebook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5304,'demoralizer',4,2,67,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5305,'demoralizer_+1',4,2,67,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5306,'bottle_of_hallowed_water',1,1,7,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5307,'flask_of_invitriol',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5308,'toolbag_uchitake',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5309,'toolbag_tsurara',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5310,'toolbag_kawahori-ogi',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5311,'toolbag_makibishi',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5312,'toolbag_hiraishin',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5313,'toolbag_mizu-deppo',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5314,'toolbag_shihei',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5315,'toolbag_jusatsu',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5316,'toolbag_kaginawa',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5317,'toolbag_sairui-ran',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5318,'toolbag_kodoku',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5319,'toolbag_shinobi-tabi',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5320,'chunk_of_smelling_salts',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5321,'bottle_of_romance_potion',1,3,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5322,'flask_of_healing_powder',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5323,'copy_of_the_brenner_bluebook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5324,'page_of_the_brenner_bluebook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5325,'copy_of_the_brenner_blackbook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5326,'page_of_the_brenner_blackbook',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5327,'bottle_of_potion_drops',1,2,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5328,'bottle_of_hi-potion_drops',1,2,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5329,'tarutaru_snare',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5330,'mithra_snare',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5331,'qiqirn_mine',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5332,'kabura_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5333,'sleep_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5334,'blind_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5335,'acid_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5336,'holy_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5337,'sleep_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5338,'venom_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5339,'bloody_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5340,'silver_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5341,'spartan_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5342,'corsair_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5343,'cage_of_azouph_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5344,'cage_of_bhaflau_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5345,'cage_of_zhayolm_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5346,'cage_of_dvucca_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5347,'cage_of_reef_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5348,'cage_of_undersea_ruins_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5349,'cage_of_cutter_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5350,'phial_of_volant_serum',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5351,'phial_of_osseous_serum',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5352,'phial_of_spectral_serum',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5353,'iron_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5354,'flask_of_walahra_water',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5355,'elixir_vitae',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5356,'jar_of_remedy_ointment',1,1,7,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5357,'bottle_of_ether_drops',1,2,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5358,'bottle_of_hi-ether_drops',1,2,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5359,'bronze_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5360,'muteppo',1,10,102,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5361,'datechochin',1,1,101,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5362,'pinch_of_rainbow_powder',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5363,'bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5364,'training_grounds_key',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5365,'incus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5366,'castellanus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5367,'cumulus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5368,'radiatus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5369,'stratus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5370,'cirrocumulus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5371,'undulatus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5372,'virga_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5373,'duplicatus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5374,'opacus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5375,'praecipitatio_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5376,'pannus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5377,'fractus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5378,'congestus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5379,'nimbus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5380,'velum_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5381,'pileus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5382,'mediocris_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5383,'humilus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5384,'spissatus_cell',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5385,'bottle_of_barbarians_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5386,'bottle_of_fighters_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5387,'bottle_of_oracles_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5388,'bottle_of_assassins_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5389,'bottle_of_spys_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5390,'bottle_of_bravers_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5391,'bottle_of_soldiers_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5392,'bottle_of_champions_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5393,'bottle_of_monarchs_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5394,'bottle_of_gnostics_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5395,'bottle_of_clerics_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5396,'bottle_of_shepherds_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5397,'bottle_of_sprinters_drink',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5398,'cage_of_z_remnants_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5399,'cage_of_a_remnants_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5400,'cage_of_b_remnants_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5401,'cage_of_s_remnants_fireflies',1,10,80,3,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5402,'fire_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5403,'ice_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5404,'wind_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5405,'earth_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5406,'thunder_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5407,'water_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5408,'light_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5409,'dark_card_case',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5410,'virtue_stone_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5411,'bottle_of_dawn_mulsum',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5412,'scapegoat',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5413,'smouldering_lamp',0,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5414,'glowing_lamp',1,0,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5415,'page_from_balrahns_reflections',1,5,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5416,'steel_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5417,'toolbag_sanjaku-tenugui',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5418,'vial_of_tincture',1,1,6,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5419,'black_mine',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5420,'paralyzing_tube',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5421,'silencing_tube',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5422,'binding_tube',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5423,'bottled_fay',1,10,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5424,'serene_serinette',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5425,'joyous_serinette',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5426,'maze_compass',1,10,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5427,'maze_pearl',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5428,'scroll_of_instant_retrace',1,10,82,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5429,'clump_of_tandjana_wildgrass',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5430,'bottle_of_viper_potion',1,1,68,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5431,'dusty_potion',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5432,'dusty_ether',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5433,'dusty_elixir',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5434,'bottle_of_fanatics_drink',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5435,'bottle_of_fools_drink',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5436,'dusty_scroll_of_reraise',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5437,'flask_of_strange_milk',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5438,'bottle_of_strange_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5439,'bottle_of_vicars_drink',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5440,'dusty_wing',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5441,'angelwing',1,1,103,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5442,'thunderguard_dart',4,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5443,'magnus_stone_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5444,'bunch_of_grauberg_greens',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5445,'prismatic_elixir',4,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5446,'red_bubble-eye',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5447,'denizanasi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5448,'kalamar',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5449,'hamsi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5450,'lakerda',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5451,'kilicbaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5452,'uskumru',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5453,'istakoz',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5454,'mercanbaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5455,'ahtapot',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5456,'istiridye',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5457,'dil',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5458,'yilanbaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5459,'sazanbaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5460,'kayabaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5461,'alabaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5462,'morinabaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5463,'yayinbaligi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5464,'kaplumbaga',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5465,'caedarva_frog',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5466,'trumpet_shell',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5467,'megalodon',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5468,'matsya',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5469,'brass_loach',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5470,'pirarucu',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5471,'gerrothorax',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5472,'garpike',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5473,'bastore_sweeper',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5474,'ca_cuong',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5475,'gigant_octopus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5476,'abaia',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5477,'warrior_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5478,'monk_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5479,'white_mage_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5480,'black_mage_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5481,'red_mage_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5482,'thief_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5483,'paladin_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5484,'dark_knight_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5485,'beastmaster_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5486,'bard_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5487,'ranger_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5488,'samurai_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5489,'ninja_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5490,'dragoon_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5491,'summoner_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5492,'blue_mage_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5493,'corsair_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5494,'puppetmaster_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5495,'dancer_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5496,'scholar_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5497,'bolters_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5498,'casters_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5499,'coursers_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5500,'blitzers_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5501,'tacticians_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5502,'allies_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5503,'misers_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5504,'companions_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5505,'avengers_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5506,'immutable_boulder_tincture',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5507,'luminous_isle_tincture',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5508,'flourishing_island_tincture',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5509,'bud_of_the_swarm_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5510,'immaculate_sands_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5511,'dragon_driftwood_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5512,'fruit_of_fecundity_tincture',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5513,'torchbloom_tincture',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5514,'lake_of_light_tincture',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5515,'gales_prominence_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5516,'sweltering_spring_tincture',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5517,'flames_prominence_tincture',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5518,'sanctum_of_life_tincture',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5519,'soils_prominence_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5520,'snowdrift_arbor_tincture',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5521,'frostbloom_tincture',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5522,'spring_of_prosperity_tincture',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5523,'pool_of_clarity_tincture',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5524,'bryophitic_boulder_tincture',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5525,'overgrown_grove_tincture',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5526,'fragrant_breeze_budtincture',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5527,'whitewater_arbor_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5528,'triumvirate_crag_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5529,'saliferous_spring_tincture',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5530,'ripple_prominence_tincture',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5531,'slice_of_lucerewe_meat',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5532,'ichinintousen_koma',1,1,116,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5534,'apkallufa',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5535,'deademoiselle',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5536,'yorchete',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5537,'soryu',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5538,'sekiryu',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5539,'hakuryu',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5540,'kokuryu',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5541,'bunch_of_royal_grapes',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5542,'gateau_aux_fraises',1,1,0,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5543,'midwinter_dream',1,1,24,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5544,'crab_stewpot',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5545,'prime_crab_stewpot',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5546,'prized_crab_stewpot',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5547,'beef_stewpot',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5548,'prime_beef_stewpot',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5549,'prized_beef_stewpot',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5550,'roll_of_buche_au_chocolat',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5551,'roll_of_sylvan_excursion',1,1,24,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5552,'serving_of_black_pudding',1,1,24,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5553,'serving_of_dusky_indulgence',1,1,24,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5554,'serving_of_squirrels_delight',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5555,'serving_of_flurry_courante',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5556,'cone_of_seraphs_kiss',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5557,'serving_of_mont_blanc',1,1,29,29,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5558,'serving_of_golden_royale',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5559,'serving_of_mille-feuille',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5560,'serving_of_elysian_eclair',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5561,'moogle_pie',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5562,'pot_of_white_honey',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5563,'chunk_of_orobon_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5564,'chunk_of_hydra_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5565,'slice_of_cerberus_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5566,'date',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5567,'dried_date',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5568,'apkallu_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5569,'puk_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5570,'cup_of_chai',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5571,'slice_of_karakul_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5572,'irmik_helvasi',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5573,'irmik_helvasi_+1',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5574,'dried_date_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5575,'bowl_of_yogurt',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5576,'flask_of_ayran',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5577,'bowl_of_sutlac',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5578,'bowl_of_sutlac_+1',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5579,'bowl_of_yayla_corbasi',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5580,'bowl_of_yayla_corbasi_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5581,'slice_of_ziz_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5582,'plate_of_patlican_salata',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5583,'plate_of_patlican_salata_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5584,'plate_of_ic_pilav',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5585,'plate_of_ic_pilav_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5586,'serving_of_menemen',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5587,'serving_of_menemen_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5588,'serving_of_karni_yarik',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5589,'serving_of_karni_yarik_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5590,'balik_sandvici',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5591,'balik_sandvici_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5592,'cup_of_imperial_coffee',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5593,'cup_of_imperial_coffee_+1',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5594,'cup_of_chai_+1',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5595,'bowl_of_nashmau_stew',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5596,'simit',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5597,'simit_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5598,'sis_kebabi',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5599,'sis_kebabi_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5600,'balik_sis',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5601,'balik_sis_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5602,'dish_of_hydra_kofte',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5603,'dish_of_hydra_kofte_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5604,'elshimo_pachira_fruit',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5605,'bunch_of_sharug_greens',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5606,'bunch_of_azouph_greens',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5607,'vomp_carrot',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5608,'zegham_carrot',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5609,'hellsteak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5610,'hellsteak_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5611,'angler_stewpot',1,1,24,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5612,'prime_angler_stewpot',1,1,27,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5613,'prize_angler_stewpot',1,1,27,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5614,'konigskuchen',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5615,'uberkuchen',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5616,'lebkuchen_house',1,1,26,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5617,'lebkuchen_manse',1,1,26,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5618,'bowl_of_zoni_broth',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5619,'bowl_of_zesty_zoni',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5620,'roast_turkey',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5621,'candy_ring',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5622,'candy_cane',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5623,'dish_of_spaghetti_tonno_rosso',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5624,'dish_of_spaghetti_tonno_rosso_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5625,'maple_cake',1,1,29,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5626,'silken_siesta',1,1,29,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5627,'yogurt_cake',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5628,'silken_smile',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5629,'orange_cake',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5630,'silken_squeeze',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5631,'pumpkin_cake',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5632,'silken_sash',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5633,'chocolate_cake',1,1,24,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5634,'silken_spirit',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5635,'shrimp_cracker',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5636,'shrimp_cracker_+1',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5637,'pogaca',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5638,'pogaca_+1',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5639,'skewer_of_m&p_chicken',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5640,'m&p_cracker',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5641,'m&p_dumpling',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5642,'serving_of_cilbir',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5643,'serving_of_cibarious_cilbir',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5644,'jack-o-pie',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5645,'piece_of_witch_nougat',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5646,'handful_of_bloody_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5647,'lik_kabob',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5648,'grilled_lik',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5649,'handful_of_roasted_almonds',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5650,'pair_of_nopales',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5651,'burdock_root',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5652,'plate_of_anchovies',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5653,'cherry_muffin',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5654,'cherry_muffin_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5655,'coffeecake_muffin',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5656,'coffeecake_muffin_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5657,'army_biscuit',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5658,'dish_of_spaghetti_ortolana',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5659,'dish_of_spaghetti_ortolana_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5660,'stick_of_pepperoni',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5661,'walnut',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5662,'dragon_fruit',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5663,'plate_of_salmon_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5664,'plate_of_salmon_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5665,'plate_of_fin_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5666,'plate_of_fin_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5667,'slice_of_lynx_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5668,'smilodon_liver',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5669,'bowl_of_loach_slop',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5670,'bowl_of_loach_gruel',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5671,'bowl_of_loach_soup',1,1,25,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5672,'dried_berry',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5673,'rolsin',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5674,'aileens_delight',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5675,'withered_rolanberry',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5676,'serving_of_mushroom_saute',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5677,'serving_of_patriarch_saute',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5678,'mushroom_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5679,'cathedral_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5680,'agaricus_mushroom',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5681,'cupid_chocolate',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5682,'purple_polypore',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5683,'humpty_dumpty_effigy',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5684,'wedge_of_chalaimbille',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5685,'rabbit_pie',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5686,'cheese_sandwich',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5687,'cheese_sandwich_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5688,'head_of_grauberg_lettuce',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5689,'meatloaf',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5690,'meatloaf_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5691,'plate_of_shrimp_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5692,'plate_of_shrimp_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5693,'plate_of_octopus_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5694,'plate_of_octopus_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5695,'margherita_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5696,'margherita_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5697,'pepperoni_pizza',1,1,0,28,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5698,'pepperoni_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5699,'anchovy_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5700,'anchovy_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5701,'nopales_salad',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5702,'nopales_salad_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5703,'jug_of_uleguerand_milk',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5704,'anglers_cassoulet',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5705,'homemade_salisbury_steak',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (5706,'dish_of_homemade_carbonara',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5707,'homemade_omelette',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5708,'mihgo_mithkabob',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5709,'stick_of_cotton_candy',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5710,'berry_snow_cone',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5711,'kitron_snow_cone',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5712,'melon_snow_cone',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5713,'orange_snow_cone',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5714,'pearlscale',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5715,'calico_comet',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5716,'soothing_potion',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5717,'m&p_doner_kebab',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5718,'cream_puff',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5719,'dish_of_spaghetti_marinara',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5720,'dish_of_spaghetti_marinara_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5721,'plate_of_crab_sushi',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5722,'plate_of_crab_sushi_+1',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5724,'pinch_of_pungent_powder',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5725,'goshikitenge',1,1,105,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5726,'zucchini',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5727,'serving_of_zaru_soba',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5728,'serving_of_zaru_soba_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5729,'serving_of_bavarois',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5730,'serving_of_bavarois_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5731,'plate_of_ratatouille',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5732,'plate_of_ratatouille_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5733,'jug_of_miracle_milk',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5734,'toolbag_soshi',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5735,'cotton_coin_purse',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5736,'linen_coin_purse',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5737,'slice_of_salted_hare',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5738,'chunk_of_sweet_lizard',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5739,'mug_of_honeyed_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5740,'cluster_of_paprika',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5741,'flask_of_pest_repellent',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5742,'bottle_of_buffalo_bonanza_milk',1,1,27,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5743,'marinara_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5744,'marinara_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5745,'serving_of_cherry_bavarois',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5746,'serving_of_cherry_bavarois_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5747,'jar_of_marinara_sauce',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5748,'sachet_of_wood',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5749,'sachet_of_bugs',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5750,'bowl_of_goulash',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5751,'bowl_of_goulash_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5752,'pot-au-feu',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5753,'pot-au-feu_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5754,'vial_of_eau_de_moblin',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5755,'slab_of_ruszor_meat',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5756,'green_curry_bun',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5757,'yellow_curry_bun',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5758,'black_curry_bun',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5759,'red_curry_bun',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5760,'kohlrouladen',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5761,'kohlrouladen_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5762,'green_curry_bun_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5763,'yellow_curry_bun_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5764,'black_curry_bun_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5765,'red_curry_bun_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5766,'butter_crepe',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5767,'crepe_delice',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5768,'portafurnace',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5769,'popper',1,1,107,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5770,'super_reraiser',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5771,'ham_and_cheese_crepe',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5772,'crepe_paysanne',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5773,'mushroom_crepe',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5774,'crepe_forestiere',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5775,'chocolate_crepe',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5776,'crepe_caprice',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5777,'pear_crepe',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5778,'crepe_belle_helene',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5779,'cherry_macaron',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5780,'coffee_macaron',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5781,'kitron_macaron',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5782,'sugar_rusk',1,1,0,26,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5783,'chocolate_rusk',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5784,'coconut_rusk',1,1,10,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5785,'crayfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5786,'dark_bass',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5787,'pipira',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5788,'black_eel',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5789,'moat_carp',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5790,'copper_frog',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5791,'shining_trout',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5792,'bastore_sardine',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5793,'quus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5794,'tiger_cod',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5795,'ogre_eel',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5796,'nosteau_herring',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5797,'gold_lobster',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5798,'bluetail',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5799,'giant_catfish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5800,'giant_donko',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5801,'monke-onke',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5802,'istavrit',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5803,'gigant_octopus',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5804,'veydal_wrasse',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5805,'gugru_tuna',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5806,'bhefhel_marlin',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5807,'bladefish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5808,'rhinochimera',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5809,'three-eyed_fish',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5810,'creel_of_moat_carp',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5811,'creel_of_forest_carp',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5812,'blowfish',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5813,'dorado_gar',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5814,'crocodilos',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5815,'pelazoea',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5816,'king_perch',1,4,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5817,'tiger_shark',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5818,'aurora_bass',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5819,'antlion_quiver',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5820,'darkling_bolt_quiver',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5821,'fusion_bolt_quiver',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5822,'dweomer_bullet_pouch',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5823,'oberon_bullet_pouch',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5824,'lucid_potion_i',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5825,'lucid_potion_ii',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5826,'lucid_potion_iii',1,1,31,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5827,'lucid_ether_i',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5828,'lucid_ether_ii',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5829,'lucid_ether_iii',1,1,33,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5830,'lucid_elixir_i',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5831,'lucid_elixir_ii',1,1,34,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5832,'flask_of_healing_mist',1,1,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5833,'flask_of_mana_mist',1,1,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5834,'pair_of_lucid_wings_i',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5835,'tube_of_healing_salve_i',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5836,'tube_of_healing_salve_ii',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5837,'tube_of_clear_salve_i',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5838,'tube_of_clear_salve_ii',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5839,'bottle_of_stalwarts_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5840,'bottle_of_stalwarts_gambir',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5841,'bottle_of_ascetics_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5842,'bottle_of_ascetics_gambir',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5843,'bottle_of_champions_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5844,'bottle_of_champions_gambir',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5845,'bottle_of_fanatics_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5846,'bottle_of_fools_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5847,'pinch_of_fanatics_powder',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5848,'pinch_of_fools_powder',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5849,'bottle_of_berserkers_drink',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5850,'bottle_of_swiftshot_drink',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5851,'bottle_of_berserkers_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5852,'bottle_of_swiftshot_tonic',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5853,'flask_of_primeval_brew',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5854,'frayed_pouch_of_birth',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5855,'frayed_pouch_of_advancement',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5856,'frayed_pouch_of_glory',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5857,'frayed_pouch_of_decay',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5858,'frayed_pouch_of_ruin',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5859,'galkan_sausage_+1',1,4,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5860,'galkan_sausage_+2',1,4,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5861,'galkan_sausage_+3',1,4,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5862,'galkan_sausage_-1',1,4,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5863,'toolbag_kabenro',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5864,'toolbag_jinko',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5865,'toolbag_ryuno',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5866,'toolbag_mokujin',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5867,'toolbag_inoshishinofuda',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5868,'toolbag_shikanofuda',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5869,'toolbag_chonofuda',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5870,'trump_card_case',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5871,'ruszor_quiver',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5872,'dark_adaman_bolt_quiver',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5873,'dark_adaman_bullet_pouch',1,4,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5875,'galette_des_rois',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5876,'phial_of_petrify_screen',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5877,'phial_of_terror_screen',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5878,'phial_of_amnesia_screen',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5879,'phial_of_doom_screen',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5880,'phial_of_poison_screen',1,4,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5881,'shisai_kaboku',1,1,110,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5882,'marine_bliss',1,1,108,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5883,'falling_star',1,1,109,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5884,'rengedama',1,1,111,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5885,'saltena',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5886,'elshena',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5887,'montagna',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5888,'maringna',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5889,'stuffed_pitaru',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5890,'poultry_pitaru',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5891,'seafood_pitaru',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5892,'b.e.w._pitaru',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5893,'marine_stewpot',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5894,'prime_marine_stewpot',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5895,'odorless_fungus',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5896,'clump_of_absorbent_moss',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5897,'redolent_root',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5898,'shadescale_skull',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5899,'shadescale_femur',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5900,'shadescale_talon',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5901,'shadescale_heart',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5902,'vial_of_cagebeast_blood',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5903,'vial_of_sea_monk_venom',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5904,'perforated_wing',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5905,'undying_moiety',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5906,'page_from_abdhaljs_on_war',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5907,'winterflower',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5908,'butterpear',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5909,'pickled_rarab_tail',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5910,'heavy_metal_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5911,'olde_rarab_tail',4,1,55,0,0,0,0,0); -- Need to verify animation
-INSERT INTO `item_usable` VALUES (5912,'gargouille_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5913,'adaman_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5914,'orichalcum_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5915,'adaman_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5916,'temple_truffle',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5917,'choco-scroll',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5918,'choco-katana',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5919,'choco-ligar',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5920,'fudgy-wudge',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5921,'chocolate_rarab_tail',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5922,'walnut_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5923,'juglan_jumble',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5924,'smoldering_salisbury_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5925,'charred_salisbury_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5926,'cup_of_date_tea',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5927,'cup_of_caravan_tea',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5928,'himesama_rice_ball',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5929,'ojo_rice_ball',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5930,'bowl_of_sprightly_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5931,'bowl_of_shimmy_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5932,'bottle_of_kitron_juice',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5933,'flask_of_dragon_fruit_au_lait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5934,'chocobiscuit',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5935,'bowl_of_moogurt',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5936,'mog_missile',1,1,112,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5937,'bubble_breeze',1,1,113,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5938,'hiatus_whistle',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5939,'terminus_whistle',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5940,'trail_cookie',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5941,'bar_of_campfire_chocolate',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5942,'piece_of_cascade_candy',1,1,29,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5943,'strip_of_smoked_mackerel',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5944,'bottle_of_frontier_soda',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5945,'pinch_of_prize_powder',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5946,'frayed_sack_of_deviousness',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5947,'frayed_sack_of_liminality',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5948,'black_prawn',1,1,25,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5949,'mussel',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5950,'mackerel',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5951,'bloodblotch',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5952,'ruddy_seema',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5953,'dragonfly_trout',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5954,'barnacle',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5955,'yawning_catfish',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5957,'shockfish',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5959,'dragonfish',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5960,'ulbukan_lobster',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5961,'contortopus',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5962,'contortacle',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5963,'senroh_sardine',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5964,'felicifruit',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5965,'head_of_isleracea',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5966,'ulbuconut',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5967,'verboshroom',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5968,'plate_of_seafood_paella',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5969,'plate_of_piscators_paella',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5970,'plate_of_mushroom_paella',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5971,'plate_of_mushroom_paella_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5972,'plate_of_beef_paella',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5973,'plate_of_beef_paella_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5974,'plate_of_barnacle_paella',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5975,'plate_of_flapanos_paella',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5976,'bowl_of_ulbuconut_milk',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5977,'bowl_of_ulbuconut_milk_+1',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5978,'plate_of_felicifruit_gelatin',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5979,'plate_of_dulcet_panettones',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5980,'plate_of_boiled_barnacles',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5981,'plate_of_boiled_barnacles_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5982,'senroh_skewer',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5983,'piscators_skewer',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5984,'branch_of_gnatbane',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5985,'sprig_of_hemlock',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5986,'coalition_potion',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5987,'coalition_ether',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5988,'scroll_of_instant_protect',1,7,30,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5989,'scroll_of_instant_shell',1,7,32,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5990,'scroll_of_instant_stoneskin',1,7,8,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5991,'farewell_fly',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5992,'fenestral_key',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5993,'senroh_frog',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5995,'malicious_perch',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5997,'shen',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (5998,'bowl_of_adoulinian_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (5999,'bowl_of_adoulinian_soup_+1',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6001,'clotflagration',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6002,'trailblazing_pickaxe',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6003,'trailblazing_pickaxe_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6004,'trailblazing_hatchet',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6005,'trailblazing_hatchet_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6006,'trailblazing_sickle',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6007,'trailblazing_sickle_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6008,'piece_of_copse_candy',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6009,'bowl_of_mog_pudding',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6010,'sakura_biscuit',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6011,'celadon_yggrete_shard_i',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6012,'celadon_yggrete_shard_ii',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6013,'celadon_yggrete_shard_iii',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6014,'celadon_yggrete_shard_iv',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6015,'celadon_yggrete_shard_v',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6016,'zaffre_yggrete_shard_i',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6017,'zaffre_yggrete_shard_ii',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6018,'zaffre_yggrete_shard_iii',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6019,'zaffre_yggrete_shard_iv',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6020,'zaffre_yggrete_shard_v',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6021,'alizarin_yggrete_shard_i',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6022,'alizarin_yggrete_shard_ii',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6023,'alizarin_yggrete_shard_iii',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6024,'alizarin_yggrete_shard_iv',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6025,'alizarin_yggrete_shard_v',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6026,'celadon_yggzi_bead_i',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6027,'celadon_yggzi_bead_ii',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6028,'celadon_yggzi_bead_iii',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6029,'celadon_yggzi_bead_iv',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6030,'celadon_yggzi_bead_v',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6031,'zaffre_yggzi_bead_i',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6032,'zaffre_yggzi_bead_ii',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6033,'zaffre_yggzi_bead_iii',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6034,'zaffre_yggzi_bead_iv',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6035,'zaffre_yggzi_bead_v',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6036,'alizarin_yggzi_bead_i',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6037,'alizarin_yggzi_bead_ii',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6038,'alizarin_yggzi_bead_iii',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6039,'alizarin_yggzi_bead_iv',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6040,'alizarin_yggzi_bead_v',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6041,'pyrohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6042,'hydrohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6043,'ionohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6044,'cryohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6045,'geohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6046,'anemohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6047,'luminohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6048,'noctohelix_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6049,'firestorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6050,'rainstorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6051,'thunderstorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6052,'hailstorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6053,'sandstorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6054,'windstorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6055,'aurorastorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6056,'voidstorm_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6058,'klimaform_schema',1,1,12,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6059,'animus_augeo_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6060,'animus_minuo_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6061,'adloquium_schema',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6063,'fruit_parfait',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6064,'queens_crown',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6065,'tiny_macaroon',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6066,'tiny_rusk',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6067,'ontic_extremity',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6068,'slice_of_gabbrath_meat',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6069,'bowl_of_riverfin_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6070,'bowl_of_oceanfin_soup',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6071,'magma_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6072,'magma_steak_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6073,'plate_of_indi-regen',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6074,'plate_of_indi-poison',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6075,'plate_of_indi-refresh',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6076,'plate_of_indi-str',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6077,'plate_of_indi-dex',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6078,'plate_of_indi-vit',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6079,'plate_of_indi-agi',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6080,'plate_of_indi-int',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6081,'plate_of_indi-mnd',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6082,'plate_of_indi-chr',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6083,'plate_of_indi-fury',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6084,'plate_of_indi-barrier',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6085,'plate_of_indi-acumen',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6086,'plate_of_indi-fend',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6087,'plate_of_indi-precision',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6088,'plate_of_indi-voidance',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6089,'plate_of_indi-focus',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6090,'plate_of_indi-attunement',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6091,'plate_of_indi-wilt',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6092,'plate_of_indi-frailty',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6093,'plate_of_indi-fade',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6094,'plate_of_indi-malaise',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6095,'plate_of_indi-slip',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6096,'plate_of_indi-torpor',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6097,'plate_of_indi-vex',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6098,'plate_of_indi-languor',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6099,'plate_of_indi-slow',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6100,'plate_of_indi-paralysis',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6101,'plate_of_indi-gravity',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6102,'geo-regen',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6103,'geo-poison',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6104,'geo-refresh',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6105,'geo-str',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6106,'geo-dex',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6107,'geo-vit',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6108,'geo-agi',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6109,'geo-int',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6110,'geo-mnd',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6111,'geo-chr',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6112,'geo-fury',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6113,'geo-barrier',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6114,'geo-acumen',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6115,'geo-fend',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6116,'geo-precision',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6117,'geo-voidance',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6118,'geo-focus',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6119,'geo-attunement',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6120,'geo-wilt',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6121,'geo-frailty',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6122,'geo-fade',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6123,'geo-malaise',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6124,'geo-slip',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6125,'geo-torpor',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6126,'geo-vex',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6127,'geo-languor',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6128,'geo-slow',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6129,'geo-paralysis',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6130,'geo-gravity',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6131,'plate_of_indi-haste',1,1,13,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6132,'geo-haste',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6137,'chapuli_quiver',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6138,'mantid_quiver',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6139,'midrium_bolt_quiver',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6140,'damascus_bolt_quiver',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6141,'oxidant_bolt_quiver',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6142,'midrium_bullet_pouch',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6143,'damascus_bullet_pouch',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6144,'frigorifish',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6145,'dwarf_remora',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6146,'remora',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6147,'copy_of_mikhes_memo',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6148,'dagger_enchiridion',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6149,'copy_of_swing_and_stab',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6150,'copy_of_mieuseloirs_diary',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6151,'copy_of_striking_bulls_diary',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6152,'copy_of_death_for_dimwits',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6153,'copy_of_ludwigs_report',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6154,'copy_of_clash_of_titans',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6155,'copy_of_kagetoras_diary',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6156,'copy_of_noilluries_log',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6157,'copy_of_ferreouss_diary',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6158,'copy_of_kayeel-payeels_memoirs',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6159,'copy_of_perihs_primer',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6160,'copy_of_barrels_of_fun',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6161,'throwing_weapon_enchiridion',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6162,'copy_of_mikhes_note',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6163,'copy_of_sonias_diary',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6164,'copy_of_the_successor',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6165,'copy_of_kagetoras_journal',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6166,'copy_of_altanas_hymn',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6167,'copy_of_coveffe_barrows_musings',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6168,'copy_of_aid_for_all',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6169,'investigative_report',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6170,'bounty_list',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6171,'copy_of_dark_deeds',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6172,'copy_of_breezy_libretto',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6173,'cavernous_score',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6174,'beaming_score',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6175,'copy_of_yomis_diagram',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6176,'copy_of_astral_homeland',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6177,'copy_of_life-form_study',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6178,'copy_of_hrohjs_record',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6179,'copy_of_the_bell_tolls',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6180,'pluton_case',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6181,'beitetsu_parcel',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6182,'boulder_case',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6183,'pluton_box',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6184,'beitetsu_box',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6185,'boulder_box',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6186,'slime_rocket',1,1,115,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6187,'piece_of_slimeulation_candy',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6188,'piece_of_she-slime_candy',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6189,'piece_of_metal_slime_candy',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6190,'spriggan_spark',1,1,114,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6191,'green_spriggan_lolli',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6192,'red_spriggan_lolli',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6193,'purple_spriggan_lolli',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6194,'loch_of_flux_tincture',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6195,'lambent_pillar_tincture',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6196,'halcyon_icefall_tincture',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6197,'rime_prominence_tincture',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6198,'crystalline_claw_tincture',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6199,'achiyalabopa_quiver',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6200,'adlivun_quiver',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6201,'tulfaire_quiver',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6202,'raaz_quiver',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6203,'achiyalabopa_bolt_quiver',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6204,'adlivun_bolt_quiver',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6205,'titanium_bolt_quiver',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6206,'bismuth_bolt_quiver',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6207,'achiyalabopa_bullet_pouch',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6208,'adlivun_bullet_pouch',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6209,'titanium_bullet_pouch',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6210,'bismuth_bullet_pouch',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6211,'slice_of_marinara_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6212,'slice_of_marinara_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6213,'slice_of_margherita_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6214,'slice_of_margherita_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6215,'slice_of_pepperoni_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6216,'slice_of_pepperoni_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6217,'slice_of_anchovy_pizza',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6218,'slice_of_anchovy_pizza_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6219,'warthog_stewpot',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6220,'prime_warthog_stewpot',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6221,'prized_warthog_stewpot',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6222,'slice_of_warthog_meat',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6223,'cehuetzi_snow_cone',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6224,'apingaut_snow_cone',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6225,'cyclical_coalescence',1,1,26,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6226,'loaf_of_pixioche',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6227,'phlox_yggrete_shard_i',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6228,'phlox_yggrete_shard_ii',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6229,'phlox_yggrete_shard_iii',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6230,'phlox_yggrete_shard_iv',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6231,'phlox_yggrete_shard_v',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6232,'russet_yggrete_shard_i',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6233,'russet_yggrete_shard_ii',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6234,'russet_yggrete_shard_iii',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6235,'russet_yggrete_shard_iv',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6236,'russet_yggrete_shard_v',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6237,'aster_yggrete_shard_i',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6238,'aster_yggrete_shard_ii',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6239,'aster_yggrete_shard_iii',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6240,'aster_yggrete_shard_iv',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6241,'aster_yggrete_shard_v',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6242,'phlox_yggzi_bead_i',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6243,'phlox_yggzi_bead_ii',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6244,'phlox_yggzi_bead_iii',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6245,'phlox_yggzi_bead_iv',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6246,'phlox_yggzi_bead_v',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6247,'russet_yggzi_bead_i',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6248,'russet_yggzi_bead_ii',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6249,'russet_yggzi_bead_iii',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6250,'russet_yggzi_bead_iv',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6251,'russet_yggzi_bead_v',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6252,'aster_yggzi_bead_i',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6253,'aster_yggzi_bead_ii',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6254,'aster_yggzi_bead_iii',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6255,'aster_yggzi_bead_iv',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6256,'aster_yggzi_bead_v',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6257,'jar_of_jungle_nectar',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6258,'piece_of_shiromochi',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6259,'piece_of_shiromochi_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6260,'piece_of_akamochi',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6261,'piece_of_akamochi_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6262,'piece_of_kusamochi',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6263,'piece_of_kusamochi_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6264,'frayed_sack_of_horror_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6265,'toolbag_ranka',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6266,'toolbag_furu',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6267,'aged_box_bayld',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6268,'komanezumi',1,1,118,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6269,'eminent_quiver',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6270,'eminent_bolt_quiver',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6271,'eminent_bullet_pouch',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6272,'fried_popoto',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6273,'fried_popoto_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6274,'pukatrice_egg',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6275,'pukatrice_egg_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6276,'deep-fried_shrimp',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6277,'deep-fried_shrimp_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6278,'abrasion_bolt_quiver',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6279,'righteous_bolt_quiver',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6280,'rakaznar_quiver',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6281,'rakaznar_bolt_quiver',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6282,'rakaznar_bullet_pouch',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6283,'velkk_coffer',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6284,'grand_velkk_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6285,'ymmr-ulvids_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6286,'ymmr-ulvids_grand_coffer',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6287,'ignor-mnts_coffer',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6288,'ignor-mnts_grand_coffer',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6289,'durs-vikes_coffer',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6290,'durs-vikes_grand_coffer',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6291,'tryl-wujs_coffer',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6292,'tryl-wujs_grand_coffer',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6293,'liij-voks_coffer',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6294,'liij-voks_grand_coffer',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6295,'gramk-droogs_coffer',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6296,'gramk-droogs_grand_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6297,'juji_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6298,'manji_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6299,'shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6300,'koga_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6301,'togakushi_shuriken_pouch',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6302,'fuma_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6303,'iga_shuriken_pouch',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6304,'roppo_shuriken_pouch',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6305,'roppo_shuriken_+1_pouch',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6306,'happo_shuriken_pouch',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6307,'happo_shuriken_+1_pouch',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6308,'hachiya_shuriken_pouch',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6309,'suppa_shuriken_pouch',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6310,'gashing_bolt_quiver',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6311,'decimating_bullet_pouch',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6312,'hugemaw_harolds_coffer',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6313,'bounding_belindas_coffer',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6314,'prickly_pitrivs_coffer',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6315,'ironhorn_baldurnos_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6316,'sleepy_mabels_coffer',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6317,'valkurm_imperators_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6318,'serpopard_ninlils_coffer',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6319,'abyssdivers_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6320,'intuilas_coffer',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6321,'emperor_arthros_coffer',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6322,'orcfeltraps_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6323,'lumber_jills_coffer',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6324,'joyous_greens_coffer',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6325,'strixs_coffer',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6326,'warblade_beaks_coffer',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6327,'arkes_coffer',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6328,'largantuas_coffer',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6329,'beists_coffer',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6330,'jester_malatrixs_coffer',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6331,'catrot_velozs_coffer',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6332,'woodland_menders_coffer',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6333,'translucent_salpa',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6334,'rakaznar_shellfish',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6335,'white_lobster',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6336,'bonefish',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6337,'thysanopeltis',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6338,'cameroceras',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6339,'rolanberry_daifuku',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6340,'rolanberry_daifuku_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6341,'bean_daifuku',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6342,'bean_daifuku_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6343,'grape_daifuku',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6344,'grape_daifuku_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6345,'frayed_sack_of_horror_+2',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6346,'frayed_sack_of_beauty',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6347,'sheet_of_promathian_tunes',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6348,'sheet_of_adoulinian_tunes',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6349,'makel-pakels_grab_bag',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6350,'sybaritic_samanthas_coffer',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6351,'keeper_of_heiligtums_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6352,'douma_weapons_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6353,'king_uropygids_coffer',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6354,'vedrfolnirs_coffer',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6355,'stinger_bullet_pouch',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6356,'tiyanaks_coffer',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6357,'immanibugards_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6358,'muuts_coffer',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6359,'camahuetos_coffer',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6360,'vosos_coffer',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6361,'mephitass_coffer',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6362,'cocas_coffer',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6363,'ayapecs_coffer',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6364,'specter_worms_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6365,'azraels_coffer',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6366,'borealis_shadows_coffer',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6367,'codex_of_etchings',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6368,'geomancer_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6369,'rune_fencer_die',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6370,'frayed_sack_of_splendor',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6371,'quicksilver_blade',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6372,'lord_of_ulbuka',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6373,'ancient_carp',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6374,'dragons_tabernacle',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6375,'phantom_serpent',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6376,'tusoteuthis_longa',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6377,'imperial_chair_set',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6378,'decorative_chair_set',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6379,'ornate_stool_set',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6380,'refined_chair_set',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6381,'fishermans_feast',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6382,'garbage_gels_coffer',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6383,'bakunawas_coffer',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6384,'azure-toothed_clawberrys_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6385,'vermillion_fishflys_coffer',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6386,'volatile_clusters_coffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6387,'mhuufyas_coffer',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6388,'grand_grenades_coffer',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6389,'vidmapires_coffer',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6390,'centurio_xx-is_coffer',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6391,'silt_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6392,'bead_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6393,'cut_of_porxie_pork',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6394,'pork_cutlet',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6395,'pork_cutlet_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6396,'cutlet_sandwich',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6397,'cutlet_sandwich_+1',1,1,24,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6398,'cage_of_arena_fireflies',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6399,'bottle_of_saviors_tonic',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6400,'bottle_of_mirrors_tonic',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6401,'bottle_of_monetas_tonic',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6402,'bottle_of_steadfast_tonic',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6403,'tolbas_coffer',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6404,'hidhaeggs_coffer',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6405,'sovereign_behemoths_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6406,'pork_cutlet_rice_bowl',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6407,'pork_cutlet_rice_bowl_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6408,'portable_container',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6409,'ephramadian_throne',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6410,'shadow_throne',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6411,'chocobo_chair',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6412,'leaf_bench',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6413,'astral_cube',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6414,'porxie_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6415,'seki_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6416,'hunk_of_behemoth_meat',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6417,'divine_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6418,'beryllium_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6419,'raetic_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6420,'voluspa_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6427,'divine_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6428,'beryllium_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6429,'voluspa_bolt_quiver',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6437,'divine_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6438,'voluspa_bullet_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6447,'sasuke_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6448,'sasuke_shuriken_pouch_+1',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6449,'date_shuriken_pouch',1,1,55,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6456,'sheet_of_shadow_lord_tunes',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6457,'flarelet',1,1,121,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6458,'bowl_of_soy_ramen',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6459,'bowl_of_soy_ramen_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6460,'bowl_of_miso_ramen',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6461,'bowl_of_miso_ramen_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6462,'bowl_of_salt_ramen',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6463,'bowl_of_salt_ramen_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6464,'behemoth_steak',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6465,'behemoth_steak_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6466,'bowl_of_miso_soup',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6467,'bowl_of_miso_soup_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6468,'plate_of_sublime_sushi',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6469,'plate_of_sublime_sushi_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6470,'bowl_of_oden',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6471,'bowl_of_oden_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6473,'super_revitalizer',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6474,'phial_of_poison_buffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6475,'pair_of_lucid_wings_ii',1,1,0,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6476,'phial_of_virus_buffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6477,'phial_of_charm_buffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6478,'phial_of_curse_buffer',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6479,'tumult_curators_coffer',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6480,'thubans_coffer',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6481,'saramas_coffer',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6482,'shedus_coffer',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6483,'glazemanes_coffer',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6484,'carousing_celines_coffer',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6485,'wyvernhunter_bambroxs_coffer',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6486,'frayed_sack_of_fecundity',1,1,0,0,0,0,0,0);     -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6487,'frayed_sack_of_plenty',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6488,'frayed_sack_of_opulence',1,1,0,0,0,0,0,0);      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6489,'far_east_puffer',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6498,'bunch_of_fortune_fruits',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6499,'patio_design_plan_document',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6500,'abdhaljs_seal',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6501,'konjak_tuber',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6502,'konjak',1,1,0,0,0,0,0,0);                        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6503,'daikon',1,1,0,0,0,0,0,0);                        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6505,'chikuwa',1,1,0,0,0,0,0,0);                       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6506,'pyre_crystal',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6507,'frost_crystal',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6508,'vortex_crystal',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6509,'geo_crystal',1,1,0,0,0,0,0,0);                   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6510,'bolt_crystal',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6511,'fluid_crystal',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6512,'glimmer_crystal',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6513,'shadow_crystal',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6514,'reisenjima_cage',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6515,'large_tail',1,1,0,0,0,0,0,0);                    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6516,'large_stone',1,1,0,0,0,0,0,0);                   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6517,'large_leaf',1,1,0,0,0,0,0,0);                    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6518,'morbol_latte',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6519,'serving_of_fetid_curry',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6520,'cup_of_rancid_coffee',1,1,0,0,0,0,0,0);          -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6521,'decanter_ingrid',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6522,'decanter_darrcuiln',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6523,'decanter_arciela',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6524,'decanter_morimar',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6525,'decanter_rosulatia',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6526,'decanter_teodor',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6527,'decanter_august',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6528,'decanter_sajjaka',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6529,'decanter_arciela_ii',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6530,'rolanberry_pickled_rarab_tail',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6531,'black_hourglass',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6532,'pluton_coffer',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6533,'beitetsu_coffer',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6534,'rift_boulder_coffer',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6535,'pinch_of_pungent_powder_ii',1,1,0,0,0,0,0,0);    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6536,'new_years_pouch',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6537,'pinch_of_pungent_powder_iii',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6538,'altanas_repast',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (6539,'altanas_repast_+1',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (6540,'altanas_repast_+2',1,1,28,0,0,0,0,1);
-INSERT INTO `item_usable` VALUES (6541,'worn_sack_of_snowslit_stones_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6542,'worn_sack_of_snowslit_stones_+2',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6543,'worn_sack_of_leafslit_stones_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6544,'worn_sack_of_leafslit_stones_+2',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6545,'worn_sack_of_duskslit_stones_+1',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6546,'worn_sack_of_duskslit_stones_+2',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6547,'worn_sack_of_snowtip_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6548,'worn_sack_of_snowtip_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6549,'worn_sack_of_leaftip_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6550,'worn_sack_of_leaftip_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6551,'worn_sack_of_dusktip_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6552,'worn_sack_of_dusktip_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6553,'worn_sack_of_snowdim_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6554,'worn_sack_of_snowdim_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6555,'worn_sack_of_leafdim_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6556,'worn_sack_of_leafdim_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6557,'worn_sack_of_duskdim_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6558,'worn_sack_of_duskdim_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6559,'worn_sack_of_snoworb_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6560,'worn_sack_of_snoworb_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6561,'worn_sack_of_leaforb_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6562,'worn_sack_of_leaforb_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6563,'worn_sack_of_duskorb_stones_+1',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6564,'worn_sack_of_duskorb_stones_+2',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6565,'per._snow_cone',1,1,28,1,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6566,'bonanza_biscuit',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6567,'tropical_crepe',1,1,28,1,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6568,'crepe_des_rois',1,1,28,1,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6569,'scroll_of_slow_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6570,'scroll_of_paralyze_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6571,'scroll_of_phalanx_ii',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6572,'coffer_of_swart_astral_detritus',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6573,'coffer_of_murky_astral_detritus',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6574,'coffer_of_beit_astral_detritus',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6575,'cheesesteak_sandwich',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6576,'turkey_with_rolanberry_sauce',1,1,28,0,0,0,0,0);    -- TODO: verify animation from retail
-INSERT INTO `item_usable` VALUES (6577,'bowl_of_clam_chowder',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6578,'plate_of_biscuits_&_gravy',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6579,'soy_ramen_(survival)',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6580,'miso_ramen_(survival)',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6581,'shoyu_ramen_(survival)',1,1,0,0,0,0,0,0);           -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6582,'shio_ramen_(survival)',1,1,0,0,0,0,0,0);            -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6583,'bowl_of_sutlac_(survival)',1,1,0,0,0,0,0,0);        -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6584,'bowl_of_seafood_stew_(survival)',1,1,0,0,0,0,0,0);  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6585,'salmon_sub_sandwich',1,1,0,0,0,0,0,0);             -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6586,'prime_beef_stewpot',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6587,'buffalo_stewpot',1,1,0,0,0,0,0,0);                 -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6588,'rabbit_stewpot',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6589,'sheep_stewpot',1,1,0,0,0,0,0,0);                   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6590,'cockatrice_stewpot',1,1,0,0,0,0,0,0);              -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6591,'behemoth_stewpot',1,1,0,0,0,0,0,0);                -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6592,'dragon_stewpot',1,1,0,0,0,0,0,0);                  -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6593,'deep_yellow_curry',1,1,0,0,0,0,0,0);               -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6594,'seafood_curry',1,1,0,0,0,0,0,0);                   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6595,'chicken_curry',1,1,0,0,0,0,0,0);                   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6596,'duck_curry',1,1,0,0,0,0,0,0);                      -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6597,'mutton_curry',1,1,0,0,0,0,0,0);                    -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6598,'maats_mix',1,1,0,0,0,0,0,0);                       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6599,'egg_sandwich',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6600,'egg_sandwich_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6601,'omelette_sandwich',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6602,'omelette_sandwich_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6603,'bottle_of_rolanberry_854',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6604,'bottle_of_rolanberry_874',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6605,'bottle_of_rolanberry_894',1,1,0,0,0,0,0,0); -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6606,'plate_of_mapo_tofu',1,1,0,0,0,0,0,0);       -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6607,'hydra_kofte_(survival)',1,1,0,0,0,0,0,0);   -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6608,'moogle_amplifier',1,1,0,0,0,0,0,0);         -- TODO: Not implemented
-INSERT INTO `item_usable` VALUES (6609,'serving_of_popotoes_con_queso',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6610,'serving_of_popotoes_con_queso_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6611,'serving_of_seafood_gratin',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6612,'serving_of_seafood_gratin_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6686,'gyudon',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6687,'gyudon_+1',1,1,28,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6690,'sheet_of_starlight_tunes',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6691,'sheet_of_mapitoto_tunes',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6696,'sheet_of_near_east_tunes',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (6704,'sheet_of_divine_tunes',1,1,117,0,0,0,0,0);
-INSERT INTO `item_usable` VALUES (10250,'moogle_suit',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10253,'decennial_coat_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10254,'decennial_dress_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10264,'marine_gilet_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10265,'marine_top_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10266,'woodsy_gilet_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10267,'woodsy_top_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10268,'creek_maillot_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10269,'creek_top_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10270,'river_top_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10271,'dune_gilet_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10293,'chocobo_shirt',1,8,0,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (10383,'dream_mittens_+1',1,6,24,0,1,30,7200,0);
-INSERT INTO `item_usable` VALUES (10385,'cumulus_masque_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (10796,'decennial_ring',1,3,76,0,10,15,3600,0);
-INSERT INTO `item_usable` VALUES (10812,'chocobo_shield_+1',1,8,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (10848,'quadav_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (10875,'snowman_cap',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (11002,'dragon_tank',1,1,55,0,5,30,60,0);
-INSERT INTO `item_usable` VALUES (11273,'custom_gilet_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11274,'custom_top_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11275,'magna_gilet_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11276,'magna_top_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11277,'wonder_maillot_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11278,'wonder_top_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11279,'savage_top_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11280,'elder_gilet_+1',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11290,'tidal_talisman',1,8,79,0,1,30,72000,1);
-INSERT INTO `item_usable` VALUES (11320,'skeleton_robe',1,1,0,0,30,15,600,0);
-INSERT INTO `item_usable` VALUES (11403,'talaria',1,5,0,0,1,15,1800,0);
-INSERT INTO `item_usable` VALUES (11490,'snow_bunny_hat',1,1,0,0,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (11491,'snow_bunny_hat_+1',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (11500,'chocobo_beret',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (11538,'nexus_cape',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (11666,'novennial_ring',1,3,76,0,10,15,3600,0);
-INSERT INTO `item_usable` VALUES (11788,'jesters_hat',1,3,0,0,1,30,600,0);
-INSERT INTO `item_usable` VALUES (11811,'destrier_beret',1,4,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (11861,'hikogami_yukata',1,2,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (11862,'himegami_yukata',1,2,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (12406,'coated_shield',1,2,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (12408,'absorbing_shield',20,2,0,0,20,30,3600,0);
-INSERT INTO `item_usable` VALUES (12411,'dominus_shield',1,10,0,0,15,30,180,0);
-INSERT INTO `item_usable` VALUES (13144,'wing_gorget',1,3,91,0,10,30,1800,0);
-INSERT INTO `item_usable` VALUES (13170,'stoneskin_torque',1,14,29,0,20,30,30,0);
-INSERT INTO `item_usable` VALUES (13171,'reraise_gorget',1,10,33,0,10,30,120,0);
-INSERT INTO `item_usable` VALUES (13173,'memento_muffler',1,1,0,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (13179,'kingdom_stables_collar',1,8,79,0,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (13180,'republic_stables_medal',1,8,79,0,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (13181,'federation_stables_scarf',1,8,79,0,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (13182,'oscar_scarf',20,3,0,0,50,30,900,0);
-INSERT INTO `item_usable` VALUES (13682,'ether_tank',1,1,55,0,5,30,60,0);
-INSERT INTO `item_usable` VALUES (13683,'water_tank',1,1,55,0,40,30,60,0);
-INSERT INTO `item_usable` VALUES (13684,'potion_tank',1,1,55,0,11,30,60,0);
-INSERT INTO `item_usable` VALUES (13685,'invisible_mantle',1,6,10,0,20,30,20,0);
-INSERT INTO `item_usable` VALUES (13688,'hi-potion_tank',1,2,55,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (13689,'hi-ether_tank',1,2,55,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (13693,'aries_mantle',1,3,72,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (13823,'regen_cuirass',1,8,82,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (14324,'mist_slacks',1,1,24,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (14423,'mist_tunic',1,1,24,0,20,30,600,0);
-INSERT INTO `item_usable` VALUES (14490,'mana_tunic',1,4,32,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14491,'mana_cloak',1,4,32,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14492,'high_mana_cloak',1,10,33,0,15,30,180,0);
-INSERT INTO `item_usable` VALUES (14493,'healing_vest',1,4,30,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14494,'healing_mail',1,4,30,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14495,'healing_harness',1,4,30,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14496,'healing_justaucorps',1,4,30,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14497,'high_healing_harness',1,4,31,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (14515,'hydra_doublet',1,3,32,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14516,'hydra_harness',1,3,28,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (14517,'hydra_haubert',1,3,32,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14531,'bannaret_mail',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (14532,'otoko_yukata',1,2,0,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (14533,'onago_yukata',1,2,0,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (14534,'otokogimi_yukata',1,2,0,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (14535,'onnagimi_yukata',1,2,0,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (14541,'taikyoku_kenpogi',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (14654,'poisona_ring',1,2,1,0,30,30,10,0);
-INSERT INTO `item_usable` VALUES (14656,'poseidons_ring',1,2,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (14657,'ducal_guards_ring',1,8,79,0,5,30,3600,0);
-INSERT INTO `item_usable` VALUES (14661,'teleport_ring_holla',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (14662,'teleport_ring_dem',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (14663,'teleport_ring_mea',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (14664,'teleport_ring_vahzl',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (14665,'teleport_ring_yhoat',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (14666,'teleport_ring_altep',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (14671,'allied_ring',1,3,76,0,5,5,900,0);
-INSERT INTO `item_usable` VALUES (14672,'tavnazian_ring',1,8,79,5,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (14677,'sanation_ring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14678,'assassins_ring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14679,'tactical_ring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14680,'pacifist_ring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14681,'getsul_ring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14759,'curaga_earring',1,8,30,0,50,30,20,1);
-INSERT INTO `item_usable` VALUES (14785,'janizary_earring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14786,'counter_earring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14787,'deadeye_earring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14788,'gamushara_earring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14789,'naruko_earring',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (14790,'reraise_earring',1,8,33,0,10,30,60,0);
-INSERT INTO `item_usable` VALUES (14810,'signal_pearl',1,3,0,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (14811,'tactics_pearl',1,3,0,0,4,30,600,0);
-INSERT INTO `item_usable` VALUES (14855,'mist_mitts',1,1,24,0,10,30,600,0);
-INSERT INTO `item_usable` VALUES (14864,'palmers_bangles',1,1,0,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (14925,'hydra_mittens',1,3,25,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (14957,'aiming_gloves',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (14987,'thunder_mittens',1,3,25,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (14988,'stone_bangles',1,3,29,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (14989,'aero_mufflers',1,3,24,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (14990,'blizzard_gloves',1,3,26,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (14991,'fire_bracers',1,3,28,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (14992,'water_mitts',1,3,27,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (15018,'ritterhentzes',1,3,28,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (15071,'spartan_hoplon',1,6,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (15162,'mist_crown',1,1,24,0,5,30,600,0);
-INSERT INTO `item_usable` VALUES (15170,'blink_band',1,12,24,0,50,30,20,0);
-INSERT INTO `item_usable` VALUES (15175,'revilers_helm',20,1,0,0,100,30,300,0);
-INSERT INTO `item_usable` VALUES (15179,'dream_hat_+1',1,2,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (15182,'zoolater_hat',1,3,33,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15194,'maats_cap',1,8,79,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (15198,'sprout_beret',1,3,76,0,1,5,72000,0);
-INSERT INTO `item_usable` VALUES (15199,'guide_beret',1,3,76,0,1,5,72000,0);
-INSERT INTO `item_usable` VALUES (15204,'mandragora_beret',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15211,'reraise_hairpin',1,8,33,0,10,30,60,0);
-INSERT INTO `item_usable` VALUES (15212,'stars_cap',1,8,79,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15213,'laurel_crown',1,8,79,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15214,'gadzradds_helm',1,3,0,0,30,30,72000,0);
-INSERT INTO `item_usable` VALUES (15215,'davhus_barbut',1,3,0,0,30,30,72000,0);
-INSERT INTO `item_usable` VALUES (15216,'tsoo_hajas_headgear',1,3,0,0,30,30,72000,0);
-INSERT INTO `item_usable` VALUES (15217,'choplixs_coif',1,3,0,0,30,30,72000,0);
-INSERT INTO `item_usable` VALUES (15261,'hydra_tiara',1,3,25,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (15268,'eldritch_bone_hairpin',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15269,'eldritch_horn_hairpin',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15288,'pellet_belt',1,1,0,0,24,30,3600,0);
-INSERT INTO `item_usable` VALUES (15289,'bolt_belt',1,1,0,0,12,30,3600,0);
-INSERT INTO `item_usable` VALUES (15290,'haste_belt',1,6,24,0,20,30,40,0);
-INSERT INTO `item_usable` VALUES (15296,'tathlum_belt',1,1,0,0,12,30,3600,0);
-INSERT INTO `item_usable` VALUES (15297,'rabbit_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15298,'worm_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15299,'mandragora_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15300,'nebimonite_belt',1,3,0,0,50,30,86400,0);
-INSERT INTO `item_usable` VALUES (15312,'mist_pumps',1,1,24,0,10,30,600,0);
-INSERT INTO `item_usable` VALUES (15320,'powder_boots',1,3,24,0,20,30,600,0);
-INSERT INTO `item_usable` VALUES (15326,'gargoyle_boots',0x101,7,24,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (15328,'root_sabots',1,2,24,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15372,'magic_slacks',1,10,0,0,50,30,36,0);
-INSERT INTO `item_usable` VALUES (15444,'carpenters_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15445,'blacksmiths_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15446,'goldsmiths_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15447,'weavers_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15448,'tanners_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15449,'boneworkers_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15450,'alchemists_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15451,'culinarians_belt',1,2,0,0,25,30,180,0);
-INSERT INTO `item_usable` VALUES (15452,'fishermans_belt',1,2,0,0,15,30,1800,0);
-INSERT INTO `item_usable` VALUES (15453,'lugworm_belt',1,5,0,0,10,30,300,0);
-INSERT INTO `item_usable` VALUES (15454,'little_worm_belt',1,5,0,0,10,30,300,0);
-INSERT INTO `item_usable` VALUES (15459,'sagacious_gold_obi',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15460,'deductive_gold_obi',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15461,'enthralling_gold_obi',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15462,'sagacious_brocade_obi',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15485,'talisman_cape',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15486,'breath_mantle',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15487,'high_breath_mantle',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15505,'dhalmel_whistle',1,1,0,0,25,30,900,0);
-INSERT INTO `item_usable` VALUES (15507,'purgatory_collar',1,10,0,0,20,30,900,0);
-INSERT INTO `item_usable` VALUES (15526,'regen_collar',1,3,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (15533,'chocobo_whistle',1,8,0,0,25,30,300,0);
-INSERT INTO `item_usable` VALUES (15541,'homing_ring',1,8,80,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (15542,'return_ring',1,8,80,0,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (15552,'albatross_ring',1,3,0,0,30,30,72000,0);
-INSERT INTO `item_usable` VALUES (15553,'penguin_ring',1,3,0,0,30,30,72000,0);
-INSERT INTO `item_usable` VALUES (15554,'pelican_ring',1,3,0,0,180,30,1200,0);
-INSERT INTO `item_usable` VALUES (15555,'albatross_ring',1,3,0,0,180,30,1200,0);
-INSERT INTO `item_usable` VALUES (15556,'penguin_ring',1,3,0,0,180,30,1200,0);
-INSERT INTO `item_usable` VALUES (15558,'mighty_ring',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15559,'vision_ring',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15560,'troopers_ring',1,4,0,0,15,30,3600,0);
-INSERT INTO `item_usable` VALUES (15596,'hydra_tights',1,3,24,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (15610,'sturdy_trousers',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15611,'sturdy_slacks',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15650,'shock_subligar',1,3,0,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (15651,'ice_trousers',1,3,25,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (15652,'blaze_hose',1,3,28,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (15681,'hydra_spats',1,3,24,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (15698,'sneaking_boots',1,6,24,0,15,30,3600,0);
-INSERT INTO `item_usable` VALUES (15708,'earth_greaves',1,7,29,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (15753,'dream_boots_+1',1,6,24,0,1,30,7200,0);
-INSERT INTO `item_usable` VALUES (15754,'sprinters_shoes',1,5,24,0,15,15,300,0);
-INSERT INTO `item_usable` VALUES (15761,'chariot_band',1,3,76,0,7,5,900,0);
-INSERT INTO `item_usable` VALUES (15762,'empress_band',1,3,76,0,7,5,900,0);
-INSERT INTO `item_usable` VALUES (15763,'emperor_band',1,3,76,0,3,5,900,0);
-INSERT INTO `item_usable` VALUES (15769,'olduum_ring',1,3,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (15770,'random_ring',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15782,'manashell_ring',1,3,32,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15783,'armored_ring',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15793,'anniversary_ring',1,3,76,0,10,15,3600,0);
-INSERT INTO `item_usable` VALUES (15817,'ecphoria_ring',1,3,0,0,100,30,300,0);
-INSERT INTO `item_usable` VALUES (15834,'blind_ring',20,2,70,0,100,30,60,0);
-INSERT INTO `item_usable` VALUES (15838,'protect_ring',1,3,30,0,30,30,1800,0);
-INSERT INTO `item_usable` VALUES (15840,'kupofrieds_ring',1,3,76,0,11,5,900,0);
-INSERT INTO `item_usable` VALUES (15841,'recall_ring_jugner',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (15842,'recall_ring_pashhow',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (15843,'recall_ring_meriphataud',1,8,79,5,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (15860,'gyokuto_obi',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15861,'deductive_brocade_obi',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15862,'enthralling_brocade_obi',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15863,'samsonian_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15864,'tough_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15865,'runners_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15866,'acrobats_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15867,'sultans_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15868,'czars_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15869,'pendragons_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15870,'maharajas_belt',1,2,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (15880,'key_ring_belt',1,2,0,0,5,30,1800,0);
-INSERT INTO `item_usable` VALUES (15881,'talisman_obi',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15889,'augmenting_belt',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (15912,'lieutenants_sash',1,3,0,0,100,30,900,0);
-INSERT INTO `item_usable` VALUES (15919,'drovers_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15921,'detonator_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15926,'bronze_bandolier',1,2,0,0,50,30,86400,0);
-INSERT INTO `item_usable` VALUES (15927,'pinwheel_belt',1,2,0,0,50,30,86400,0);
-INSERT INTO `item_usable` VALUES (15929,'goblin_belt',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (15933,'stirge_belt',1,1,55,0,30,15,600,0);
-INSERT INTO `item_usable` VALUES (15956,'temple_knights_quiver',1,1,55,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (15957,'iron_musketeers_quiver',1,1,55,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (15958,'combat_casters_quiver',1,1,55,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (15998,'koccos_earring',1,8,0,0,5,30,60,0);
-INSERT INTO `item_usable` VALUES (16003,'raising_earring',1,8,0,0,10,30,600,0);
-INSERT INTO `item_usable` VALUES (16007,'protect_earring',1,2,0,0,100,30,900,0);
-INSERT INTO `item_usable` VALUES (16012,'mamool_ja_earring',1,16,0,0,30,30,43200,0);
-INSERT INTO `item_usable` VALUES (16039,'kingdom_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16040,'republic_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16041,'federation_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16042,'duchy_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16043,'selbina_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16044,'mhaura_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16045,'rabao_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16046,'kazham_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16047,'norg_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16048,'safehold_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16049,'empire_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16050,'nashmau_earring',1,8,79,0,30,30,3600,0);
-INSERT INTO `item_usable` VALUES (16071,'kawahori_kabuto',1,2,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (16077,'megrim_crown',1,8,0,0,50,30,2700,0);
-INSERT INTO `item_usable` VALUES (16078,'blissful_chapeau',1,4,32,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (16118,'moogle_cap',1,8,79,0,1,30,72000,1);
-INSERT INTO `item_usable` VALUES (16119,'nomad_cap',1,8,79,0,1,30,72000,1);
-INSERT INTO `item_usable` VALUES (16120,'redeyes',1,2,0,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (16145,'lunar_cap',1,3,0,0,1,15,3600,0);
-INSERT INTO `item_usable` VALUES (16153,'reikyo_hairpin',20,3,0,0,50,30,900,0);
-INSERT INTO `item_usable` VALUES (16182,'town_moogle_shield',1,5,0,0,1,15,57600,0);
-INSERT INTO `item_usable` VALUES (16183,'nomad_moogle_shield',1,5,0,0,1,15,57600,0);
-INSERT INTO `item_usable` VALUES (16223,'orange_au_lait_tank',1,1,55,0,8,30,60,0);
-INSERT INTO `item_usable` VALUES (16224,'apple_au_lait_tank',1,1,55,0,8,30,60,0);
-INSERT INTO `item_usable` VALUES (16225,'pear_au_lait_tank',1,1,55,0,8,30,60,0);
-INSERT INTO `item_usable` VALUES (16226,'pamama_au_lait_tank',1,1,55,0,8,30,60,0);
-INSERT INTO `item_usable` VALUES (16227,'persikos_au_lait_tank',1,1,55,0,5,30,60,0);
-INSERT INTO `item_usable` VALUES (16230,'lieutenants_cape',1,8,34,0,100,30,1800,0);
-INSERT INTO `item_usable` VALUES (16243,'drovers_mantle',1,1,0,0,15,10,10,0);
-INSERT INTO `item_usable` VALUES (16249,'elixir_tank',1,2,55,0,4,30,60,0);
-INSERT INTO `item_usable` VALUES (16251,'casaba_melon_tank',1,2,55,0,50,30,60,0);
-INSERT INTO `item_usable` VALUES (16257,'ghost_cape',1,1,0,0,30,15,600,0);
-INSERT INTO `item_usable` VALUES (16273,'chocobo_pullus_torque',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (16285,'pendant_compass',1,1,0,0,10,5,10,0);
-INSERT INTO `item_usable` VALUES (16550,'hallowed_sword',1,3,7,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (16603,'halo_claymore',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (16613,'spirit_sword',1,3,78,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (16858,'sacred_lance',1,3,78,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (16954,'pealing_nagan',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (17040,'warp_cudgel',1,8,80,3,30,3,60,0);
-INSERT INTO `item_usable` VALUES (17468,'raise_rod',9,3,33,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (17469,'raise_ii_rod',9,4,33,0,20,30,60,0);
-INSERT INTO `item_usable` VALUES (17470,'pealing_buzdygan',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (17583,'kingdom_signet_staff',29,1,52,0,25,30,10,0);
-INSERT INTO `item_usable` VALUES (17584,'republic_signet_staff',29,1,52,0,25,30,10,0);
-INSERT INTO `item_usable` VALUES (17585,'federation_signet_staff',29,1,52,0,25,30,10,0);
-INSERT INTO `item_usable` VALUES (17587,'trick_staff_ii',1,2,0,0,10,30,3600,0);
-INSERT INTO `item_usable` VALUES (17588,'treat_staff_ii',1,2,0,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (17592,'kinkobo',1,2,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (17596,'steel-splitter',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (17624,'anubiss_knife',1,1,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (17625,'ponderous_gully',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (17682,'sacred_sword',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (17683,'sacred_degen',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (17703,'pealing_anelace',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (17704,'vulcan_sword',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (17705,'vulcan_degen',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (17706,'vulcan_blade',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (17748,'ibushi_shinai',1,0,10,0,1,10,15,0);
-INSERT INTO `item_usable` VALUES (17797,'seito',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (17826,'messhikimaru',1,0,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (17828,'koen',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (17949,'furnace_tabarzin',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (17954,'jolt_axe',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (17957,'navy_axe',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (17961,'lion_tamer',1,3,0,0,50,30,300,0);
-INSERT INTO `item_usable` VALUES (18008,'hushed_dagger',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18010,'melt_dagger',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18011,'melt_knife',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18012,'melt_baselard',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18013,'melt_kukri',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18029,'piercing_dagger',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18035,'deathbone_knife',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18060,'blizzard_scythe',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (18062,'lucent_scythe',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18067,'keen_zaghnal',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18095,'dispel_couse',20,2,0,0,50,30,30,0);
-INSERT INTO `item_usable` VALUES (18107,'ponderous_lance',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (18108,'lucent_lance',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18117,'gimlet_spear',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18122,'broach_lance',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18216,'twicer',1,3,0,0,20,30,300,0);
-INSERT INTO `item_usable` VALUES (18220,'prominence_axe',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (18225,'blizzard_toporok',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (18231,'death_chakram',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (18239,'healing_feather',1,3,30,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (18240,'spirit_lantern',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (18241,'vial_of_refresh_musk',1,3,33,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (18242,'bag_of_wyvern_feed',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (18243,'astral_pot',1,3,0,0,20,30,1800,0);
-INSERT INTO `item_usable` VALUES (18355,'hushed_baghnakhs',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18357,'melt_claws',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18361,'ponderous_manoples',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (18379,'vulcan_claymore',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (18381,'prominence_sword',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (18384,'lucent_sword',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18391,'sacred_mace',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (18392,'sacred_maul',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (18393,'sacred_wand',1,3,0,0,30,30,300,0);
-INSERT INTO `item_usable` VALUES (18398,'raphaels_rod',1,2,0,0,8,30,120,0);
-INSERT INTO `item_usable` VALUES (18399,'charm_wand',4,2,0,0,10,30,86400,0);
-INSERT INTO `item_usable` VALUES (18400,'charm_wand_+1',4,2,0,0,1,30,432000,0);
-INSERT INTO `item_usable` VALUES (18401,'moogle_rod',4,3,0,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (18402,'mana_wand',1,3,32,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18403,'high_mana_wand',1,3,33,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18410,'melt_katana',1,1,0,0,15,30,600,0);
-INSERT INTO `item_usable` VALUES (18415,'tojaku',20,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (18427,'hanafubuki',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18433,'kagiroi',4,1,0,0,50,30,600,0);
-INSERT INTO `item_usable` VALUES (18444,'tsurugitachi',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18481,'lucent_axe',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18488,'assailants_axe',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18493,'regiment_kheten',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18551,'twilight_scythe',1,1,0,0,1,10,600,0);
-INSERT INTO `item_usable` VALUES (18581,'carbuncles_pole',1,1,0,0,30,30,600,0);
-INSERT INTO `item_usable` VALUES (18586,'flexible_pole',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18591,'pastoral_staff',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18612,'ram_staff',1,8,80,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (18613,'fourth_staff',1,8,80,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (18614,'cobra_staff',1,8,80,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (18679,'soulgauger_sgr-1',20,0,0,0,12,10,30,0);
-INSERT INTO `item_usable` VALUES (18692,'mamoolbane',1,3,0,0,15,30,86400,0);
-INSERT INTO `item_usable` VALUES (18693,'lamiabane',1,3,0,0,15,30,3600,0);
-INSERT INTO `item_usable` VALUES (18694,'trollbane',1,3,0,0,15,30,86400,0);
-INSERT INTO `item_usable` VALUES (18721,'soultrapper',20,0,104,0,12,10,60,0);
-INSERT INTO `item_usable` VALUES (18724,'soultrapper_2000',20,0,104,0,48,10,30,0);
-INSERT INTO `item_usable` VALUES (18747,'smash_cesti',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18755,'noble_himantes',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18842,'nomad_moogle_rod',4,3,0,0,50,30,72000,0);
-INSERT INTO `item_usable` VALUES (18844,'miracle_wand',4,3,0,0,10,30,7200,0);
-INSERT INTO `item_usable` VALUES (18845,'miracle_wand_+1',4,3,0,0,1,30,432000,0);
-INSERT INTO `item_usable` VALUES (18853,'spirit_maul',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (18867,'daedalus_hammer',1,3,0,0,50,30,1800,0);
-INSERT INTO `item_usable` VALUES (18871,'kitty_rod',1,0,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (18879,'rounsey_wand',1,8,0,0,1,30,604800,0);
-INSERT INTO `item_usable` VALUES (18880,'maestros_baton',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (18881,'melomane_mallet',1,1,0,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (18945,'jet_sickle',1,3,0,0,100,30,600,0);
-INSERT INTO `item_usable` VALUES (19181,'moogles_largesse',1,12,0,0,9,10,259200,0);
-INSERT INTO `item_usable` VALUES (19204,'fiendtrapper',20,0,0,0,12,10,30,0);
-INSERT INTO `item_usable` VALUES (19246,'moggiebag',1,3,0,0,8,10,259200,0);
-INSERT INTO `item_usable` VALUES (21074,'kupo_rod',1,3,55,0,1,30,72000,0);
--- INSERT INTO `item_usable` VALUES (20533,'worm_feelers_+1',1,1,55,0,1,30,86400,0); -- item's lua still needs made
--- INSERT INTO `item_usable` VALUES (20568,'wind_knife_+1',4,1,0,0,1,30,600,0); -- untested
-INSERT INTO `item_usable` VALUES (20953,'escritorio',1,1,55,0,1,30,86400,0); -- Dispenses: Cone Calamary
-INSERT INTO `item_usable` VALUES (21266,'gastraphetes',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (21267,'annihilator',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (21268,'death_penalty',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (21269,'armageddon',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (21868,'sha_wujings_la._+1',1,55,0,0,1,30,72000,0); -- Dispenses: Distilled Water x 12
--- INSERT INTO `item_usable` VALUES (22018,'seika_uchiwa_+1',1,1,55,0,1,30,300,0);  -- Enchantment: Cool Breeze
--- INSERT INTO `item_usable` VALUES (22020,'jingly_rod_+1',1,1,55,0,1,30,3600,0);   -- Costume: lamb or Chacharoon
-INSERT INTO `item_usable` VALUES (22115,'yoichinoyumi',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22116,'gandiva',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22117,'fail-not',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22129,'yoichinoyumi',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22130,'gandiva',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22131,'fail-not',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22139,'gastraphetes',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22140,'annihilator',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22141,'death_penalty',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22142,'armageddon',1,1,55,0,1,10,3600,0);
-INSERT INTO `item_usable` VALUES (22143,'fomalhaut',1,1,55,0,1,10,3600,0);
--- INSERT INTO `item_usable` VALUES (22288,'mandragora_pouch',1,2,55,0,1,10,216000,0);  -- Enchantment: Tiny Allowance (Enchantment gives a random small amount of gil (<2,000))
-INSERT INTO `item_usable` VALUES (25585,'black_chocobo_cap',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (25658,'wyrmking_masque_+1',1,1,55,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (25757,'wyrmking_suit_+1',1,8,79,0,1,30,3600,0);
-INSERT INTO `item_usable` VALUES (25679,'white_rarab_cap_+1',1,8,33,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (25774,'fancy_gilet',1,2,55,0,1,30,86400,0); -- Dispense: persikos snow cone
-INSERT INTO `item_usable` VALUES (25775,'fancy_top',1,2,55,0,1,30,86400,0); -- Dispense: persikos snow cone
-INSERT INTO `item_usable` VALUES (26164,'caliber_ring',1,3,76,0,3,5,900,0);
-INSERT INTO `item_usable` VALUES (26165,'facility_ring',1,3,76,0,3,5,900,0);
-INSERT INTO `item_usable` VALUES (26271,'hi-elixir_tank',1,2,55,0,3,30,60,0);
-INSERT INTO `item_usable` VALUES (26272,'super_reraiser_tank',1,2,55,0,5,30,60,0);
-INSERT INTO `item_usable` VALUES (26517,'shadow_lord_shirt',1,8,79,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (26720,'sheep_cap_+1',1,2,55,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (26788,'rabbit_cap',1,1,55,8,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (26955,'behemoth_suit_+1',1,2,55,0,1,30,72000,0);
-INSERT INTO `item_usable` VALUES (27556,'echad_ring',1,3,76,0,1,5,7200,0);
-INSERT INTO `item_usable` VALUES (27557,'trizek_ring',1,3,76,0,1,5,7200,0);
-INSERT INTO `item_usable` VALUES (27726,'she_slime_hat',1,2,55,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (27727,'metal_slime_hat',1,2,55,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (27756,'slime_cap',1,2,55,0,1,30,86400,0);
-INSERT INTO `item_usable` VALUES (28469,'endorsement_ring',1,3,76,0,1,5,7200,0);
-INSERT INTO `item_usable` VALUES (28528,'undecennial_ring',1,3,76,0,11,15,3600,0);
-INSERT INTO `item_usable` VALUES (28540,'warp_ring',1,8,80,3,1,8,600,0);
-INSERT INTO `item_usable` VALUES (28546,'capacity_ring',1,3,76,0,7,5,900,0);
-INSERT INTO `item_usable` VALUES (28562,'duodecennial_ring',1,3,76,0,12,15,3600,0);
-INSERT INTO `item_usable` VALUES (28563,'vocation_ring',1,3,76,0,12,15,3600,0);
-INSERT INTO `item_usable` VALUES (28568,'resolution_ring',1,3,76,0,5,5,900,0);
-INSERT INTO `item_usable` VALUES (28569,'expertise_ring',1,3,76,0,10,5,900,0);
-INSERT INTO `item_usable` VALUES (28652,'hatchling_shield',1,1,55,8,1,30,86400,0);
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `item_usable`
+(
+    `itemid`, `name`, `validTargets`, `activation`, `animation`,
+    `animationTime`, `maxCharges`, `useDelay`, `reuseDelay`, `aoe`
+)
+VALUES
+    (4096,'fire_crystal',1,0,0,0,0,0,0,0),
+    (4097,'ice_crystal',1,0,0,0,0,0,0,0),
+    (4098,'wind_crystal',1,0,0,0,0,0,0,0),
+    (4099,'earth_crystal',1,0,0,0,0,0,0,0),
+    (4100,'lightning_crystal',1,0,0,0,0,0,0,0),
+    (4101,'water_crystal',1,0,0,0,0,0,0,0),
+    (4102,'light_crystal',1,0,0,0,0,0,0,0),
+    (4103,'dark_crystal',1,0,0,0,0,0,0,0),
+    (4104,'fire_cluster',1,1,38,0,0,0,0,0),
+    (4105,'ice_cluster',1,1,42,0,0,0,0,0),
+    (4106,'wind_cluster',1,1,40,0,0,0,0,0),
+    (4107,'earth_cluster',1,1,45,0,0,0,0,0),
+    (4108,'lightning_cluster',1,1,43,0,0,0,0,0),
+    (4109,'water_cluster',1,1,39,0,0,0,0,0),
+    (4110,'light_cluster',1,1,41,0,0,0,0,0),
+    (4111,'dark_cluster',1,1,44,0,0,0,0,0),
+    (4112,'potion',1,1,30,0,0,0,0,0),
+    (4113,'potion_+1',1,1,30,0,0,0,0,0),
+    (4114,'potion_+2',1,1,30,0,0,0,0,0),
+    (4115,'potion_+3',1,1,30,0,0,0,0,0),
+    (4116,'hi-potion',1,1,31,0,0,0,0,0),
+    (4117,'hi-potion_+1',1,1,31,0,0,0,0,0),
+    (4118,'hi-potion_+2',1,1,31,0,0,0,0,0),
+    (4119,'hi-potion_+3',1,1,31,0,0,0,0,0),
+    (4120,'x-potion',1,4,31,0,0,0,0,0),
+    (4121,'x-potion_+1',1,4,31,0,0,0,0,0),
+    (4122,'x-potion_+2',1,4,31,0,0,0,0,0),
+    (4123,'x-potion_+3',1,4,31,0,0,0,0,0),
+    (4124,'max-potion',1,2,31,0,0,0,0,0),
+    (4125,'max-potion_+1',1,2,31,0,0,0,0,0),
+    (4126,'max-potion_+2',1,2,31,0,0,0,0,0),
+    (4127,'max-potion_+3',1,2,31,0,0,0,0,0),
+    (4128,'ether',1,1,32,0,0,0,0,0),
+    (4129,'ether_+1',1,1,32,0,0,0,0,0),
+    (4130,'ether_+2',1,1,32,0,0,0,0,0),
+    (4131,'ether_+3',1,1,32,0,0,0,0,0),
+    (4132,'hi-ether',1,8,33,0,0,0,0,0),
+    (4133,'hi-ether_+1',1,8,33,0,0,0,0,0),
+    (4134,'hi-ether_+2',1,8,33,0,0,0,0,0),
+    (4135,'hi-ether_+3',1,8,33,0,0,0,0,0),
+    (4136,'super_ether',1,10,33,0,0,0,0,0),
+    (4137,'super_ether_+1',1,10,33,0,0,0,0,0),
+    (4138,'super_ether_+2',1,10,33,0,0,0,0,0),
+    (4139,'super_ether_+3',1,10,33,0,0,0,0,0),
+    (4140,'pro-ether',1,3,33,0,0,0,0,0),
+    (4141,'pro-ether_+1',1,3,33,0,0,0,0,0),
+    (4142,'pro-ether_+2',1,3,33,0,0,0,0,0),
+    (4143,'pro-ether_+3',1,3,33,0,0,0,0,0),
+    (4144,'hi-elixir',1,10,34,0,0,0,0,0),
+    (4145,'elixir',1,10,34,0,0,0,0,0),
+    (4146,'revitalizer',1,1,10,0,0,0,0,0),
+    (4147,'bottle_of_body_boost',1,1,8,0,0,0,0,0),
+    (4148,'antidote',1,1,1,0,0,0,0,0),
+    (4149,'flask_of_panacea',1,1,66,0,0,0,0,0),
+    (4150,'flask_of_eye_drops',1,1,3,0,0,0,0,0),
+    (4151,'flask_of_echo_drops',1,1,4,0,0,0,0,0),
+    (4153,'bottle_of_antacid',1,1,10,0,0,0,0,0),
+    (4154,'flask_of_holy_water',1,1,7,0,0,0,0,0),
+    (4155,'remedy',1,1,7,0,0,0,0,0),
+    (4156,'bottle_of_mulsum',1,1,32,0,0,0,0,0),
+    (4157,'flask_of_poison_potion',1,1,68,0,0,0,0,0),
+    (4158,'flask_of_venom_potion',1,1,68,0,0,0,0,0),
+    (4159,'flask_of_paralyze_potion',1,1,69,0,0,0,0,0),
+    (4160,'flask_of_petrify_potion',1,1,73,0,0,0,0,0),
+    (4161,'flask_of_sleeping_potion',1,1,72,0,0,0,0,0),
+    (4162,'flask_of_silencing_potion',1,1,71,0,0,0,0,0),
+    (4163,'flask_of_blinding_potion',1,1,70,0,0,0,0,0),
+    (4164,'pinch_of_prism_powder',1,1,24,0,0,0,0,0),
+    (4165,'pot_of_silent_oil',1,1,24,0,0,0,0,0),
+    (4166,'flask_of_deodorizer',1,1,24,0,0,0,0,0),
+    (4167,'cracker',1,1,35,0,0,0,0,0),
+    (4168,'twinkle_shower',1,1,36,0,0,0,0,0),
+    (4169,'little_comet',1,1,37,0,0,0,0,0),
+    (4170,'wedding_bell',1,1,46,0,0,0,0,0),
+    (4171,'flask_of_vitriol',1,1,33,0,0,0,0,0),
+    (4172,'reraiser',1,1,33,0,0,0,0,0),
+    (4173,'hi-reraiser',1,1,33,0,0,0,0,0),
+    (4174,'vile_elixir',1,1,34,0,0,0,0,0),
+    (4175,'vile_elixir_+1',1,1,34,0,0,0,0,0),
+    (4176,'new_years_gift',1,1,0,0,0,0,0,0),
+    (4177,'new_years_gift',1,1,0,0,0,0,0,0),
+    (4178,'new_years_gift',1,1,0,0,0,0,0,0),
+    (4179,'new_years_gift',1,1,0,0,0,0,0,0),
+    (4180,'new_years_gift',1,1,0,0,0,0,0,0),
+    (4181,'scroll_of_instant_warp',1,10,80,3,0,0,0,0),
+    (4182,'scroll_of_instant_reraise',1,1,33,0,0,0,0,0),
+    (4183,'konron_hassen',1,1,47,0,0,0,0,0),
+    (4184,'kongou_inaho',1,1,48,0,0,0,0,0),
+    (4185,'meifu_goma',1,1,49,0,0,0,0,0),
+    (4186,'airborne',1,1,50,0,0,0,0,0),
+    (4187,'bastok_mines_gate_glyph',1,10,80,3,0,0,0,0),
+    (4188,'bastok_markets_gate_glyph',1,10,80,3,0,0,0,0),
+    (4189,'port_bastok_gate_glyph',1,10,80,3,0,0,0,0),
+    (4190,'eastern_san_doria_gate_glyph',1,10,80,3,0,0,0,0),
+    (4191,'western_san_doria_gate_glyph',1,10,80,3,0,0,0,0),
+    (4192,'northern_san_doria_gate_glyph',1,10,80,3,0,0,0,0),
+    (4193,'windurst_waters_gate_glyph',1,10,80,3,0,0,0,0),
+    (4194,'port_windurst_gate_glyph',1,10,80,3,0,0,0,0),
+    (4195,'windurst_woods_gate_glyph',1,10,80,3,0,0,0,0),
+    (4196,'rotten_quiver',1,1,55,0,0,0,0,0),
+    (4197,'rusty_bolt_case',1,1,55,0,0,0,0,0),
+    (4198,'page_from_the_dragon_chronicles',1,5,34,0,0,0,0,0),
+    (4199,'strength_potion',1,2,28,0,0,0,0,0),
+    (4200,'bottle_of_mana_boost',1,1,9,0,0,0,0,0),
+    (4201,'dexterity_potion',1,2,25,0,0,0,0,0),
+    (4202,'daedalus_wing',1,1,34,0,0,0,0,0),
+    (4203,'vitality_potion',1,2,29,0,0,0,0,0),
+    (4204,'petra_eater',1,2,67,0,0,0,0,0),
+    (4205,'agility_potion',1,2,24,0,0,0,0,0),
+    (4206,'bottle_of_catholicon',29,1,64,0,0,0,0,0),
+    (4207,'intelligence_potion',1,2,26,0,0,0,0,0),
+    (4208,'bottle_of_catholicon_+1',29,1,66,0,0,0,0,0),
+    (4209,'mind_potion',1,2,27,0,0,0,0,0),
+    (4210,'bottle_of_lethe_water',4,2,65,0,0,0,0,0),
+    (4211,'charisma_potion',1,2,10,0,0,0,0,0),
+    (4212,'bottle_of_lethe_water_+1',4,2,65,0,0,0,0,0),
+    (4213,'icarus_wing',1,2,34,0,0,0,0,0),
+    (4214,'pinch_of_lethe_powder',4,2,0,0,0,0,0,0),
+    (4215,'popstar',1,1,51,0,0,0,0,0),
+    (4216,'brilliant_snow',1,1,52,0,0,0,0,0),
+    (4217,'sparkling_hand',1,1,53,0,0,0,0,0),
+    (4218,'air_rider',1,1,54,0,0,0,0,0),
+    (4219,'stone_quiver',1,1,55,0,0,0,0,0),
+    (4220,'bone_quiver',1,1,55,0,0,0,0,0),
+    (4221,'beetle_quiver',1,1,55,0,0,0,0,0),
+    (4222,'horn_quiver',1,1,55,0,0,0,0,0),
+    (4223,'scorpion_quiver',1,1,55,0,0,0,0,0),
+    (4224,'demon_quiver',1,1,55,0,0,0,0,0),
+    (4225,'iron_quiver',1,1,55,0,0,0,0,0),
+    (4226,'silver_quiver',1,1,55,0,0,0,0,0),
+    (4227,'bronze_bolt_quiver',1,1,55,0,0,0,0,0),
+    (4228,'mythril_bolt_quiver',1,1,55,0,0,0,0,0),
+    (4229,'darksteel_bolt_quiver',1,1,55,0,0,0,0,0),
+    (4230,'new_years_gift',1,10,0,0,0,0,0,0),
+    (4231,'new_years_gift',1,10,0,0,0,0,0,0),
+    (4232,'new_years_gift',1,10,0,0,0,0,0,0),
+    (4233,'new_years_gift',1,10,0,0,0,0,0,0),
+    (4234,'bottle_of_cursed_beverage',1,1,75,0,0,0,0,0),
+    (4235,'bowl_of_cursed_soup',1,1,75,0,0,0,0,0),
+    (4236,'timeless_hourglass',0,0,0,0,0,0,0,0),
+    (4237,'perpetual_hourglass',1,0,0,0,0,0,0,0),
+    (4238,'inferno_crystal',1,0,0,0,0,0,0,0),
+    (4239,'glacier_crystal',1,0,0,0,0,0,0,0),
+    (4240,'cyclone_crystal',1,0,0,0,0,0,0,0),
+    (4241,'terra_crystal',1,0,0,0,0,0,0,0),
+    (4242,'plasma_crystal',1,0,0,0,0,0,0,0),
+    (4243,'torrent_crystal',1,0,0,0,0,0,0,0),
+    (4244,'aurora_crystal',1,0,0,0,0,0,0,0),
+    (4245,'twilight_crystal',1,0,0,0,0,0,0,0),
+    (4246,'bottle_of_cantarella',1,1,68,0,0,0,0,0),
+    (4247,'page_from_miratetes_memoirs',1,5,34,0,0,0,0,0),
+    (4248,'copy_of_ginuvas_battle_theory',1,5,34,0,0,0,0,0),
+    (4249,'copy_of_schultz_stratagems',1,5,34,0,0,0,0,0),
+    (4250,'crackler',1,1,58,0,0,0,0,0),
+    (4251,'festive_fan',1,1,61,0,0,0,0,0),
+    (4252,'summer_fan',1,1,62,0,0,0,0,0),
+    (4253,'spirit_masque',1,1,63,0,0,0,0,0),
+    (4254,'megalixir',1,1,34,0,0,0,0,0),
+    (4255,'pinch_of_mana_powder',1,1,89,0,0,0,0,0),
+    (4256,'ouka_ranman',1,1,56,0,0,0,0,0),
+    (4257,'papillion',1,1,57,12,0,0,0,0),
+    (4258,'red_drop',1,2,28,0,0,0,0,0),
+    (4259,'clear_drop',1,2,26,0,0,0,0,0),
+    (4260,'green_drop',1,2,24,0,0,0,0,0),
+    (4261,'yellow_drop',1,2,29,0,0,0,0,0),
+    (4262,'purple_drop',1,2,25,0,0,0,0,0),
+    (4263,'blue_drop',1,2,27,0,0,0,0,0),
+    (4264,'white_drop',1,2,10,0,0,0,0,0),
+    (4265,'black_drop',1,10,80,3,0,0,0,0),
+    (4266,'fulm-long_salmon_sub',1,1,26,0,0,0,0,0),
+    (4267,'buttered_nebimonite',1,1,26,0,0,0,0,0),
+    (4268,'plate_of_sea_spray_risotto',1,1,26,0,0,0,0,0),
+    (4269,'bijou_glace',1,1,24,0,0,0,0,0),
+    (4270,'sweet_rice_cake',1,1,25,0,0,0,0,0),
+    (4271,'rice_dumpling',1,1,25,0,0,0,0,0),
+    (4272,'slice_of_dragon_meat',1,1,28,0,0,0,0,0),
+    (4273,'kitron',1,1,26,0,0,0,0,0),
+    (4274,'persikos',1,1,26,0,0,0,0,0),
+    (4275,'serving_of_emperor_roe',1,1,25,0,0,0,0,0),
+    (4276,'serving_of_flint_caviar',1,1,25,0,0,0,0,0),
+    (4277,'tonosama_rice_ball',1,1,0,0,0,0,0,0),
+    (4278,'shogun_rice_ball',1,1,0,0,0,0,0,0),
+    (4279,'tavnazian_salad',1,1,24,0,0,0,0,0),
+    (4280,'garlic_cracker_+1',1,1,29,0,0,0,0,0),
+    (4281,'red_hot_cracker',1,1,29,0,0,0,0,0),
+    (4282,'pipin_hot_popoto',1,1,0,0,0,0,0,0),
+    (4283,'cup_of_choco-delight',1,1,0,0,0,0,0,0),
+    (4284,'bowl_of_tender_navarin',1,1,0,0,0,0,0,0),
+    (4285,'bowl_of_ocean_soup',1,1,25,0,0,0,0,0),
+    (4286,'cup_of_healing_tea',1,1,10,0,0,0,0,0),
+    (4287,'opo-opo_tart',1,1,26,0,0,0,0,0),
+    (4288,'zebra_eel',1,1,25,0,0,0,0,0),
+    (4289,'forest_carp',1,1,25,0,0,0,0,0),
+    (4290,'elshimo_frog',1,1,28,0,0,0,0,0),
+    (4291,'sandfish',1,1,25,0,0,0,0,0),
+    (4292,'loaf_of_pain_de_neige',1,1,24,0,0,0,0,0),
+    (4293,'serving_of_monastic_saute',1,1,24,0,0,0,0,0),
+    (4294,'serving_of_medicinal_quus',1,1,25,0,0,0,0,0),
+    (4295,'plate_of_royal_saute',1,1,28,0,0,0,0,0),
+    (4296,'serving_of_green_curry',1,1,24,0,0,0,0,0),
+    (4297,'serving_of_black_curry',1,1,24,0,0,0,0,0),
+    (4298,'serving_of_red_curry',1,1,28,0,0,0,0,0),
+    (4299,'flask_of_orange_au_lait',1,1,26,0,0,0,0,0),
+    (4300,'flask_of_apple_au_lait',1,1,26,0,0,0,0,0),
+    (4301,'flask_of_pear_au_lait',1,1,26,0,0,0,0,0),
+    (4302,'flask_of_pamama_au_lait',1,1,26,0,0,0,0,0),
+    (4303,'flask_of_persikos_au_lait',1,1,26,0,0,0,0,0),
+    (4304,'grimmonite',1,1,25,0,0,0,0,0),
+    (4305,'ryugu_titan',1,1,25,0,0,0,0,0),
+    (4306,'giant_donko',1,1,25,0,0,0,0,0),
+    (4307,'jungle_catfish',1,1,25,0,0,0,0,0),
+    (4308,'giant_chirai',1,1,25,0,0,0,0,0),
+    (4309,'cave_cherax',1,1,25,0,0,0,0,0),
+    (4310,'tiny_goldfish',1,1,25,0,0,0,0,0),
+    (4311,'black_bubble-eye',1,1,25,0,0,0,0,0),
+    (4312,'lionhead',1,1,25,0,0,0,0,0),
+    (4313,'blindfish',1,1,25,0,0,0,0,0),
+    (4314,'bibikibo',1,1,25,0,0,0,0,0),
+    (4315,'lungfish',1,1,25,0,0,0,0,0),
+    (4316,'armored_pisces',1,1,25,0,0,0,0,0),
+    (4317,'trilobite',1,1,25,0,0,0,0,0),
+    (4318,'bibiki_urchin',1,1,25,0,0,0,0,0),
+    (4319,'tricorn',1,1,25,0,0,0,0,0),
+    (4320,'apple_pie_+1',1,1,26,0,0,0,0,0),
+    (4321,'timbre_timbers_salad',1,1,24,0,0,0,0,0),
+    (4322,'dhalmel_pie_+1',1,1,28,0,0,0,0,0),
+    (4323,'bowl_of_vegetable_broth',1,1,24,0,0,0,0,0),
+    (4324,'chunk_of_hobgoblin_chocolate',1,1,24,0,0,0,0,0),
+    (4325,'hobgoblin_pie',1,1,24,0,0,0,0,0),
+    (4326,'serving_of_frog_flambe',1,1,28,0,0,0,0,0),
+    (4327,'bowl_of_emerald_soup',1,1,24,0,0,0,0,0),
+    (4328,'loaf_of_hobgoblin_bread',1,1,24,0,0,0,0,0),
+    (4329,'serving_of_newt_flambe',1,1,28,0,0,0,0,0),
+    (4330,'plate_of_witch_risotto',1,1,27,0,0,0,0,0),
+    (4331,'imperial_omelette',1,1,28,0,0,0,0,0),
+    (4332,'orange_kuchen_+1',1,1,27,0,0,0,0,0),
+    (4333,'bowl_of_witch_soup',1,1,27,0,0,0,0,0),
+    (4334,'ear_of_grilled_corn',1,1,24,0,0,0,0,0),
+    (4335,'slice_of_juicy_mutton',1,1,28,0,0,0,0,0),
+    (4336,'sweet_baked_apple',1,1,26,0,0,0,0,0),
+    (4337,'bowl_of_stamina_soup',1,1,24,0,0,0,0,0),
+    (4338,'steamed_crayfish',1,1,25,0,0,0,0,0),
+    (4339,'rolanberry_pie_+1',1,1,26,0,0,0,0,0),
+    (4340,'bowl_of_optical_soup',1,1,25,0,0,0,0,0),
+    (4341,'bowl_of_sunset_soup',1,1,24,0,0,0,0,0),
+    (4342,'steamed_crab',1,1,25,0,0,0,0,0),
+    (4343,'witch_kabob',1,1,27,0,0,0,0,0),
+    (4344,'bowl_of_witch_stew',1,1,27,0,0,0,0,0),
+    (4345,'serving_of_flounder_meuniere_+1',1,1,25,0,0,0,0,0),
+    (4346,'serving_of_bass_meuniere_+1',1,1,25,0,0,0,0,0),
+    (4347,'serving_of_salmon_meuniere_+1',1,1,25,0,0,0,0,0),
+    (4348,'mutton_enchilada',1,1,28,0,0,0,0,0),
+    (4349,'bunny_ball',1,1,28,0,0,0,0,0),
+    (4350,'dragon_steak',1,1,28,0,0,0,0,0),
+    (4351,'giddeus_water',1,1,0,0,0,0,0,0), -- TODO: Review animation, charges, delay
+    (4352,'derfland_pear',1,1,0,26,0,0,0,0),
+    (4353,'sea_bass_croute',1,1,25,0,0,0,0,0),
+    (4354,'shining_trout',1,1,25,0,0,0,0,0),
+    (4355,'salmon_sub_sandwich',1,1,28,0,0,0,0,0),
+    (4356,'loaf_of_white_bread',1,1,24,0,0,0,0,0),
+    (4357,'crawler_egg',1,1,28,0,0,0,0,0),
+    (4358,'slice_of_hare_meat',1,1,28,0,0,0,0,0),
+    (4359,'slice_of_dhalmel_meat',1,1,28,0,0,0,0,0),
+    (4360,'bastore_sardine',1,1,25,0,0,0,0,0),
+    (4361,'nebimonite',1,1,24,0,0,0,0,0),
+    (4362,'lizard_egg',1,1,28,0,0,0,0,0),
+    (4363,'faerie_apple',1,1,26,0,0,0,0,0),
+    (4364,'loaf_of_black_bread',1,1,24,0,0,0,0,0),
+    (4365,'rolanberry',1,1,26,0,0,0,0,0),
+    (4366,'la_theine_cabbage',1,1,24,0,0,0,0,0),
+    (4367,'clump_of_batagreens',1,1,24,0,0,0,0,0),
+    (4368,'two-leaf_mandragora_bud',1,1,24,0,0,0,0,0),
+    (4369,'four-leaf_mandragora_bud',1,1,24,0,0,0,0,0),
+    (4370,'pot_of_honey',1,1,24,0,0,0,0,0),
+    (4371,'slice_of_grilled_hare',1,1,28,0,0,0,0,0),
+    (4372,'slice_of_giant_sheep_meat',1,1,28,0,0,0,0,0),
+    (4373,'woozyshroom',1,1,27,0,0,0,0,0),
+    (4374,'sleepshroom',1,1,27,0,0,0,0,0),
+    (4375,'danceshroom',1,1,27,0,0,0,0,0),
+    (4376,'strip_of_meat_jerky',1,1,28,0,0,0,0,0),
+    (4377,'slice_of_coeurl_meat',1,1,28,0,0,0,0,0),
+    (4378,'jug_of_selbina_milk',1,1,28,0,0,0,0,0),
+    (4379,'cheval_salmon',1,1,25,0,0,0,0,0),
+    (4380,'smoked_salmon',1,1,25,0,0,0,0,0),
+    (4381,'meat_mithkabob',1,1,28,0,0,0,0,0),
+    (4382,'frost_turnip',1,1,24,0,0,0,0,0),
+    (4383,'gold_lobster',1,1,25,0,0,0,0,0),
+    (4384,'black_sole',1,1,25,0,0,0,0,0),
+    (4385,'zafmlug_bass',1,1,25,0,0,0,0,0),
+    (4386,'king_truffle',1,1,0,0,0,0,0,0),
+    (4387,'wild_onion',1,1,24,0,0,0,0,0),
+    (4388,'eggplant',1,1,24,0,0,0,0,0),
+    (4389,'san_dorian_carrot',1,1,24,0,0,0,0,0),
+    (4390,'mithran_tomato',1,1,0,0,0,0,0,0),
+    (4391,'bretzel',1,1,24,0,0,0,0,0),
+    (4392,'saruta_orange',1,1,26,0,0,0,0,0),
+    (4393,'orange_kuchen',1,1,26,0,0,0,0,0),
+    (4394,'ginger_cookie',1,1,29,0,0,0,0,0),
+    (4395,'galkan_sausage',1,1,28,0,0,0,0,0),
+    (4396,'sausage_roll',1,1,28,0,0,0,0,0),
+    (4397,'cinna-cookie',1,1,29,0,0,0,0,0),
+    (4398,'fish_mithkabob',1,1,25,0,0,0,0,0),
+    (4399,'bluetail',1,1,25,0,0,0,0,0),
+    (4400,'slice_of_land_crab_meat',1,1,24,0,0,0,0,0),
+    (4401,'moat_carp',1,1,25,0,0,0,0,0),
+    (4402,'red_terrapin',1,1,25,0,0,0,0,0),
+    (4403,'yellow_globe',1,1,25,0,0,0,0,0),
+    (4404,'roast_trout',1,1,25,0,0,0,0,0),
+    (4405,'rice_ball',1,1,24,0,0,0,0,0),
+    (4406,'baked_apple',1,1,26,0,0,0,0,0),
+    (4407,'carp_sushi',1,1,25,0,0,0,0,0),
+    (4408,'tortilla',1,1,24,0,0,0,0,0),
+    (4409,'hard-boiled_egg',1,1,28,0,0,0,0,0),
+    (4410,'roast_mushroom',1,1,27,0,0,0,0,0),
+    (4411,'dhalmel_pie',1,1,28,0,0,0,0,0),
+    (4412,'thundermelon',1,1,26,0,0,0,0,0),
+    (4413,'apple_pie',1,1,26,0,0,0,0,0),
+    (4414,'rolanberry_pie',1,1,26,0,0,0,0,0),
+    (4415,'ear_of_roasted_corn',1,1,24,0,0,0,0,0),
+    (4416,'bowl_of_pea_soup',1,1,24,0,0,0,0,0),
+    (4417,'bowl_of_egg_soup',1,1,28,0,0,0,0,0),
+    (4418,'bowl_of_turtle_soup',1,1,24,0,0,0,0,0),
+    (4419,'bowl_of_mushroom_soup',1,1,27,0,0,0,0,0),
+    (4420,'bowl_of_tomato_soup',1,1,24,0,0,0,0,0),
+    (4421,'melon_pie',1,1,26,0,0,0,0,0),
+    (4422,'bottle_of_orange_juice',1,1,26,0,0,0,0,0),
+    (4423,'bottle_of_apple_juice',1,1,26,0,0,0,0,0),
+    (4424,'bottle_of_melon_juice',1,1,26,0,0,0,0,0),
+    (4425,'bottle_of_tomato_juice',1,1,26,0,0,0,0,0),
+    (4426,'tricolored_carp',1,1,25,0,0,0,0,0),
+    (4427,'gold_carp',1,1,25,0,0,0,0,0),
+    (4428,'dark_bass',1,1,25,0,0,0,0,0),
+    (4429,'black_eel',1,1,25,0,0,0,0,0),
+    (4430,'bowl_of_pumpkin_soup',1,1,24,0,0,0,0,0),
+    (4431,'bunch_of_san_dorian_grapes',1,1,26,0,0,0,0,0),
+    (4432,'kazham_pineapple',1,1,26,0,0,0,0,0),
+    (4433,'bowl_of_dhalmel_stew',1,1,28,0,0,0,0,0),
+    (4434,'plate_of_mushroom_risotto',1,1,0,0,0,0,0,0),
+    (4435,'slice_of_cockatrice_meat',1,1,28,0,0,0,0,0),
+    (4436,'baked_popoto',1,1,28,0,0,0,0,0),
+    (4437,'slice_of_roast_mutton',1,1,28,0,0,0,0,0),
+    (4438,'dhalmel_steak',1,1,28,0,0,0,0,0),
+    (4439,'bowl_of_navarin',1,1,28,0,0,0,0,0),
+    (4440,'bowl_of_whitefish_stew',1,1,24,0,0,0,0,0),
+    (4441,'bottle_of_grape_juice',1,1,26,0,0,0,0,0),
+    (4442,'bottle_of_pineapple_juice',1,1,26,0,0,0,0,0),
+    (4443,'cobalt_jellyfish',1,1,25,0,0,0,0,0),
+    (4444,'rarab_tail',1,1,24,0,0,0,0,0),
+    (4445,'yagudo_cherry',1,1,26,0,0,0,0,0),
+    (4446,'pumpkin_pie',1,1,26,0,0,0,0,0),
+    (4447,'scream_fungus',1,1,27,0,0,0,0,0),
+    (4448,'puffball',1,1,27,0,0,0,0,0),
+    (4449,'reishi_mushroom',1,1,27,0,0,0,0,0),
+    (4450,'coral_fungus',1,1,27,0,0,0,0,0),
+    (4451,'silver_shark',1,1,25,0,0,0,0,0),
+    (4452,'bowl_of_shark_fin_soup',1,1,28,0,0,0,0,0),
+    (4453,'bowl_of_eyeball_soup',1,1,28,0,0,0,0,0),
+    (4454,'emperor_fish',1,1,25,0,0,0,0,0),
+    (4455,'bowl_of_pebble_soup',1,1,24,0,0,0,0,0),
+    (4456,'boiled_crab',1,1,25,0,0,0,0,0),
+    (4457,'eel_kabob',1,1,25,0,0,0,0,0),
+    (4458,'loaf_of_goblin_bread',1,1,24,0,0,0,0,0),
+    (4459,'nebimonite_bake',1,1,24,0,0,0,0,0),
+    (4460,'block_of_stone_cheese',1,1,28,0,0,0,0,0),
+    (4461,'bastore_bream',1,1,25,0,0,0,0,0),
+    (4462,'monke-onke',1,1,25,0,0,0,0,0),
+    (4463,'takitaro',1,1,25,0,0,0,0,0),
+    (4464,'pipira',1,1,25,0,0,0,0,0),
+    (4465,'bowl_of_goblin_stew',1,1,28,0,0,0,0,0),
+    (4466,'spicy_cracker',1,1,29,0,0,0,0,0),
+    (4467,'garlic_cracker',1,1,29,0,0,0,0,0),
+    (4468,'bunch_of_pamamas',1,1,26,0,0,0,0,0),
+    (4469,'giant_catfish',1,1,25,0,0,0,0,0),
+    (4470,'icefish',1,1,25,0,0,0,0,0),
+    (4471,'bladefish',1,1,25,0,0,0,0,0),
+    (4472,'crayfish',1,1,25,0,0,0,0,0),
+    (4473,'crescent_fish',1,1,25,0,0,0,0,0),
+    (4474,'gigant_squid',1,1,25,0,0,0,0,0),
+    (4475,'sea_zombie',1,1,25,0,0,0,0,0),
+    (4476,'titanictus',1,1,25,0,0,0,0,0),
+    (4477,'gavial_fish',1,1,25,0,0,0,0,0),
+    (4478,'three-eyed_fish',1,1,25,0,0,0,0,0),
+    (4479,'bhefhel_marlin',1,1,25,0,0,0,0,0),
+    (4480,'gugru_tuna',1,1,25,0,0,0,0,0),
+    (4481,'ogre_eel',1,1,25,0,0,0,0,0),
+    (4482,'nosteau_herring',1,1,25,0,0,0,0,0),
+    (4483,'tiger_cod',1,1,25,0,0,0,0,0),
+    (4484,'shall_shell',1,1,0,0,0,0,0,0),
+    (4485,'noble_lady',1,1,25,0,0,0,0,0),
+    (4486,'dragon_heart',1,1,28,0,0,0,0,0),
+    (4487,'colored_egg',1,1,28,0,0,0,0,0),
+    (4488,'jack-o-lantern',1,1,26,0,0,0,0,0),
+    (4489,'bowl_of_vegetable_gruel',1,1,24,0,0,0,0,0),
+    (4490,'pickled_herring',1,1,28,0,0,0,0,0),
+    (4491,'watermelon',1,1,26,0,0,0,0,0),
+    (4492,'bowl_of_puls',1,1,24,0,0,0,0,0),
+    (4493,'cup_of_windurstian_tea',1,1,10,0,0,0,0,0),
+    (4494,'pot_of_san_dorian_tea',1,1,10,0,0,0,0,0),
+    (4495,'chunk_of_goblin_chocolate',1,1,24,0,0,0,0,0),
+    (4496,'piece_of_bubble_chocolate',1,1,24,0,0,0,0,0),
+    (4497,'heart_chocolate',1,1,24,0,0,0,0,0),
+    (4498,'cup_of_chocomilk',1,1,24,0,0,0,0,0),
+    (4499,'loaf_of_iron_bread',1,1,24,0,0,0,0,0),
+    (4500,'greedie',1,1,25,0,0,0,0,0),
+    (4501,'fat_greedie',1,1,25,0,0,0,0,0),
+    (4502,'marron_glace',1,1,25,0,0,0,0,0),
+    (4503,'bunch_of_buburimu_grapes',1,1,26,0,0,0,0,0),
+    (4504,'acorn',1,1,28,0,0,0,0,0),
+    (4505,'handful_of_sunflower_seeds',1,1,24,0,0,0,0,0),
+    (4506,'mutton_tortilla',1,1,24,0,0,0,0,0),
+    (4507,'rarab_meatball',1,1,28,0,0,0,0,0),
+    (4508,'serving_of_royal_jelly',1,1,24,0,0,0,0,0),
+    (4509,'flask_of_distilled_water',1,1,26,0,0,0,0,0),
+    (4510,'acorn_cookie',1,1,29,0,0,0,0,0),
+    (4511,'bowl_of_ambrosia',1,1,10,0,0,0,0,0),
+    (4512,'bottle_of_vampire_juice',1,1,26,0,0,0,0,0),
+    (4513,'bottle_of_amrita',1,1,26,0,0,0,0,0),
+    (4514,'quus',1,1,25,0,0,0,0,0),
+    (4515,'copper_frog',1,1,28,0,0,0,0,0),
+    (4516,'slice_of_grilled_black_hare',1,1,28,0,0,0,0,0),
+    (4517,'serving_of_yellow_curry',1,1,28,0,0,0,0,0),
+    (4518,'strip_of_sheep_jerky',1,1,28,0,0,0,0,0),
+    (4519,'wild_steak',1,1,28,0,0,0,0,0),
+    (4520,'coin_cookie',1,1,29,0,0,0,0,0),
+    (4521,'bowl_of_humpty_soup',1,1,24,0,0,0,0,0),
+    (4522,'bowl_of_jack-o-soup',1,1,24,0,0,0,0,0),
+    (4523,'melon_pie_+1',1,1,26,0,0,0,0,0),
+    (4524,'pot_of_royal_tea',1,1,10,0,0,0,0,0),
+    (4525,'pumpkin_pie_+1',1,1,26,0,0,0,0,0),
+    (4526,'silkworm_egg',1,1,0,28,0,0,0,0),
+    (4527,'jug_of_marys_milk',1,1,26,0,0,0,0,0),
+    (4528,'crystal_bass',1,1,28,0,0,0,0,0),
+    (4529,'rolanberry_881_ce',1,1,26,0,0,0,0,0),
+    (4530,'rolanberry_874_ce',1,1,26,0,0,0,0,0),
+    (4531,'rolanberry_864_ce',1,1,26,0,0,0,0,0),
+    (4532,'soft-boiled_egg',1,1,28,0,0,0,0,0),
+    (4533,'bowl_of_delicious_puls',1,1,25,0,0,0,0,0),
+    (4534,'bowl_of_medicinal_gruel',1,1,24,0,0,0,0,0)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `validTargets` = IF(`validTargets` <> VALUES(`validTargets`), VALUES(`validTargets`), `validTargets`),
+    `activation` = IF(`activation` <> VALUES(`activation`), VALUES(`activation`), `activation`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `maxCharges` = IF(`maxCharges` <> VALUES(`maxCharges`), VALUES(`maxCharges`), `maxCharges`),
+    `useDelay` = IF(`useDelay` <> VALUES(`useDelay`), VALUES(`useDelay`), `useDelay`),
+    `reuseDelay` = IF(`reuseDelay` <> VALUES(`reuseDelay`), VALUES(`reuseDelay`), `reuseDelay`),
+    `aoe` = IF(`aoe` <> VALUES(`aoe`), VALUES(`aoe`), `aoe`)
+;
+
+insert into `item_usable`
+(
+    `itemid`, `name`, `validTargets`, `activation`, `animation`,
+    `animationTime`, `maxCharges`, `useDelay`, `reuseDelay`, `aoe`
+)
+VALUES
+    (4535,'boiled_crayfish',1,1,25,0,0,0,0,0),
+    (4536,'blackened_frog',1,1,25,0,0,0,0,0),
+    (4537,'roast_carp',1,1,25,0,0,0,0,0),
+    (4538,'roast_pipira',1,1,25,0,0,0,0,0),
+    (4539,'goblin_pie',1,1,24,0,0,0,0,0),
+    (4540,'boiled_tuna_head',1,1,25,0,0,0,0,0),
+    (4541,'bottle_of_goblin_drink',1,1,26,0,0,0,0,0),
+    (4542,'bowl_of_brain_stew',1,1,26,0,0,0,0,0),
+    (4543,'goblin_mushpot',1,1,27,0,0,0,0,0),
+    (4544,'bowl_of_mushroom_stew',1,1,27,0,0,0,0,0),
+    (4545,'bunch_of_gysahl_greens',1,1,24,0,0,0,0,0),
+    (4546,'piece_of_raisin_bread',1,1,24,0,0,0,0,0),
+    (4547,'bowl_of_boiled_cockatrice',1,1,28,0,0,0,0,0),
+    (4548,'plate_of_coeurl_saute',1,1,28,0,0,0,0,0),
+    (4549,'bowl_of_dragon_soup',1,1,28,0,0,0,0,0),
+    (4550,'plate_of_bream_risotto',1,1,28,0,0,0,0,0),
+    (4551,'salmon_croute',1,1,25,0,0,0,0,0),
+    (4552,'serving_of_herb_crawler_eggs',1,1,28,0,0,0,0,0),
+    (4553,'serving_of_batagreen_saute',1,1,24,0,0,0,0,0),
+    (4554,'serving_of_shallops_tropicale',1,1,24,0,0,0,0,0),
+    (4555,'windurst_salad',1,1,24,0,0,0,0,0),
+    (4556,'serving_of_icecap_rolanberry',1,1,26,0,0,0,0,0),
+    (4557,'steamed_catfish',1,1,25,0,0,0,0,0),
+    (4558,'bottle_of_yagudo_drink',1,1,26,0,0,0,0,0),
+    (4559,'serving_of_herb_quus',1,1,25,0,0,0,0,0),
+    (4560,'bowl_of_vegetable_soup',1,1,24,0,0,0,0,0),
+    (4561,'bowl_of_seafood_stew',1,1,25,0,0,0,0,0),
+    (4562,'odontotyrannus',1,1,25,0,0,0,0,0),
+    (4563,'pamama_tart',1,1,25,0,0,0,0,0),
+    (4564,'royal_omelette',1,1,28,0,0,0,0,0),
+    (4565,'sobbing_fungus',1,1,26,0,0,0,0,0),
+    (4566,'deathball',1,1,25,0,0,0,0,0),
+    (4567,'moon_carrot',1,1,24,0,0,0,0,0),
+    (4568,'moon_ball',1,1,24,0,0,0,0,0),
+    (4569,'bowl_of_quadav_stew',1,1,24,0,0,0,0,0),
+    (4570,'bird_egg',1,1,28,0,0,0,0,0),
+    (4571,'clump_of_beaugreens',1,1,24,0,0,0,0,0),
+    (4572,'serving_of_beaugreen_saute',1,1,24,0,0,0,0,0),
+    (4573,'loaf_of_steel_bread',1,1,24,0,0,0,0,0),
+    (4574,'meat_chiefkabob',1,1,28,0,0,0,0,0),
+    (4575,'fish_chiefkabob',1,1,28,0,0,0,0,0),
+    (4576,'wizard_cookie',1,1,29,0,0,0,0,0),
+    (4577,'wild_cookie',1,1,29,0,0,0,0,0),
+    (4578,'sausage',1,1,28,0,0,0,0,0),
+    (4579,'elshimo_newt',1,1,25,0,0,0,0,0),
+    (4580,'coral_butterfly',1,1,25,0,0,0,0,0),
+    (4581,'blackened_newt',1,1,25,0,0,0,0,0),
+    (4582,'serving_of_bass_meuniere',1,1,25,0,0,0,0,0),
+    (4583,'serving_of_salmon_meuniere',1,1,25,0,0,0,0,0),
+    (4584,'serving_of_flounder_meuniere',1,1,25,0,0,0,0,0),
+    (4585,'broiled_pipira',1,1,25,0,0,0,0,0),
+    (4586,'broiled_carp',1,1,25,0,0,0,0,0),
+    (4587,'broiled_trout',1,1,25,0,0,0,0,0),
+    (4588,'broiled_eel',1,1,25,0,0,0,0,0),
+    (4589,'bowl_of_wild_stew',1,1,24,0,0,0,0,0),
+    (4590,'salmon_rice_ball',1,1,25,0,0,0,0,0),
+    (4591,'loaf_of_pumpernickel',1,1,24,0,0,0,0,0),
+    (4592,'bowl_of_wisdom_soup',1,1,26,0,0,0,0,0),
+    (4593,'block_of_rock_cheese',1,1,24,0,0,0,0,0),
+    (4594,'serving_of_snowy_rolanberry',1,1,26,0,0,0,0,0),
+    (4595,'party_egg',1,1,28,0,0,0,0,0),
+    (4596,'bunch_of_wild_pamamas',1,1,26,0,0,0,0,0),
+    (4597,'wild_melon',1,1,26,0,0,0,0,0),
+    (4598,'wild_pineapple',1,1,26,0,0,0,0,0),
+    (4599,'blackened_toad',1,1,28,0,0,0,0,0),
+    (4600,'lucky_egg',1,1,28,0,0,0,0,0),
+    (4601,'bowl_of_sopa_de_pez_blanco',1,1,25,0,0,0,0,0),
+    (4602,'warm_egg',1,1,28,0,0,0,0,0),
+    (4603,'cup_of_chamomile_tea',1,1,10,0,0,0,0,0),
+    (4604,'rogue_rice_ball',1,1,25,0,0,0,0,0),
+    (4605,'naval_rice_ball',1,1,25,0,0,0,0,0),
+    (4606,'scroll_of_dia',1,1,11,5,0,0,0,0),
+    (4607,'scroll_of_stone',1,1,12,5,0,0,0,0),
+    (4608,'scroll_of_cure',1,1,11,5,0,0,0,0),
+    (4609,'scroll_of_cure',1,1,11,5,0,0,0,0),
+    (4610,'scroll_of_cure_ii',1,1,11,5,0,0,0,0),
+    (4611,'scroll_of_cure_iii',1,1,11,5,0,0,0,0),
+    (4612,'scroll_of_cure_iv',1,1,11,5,0,0,0,0),
+    (4613,'scroll_of_cure_v',1,1,11,5,0,0,0,0),
+    (4614,'scroll_of_cure_vi',1,1,11,5,0,0,0,0),
+    (4615,'scroll_of_curaga',1,1,11,5,0,0,0,0),
+    (4616,'scroll_of_curaga_ii',1,1,11,5,0,0,0,0),
+    (4617,'scroll_of_curaga_iii',1,1,11,5,0,0,0,0),
+    (4618,'scroll_of_curaga_iv',1,1,11,5,0,0,0,0),
+    (4619,'scroll_of_curaga_v',1,1,11,5,0,0,0,0),
+    (4620,'scroll_of_raise',1,1,11,5,0,0,0,0),
+    (4621,'scroll_of_raise_ii',1,1,11,5,0,0,0,0),
+    (4622,'scroll_of_poisona',1,1,11,5,0,0,0,0),
+    (4623,'scroll_of_paralyna',1,1,11,5,0,0,0,0),
+    (4624,'scroll_of_blindna',1,1,11,5,0,0,0,0),
+    (4625,'scroll_of_silena',1,1,11,5,0,0,0,0),
+    (4626,'scroll_of_stona',1,1,11,5,0,0,0,0),
+    (4627,'scroll_of_viruna',1,1,11,5,0,0,0,0),
+    (4628,'scroll_of_cursna',1,1,11,5,0,0,0,0),
+    (4629,'scroll_of_holy',1,1,11,5,0,0,0,0),
+    (4630,'scroll_of_holy_ii',1,1,11,5,0,0,0,0),
+    (4631,'scroll_of_dia',1,1,11,5,0,0,0,0),
+    (4632,'scroll_of_dia_ii',1,1,11,5,0,0,0,0),
+    (4633,'scroll_of_dia_iii',1,1,11,5,0,0,0,0),
+    (4636,'scroll_of_banish',1,1,11,5,0,0,0,0),
+    (4637,'scroll_of_banish_ii',1,1,11,5,0,0,0,0),
+    (4638,'scroll_of_banish_iii',1,1,11,5,0,0,0,0),
+    (4641,'scroll_of_diaga',1,1,11,5,0,0,0,0),
+    (4646,'scroll_of_banishga',1,1,11,5,0,0,0,0),
+    (4647,'scroll_of_banishga_ii',1,1,11,5,0,0,0,0),
+    (4651,'scroll_of_protect',1,1,11,5,0,0,0,0),
+    (4652,'scroll_of_protect_ii',1,1,11,5,0,0,0,0),
+    (4653,'scroll_of_protect_iii',1,1,11,5,0,0,0,0),
+    (4654,'scroll_of_protect_iv',1,1,11,5,0,0,0,0),
+    (4655,'scroll_of_protect_v',1,1,11,5,0,0,0,0),
+    (4656,'scroll_of_shell',1,1,11,5,0,0,0,0),
+    (4657,'scroll_of_shell_ii',1,1,11,5,0,0,0,0),
+    (4658,'scroll_of_shell_iii',1,1,11,5,0,0,0,0),
+    (4659,'scroll_of_shell_iv',1,1,11,5,0,0,0,0),
+    (4660,'scroll_of_shell_v',1,1,11,5,0,0,0,0),
+    (4661,'scroll_of_blink',1,1,11,5,0,0,0,0),
+    (4662,'scroll_of_stoneskin',1,1,11,5,0,0,0,0),
+    (4663,'scroll_of_aquaveil',1,1,11,5,0,0,0,0),
+    (4664,'scroll_of_slow',1,1,11,5,0,0,0,0),
+    (4665,'scroll_of_haste',1,1,11,5,0,0,0,0),
+    (4666,'scroll_of_paralyze',1,1,11,5,0,0,0,0),
+    (4667,'scroll_of_silence',1,1,11,5,0,0,0,0),
+    (4668,'scroll_of_barfire',1,1,11,5,0,0,0,0),
+    (4669,'scroll_of_barblizzard',1,1,11,5,0,0,0,0),
+    (4670,'scroll_of_baraero',1,1,11,5,0,0,0,0),
+    (4671,'scroll_of_barstone',1,1,11,5,0,0,0,0),
+    (4672,'scroll_of_barthunder',1,1,11,5,0,0,0,0),
+    (4673,'scroll_of_barwater',1,1,11,5,0,0,0,0),
+    (4674,'scroll_of_barfira',1,1,11,5,0,0,0,0),
+    (4675,'scroll_of_barblizzara',1,1,11,5,0,0,0,0),
+    (4676,'scroll_of_baraera',1,1,11,5,0,0,0,0),
+    (4677,'scroll_of_barstonra',1,1,11,5,0,0,0,0),
+    (4678,'scroll_of_barthundra',1,1,11,5,0,0,0,0),
+    (4679,'scroll_of_barwatera',1,1,11,5,0,0,0,0),
+    (4680,'scroll_of_barsleep',1,1,11,5,0,0,0,0),
+    (4681,'scroll_of_barpoison',1,1,11,5,0,0,0,0),
+    (4682,'scroll_of_barparalyze',1,1,11,5,0,0,0,0),
+    (4683,'scroll_of_barblind',1,1,11,5,0,0,0,0),
+    (4684,'scroll_of_barsilence',1,1,11,5,0,0,0,0),
+    (4685,'scroll_of_barpetrify',1,1,11,5,0,0,0,0),
+    (4686,'scroll_of_barvirus',1,1,11,5,0,0,0,0),
+    (4687,'scroll_of_recall-jugner',1,1,11,5,0,0,0,0),
+    (4688,'scroll_of_recall-pashh',1,1,11,5,0,0,0,0),
+    (4689,'scroll_of_recall-meriph',1,1,11,5,0,0,0,0),
+    (4690,'scroll_of_baramnesia',1,1,11,5,0,0,0,0),
+    (4691,'scroll_of_baramnesra',1,1,11,5,0,0,0,0),
+    (4692,'scroll_of_haste_ii',1,1,11,5,0,0,0,0),
+    (4694,'scroll_of_barsleepra',1,1,11,5,0,0,0,0),
+    (4695,'scroll_of_barpoisonra',1,1,11,5,0,0,0,0),
+    (4696,'scroll_of_barparalyzra',1,1,11,5,0,0,0,0),
+    (4697,'scroll_of_barblindra',1,1,11,5,0,0,0,0),
+    (4698,'scroll_of_barsilencera',1,1,11,5,0,0,0,0),
+    (4699,'scroll_of_barpetra',1,1,11,5,0,0,0,0),
+    (4700,'scroll_of_barvira',1,1,11,5,0,0,0,0),
+    (4701,'scroll_of_cura',1,1,11,5,0,0,0,0),
+    (4702,'scroll_of_sacrifice',1,1,11,5,0,0,0,0),
+    (4703,'scroll_of_esuna',1,1,11,5,0,0,0,0),
+    (4704,'scroll_of_auspice',1,1,11,5,0,0,0,0),
+    (4705,'scroll_of_temper',1,1,11,5,0,0,0,0),
+    (4706,'scroll_of_enlight',1,1,11,5,0,0,0,0),
+    (4707,'scroll_of_endark',1,1,11,5,0,0,0,0),
+    (4708,'scroll_of_enfire',1,1,11,5,0,0,0,0),
+    (4709,'scroll_of_enblizzard',1,1,11,5,0,0,0,0),
+    (4710,'scroll_of_enaero',1,1,11,5,0,0,0,0),
+    (4711,'scroll_of_enstone',1,1,11,5,0,0,0,0),
+    (4712,'scroll_of_enthunder',1,1,11,5,0,0,0,0),
+    (4713,'scroll_of_enwater',1,1,11,5,0,0,0,0),
+    (4714,'scroll_of_phalanx',1,1,11,5,0,0,0,0),
+    (4715,'scroll_of_reprisal',1,1,11,5,0,0,0,0),
+    (4716,'scroll_of_regen',1,1,11,5,0,0,0,0),
+    (4717,'scroll_of_refresh',1,1,11,5,0,0,0,0),
+    (4718,'scroll_of_regen_ii',1,1,11,5,0,0,0,0),
+    (4719,'scroll_of_regen_iii',1,1,11,5,0,0,0,0),
+    (4720,'scroll_of_flash',1,1,11,5,0,0,0,0),
+    (4721,'scroll_of_repose',1,1,11,5,0,0,0,0),
+    (4722,'scroll_of_enfire_ii',1,1,11,5,0,0,0,0),
+    (4723,'scroll_of_enblizzard_ii',1,1,11,5,0,0,0,0),
+    (4724,'scroll_of_enaero_ii',1,1,11,5,0,0,0,0),
+    (4725,'scroll_of_enstone_ii',1,1,11,5,0,0,0,0),
+    (4726,'scroll_of_enthunder_ii',1,1,11,5,0,0,0,0),
+    (4727,'scroll_of_enwater_ii',1,1,11,5,0,0,0,0),
+    (4728,'scroll_of_teleport-yhoat',1,1,11,5,0,0,0,0),
+    (4729,'scroll_of_teleport-altep',1,1,11,5,0,0,0,0),
+    (4730,'scroll_of_teleport-holla',1,1,11,5,0,0,0,0),
+    (4731,'scroll_of_teleport-dem',1,1,11,5,0,0,0,0),
+    (4732,'scroll_of_teleport-mea',1,1,11,5,0,0,0,0),
+    (4733,'scroll_of_protectra',1,1,11,5,0,0,0,0),
+    (4734,'scroll_of_protectra_ii',1,1,11,5,0,0,0,0),
+    (4735,'scroll_of_protectra_iii',1,1,11,5,0,0,0,0),
+    (4736,'scroll_of_protectra_iv',1,1,11,5,0,0,0,0),
+    (4737,'scroll_of_protectra_v',1,1,11,5,0,0,0,0),
+    (4738,'scroll_of_shellra',1,1,11,5,0,0,0,0),
+    (4739,'scroll_of_shellra_ii',1,1,11,5,0,0,0,0),
+    (4740,'scroll_of_shellra_iii',1,1,11,5,0,0,0,0),
+    (4741,'scroll_of_shellra_iv',1,1,11,5,0,0,0,0),
+    (4742,'scroll_of_shellra_v',1,1,11,5,0,0,0,0),
+    (4743,'scroll_of_reraise',1,1,11,5,0,0,0,0),
+    (4744,'scroll_of_invisible',1,1,11,5,0,0,0,0),
+    (4745,'scroll_of_sneak',1,1,11,5,0,0,0,0),
+    (4746,'scroll_of_deodorize',1,1,11,5,0,0,0,0),
+    (4747,'scroll_of_teleport-vahzl',1,1,11,5,0,0,0,0),
+    (4748,'scroll_of_raise_iii',1,1,11,5,0,0,0,0),
+    (4749,'scroll_of_reraise_ii',1,1,11,5,0,0,0,0),
+    (4750,'scroll_of_reraise_iii',1,1,11,5,0,0,0,0),
+    (4751,'scroll_of_erase',1,1,11,5,0,0,0,0),
+    (4752,'scroll_of_fire',1,1,12,5,0,0,0,0),
+    (4753,'scroll_of_fire_ii',1,1,12,5,0,0,0,0),
+    (4754,'scroll_of_fire_iii',1,1,12,5,0,0,0,0),
+    (4755,'scroll_of_fire_iv',1,1,12,5,0,0,0,0),
+    (4756,'scroll_of_fire_v',1,1,12,5,0,0,0,0),
+    (4757,'scroll_of_blizzard',1,1,12,5,0,0,0,0),
+    (4758,'scroll_of_blizzard_ii',1,1,12,5,0,0,0,0),
+    (4759,'scroll_of_blizzard_iii',1,1,12,5,0,0,0,0),
+    (4760,'scroll_of_blizzard_iv',1,1,12,5,0,0,0,0),
+    (4761,'scroll_of_blizzard_v',1,1,12,5,0,0,0,0),
+    (4762,'scroll_of_aero',1,1,12,5,0,0,0,0),
+    (4763,'scroll_of_aero_ii',1,1,12,5,0,0,0,0),
+    (4764,'scroll_of_aero_iii',1,1,12,5,0,0,0,0),
+    (4765,'scroll_of_aero_iv',1,1,12,5,0,0,0,0),
+    (4766,'scroll_of_aero_v',1,1,12,5,0,0,0,0),
+    (4767,'scroll_of_stone',1,1,12,5,0,0,0,0),
+    (4768,'scroll_of_stone_ii',1,1,12,5,0,0,0,0),
+    (4769,'scroll_of_stone_iii',1,1,12,5,0,0,0,0),
+    (4770,'scroll_of_stone_iv',1,1,12,5,0,0,0,0),
+    (4771,'scroll_of_stone_v',1,1,12,5,0,0,0,0),
+    (4772,'scroll_of_thunder',1,1,12,5,0,0,0,0),
+    (4773,'scroll_of_thunder_ii',1,1,12,5,0,0,0,0),
+    (4774,'scroll_of_thunder_iii',1,1,12,5,0,0,0,0),
+    (4775,'scroll_of_thunder_iv',1,1,12,5,0,0,0,0),
+    (4776,'scroll_of_thunder_v',1,1,12,5,0,0,0,0),
+    (4777,'scroll_of_water',1,1,12,5,0,0,0,0),
+    (4778,'scroll_of_water_ii',1,1,12,5,0,0,0,0),
+    (4779,'scroll_of_water_iii',1,1,12,5,0,0,0,0),
+    (4780,'scroll_of_water_iv',1,1,12,5,0,0,0,0),
+    (4781,'scroll_of_water_v',1,1,12,5,0,0,0,0),
+    (4782,'scroll_of_firaga',1,1,12,5,0,0,0,0),
+    (4783,'scroll_of_firaga_ii',1,1,12,5,0,0,0,0),
+    (4784,'scroll_of_firaga_iii',1,1,12,5,0,0,0,0),
+    (4787,'scroll_of_blizzaga',1,1,12,5,0,0,0,0),
+    (4788,'scroll_of_blizzaga_ii',1,1,12,5,0,0,0,0),
+    (4789,'scroll_of_blizzaga_iii',1,1,12,5,0,0,0,0),
+    (4792,'scroll_of_aeroga',1,1,12,5,0,0,0,0),
+    (4793,'scroll_of_aeroga_ii',1,1,12,5,0,0,0,0),
+    (4794,'scroll_of_aeroga_iii',1,1,12,5,0,0,0,0),
+    (4797,'scroll_of_stonega',1,1,12,5,0,0,0,0),
+    (4798,'scroll_of_stonega_ii',1,1,12,5,0,0,0,0),
+    (4799,'scroll_of_stonega_iii',1,1,12,5,0,0,0,0),
+    (4802,'scroll_of_thundaga',1,1,12,5,0,0,0,0),
+    (4803,'scroll_of_thundaga_ii',1,1,12,5,0,0,0,0),
+    (4804,'scroll_of_thundaga_iii',1,1,12,5,0,0,0,0),
+    (4807,'scroll_of_waterga',1,1,12,5,0,0,0,0),
+    (4808,'scroll_of_waterga_ii',1,1,12,5,0,0,0,0),
+    (4809,'scroll_of_waterga_iii',1,1,12,5,0,0,0,0),
+    (4812,'scroll_of_flare',1,1,12,5,0,0,0,0),
+    (4813,'scroll_of_flare_ii',1,1,12,5,0,0,0,0),
+    (4814,'scroll_of_freeze',1,1,12,5,0,0,0,0),
+    (4815,'scroll_of_freeze_ii',1,1,12,5,0,0,0,0),
+    (4816,'scroll_of_tornado',1,1,12,5,0,0,0,0),
+    (4817,'scroll_of_tornado_ii',1,1,12,5,0,0,0,0),
+    (4818,'scroll_of_quake',1,1,12,5,0,0,0,0),
+    (4819,'scroll_of_quake_ii',1,1,12,5,0,0,0,0),
+    (4820,'scroll_of_burst',1,1,12,5,0,0,0,0),
+    (4821,'scroll_of_burst_ii',1,1,12,5,0,0,0,0),
+    (4822,'scroll_of_flood',1,1,12,5,0,0,0,0),
+    (4823,'scroll_of_flood_ii',1,1,12,5,0,0,0,0),
+    (4824,'scroll_of_gravity',1,1,12,5,0,0,0,0),
+    (4825,'scroll_of_gravity_ii',1,1,12,5,0,0,0,0),
+    (4827,'scroll_of_comet',1,1,12,5,0,0,0,0),
+    (4828,'scroll_of_poison',1,1,12,5,0,0,0,0),
+    (4829,'scroll_of_poison_ii',1,1,12,5,0,0,0,0),
+    (4833,'scroll_of_poisonga',1,1,12,5,0,0,0,0),
+    (4834,'scroll_of_poisonga_ii',1,1,12,5,0,0,0,0),
+    (4838,'scroll_of_bio',1,1,12,5,0,0,0,0),
+    (4839,'scroll_of_bio_ii',1,1,12,5,0,0,0,0),
+    (4840,'scroll_of_bio_iii',1,1,12,5,0,0,0,0),
+    (4843,'scroll_of_burn',1,1,12,5,0,0,0,0),
+    (4844,'scroll_of_frost',1,1,12,5,0,0,0,0),
+    (4845,'scroll_of_choke',1,1,12,5,0,0,0,0),
+    (4846,'scroll_of_rasp',1,1,12,5,0,0,0,0),
+    (4847,'scroll_of_shock',1,1,12,5,0,0,0,0),
+    (4848,'scroll_of_drown',1,1,12,5,0,0,0,0),
+    (4849,'scroll_of_addle',1,1,11,5,0,0,0,0),
+    (4850,'scroll_of_refresh_ii',1,1,11,5,0,0,0,0),
+    (4851,'scroll_of_meteor',1,1,12,5,0,0,0,0),
+    (4853,'scroll_of_drain',1,1,12,5,0,0,0,0),
+    (4854,'scroll_of_drain_ii',1,1,12,5,0,0,0,0),
+    (4855,'scroll_of_aspir',1,1,12,5,0,0,0,0),
+    (4856,'scroll_of_aspir_ii',1,1,12,5,0,0,0,0),
+    (4857,'scroll_of_blaze_spikes',1,1,12,5,0,0,0,0),
+    (4858,'scroll_of_ice_spikes',1,1,12,5,0,0,0,0),
+    (4859,'scroll_of_shock_spikes',1,1,12,5,0,0,0,0),
+    (4860,'scroll_of_stun',1,1,12,5,0,0,0,0),
+    (4861,'scroll_of_sleep',1,1,12,5,0,0,0,0),
+    (4862,'scroll_of_blind',1,1,12,5,0,0,0,0),
+    (4863,'scroll_of_break',1,1,12,5,0,0,0,0),
+    (4866,'scroll_of_bind',1,1,12,5,0,0,0,0),
+    (4867,'scroll_of_sleep_ii',1,1,12,5,0,0,0,0),
+    (4868,'scroll_of_dispel',1,1,12,5,0,0,0,0),
+    (4869,'scroll_of_warp',1,1,12,5,0,0,0,0),
+    (4870,'scroll_of_warp_ii',1,1,12,5,0,0,0,0),
+    (4871,'scroll_of_escape',1,1,12,5,0,0,0,0),
+    (4872,'scroll_of_tractor',1,1,12,5,0,0,0,0),
+    (4873,'scroll_of_retrace',1,1,12,5,0,0,0,0),
+    (4874,'scroll_of_absorb-str',1,1,12,5,0,0,0,0),
+    (4875,'scroll_of_absorb-dex',1,1,12,5,0,0,0,0),
+    (4876,'scroll_of_absorb-vit',1,1,12,5,0,0,0,0),
+    (4877,'scroll_of_absorb-agi',1,1,12,5,0,0,0,0),
+    (4878,'scroll_of_absorb-int',1,1,12,5,0,0,0,0),
+    (4879,'scroll_of_absorb-mnd',1,1,12,5,0,0,0,0),
+    (4880,'scroll_of_absorb-chr',1,1,12,5,0,0,0,0),
+    (4881,'scroll_of_sleepga',1,1,12,5,0,0,0,0),
+    (4882,'scroll_of_sleepga_ii',1,1,12,5,0,0,0,0),
+    (4883,'scroll_of_absorb-tp',1,1,12,5,0,0,0,0),
+    (4884,'scroll_of_blind_ii',1,1,12,5,0,0,0,0),
+    (4885,'scroll_of_dread_spikes',1,1,12,5,0,0,0,0),
+    (4886,'scroll_of_absorb-acc',1,1,12,5,0,0,0,0),
+    (4887,'scroll_of_absorb-attri',1,1,12,5,0,0,0,0),
+    (4889,'scroll_of_breakga',1,1,12,5,0,0,0,0),
+    (4890,'scroll_of_firaja',1,1,12,5,0,0,0,0),
+    (4891,'scroll_of_blizzaja',1,1,12,5,0,0,0,0),
+    (4892,'scroll_of_aeroja',1,1,12,5,0,0,0,0),
+    (4893,'scroll_of_stoneja',1,1,12,5,0,0,0,0),
+    (4894,'scroll_of_thundaja',1,1,12,5,0,0,0,0),
+    (4895,'scroll_of_waterja',1,1,12,5,0,0,0,0),
+    (4896,'fire_spirit_pact',1,1,13,5,0,0,0,0),
+    (4897,'ice_spirit_pact',1,1,13,5,0,0,0,0),
+    (4898,'air_spirit_pact',1,1,13,5,0,0,0,0),
+    (4899,'earth_spirit_pact',1,1,13,5,0,0,0,0),
+    (4900,'thunder_spirit_pact',1,1,13,5,0,0,0,0),
+    (4901,'water_spirit_pact',1,1,13,5,0,0,0,0),
+    (4902,'light_spirit_pact',1,1,13,5,0,0,0,0),
+    (4903,'dark_spirit_pact',1,1,13,5,0,0,0,0),
+    (4912,'scroll_of_distract',1,1,12,5,0,0,0,0),
+    (4913,'scroll_of_distract_ii',1,1,12,5,0,0,0,0),
+    (4914,'scroll_of_frazzle',1,1,12,5,0,0,0,0),
+    (4915,'scroll_of_frazzle_ii',1,1,12,5,0,0,0,0),
+    (4916,'scroll_of_fira',1,1,12,5,0,0,0,0),
+    (4917,'scroll_of_fira_ii',1,1,12,5,0,0,0,0),
+    (4918,'scroll_of_blizzara',1,1,12,5,0,0,0,0),
+    (4919,'scroll_of_blizzara_ii',1,1,12,5,0,0,0,0),
+    (4920,'scroll_of_aerora',1,1,12,5,0,0,0,0),
+    (4921,'scroll_of_aerora_ii',1,1,12,5,0,0,0,0),
+    (4922,'scroll_of_stonera',1,1,12,5,0,0,0,0),
+    (4923,'scroll_of_stonera_ii',1,1,12,5,0,0,0,0),
+    (4924,'scroll_of_thundara',1,1,12,5,0,0,0,0),
+    (4925,'scroll_of_thundara_ii',1,1,12,5,0,0,0,0),
+    (4926,'scroll_of_watera',1,1,12,5,0,0,0,0),
+    (4927,'scroll_of_watera_ii',1,1,12,5,0,0,0,0),
+    (4928,'scroll_of_katon_ichi',1,1,14,5,0,0,0,0),
+    (4929,'scroll_of_katon_ni',1,1,14,5,0,0,0,0),
+    (4930,'scroll_of_katon_san',1,1,14,5,0,0,0,0),
+    (4931,'scroll_of_hyoton_ichi',1,1,14,5,0,0,0,0),
+    (4932,'scroll_of_hyoton_ni',1,1,14,5,0,0,0,0),
+    (4933,'scroll_of_hyoton_san',1,1,14,5,0,0,0,0),
+    (4934,'scroll_of_huton_ichi',1,1,14,5,0,0,0,0),
+    (4935,'scroll_of_huton_ni',1,1,14,5,0,0,0,0),
+    (4936,'scroll_of_huton_san',1,1,14,5,0,0,0,0),
+    (4937,'scroll_of_doton_ichi',1,1,14,5,0,0,0,0),
+    (4938,'scroll_of_doton_ni',1,1,14,5,0,0,0,0),
+    (4939,'scroll_of_doton_san',1,1,14,5,0,0,0,0),
+    (4940,'scroll_of_raiton_ichi',1,1,14,5,0,0,0,0),
+    (4941,'scroll_of_raiton_ni',1,1,14,5,0,0,0,0),
+    (4942,'scroll_of_raiton_san',1,1,14,5,0,0,0,0),
+    (4943,'scroll_of_suiton_ichi',1,1,14,5,0,0,0,0),
+    (4944,'scroll_of_suiton_ni',1,1,14,5,0,0,0,0),
+    (4945,'scroll_of_suiton_san',1,1,14,5,0,0,0,0),
+    (4946,'scroll_of_utsusemi_ichi',1,1,14,5,0,0,0,0),
+    (4947,'scroll_of_utsusemi_ni',1,1,14,5,0,0,0,0),
+    (4949,'scroll_of_jubaku_ichi',1,1,14,5,0,0,0,0),
+    (4952,'scroll_of_hojo_ichi',1,1,14,5,0,0,0,0),
+    (4953,'scroll_of_hojo_ni',1,1,14,5,0,0,0,0),
+    (4955,'scroll_of_kurayami_ichi',1,1,14,5,0,0,0,0),
+    (4956,'scroll_of_kurayami_ni',1,1,14,5,0,0,0,0),
+    (4958,'scroll_of_dokumori_ichi',1,1,14,5,0,0,0,0),
+    (4961,'scroll_of_tonko_ichi',1,1,14,5,0,0,0,0),
+    (4962,'scroll_of_tonko_ni',1,1,14,5,0,0,0,0),
+    (4964,'scroll_of_monomi_ichi',1,1,14,5,0,0,0,0),
+    (4965,'scroll_of_aisha_ichi',1,1,14,5,0,0,0,0),
+    (4966,'scroll_of_myoshu_ichi',1,1,14,5,0,0,0,0),
+    (4967,'scroll_of_yurin_ichi',1,1,14,5,0,0,0,0),
+    (4968,'scroll_of_kakka_ichi',1,1,14,5,0,0,0,0),
+    (4969,'scroll_of_migawari_ichi',1,1,14,5,0,0,0,0),
+    (4970,'scroll_of_gekka_ichi',1,1,14,5,0,0,0,0),
+    (4971,'scroll_of_yain_ichi',1,1,14,5,0,0,0,0),
+    (4976,'scroll_of_foe_requiem',1,1,15,5,0,0,0,0),
+    (4977,'scroll_of_foe_requiem_ii',1,1,15,5,0,0,0,0),
+    (4978,'scroll_of_foe_requiem_iii',1,1,15,5,0,0,0,0),
+    (4979,'scroll_of_foe_requiem_iv',1,1,15,5,0,0,0,0),
+    (4980,'scroll_of_foe_requiem_v',1,1,15,5,0,0,0,0),
+    (4981,'scroll_of_foe_requiem_vi',1,1,15,5,0,0,0,0),
+    (4982,'scroll_of_foe_requiem_vii',1,1,15,5,0,0,0,0),
+    (4984,'scroll_of_horde_lullaby',1,1,15,5,0,0,0,0),
+    (4985,'scroll_of_horde_lullaby_ii',1,1,15,5,0,0,0,0),
+    (4986,'scroll_of_armys_paeon',1,1,15,5,0,0,0,0),
+    (4987,'scroll_of_armys_paeon_ii',1,1,15,5,0,0,0,0),
+    (4988,'scroll_of_armys_paeon_iii',1,1,15,5,0,0,0,0),
+    (4989,'scroll_of_armys_paeon_iv',1,1,15,5,0,0,0,0),
+    (4990,'scroll_of_armys_paeon_v',1,1,15,5,0,0,0,0),
+    (4991,'scroll_of_armys_paeon_vi',1,1,15,5,0,0,0,0),
+    (4994,'scroll_of_mages_ballad',1,1,15,5,0,0,0,0),
+    (4995,'scroll_of_mages_ballad_ii',1,1,15,5,0,0,0,0),
+    (4996,'scroll_of_mages_ballad_iii',1,1,15,5,0,0,0,0),
+    (4997,'scroll_of_knights_minne',1,1,15,5,0,0,0,0),
+    (4998,'scroll_of_knights_minne_ii',1,1,15,5,0,0,0,0),
+    (4999,'scroll_of_knights_minne_iii',1,1,15,5,0,0,0,0),
+    (5000,'scroll_of_knights_minne_iv',1,1,15,5,0,0,0,0),
+    (5001,'scroll_of_knights_minne_v',1,1,15,5,0,0,0,0),
+    (5002,'scroll_of_valor_minuet',1,1,15,5,0,0,0,0),
+    (5003,'scroll_of_valor_minuet_ii',1,1,15,5,0,0,0,0),
+    (5004,'scroll_of_valor_minuet_iii',1,1,15,5,0,0,0,0),
+    (5005,'scroll_of_valor_minuet_iv',1,1,15,5,0,0,0,0),
+    (5006,'scroll_of_valor_minuet_v',1,1,15,5,0,0,0,0),
+    (5007,'scroll_of_sword_madrigal',1,1,15,5,0,0,0,0),
+    (5008,'scroll_of_blade_madrigal',1,1,15,5,0,0,0,0),
+    (5009,'scroll_of_hunters_prelude',1,1,15,5,0,0,0,0),
+    (5010,'scroll_of_archers_prelude',1,1,15,5,0,0,0,0),
+    (5011,'scroll_of_sheepfoe_mambo',1,1,15,5,0,0,0,0),
+    (5012,'scroll_of_dragonfoe_mambo',1,1,15,5,0,0,0,0),
+    (5013,'scroll_of_fowl_aubade',1,1,15,5,0,0,0,0),
+    (5014,'scroll_of_herb_pastoral',1,1,15,5,0,0,0,0),
+    (5016,'scroll_of_shining_fantasia',1,1,15,5,0,0,0,0),
+    (5017,'scroll_of_scops_operetta',1,1,15,5,0,0,0,0),
+    (5018,'scroll_of_puppets_operetta',1,1,15,5,0,0,0,0),
+    (5020,'scroll_of_gold_capriccio',1,1,15,5,0,0,0,0),
+    (5022,'scroll_of_warding_round',1,1,15,5,0,0,0,0),
+    (5023,'scroll_of_goblin_gavotte',1,1,15,5,0,0,0,0),
+    (5027,'scroll_of_advancing_march',1,1,15,5,0,0,0,0),
+    (5028,'scroll_of_victory_march',1,1,15,5,0,0,0,0),
+    (5029,'scroll_of_battlefield_elegy',1,1,15,5,0,0,0,0),
+    (5030,'scroll_of_carnage_elegy',1,1,15,5,0,0,0,0),
+    (5032,'scroll_of_sinewy_etude',1,1,15,5,0,0,0,0),
+    (5033,'scroll_of_dextrous_etude',1,1,15,5,0,0,0,0),
+    (5034,'scroll_of_vivacious_etude',1,1,15,5,0,0,0,0),
+    (5035,'scroll_of_quick_etude',1,1,15,5,0,0,0,0),
+    (5036,'scroll_of_learned_etude',1,1,15,5,0,0,0,0),
+    (5037,'scroll_of_spirited_etude',1,1,15,5,0,0,0,0),
+    (5038,'scroll_of_enchanting_etude',1,1,15,5,0,0,0,0),
+    (5039,'scroll_of_herculean_etude',1,1,15,5,0,0,0,0),
+    (5040,'scroll_of_uncanny_etude',1,1,15,5,0,0,0,0),
+    (5041,'scroll_of_vital_etude',1,1,15,5,0,0,0,0),
+    (5042,'scroll_of_swift_etude',1,1,15,5,0,0,0,0),
+    (5043,'scroll_of_sage_etude',1,1,15,5,0,0,0,0),
+    (5044,'scroll_of_logical_etude',1,1,15,5,0,0,0,0),
+    (5045,'scroll_of_bewitching_etude',1,1,15,5,0,0,0,0),
+    (5046,'scroll_of_fire_carol',1,1,15,5,0,0,0,0),
+    (5047,'scroll_of_ice_carol',1,1,15,5,0,0,0,0),
+    (5048,'scroll_of_wind_carol',1,1,15,5,0,0,0,0),
+    (5049,'scroll_of_earth_carol',1,1,15,5,0,0,0,0),
+    (5050,'scroll_of_lightning_carol',1,1,15,5,0,0,0,0),
+    (5051,'scroll_of_water_carol',1,1,15,5,0,0,0,0),
+    (5052,'scroll_of_light_carol',1,1,15,5,0,0,0,0),
+    (5053,'scroll_of_dark_carol',1,1,15,5,0,0,0,0),
+    (5054,'scroll_of_fire_carol_ii',1,1,15,5,0,0,0,0),
+    (5055,'scroll_of_ice_carol_ii',1,1,15,5,0,0,0,0),
+    (5056,'scroll_of_wind_carol_ii',1,1,15,5,0,0,0,0),
+    (5057,'scroll_of_earth_carol_ii',1,1,15,5,0,0,0,0),
+    (5058,'scroll_of_lightning_carol_ii',1,1,15,5,0,0,0,0),
+    (5059,'scroll_of_water_carol_ii',1,1,15,5,0,0,0,0),
+    (5060,'scroll_of_light_carol_ii',1,1,15,5,0,0,0,0),
+    (5061,'scroll_of_dark_carol_ii',1,1,15,5,0,0,0,0),
+    (5062,'scroll_of_fire_threnody',1,1,15,5,0,0,0,0),
+    (5063,'scroll_of_ice_threnody',1,1,15,5,0,0,0,0),
+    (5064,'scroll_of_wind_threnody',1,1,15,5,0,0,0,0),
+    (5065,'scroll_of_earth_threnody',1,1,15,5,0,0,0,0),
+    (5066,'scroll_of_lightning_threnody',1,1,15,5,0,0,0,0),
+    (5067,'scroll_of_water_threnody',1,1,15,5,0,0,0,0),
+    (5068,'scroll_of_light_threnody',1,1,15,5,0,0,0,0),
+    (5069,'scroll_of_dark_threnody',1,1,15,5,0,0,0,0),
+    (5070,'scroll_of_magic_finale',1,1,15,5,0,0,0,0),
+    (5071,'scroll_of_foe_lullaby',1,1,15,5,0,0,0,0),
+    (5072,'scroll_of_goddesss_hymnus',1,1,15,5,0,0,0,0),
+    (5073,'scroll_of_chocobo_mazurka',1,1,15,5,0,0,0,0),
+    (5074,'scroll_of_maidens_virelai',1,1,15,5,0,0,0,0),
+    (5075,'scroll_of_raptor_mazurka',1,1,15,5,0,0,0,0),
+    (5076,'scroll_of_foe_sirvente',1,1,15,5,0,0,0,0),
+    (5077,'scroll_of_adventurers_dirge',1,1,15,5,0,0,0,0),
+    (5078,'scroll_of_sentinels_scherzo',1,1,15,5,0,0,0,0),
+    (5079,'scroll_of_foe_lullaby_ii',1,1,15,5,0,0,0,0)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `validTargets` = IF(`validTargets` <> VALUES(`validTargets`), VALUES(`validTargets`), `validTargets`),
+    `activation` = IF(`activation` <> VALUES(`activation`), VALUES(`activation`), `activation`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `maxCharges` = IF(`maxCharges` <> VALUES(`maxCharges`), VALUES(`maxCharges`), `maxCharges`),
+    `useDelay` = IF(`useDelay` <> VALUES(`useDelay`), VALUES(`useDelay`), `useDelay`),
+    `reuseDelay` = IF(`reuseDelay` <> VALUES(`reuseDelay`), VALUES(`reuseDelay`), `reuseDelay`),
+    `aoe` = IF(`aoe` <> VALUES(`aoe`), VALUES(`aoe`), `aoe`)
+;
+
+insert into `item_usable`
+(
+    `itemid`, `name`, `validTargets`, `activation`, `animation`,
+    `animationTime`, `maxCharges`, `useDelay`, `reuseDelay`, `aoe`
+)
+VALUES
+    (5080,'scroll_of_pining_nocturne',1,1,15,5,0,0,0,0),
+    (5082,'scroll_of_cura_ii',1,1,11,5,0,0,0,0),
+    (5083,'scroll_of_cura_iii',1,1,11,5,0,0,0,0),
+    (5085,'scroll_of_regen_iv',1,1,11,5,0,0,0,0),
+    (5086,'scroll_of_regen_v',1,1,11,5,0,0,0,0),
+    (5087,'scroll_of_gain-str',1,1,11,5,0,0,0,0),
+    (5088,'scroll_of_gain-dex',1,1,11,5,0,0,0,0),
+    (5089,'scroll_of_gain-vit',1,1,11,5,0,0,0,0),
+    (5090,'scroll_of_gain-agi',1,1,11,5,0,0,0,0),
+    (5091,'scroll_of_gain-int',1,1,11,5,0,0,0,0),
+    (5092,'scroll_of_gain-mnd',1,1,11,5,0,0,0,0),
+    (5093,'scroll_of_gain-chr',1,1,11,5,0,0,0,0),
+    (5094,'scroll_of_boost-str',1,1,11,5,0,0,0,0),
+    (5095,'scroll_of_boost-dex',1,1,11,5,0,0,0,0),
+    (5096,'scroll_of_boost-vit',1,1,11,5,0,0,0,0),
+    (5097,'scroll_of_boost-agi',1,1,11,5,0,0,0,0),
+    (5098,'scroll_of_boost-int',1,1,11,5,0,0,0,0),
+    (5099,'scroll_of_boost-mnd',1,1,11,5,0,0,0,0),
+    (5100,'scroll_of_boost-chr',1,1,11,5,0,0,0,0),
+    (5101,'scroll_of_arise',1,1,11,5,0,0,0,0),
+    (5102,'scroll_of_foil',1,1,11,5,0,0,0,0),
+    (5103,'scroll_of_crusade',1,1,11,5,0,0,0,0),
+    (5104,'scroll_of_flurry',1,1,11,5,0,0,0,0),
+    (5105,'scroll_of_flurry_ii',1,1,11,5,0,0,0,0),
+    (5106,'scroll_of_inundation',1,1,11,5,0,0,0,0),
+    (5109,'frayed_sack_of_abundance_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5110,'frayed_sack_of_abundance_+2',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5111,'frayed_sack_of_mortality_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5112,'frayed_sack_of_mortality_+2',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5113,'cracked_nut',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (5114,'moist_rolanberry',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (5115,'clump_of_ravaged_moko_grass',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5116,'cavorting_worm',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (5117,'pinch_of_levigated_rock',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5118,'little_lugworm',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (5119,'training_manual',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (5120,'titanic_sawfish',1,1,25,0,0,0,0,0),
+    (5121,'moorish_idol',1,1,25,0,0,0,0,0),
+    (5122,'bibiki_slug',1,1,25,0,0,0,0,0),
+    (5123,'jacknife',1,1,25,0,0,0,0,0),
+    (5124,'tropical_clam',1,1,25,0,0,0,0,0),
+    (5125,'phanauet_newt',1,1,25,0,0,0,0,0),
+    (5126,'muddy_siredon',1,1,25,0,0,0,0,0),
+    (5127,'gugrusaurus',1,1,25,0,0,0,0,0),
+    (5128,'cone_calamary',1,1,25,0,0,0,0,0),
+    (5129,'lik',1,1,25,0,0,0,0,0),
+    (5130,'tavnazian_goby',1,1,25,0,0,0,0,0),
+    (5131,'vongola_clam',1,1,25,0,0,0,0,0),
+    (5132,'gurnard',1,1,25,0,0,0,0,0),
+    (5133,'pterygotus',1,1,25,0,0,0,0,0),
+    (5134,'mola_mola',1,1,25,0,0,0,0,0),
+    (5135,'rhinochimera',1,1,25,0,0,0,0,0),
+    (5136,'istavrit',1,1,25,0,0,0,0,0),
+    (5137,'turnabaligi',1,1,25,0,0,0,0,0),
+    (5138,'black_ghost',1,1,25,0,0,0,0,0),
+    (5139,'betta',1,1,25,0,0,0,0,0),
+    (5140,'kalkanbaligi',1,1,25,0,0,0,0,0),
+    (5141,'veydal_wrasse',1,1,25,0,0,0,0,0),
+    (5142,'serving_of_bison_steak',1,1,28,0,0,0,0,0),
+    (5143,'serving_of_goblin_stir-fry',1,1,24,0,0,0,0,0),
+    (5144,'serving_of_crimson_jelly',1,1,0,26,0,0,0,0),
+    (5145,'plate_of_fish_and_chips',1,1,25,0,0,0,0,0),
+    (5146,'hedgehog_pie',1,1,26,0,0,0,0,0),
+    (5147,'cone_of_snoll_gelato',1,1,28,0,0,0,0,0),
+    (5148,'plate_of_squid_sushi',1,1,25,0,0,0,0,0),
+    (5149,'plate_of_sole_sushi',1,1,25,0,0,0,0,0),
+    (5150,'plate_of_tuna_sushi',1,1,25,0,0,0,0,0),
+    (5151,'plate_of_urchin_sushi',1,1,25,0,0,0,0,0),
+    (5152,'slice_of_buffalo_meat',1,1,28,0,0,0,0,0),
+    (5153,'plate_of_fatty_tuna_sushi',1,1,25,0,0,0,0,0),
+    (5154,'tavnazian_sheep_liver',1,1,28,0,0,0,0,0),
+    (5155,'cone_of_sub-zero_gelato',1,1,24,0,0,0,0,0),
+    (5156,'porcupine_pie',1,1,26,0,0,0,0,0),
+    (5157,'serving_of_marbled_steak',1,1,28,0,0,0,0,0),
+    (5158,'serving_of_vermillion_jelly',1,1,26,0,0,0,0,0),
+    (5159,'plate_of_friture_de_la_misareaux',1,1,26,0,0,0,0,0),
+    (5160,'plate_of_urchin_sushi_+1',1,1,25,0,0,0,0,0),
+    (5161,'serving_of_leadafry',1,1,24,0,0,0,0,0),
+    (5162,'plate_of_squid_sushi_+1',1,1,25,0,0,0,0,0),
+    (5163,'plate_of_sole_sushi_+1',1,1,25,0,0,0,0,0),
+    (5164,'jar_of_ground_wasabi',1,1,24,0,0,0,0,0),
+    (5165,'bottle_of_movalpolos_water',1,1,26,0,0,0,0,0),
+    (5166,'coeurl_sub',1,1,28,0,0,0,0,0),
+    (5167,'coeurl_sub_+1',1,1,28,0,0,0,0,0),
+    (5168,'bataquiche',1,1,24,0,0,0,0,0),
+    (5169,'bataquiche_+1',1,1,24,0,0,0,0,0),
+    (5170,'green_quiche',1,1,24,0,0,0,0,0),
+    (5171,'emerald_quiche',1,1,24,0,0,0,0,0),
+    (5172,'windurst_taco',1,1,24,0,0,0,0,0),
+    (5173,'timbre_timbers_taco',1,1,24,0,0,0,0,0),
+    (5174,'tavnazian_taco',1,1,24,0,0,0,0,0),
+    (5175,'leremieu_taco',1,1,24,0,0,0,0,0),
+    (5176,'plate_of_bream_sushi',1,1,25,0,0,0,0,0),
+    (5177,'plate_of_bream_sushi_+1',1,1,25,0,0,0,0,0),
+    (5178,'plate_of_dorado_sushi',1,1,25,0,0,0,0,0),
+    (5179,'plate_of_dorado_sushi_+1',1,1,25,0,0,0,0,0),
+    (5180,'bowl_of_sophic_stew',1,1,27,0,0,0,0,0),
+    (5181,'tortilla_buena',1,1,24,0,0,0,0,0),
+    (5182,'salty_bretzel',1,1,24,0,0,0,0,0),
+    (5183,'viking_herring',1,1,24,0,0,0,0,0),
+    (5184,'plate_of_vegan_saute',1,1,24,0,0,0,0,0),
+    (5185,'leremieu_salad',1,1,24,0,0,0,0,0),
+    (5186,'plate_of_yahata-style_carp_sushi',1,1,25,0,0,0,0,0),
+    (5187,'elshimo_coconut',1,1,26,0,0,0,0,0),
+    (5188,'dish_of_spaghetti_peperoncino',1,1,28,0,0,0,0,0),
+    (5189,'dish_of_spaghetti_vongole_rosso',1,1,28,0,0,0,0,0),
+    (5190,'dish_of_spaghetti_carbonara',1,1,28,0,0,0,0,0),
+    (5191,'dish_of_spaghetti_pescatora',1,1,28,0,0,0,0,0),
+    (5192,'dish_of_spaghetti_boscaiola',1,1,28,0,0,0,0,0),
+    (5193,'dish_of_spaghetti_nero_di_seppia',1,1,28,0,0,0,0,0),
+    (5194,'bowl_of_pomodoro_sauce',1,1,28,0,0,0,0,0),
+    (5195,'sprig_of_misareaux_parsley',1,1,28,0,0,0,0,0),
+    (5196,'strip_of_buffalo_jerky',1,1,28,0,0,0,0,0),
+    (5197,'dish_of_spaghetti_peperoncino_+1',1,1,28,0,0,0,0,0),
+    (5198,'dish_of_spaghetti_vongole_rosso_+1',1,1,28,0,0,0,0,0),
+    (5199,'dish_of_spaghetti_carbonara_+1',1,1,28,0,0,0,0,0),
+    (5200,'dish_of_spaghetti_pescatora_+1',1,1,28,0,0,0,0,0),
+    (5201,'dish_of_spaghetti_boscaiola_+1',1,1,28,0,0,0,0,0),
+    (5202,'dish_of_spaghetti_nero_di_seppia_+1',1,1,28,0,0,0,0,0),
+    (5203,'piece_of_hume_mochi',1,1,0,0,0,0,0,0),
+    (5204,'piece_of_elvaan_mochi',1,1,0,0,0,0,0,0),
+    (5205,'piece_of_tarutaru_mochi',1,1,0,0,0,0,0,0),
+    (5206,'piece_of_galka_mochi',1,1,0,0,0,0,0,0),
+    (5207,'strip_of_bison_jerky',1,1,28,0,0,0,0,0),
+    (5208,'slice_of_tavnazian_ram_meat',1,1,28,0,0,0,0,0),
+    (5209,'slice_of_diatryma_meat',1,1,28,0,0,0,0,0),
+    (5210,'bowl_of_adamantoise_soup',1,1,26,0,0,0,0,0),
+    (5211,'dish_of_spaghetti_arrabbiata',1,1,28,0,0,0,0,0),
+    (5212,'dish_of_spaghetti_arrabbiata_+1',1,1,28,0,0,0,0,0),
+    (5213,'dish_of_spaghetti_melanzane',1,1,24,0,0,0,0,0),
+    (5214,'dish_of_spaghetti_melanzane_+1',1,1,24,0,0,0,0,0),
+    (5215,'plate_of_tentacle_sushi',1,1,25,0,0,0,0,0),
+    (5216,'plate_of_tentacle_sushi_+1',1,1,25,0,0,0,0,0),
+    (5217,'serving_of_salmon_eggs',1,1,25,0,0,0,0,0),
+    (5218,'serving_of_salmon_roe',1,1,25,0,0,0,0,0),
+    (5219,'plate_of_ikra_gunkan',1,1,24,0,0,0,0,0),
+    (5220,'plate_of_ikra_gunkan_+1',1,1,24,0,0,0,0,0),
+    (5221,'pitcher_of_homemade_herbal_tea',1,1,10,0,0,0,0,0),
+    (5222,'bowl_of_homemade_stew',1,1,24,0,0,0,0,0),
+    (5223,'cone_of_homemade_gelato',1,1,24,0,0,0,0,0),
+    (5224,'homemade_rice_ball',1,1,25,0,0,0,0,0),
+    (5225,'chunk_of_homemade_cheese',1,1,24,0,0,0,0,0),
+    (5226,'homemade_steak',1,1,28,0,0,0,0,0),
+    (5227,'plate_of_homemade_salad',1,1,24,0,0,0,0,0),
+    (5228,'loaf_of_homemade_bread',1,1,24,0,0,0,0,0),
+    (5229,'plate_of_homemade_risotto',1,1,28,0,0,0,0,0),
+    (5230,'love_chocolate',1,1,24,0,0,0,0,0),
+    (5231,'truelove_chocolate',1,1,24,0,0,0,0,0),
+    (5232,'jug_of_soy_milk',1,1,26,0,0,0,0,0),
+    (5233,'cube_of_cotton_tofu',1,1,28,0,0,0,0,0),
+    (5234,'sprig_of_cibol',1,1,28,0,0,0,0,0),
+    (5235,'head_of_napa',1,1,28,0,0,0,0,0),
+    (5236,'clump_of_shungiku',1,1,24,0,0,0,0,0),
+    (5237,'bundle_of_shirataki',1,1,24,0,0,0,0,0),
+    (5238,'seafood_stewpot',1,1,25,0,0,0,0,1),
+    (5239,'prime_seafood_stewpot',1,1,25,0,0,0,0,1),
+    (5240,'prized_seafood_stewpot',1,1,25,0,0,0,0,1),
+    (5241,'bottle_of_giants_drink',1,2,26,0,0,0,0,0),
+    (5242,'bottle_of_wizards_drink',1,2,26,0,0,0,0,0),
+    (5243,'container_of_carnal_incense',1,1,0,0,0,0,0,0),
+    (5244,'container_of_spiritual_incense',1,1,0,0,0,0,0,0),
+    (5245,'container_of_celestial_incense',1,1,0,0,0,0,0,0),
+    (5246,'vial_of_drachenessence',1,1,0,0,0,0,0,0),
+    (5247,'dose_of_barfire_ointment',1,2,0,0,0,0,0,0),
+    (5248,'dose_of_barblizzard_ointment',1,2,0,0,0,0,0,0),
+    (5249,'dose_of_baraero_ointment',1,2,0,0,0,0,0,0),
+    (5250,'dose_of_barstone_ointment',1,2,0,0,0,0,0,0),
+    (5251,'dose_of_barthunder_ointment',1,2,0,0,0,0,0,0),
+    (5252,'dose_of_barwater_ointment',1,2,0,0,0,0,0,0),
+    (5253,'hermes_quencher',1,1,0,0,0,0,0,0),
+    (5254,'hyper_potion',1,1,31,0,0,0,0,0),
+    (5255,'hyper_ether',1,2,33,0,0,0,0,0),
+    (5256,'fire_feather',1,1,0,0,0,0,0,0),
+    (5257,'blaze_feather',1,1,0,0,0,0,0,0),
+    (5258,'revive_feather',1,1,0,0,0,0,0,0),
+    (5259,'rebirth_feather',1,1,0,0,0,0,0,0),
+    (5260,'regain_feather',1,3,0,0,0,0,0,0),
+    (5261,'bottle_of_psychoanima',4,1,0,0,0,0,0,0),
+    (5262,'bottle_of_hysteroanima',4,1,0,0,0,0,0,0),
+    (5263,'bottle_of_terroanima',4,1,0,0,0,0,0,0),
+    (5264,'bottle_of_yellow_liquid',4,1,0,0,0,0,0,0),
+    (5265,'mistmelt',4,2,0,0,0,0,0,0),
+    (5266,'blackened_muddy_siredon',4,0,0,0,0,0,0,0),
+    (5267,'chunk_of_shumeyo_salt',4,1,0,0,0,0,0,0),
+    (5268,'ccb_polymer_pump',4,1,0,0,0,0,0,0),
+    (5269,'special_present',1,1,0,0,0,0,0,0),
+    (5270,'old_quiver',1,1,55,0,0,0,0,0),
+    (5271,'old_quiver_+1',1,1,55,0,0,0,0,0),
+    (5272,'old_quiver_+2',1,1,55,0,0,0,0,0),
+    (5273,'old_quiver_+3',1,1,55,0,0,0,0,0),
+    (5274,'old_quiver_+4',1,1,55,0,0,0,0,0),
+    (5275,'old_quiver_+5',1,1,55,0,0,0,0,0),
+    (5276,'old_quiver_+6',1,1,55,0,0,0,0,0),
+    (5277,'old_quiver_+7',1,1,55,0,0,0,0,0),
+    (5278,'old_bolt_box',1,1,55,0,0,0,0,0),
+    (5279,'old_bolt_box_+1',1,1,55,0,0,0,0,0),
+    (5280,'old_bolt_box_+2',1,1,55,0,0,0,0,0),
+    (5281,'old_bolt_box_+3',1,1,55,0,0,0,0,0),
+    (5282,'old_bolt_box_+4',1,1,55,0,0,0,0,0),
+    (5283,'old_bolt_box_+5',1,1,55,0,0,0,0,0),
+    (5284,'old_bullet_box',1,1,55,0,0,0,0,0),
+    (5285,'old_bullet_box_+1',1,1,55,0,0,0,0,0),
+    (5286,'cluster_of_burning_memories',1,1,0,0,0,0,0,0),
+    (5287,'cluster_of_bitter_memories',1,1,0,0,0,0,0,0),
+    (5288,'cluster_of_fleeting_memories',1,1,0,0,0,0,0,0),
+    (5289,'cluster_of_profane_memories',1,1,0,0,0,0,0,0),
+    (5290,'cluster_of_startling_memories',1,1,0,0,0,0,0,0),
+    (5291,'cluster_of_somber_memories',1,1,0,0,0,0,0,0),
+    (5292,'cluster_of_radiant_memories',1,1,0,0,0,0,0,0),
+    (5293,'cluster_of_malevolent_memories',1,1,0,0,0,0,0,0),
+    (5294,'hume_rice_cake',1,1,0,0,0,0,0,0),
+    (5295,'elvaan_rice_cake',1,1,0,0,0,0,0,0),
+    (5296,'tarutaru_rice_cake',1,1,0,0,0,0,0,0),
+    (5297,'mithran_rice_cake',1,1,0,0,0,0,0,0),
+    (5298,'flask_of_muting_potion',1,1,71,0,0,0,0,0),
+    (5299,'dish_of_salsa',1,1,24,0,0,0,0,0),
+    (5300,'copy_of_the_ballista_redbook',1,1,0,0,0,0,0,0),
+    (5301,'page_of_the_ballista_redbook',1,1,0,0,0,0,0,0),
+    (5302,'copy_of_the_ballista_whitebook',1,1,0,0,0,0,0,0),
+    (5303,'page_of_the_ballista_whitebook',1,1,0,0,0,0,0,0),
+    (5304,'demoralizer',4,2,67,0,0,0,0,0),
+    (5305,'demoralizer_+1',4,2,67,0,0,0,0,0),
+    (5306,'bottle_of_hallowed_water',1,1,7,0,0,0,0,0),
+    (5307,'flask_of_invitriol',1,1,0,0,0,0,0,0),
+    (5308,'toolbag_uchitake',1,1,55,0,0,0,0,0),
+    (5309,'toolbag_tsurara',1,1,55,0,0,0,0,0),
+    (5310,'toolbag_kawahori-ogi',1,1,55,0,0,0,0,0),
+    (5311,'toolbag_makibishi',1,1,55,0,0,0,0,0),
+    (5312,'toolbag_hiraishin',1,1,55,0,0,0,0,0),
+    (5313,'toolbag_mizu-deppo',1,1,55,0,0,0,0,0),
+    (5314,'toolbag_shihei',1,1,55,0,0,0,0,0),
+    (5315,'toolbag_jusatsu',1,1,55,0,0,0,0,0),
+    (5316,'toolbag_kaginawa',1,1,55,0,0,0,0,0),
+    (5317,'toolbag_sairui-ran',1,1,55,0,0,0,0,0),
+    (5318,'toolbag_kodoku',1,1,55,0,0,0,0,0),
+    (5319,'toolbag_shinobi-tabi',1,1,55,0,0,0,0,0),
+    (5320,'chunk_of_smelling_salts',1,1,24,0,0,0,0,0),
+    (5321,'bottle_of_romance_potion',1,3,24,0,0,0,0,0),
+    (5322,'flask_of_healing_powder',1,1,30,0,0,0,0,0),
+    (5323,'copy_of_the_brenner_bluebook',1,1,0,0,0,0,0,0),
+    (5324,'page_of_the_brenner_bluebook',1,1,0,0,0,0,0,0),
+    (5325,'copy_of_the_brenner_blackbook',1,1,0,0,0,0,0,0),
+    (5326,'page_of_the_brenner_blackbook',1,1,0,0,0,0,0,0),
+    (5327,'bottle_of_potion_drops',1,2,30,0,0,0,0,0),
+    (5328,'bottle_of_hi-potion_drops',1,2,31,0,0,0,0,0),
+    (5329,'tarutaru_snare',4,1,0,0,0,0,0,0),
+    (5330,'mithra_snare',4,1,0,0,0,0,0,0),
+    (5331,'qiqirn_mine',1,1,55,0,0,0,0,0),
+    (5332,'kabura_quiver',1,1,55,0,0,0,0,0),
+    (5333,'sleep_quiver',1,1,55,0,0,0,0,0),
+    (5334,'blind_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5335,'acid_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5336,'holy_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5337,'sleep_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5338,'venom_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5339,'bloody_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5340,'silver_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5341,'spartan_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5342,'corsair_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5343,'cage_of_azouph_fireflies',1,10,80,3,0,0,0,0),
+    (5344,'cage_of_bhaflau_fireflies',1,10,80,3,0,0,0,0),
+    (5345,'cage_of_zhayolm_fireflies',1,10,80,3,0,0,0,0),
+    (5346,'cage_of_dvucca_fireflies',1,10,80,3,0,0,0,0),
+    (5347,'cage_of_reef_fireflies',1,10,80,3,0,0,0,0),
+    (5348,'cage_of_undersea_ruins_fireflies',1,10,80,3,0,0,0,0),
+    (5349,'cage_of_cutter_fireflies',1,10,80,3,0,0,0,0),
+    (5350,'phial_of_volant_serum',1,1,0,0,0,0,0,0),
+    (5351,'phial_of_osseous_serum',1,1,0,0,0,0,0,0),
+    (5352,'phial_of_spectral_serum',1,1,0,0,0,0,0,0),
+    (5353,'iron_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5354,'flask_of_walahra_water',1,1,0,0,0,0,0,0),
+    (5355,'elixir_vitae',1,1,34,0,0,0,0,0),
+    (5356,'jar_of_remedy_ointment',1,1,7,0,0,0,0,0),
+    (5357,'bottle_of_ether_drops',1,2,32,0,0,0,0,0),
+    (5358,'bottle_of_hi-ether_drops',1,2,33,0,0,0,0,0),
+    (5359,'bronze_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5360,'muteppo',1,10,102,0,0,0,0,0),
+    (5361,'datechochin',1,1,101,0,0,0,0,0),
+    (5362,'pinch_of_rainbow_powder',1,1,24,0,0,0,0,0),
+    (5363,'bullet_pouch',1,1,55,0,0,0,0,0),
+    (5364,'training_grounds_key',1,1,0,0,0,0,0,0),
+    (5365,'incus_cell',1,1,0,0,0,0,0,0),
+    (5366,'castellanus_cell',1,1,0,0,0,0,0,0),
+    (5367,'cumulus_cell',1,1,0,0,0,0,0,0),
+    (5368,'radiatus_cell',1,1,0,0,0,0,0,0),
+    (5369,'stratus_cell',1,1,0,0,0,0,0,0),
+    (5370,'cirrocumulus_cell',1,1,0,0,0,0,0,0),
+    (5371,'undulatus_cell',1,1,0,0,0,0,0,0),
+    (5372,'virga_cell',1,1,0,0,0,0,0,0),
+    (5373,'duplicatus_cell',1,1,0,0,0,0,0,0),
+    (5374,'opacus_cell',1,1,0,0,0,0,0,0),
+    (5375,'praecipitatio_cell',1,1,0,0,0,0,0,0),
+    (5376,'pannus_cell',1,1,0,0,0,0,0,0),
+    (5377,'fractus_cell',1,1,0,0,0,0,0,0),
+    (5378,'congestus_cell',1,1,0,0,0,0,0,0),
+    (5379,'nimbus_cell',1,1,0,0,0,0,0,0),
+    (5380,'velum_cell',1,1,0,0,0,0,0,0),
+    (5381,'pileus_cell',1,1,0,0,0,0,0,0),
+    (5382,'mediocris_cell',1,1,0,0,0,0,0,0),
+    (5383,'humilus_cell',1,1,0,0,0,0,0,0),
+    (5384,'spissatus_cell',1,1,0,0,0,0,0,0),
+    (5385,'bottle_of_barbarians_drink',1,1,34,0,0,0,0,0),
+    (5386,'bottle_of_fighters_drink',1,1,34,0,0,0,0,0),
+    (5387,'bottle_of_oracles_drink',1,1,34,0,0,0,0,0),
+    (5388,'bottle_of_assassins_drink',1,1,34,0,0,0,0,0),
+    (5389,'bottle_of_spys_drink',1,1,34,0,0,0,0,0),
+    (5390,'bottle_of_bravers_drink',1,1,34,0,0,0,0,0),
+    (5391,'bottle_of_soldiers_drink',1,1,34,0,0,0,0,0),
+    (5392,'bottle_of_champions_drink',1,1,34,0,0,0,0,0),
+    (5393,'bottle_of_monarchs_drink',1,1,34,0,0,0,0,0),
+    (5394,'bottle_of_gnostics_drink',1,1,34,0,0,0,0,0),
+    (5395,'bottle_of_clerics_drink',1,1,34,0,0,0,0,0),
+    (5396,'bottle_of_shepherds_drink',1,1,34,0,0,0,0,0),
+    (5397,'bottle_of_sprinters_drink',1,1,34,0,0,0,0,0),
+    (5398,'cage_of_z_remnants_fireflies',1,10,80,3,0,0,0,0),
+    (5399,'cage_of_a_remnants_fireflies',1,10,80,3,0,0,0,0),
+    (5400,'cage_of_b_remnants_fireflies',1,10,80,3,0,0,0,0),
+    (5401,'cage_of_s_remnants_fireflies',1,10,80,3,0,0,0,0),
+    (5402,'fire_card_case',1,1,0,0,0,0,0,0),
+    (5403,'ice_card_case',1,1,0,0,0,0,0,0),
+    (5404,'wind_card_case',1,1,0,0,0,0,0,0),
+    (5405,'earth_card_case',1,1,0,0,0,0,0,0),
+    (5406,'thunder_card_case',1,1,0,0,0,0,0,0),
+    (5407,'water_card_case',1,1,0,0,0,0,0,0),
+    (5408,'light_card_case',1,1,0,0,0,0,0,0),
+    (5409,'dark_card_case',1,1,0,0,0,0,0,0),
+    (5410,'virtue_stone_pouch',1,1,55,0,0,0,0,0),
+    (5411,'bottle_of_dawn_mulsum',1,1,34,0,0,0,0,0),
+    (5412,'scapegoat',1,1,0,0,0,0,0,0),
+    (5413,'smouldering_lamp',0,0,0,0,0,0,0,0),
+    (5414,'glowing_lamp',1,0,0,0,0,0,0,0),
+    (5415,'page_from_balrahns_reflections',1,5,34,0,0,0,0,0),
+    (5416,'steel_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5417,'toolbag_sanjaku-tenugui',1,1,55,0,0,0,0,0),
+    (5418,'vial_of_tincture',1,1,6,0,0,0,0,0),
+    (5419,'black_mine',1,1,0,0,0,0,0,0),
+    (5420,'paralyzing_tube',1,1,0,0,0,0,0,0),
+    (5421,'silencing_tube',1,1,0,0,0,0,0,0),
+    (5422,'binding_tube',1,1,0,0,0,0,0,0),
+    (5423,'bottled_fay',1,10,0,0,0,0,0,0),
+    (5424,'serene_serinette',1,1,55,0,0,0,0,0),
+    (5425,'joyous_serinette',1,1,55,0,0,0,0,0),
+    (5426,'maze_compass',1,10,0,0,0,0,0,0),
+    (5427,'maze_pearl',1,1,0,0,0,0,0,0),
+    (5428,'scroll_of_instant_retrace',1,10,82,0,0,0,0,0),
+    (5429,'clump_of_tandjana_wildgrass',1,1,24,0,0,0,0,0),
+    (5430,'bottle_of_viper_potion',1,1,68,0,0,0,0,0),
+    (5431,'dusty_potion',1,1,30,0,0,0,0,0),
+    (5432,'dusty_ether',1,1,32,0,0,0,0,0),
+    (5433,'dusty_elixir',1,1,34,0,0,0,0,0),
+    (5434,'bottle_of_fanatics_drink',1,1,0,0,0,0,0,0),
+    (5435,'bottle_of_fools_drink',1,1,0,0,0,0,0,0),
+    (5436,'dusty_scroll_of_reraise',1,1,33,0,0,0,0,0),
+    (5437,'flask_of_strange_milk',1,1,27,0,0,0,0,0),
+    (5438,'bottle_of_strange_juice',1,1,26,0,0,0,0,0),
+    (5439,'bottle_of_vicars_drink',1,1,26,0,0,0,0,0),
+    (5440,'dusty_wing',1,1,34,0,0,0,0,0),
+    (5441,'angelwing',1,1,103,0,0,0,0,0),
+    (5442,'thunderguard_dart',4,1,0,0,0,0,0,0),
+    (5443,'magnus_stone_pouch',1,1,55,0,0,0,0,0),
+    (5444,'bunch_of_grauberg_greens',1,1,24,0,0,0,0,0),
+    (5445,'prismatic_elixir',4,1,34,0,0,0,0,0),
+    (5446,'red_bubble-eye',1,1,27,0,0,0,0,0),
+    (5447,'denizanasi',1,1,25,0,0,0,0,0),
+    (5448,'kalamar',1,1,25,0,0,0,0,0),
+    (5449,'hamsi',1,1,25,0,0,0,0,0),
+    (5450,'lakerda',1,1,25,0,0,0,0,0),
+    (5451,'kilicbaligi',1,1,25,0,0,0,0,0),
+    (5452,'uskumru',1,1,25,0,0,0,0,0),
+    (5453,'istakoz',1,1,25,0,0,0,0,0),
+    (5454,'mercanbaligi',1,1,25,0,0,0,0,0),
+    (5455,'ahtapot',1,1,25,0,0,0,0,0),
+    (5456,'istiridye',1,1,25,0,0,0,0,0),
+    (5457,'dil',1,1,25,0,0,0,0,0),
+    (5458,'yilanbaligi',1,1,25,0,0,0,0,0),
+    (5459,'sazanbaligi',1,1,25,0,0,0,0,0),
+    (5460,'kayabaligi',1,1,25,0,0,0,0,0),
+    (5461,'alabaligi',1,1,25,0,0,0,0,0),
+    (5462,'morinabaligi',1,1,25,0,0,0,0,0),
+    (5463,'yayinbaligi',1,1,25,0,0,0,0,0),
+    (5464,'kaplumbaga',1,1,25,0,0,0,0,0),
+    (5465,'caedarva_frog',1,1,28,0,0,0,0,0),
+    (5466,'trumpet_shell',1,1,25,0,0,0,0,0),
+    (5467,'megalodon',1,1,25,0,0,0,0,0),
+    (5468,'matsya',1,1,25,0,0,0,0,0),
+    (5469,'brass_loach',1,1,25,0,0,0,0,0),
+    (5470,'pirarucu',1,1,25,0,0,0,0,0),
+    (5471,'gerrothorax',1,1,25,0,0,0,0,0),
+    (5472,'garpike',1,1,25,0,0,0,0,0),
+    (5473,'bastore_sweeper',1,1,25,0,0,0,0,0),
+    (5474,'ca_cuong',1,1,25,0,0,0,0,0),
+    (5475,'gigant_octopus',1,1,25,0,0,0,0,0),
+    (5476,'abaia',1,1,25,0,0,0,0,0),
+    (5477,'warrior_die',1,1,55,0,0,0,0,0),
+    (5478,'monk_die',1,1,55,0,0,0,0,0),
+    (5479,'white_mage_die',1,1,55,0,0,0,0,0),
+    (5480,'black_mage_die',1,1,55,0,0,0,0,0),
+    (5481,'red_mage_die',1,1,55,0,0,0,0,0),
+    (5482,'thief_die',1,1,55,0,0,0,0,0),
+    (5483,'paladin_die',1,1,55,0,0,0,0,0),
+    (5484,'dark_knight_die',1,1,55,0,0,0,0,0),
+    (5485,'beastmaster_die',1,1,55,0,0,0,0,0),
+    (5486,'bard_die',1,1,55,0,0,0,0,0),
+    (5487,'ranger_die',1,1,55,0,0,0,0,0),
+    (5488,'samurai_die',1,1,55,0,0,0,0,0),
+    (5489,'ninja_die',1,1,55,0,0,0,0,0),
+    (5490,'dragoon_die',1,1,55,0,0,0,0,0),
+    (5491,'summoner_die',1,1,55,0,0,0,0,0),
+    (5492,'blue_mage_die',1,1,55,0,0,0,0,0),
+    (5493,'corsair_die',1,1,55,0,0,0,0,0),
+    (5494,'puppetmaster_die',1,1,55,0,0,0,0,0),
+    (5495,'dancer_die',1,1,55,0,0,0,0,0),
+    (5496,'scholar_die',1,1,55,0,0,0,0,0),
+    (5497,'bolters_die',1,1,55,0,0,0,0,0),
+    (5498,'casters_die',1,1,55,0,0,0,0,0),
+    (5499,'coursers_die',1,1,55,0,0,0,0,0),
+    (5500,'blitzers_die',1,1,55,0,0,0,0,0),
+    (5501,'tacticians_die',1,1,55,0,0,0,0,0),
+    (5502,'allies_die',1,1,55,0,0,0,0,0),
+    (5503,'misers_die',1,1,55,0,0,0,0,0),
+    (5504,'companions_die',1,1,55,0,0,0,0,0),
+    (5505,'avengers_die',1,1,55,0,0,0,0,0),
+    (5506,'immutable_boulder_tincture',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5507,'luminous_isle_tincture',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (5508,'flourishing_island_tincture',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5509,'bud_of_the_swarm_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5510,'immaculate_sands_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5511,'dragon_driftwood_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5512,'fruit_of_fecundity_tincture',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5513,'torchbloom_tincture',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (5514,'lake_of_light_tincture',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (5515,'gales_prominence_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5516,'sweltering_spring_tincture',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5517,'flames_prominence_tincture',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5518,'sanctum_of_life_tincture',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5519,'soils_prominence_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5520,'snowdrift_arbor_tincture',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5521,'frostbloom_tincture',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (5522,'spring_of_prosperity_tincture',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5523,'pool_of_clarity_tincture',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5524,'bryophitic_boulder_tincture',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5525,'overgrown_grove_tincture',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5526,'fragrant_breeze_budtincture',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5527,'whitewater_arbor_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5528,'triumvirate_crag_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5529,'saliferous_spring_tincture',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5530,'ripple_prominence_tincture',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5531,'slice_of_lucerewe_meat',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (5532,'ichinintousen_koma',1,1,116,0,0,0,0,0),
+    (5534,'apkallufa',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5535,'deademoiselle',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5536,'yorchete',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5537,'soryu',1,1,25,0,0,0,0,0),
+    (5538,'sekiryu',1,1,25,0,0,0,0,0),
+    (5539,'hakuryu',1,1,25,0,0,0,0,0),
+    (5540,'kokuryu',1,1,25,0,0,0,0,0),
+    (5541,'bunch_of_royal_grapes',1,1,26,0,0,0,0,0),
+    (5542,'gateau_aux_fraises',1,1,0,0,0,0,0,1),
+    (5543,'midwinter_dream',1,1,24,0,0,0,0,1),
+    (5544,'crab_stewpot',1,1,25,0,0,0,0,1),
+    (5545,'prime_crab_stewpot',1,1,25,0,0,0,0,1),
+    (5546,'prized_crab_stewpot',1,1,25,0,0,0,0,1),
+    (5547,'beef_stewpot',1,1,28,0,0,0,0,1),
+    (5548,'prime_beef_stewpot',1,1,28,0,0,0,0,1),
+    (5549,'prized_beef_stewpot',1,1,28,0,0,0,0,1),
+    (5550,'roll_of_buche_au_chocolat',1,1,24,0,0,0,0,0),
+    (5551,'roll_of_sylvan_excursion',1,1,24,0,0,0,0,1),
+    (5552,'serving_of_black_pudding',1,1,24,0,0,0,0,1),
+    (5553,'serving_of_dusky_indulgence',1,1,24,0,0,0,0,1),
+    (5554,'serving_of_squirrels_delight',1,1,24,0,0,0,0,0),
+    (5555,'serving_of_flurry_courante',1,1,29,0,0,0,0,0),
+    (5556,'cone_of_seraphs_kiss',1,1,29,0,0,0,0,0),
+    (5557,'serving_of_mont_blanc',1,1,29,29,0,0,0,0),
+    (5558,'serving_of_golden_royale',1,1,29,0,0,0,0,0),
+    (5559,'serving_of_mille-feuille',1,1,29,0,0,0,0,0),
+    (5560,'serving_of_elysian_eclair',1,1,29,0,0,0,0,0),
+    (5561,'moogle_pie',1,1,27,0,0,0,0,0),
+    (5562,'pot_of_white_honey',1,1,24,0,0,0,0,0)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `validTargets` = IF(`validTargets` <> VALUES(`validTargets`), VALUES(`validTargets`), `validTargets`),
+    `activation` = IF(`activation` <> VALUES(`activation`), VALUES(`activation`), `activation`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `maxCharges` = IF(`maxCharges` <> VALUES(`maxCharges`), VALUES(`maxCharges`), `maxCharges`),
+    `useDelay` = IF(`useDelay` <> VALUES(`useDelay`), VALUES(`useDelay`), `useDelay`),
+    `reuseDelay` = IF(`reuseDelay` <> VALUES(`reuseDelay`), VALUES(`reuseDelay`), `reuseDelay`),
+    `aoe` = IF(`aoe` <> VALUES(`aoe`), VALUES(`aoe`), `aoe`)
+;
+
+insert into `item_usable`
+(
+    `itemid`, `name`, `validTargets`, `activation`, `animation`,
+    `animationTime`, `maxCharges`, `useDelay`, `reuseDelay`, `aoe`
+)
+VALUES
+    (5563,'chunk_of_orobon_meat',1,1,28,0,0,0,0,0),
+    (5564,'chunk_of_hydra_meat',1,1,28,0,0,0,0,0),
+    (5565,'slice_of_cerberus_meat',1,1,28,0,0,0,0,0),
+    (5566,'date',1,1,28,0,0,0,0,0),
+    (5567,'dried_date',1,1,28,0,0,0,0,0),
+    (5568,'apkallu_egg',1,1,28,0,0,0,0,0),
+    (5569,'puk_egg',1,1,28,0,0,0,0,0),
+    (5570,'cup_of_chai',1,1,10,0,0,0,0,0),
+    (5571,'slice_of_karakul_meat',1,1,28,0,0,0,0,0),
+    (5572,'irmik_helvasi',1,1,28,0,0,0,0,1),
+    (5573,'irmik_helvasi_+1',1,1,28,0,0,0,0,1),
+    (5574,'dried_date_+1',1,1,28,0,0,0,0,0),
+    (5575,'bowl_of_yogurt',1,1,29,0,0,0,0,0),
+    (5576,'flask_of_ayran',1,1,27,0,0,0,0,0),
+    (5577,'bowl_of_sutlac',1,1,29,0,0,0,0,0),
+    (5578,'bowl_of_sutlac_+1',1,1,29,0,0,0,0,0),
+    (5579,'bowl_of_yayla_corbasi',1,1,28,0,0,0,0,0),
+    (5580,'bowl_of_yayla_corbasi_+1',1,1,28,0,0,0,0,0),
+    (5581,'slice_of_ziz_meat',1,1,28,0,0,0,0,0),
+    (5582,'plate_of_patlican_salata',1,1,24,0,0,0,0,0),
+    (5583,'plate_of_patlican_salata_+1',1,1,24,0,0,0,0,0),
+    (5584,'plate_of_ic_pilav',1,1,24,0,0,0,0,0),
+    (5585,'plate_of_ic_pilav_+1',1,1,24,0,0,0,0,0),
+    (5586,'serving_of_menemen',1,1,25,0,0,0,0,0),
+    (5587,'serving_of_menemen_+1',1,1,25,0,0,0,0,0),
+    (5588,'serving_of_karni_yarik',1,1,28,0,0,0,0,0),
+    (5589,'serving_of_karni_yarik_+1',1,1,28,0,0,0,0,0),
+    (5590,'balik_sandvici',1,1,28,0,0,0,0,0),
+    (5591,'balik_sandvici_+1',1,1,28,0,0,0,0,0),
+    (5592,'cup_of_imperial_coffee',1,1,29,0,0,0,0,0),
+    (5593,'cup_of_imperial_coffee_+1',1,1,29,0,0,0,0,0),
+    (5594,'cup_of_chai_+1',1,1,10,0,0,0,0,0),
+    (5595,'bowl_of_nashmau_stew',1,1,28,0,0,0,0,0),
+    (5596,'simit',1,1,28,0,0,0,0,0),
+    (5597,'simit_+1',1,1,28,0,0,0,0,0),
+    (5598,'sis_kebabi',1,1,28,0,0,0,0,0),
+    (5599,'sis_kebabi_+1',1,1,28,0,0,0,0,0),
+    (5600,'balik_sis',1,1,28,0,0,0,0,0),
+    (5601,'balik_sis_+1',1,1,28,0,0,0,0,0),
+    (5602,'dish_of_hydra_kofte',1,1,28,0,0,0,0,0),
+    (5603,'dish_of_hydra_kofte_+1',1,1,28,0,0,0,0,0),
+    (5604,'elshimo_pachira_fruit',1,1,26,0,0,0,0,0),
+    (5605,'bunch_of_sharug_greens',1,1,24,0,0,0,0,0),
+    (5606,'bunch_of_azouph_greens',1,1,24,0,0,0,0,0),
+    (5607,'vomp_carrot',1,1,24,0,0,0,0,0),
+    (5608,'zegham_carrot',1,1,24,0,0,0,0,0),
+    (5609,'hellsteak',1,1,28,0,0,0,0,0),
+    (5610,'hellsteak_+1',1,1,28,0,0,0,0,0),
+    (5611,'angler_stewpot',1,1,24,0,0,0,0,1),
+    (5612,'prime_angler_stewpot',1,1,27,0,0,0,0,1),
+    (5613,'prize_angler_stewpot',1,1,27,0,0,0,0,1),
+    (5614,'konigskuchen',1,1,27,0,0,0,0,0),
+    (5615,'uberkuchen',1,1,27,0,0,0,0,0),
+    (5616,'lebkuchen_house',1,1,26,0,0,0,0,1),
+    (5617,'lebkuchen_manse',1,1,26,0,0,0,0,1),
+    (5618,'bowl_of_zoni_broth',1,1,28,0,0,0,0,0),
+    (5619,'bowl_of_zesty_zoni',1,1,28,0,0,0,0,0),
+    (5620,'roast_turkey',1,1,28,0,0,0,0,0),
+    (5621,'candy_ring',1,1,27,0,0,0,0,0),
+    (5622,'candy_cane',1,1,27,0,0,0,0,0),
+    (5623,'dish_of_spaghetti_tonno_rosso',1,1,24,0,0,0,0,0),
+    (5624,'dish_of_spaghetti_tonno_rosso_+1',1,1,24,0,0,0,0,0),
+    (5625,'maple_cake',1,1,29,0,0,0,0,1),
+    (5626,'silken_siesta',1,1,29,0,0,0,0,1),
+    (5627,'yogurt_cake',1,1,29,0,0,0,0,0),
+    (5628,'silken_smile',1,1,29,0,0,0,0,0),
+    (5629,'orange_cake',1,1,29,0,0,0,0,0),
+    (5630,'silken_squeeze',1,1,29,0,0,0,0,0),
+    (5631,'pumpkin_cake',1,1,29,0,0,0,0,0),
+    (5632,'silken_sash',1,1,29,0,0,0,0,0),
+    (5633,'chocolate_cake',1,1,24,0,0,0,0,1),
+    (5634,'silken_spirit',1,1,25,0,0,0,0,1),
+    (5635,'shrimp_cracker',1,1,29,0,0,0,0,0),
+    (5636,'shrimp_cracker_+1',1,1,29,0,0,0,0,0),
+    (5637,'pogaca',1,1,29,0,0,0,0,0),
+    (5638,'pogaca_+1',1,1,29,0,0,0,0,0),
+    (5639,'skewer_of_m&p_chicken',1,1,28,0,0,0,0,0),
+    (5640,'m&p_cracker',1,1,29,0,0,0,0,0),
+    (5641,'m&p_dumpling',1,1,29,0,0,0,0,0),
+    (5642,'serving_of_cilbir',1,1,28,0,0,0,0,0),
+    (5643,'serving_of_cibarious_cilbir',1,1,28,0,0,0,0,0),
+    (5644,'jack-o-pie',1,1,28,0,0,0,0,0),
+    (5645,'piece_of_witch_nougat',1,1,25,0,0,0,0,0),
+    (5646,'handful_of_bloody_chocolate',1,1,24,0,0,0,0,0),
+    (5647,'lik_kabob',1,1,28,0,0,0,0,0),
+    (5648,'grilled_lik',1,1,28,0,0,0,0,0),
+    (5649,'handful_of_roasted_almonds',1,1,28,0,0,0,0,0),
+    (5650,'pair_of_nopales',1,1,24,0,0,0,0,0),
+    (5651,'burdock_root',1,1,24,0,0,0,0,0),
+    (5652,'plate_of_anchovies',1,1,25,0,0,0,0,0),
+    (5653,'cherry_muffin',1,1,24,0,0,0,0,0),
+    (5654,'cherry_muffin_+1',1,1,24,0,0,0,0,0),
+    (5655,'coffeecake_muffin',1,1,24,0,0,0,0,0),
+    (5656,'coffeecake_muffin_+1',1,1,24,0,0,0,0,0),
+    (5657,'army_biscuit',1,1,29,0,0,0,0,0),
+    (5658,'dish_of_spaghetti_ortolana',1,1,24,0,0,0,0,0),
+    (5659,'dish_of_spaghetti_ortolana_+1',1,1,24,0,0,0,0,0),
+    (5660,'stick_of_pepperoni',1,1,28,0,0,0,0,0),
+    (5661,'walnut',1,1,24,0,0,0,0,0),
+    (5662,'dragon_fruit',1,1,26,0,0,0,0,0),
+    (5663,'plate_of_salmon_sushi',1,1,25,0,0,0,0,0),
+    (5664,'plate_of_salmon_sushi_+1',1,1,25,0,0,0,0,0),
+    (5665,'plate_of_fin_sushi',1,1,25,0,0,0,0,0),
+    (5666,'plate_of_fin_sushi_+1',1,1,25,0,0,0,0,0),
+    (5667,'slice_of_lynx_meat',1,1,28,0,0,0,0,0),
+    (5668,'smilodon_liver',1,1,28,0,0,0,0,0),
+    (5669,'bowl_of_loach_slop',1,1,25,0,0,0,0,1),
+    (5670,'bowl_of_loach_gruel',1,1,25,0,0,0,0,1),
+    (5671,'bowl_of_loach_soup',1,1,25,0,0,0,0,1),
+    (5672,'dried_berry',1,1,26,0,0,0,0,0),
+    (5673,'rolsin',1,1,26,0,0,0,0,0),
+    (5674,'aileens_delight',1,1,25,0,0,0,0,0),
+    (5675,'withered_rolanberry',1,1,26,0,0,0,0,0),
+    (5676,'serving_of_mushroom_saute',1,1,27,0,0,0,0,0),
+    (5677,'serving_of_patriarch_saute',1,1,27,0,0,0,0,0),
+    (5678,'mushroom_salad',1,1,24,0,0,0,0,0),
+    (5679,'cathedral_salad',1,1,24,0,0,0,0,0),
+    (5680,'agaricus_mushroom',1,1,27,0,0,0,0,0),
+    (5681,'cupid_chocolate',1,1,24,0,0,0,0,0),
+    (5682,'purple_polypore',1,1,24,0,0,0,0,0),
+    (5683,'humpty_dumpty_effigy',1,1,24,0,0,0,0,0),
+    (5684,'wedge_of_chalaimbille',1,1,24,0,0,0,0,0),
+    (5685,'rabbit_pie',1,1,28,0,0,0,0,0),
+    (5686,'cheese_sandwich',1,1,24,0,0,0,0,0),
+    (5687,'cheese_sandwich_+1',1,1,24,0,0,0,0,0),
+    (5688,'head_of_grauberg_lettuce',1,1,24,0,0,0,0,0),
+    (5689,'meatloaf',1,1,28,0,0,0,0,0),
+    (5690,'meatloaf_+1',1,1,28,0,0,0,0,0),
+    (5691,'plate_of_shrimp_sushi',1,1,25,0,0,0,0,0),
+    (5692,'plate_of_shrimp_sushi_+1',1,1,25,0,0,0,0,0),
+    (5693,'plate_of_octopus_sushi',1,1,25,0,0,0,0,0),
+    (5694,'plate_of_octopus_sushi_+1',1,1,25,0,0,0,0,0),
+    (5695,'margherita_pizza',1,1,28,0,0,0,0,0),
+    (5696,'margherita_pizza_+1',1,1,28,0,0,0,0,0),
+    (5697,'pepperoni_pizza',1,1,0,28,0,0,0,0),
+    (5698,'pepperoni_pizza_+1',1,1,28,0,0,0,0,0),
+    (5699,'anchovy_pizza',1,1,28,0,0,0,0,0),
+    (5700,'anchovy_pizza_+1',1,1,28,0,0,0,0,0),
+    (5701,'nopales_salad',1,1,24,0,0,0,0,0),
+    (5702,'nopales_salad_+1',1,1,24,0,0,0,0,0),
+    (5703,'jug_of_uleguerand_milk',1,1,26,0,0,0,0,0),
+    (5704,'anglers_cassoulet',1,1,24,0,0,0,0,0),
+    (5705,'homemade_salisbury_steak',1,1,28,0,0,0,0,1),
+    (5706,'dish_of_homemade_carbonara',1,1,25,0,0,0,0,0),
+    (5707,'homemade_omelette',1,1,28,0,0,0,0,0),
+    (5708,'mihgo_mithkabob',1,1,28,0,0,0,0,0),
+    (5709,'stick_of_cotton_candy',1,1,27,0,0,0,0,0),
+    (5710,'berry_snow_cone',1,1,26,0,0,0,0,0),
+    (5711,'kitron_snow_cone',1,1,26,0,0,0,0,0),
+    (5712,'melon_snow_cone',1,1,26,0,0,0,0,0),
+    (5713,'orange_snow_cone',1,1,26,0,0,0,0,0),
+    (5714,'pearlscale',1,1,26,0,0,0,0,0),
+    (5715,'calico_comet',1,1,26,0,0,0,0,0),
+    (5716,'soothing_potion',1,1,31,0,0,0,0,0),
+    (5717,'m&p_doner_kebab',1,1,28,0,0,0,0,0),
+    (5718,'cream_puff',1,1,26,0,0,0,0,0),
+    (5719,'dish_of_spaghetti_marinara',1,1,24,0,0,0,0,0),
+    (5720,'dish_of_spaghetti_marinara_+1',1,1,24,0,0,0,0,0),
+    (5721,'plate_of_crab_sushi',1,1,25,0,0,0,0,0),
+    (5722,'plate_of_crab_sushi_+1',1,1,25,0,0,0,0,0),
+    (5724,'pinch_of_pungent_powder',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5725,'goshikitenge',1,1,105,0,0,0,0,0),
+    (5726,'zucchini',1,1,24,0,0,0,0,0),
+    (5727,'serving_of_zaru_soba',1,1,24,0,0,0,0,0),
+    (5728,'serving_of_zaru_soba_+1',1,1,24,0,0,0,0,0),
+    (5729,'serving_of_bavarois',1,1,24,0,0,0,0,0),
+    (5730,'serving_of_bavarois_+1',1,1,24,0,0,0,0,0),
+    (5731,'plate_of_ratatouille',1,1,24,0,0,0,0,0),
+    (5732,'plate_of_ratatouille_+1',1,1,24,0,0,0,0,0),
+    (5733,'jug_of_miracle_milk',1,1,26,0,0,0,0,0),
+    (5734,'toolbag_soshi',1,1,55,0,0,0,0,0),
+    (5735,'cotton_coin_purse',1,1,0,0,0,0,0,0),
+    (5736,'linen_coin_purse',1,1,0,0,0,0,0,0),
+    (5737,'slice_of_salted_hare',1,1,28,0,0,0,0,0),
+    (5738,'chunk_of_sweet_lizard',1,1,28,0,0,0,0,0),
+    (5739,'mug_of_honeyed_egg',1,1,28,0,0,0,0,0),
+    (5740,'cluster_of_paprika',1,1,24,0,0,0,0,0),
+    (5741,'flask_of_pest_repellent',1,1,34,0,0,0,0,0),
+    (5742,'bottle_of_buffalo_bonanza_milk',1,1,27,0,0,0,0,0),
+    (5743,'marinara_pizza',1,1,28,0,0,0,0,0),
+    (5744,'marinara_pizza_+1',1,1,28,0,0,0,0,0),
+    (5745,'serving_of_cherry_bavarois',1,1,24,0,0,0,0,0),
+    (5746,'serving_of_cherry_bavarois_+1',1,1,24,0,0,0,0,0),
+    (5747,'jar_of_marinara_sauce',1,1,28,0,0,0,0,0),
+    (5748,'sachet_of_wood',1,1,24,0,0,0,0,0),
+    (5749,'sachet_of_bugs',1,1,28,0,0,0,0,0),
+    (5750,'bowl_of_goulash',1,1,24,0,0,0,0,0),
+    (5751,'bowl_of_goulash_+1',1,1,24,0,0,0,0,0),
+    (5752,'pot-au-feu',1,1,24,0,0,0,0,0),
+    (5753,'pot-au-feu_+1',1,1,24,0,0,0,0,0),
+    (5754,'vial_of_eau_de_moblin',1,1,28,0,0,0,0,0),
+    (5755,'slab_of_ruszor_meat',1,1,28,0,0,0,0,0),
+    (5756,'green_curry_bun',1,1,24,0,0,0,0,0),
+    (5757,'yellow_curry_bun',1,1,28,0,0,0,0,0),
+    (5758,'black_curry_bun',1,1,24,0,0,0,0,0),
+    (5759,'red_curry_bun',1,1,28,0,0,0,0,0),
+    (5760,'kohlrouladen',1,1,28,0,0,0,0,0),
+    (5761,'kohlrouladen_+1',1,1,28,0,0,0,0,0),
+    (5762,'green_curry_bun_+1',1,1,24,0,0,0,0,0),
+    (5763,'yellow_curry_bun_+1',1,1,28,0,0,0,0,0),
+    (5764,'black_curry_bun_+1',1,1,24,0,0,0,0,0),
+    (5765,'red_curry_bun_+1',1,1,28,0,0,0,0,0),
+    (5766,'butter_crepe',1,1,24,0,0,0,0,0),
+    (5767,'crepe_delice',1,1,24,0,0,0,0,0),
+    (5768,'portafurnace',1,1,24,0,0,0,0,0),
+    (5769,'popper',1,1,107,0,0,0,0,0),
+    (5770,'super_reraiser',1,1,33,0,0,0,0,0),
+    (5771,'ham_and_cheese_crepe',1,1,28,0,0,0,0,0),
+    (5772,'crepe_paysanne',1,1,24,0,0,0,0,0),
+    (5773,'mushroom_crepe',1,1,24,0,0,0,0,0),
+    (5774,'crepe_forestiere',1,1,24,0,0,0,0,0),
+    (5775,'chocolate_crepe',1,1,24,0,0,0,0,0),
+    (5776,'crepe_caprice',1,1,24,0,0,0,0,0),
+    (5777,'pear_crepe',1,1,24,0,0,0,0,0),
+    (5778,'crepe_belle_helene',1,1,24,0,0,0,0,0),
+    (5779,'cherry_macaron',1,1,24,0,0,0,0,0),
+    (5780,'coffee_macaron',1,1,29,0,0,0,0,0),
+    (5781,'kitron_macaron',1,1,29,0,0,0,0,0),
+    (5782,'sugar_rusk',1,1,0,26,0,0,0,0),
+    (5783,'chocolate_rusk',1,1,29,0,0,0,0,0),
+    (5784,'coconut_rusk',1,1,10,0,0,0,0,0),
+    (5785,'crayfish',1,1,25,0,0,0,0,0),
+    (5786,'dark_bass',1,1,25,0,0,0,0,0),
+    (5787,'pipira',1,1,25,0,0,0,0,0),
+    (5788,'black_eel',1,1,25,0,0,0,0,0),
+    (5789,'moat_carp',1,1,25,0,0,0,0,0),
+    (5790,'copper_frog',1,1,28,0,0,0,0,0),
+    (5791,'shining_trout',1,1,25,0,0,0,0,0),
+    (5792,'bastore_sardine',1,1,25,0,0,0,0,0),
+    (5793,'quus',1,1,25,0,0,0,0,0),
+    (5794,'tiger_cod',1,1,25,0,0,0,0,0),
+    (5795,'ogre_eel',1,1,25,0,0,0,0,0),
+    (5796,'nosteau_herring',1,1,25,0,0,0,0,0),
+    (5797,'gold_lobster',1,1,25,0,0,0,0,0),
+    (5798,'bluetail',1,1,25,0,0,0,0,0),
+    (5799,'giant_catfish',1,1,25,0,0,0,0,0),
+    (5800,'giant_donko',1,1,25,0,0,0,0,0),
+    (5801,'monke-onke',1,1,25,0,0,0,0,0),
+    (5802,'istavrit',1,1,25,0,0,0,0,0),
+    (5803,'gigant_octopus',1,1,25,0,0,0,0,0),
+    (5804,'veydal_wrasse',1,1,25,0,0,0,0,0),
+    (5805,'gugru_tuna',1,1,25,0,0,0,0,0),
+    (5806,'bhefhel_marlin',1,1,25,0,0,0,0,0),
+    (5807,'bladefish',1,1,25,0,0,0,0,0),
+    (5808,'rhinochimera',1,1,25,0,0,0,0,0),
+    (5809,'three-eyed_fish',1,1,25,0,0,0,0,0),
+    (5810,'creel_of_moat_carp',1,4,25,0,0,0,0,0),
+    (5811,'creel_of_forest_carp',1,4,25,0,0,0,0,0),
+    (5812,'blowfish',1,4,25,0,0,0,0,0),
+    (5813,'dorado_gar',1,4,25,0,0,0,0,0),
+    (5814,'crocodilos',1,4,25,0,0,0,0,0),
+    (5815,'pelazoea',1,4,25,0,0,0,0,0),
+    (5816,'king_perch',1,4,25,0,0,0,0,0),
+    (5817,'tiger_shark',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5818,'aurora_bass',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5819,'antlion_quiver',1,4,55,0,0,0,0,0),
+    (5820,'darkling_bolt_quiver',1,4,55,0,0,0,0,0),
+    (5821,'fusion_bolt_quiver',1,4,55,0,0,0,0,0),
+    (5822,'dweomer_bullet_pouch',1,4,55,0,0,0,0,0),
+    (5823,'oberon_bullet_pouch',1,4,55,0,0,0,0,0),
+    (5824,'lucid_potion_i',1,1,30,0,0,0,0,0),
+    (5825,'lucid_potion_ii',1,1,31,0,0,0,0,0),
+    (5826,'lucid_potion_iii',1,1,31,0,0,0,0,0),
+    (5827,'lucid_ether_i',1,1,32,0,0,0,0,0),
+    (5828,'lucid_ether_ii',1,1,33,0,0,0,0,0),
+    (5829,'lucid_ether_iii',1,1,33,0,0,0,0,0),
+    (5830,'lucid_elixir_i',1,1,34,0,0,0,0,0),
+    (5831,'lucid_elixir_ii',1,1,34,0,0,0,0,0),
+    (5832,'flask_of_healing_mist',1,1,30,0,0,0,0,0),
+    (5833,'flask_of_mana_mist',1,1,32,0,0,0,0,0),
+    (5834,'pair_of_lucid_wings_i',1,1,0,0,0,0,0,0),
+    (5835,'tube_of_healing_salve_i',1,1,0,0,0,0,0,0),
+    (5836,'tube_of_healing_salve_ii',1,1,0,0,0,0,0,0),
+    (5837,'tube_of_clear_salve_i',1,1,0,0,0,0,0,0),
+    (5838,'tube_of_clear_salve_ii',1,1,0,0,0,0,0,0),
+    (5839,'bottle_of_stalwarts_tonic',1,1,0,0,0,0,0,0),
+    (5840,'bottle_of_stalwarts_gambir',1,1,0,0,0,0,0,0),
+    (5841,'bottle_of_ascetics_tonic',1,1,0,0,0,0,0,0),
+    (5842,'bottle_of_ascetics_gambir',1,1,0,0,0,0,0,0),
+    (5843,'bottle_of_champions_tonic',1,1,0,0,0,0,0,0),
+    (5844,'bottle_of_champions_gambir',1,1,0,0,0,0,0,0),
+    (5845,'bottle_of_fanatics_tonic',1,1,0,0,0,0,0,0),
+    (5846,'bottle_of_fools_tonic',1,1,0,0,0,0,0,0),
+    (5847,'pinch_of_fanatics_powder',1,1,0,0,0,0,0,0),
+    (5848,'pinch_of_fools_powder',1,1,0,0,0,0,0,0),
+    (5849,'bottle_of_berserkers_drink',1,1,0,0,0,0,0,0),
+    (5850,'bottle_of_swiftshot_drink',1,1,0,0,0,0,0,0),
+    (5851,'bottle_of_berserkers_tonic',1,1,0,0,0,0,0,0),
+    (5852,'bottle_of_swiftshot_tonic',1,1,0,0,0,0,0,0),
+    (5853,'flask_of_primeval_brew',1,4,0,0,0,0,0,0),
+    (5854,'frayed_pouch_of_birth',1,4,0,0,0,0,0,0),
+    (5855,'frayed_pouch_of_advancement',1,4,0,0,0,0,0,0),
+    (5856,'frayed_pouch_of_glory',1,4,0,0,0,0,0,0),
+    (5857,'frayed_pouch_of_decay',1,4,0,0,0,0,0,0),
+    (5858,'frayed_pouch_of_ruin',1,4,0,0,0,0,0,0),
+    (5859,'galkan_sausage_+1',1,4,28,0,0,0,0,0),
+    (5860,'galkan_sausage_+2',1,4,28,0,0,0,0,0),
+    (5861,'galkan_sausage_+3',1,4,28,0,0,0,0,0),
+    (5862,'galkan_sausage_-1',1,4,28,0,0,0,0,0),
+    (5863,'toolbag_kabenro',1,1,55,0,0,0,0,0),
+    (5864,'toolbag_jinko',1,1,55,0,0,0,0,0),
+    (5865,'toolbag_ryuno',1,1,55,0,0,0,0,0),
+    (5866,'toolbag_mokujin',1,1,55,0,0,0,0,0),
+    (5867,'toolbag_inoshishinofuda',1,1,55,0,0,0,0,0),
+    (5868,'toolbag_shikanofuda',1,1,55,0,0,0,0,0),
+    (5869,'toolbag_chonofuda',1,1,55,0,0,0,0,0),
+    (5870,'trump_card_case',1,4,0,0,0,0,0,0),
+    (5871,'ruszor_quiver',1,4,55,0,0,0,0,0),
+    (5872,'dark_adaman_bolt_quiver',1,4,55,0,0,0,0,0),
+    (5873,'dark_adaman_bullet_pouch',1,4,55,0,0,0,0,0),
+    (5875,'galette_des_rois',1,4,0,0,0,0,0,0),
+    (5876,'phial_of_petrify_screen',1,4,0,0,0,0,0,0),
+    (5877,'phial_of_terror_screen',1,4,0,0,0,0,0,0),
+    (5878,'phial_of_amnesia_screen',1,4,0,0,0,0,0,0),
+    (5879,'phial_of_doom_screen',1,4,0,0,0,0,0,0),
+    (5880,'phial_of_poison_screen',1,4,0,0,0,0,0,0),
+    (5881,'shisai_kaboku',1,1,110,0,0,0,0,0),
+    (5882,'marine_bliss',1,1,108,0,0,0,0,0),
+    (5883,'falling_star',1,1,109,0,0,0,0,0),
+    (5884,'rengedama',1,1,111,0,0,0,0,0),
+    (5885,'saltena',1,1,28,0,0,0,0,0),
+    (5886,'elshena',1,1,28,0,0,0,0,0),
+    (5887,'montagna',1,1,28,0,0,0,0,0),
+    (5888,'maringna',1,1,28,0,0,0,0,0),
+    (5889,'stuffed_pitaru',1,1,28,0,0,0,0,0),
+    (5890,'poultry_pitaru',1,1,28,0,0,0,0,0),
+    (5891,'seafood_pitaru',1,1,28,0,0,0,0,0),
+    (5892,'b.e.w._pitaru',1,1,28,0,0,0,0,0),
+    (5893,'marine_stewpot',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (5894,'prime_marine_stewpot',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5895,'odorless_fungus',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (5896,'clump_of_absorbent_moss',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5897,'redolent_root',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (5898,'shadescale_skull',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (5899,'shadescale_femur',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (5900,'shadescale_talon',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (5901,'shadescale_heart',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (5902,'vial_of_cagebeast_blood',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5903,'vial_of_sea_monk_venom',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5904,'perforated_wing',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (5905,'undying_moiety',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (5906,'page_from_abdhaljs_on_war',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5907,'winterflower',1,1,28,0,0,0,0,0),
+    (5908,'butterpear',1,1,28,0,0,0,0,0),
+    (5909,'pickled_rarab_tail',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5910,'heavy_metal_pouch',1,1,55,0,0,0,0,0),
+    (5911,'olde_rarab_tail',4,1,55,0,0,0,0,0), -- Need to verify animation
+    (5912,'gargouille_quiver',1,1,55,0,0,0,0,0),
+    (5913,'adaman_bolt_quiver',1,1,55,0,0,0,0,0),
+    (5914,'orichalcum_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5915,'adaman_bullet_pouch',1,1,55,0,0,0,0,0),
+    (5916,'temple_truffle',1,1,28,0,0,0,0,0),
+    (5917,'choco-scroll',1,1,28,0,0,0,0,0),
+    (5918,'choco-katana',1,1,28,0,0,0,0,0),
+    (5919,'choco-ligar',1,1,28,0,0,0,0,0),
+    (5920,'fudgy-wudge',1,1,28,0,0,0,0,0),
+    (5921,'chocolate_rarab_tail',1,1,28,0,0,0,0,0),
+    (5922,'walnut_cookie',1,1,29,0,0,0,0,0),
+    (5923,'juglan_jumble',1,1,29,0,0,0,0,0),
+    (5924,'smoldering_salisbury_steak',1,1,28,0,0,0,0,0),
+    (5925,'charred_salisbury_steak',1,1,28,0,0,0,0,0),
+    (5926,'cup_of_date_tea',1,1,28,0,0,0,0,0),
+    (5927,'cup_of_caravan_tea',1,1,28,0,0,0,0,0),
+    (5928,'himesama_rice_ball',1,1,28,0,0,0,0,0),
+    (5929,'ojo_rice_ball',1,1,28,0,0,0,0,0),
+    (5930,'bowl_of_sprightly_soup',1,1,26,0,0,0,0,0),
+    (5931,'bowl_of_shimmy_soup',1,1,26,0,0,0,0,0),
+    (5932,'bottle_of_kitron_juice',1,1,26,0,0,0,0,0),
+    (5933,'flask_of_dragon_fruit_au_lait',1,1,26,0,0,0,0,0),
+    (5934,'chocobiscuit',1,1,29,0,0,0,0,0),
+    (5935,'bowl_of_moogurt',1,1,26,0,0,0,0,0),
+    (5936,'mog_missile',1,1,112,0,0,0,0,0),
+    (5937,'bubble_breeze',1,1,113,0,0,0,0,0),
+    (5938,'hiatus_whistle',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5939,'terminus_whistle',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5940,'trail_cookie',1,1,29,0,0,0,0,0),
+    (5941,'bar_of_campfire_chocolate',1,1,29,0,0,0,0,0),
+    (5942,'piece_of_cascade_candy',1,1,29,0,0,0,0,0),
+    (5943,'strip_of_smoked_mackerel',1,1,28,0,0,0,0,0),
+    (5944,'bottle_of_frontier_soda',1,1,26,0,0,0,0,0),
+    (5945,'pinch_of_prize_powder',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5946,'frayed_sack_of_deviousness',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5947,'frayed_sack_of_liminality',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (5948,'black_prawn',1,1,25,0,0,0,0,0),
+    (5949,'mussel',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (5950,'mackerel',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (5951,'bloodblotch',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5952,'ruddy_seema',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5953,'dragonfly_trout',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5954,'barnacle',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (5955,'yawning_catfish',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5957,'shockfish',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (5959,'dragonfish',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (5960,'ulbukan_lobster',1,1,28,0,0,0,0,0),
+    (5961,'contortopus',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5962,'contortacle',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5963,'senroh_sardine',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5964,'felicifruit',1,1,28,0,0,0,0,0),
+    (5965,'head_of_isleracea',1,1,28,0,0,0,0,0),
+    (5966,'ulbuconut',1,1,28,0,0,0,0,0),
+    (5967,'verboshroom',1,1,28,0,0,0,0,0),
+    (5968,'plate_of_seafood_paella',1,1,28,0,0,0,0,0),
+    (5969,'plate_of_piscators_paella',1,1,28,0,0,0,0,0),
+    (5970,'plate_of_mushroom_paella',1,1,28,0,0,0,0,0),
+    (5971,'plate_of_mushroom_paella_+1',1,1,28,0,0,0,0,0),
+    (5972,'plate_of_beef_paella',1,1,28,0,0,0,0,0),
+    (5973,'plate_of_beef_paella_+1',1,1,28,0,0,0,0,0),
+    (5974,'plate_of_barnacle_paella',1,1,28,0,0,0,0,0),
+    (5975,'plate_of_flapanos_paella',1,1,28,0,0,0,0,0),
+    (5976,'bowl_of_ulbuconut_milk',1,1,26,0,0,0,0,0),
+    (5977,'bowl_of_ulbuconut_milk_+1',1,1,26,0,0,0,0,0),
+    (5978,'plate_of_felicifruit_gelatin',1,1,28,0,0,0,0,0),
+    (5979,'plate_of_dulcet_panettones',1,1,28,0,0,0,0,0),
+    (5980,'plate_of_boiled_barnacles',1,1,28,0,0,0,0,0),
+    (5981,'plate_of_boiled_barnacles_+1',1,1,28,0,0,0,0,0),
+    (5982,'senroh_skewer',1,1,28,0,0,0,0,0),
+    (5983,'piscators_skewer',1,1,28,0,0,0,0,0),
+    (5984,'branch_of_gnatbane',1,1,28,0,0,0,0,0),
+    (5985,'sprig_of_hemlock',1,1,28,0,0,0,0,0),
+    (5986,'coalition_potion',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5987,'coalition_ether',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (5988,'scroll_of_instant_protect',1,7,30,0,0,0,0,0),
+    (5989,'scroll_of_instant_shell',1,7,32,0,0,0,0,0),
+    (5990,'scroll_of_instant_stoneskin',1,7,8,0,0,0,0,0),
+    (5991,'farewell_fly',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (5992,'fenestral_key',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (5993,'senroh_frog',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (5995,'malicious_perch',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (5997,'shen',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (5998,'bowl_of_adoulinian_soup',1,1,26,0,0,0,0,0),
+    (5999,'bowl_of_adoulinian_soup_+1',1,1,26,0,0,0,0,0),
+    (6001,'clotflagration',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6002,'trailblazing_pickaxe',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6003,'trailblazing_pickaxe_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6004,'trailblazing_hatchet',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6005,'trailblazing_hatchet_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6006,'trailblazing_sickle',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6007,'trailblazing_sickle_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6008,'piece_of_copse_candy',1,1,0,0,0,0,0,0),
+    (6009,'bowl_of_mog_pudding',1,1,26,0,0,0,0,0),
+    (6010,'sakura_biscuit',1,1,28,0,0,0,0,0),
+    (6011,'celadon_yggrete_shard_i',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6012,'celadon_yggrete_shard_ii',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6013,'celadon_yggrete_shard_iii',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6014,'celadon_yggrete_shard_iv',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6015,'celadon_yggrete_shard_v',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6016,'zaffre_yggrete_shard_i',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6017,'zaffre_yggrete_shard_ii',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6018,'zaffre_yggrete_shard_iii',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6019,'zaffre_yggrete_shard_iv',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6020,'zaffre_yggrete_shard_v',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6021,'alizarin_yggrete_shard_i',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6022,'alizarin_yggrete_shard_ii',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6023,'alizarin_yggrete_shard_iii',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6024,'alizarin_yggrete_shard_iv',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6025,'alizarin_yggrete_shard_v',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6026,'celadon_yggzi_bead_i',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6027,'celadon_yggzi_bead_ii',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6028,'celadon_yggzi_bead_iii',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6029,'celadon_yggzi_bead_iv',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6030,'celadon_yggzi_bead_v',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6031,'zaffre_yggzi_bead_i',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6032,'zaffre_yggzi_bead_ii',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6033,'zaffre_yggzi_bead_iii',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6034,'zaffre_yggzi_bead_iv',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6035,'zaffre_yggzi_bead_v',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6036,'alizarin_yggzi_bead_i',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6037,'alizarin_yggzi_bead_ii',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6038,'alizarin_yggzi_bead_iii',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6039,'alizarin_yggzi_bead_iv',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6040,'alizarin_yggzi_bead_v',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6041,'pyrohelix_schema',1,1,12,5,0,0,0,0),
+    (6042,'hydrohelix_schema',1,1,12,5,0,0,0,0),
+    (6043,'ionohelix_schema',1,1,12,5,0,0,0,0),
+    (6044,'cryohelix_schema',1,1,12,5,0,0,0,0),
+    (6045,'geohelix_schema',1,1,12,5,0,0,0,0),
+    (6046,'anemohelix_schema',1,1,12,5,0,0,0,0),
+    (6047,'luminohelix_schema',1,1,12,5,0,0,0,0)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `validTargets` = IF(`validTargets` <> VALUES(`validTargets`), VALUES(`validTargets`), `validTargets`),
+    `activation` = IF(`activation` <> VALUES(`activation`), VALUES(`activation`), `activation`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `maxCharges` = IF(`maxCharges` <> VALUES(`maxCharges`), VALUES(`maxCharges`), `maxCharges`),
+    `useDelay` = IF(`useDelay` <> VALUES(`useDelay`), VALUES(`useDelay`), `useDelay`),
+    `reuseDelay` = IF(`reuseDelay` <> VALUES(`reuseDelay`), VALUES(`reuseDelay`), `reuseDelay`),
+    `aoe` = IF(`aoe` <> VALUES(`aoe`), VALUES(`aoe`), `aoe`)
+;
+
+insert into `item_usable`
+(
+    `itemid`, `name`, `validTargets`, `activation`, `animation`,
+    `animationTime`, `maxCharges`, `useDelay`, `reuseDelay`, `aoe`
+)
+VALUES
+    (6048,'noctohelix_schema',1,1,12,5,0,0,0,0),
+    (6049,'firestorm_schema',1,1,11,5,0,0,0,0),
+    (6050,'rainstorm_schema',1,1,11,5,0,0,0,0),
+    (6051,'thunderstorm_schema',1,1,11,5,0,0,0,0),
+    (6052,'hailstorm_schema',1,1,11,5,0,0,0,0),
+    (6053,'sandstorm_schema',1,1,11,5,0,0,0,0),
+    (6054,'windstorm_schema',1,1,11,5,0,0,0,0),
+    (6055,'aurorastorm_schema',1,1,11,5,0,0,0,0),
+    (6056,'voidstorm_schema',1,1,11,5,0,0,0,0),
+    (6058,'klimaform_schema',1,1,12,5,0,0,0,0),
+    (6059,'animus_augeo_schema',1,1,11,5,0,0,0,0),
+    (6060,'animus_minuo_schema',1,1,11,5,0,0,0,0),
+    (6061,'adloquium_schema',1,1,11,5,0,0,0,0),
+    (6063,'fruit_parfait',1,1,26,0,0,0,0,0),
+    (6064,'queens_crown',1,1,26,0,0,0,0,0),
+    (6065,'tiny_macaroon',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6066,'tiny_rusk',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6067,'ontic_extremity',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6068,'slice_of_gabbrath_meat',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6069,'bowl_of_riverfin_soup',1,1,26,0,0,0,0,0),
+    (6070,'bowl_of_oceanfin_soup',1,1,26,0,0,0,0,0),
+    (6071,'magma_steak',1,1,28,0,0,0,0,0),
+    (6072,'magma_steak_+1',1,1,28,0,0,0,0,0),
+    (6073,'plate_of_indi-regen',1,1,13,5,0,0,0,0),
+    (6074,'plate_of_indi-poison',1,1,13,5,0,0,0,0),
+    (6075,'plate_of_indi-refresh',1,1,13,5,0,0,0,0),
+    (6076,'plate_of_indi-str',1,1,13,5,0,0,0,0),
+    (6077,'plate_of_indi-dex',1,1,13,5,0,0,0,0),
+    (6078,'plate_of_indi-vit',1,1,13,5,0,0,0,0),
+    (6079,'plate_of_indi-agi',1,1,13,5,0,0,0,0),
+    (6080,'plate_of_indi-int',1,1,13,5,0,0,0,0),
+    (6081,'plate_of_indi-mnd',1,1,13,5,0,0,0,0),
+    (6082,'plate_of_indi-chr',1,1,13,5,0,0,0,0),
+    (6083,'plate_of_indi-fury',1,1,13,5,0,0,0,0),
+    (6084,'plate_of_indi-barrier',1,1,13,5,0,0,0,0),
+    (6085,'plate_of_indi-acumen',1,1,13,5,0,0,0,0),
+    (6086,'plate_of_indi-fend',1,1,13,5,0,0,0,0),
+    (6087,'plate_of_indi-precision',1,1,13,5,0,0,0,0),
+    (6088,'plate_of_indi-voidance',1,1,13,5,0,0,0,0),
+    (6089,'plate_of_indi-focus',1,1,13,5,0,0,0,0),
+    (6090,'plate_of_indi-attunement',1,1,13,5,0,0,0,0),
+    (6091,'plate_of_indi-wilt',1,1,13,5,0,0,0,0),
+    (6092,'plate_of_indi-frailty',1,1,13,5,0,0,0,0),
+    (6093,'plate_of_indi-fade',1,1,13,5,0,0,0,0),
+    (6094,'plate_of_indi-malaise',1,1,13,5,0,0,0,0),
+    (6095,'plate_of_indi-slip',1,1,13,5,0,0,0,0),
+    (6096,'plate_of_indi-torpor',1,1,13,5,0,0,0,0),
+    (6097,'plate_of_indi-vex',1,1,13,5,0,0,0,0),
+    (6098,'plate_of_indi-languor',1,1,13,5,0,0,0,0),
+    (6099,'plate_of_indi-slow',1,1,13,5,0,0,0,0),
+    (6100,'plate_of_indi-paralysis',1,1,13,5,0,0,0,0),
+    (6101,'plate_of_indi-gravity',1,1,13,5,0,0,0,0),
+    (6102,'geo-regen',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6103,'geo-poison',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6104,'geo-refresh',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6105,'geo-str',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6106,'geo-dex',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6107,'geo-vit',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6108,'geo-agi',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6109,'geo-int',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6110,'geo-mnd',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6111,'geo-chr',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6112,'geo-fury',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6113,'geo-barrier',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6114,'geo-acumen',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6115,'geo-fend',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6116,'geo-precision',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6117,'geo-voidance',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6118,'geo-focus',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6119,'geo-attunement',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6120,'geo-wilt',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6121,'geo-frailty',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6122,'geo-fade',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6123,'geo-malaise',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6124,'geo-slip',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6125,'geo-torpor',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6126,'geo-vex',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6127,'geo-languor',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6128,'geo-slow',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6129,'geo-paralysis',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6130,'geo-gravity',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6131,'plate_of_indi-haste',1,1,13,5,0,0,0,0),
+    (6132,'geo-haste',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6137,'chapuli_quiver',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6138,'mantid_quiver',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6139,'midrium_bolt_quiver',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6140,'damascus_bolt_quiver',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6141,'oxidant_bolt_quiver',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6142,'midrium_bullet_pouch',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6143,'damascus_bullet_pouch',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6144,'frigorifish',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6145,'dwarf_remora',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6146,'remora',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6147,'copy_of_mikhes_memo',1,1,117,0,0,0,0,0),
+    (6148,'dagger_enchiridion',1,1,117,0,0,0,0,0),
+    (6149,'copy_of_swing_and_stab',1,1,117,0,0,0,0,0),
+    (6150,'copy_of_mieuseloirs_diary',1,1,117,0,0,0,0,0),
+    (6151,'copy_of_striking_bulls_diary',1,1,117,0,0,0,0,0),
+    (6152,'copy_of_death_for_dimwits',1,1,117,0,0,0,0,0),
+    (6153,'copy_of_ludwigs_report',1,1,117,0,0,0,0,0),
+    (6154,'copy_of_clash_of_titans',1,1,117,0,0,0,0,0),
+    (6155,'copy_of_kagetoras_diary',1,1,117,0,0,0,0,0),
+    (6156,'copy_of_noilluries_log',1,1,117,0,0,0,0,0),
+    (6157,'copy_of_ferreouss_diary',1,1,117,0,0,0,0,0),
+    (6158,'copy_of_kayeel-payeels_memoirs',1,1,117,0,0,0,0,0),
+    (6159,'copy_of_perihs_primer',1,1,117,0,0,0,0,0),
+    (6160,'copy_of_barrels_of_fun',1,1,117,0,0,0,0,0),
+    (6161,'throwing_weapon_enchiridion',1,1,117,0,0,0,0,0),
+    (6162,'copy_of_mikhes_note',1,1,117,0,0,0,0,0),
+    (6163,'copy_of_sonias_diary',1,1,117,0,0,0,0,0),
+    (6164,'copy_of_the_successor',1,1,117,0,0,0,0,0),
+    (6165,'copy_of_kagetoras_journal',1,1,117,0,0,0,0,0),
+    (6166,'copy_of_altanas_hymn',1,1,117,0,0,0,0,0),
+    (6167,'copy_of_coveffe_barrows_musings',1,1,117,0,0,0,0,0),
+    (6168,'copy_of_aid_for_all',1,1,117,0,0,0,0,0),
+    (6169,'investigative_report',1,1,117,0,0,0,0,0),
+    (6170,'bounty_list',1,1,117,0,0,0,0,0),
+    (6171,'copy_of_dark_deeds',1,1,117,0,0,0,0,0),
+    (6172,'copy_of_breezy_libretto',1,1,117,0,0,0,0,0),
+    (6173,'cavernous_score',1,1,117,0,0,0,0,0),
+    (6174,'beaming_score',1,1,117,0,0,0,0,0),
+    (6175,'copy_of_yomis_diagram',1,1,117,0,0,0,0,0),
+    (6176,'copy_of_astral_homeland',1,1,117,0,0,0,0,0),
+    (6177,'copy_of_life-form_study',1,1,117,0,0,0,0,0),
+    (6178,'copy_of_hrohjs_record',1,1,117,0,0,0,0,0),
+    (6179,'copy_of_the_bell_tolls',1,1,117,0,0,0,0,0),
+    (6180,'pluton_case',1,1,24,0,0,0,0,0),
+    (6181,'beitetsu_parcel',1,1,24,0,0,0,0,0),
+    (6182,'boulder_case',1,1,24,0,0,0,0,0),
+    (6183,'pluton_box',1,1,24,0,0,0,0,0),
+    (6184,'beitetsu_box',1,1,24,0,0,0,0,0),
+    (6185,'boulder_box',1,1,24,0,0,0,0,0),
+    (6186,'slime_rocket',1,1,115,0,0,0,0,0),
+    (6187,'piece_of_slimeulation_candy',1,1,55,0,0,0,0,0),
+    (6188,'piece_of_she-slime_candy',1,1,55,0,0,0,0,0),
+    (6189,'piece_of_metal_slime_candy',1,1,55,0,0,0,0,0),
+    (6190,'spriggan_spark',1,1,114,0,0,0,0,0),
+    (6191,'green_spriggan_lolli',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6192,'red_spriggan_lolli',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6193,'purple_spriggan_lolli',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6194,'loch_of_flux_tincture',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6195,'lambent_pillar_tincture',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6196,'halcyon_icefall_tincture',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6197,'rime_prominence_tincture',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6198,'crystalline_claw_tincture',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6199,'achiyalabopa_quiver',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6200,'adlivun_quiver',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6201,'tulfaire_quiver',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6202,'raaz_quiver',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6203,'achiyalabopa_bolt_quiver',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6204,'adlivun_bolt_quiver',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6205,'titanium_bolt_quiver',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6206,'bismuth_bolt_quiver',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6207,'achiyalabopa_bullet_pouch',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6208,'adlivun_bullet_pouch',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6209,'titanium_bullet_pouch',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6210,'bismuth_bullet_pouch',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6211,'slice_of_marinara_pizza',1,1,28,0,0,0,0,0),
+    (6212,'slice_of_marinara_pizza_+1',1,1,28,0,0,0,0,0),
+    (6213,'slice_of_margherita_pizza',1,1,28,0,0,0,0,0),
+    (6214,'slice_of_margherita_pizza_+1',1,1,28,0,0,0,0,0),
+    (6215,'slice_of_pepperoni_pizza',1,1,28,0,0,0,0,0),
+    (6216,'slice_of_pepperoni_pizza_+1',1,1,28,0,0,0,0,0),
+    (6217,'slice_of_anchovy_pizza',1,1,28,0,0,0,0,0),
+    (6218,'slice_of_anchovy_pizza_+1',1,1,28,0,0,0,0,0),
+    (6219,'warthog_stewpot',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6220,'prime_warthog_stewpot',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6221,'prized_warthog_stewpot',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6222,'slice_of_warthog_meat',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6223,'cehuetzi_snow_cone',1,1,26,0,0,0,0,0),
+    (6224,'apingaut_snow_cone',1,1,26,0,0,0,0,0),
+    (6225,'cyclical_coalescence',1,1,26,0,0,0,0,0),
+    (6226,'loaf_of_pixioche',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6227,'phlox_yggrete_shard_i',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6228,'phlox_yggrete_shard_ii',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6229,'phlox_yggrete_shard_iii',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6230,'phlox_yggrete_shard_iv',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6231,'phlox_yggrete_shard_v',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6232,'russet_yggrete_shard_i',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6233,'russet_yggrete_shard_ii',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6234,'russet_yggrete_shard_iii',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6235,'russet_yggrete_shard_iv',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6236,'russet_yggrete_shard_v',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6237,'aster_yggrete_shard_i',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6238,'aster_yggrete_shard_ii',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6239,'aster_yggrete_shard_iii',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6240,'aster_yggrete_shard_iv',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6241,'aster_yggrete_shard_v',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6242,'phlox_yggzi_bead_i',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6243,'phlox_yggzi_bead_ii',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6244,'phlox_yggzi_bead_iii',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6245,'phlox_yggzi_bead_iv',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6246,'phlox_yggzi_bead_v',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6247,'russet_yggzi_bead_i',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6248,'russet_yggzi_bead_ii',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6249,'russet_yggzi_bead_iii',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6250,'russet_yggzi_bead_iv',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6251,'russet_yggzi_bead_v',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6252,'aster_yggzi_bead_i',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6253,'aster_yggzi_bead_ii',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6254,'aster_yggzi_bead_iii',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6255,'aster_yggzi_bead_iv',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6256,'aster_yggzi_bead_v',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6257,'jar_of_jungle_nectar',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6258,'piece_of_shiromochi',1,1,28,0,0,0,0,0),
+    (6259,'piece_of_shiromochi_+1',1,1,28,0,0,0,0,0),
+    (6260,'piece_of_akamochi',1,1,28,0,0,0,0,0),
+    (6261,'piece_of_akamochi_+1',1,1,28,0,0,0,0,0),
+    (6262,'piece_of_kusamochi',1,1,28,0,0,0,0,0),
+    (6263,'piece_of_kusamochi_+1',1,1,28,0,0,0,0,0),
+    (6264,'frayed_sack_of_horror_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6265,'toolbag_ranka',1,1,55,0,0,0,0,0),
+    (6266,'toolbag_furu',1,1,55,0,0,0,0,0),
+    (6267,'aged_box_bayld',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6268,'komanezumi',1,1,118,0,0,0,0,0),
+    (6269,'eminent_quiver',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6270,'eminent_bolt_quiver',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6271,'eminent_bullet_pouch',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6272,'fried_popoto',1,1,28,0,0,0,0,0),
+    (6273,'fried_popoto_+1',1,1,28,0,0,0,0,0),
+    (6274,'pukatrice_egg',1,1,28,0,0,0,0,0),
+    (6275,'pukatrice_egg_+1',1,1,28,0,0,0,0,0),
+    (6276,'deep-fried_shrimp',1,1,28,0,0,0,0,0),
+    (6277,'deep-fried_shrimp_+1',1,1,28,0,0,0,0,0),
+    (6278,'abrasion_bolt_quiver',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6279,'righteous_bolt_quiver',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6280,'rakaznar_quiver',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6281,'rakaznar_bolt_quiver',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6282,'rakaznar_bullet_pouch',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6283,'velkk_coffer',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6284,'grand_velkk_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6285,'ymmr-ulvids_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6286,'ymmr-ulvids_grand_coffer',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6287,'ignor-mnts_coffer',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6288,'ignor-mnts_grand_coffer',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6289,'durs-vikes_coffer',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6290,'durs-vikes_grand_coffer',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6291,'tryl-wujs_coffer',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6292,'tryl-wujs_grand_coffer',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6293,'liij-voks_coffer',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6294,'liij-voks_grand_coffer',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6295,'gramk-droogs_coffer',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6296,'gramk-droogs_grand_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6297,'juji_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6298,'manji_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6299,'shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6300,'koga_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6301,'togakushi_shuriken_pouch',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6302,'fuma_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6303,'iga_shuriken_pouch',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6304,'roppo_shuriken_pouch',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6305,'roppo_shuriken_+1_pouch',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6306,'happo_shuriken_pouch',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6307,'happo_shuriken_+1_pouch',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6308,'hachiya_shuriken_pouch',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6309,'suppa_shuriken_pouch',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6310,'gashing_bolt_quiver',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6311,'decimating_bullet_pouch',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6312,'hugemaw_harolds_coffer',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6313,'bounding_belindas_coffer',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6314,'prickly_pitrivs_coffer',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6315,'ironhorn_baldurnos_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6316,'sleepy_mabels_coffer',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6317,'valkurm_imperators_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6318,'serpopard_ninlils_coffer',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6319,'abyssdivers_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6320,'intuilas_coffer',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6321,'emperor_arthros_coffer',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6322,'orcfeltraps_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6323,'lumber_jills_coffer',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6324,'joyous_greens_coffer',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6325,'strixs_coffer',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6326,'warblade_beaks_coffer',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6327,'arkes_coffer',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6328,'largantuas_coffer',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6329,'beists_coffer',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6330,'jester_malatrixs_coffer',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6331,'catrot_velozs_coffer',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6332,'woodland_menders_coffer',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6333,'translucent_salpa',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6334,'rakaznar_shellfish',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6335,'white_lobster',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6336,'bonefish',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6337,'thysanopeltis',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6338,'cameroceras',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6339,'rolanberry_daifuku',1,1,28,0,0,0,0,0),
+    (6340,'rolanberry_daifuku_+1',1,1,28,0,0,0,0,0),
+    (6341,'bean_daifuku',1,1,28,0,0,0,0,0),
+    (6342,'bean_daifuku_+1',1,1,28,0,0,0,0,0),
+    (6343,'grape_daifuku',1,1,28,0,0,0,0,0),
+    (6344,'grape_daifuku_+1',1,1,28,0,0,0,0,0),
+    (6345,'frayed_sack_of_horror_+2',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6346,'frayed_sack_of_beauty',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6347,'sheet_of_promathian_tunes',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6348,'sheet_of_adoulinian_tunes',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6349,'makel-pakels_grab_bag',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6350,'sybaritic_samanthas_coffer',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6351,'keeper_of_heiligtums_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6352,'douma_weapons_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6353,'king_uropygids_coffer',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6354,'vedrfolnirs_coffer',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6355,'stinger_bullet_pouch',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6356,'tiyanaks_coffer',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6357,'immanibugards_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6358,'muuts_coffer',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6359,'camahuetos_coffer',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6360,'vosos_coffer',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6361,'mephitass_coffer',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6362,'cocas_coffer',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6363,'ayapecs_coffer',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6364,'specter_worms_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6365,'azraels_coffer',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6366,'borealis_shadows_coffer',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6367,'codex_of_etchings',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6368,'geomancer_die',1,1,55,0,0,0,0,0),
+    (6369,'rune_fencer_die',1,1,55,0,0,0,0,0),
+    (6370,'frayed_sack_of_splendor',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6371,'quicksilver_blade',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6372,'lord_of_ulbuka',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6373,'ancient_carp',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6374,'dragons_tabernacle',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6375,'phantom_serpent',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6376,'tusoteuthis_longa',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6377,'imperial_chair_set',1,1,0,0,0,0,0,0),
+    (6378,'decorative_chair_set',1,1,0,0,0,0,0,0),
+    (6379,'ornate_stool_set',1,1,0,0,0,0,0,0),
+    (6380,'refined_chair_set',1,1,0,0,0,0,0,0),
+    (6381,'fishermans_feast',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6382,'garbage_gels_coffer',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6383,'bakunawas_coffer',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6384,'azure-toothed_clawberrys_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6385,'vermillion_fishflys_coffer',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6386,'volatile_clusters_coffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6387,'mhuufyas_coffer',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (6388,'grand_grenades_coffer',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6389,'vidmapires_coffer',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6390,'centurio_xx-is_coffer',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6391,'silt_pouch',1,1,55,0,0,0,0,0),
+    (6392,'bead_pouch',1,1,55,0,0,0,0,0),
+    (6393,'cut_of_porxie_pork',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6394,'pork_cutlet',1,1,24,0,0,0,0,0),
+    (6395,'pork_cutlet_+1',1,1,24,0,0,0,0,0),
+    (6396,'cutlet_sandwich',1,1,24,0,0,0,0,0),
+    (6397,'cutlet_sandwich_+1',1,1,24,0,0,0,0,0),
+    (6398,'cage_of_arena_fireflies',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6399,'bottle_of_saviors_tonic',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6400,'bottle_of_mirrors_tonic',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6401,'bottle_of_monetas_tonic',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6402,'bottle_of_steadfast_tonic',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6403,'tolbas_coffer',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6404,'hidhaeggs_coffer',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6405,'sovereign_behemoths_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6406,'pork_cutlet_rice_bowl',1,1,28,0,0,0,0,0),
+    (6407,'pork_cutlet_rice_bowl_+1',1,1,28,0,0,0,0,0),
+    (6408,'portable_container',1,1,0,0,0,0,0,0),
+    (6409,'ephramadian_throne',1,1,0,0,0,0,0,0),
+    (6410,'shadow_throne',1,1,0,0,0,0,0,0),
+    (6411,'chocobo_chair',1,1,0,0,0,0,0,0),
+    (6412,'leaf_bench',1,1,0,0,0,0,0,0),
+    (6413,'astral_cube',1,1,0,0,0,0,0,0),
+    (6414,'porxie_quiver',1,1,55,0,0,0,0,0),
+    (6415,'seki_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6416,'hunk_of_behemoth_meat',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6417,'divine_quiver',1,1,55,0,0,0,0,0),
+    (6418,'beryllium_quiver',1,1,55,0,0,0,0,0),
+    (6419,'raetic_quiver',1,1,55,0,0,0,0,0),
+    (6420,'voluspa_quiver',1,1,55,0,0,0,0,0),
+    (6427,'divine_bolt_quiver',1,1,55,0,0,0,0,0),
+    (6428,'beryllium_bolt_quiver',1,1,55,0,0,0,0,0),
+    (6429,'voluspa_bolt_quiver',1,1,55,0,0,0,0,0),
+    (6437,'divine_bullet_pouch',1,1,55,0,0,0,0,0),
+    (6438,'voluspa_bullet_pouch',1,1,55,0,0,0,0,0),
+    (6447,'sasuke_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6448,'sasuke_shuriken_pouch_+1',1,1,55,0,0,0,0,0),
+    (6449,'date_shuriken_pouch',1,1,55,0,0,0,0,0),
+    (6456,'sheet_of_shadow_lord_tunes',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6457,'flarelet',1,1,121,0,0,0,0,0),
+    (6458,'bowl_of_soy_ramen',1,1,28,0,0,0,0,0),
+    (6459,'bowl_of_soy_ramen_+1',1,1,28,0,0,0,0,0),
+    (6460,'bowl_of_miso_ramen',1,1,28,0,0,0,0,0),
+    (6461,'bowl_of_miso_ramen_+1',1,1,28,0,0,0,0,0),
+    (6462,'bowl_of_salt_ramen',1,1,28,0,0,0,0,0),
+    (6463,'bowl_of_salt_ramen_+1',1,1,28,0,0,0,0,0),
+    (6464,'behemoth_steak',1,1,28,0,0,0,0,0),
+    (6465,'behemoth_steak_+1',1,1,28,0,0,0,0,0),
+    (6466,'bowl_of_miso_soup',1,1,28,0,0,0,0,0),
+    (6467,'bowl_of_miso_soup_+1',1,1,28,0,0,0,0,0),
+    (6468,'plate_of_sublime_sushi',1,1,28,0,0,0,0,0),
+    (6469,'plate_of_sublime_sushi_+1',1,1,28,0,0,0,0,0),
+    (6470,'bowl_of_oden',1,1,28,0,0,0,0,0),
+    (6471,'bowl_of_oden_+1',1,1,28,0,0,0,0,0),
+    (6473,'super_revitalizer',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6474,'phial_of_poison_buffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6475,'pair_of_lucid_wings_ii',1,1,0,0,0,0,0,0),
+    (6476,'phial_of_virus_buffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6477,'phial_of_charm_buffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6478,'phial_of_curse_buffer',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6479,'tumult_curators_coffer',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6480,'thubans_coffer',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6481,'saramas_coffer',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6482,'shedus_coffer',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6483,'glazemanes_coffer',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6484,'carousing_celines_coffer',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6485,'wyvernhunter_bambroxs_coffer',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6486,'frayed_sack_of_fecundity',1,1,0,0,0,0,0,0),     -- TODO: Not implemented
+    (6487,'frayed_sack_of_plenty',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6488,'frayed_sack_of_opulence',1,1,0,0,0,0,0,0),      -- TODO: Not implemented
+    (6489,'far_east_puffer',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6498,'bunch_of_fortune_fruits',1,1,28,0,0,0,0,0),
+    (6499,'patio_design_plan_document',1,1,117,0,0,0,0,0),
+    (6500,'abdhaljs_seal',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (6501,'konjak_tuber',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6502,'konjak',1,1,0,0,0,0,0,0),                        -- TODO: Not implemented
+    (6503,'daikon',1,1,0,0,0,0,0,0),                        -- TODO: Not implemented
+    (6505,'chikuwa',1,1,0,0,0,0,0,0),                       -- TODO: Not implemented
+    (6506,'pyre_crystal',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6507,'frost_crystal',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (6508,'vortex_crystal',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6509,'geo_crystal',1,1,0,0,0,0,0,0),                   -- TODO: Not implemented
+    (6510,'bolt_crystal',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6511,'fluid_crystal',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (6512,'glimmer_crystal',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6513,'shadow_crystal',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6514,'reisenjima_cage',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6515,'large_tail',1,1,0,0,0,0,0,0),                    -- TODO: Not implemented
+    (6516,'large_stone',1,1,0,0,0,0,0,0),                   -- TODO: Not implemented
+    (6517,'large_leaf',1,1,0,0,0,0,0,0),                    -- TODO: Not implemented
+    (6518,'morbol_latte',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6519,'serving_of_fetid_curry',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6520,'cup_of_rancid_coffee',1,1,0,0,0,0,0,0),          -- TODO: Not implemented
+    (6521,'decanter_ingrid',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6522,'decanter_darrcuiln',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6523,'decanter_arciela',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6524,'decanter_morimar',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6525,'decanter_rosulatia',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6526,'decanter_teodor',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6527,'decanter_august',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6528,'decanter_sajjaka',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6529,'decanter_arciela_ii',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6530,'rolanberry_pickled_rarab_tail',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6531,'black_hourglass',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6532,'pluton_coffer',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (6533,'beitetsu_coffer',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6534,'rift_boulder_coffer',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6535,'pinch_of_pungent_powder_ii',1,1,0,0,0,0,0,0),    -- TODO: Not implemented
+    (6536,'new_years_pouch',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6537,'pinch_of_pungent_powder_iii',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6538,'altanas_repast',1,1,28,0,0,0,0,1),
+    (6539,'altanas_repast_+1',1,1,28,0,0,0,0,1),
+    (6540,'altanas_repast_+2',1,1,28,0,0,0,0,1),
+    (6541,'worn_sack_of_snowslit_stones_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6542,'worn_sack_of_snowslit_stones_+2',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6543,'worn_sack_of_leafslit_stones_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6544,'worn_sack_of_leafslit_stones_+2',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6545,'worn_sack_of_duskslit_stones_+1',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6546,'worn_sack_of_duskslit_stones_+2',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6547,'worn_sack_of_snowtip_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6548,'worn_sack_of_snowtip_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6549,'worn_sack_of_leaftip_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6550,'worn_sack_of_leaftip_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6551,'worn_sack_of_dusktip_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6552,'worn_sack_of_dusktip_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6553,'worn_sack_of_snowdim_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6554,'worn_sack_of_snowdim_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6555,'worn_sack_of_leafdim_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6556,'worn_sack_of_leafdim_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6557,'worn_sack_of_duskdim_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6558,'worn_sack_of_duskdim_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6559,'worn_sack_of_snoworb_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6560,'worn_sack_of_snoworb_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6561,'worn_sack_of_leaforb_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6562,'worn_sack_of_leaforb_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6563,'worn_sack_of_duskorb_stones_+1',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6564,'worn_sack_of_duskorb_stones_+2',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6565,'per._snow_cone',1,1,28,1,0,0,0,0),
+    (6566,'bonanza_biscuit',1,1,28,0,0,0,0,0),
+    (6567,'tropical_crepe',1,1,28,1,0,0,0,0),
+    (6568,'crepe_des_rois',1,1,28,1,0,0,0,0)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `validTargets` = IF(`validTargets` <> VALUES(`validTargets`), VALUES(`validTargets`), `validTargets`),
+    `activation` = IF(`activation` <> VALUES(`activation`), VALUES(`activation`), `activation`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `maxCharges` = IF(`maxCharges` <> VALUES(`maxCharges`), VALUES(`maxCharges`), `maxCharges`),
+    `useDelay` = IF(`useDelay` <> VALUES(`useDelay`), VALUES(`useDelay`), `useDelay`),
+    `reuseDelay` = IF(`reuseDelay` <> VALUES(`reuseDelay`), VALUES(`reuseDelay`), `reuseDelay`),
+    `aoe` = IF(`aoe` <> VALUES(`aoe`), VALUES(`aoe`), `aoe`)
+;
+
+insert into `item_usable`
+(
+    `itemid`, `name`, `validTargets`, `activation`, `animation`,
+    `animationTime`, `maxCharges`, `useDelay`, `reuseDelay`, `aoe`
+)
+VALUES
+    (6569,'scroll_of_slow_ii',1,1,11,5,0,0,0,0),
+    (6570,'scroll_of_paralyze_ii',1,1,11,5,0,0,0,0),
+    (6571,'scroll_of_phalanx_ii',1,1,11,5,0,0,0,0),
+    (6572,'coffer_of_swart_astral_detritus',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6573,'coffer_of_murky_astral_detritus',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6574,'coffer_of_beit_astral_detritus',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6575,'cheesesteak_sandwich',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6576,'turkey_with_rolanberry_sauce',1,1,28,0,0,0,0,0),    -- TODO: verify animation from retail
+    (6577,'bowl_of_clam_chowder',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6578,'plate_of_biscuits_&_gravy',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6579,'soy_ramen_(survival)',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6580,'miso_ramen_(survival)',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6581,'shoyu_ramen_(survival)',1,1,0,0,0,0,0,0),           -- TODO: Not implemented
+    (6582,'shio_ramen_(survival)',1,1,0,0,0,0,0,0),            -- TODO: Not implemented
+    (6583,'bowl_of_sutlac_(survival)',1,1,0,0,0,0,0,0),        -- TODO: Not implemented
+    (6584,'bowl_of_seafood_stew_(survival)',1,1,0,0,0,0,0,0),  -- TODO: Not implemented
+    (6585,'salmon_sub_sandwich',1,1,0,0,0,0,0,0),             -- TODO: Not implemented
+    (6586,'prime_beef_stewpot',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6587,'buffalo_stewpot',1,1,0,0,0,0,0,0),                 -- TODO: Not implemented
+    (6588,'rabbit_stewpot',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6589,'sheep_stewpot',1,1,0,0,0,0,0,0),                   -- TODO: Not implemented
+    (6590,'cockatrice_stewpot',1,1,0,0,0,0,0,0),              -- TODO: Not implemented
+    (6591,'behemoth_stewpot',1,1,0,0,0,0,0,0),                -- TODO: Not implemented
+    (6592,'dragon_stewpot',1,1,0,0,0,0,0,0),                  -- TODO: Not implemented
+    (6593,'deep_yellow_curry',1,1,0,0,0,0,0,0),               -- TODO: Not implemented
+    (6594,'seafood_curry',1,1,0,0,0,0,0,0),                   -- TODO: Not implemented
+    (6595,'chicken_curry',1,1,0,0,0,0,0,0),                   -- TODO: Not implemented
+    (6596,'duck_curry',1,1,0,0,0,0,0,0),                      -- TODO: Not implemented
+    (6597,'mutton_curry',1,1,0,0,0,0,0,0),                    -- TODO: Not implemented
+    (6598,'maats_mix',1,1,0,0,0,0,0,0),                       -- TODO: Not implemented
+    (6599,'egg_sandwich',1,1,28,0,0,0,0,0),
+    (6600,'egg_sandwich_+1',1,1,28,0,0,0,0,0),
+    (6601,'omelette_sandwich',1,1,28,0,0,0,0,0),
+    (6602,'omelette_sandwich_+1',1,1,28,0,0,0,0,0),
+    (6603,'bottle_of_rolanberry_854',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6604,'bottle_of_rolanberry_874',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6605,'bottle_of_rolanberry_894',1,1,0,0,0,0,0,0), -- TODO: Not implemented
+    (6606,'plate_of_mapo_tofu',1,1,0,0,0,0,0,0),       -- TODO: Not implemented
+    (6607,'hydra_kofte_(survival)',1,1,0,0,0,0,0,0),   -- TODO: Not implemented
+    (6608,'moogle_amplifier',1,1,0,0,0,0,0,0),         -- TODO: Not implemented
+    (6609,'serving_of_popotoes_con_queso',1,1,28,0,0,0,0,0),
+    (6610,'serving_of_popotoes_con_queso_+1',1,1,28,0,0,0,0,0),
+    (6611,'serving_of_seafood_gratin',1,1,28,0,0,0,0,0),
+    (6612,'serving_of_seafood_gratin_+1',1,1,28,0,0,0,0,0),
+    (6686,'gyudon',1,1,28,0,0,0,0,0),
+    (6687,'gyudon_+1',1,1,28,0,0,0,0,0),
+    (6690,'sheet_of_starlight_tunes',1,1,117,0,0,0,0,0),
+    (6691,'sheet_of_mapitoto_tunes',1,1,117,0,0,0,0,0),
+    (6696,'sheet_of_near_east_tunes',1,1,117,0,0,0,0,0),
+    (6704,'sheet_of_divine_tunes',1,1,117,0,0,0,0,0),
+    (10250,'moogle_suit',1,8,0,0,1,30,86400,0),
+    (10253,'decennial_coat_+1',1,8,0,0,1,30,86400,0),
+    (10254,'decennial_dress_+1',1,8,0,0,1,30,86400,0),
+    (10264,'marine_gilet_+1',1,8,0,0,1,30,86400,0),
+    (10265,'marine_top_+1',1,8,0,0,1,30,86400,0),
+    (10266,'woodsy_gilet_+1',1,8,0,0,1,30,86400,0),
+    (10267,'woodsy_top_+1',1,8,0,0,1,30,86400,0),
+    (10268,'creek_maillot_+1',1,8,0,0,1,30,86400,0),
+    (10269,'creek_top_+1',1,8,0,0,1,30,86400,0),
+    (10270,'river_top_+1',1,8,0,0,1,30,86400,0),
+    (10271,'dune_gilet_+1',1,8,0,0,1,30,86400,0),
+    (10293,'chocobo_shirt',1,8,0,0,1,30,72000,0),
+    (10383,'dream_mittens_+1',1,6,24,0,1,30,7200,0),
+    (10385,'cumulus_masque_+1',1,8,79,0,1,30,72000,0),
+    (10796,'decennial_ring',1,3,76,0,10,15,3600,0),
+    (10812,'chocobo_shield_+1',1,8,0,0,1,30,86400,0),
+    (10848,'quadav_belt',1,1,0,0,1,30,3600,0),
+    (10875,'snowman_cap',1,1,0,0,1,30,3600,0),
+    (11002,'dragon_tank',1,1,55,0,5,30,60,0),
+    (11273,'custom_gilet_+1',1,8,79,0,1,30,72000,0),
+    (11274,'custom_top_+1',1,8,79,0,1,30,72000,0),
+    (11275,'magna_gilet_+1',1,8,79,0,1,30,72000,0),
+    (11276,'magna_top_+1',1,8,79,0,1,30,72000,0),
+    (11277,'wonder_maillot_+1',1,8,79,0,1,30,72000,0),
+    (11278,'wonder_top_+1',1,8,79,0,1,30,72000,0),
+    (11279,'savage_top_+1',1,8,79,0,1,30,72000,0),
+    (11280,'elder_gilet_+1',1,8,79,0,1,30,72000,0),
+    (11290,'tidal_talisman',1,8,79,0,1,30,72000,1),
+    (11320,'skeleton_robe',1,1,0,0,30,15,600,0),
+    (11403,'talaria',1,5,0,0,1,15,1800,0),
+    (11490,'snow_bunny_hat',1,1,0,0,10,30,3600,0),
+    (11491,'snow_bunny_hat_+1',1,1,0,0,1,30,3600,0),
+    (11500,'chocobo_beret',1,1,0,0,1,30,3600,0),
+    (11538,'nexus_cape',1,8,79,0,1,30,72000,0),
+    (11666,'novennial_ring',1,3,76,0,10,15,3600,0),
+    (11788,'jesters_hat',1,3,0,0,1,30,600,0),
+    (11811,'destrier_beret',1,4,0,0,1,30,3600,0),
+    (11861,'hikogami_yukata',1,2,0,0,1,30,86400,0),
+    (11862,'himegami_yukata',1,2,0,0,1,30,86400,0),
+    (12406,'coated_shield',1,2,0,0,20,30,1800,0),
+    (12408,'absorbing_shield',20,2,0,0,20,30,3600,0),
+    (12411,'dominus_shield',1,10,0,0,15,30,180,0),
+    (13144,'wing_gorget',1,3,91,0,10,30,1800,0),
+    (13170,'stoneskin_torque',1,14,29,0,20,30,30,0),
+    (13171,'reraise_gorget',1,10,33,0,10,30,120,0),
+    (13173,'memento_muffler',1,1,0,0,20,30,60,0),
+    (13179,'kingdom_stables_collar',1,8,79,0,10,30,3600,0),
+    (13180,'republic_stables_medal',1,8,79,0,10,30,3600,0),
+    (13181,'federation_stables_scarf',1,8,79,0,10,30,3600,0),
+    (13182,'oscar_scarf',20,3,0,0,50,30,900,0),
+    (13682,'ether_tank',1,1,55,0,5,30,60,0),
+    (13683,'water_tank',1,1,55,0,40,30,60,0),
+    (13684,'potion_tank',1,1,55,0,11,30,60,0),
+    (13685,'invisible_mantle',1,6,10,0,20,30,20,0),
+    (13688,'hi-potion_tank',1,2,55,0,20,30,60,0),
+    (13689,'hi-ether_tank',1,2,55,0,20,30,60,0),
+    (13693,'aries_mantle',1,3,72,0,20,30,1800,0),
+    (13823,'regen_cuirass',1,8,82,0,50,30,1800,0),
+    (14324,'mist_slacks',1,1,24,0,15,30,600,0),
+    (14423,'mist_tunic',1,1,24,0,20,30,600,0),
+    (14490,'mana_tunic',1,4,32,0,30,30,600,0),
+    (14491,'mana_cloak',1,4,32,0,30,30,600,0),
+    (14492,'high_mana_cloak',1,10,33,0,15,30,180,0),
+    (14493,'healing_vest',1,4,30,0,30,30,600,0),
+    (14494,'healing_mail',1,4,30,0,30,30,600,0),
+    (14495,'healing_harness',1,4,30,0,30,30,600,0),
+    (14496,'healing_justaucorps',1,4,30,0,30,30,600,0),
+    (14497,'high_healing_harness',1,4,31,0,30,30,600,0),
+    (14515,'hydra_doublet',1,3,32,0,20,30,1800,0),
+    (14516,'hydra_harness',1,3,28,0,1,30,72000,0),
+    (14517,'hydra_haubert',1,3,32,0,20,30,1800,0),
+    (14531,'bannaret_mail',1,3,0,0,50,30,1800,0),
+    (14532,'otoko_yukata',1,2,0,0,1,30,604800,0),
+    (14533,'onago_yukata',1,2,0,0,1,30,604800,0),
+    (14534,'otokogimi_yukata',1,2,0,0,1,30,604800,0),
+    (14535,'onnagimi_yukata',1,2,0,0,1,30,604800,0),
+    (14541,'taikyoku_kenpogi',1,3,0,0,50,30,1800,0),
+    (14654,'poisona_ring',1,2,1,0,30,30,10,0),
+    (14656,'poseidons_ring',1,2,0,0,50,30,600,0),
+    (14657,'ducal_guards_ring',1,8,79,0,5,30,3600,0),
+    (14661,'teleport_ring_holla',1,8,79,5,10,30,3600,0),
+    (14662,'teleport_ring_dem',1,8,79,5,10,30,3600,0),
+    (14663,'teleport_ring_mea',1,8,79,5,10,30,3600,0),
+    (14664,'teleport_ring_vahzl',1,8,79,5,10,30,3600,0),
+    (14665,'teleport_ring_yhoat',1,8,79,5,10,30,3600,0),
+    (14666,'teleport_ring_altep',1,8,79,5,10,30,3600,0),
+    (14671,'allied_ring',1,3,76,0,5,5,900,0),
+    (14672,'tavnazian_ring',1,8,79,5,1,30,86400,0),
+    (14677,'sanation_ring',1,3,0,0,20,30,1800,0),
+    (14678,'assassins_ring',1,3,0,0,20,30,1800,0),
+    (14679,'tactical_ring',1,3,0,0,20,30,1800,0),
+    (14680,'pacifist_ring',1,3,0,0,20,30,1800,0),
+    (14681,'getsul_ring',1,3,0,0,20,30,1800,0),
+    (14759,'curaga_earring',1,8,30,0,50,30,20,1),
+    (14785,'janizary_earring',1,3,0,0,20,30,1800,0),
+    (14786,'counter_earring',1,3,0,0,20,30,1800,0),
+    (14787,'deadeye_earring',1,3,0,0,20,30,1800,0),
+    (14788,'gamushara_earring',1,3,0,0,20,30,1800,0),
+    (14789,'naruko_earring',1,3,0,0,20,30,1800,0),
+    (14790,'reraise_earring',1,8,33,0,10,30,60,0),
+    (14810,'signal_pearl',1,3,0,0,1,30,72000,0),
+    (14811,'tactics_pearl',1,3,0,0,4,30,600,0),
+    (14855,'mist_mitts',1,1,24,0,10,30,600,0),
+    (14864,'palmers_bangles',1,1,0,0,20,30,60,0),
+    (14925,'hydra_mittens',1,3,25,0,1,30,72000,0),
+    (14957,'aiming_gloves',1,3,0,0,50,30,1800,0),
+    (14987,'thunder_mittens',1,3,25,0,50,30,300,0),
+    (14988,'stone_bangles',1,3,29,0,50,30,300,0),
+    (14989,'aero_mufflers',1,3,24,0,50,30,300,0),
+    (14990,'blizzard_gloves',1,3,26,0,50,30,300,0),
+    (14991,'fire_bracers',1,3,28,0,50,30,300,0),
+    (14992,'water_mitts',1,3,27,0,50,30,300,0),
+    (15018,'ritterhentzes',1,3,28,0,50,30,300,0),
+    (15071,'spartan_hoplon',1,6,0,0,50,30,600,0),
+    (15162,'mist_crown',1,1,24,0,5,30,600,0),
+    (15170,'blink_band',1,12,24,0,50,30,20,0),
+    (15175,'revilers_helm',20,1,0,0,100,30,300,0),
+    (15179,'dream_hat_+1',1,2,0,0,1,30,86400,0),
+    (15182,'zoolater_hat',1,3,33,0,50,30,1800,0),
+    (15194,'maats_cap',1,8,79,0,1,30,86400,0),
+    (15198,'sprout_beret',1,3,76,0,1,5,72000,0),
+    (15199,'guide_beret',1,3,76,0,1,5,72000,0),
+    (15204,'mandragora_beret',1,1,0,0,1,30,3600,0),
+    (15211,'reraise_hairpin',1,8,33,0,10,30,60,0),
+    (15212,'stars_cap',1,8,79,0,1,30,3600,0),
+    (15213,'laurel_crown',1,8,79,0,1,30,3600,0),
+    (15214,'gadzradds_helm',1,3,0,0,30,30,72000,0),
+    (15215,'davhus_barbut',1,3,0,0,30,30,72000,0),
+    (15216,'tsoo_hajas_headgear',1,3,0,0,30,30,72000,0),
+    (15217,'choplixs_coif',1,3,0,0,30,30,72000,0),
+    (15261,'hydra_tiara',1,3,25,0,1,30,72000,0),
+    (15268,'eldritch_bone_hairpin',1,3,0,0,50,30,1800,0),
+    (15269,'eldritch_horn_hairpin',1,3,0,0,50,30,1800,0),
+    (15288,'pellet_belt',1,1,0,0,24,30,3600,0),
+    (15289,'bolt_belt',1,1,0,0,12,30,3600,0),
+    (15290,'haste_belt',1,6,24,0,20,30,40,0),
+    (15296,'tathlum_belt',1,1,0,0,12,30,3600,0),
+    (15297,'rabbit_belt',1,1,0,0,1,30,3600,0),
+    (15298,'worm_belt',1,1,0,0,1,30,3600,0),
+    (15299,'mandragora_belt',1,1,0,0,1,30,3600,0),
+    (15300,'nebimonite_belt',1,3,0,0,50,30,86400,0),
+    (15312,'mist_pumps',1,1,24,0,10,30,600,0),
+    (15320,'powder_boots',1,3,24,0,20,30,600,0),
+    (15326,'gargoyle_boots',0x101,7,24,0,20,30,60,0),
+    (15328,'root_sabots',1,2,24,0,50,30,1800,0),
+    (15372,'magic_slacks',1,10,0,0,50,30,36,0),
+    (15444,'carpenters_belt',1,2,0,0,25,30,180,0),
+    (15445,'blacksmiths_belt',1,2,0,0,25,30,180,0),
+    (15446,'goldsmiths_belt',1,2,0,0,25,30,180,0),
+    (15447,'weavers_belt',1,2,0,0,25,30,180,0),
+    (15448,'tanners_belt',1,2,0,0,25,30,180,0),
+    (15449,'boneworkers_belt',1,2,0,0,25,30,180,0),
+    (15450,'alchemists_belt',1,2,0,0,25,30,180,0),
+    (15451,'culinarians_belt',1,2,0,0,25,30,180,0),
+    (15452,'fishermans_belt',1,2,0,0,15,30,1800,0),
+    (15453,'lugworm_belt',1,5,0,0,10,30,300,0),
+    (15454,'little_worm_belt',1,5,0,0,10,30,300,0),
+    (15459,'sagacious_gold_obi',1,2,0,0,30,30,600,0),
+    (15460,'deductive_gold_obi',1,2,0,0,30,30,600,0),
+    (15461,'enthralling_gold_obi',1,2,0,0,30,30,600,0),
+    (15462,'sagacious_brocade_obi',1,2,0,0,30,30,600,0),
+    (15485,'talisman_cape',1,3,0,0,50,30,1800,0),
+    (15486,'breath_mantle',1,3,0,0,50,30,1800,0),
+    (15487,'high_breath_mantle',1,3,0,0,50,30,1800,0),
+    (15505,'dhalmel_whistle',1,1,0,0,25,30,900,0),
+    (15507,'purgatory_collar',1,10,0,0,20,30,900,0),
+    (15526,'regen_collar',1,3,0,0,50,30,600,0),
+    (15533,'chocobo_whistle',1,8,0,0,25,30,300,0),
+    (15541,'homing_ring',1,8,80,0,30,30,3600,0),
+    (15542,'return_ring',1,8,80,0,10,30,3600,0),
+    (15552,'albatross_ring',1,3,0,0,30,30,72000,0),
+    (15553,'penguin_ring',1,3,0,0,30,30,72000,0),
+    (15554,'pelican_ring',1,3,0,0,180,30,1200,0),
+    (15555,'albatross_ring',1,3,0,0,180,30,1200,0),
+    (15556,'penguin_ring',1,3,0,0,180,30,1200,0),
+    (15558,'mighty_ring',1,3,0,0,50,30,1800,0),
+    (15559,'vision_ring',1,3,0,0,50,30,1800,0),
+    (15560,'troopers_ring',1,4,0,0,15,30,3600,0),
+    (15596,'hydra_tights',1,3,24,0,1,30,72000,0),
+    (15610,'sturdy_trousers',1,3,0,0,50,30,1800,0),
+    (15611,'sturdy_slacks',1,3,0,0,50,30,1800,0),
+    (15650,'shock_subligar',1,3,0,0,50,30,300,0),
+    (15651,'ice_trousers',1,3,25,0,50,30,300,0),
+    (15652,'blaze_hose',1,3,28,0,50,30,300,0),
+    (15681,'hydra_spats',1,3,24,0,1,30,72000,0),
+    (15698,'sneaking_boots',1,6,24,0,15,30,3600,0),
+    (15708,'earth_greaves',1,7,29,0,20,30,60,0),
+    (15753,'dream_boots_+1',1,6,24,0,1,30,7200,0),
+    (15754,'sprinters_shoes',1,5,24,0,15,15,300,0),
+    (15761,'chariot_band',1,3,76,0,7,5,900,0),
+    (15762,'empress_band',1,3,76,0,7,5,900,0),
+    (15763,'emperor_band',1,3,76,0,3,5,900,0),
+    (15769,'olduum_ring',1,3,79,0,1,30,72000,0),
+    (15770,'random_ring',1,3,0,0,50,30,1800,0),
+    (15782,'manashell_ring',1,3,32,0,50,30,1800,0),
+    (15783,'armored_ring',1,3,0,0,50,30,1800,0),
+    (15793,'anniversary_ring',1,3,76,0,10,15,3600,0),
+    (15817,'ecphoria_ring',1,3,0,0,100,30,300,0),
+    (15834,'blind_ring',20,2,70,0,100,30,60,0),
+    (15838,'protect_ring',1,3,30,0,30,30,1800,0),
+    (15840,'kupofrieds_ring',1,3,76,0,11,5,900,0),
+    (15841,'recall_ring_jugner',1,8,79,5,10,30,3600,0),
+    (15842,'recall_ring_pashhow',1,8,79,5,10,30,3600,0),
+    (15843,'recall_ring_meriphataud',1,8,79,5,10,30,3600,0),
+    (15860,'gyokuto_obi',1,1,0,0,1,30,3600,0),
+    (15861,'deductive_brocade_obi',1,2,0,0,30,30,600,0),
+    (15862,'enthralling_brocade_obi',1,2,0,0,30,30,600,0),
+    (15863,'samsonian_belt',1,2,0,0,30,30,600,0),
+    (15864,'tough_belt',1,2,0,0,30,30,600,0),
+    (15865,'runners_belt',1,2,0,0,30,30,600,0),
+    (15866,'acrobats_belt',1,2,0,0,30,30,600,0),
+    (15867,'sultans_belt',1,2,0,0,30,30,600,0),
+    (15868,'czars_belt',1,2,0,0,30,30,600,0),
+    (15869,'pendragons_belt',1,2,0,0,30,30,600,0),
+    (15870,'maharajas_belt',1,2,0,0,30,30,600,0),
+    (15880,'key_ring_belt',1,2,0,0,5,30,1800,0),
+    (15881,'talisman_obi',1,3,0,0,50,30,1800,0),
+    (15889,'augmenting_belt',1,3,0,0,50,30,1800,0),
+    (15912,'lieutenants_sash',1,3,0,0,100,30,900,0),
+    (15919,'drovers_belt',1,1,0,0,1,30,3600,0),
+    (15921,'detonator_belt',1,1,0,0,1,30,3600,0),
+    (15926,'bronze_bandolier',1,2,0,0,50,30,86400,0),
+    (15927,'pinwheel_belt',1,2,0,0,50,30,86400,0),
+    (15929,'goblin_belt',1,1,0,0,1,30,3600,0),
+    (15933,'stirge_belt',1,1,55,0,30,15,600,0),
+    (15956,'temple_knights_quiver',1,1,55,0,1,30,604800,0),
+    (15957,'iron_musketeers_quiver',1,1,55,0,1,30,604800,0),
+    (15958,'combat_casters_quiver',1,1,55,0,1,30,604800,0),
+    (15998,'koccos_earring',1,8,0,0,5,30,60,0),
+    (16003,'raising_earring',1,8,0,0,10,30,600,0),
+    (16007,'protect_earring',1,2,0,0,100,30,900,0),
+    (16012,'mamool_ja_earring',1,16,0,0,30,30,43200,0),
+    (16039,'kingdom_earring',1,8,79,0,30,30,3600,0),
+    (16040,'republic_earring',1,8,79,0,30,30,3600,0),
+    (16041,'federation_earring',1,8,79,0,30,30,3600,0),
+    (16042,'duchy_earring',1,8,79,0,30,30,3600,0),
+    (16043,'selbina_earring',1,8,79,0,30,30,3600,0),
+    (16044,'mhaura_earring',1,8,79,0,30,30,3600,0),
+    (16045,'rabao_earring',1,8,79,0,30,30,3600,0),
+    (16046,'kazham_earring',1,8,79,0,30,30,3600,0),
+    (16047,'norg_earring',1,8,79,0,30,30,3600,0),
+    (16048,'safehold_earring',1,8,79,0,30,30,3600,0),
+    (16049,'empire_earring',1,8,79,0,30,30,3600,0),
+    (16050,'nashmau_earring',1,8,79,0,30,30,3600,0),
+    (16071,'kawahori_kabuto',1,2,0,0,50,30,1800,0),
+    (16077,'megrim_crown',1,8,0,0,50,30,2700,0),
+    (16078,'blissful_chapeau',1,4,32,0,30,30,600,0),
+    (16118,'moogle_cap',1,8,79,0,1,30,72000,1),
+    (16119,'nomad_cap',1,8,79,0,1,30,72000,1),
+    (16120,'redeyes',1,2,0,0,1,30,86400,0),
+    (16145,'lunar_cap',1,3,0,0,1,15,3600,0),
+    (16153,'reikyo_hairpin',20,3,0,0,50,30,900,0),
+    (16182,'town_moogle_shield',1,5,0,0,1,15,57600,0),
+    (16183,'nomad_moogle_shield',1,5,0,0,1,15,57600,0),
+    (16223,'orange_au_lait_tank',1,1,55,0,8,30,60,0),
+    (16224,'apple_au_lait_tank',1,1,55,0,8,30,60,0),
+    (16225,'pear_au_lait_tank',1,1,55,0,8,30,60,0),
+    (16226,'pamama_au_lait_tank',1,1,55,0,8,30,60,0),
+    (16227,'persikos_au_lait_tank',1,1,55,0,5,30,60,0),
+    (16230,'lieutenants_cape',1,8,34,0,100,30,1800,0),
+    (16243,'drovers_mantle',1,1,0,0,15,10,10,0),
+    (16249,'elixir_tank',1,2,55,0,4,30,60,0),
+    (16251,'casaba_melon_tank',1,2,55,0,50,30,60,0),
+    (16257,'ghost_cape',1,1,0,0,30,15,600,0),
+    (16273,'chocobo_pullus_torque',1,1,0,0,1,30,3600,0),
+    (16285,'pendant_compass',1,1,0,0,10,5,10,0),
+    (16550,'hallowed_sword',1,3,7,0,30,30,300,0),
+    (16603,'halo_claymore',1,3,0,0,100,30,600,0),
+    (16613,'spirit_sword',1,3,78,0,100,30,600,0),
+    (16858,'sacred_lance',1,3,78,0,30,30,300,0),
+    (16954,'pealing_nagan',20,1,0,0,50,30,600,0),
+    (17040,'warp_cudgel',1,8,80,3,30,3,60,0),
+    (17468,'raise_rod',9,3,33,0,20,30,60,0),
+    (17469,'raise_ii_rod',9,4,33,0,20,30,60,0),
+    (17470,'pealing_buzdygan',20,1,0,0,50,30,600,0),
+    (17583,'kingdom_signet_staff',29,1,52,0,25,30,10,0),
+    (17584,'republic_signet_staff',29,1,52,0,25,30,10,0),
+    (17585,'federation_signet_staff',29,1,52,0,25,30,10,0),
+    (17587,'trick_staff_ii',1,2,0,0,10,30,3600,0),
+    (17588,'treat_staff_ii',1,2,0,0,1,30,72000,0),
+    (17592,'kinkobo',1,2,0,0,20,30,1800,0),
+    (17596,'steel-splitter',20,1,0,0,50,30,600,0),
+    (17624,'anubiss_knife',1,1,0,0,50,30,1800,0),
+    (17625,'ponderous_gully',20,1,0,0,50,30,600,0),
+    (17682,'sacred_sword',1,3,0,0,30,30,300,0),
+    (17683,'sacred_degen',1,3,0,0,30,30,300,0),
+    (17703,'pealing_anelace',20,1,0,0,50,30,600,0),
+    (17704,'vulcan_sword',1,3,0,0,30,30,300,0),
+    (17705,'vulcan_degen',1,3,0,0,30,30,300,0),
+    (17706,'vulcan_blade',1,3,0,0,30,30,300,0),
+    (17748,'ibushi_shinai',1,0,10,0,1,10,15,0),
+    (17797,'seito',1,1,0,0,15,30,600,0),
+    (17826,'messhikimaru',1,0,0,0,30,30,600,0),
+    (17828,'koen',1,3,0,0,30,30,300,0),
+    (17949,'furnace_tabarzin',20,1,0,0,50,30,600,0),
+    (17954,'jolt_axe',1,3,0,0,50,30,1800,0),
+    (17957,'navy_axe',1,3,0,0,100,30,600,0),
+    (17961,'lion_tamer',1,3,0,0,50,30,300,0),
+    (18008,'hushed_dagger',1,1,0,0,15,30,600,0),
+    (18010,'melt_dagger',1,1,0,0,15,30,600,0),
+    (18011,'melt_knife',1,1,0,0,15,30,600,0),
+    (18012,'melt_baselard',1,1,0,0,15,30,600,0),
+    (18013,'melt_kukri',1,1,0,0,15,30,600,0),
+    (18029,'piercing_dagger',1,3,0,0,50,30,1800,0),
+    (18035,'deathbone_knife',1,3,0,0,100,30,600,0),
+    (18060,'blizzard_scythe',20,1,0,0,50,30,600,0),
+    (18062,'lucent_scythe',1,3,0,0,50,30,1800,0),
+    (18067,'keen_zaghnal',1,3,0,0,50,30,1800,0),
+    (18095,'dispel_couse',20,2,0,0,50,30,30,0),
+    (18107,'ponderous_lance',20,1,0,0,50,30,600,0),
+    (18108,'lucent_lance',1,3,0,0,50,30,1800,0),
+    (18117,'gimlet_spear',1,3,0,0,50,30,1800,0),
+    (18122,'broach_lance',1,3,0,0,100,30,600,0),
+    (18216,'twicer',1,3,0,0,20,30,300,0),
+    (18220,'prominence_axe',1,3,0,0,30,30,300,0),
+    (18225,'blizzard_toporok',20,1,0,0,50,30,600,0),
+    (18231,'death_chakram',1,3,0,0,20,30,1800,0),
+    (18239,'healing_feather',1,3,30,0,20,30,1800,0),
+    (18240,'spirit_lantern',1,3,0,0,20,30,1800,0),
+    (18241,'vial_of_refresh_musk',1,3,33,0,20,30,1800,0),
+    (18242,'bag_of_wyvern_feed',1,3,0,0,20,30,1800,0),
+    (18243,'astral_pot',1,3,0,0,20,30,1800,0),
+    (18355,'hushed_baghnakhs',1,1,0,0,15,30,600,0),
+    (18357,'melt_claws',1,1,0,0,15,30,600,0),
+    (18361,'ponderous_manoples',20,1,0,0,50,30,600,0),
+    (18379,'vulcan_claymore',1,3,0,0,30,30,300,0),
+    (18381,'prominence_sword',1,3,0,0,30,30,300,0),
+    (18384,'lucent_sword',1,3,0,0,50,30,1800,0),
+    (18391,'sacred_mace',1,3,0,0,30,30,300,0),
+    (18392,'sacred_maul',1,3,0,0,30,30,300,0),
+    (18393,'sacred_wand',1,3,0,0,30,30,300,0),
+    (18398,'raphaels_rod',1,2,0,0,8,30,120,0),
+    (18399,'charm_wand',4,2,0,0,10,30,86400,0),
+    (18400,'charm_wand_+1',4,2,0,0,1,30,432000,0),
+    (18401,'moogle_rod',4,3,0,0,1,30,72000,0),
+    (18402,'mana_wand',1,3,32,0,50,30,1800,0),
+    (18403,'high_mana_wand',1,3,33,0,50,30,1800,0),
+    (18410,'melt_katana',1,1,0,0,15,30,600,0),
+    (18415,'tojaku',20,1,0,0,50,30,600,0),
+    (18427,'hanafubuki',1,3,0,0,100,30,600,0),
+    (18433,'kagiroi',4,1,0,0,50,30,600,0),
+    (18444,'tsurugitachi',1,3,0,0,100,30,600,0),
+    (18481,'lucent_axe',1,3,0,0,50,30,1800,0),
+    (18488,'assailants_axe',1,3,0,0,50,30,1800,0),
+    (18493,'regiment_kheten',1,3,0,0,100,30,600,0),
+    (18551,'twilight_scythe',1,1,0,0,1,10,600,0),
+    (18581,'carbuncles_pole',1,1,0,0,30,30,600,0),
+    (18586,'flexible_pole',1,3,0,0,50,30,1800,0),
+    (18591,'pastoral_staff',1,3,0,0,100,30,600,0),
+    (18612,'ram_staff',1,8,80,0,1,30,86400,0),
+    (18613,'fourth_staff',1,8,80,0,1,30,86400,0),
+    (18614,'cobra_staff',1,8,80,0,1,30,86400,0),
+    (18679,'soulgauger_sgr-1',20,0,0,0,12,10,30,0),
+    (18692,'mamoolbane',1,3,0,0,15,30,86400,0),
+    (18693,'lamiabane',1,3,0,0,15,30,3600,0),
+    (18694,'trollbane',1,3,0,0,15,30,86400,0),
+    (18721,'soultrapper',20,0,104,0,12,10,60,0),
+    (18724,'soultrapper_2000',20,0,104,0,48,10,30,0),
+    (18747,'smash_cesti',1,3,0,0,50,30,1800,0),
+    (18755,'noble_himantes',1,3,0,0,100,30,600,0),
+    (18842,'nomad_moogle_rod',4,3,0,0,50,30,72000,0),
+    (18844,'miracle_wand',4,3,0,0,10,30,7200,0),
+    (18845,'miracle_wand_+1',4,3,0,0,1,30,432000,0),
+    (18853,'spirit_maul',1,3,0,0,100,30,600,0),
+    (18867,'daedalus_hammer',1,3,0,0,50,30,1800,0),
+    (18871,'kitty_rod',1,0,0,0,1,30,3600,0),
+    (18879,'rounsey_wand',1,8,0,0,1,30,604800,0),
+    (18880,'maestros_baton',1,1,0,0,1,30,3600,0),
+    (18881,'melomane_mallet',1,1,0,0,1,30,3600,0),
+    (18945,'jet_sickle',1,3,0,0,100,30,600,0),
+    (19181,'moogles_largesse',1,12,0,0,9,10,259200,0),
+    (19204,'fiendtrapper',20,0,0,0,12,10,30,0),
+    (19246,'moggiebag',1,3,0,0,8,10,259200,0),
+    (21074,'kupo_rod',1,3,55,0,1,30,72000,0),
+--     (20533,'worm_feelers_+1',1,1,55,0,1,30,86400,0), -- item's lua still needs made
+--     (20568,'wind_knife_+1',4,1,0,0,1,30,600,0), -- untested
+    (20953,'escritorio',1,1,55,0,1,30,86400,0), -- Dispenses: Cone Calamary
+    (21266,'gastraphetes',1,1,55,0,1,10,3600,0),
+    (21267,'annihilator',1,1,55,0,1,10,3600,0),
+    (21268,'death_penalty',1,1,55,0,1,10,3600,0),
+    (21269,'armageddon',1,1,55,0,1,10,3600,0),
+    (21868,'sha_wujings_la._+1',1,55,0,0,1,30,72000,0), -- Dispenses: Distilled Water x 12
+--     (22018,'seika_uchiwa_+1',1,1,55,0,1,30,300,0),  -- Enchantment: Cool Breeze
+--     (22020,'jingly_rod_+1',1,1,55,0,1,30,3600,0),   -- Costume: lamb or Chacharoon
+    (22115,'yoichinoyumi',1,1,55,0,1,10,3600,0),
+    (22116,'gandiva',1,1,55,0,1,10,3600,0),
+    (22117,'fail-not',1,1,55,0,1,10,3600,0),
+    (22129,'yoichinoyumi',1,1,55,0,1,10,3600,0),
+    (22130,'gandiva',1,1,55,0,1,10,3600,0),
+    (22131,'fail-not',1,1,55,0,1,10,3600,0),
+    (22139,'gastraphetes',1,1,55,0,1,10,3600,0),
+    (22140,'annihilator',1,1,55,0,1,10,3600,0),
+    (22141,'death_penalty',1,1,55,0,1,10,3600,0),
+    (22142,'armageddon',1,1,55,0,1,10,3600,0),
+    (22143,'fomalhaut',1,1,55,0,1,10,3600,0),
+--     (22288,'mandragora_pouch',1,2,55,0,1,10,216000,0),  -- Enchantment: Tiny Allowance (Enchantment gives a random small amount of gil (<2,000))
+    (25585,'black_chocobo_cap',1,8,79,0,1,30,72000,0),
+    (25658,'wyrmking_masque_+1',1,1,55,0,1,30,72000,0),
+    (25757,'wyrmking_suit_+1',1,8,79,0,1,30,3600,0),
+    (25679,'white_rarab_cap_+1',1,8,33,0,1,30,72000,0),
+    (25774,'fancy_gilet',1,2,55,0,1,30,86400,0), -- Dispense: persikos snow cone
+    (25775,'fancy_top',1,2,55,0,1,30,86400,0), -- Dispense: persikos snow cone
+    (26164,'caliber_ring',1,3,76,0,3,5,900,0),
+    (26165,'facility_ring',1,3,76,0,3,5,900,0),
+    (26271,'hi-elixir_tank',1,2,55,0,3,30,60,0),
+    (26272,'super_reraiser_tank',1,2,55,0,5,30,60,0),
+    (26517,'shadow_lord_shirt',1,8,79,0,1,30,72000,0),
+    (26720,'sheep_cap_+1',1,2,55,0,1,30,86400,0),
+    (26788,'rabbit_cap',1,1,55,8,1,30,72000,0),
+    (26955,'behemoth_suit_+1',1,2,55,0,1,30,72000,0),
+    (27556,'echad_ring',1,3,76,0,1,5,7200,0),
+    (27557,'trizek_ring',1,3,76,0,1,5,7200,0),
+    (27726,'she_slime_hat',1,2,55,0,1,30,86400,0),
+    (27727,'metal_slime_hat',1,2,55,0,1,30,86400,0),
+    (27756,'slime_cap',1,2,55,0,1,30,86400,0),
+    (28469,'endorsement_ring',1,3,76,0,1,5,7200,0),
+    (28528,'undecennial_ring',1,3,76,0,11,15,3600,0),
+    (28540,'warp_ring',1,8,80,3,1,8,600,0),
+    (28546,'capacity_ring',1,3,76,0,7,5,900,0),
+    (28562,'duodecennial_ring',1,3,76,0,12,15,3600,0),
+    (28563,'vocation_ring',1,3,76,0,12,15,3600,0),
+    (28568,'resolution_ring',1,3,76,0,5,5,900,0),
+    (28569,'expertise_ring',1,3,76,0,10,5,900,0),
+    (28652,'hatchling_shield',1,1,55,8,1,30,86400,0)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `name` = IF(`name` <> VALUES(`name`), VALUES(`name`), `name`),
+    `validTargets` = IF(`validTargets` <> VALUES(`validTargets`), VALUES(`validTargets`), `validTargets`),
+    `activation` = IF(`activation` <> VALUES(`activation`), VALUES(`activation`), `activation`),
+    `animation` = IF(`animation` <> VALUES(`animation`), VALUES(`animation`), `animation`),
+    `animationTime` = IF(`animationTime` <> VALUES(`animationTime`), VALUES(`animationTime`), `animationTime`),
+    `maxCharges` = IF(`maxCharges` <> VALUES(`maxCharges`), VALUES(`maxCharges`), `maxCharges`),
+    `useDelay` = IF(`useDelay` <> VALUES(`useDelay`), VALUES(`useDelay`), `useDelay`),
+    `reuseDelay` = IF(`reuseDelay` <> VALUES(`reuseDelay`), VALUES(`reuseDelay`), `reuseDelay`),
+    `aoe` = IF(`aoe` <> VALUES(`aoe`), VALUES(`aoe`), `aoe`)
+;
 
 /*!40000 ALTER TABLE `item_usable` ENABLE KEYS */;
 UNLOCK TABLES;

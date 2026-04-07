@@ -30,94 +30,117 @@ CREATE TABLE `instance_entities` (
 LOCK TABLES `instance_entities` WRITE;
 /*!40000 ALTER TABLE `instance_entities` DISABLE KEYS */;
 
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- -----------------------------------------------------------
 -- Ilrusi Atoll (Zone 55)
 -- -----------------------------------------------------------
 
 -- Golden Salvage
 -- mobs
-INSERT INTO `instance_entities` VALUES (5500,17002497);
-INSERT INTO `instance_entities` VALUES (5500,17002498);
-INSERT INTO `instance_entities` VALUES (5500,17002499);
-INSERT INTO `instance_entities` VALUES (5500,17002500);
-INSERT INTO `instance_entities` VALUES (5500,17002501);
-INSERT INTO `instance_entities` VALUES (5500,17002502);
-INSERT INTO `instance_entities` VALUES (5500,17002503);
-INSERT INTO `instance_entities` VALUES (5500,17002504);
-INSERT INTO `instance_entities` VALUES (5500,17002505);
-INSERT INTO `instance_entities` VALUES (5500,17002506);
-INSERT INTO `instance_entities` VALUES (5500,17002507);
-INSERT INTO `instance_entities` VALUES (5500,17002508);
-INSERT INTO `instance_entities` VALUES (5500,17002509);
-INSERT INTO `instance_entities` VALUES (5500,17002510);
-INSERT INTO `instance_entities` VALUES (5500,17002511);
-INSERT INTO `instance_entities` VALUES (5500,17002512);
-INSERT INTO `instance_entities` VALUES (5500,17002513);
-INSERT INTO `instance_entities` VALUES (5500,17002514);
-INSERT INTO `instance_entities` VALUES (5500,17002515);
-INSERT INTO `instance_entities` VALUES (5500,17002516);
+    (5500,17002497),
+    (5500,17002498),
+    (5500,17002499),
+    (5500,17002500),
+    (5500,17002501),
+    (5500,17002502),
+    (5500,17002503),
+    (5500,17002504),
+    (5500,17002505),
+    (5500,17002506),
+    (5500,17002507),
+    (5500,17002508),
+    (5500,17002509),
+    (5500,17002510),
+    (5500,17002511),
+    (5500,17002512),
+    (5500,17002513),
+    (5500,17002514),
+    (5500,17002515),
+    (5500,17002516),
 -- npcs
-INSERT INTO `instance_entities` VALUES (5500,17002654);
-INSERT INTO `instance_entities` VALUES (5500,17002655);
-INSERT INTO `instance_entities` VALUES (5500,17002720);
-INSERT INTO `instance_entities` VALUES (5500,17002724);
-INSERT INTO `instance_entities` VALUES (5500,17002725);
-INSERT INTO `instance_entities` VALUES (5500,17002731);
-INSERT INTO `instance_entities` VALUES (5500,17002732);
-INSERT INTO `instance_entities` VALUES (5500,17002752);
-INSERT INTO `instance_entities` VALUES (5500,17002753);
+    (5500,17002654),
+    (5500,17002655),
+    (5500,17002720),
+    (5500,17002724),
+    (5500,17002725),
+    (5500,17002731),
+    (5500,17002732),
+    (5500,17002752),
+    (5500,17002753),
 
 -- Lamia No. 13
 -- mobs
-INSERT INTO `instance_entities` VALUES (5501,17002517);
-INSERT INTO `instance_entities` VALUES (5501,17002518);
-INSERT INTO `instance_entities` VALUES (5501,17002519);
-INSERT INTO `instance_entities` VALUES (5501,17002520);
+    (5501,17002517),
+    (5501,17002518),
+    (5501,17002519),
+    (5501,17002520),
 -- npc
-INSERT INTO `instance_entities` VALUES (5501,17002654);
-INSERT INTO `instance_entities` VALUES (5501,17002655);
-INSERT INTO `instance_entities` VALUES (5501,17002719);
-INSERT INTO `instance_entities` VALUES (5501,17002720);
-INSERT INTO `instance_entities` VALUES (5501,17002744);
-INSERT INTO `instance_entities` VALUES (5501,17002745);
+    (5501,17002654),
+    (5501,17002655),
+    (5501,17002719),
+    (5501,17002720),
+    (5501,17002744),
+    (5501,17002745),
 
 -- Extermination
 -- mobs
-INSERT INTO `instance_entities` VALUES (5502,17002521);
-INSERT INTO `instance_entities` VALUES (5502,17002522);
-INSERT INTO `instance_entities` VALUES (5502,17002523);
-INSERT INTO `instance_entities` VALUES (5502,17002524);
-INSERT INTO `instance_entities` VALUES (5502,17002525);
-INSERT INTO `instance_entities` VALUES (5502,17002526);
-INSERT INTO `instance_entities` VALUES (5502,17002527);
-INSERT INTO `instance_entities` VALUES (5502,17002528);
-INSERT INTO `instance_entities` VALUES (5502,17002529);
-INSERT INTO `instance_entities` VALUES (5502,17002530);
-INSERT INTO `instance_entities` VALUES (5502,17002531);
-INSERT INTO `instance_entities` VALUES (5502,17002532);
-INSERT INTO `instance_entities` VALUES (5502,17002533);
-INSERT INTO `instance_entities` VALUES (5502,17002534);
-INSERT INTO `instance_entities` VALUES (5502,17002535);
-INSERT INTO `instance_entities` VALUES (5502,17002536);
-INSERT INTO `instance_entities` VALUES (5502,17002537);
-INSERT INTO `instance_entities` VALUES (5502,17002538);
-INSERT INTO `instance_entities` VALUES (5502,17002539);
-INSERT INTO `instance_entities` VALUES (5502,17002540);
-INSERT INTO `instance_entities` VALUES (5502,17002541);
-INSERT INTO `instance_entities` VALUES (5502,17002542);
-INSERT INTO `instance_entities` VALUES (5502,17002543);
-INSERT INTO `instance_entities` VALUES (5502,17002544);
+    (5502,17002521),
+    (5502,17002522),
+    (5502,17002523),
+    (5502,17002524),
+    (5502,17002525),
+    (5502,17002526),
+    (5502,17002527),
+    (5502,17002528),
+    (5502,17002529),
+    (5502,17002530),
+    (5502,17002531),
+    (5502,17002532),
+    (5502,17002533),
+    (5502,17002534),
+    (5502,17002535),
+    (5502,17002536),
+    (5502,17002537),
+    (5502,17002538),
+    (5502,17002539),
+    (5502,17002540),
+    (5502,17002541),
+    (5502,17002542),
+    (5502,17002543),
+    (5502,17002544),
 -- npcs
-INSERT INTO `instance_entities` VALUES (5502,17002654);
-INSERT INTO `instance_entities` VALUES (5502,17002655);
-INSERT INTO `instance_entities` VALUES (5502,17002719);
-INSERT INTO `instance_entities` VALUES (5502,17002726);
-INSERT INTO `instance_entities` VALUES (5502,17002731);
-INSERT INTO `instance_entities` VALUES (5502,17002733);
-INSERT INTO `instance_entities` VALUES (5502,17002734);
-INSERT INTO `instance_entities` VALUES (5502,17002746);
-INSERT INTO `instance_entities` VALUES (5502,17002748);
-INSERT INTO `instance_entities` VALUES (5502,17002755);
+    (5502,17002654),
+    (5502,17002655),
+    (5502,17002719),
+    (5502,17002726),
+    (5502,17002731),
+    (5502,17002733),
+    (5502,17002734),
+    (5502,17002746),
+    (5502,17002748),
+    (5502,17002755),
 
 -- ------------------------------------------------------------
 -- Periqia (Zone 56)
@@ -125,89 +148,89 @@ INSERT INTO `instance_entities` VALUES (5502,17002755);
 
 -- Shades of Vengeance
 -- mobs
-INSERT INTO `instance_entities` VALUES (5600,17006754);
-INSERT INTO `instance_entities` VALUES (5600,17006755);
-INSERT INTO `instance_entities` VALUES (5600,17006756);
-INSERT INTO `instance_entities` VALUES (5600,17006757);
-INSERT INTO `instance_entities` VALUES (5600,17006758);
-INSERT INTO `instance_entities` VALUES (5600,17006759);
-INSERT INTO `instance_entities` VALUES (5600,17006760);
-INSERT INTO `instance_entities` VALUES (5600,17006761);
-INSERT INTO `instance_entities` VALUES (5600,17006762);
-INSERT INTO `instance_entities` VALUES (5600,17006763);
+    (5600,17006754),
+    (5600,17006755),
+    (5600,17006756),
+    (5600,17006757),
+    (5600,17006758),
+    (5600,17006759),
+    (5600,17006760),
+    (5600,17006761),
+    (5600,17006762),
+    (5600,17006763),
 
 -- Seagull Grounded
 -- mobs
-INSERT INTO `instance_entities` VALUES (5601,17006593);
-INSERT INTO `instance_entities` VALUES (5601,17006594);
-INSERT INTO `instance_entities` VALUES (5601,17006595);
-INSERT INTO `instance_entities` VALUES (5601,17006596);
-INSERT INTO `instance_entities` VALUES (5601,17006597);
-INSERT INTO `instance_entities` VALUES (5601,17006598);
-INSERT INTO `instance_entities` VALUES (5601,17006599);
-INSERT INTO `instance_entities` VALUES (5601,17006600);
-INSERT INTO `instance_entities` VALUES (5601,17006601);
-INSERT INTO `instance_entities` VALUES (5601,17006602);
-INSERT INTO `instance_entities` VALUES (5601,17006603);
-INSERT INTO `instance_entities` VALUES (5601,17006604);
-INSERT INTO `instance_entities` VALUES (5601,17006605);
-INSERT INTO `instance_entities` VALUES (5601,17006606);
-INSERT INTO `instance_entities` VALUES (5601,17006607);
-INSERT INTO `instance_entities` VALUES (5601,17006608);
-INSERT INTO `instance_entities` VALUES (5601,17006610);
-INSERT INTO `instance_entities` VALUES (5601,17006611);
+    (5601,17006593),
+    (5601,17006594),
+    (5601,17006595),
+    (5601,17006596),
+    (5601,17006597),
+    (5601,17006598),
+    (5601,17006599),
+    (5601,17006600),
+    (5601,17006601),
+    (5601,17006602),
+    (5601,17006603),
+    (5601,17006604),
+    (5601,17006605),
+    (5601,17006606),
+    (5601,17006607),
+    (5601,17006608),
+    (5601,17006610),
+    (5601,17006611),
 -- npcs
-INSERT INTO `instance_entities` VALUES (5601,17006809);
-INSERT INTO `instance_entities` VALUES (5601,17006810);
-INSERT INTO `instance_entities` VALUES (5601,17006837);
-INSERT INTO `instance_entities` VALUES (5601,17006842);
-INSERT INTO `instance_entities` VALUES (5601,17006843);
-INSERT INTO `instance_entities` VALUES (5601,17006844);
-INSERT INTO `instance_entities` VALUES (5601,17006846);
-INSERT INTO `instance_entities` VALUES (5601,17006847);
-INSERT INTO `instance_entities` VALUES (5601,17006849);
-INSERT INTO `instance_entities` VALUES (5601,17006853);
-INSERT INTO `instance_entities` VALUES (5601,17006869);
-INSERT INTO `instance_entities` VALUES (5601,17006871);
-INSERT INTO `instance_entities` VALUES (5601,17006873);
-INSERT INTO `instance_entities` VALUES (5601,17006875);
-INSERT INTO `instance_entities` VALUES (5601,17006877);
-INSERT INTO `instance_entities` VALUES (5601,17006879);
+    (5601,17006809),
+    (5601,17006810),
+    (5601,17006837),
+    (5601,17006842),
+    (5601,17006843),
+    (5601,17006844),
+    (5601,17006846),
+    (5601,17006847),
+    (5601,17006849),
+    (5601,17006853),
+    (5601,17006869),
+    (5601,17006871),
+    (5601,17006873),
+    (5601,17006875),
+    (5601,17006877),
+    (5601,17006879),
 
 -- Requiem
 -- mobs
-INSERT INTO `instance_entities` VALUES (5602,17006612);
-INSERT INTO `instance_entities` VALUES (5602,17006613);
-INSERT INTO `instance_entities` VALUES (5602,17006614);
-INSERT INTO `instance_entities` VALUES (5602,17006615);
-INSERT INTO `instance_entities` VALUES (5602,17006616);
-INSERT INTO `instance_entities` VALUES (5602,17006617);
-INSERT INTO `instance_entities` VALUES (5602,17006618);
-INSERT INTO `instance_entities` VALUES (5602,17006619);
-INSERT INTO `instance_entities` VALUES (5602,17006620);
-INSERT INTO `instance_entities` VALUES (5602,17006621);
-INSERT INTO `instance_entities` VALUES (5602,17006622);
-INSERT INTO `instance_entities` VALUES (5602,17006623);
-INSERT INTO `instance_entities` VALUES (5602,17006624);
-INSERT INTO `instance_entities` VALUES (5602,17006625);
-INSERT INTO `instance_entities` VALUES (5602,17006626);
-INSERT INTO `instance_entities` VALUES (5602,17006627);
-INSERT INTO `instance_entities` VALUES (5602,17006628);
-INSERT INTO `instance_entities` VALUES (5602,17006629);
-INSERT INTO `instance_entities` VALUES (5602,17006630);
-INSERT INTO `instance_entities` VALUES (5602,17006631);
-INSERT INTO `instance_entities` VALUES (5602,17006632);
-INSERT INTO `instance_entities` VALUES (5602,17006633);
-INSERT INTO `instance_entities` VALUES (5602,17006634);
+    (5602,17006612),
+    (5602,17006613),
+    (5602,17006614),
+    (5602,17006615),
+    (5602,17006616),
+    (5602,17006617),
+    (5602,17006618),
+    (5602,17006619),
+    (5602,17006620),
+    (5602,17006621),
+    (5602,17006622),
+    (5602,17006623),
+    (5602,17006624),
+    (5602,17006625),
+    (5602,17006626),
+    (5602,17006627),
+    (5602,17006628),
+    (5602,17006629),
+    (5602,17006630),
+    (5602,17006631),
+    (5602,17006632),
+    (5602,17006633),
+    (5602,17006634),
 -- npcs
-INSERT INTO `instance_entities` VALUES (5602,17006809);
-INSERT INTO `instance_entities` VALUES (5602,17006810);
-INSERT INTO `instance_entities` VALUES (5602,17006857);
-INSERT INTO `instance_entities` VALUES (5602,17006869);
-INSERT INTO `instance_entities` VALUES (5602,17006881);
-INSERT INTO `instance_entities` VALUES (5602,17006882);
-INSERT INTO `instance_entities` VALUES (5602,17006883);
-INSERT INTO `instance_entities` VALUES (5602,17006893);
+    (5602,17006809),
+    (5602,17006810),
+    (5602,17006857),
+    (5602,17006869),
+    (5602,17006881),
+    (5602,17006882),
+    (5602,17006883),
+    (5602,17006893),
 
 -- ------------------------------------------------------------
 -- The Ashu Talif (Zone 60)
@@ -215,22 +238,22 @@ INSERT INTO `instance_entities` VALUES (5602,17006893);
 
 -- The Black Coffin
 -- npcs
-INSERT INTO `instance_entities` VALUES (6000,17022979);
+    (6000,17022979),
 -- mobs
-INSERT INTO `instance_entities` VALUES (6000,17022980);
-INSERT INTO `instance_entities` VALUES (6000,17022981);
-INSERT INTO `instance_entities` VALUES (6000,17022982);
-INSERT INTO `instance_entities` VALUES (6000,17022983);
-INSERT INTO `instance_entities` VALUES (6000,17022984);
-INSERT INTO `instance_entities` VALUES (6000,17022985);
-INSERT INTO `instance_entities` VALUES (6000,17022986);
-INSERT INTO `instance_entities` VALUES (6000,17022987);
-INSERT INTO `instance_entities` VALUES (6000,17022988);
-INSERT INTO `instance_entities` VALUES (6000,17022989);
+    (6000,17022980),
+    (6000,17022981),
+    (6000,17022982),
+    (6000,17022983),
+    (6000,17022984),
+    (6000,17022985),
+    (6000,17022986),
+    (6000,17022987),
+    (6000,17022988),
+    (6000,17022989),
 
 -- Against All Odds COR AF2
-INSERT INTO `instance_entities` VALUES (6001,17022977);
-INSERT INTO `instance_entities` VALUES (6001,17022978);
+    (6001,17022977),
+    (6001,17022978),
 
 -- ------------------------------------------------------------
 -- Lebros Cavern (Zone 63)
@@ -238,199 +261,205 @@ INSERT INTO `instance_entities` VALUES (6001,17022978);
 
 -- Excavation Duty
 -- mobs
-INSERT INTO `instance_entities` VALUES (6300,17035265);
-INSERT INTO `instance_entities` VALUES (6300,17035266);
-INSERT INTO `instance_entities` VALUES (6300,17035267);
-INSERT INTO `instance_entities` VALUES (6300,17035268);
-INSERT INTO `instance_entities` VALUES (6300,17035269);
-INSERT INTO `instance_entities` VALUES (6300,17035270);
-INSERT INTO `instance_entities` VALUES (6300,17035271);
-INSERT INTO `instance_entities` VALUES (6300,17035272);
-INSERT INTO `instance_entities` VALUES (6300,17035273);
-INSERT INTO `instance_entities` VALUES (6300,17035274);
-INSERT INTO `instance_entities` VALUES (6300,17035275);
-INSERT INTO `instance_entities` VALUES (6300,17035276);
-INSERT INTO `instance_entities` VALUES (6300,17035277);
-INSERT INTO `instance_entities` VALUES (6300,17035278);
-INSERT INTO `instance_entities` VALUES (6300,17035279);
-INSERT INTO `instance_entities` VALUES (6300,17035280);
-INSERT INTO `instance_entities` VALUES (6300,17035281);
-INSERT INTO `instance_entities` VALUES (6300,17035282);
-INSERT INTO `instance_entities` VALUES (6300,17035283);
-INSERT INTO `instance_entities` VALUES (6300,17035284);
-INSERT INTO `instance_entities` VALUES (6300,17035285);
-INSERT INTO `instance_entities` VALUES (6300,17035286);
-INSERT INTO `instance_entities` VALUES (6300,17035287);
-INSERT INTO `instance_entities` VALUES (6300,17035288);
-INSERT INTO `instance_entities` VALUES (6300,17035289);
-INSERT INTO `instance_entities` VALUES (6300,17035290);
-INSERT INTO `instance_entities` VALUES (6300,17035291);
+    (6300,17035265),
+    (6300,17035266),
+    (6300,17035267),
+    (6300,17035268),
+    (6300,17035269),
+    (6300,17035270),
+    (6300,17035271),
+    (6300,17035272),
+    (6300,17035273),
+    (6300,17035274),
+    (6300,17035275),
+    (6300,17035276),
+    (6300,17035277),
+    (6300,17035278),
+    (6300,17035279),
+    (6300,17035280),
+    (6300,17035281),
+    (6300,17035282),
+    (6300,17035283),
+    (6300,17035284),
+    (6300,17035285),
+    (6300,17035286),
+    (6300,17035287),
+    (6300,17035288),
+    (6300,17035289),
+    (6300,17035290),
+    (6300,17035291),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6300,17035478);
-INSERT INTO `instance_entities` VALUES (6300,17035479);
-INSERT INTO `instance_entities` VALUES (6300,17035538);
-INSERT INTO `instance_entities` VALUES (6300,17035539);
-INSERT INTO `instance_entities` VALUES (6300,17035540);
-INSERT INTO `instance_entities` VALUES (6300,17035541);
-INSERT INTO `instance_entities` VALUES (6300,17035542);
+    (6300,17035478),
+    (6300,17035479),
+    (6300,17035538),
+    (6300,17035539),
+    (6300,17035540),
+    (6300,17035541),
+    (6300,17035542),
 
 -- Lebros Supplies
 -- mobs
-INSERT INTO `instance_entities` VALUES (6301,17035292);
-INSERT INTO `instance_entities` VALUES (6301,17035293);
-INSERT INTO `instance_entities` VALUES (6301,17035294);
-INSERT INTO `instance_entities` VALUES (6301,17035295);
-INSERT INTO `instance_entities` VALUES (6301,17035296);
-INSERT INTO `instance_entities` VALUES (6301,17035297);
-INSERT INTO `instance_entities` VALUES (6301,17035298);
-INSERT INTO `instance_entities` VALUES (6301,17035299);
-INSERT INTO `instance_entities` VALUES (6301,17035300);
-INSERT INTO `instance_entities` VALUES (6301,17035301);
-INSERT INTO `instance_entities` VALUES (6301,17035302);
-INSERT INTO `instance_entities` VALUES (6301,17035303);
-INSERT INTO `instance_entities` VALUES (6301,17035304);
-INSERT INTO `instance_entities` VALUES (6301,17035305);
-INSERT INTO `instance_entities` VALUES (6301,17035306);
-INSERT INTO `instance_entities` VALUES (6301,17035307);
-INSERT INTO `instance_entities` VALUES (6301,17035308);
-INSERT INTO `instance_entities` VALUES (6301,17035309);
+    (6301,17035292),
+    (6301,17035293),
+    (6301,17035294),
+    (6301,17035295),
+    (6301,17035296),
+    (6301,17035297),
+    (6301,17035298),
+    (6301,17035299),
+    (6301,17035300),
+    (6301,17035301),
+    (6301,17035302),
+    (6301,17035303),
+    (6301,17035304),
+    (6301,17035305),
+    (6301,17035306),
+    (6301,17035307),
+    (6301,17035308),
+    (6301,17035309),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6301,17035478);
-INSERT INTO `instance_entities` VALUES (6301,17035479);
-INSERT INTO `instance_entities` VALUES (6301,17035480);
-INSERT INTO `instance_entities` VALUES (6301,17035523);
-INSERT INTO `instance_entities` VALUES (6301,17035530);
+    (6301,17035478),
+    (6301,17035479),
+    (6301,17035480),
+    (6301,17035523),
+    (6301,17035530),
 
 -- Troll Fugitives
 -- mobs
-INSERT INTO `instance_entities` VALUES (6302,17035310);
-INSERT INTO `instance_entities` VALUES (6302,17035311);
-INSERT INTO `instance_entities` VALUES (6302,17035312);
-INSERT INTO `instance_entities` VALUES (6302,17035313);
-INSERT INTO `instance_entities` VALUES (6302,17035314);
-INSERT INTO `instance_entities` VALUES (6302,17035315);
-INSERT INTO `instance_entities` VALUES (6302,17035316);
-INSERT INTO `instance_entities` VALUES (6302,17035317);
-INSERT INTO `instance_entities` VALUES (6302,17035318);
-INSERT INTO `instance_entities` VALUES (6302,17035319);
-INSERT INTO `instance_entities` VALUES (6302,17035320);
-INSERT INTO `instance_entities` VALUES (6302,17035321);
-INSERT INTO `instance_entities` VALUES (6302,17035322);
-INSERT INTO `instance_entities` VALUES (6302,17035323);
-INSERT INTO `instance_entities` VALUES (6302,17035324);
+    (6302,17035310),
+    (6302,17035311),
+    (6302,17035312),
+    (6302,17035313),
+    (6302,17035314),
+    (6302,17035315),
+    (6302,17035316),
+    (6302,17035317),
+    (6302,17035318),
+    (6302,17035319),
+    (6302,17035320),
+    (6302,17035321),
+    (6302,17035322),
+    (6302,17035323),
+    (6302,17035324),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6302,17035478);
-INSERT INTO `instance_entities` VALUES (6302,17035479);
-INSERT INTO `instance_entities` VALUES (6302,17035509);
-INSERT INTO `instance_entities` VALUES (6302,17035514);
-INSERT INTO `instance_entities` VALUES (6302,17035519);
-INSERT INTO `instance_entities` VALUES (6302,17035522);
+    (6302,17035478),
+    (6302,17035479),
+    (6302,17035509),
+    (6302,17035514),
+    (6302,17035519),
+    (6302,17035522),
 
 -- Wamoura Farm Raid
 -- mobs
-INSERT INTO `instance_entities` VALUES (6306,17035359);
-INSERT INTO `instance_entities` VALUES (6306,17035360);
-INSERT INTO `instance_entities` VALUES (6306,17035361);
-INSERT INTO `instance_entities` VALUES (6306,17035362);
-INSERT INTO `instance_entities` VALUES (6306,17035363);
-INSERT INTO `instance_entities` VALUES (6306,17035365);
-INSERT INTO `instance_entities` VALUES (6306,17035367);
-INSERT INTO `instance_entities` VALUES (6306,17035368);
-INSERT INTO `instance_entities` VALUES (6306,17035369);
-INSERT INTO `instance_entities` VALUES (6306,17035370);
-INSERT INTO `instance_entities` VALUES (6306,17035371);
-INSERT INTO `instance_entities` VALUES (6306,17035372);
-INSERT INTO `instance_entities` VALUES (6306,17035376);
-INSERT INTO `instance_entities` VALUES (6306,17035377);
-INSERT INTO `instance_entities` VALUES (6306,17035378);
-INSERT INTO `instance_entities` VALUES (6306,17035478);
-INSERT INTO `instance_entities` VALUES (6306,17035479);
-INSERT INTO `instance_entities` VALUES (6306,17035509);
-INSERT INTO `instance_entities` VALUES (6306,17035539);
-INSERT INTO `instance_entities` VALUES (6306,17035540);
-INSERT INTO `instance_entities` VALUES (6306,17035542);
-INSERT INTO `instance_entities` VALUES (6306,17035543);
-INSERT INTO `instance_entities` VALUES (6306,17035544);
-INSERT INTO `instance_entities` VALUES (6306,17035545);
-INSERT INTO `instance_entities` VALUES (6306,17035546);
-INSERT INTO `instance_entities` VALUES (6306,17035547);
+    (6306,17035359),
+    (6306,17035360),
+    (6306,17035361),
+    (6306,17035362),
+    (6306,17035363),
+    (6306,17035365),
+    (6306,17035367),
+    (6306,17035368),
+    (6306,17035369),
+    (6306,17035370),
+    (6306,17035371),
+    (6306,17035372),
+    (6306,17035376),
+    (6306,17035377),
+    (6306,17035378),
+    (6306,17035478),
+    (6306,17035479),
+    (6306,17035509),
+    (6306,17035539),
+    (6306,17035540),
+    (6306,17035542),
+    (6306,17035543),
+    (6306,17035544),
+    (6306,17035545),
+    (6306,17035546),
+    (6306,17035547)
+;
 
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- ------------------------------------------------------------
 -- Mamool Ja Training Grounds (Zone 66)
 -- ------------------------------------------------------------
 
 -- Imperial Agent Rescue
 -- mobs
-INSERT INTO `instance_entities` VALUES (6600,17047553);
-INSERT INTO `instance_entities` VALUES (6600,17047554);
-INSERT INTO `instance_entities` VALUES (6600,17047555);
-INSERT INTO `instance_entities` VALUES (6600,17047556);
-INSERT INTO `instance_entities` VALUES (6600,17047557);
-INSERT INTO `instance_entities` VALUES (6600,17047558);
-INSERT INTO `instance_entities` VALUES (6600,17047559);
-INSERT INTO `instance_entities` VALUES (6600,17047560);
-INSERT INTO `instance_entities` VALUES (6600,17047561);
-INSERT INTO `instance_entities` VALUES (6600,17047562);
-INSERT INTO `instance_entities` VALUES (6600,17047563);
-INSERT INTO `instance_entities` VALUES (6600,17047564);
-INSERT INTO `instance_entities` VALUES (6600,17047565);
-INSERT INTO `instance_entities` VALUES (6600,17047566);
-INSERT INTO `instance_entities` VALUES (6600,17047567);
-INSERT INTO `instance_entities` VALUES (6600,17047568);
-INSERT INTO `instance_entities` VALUES (6600,17047569);
+    (6600,17047553),
+    (6600,17047554),
+    (6600,17047555),
+    (6600,17047556),
+    (6600,17047557),
+    (6600,17047558),
+    (6600,17047559),
+    (6600,17047560),
+    (6600,17047561),
+    (6600,17047562),
+    (6600,17047563),
+    (6600,17047564),
+    (6600,17047565),
+    (6600,17047566),
+    (6600,17047567),
+    (6600,17047568),
+    (6600,17047569),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6600,17047808);
-INSERT INTO `instance_entities` VALUES (6600,17047809);
-INSERT INTO `instance_entities` VALUES (6600,17047810);
-INSERT INTO `instance_entities` VALUES (6600,17047815);
-INSERT INTO `instance_entities` VALUES (6600,17047832);
-INSERT INTO `instance_entities` VALUES (6600,17047864);
-INSERT INTO `instance_entities` VALUES (6600,17047865);
-INSERT INTO `instance_entities` VALUES (6600,17047866);
-INSERT INTO `instance_entities` VALUES (6600,17047867);
-INSERT INTO `instance_entities` VALUES (6600,17047896);
-INSERT INTO `instance_entities` VALUES (6600,17047897);
-INSERT INTO `instance_entities` VALUES (6600,17047898);
-INSERT INTO `instance_entities` VALUES (6600,17047899);
-INSERT INTO `instance_entities` VALUES (6600,17047900);
-INSERT INTO `instance_entities` VALUES (6600,17047901);
-INSERT INTO `instance_entities` VALUES (6600,17047902);
-INSERT INTO `instance_entities` VALUES (6600,17047903);
-INSERT INTO `instance_entities` VALUES (6600,17047917);
-INSERT INTO `instance_entities` VALUES (6600,17047918);
-INSERT INTO `instance_entities` VALUES (6600,17047919);
+    (6600,17047808),
+    (6600,17047809),
+    (6600,17047810),
+    (6600,17047815),
+    (6600,17047832),
+    (6600,17047864),
+    (6600,17047865),
+    (6600,17047866),
+    (6600,17047867),
+    (6600,17047896),
+    (6600,17047897),
+    (6600,17047898),
+    (6600,17047899),
+    (6600,17047900),
+    (6600,17047901),
+    (6600,17047902),
+    (6600,17047903),
+    (6600,17047917),
+    (6600,17047918),
+    (6600,17047919),
 
 -- Preemtive Strike
 -- mobs
-INSERT INTO `instance_entities` VALUES (6601,17047570);
-INSERT INTO `instance_entities` VALUES (6601,17047571);
-INSERT INTO `instance_entities` VALUES (6601,17047572);
-INSERT INTO `instance_entities` VALUES (6601,17047573);
-INSERT INTO `instance_entities` VALUES (6601,17047574);
-INSERT INTO `instance_entities` VALUES (6601,17047575);
-INSERT INTO `instance_entities` VALUES (6601,17047576);
-INSERT INTO `instance_entities` VALUES (6601,17047577);
-INSERT INTO `instance_entities` VALUES (6601,17047578);
-INSERT INTO `instance_entities` VALUES (6601,17047579);
-INSERT INTO `instance_entities` VALUES (6601,17047580);
-INSERT INTO `instance_entities` VALUES (6601,17047581);
-INSERT INTO `instance_entities` VALUES (6601,17047582);
-INSERT INTO `instance_entities` VALUES (6601,17047583);
-INSERT INTO `instance_entities` VALUES (6601,17047584);
-INSERT INTO `instance_entities` VALUES (6601,17047585);
-INSERT INTO `instance_entities` VALUES (6601,17047586);
-INSERT INTO `instance_entities` VALUES (6601,17047587);
-INSERT INTO `instance_entities` VALUES (6601,17047588);
-INSERT INTO `instance_entities` VALUES (6601,17047589);
+    (6601,17047570),
+    (6601,17047571),
+    (6601,17047572),
+    (6601,17047573),
+    (6601,17047574),
+    (6601,17047575),
+    (6601,17047576),
+    (6601,17047577),
+    (6601,17047578),
+    (6601,17047579),
+    (6601,17047580),
+    (6601,17047581),
+    (6601,17047582),
+    (6601,17047583),
+    (6601,17047584),
+    (6601,17047585),
+    (6601,17047586),
+    (6601,17047587),
+    (6601,17047588),
+    (6601,17047589),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6601,17047808);
-INSERT INTO `instance_entities` VALUES (6601,17047809);
-INSERT INTO `instance_entities` VALUES (6601,17047836);
-INSERT INTO `instance_entities` VALUES (6601,17047869);
-INSERT INTO `instance_entities` VALUES (6601,17047870);
-INSERT INTO `instance_entities` VALUES (6601,17047871);
-INSERT INTO `instance_entities` VALUES (6601,17047875);
-INSERT INTO `instance_entities` VALUES (6601,17047876);
+    (6601,17047808),
+    (6601,17047809),
+    (6601,17047836),
+    (6601,17047869),
+    (6601,17047870),
+    (6601,17047871),
+    (6601,17047875),
+    (6601,17047876),
 
 -- ------------------------------------------------------------
 -- Leujaoam Sanctum (Zone 69)
@@ -438,2138 +467,2168 @@ INSERT INTO `instance_entities` VALUES (6601,17047876);
 
 -- Leujaoam Cleansing
 -- mobs
-INSERT INTO `instance_entities` VALUES (6900,17059841);
-INSERT INTO `instance_entities` VALUES (6900,17059842);
-INSERT INTO `instance_entities` VALUES (6900,17059843);
-INSERT INTO `instance_entities` VALUES (6900,17059844);
-INSERT INTO `instance_entities` VALUES (6900,17059845);
-INSERT INTO `instance_entities` VALUES (6900,17059846);
-INSERT INTO `instance_entities` VALUES (6900,17059847);
-INSERT INTO `instance_entities` VALUES (6900,17059848);
-INSERT INTO `instance_entities` VALUES (6900,17059849);
-INSERT INTO `instance_entities` VALUES (6900,17059850);
-INSERT INTO `instance_entities` VALUES (6900,17059851);
-INSERT INTO `instance_entities` VALUES (6900,17059852);
-INSERT INTO `instance_entities` VALUES (6900,17059853);
-INSERT INTO `instance_entities` VALUES (6900,17059854);
-INSERT INTO `instance_entities` VALUES (6900,17059855);
+    (6900,17059841),
+    (6900,17059842),
+    (6900,17059843),
+    (6900,17059844),
+    (6900,17059845),
+    (6900,17059846),
+    (6900,17059847),
+    (6900,17059848),
+    (6900,17059849),
+    (6900,17059850),
+    (6900,17059851),
+    (6900,17059852),
+    (6900,17059853),
+    (6900,17059854),
+    (6900,17059855),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6900,17060014);
-INSERT INTO `instance_entities` VALUES (6900,17060015);
-INSERT INTO `instance_entities` VALUES (6900,17060139);
-INSERT INTO `instance_entities` VALUES (6900,17060143);
-INSERT INTO `instance_entities` VALUES (6900,17060147);
-INSERT INTO `instance_entities` VALUES (6900,17060148);
+    (6900,17060014),
+    (6900,17060015),
+    (6900,17060139),
+    (6900,17060143),
+    (6900,17060147),
+    (6900,17060148),
 
 -- Orichalcum Survey
 -- mobs
-INSERT INTO `instance_entities` VALUES (6901,17059856);
-INSERT INTO `instance_entities` VALUES (6901,17059857);
-INSERT INTO `instance_entities` VALUES (6901,17059858);
-INSERT INTO `instance_entities` VALUES (6901,17059859);
-INSERT INTO `instance_entities` VALUES (6901,17059860);
-INSERT INTO `instance_entities` VALUES (6901,17059861);
-INSERT INTO `instance_entities` VALUES (6901,17059862);
-INSERT INTO `instance_entities` VALUES (6901,17059863);
-INSERT INTO `instance_entities` VALUES (6901,17059864);
-INSERT INTO `instance_entities` VALUES (6901,17059865);
-INSERT INTO `instance_entities` VALUES (6901,17059866);
-INSERT INTO `instance_entities` VALUES (6901,17059867);
-INSERT INTO `instance_entities` VALUES (6901,17059868);
-INSERT INTO `instance_entities` VALUES (6901,17059869);
-INSERT INTO `instance_entities` VALUES (6901,17059870);
-INSERT INTO `instance_entities` VALUES (6901,17059871);
-INSERT INTO `instance_entities` VALUES (6901,17059872);
-INSERT INTO `instance_entities` VALUES (6901,17059873);
+    (6901,17059856),
+    (6901,17059857),
+    (6901,17059858),
+    (6901,17059859),
+    (6901,17059860),
+    (6901,17059861),
+    (6901,17059862),
+    (6901,17059863),
+    (6901,17059864),
+    (6901,17059865),
+    (6901,17059866),
+    (6901,17059867),
+    (6901,17059868),
+    (6901,17059869),
+    (6901,17059870),
+    (6901,17059871),
+    (6901,17059872),
+    (6901,17059873),
 -- npcs
-INSERT INTO `instance_entities` VALUES (6901,17060014);
-INSERT INTO `instance_entities` VALUES (6901,17060015);
-INSERT INTO `instance_entities` VALUES (6901,17060016);
-INSERT INTO `instance_entities` VALUES (6901,17060017);
-INSERT INTO `instance_entities` VALUES (6901,17060018);
-INSERT INTO `instance_entities` VALUES (6901,17060019);
-INSERT INTO `instance_entities` VALUES (6901,17060020);
-INSERT INTO `instance_entities` VALUES (6901,17060021);
-INSERT INTO `instance_entities` VALUES (6901,17060022);
-INSERT INTO `instance_entities` VALUES (6901,17060023);
-INSERT INTO `instance_entities` VALUES (6901,17060024);
-INSERT INTO `instance_entities` VALUES (6901,17060025);
-INSERT INTO `instance_entities` VALUES (6901,17060026);
-INSERT INTO `instance_entities` VALUES (6901,17060130);
-INSERT INTO `instance_entities` VALUES (6901,17060140);
+    (6901,17060014),
+    (6901,17060015),
+    (6901,17060016),
+    (6901,17060017),
+    (6901,17060018),
+    (6901,17060019),
+    (6901,17060020),
+    (6901,17060021),
+    (6901,17060022),
+    (6901,17060023),
+    (6901,17060024),
+    (6901,17060025),
+    (6901,17060026),
+    (6901,17060130),
+    (6901,17060140),
 
 -- ------------------------------------------------------------
 -- Zhayolm Remnants (Zone 73)
 -- ------------------------------------------------------------
 
 -- mob
-INSERT INTO `instance_entities` VALUES (7300,17076225);
-INSERT INTO `instance_entities` VALUES (7300,17076226);
-INSERT INTO `instance_entities` VALUES (7300,17076227);
-INSERT INTO `instance_entities` VALUES (7300,17076228);
-INSERT INTO `instance_entities` VALUES (7300,17076229);
-INSERT INTO `instance_entities` VALUES (7300,17076230);
-INSERT INTO `instance_entities` VALUES (7300,17076231);
-INSERT INTO `instance_entities` VALUES (7300,17076232);
-INSERT INTO `instance_entities` VALUES (7300,17076233);
-INSERT INTO `instance_entities` VALUES (7300,17076234);
-INSERT INTO `instance_entities` VALUES (7300,17076235);
-INSERT INTO `instance_entities` VALUES (7300,17076236);
-INSERT INTO `instance_entities` VALUES (7300,17076237);
-INSERT INTO `instance_entities` VALUES (7300,17076238);
-INSERT INTO `instance_entities` VALUES (7300,17076239);
-INSERT INTO `instance_entities` VALUES (7300,17076240);
-INSERT INTO `instance_entities` VALUES (7300,17076241);
-INSERT INTO `instance_entities` VALUES (7300,17076242);
-INSERT INTO `instance_entities` VALUES (7300,17076243);
-INSERT INTO `instance_entities` VALUES (7300,17076244);
-INSERT INTO `instance_entities` VALUES (7300,17076245);
-INSERT INTO `instance_entities` VALUES (7300,17076246);
-INSERT INTO `instance_entities` VALUES (7300,17076247);
-INSERT INTO `instance_entities` VALUES (7300,17076248);
-INSERT INTO `instance_entities` VALUES (7300,17076249);
-INSERT INTO `instance_entities` VALUES (7300,17076250);
-INSERT INTO `instance_entities` VALUES (7300,17076251);
-INSERT INTO `instance_entities` VALUES (7300,17076252);
-INSERT INTO `instance_entities` VALUES (7300,17076253);
-INSERT INTO `instance_entities` VALUES (7300,17076254);
-INSERT INTO `instance_entities` VALUES (7300,17076255);
-INSERT INTO `instance_entities` VALUES (7300,17076256);
-INSERT INTO `instance_entities` VALUES (7300,17076257);
-INSERT INTO `instance_entities` VALUES (7300,17076258);
-INSERT INTO `instance_entities` VALUES (7300,17076259);
-INSERT INTO `instance_entities` VALUES (7300,17076260);
-INSERT INTO `instance_entities` VALUES (7300,17076261);
-INSERT INTO `instance_entities` VALUES (7300,17076262);
-INSERT INTO `instance_entities` VALUES (7300,17076263);
-INSERT INTO `instance_entities` VALUES (7300,17076264);
-INSERT INTO `instance_entities` VALUES (7300,17076265);
-INSERT INTO `instance_entities` VALUES (7300,17076266);
-INSERT INTO `instance_entities` VALUES (7300,17076267);
-INSERT INTO `instance_entities` VALUES (7300,17076268);
-INSERT INTO `instance_entities` VALUES (7300,17076269);
-INSERT INTO `instance_entities` VALUES (7300,17076270);
-INSERT INTO `instance_entities` VALUES (7300,17076271);
-INSERT INTO `instance_entities` VALUES (7300,17076272);
-INSERT INTO `instance_entities` VALUES (7300,17076273);
-INSERT INTO `instance_entities` VALUES (7300,17076274);
-INSERT INTO `instance_entities` VALUES (7300,17076275);
-INSERT INTO `instance_entities` VALUES (7300,17076276);
-INSERT INTO `instance_entities` VALUES (7300,17076277);
-INSERT INTO `instance_entities` VALUES (7300,17076278);
-INSERT INTO `instance_entities` VALUES (7300,17076279);
-INSERT INTO `instance_entities` VALUES (7300,17076280);
-INSERT INTO `instance_entities` VALUES (7300,17076281);
-INSERT INTO `instance_entities` VALUES (7300,17076282);
-INSERT INTO `instance_entities` VALUES (7300,17076283);
-INSERT INTO `instance_entities` VALUES (7300,17076284);
-INSERT INTO `instance_entities` VALUES (7300,17076285);
-INSERT INTO `instance_entities` VALUES (7300,17076286);
-INSERT INTO `instance_entities` VALUES (7300,17076287);
-INSERT INTO `instance_entities` VALUES (7300,17076288);
-INSERT INTO `instance_entities` VALUES (7300,17076289);
-INSERT INTO `instance_entities` VALUES (7300,17076290);
-INSERT INTO `instance_entities` VALUES (7300,17076291);
-INSERT INTO `instance_entities` VALUES (7300,17076292);
-INSERT INTO `instance_entities` VALUES (7300,17076293);
-INSERT INTO `instance_entities` VALUES (7300,17076294);
-INSERT INTO `instance_entities` VALUES (7300,17076295);
-INSERT INTO `instance_entities` VALUES (7300,17076296);
-INSERT INTO `instance_entities` VALUES (7300,17076297);
-INSERT INTO `instance_entities` VALUES (7300,17076298);
-INSERT INTO `instance_entities` VALUES (7300,17076299);
-INSERT INTO `instance_entities` VALUES (7300,17076300);
-INSERT INTO `instance_entities` VALUES (7300,17076301);
-INSERT INTO `instance_entities` VALUES (7300,17076302);
-INSERT INTO `instance_entities` VALUES (7300,17076303);
-INSERT INTO `instance_entities` VALUES (7300,17076304);
-INSERT INTO `instance_entities` VALUES (7300,17076305);
-INSERT INTO `instance_entities` VALUES (7300,17076306);
-INSERT INTO `instance_entities` VALUES (7300,17076307);
-INSERT INTO `instance_entities` VALUES (7300,17076308);
-INSERT INTO `instance_entities` VALUES (7300,17076309);
-INSERT INTO `instance_entities` VALUES (7300,17076310);
-INSERT INTO `instance_entities` VALUES (7300,17076311);
-INSERT INTO `instance_entities` VALUES (7300,17076312);
-INSERT INTO `instance_entities` VALUES (7300,17076313);
-INSERT INTO `instance_entities` VALUES (7300,17076314);
-INSERT INTO `instance_entities` VALUES (7300,17076315);
-INSERT INTO `instance_entities` VALUES (7300,17076316);
-INSERT INTO `instance_entities` VALUES (7300,17076317);
-INSERT INTO `instance_entities` VALUES (7300,17076318);
-INSERT INTO `instance_entities` VALUES (7300,17076319);
-INSERT INTO `instance_entities` VALUES (7300,17076320);
-INSERT INTO `instance_entities` VALUES (7300,17076321);
-INSERT INTO `instance_entities` VALUES (7300,17076322);
-INSERT INTO `instance_entities` VALUES (7300,17076323);
-INSERT INTO `instance_entities` VALUES (7300,17076324);
-INSERT INTO `instance_entities` VALUES (7300,17076325);
-INSERT INTO `instance_entities` VALUES (7300,17076326);
-INSERT INTO `instance_entities` VALUES (7300,17076327);
-INSERT INTO `instance_entities` VALUES (7300,17076328);
-INSERT INTO `instance_entities` VALUES (7300,17076329);
-INSERT INTO `instance_entities` VALUES (7300,17076330);
-INSERT INTO `instance_entities` VALUES (7300,17076331);
-INSERT INTO `instance_entities` VALUES (7300,17076332);
-INSERT INTO `instance_entities` VALUES (7300,17076333);
-INSERT INTO `instance_entities` VALUES (7300,17076334);
-INSERT INTO `instance_entities` VALUES (7300,17076335);
-INSERT INTO `instance_entities` VALUES (7300,17076336);
-INSERT INTO `instance_entities` VALUES (7300,17076337);
-INSERT INTO `instance_entities` VALUES (7300,17076338);
-INSERT INTO `instance_entities` VALUES (7300,17076339);
-INSERT INTO `instance_entities` VALUES (7300,17076340);
-INSERT INTO `instance_entities` VALUES (7300,17076341);
-INSERT INTO `instance_entities` VALUES (7300,17076342);
-INSERT INTO `instance_entities` VALUES (7300,17076343);
-INSERT INTO `instance_entities` VALUES (7300,17076344);
-INSERT INTO `instance_entities` VALUES (7300,17076345);
-INSERT INTO `instance_entities` VALUES (7300,17076346);
-INSERT INTO `instance_entities` VALUES (7300,17076347);
-INSERT INTO `instance_entities` VALUES (7300,17076348);
-INSERT INTO `instance_entities` VALUES (7300,17076349);
-INSERT INTO `instance_entities` VALUES (7300,17076350);
-INSERT INTO `instance_entities` VALUES (7300,17076351);
-INSERT INTO `instance_entities` VALUES (7300,17076352);
-INSERT INTO `instance_entities` VALUES (7300,17076353);
-INSERT INTO `instance_entities` VALUES (7300,17076354);
-INSERT INTO `instance_entities` VALUES (7300,17076355);
-INSERT INTO `instance_entities` VALUES (7300,17076356);
-INSERT INTO `instance_entities` VALUES (7300,17076357);
-INSERT INTO `instance_entities` VALUES (7300,17076358);
-INSERT INTO `instance_entities` VALUES (7300,17076359);
-INSERT INTO `instance_entities` VALUES (7300,17076360);
-INSERT INTO `instance_entities` VALUES (7300,17076361);
-INSERT INTO `instance_entities` VALUES (7300,17076362);
-INSERT INTO `instance_entities` VALUES (7300,17076363);
-INSERT INTO `instance_entities` VALUES (7300,17076364);
-INSERT INTO `instance_entities` VALUES (7300,17076365);
-INSERT INTO `instance_entities` VALUES (7300,17076366);
-INSERT INTO `instance_entities` VALUES (7300,17076367);
-INSERT INTO `instance_entities` VALUES (7300,17076368);
-INSERT INTO `instance_entities` VALUES (7300,17076369);
-INSERT INTO `instance_entities` VALUES (7300,17076370);
-INSERT INTO `instance_entities` VALUES (7300,17076371);
-INSERT INTO `instance_entities` VALUES (7300,17076372);
-INSERT INTO `instance_entities` VALUES (7300,17076373);
-INSERT INTO `instance_entities` VALUES (7300,17076374);
-INSERT INTO `instance_entities` VALUES (7300,17076375);
-INSERT INTO `instance_entities` VALUES (7300,17076376);
-INSERT INTO `instance_entities` VALUES (7300,17076377);
-INSERT INTO `instance_entities` VALUES (7300,17076378);
-INSERT INTO `instance_entities` VALUES (7300,17076379);
-INSERT INTO `instance_entities` VALUES (7300,17076380);
-INSERT INTO `instance_entities` VALUES (7300,17076381);
-INSERT INTO `instance_entities` VALUES (7300,17076382);
-INSERT INTO `instance_entities` VALUES (7300,17076383);
-INSERT INTO `instance_entities` VALUES (7300,17076384);
-INSERT INTO `instance_entities` VALUES (7300,17076385);
-INSERT INTO `instance_entities` VALUES (7300,17076386);
-INSERT INTO `instance_entities` VALUES (7300,17076387);
-INSERT INTO `instance_entities` VALUES (7300,17076388);
-INSERT INTO `instance_entities` VALUES (7300,17076389);
-INSERT INTO `instance_entities` VALUES (7300,17076390);
-INSERT INTO `instance_entities` VALUES (7300,17076391);
-INSERT INTO `instance_entities` VALUES (7300,17076392);
-INSERT INTO `instance_entities` VALUES (7300,17076393);
-INSERT INTO `instance_entities` VALUES (7300,17076394);
-INSERT INTO `instance_entities` VALUES (7300,17076395);
-INSERT INTO `instance_entities` VALUES (7300,17076396);
-INSERT INTO `instance_entities` VALUES (7300,17076397);
-INSERT INTO `instance_entities` VALUES (7300,17076398);
-INSERT INTO `instance_entities` VALUES (7300,17076399);
-INSERT INTO `instance_entities` VALUES (7300,17076400);
-INSERT INTO `instance_entities` VALUES (7300,17076401);
-INSERT INTO `instance_entities` VALUES (7300,17076402);
-INSERT INTO `instance_entities` VALUES (7300,17076403);
-INSERT INTO `instance_entities` VALUES (7300,17076404);
-INSERT INTO `instance_entities` VALUES (7300,17076405);
-INSERT INTO `instance_entities` VALUES (7300,17076406);
-INSERT INTO `instance_entities` VALUES (7300,17076407);
-INSERT INTO `instance_entities` VALUES (7300,17076408);
-INSERT INTO `instance_entities` VALUES (7300,17076409);
-INSERT INTO `instance_entities` VALUES (7300,17076410);
-INSERT INTO `instance_entities` VALUES (7300,17076411);
-INSERT INTO `instance_entities` VALUES (7300,17076412);
-INSERT INTO `instance_entities` VALUES (7300,17076413);
-INSERT INTO `instance_entities` VALUES (7300,17076414);
-INSERT INTO `instance_entities` VALUES (7300,17076415);
-INSERT INTO `instance_entities` VALUES (7300,17076416);
-INSERT INTO `instance_entities` VALUES (7300,17076417);
-INSERT INTO `instance_entities` VALUES (7300,17076418);
-INSERT INTO `instance_entities` VALUES (7300,17076419);
-INSERT INTO `instance_entities` VALUES (7300,17076420);
-INSERT INTO `instance_entities` VALUES (7300,17076421);
-INSERT INTO `instance_entities` VALUES (7300,17076422);
-INSERT INTO `instance_entities` VALUES (7300,17076423);
-INSERT INTO `instance_entities` VALUES (7300,17076424);
-INSERT INTO `instance_entities` VALUES (7300,17076425);
-INSERT INTO `instance_entities` VALUES (7300,17076426);
-INSERT INTO `instance_entities` VALUES (7300,17076427);
-INSERT INTO `instance_entities` VALUES (7300,17076428);
-INSERT INTO `instance_entities` VALUES (7300,17076429);
-INSERT INTO `instance_entities` VALUES (7300,17076430);
-INSERT INTO `instance_entities` VALUES (7300,17076431);
-INSERT INTO `instance_entities` VALUES (7300,17076432);
-INSERT INTO `instance_entities` VALUES (7300,17076433);
-INSERT INTO `instance_entities` VALUES (7300,17076434);
-INSERT INTO `instance_entities` VALUES (7300,17076435);
-INSERT INTO `instance_entities` VALUES (7300,17076436);
-INSERT INTO `instance_entities` VALUES (7300,17076437);
-INSERT INTO `instance_entities` VALUES (7300,17076438);
-INSERT INTO `instance_entities` VALUES (7300,17076439);
-INSERT INTO `instance_entities` VALUES (7300,17076440);
-INSERT INTO `instance_entities` VALUES (7300,17076441);
-INSERT INTO `instance_entities` VALUES (7300,17076442);
-INSERT INTO `instance_entities` VALUES (7300,17076443);
-INSERT INTO `instance_entities` VALUES (7300,17076444);
-INSERT INTO `instance_entities` VALUES (7300,17076445);
-INSERT INTO `instance_entities` VALUES (7300,17076446);
-INSERT INTO `instance_entities` VALUES (7300,17076447);
-INSERT INTO `instance_entities` VALUES (7300,17076448);
-INSERT INTO `instance_entities` VALUES (7300,17076449);
-INSERT INTO `instance_entities` VALUES (7300,17076450);
-INSERT INTO `instance_entities` VALUES (7300,17076451);
-INSERT INTO `instance_entities` VALUES (7300,17076452);
-INSERT INTO `instance_entities` VALUES (7300,17076453);
-INSERT INTO `instance_entities` VALUES (7300,17076454);
-INSERT INTO `instance_entities` VALUES (7300,17076455);
-INSERT INTO `instance_entities` VALUES (7300,17076456);
-INSERT INTO `instance_entities` VALUES (7300,17076457);
-INSERT INTO `instance_entities` VALUES (7300,17076458);
-INSERT INTO `instance_entities` VALUES (7300,17076459);
-INSERT INTO `instance_entities` VALUES (7300,17076460);
-INSERT INTO `instance_entities` VALUES (7300,17076461);
-INSERT INTO `instance_entities` VALUES (7300,17076462);
-INSERT INTO `instance_entities` VALUES (7300,17076463);
-INSERT INTO `instance_entities` VALUES (7300,17076464);
-INSERT INTO `instance_entities` VALUES (7300,17076465);
-INSERT INTO `instance_entities` VALUES (7300,17076466);
-INSERT INTO `instance_entities` VALUES (7300,17076467);
-INSERT INTO `instance_entities` VALUES (7300,17076468);
-INSERT INTO `instance_entities` VALUES (7300,17076469);
-INSERT INTO `instance_entities` VALUES (7300,17076470);
-INSERT INTO `instance_entities` VALUES (7300,17076471);
-INSERT INTO `instance_entities` VALUES (7300,17076472);
-INSERT INTO `instance_entities` VALUES (7300,17076473);
-INSERT INTO `instance_entities` VALUES (7300,17076474);
-INSERT INTO `instance_entities` VALUES (7300,17076475);
-INSERT INTO `instance_entities` VALUES (7300,17076476);
-INSERT INTO `instance_entities` VALUES (7300,17076477);
-INSERT INTO `instance_entities` VALUES (7300,17076478);
-INSERT INTO `instance_entities` VALUES (7300,17076479);
-INSERT INTO `instance_entities` VALUES (7300,17076480);
-INSERT INTO `instance_entities` VALUES (7300,17076481);
-INSERT INTO `instance_entities` VALUES (7300,17076482);
-INSERT INTO `instance_entities` VALUES (7300,17076483);
-INSERT INTO `instance_entities` VALUES (7300,17076484);
-INSERT INTO `instance_entities` VALUES (7300,17076485);
-INSERT INTO `instance_entities` VALUES (7300,17076486);
-INSERT INTO `instance_entities` VALUES (7300,17076487);
-INSERT INTO `instance_entities` VALUES (7300,17076488);
-INSERT INTO `instance_entities` VALUES (7300,17076489);
-INSERT INTO `instance_entities` VALUES (7300,17076490);
-INSERT INTO `instance_entities` VALUES (7300,17076491);
-INSERT INTO `instance_entities` VALUES (7300,17076492);
-INSERT INTO `instance_entities` VALUES (7300,17076493);
-INSERT INTO `instance_entities` VALUES (7300,17076494);
-INSERT INTO `instance_entities` VALUES (7300,17076495);
-INSERT INTO `instance_entities` VALUES (7300,17076496);
-INSERT INTO `instance_entities` VALUES (7300,17076497);
-INSERT INTO `instance_entities` VALUES (7300,17076498);
-INSERT INTO `instance_entities` VALUES (7300,17076499);
-INSERT INTO `instance_entities` VALUES (7300,17076500);
-INSERT INTO `instance_entities` VALUES (7300,17076501);
-INSERT INTO `instance_entities` VALUES (7300,17076502);
-INSERT INTO `instance_entities` VALUES (7300,17076503);
-INSERT INTO `instance_entities` VALUES (7300,17076504);
-INSERT INTO `instance_entities` VALUES (7300,17076505);
-INSERT INTO `instance_entities` VALUES (7300,17076506);
-INSERT INTO `instance_entities` VALUES (7300,17076507);
-INSERT INTO `instance_entities` VALUES (7300,17076508);
-INSERT INTO `instance_entities` VALUES (7300,17076509);
-INSERT INTO `instance_entities` VALUES (7300,17076510);
-INSERT INTO `instance_entities` VALUES (7300,17076511);
-INSERT INTO `instance_entities` VALUES (7300,17076512);
-INSERT INTO `instance_entities` VALUES (7300,17076513);
-INSERT INTO `instance_entities` VALUES (7300,17076514);
-INSERT INTO `instance_entities` VALUES (7300,17076515);
-INSERT INTO `instance_entities` VALUES (7300,17076516);
-INSERT INTO `instance_entities` VALUES (7300,17076517);
-INSERT INTO `instance_entities` VALUES (7300,17076518);
-INSERT INTO `instance_entities` VALUES (7300,17076519);
-INSERT INTO `instance_entities` VALUES (7300,17076520);
-INSERT INTO `instance_entities` VALUES (7300,17076521);
-INSERT INTO `instance_entities` VALUES (7300,17076522);
-INSERT INTO `instance_entities` VALUES (7300,17076523);
-INSERT INTO `instance_entities` VALUES (7300,17076524);
-INSERT INTO `instance_entities` VALUES (7300,17076525);
-INSERT INTO `instance_entities` VALUES (7300,17076526);
-INSERT INTO `instance_entities` VALUES (7300,17076527);
-INSERT INTO `instance_entities` VALUES (7300,17076528);
-INSERT INTO `instance_entities` VALUES (7300,17076529);
-INSERT INTO `instance_entities` VALUES (7300,17076530);
-INSERT INTO `instance_entities` VALUES (7300,17076531);
-INSERT INTO `instance_entities` VALUES (7300,17076532);
-INSERT INTO `instance_entities` VALUES (7300,17076533);
-INSERT INTO `instance_entities` VALUES (7300,17076534);
-INSERT INTO `instance_entities` VALUES (7300,17076535);
-INSERT INTO `instance_entities` VALUES (7300,17076536);
-INSERT INTO `instance_entities` VALUES (7300,17076537);
-INSERT INTO `instance_entities` VALUES (7300,17076538);
-INSERT INTO `instance_entities` VALUES (7300,17076539);
-INSERT INTO `instance_entities` VALUES (7300,17076540);
-INSERT INTO `instance_entities` VALUES (7300,17076541);
-INSERT INTO `instance_entities` VALUES (7300,17076542);
-INSERT INTO `instance_entities` VALUES (7300,17076543);
-INSERT INTO `instance_entities` VALUES (7300,17076544);
-INSERT INTO `instance_entities` VALUES (7300,17076545);
-INSERT INTO `instance_entities` VALUES (7300,17076546);
-INSERT INTO `instance_entities` VALUES (7300,17076547);
-INSERT INTO `instance_entities` VALUES (7300,17076548);
-INSERT INTO `instance_entities` VALUES (7300,17076549);
-INSERT INTO `instance_entities` VALUES (7300,17076550);
-INSERT INTO `instance_entities` VALUES (7300,17076551);
-INSERT INTO `instance_entities` VALUES (7300,17076552);
-INSERT INTO `instance_entities` VALUES (7300,17076553);
-INSERT INTO `instance_entities` VALUES (7300,17076554);
-INSERT INTO `instance_entities` VALUES (7300,17076555);
-INSERT INTO `instance_entities` VALUES (7300,17076556);
-INSERT INTO `instance_entities` VALUES (7300,17076557);
-INSERT INTO `instance_entities` VALUES (7300,17076558);
-INSERT INTO `instance_entities` VALUES (7300,17076559);
-INSERT INTO `instance_entities` VALUES (7300,17076560);
-INSERT INTO `instance_entities` VALUES (7300,17076561);
-INSERT INTO `instance_entities` VALUES (7300,17076562);
-INSERT INTO `instance_entities` VALUES (7300,17076563);
-INSERT INTO `instance_entities` VALUES (7300,17076564);
-INSERT INTO `instance_entities` VALUES (7300,17076565);
-INSERT INTO `instance_entities` VALUES (7300,17076566);
-INSERT INTO `instance_entities` VALUES (7300,17076567);
-INSERT INTO `instance_entities` VALUES (7300,17076568);
-INSERT INTO `instance_entities` VALUES (7300,17076569);
-INSERT INTO `instance_entities` VALUES (7300,17076570);
-INSERT INTO `instance_entities` VALUES (7300,17076571);
-INSERT INTO `instance_entities` VALUES (7300,17076572);
-INSERT INTO `instance_entities` VALUES (7300,17076573);
-INSERT INTO `instance_entities` VALUES (7300,17076574);
-INSERT INTO `instance_entities` VALUES (7300,17076575);
-INSERT INTO `instance_entities` VALUES (7300,17076576);
-INSERT INTO `instance_entities` VALUES (7300,17076577);
-INSERT INTO `instance_entities` VALUES (7300,17076578);
+    (7300,17076225),
+    (7300,17076226),
+    (7300,17076227),
+    (7300,17076228),
+    (7300,17076229),
+    (7300,17076230),
+    (7300,17076231),
+    (7300,17076232),
+    (7300,17076233),
+    (7300,17076234),
+    (7300,17076235),
+    (7300,17076236),
+    (7300,17076237),
+    (7300,17076238),
+    (7300,17076239),
+    (7300,17076240),
+    (7300,17076241),
+    (7300,17076242),
+    (7300,17076243),
+    (7300,17076244),
+    (7300,17076245),
+    (7300,17076246),
+    (7300,17076247),
+    (7300,17076248),
+    (7300,17076249),
+    (7300,17076250),
+    (7300,17076251),
+    (7300,17076252),
+    (7300,17076253),
+    (7300,17076254),
+    (7300,17076255),
+    (7300,17076256),
+    (7300,17076257),
+    (7300,17076258),
+    (7300,17076259),
+    (7300,17076260),
+    (7300,17076261),
+    (7300,17076262),
+    (7300,17076263),
+    (7300,17076264),
+    (7300,17076265),
+    (7300,17076266),
+    (7300,17076267),
+    (7300,17076268),
+    (7300,17076269),
+    (7300,17076270),
+    (7300,17076271),
+    (7300,17076272),
+    (7300,17076273),
+    (7300,17076274),
+    (7300,17076275),
+    (7300,17076276),
+    (7300,17076277),
+    (7300,17076278),
+    (7300,17076279),
+    (7300,17076280),
+    (7300,17076281),
+    (7300,17076282),
+    (7300,17076283),
+    (7300,17076284),
+    (7300,17076285),
+    (7300,17076286),
+    (7300,17076287),
+    (7300,17076288),
+    (7300,17076289),
+    (7300,17076290),
+    (7300,17076291),
+    (7300,17076292),
+    (7300,17076293),
+    (7300,17076294),
+    (7300,17076295),
+    (7300,17076296),
+    (7300,17076297),
+    (7300,17076298),
+    (7300,17076299),
+    (7300,17076300),
+    (7300,17076301),
+    (7300,17076302),
+    (7300,17076303),
+    (7300,17076304),
+    (7300,17076305),
+    (7300,17076306),
+    (7300,17076307),
+    (7300,17076308),
+    (7300,17076309),
+    (7300,17076310),
+    (7300,17076311),
+    (7300,17076312),
+    (7300,17076313),
+    (7300,17076314),
+    (7300,17076315),
+    (7300,17076316),
+    (7300,17076317),
+    (7300,17076318),
+    (7300,17076319),
+    (7300,17076320),
+    (7300,17076321),
+    (7300,17076322),
+    (7300,17076323),
+    (7300,17076324),
+    (7300,17076325),
+    (7300,17076326),
+    (7300,17076327),
+    (7300,17076328),
+    (7300,17076329),
+    (7300,17076330),
+    (7300,17076331),
+    (7300,17076332),
+    (7300,17076333),
+    (7300,17076334),
+    (7300,17076335),
+    (7300,17076336),
+    (7300,17076337),
+    (7300,17076338),
+    (7300,17076339),
+    (7300,17076340),
+    (7300,17076341),
+    (7300,17076342),
+    (7300,17076343),
+    (7300,17076344),
+    (7300,17076345),
+    (7300,17076346),
+    (7300,17076347),
+    (7300,17076348),
+    (7300,17076349),
+    (7300,17076350),
+    (7300,17076351),
+    (7300,17076352),
+    (7300,17076353),
+    (7300,17076354),
+    (7300,17076355),
+    (7300,17076356),
+    (7300,17076357),
+    (7300,17076358),
+    (7300,17076359),
+    (7300,17076360),
+    (7300,17076361),
+    (7300,17076362),
+    (7300,17076363),
+    (7300,17076364),
+    (7300,17076365),
+    (7300,17076366),
+    (7300,17076367),
+    (7300,17076368),
+    (7300,17076369),
+    (7300,17076370),
+    (7300,17076371),
+    (7300,17076372),
+    (7300,17076373),
+    (7300,17076374),
+    (7300,17076375),
+    (7300,17076376),
+    (7300,17076377),
+    (7300,17076378),
+    (7300,17076379),
+    (7300,17076380),
+    (7300,17076381),
+    (7300,17076382),
+    (7300,17076383),
+    (7300,17076384),
+    (7300,17076385),
+    (7300,17076386),
+    (7300,17076387),
+    (7300,17076388),
+    (7300,17076389),
+    (7300,17076390),
+    (7300,17076391),
+    (7300,17076392),
+    (7300,17076393),
+    (7300,17076394),
+    (7300,17076395),
+    (7300,17076396),
+    (7300,17076397),
+    (7300,17076398),
+    (7300,17076399),
+    (7300,17076400),
+    (7300,17076401),
+    (7300,17076402),
+    (7300,17076403),
+    (7300,17076404),
+    (7300,17076405),
+    (7300,17076406),
+    (7300,17076407),
+    (7300,17076408),
+    (7300,17076409),
+    (7300,17076410),
+    (7300,17076411),
+    (7300,17076412),
+    (7300,17076413),
+    (7300,17076414),
+    (7300,17076415),
+    (7300,17076416),
+    (7300,17076417),
+    (7300,17076418),
+    (7300,17076419),
+    (7300,17076420),
+    (7300,17076421),
+    (7300,17076422),
+    (7300,17076423),
+    (7300,17076424),
+    (7300,17076425),
+    (7300,17076426),
+    (7300,17076427),
+    (7300,17076428),
+    (7300,17076429),
+    (7300,17076430),
+    (7300,17076431),
+    (7300,17076432),
+    (7300,17076433),
+    (7300,17076434),
+    (7300,17076435),
+    (7300,17076436),
+    (7300,17076437),
+    (7300,17076438),
+    (7300,17076439),
+    (7300,17076440),
+    (7300,17076441),
+    (7300,17076442),
+    (7300,17076443),
+    (7300,17076444),
+    (7300,17076445),
+    (7300,17076446),
+    (7300,17076447),
+    (7300,17076448),
+    (7300,17076449),
+    (7300,17076450),
+    (7300,17076451),
+    (7300,17076452),
+    (7300,17076453),
+    (7300,17076454),
+    (7300,17076455),
+    (7300,17076456),
+    (7300,17076457),
+    (7300,17076458),
+    (7300,17076459),
+    (7300,17076460),
+    (7300,17076461),
+    (7300,17076462),
+    (7300,17076463),
+    (7300,17076464),
+    (7300,17076465),
+    (7300,17076466),
+    (7300,17076467),
+    (7300,17076468),
+    (7300,17076469),
+    (7300,17076470),
+    (7300,17076471),
+    (7300,17076472),
+    (7300,17076473),
+    (7300,17076474),
+    (7300,17076475),
+    (7300,17076476),
+    (7300,17076477),
+    (7300,17076478),
+    (7300,17076479),
+    (7300,17076480),
+    (7300,17076481),
+    (7300,17076482),
+    (7300,17076483),
+    (7300,17076484),
+    (7300,17076485),
+    (7300,17076486),
+    (7300,17076487),
+    (7300,17076488),
+    (7300,17076489),
+    (7300,17076490),
+    (7300,17076491),
+    (7300,17076492),
+    (7300,17076493),
+    (7300,17076494),
+    (7300,17076495),
+    (7300,17076496),
+    (7300,17076497),
+    (7300,17076498),
+    (7300,17076499),
+    (7300,17076500),
+    (7300,17076501),
+    (7300,17076502),
+    (7300,17076503),
+    (7300,17076504),
+    (7300,17076505),
+    (7300,17076506),
+    (7300,17076507),
+    (7300,17076508),
+    (7300,17076509),
+    (7300,17076510),
+    (7300,17076511),
+    (7300,17076512),
+    (7300,17076513),
+    (7300,17076514),
+    (7300,17076515),
+    (7300,17076516),
+    (7300,17076517),
+    (7300,17076518),
+    (7300,17076519),
+    (7300,17076520),
+    (7300,17076521),
+    (7300,17076522),
+    (7300,17076523),
+    (7300,17076524),
+    (7300,17076525),
+    (7300,17076526),
+    (7300,17076527),
+    (7300,17076528),
+    (7300,17076529),
+    (7300,17076530),
+    (7300,17076531),
+    (7300,17076532),
+    (7300,17076533),
+    (7300,17076534),
+    (7300,17076535),
+    (7300,17076536),
+    (7300,17076537),
+    (7300,17076538),
+    (7300,17076539),
+    (7300,17076540),
+    (7300,17076541),
+    (7300,17076542),
+    (7300,17076543),
+    (7300,17076544),
+    (7300,17076545),
+    (7300,17076546),
+    (7300,17076547),
+    (7300,17076548),
+    (7300,17076549),
+    (7300,17076550),
+    (7300,17076551),
+    (7300,17076552),
+    (7300,17076553),
+    (7300,17076554),
+    (7300,17076555),
+    (7300,17076556),
+    (7300,17076557),
+    (7300,17076558),
+    (7300,17076559),
+    (7300,17076560),
+    (7300,17076561),
+    (7300,17076562),
+    (7300,17076563),
+    (7300,17076564),
+    (7300,17076565),
+    (7300,17076566),
+    (7300,17076567),
+    (7300,17076568),
+    (7300,17076569),
+    (7300,17076570),
+    (7300,17076571),
+    (7300,17076572),
+    (7300,17076573),
+    (7300,17076574),
+    (7300,17076575),
+    (7300,17076576),
+    (7300,17076577),
+    (7300,17076578),
 
 -- npc
-INSERT INTO `instance_entities` VALUES (7300,17076579);
-INSERT INTO `instance_entities` VALUES (7300,17076580);
-INSERT INTO `instance_entities` VALUES (7300,17076581);
-INSERT INTO `instance_entities` VALUES (7300,17076582);
-INSERT INTO `instance_entities` VALUES (7300,17076583);
-INSERT INTO `instance_entities` VALUES (7300,17076584);
-INSERT INTO `instance_entities` VALUES (7300,17076585);
-INSERT INTO `instance_entities` VALUES (7300,17076586);
-INSERT INTO `instance_entities` VALUES (7300,17076587);
-INSERT INTO `instance_entities` VALUES (7300,17076588);
-INSERT INTO `instance_entities` VALUES (7300,17076589);
-INSERT INTO `instance_entities` VALUES (7300,17076916);
-INSERT INTO `instance_entities` VALUES (7300,17076917);
-INSERT INTO `instance_entities` VALUES (7300,17076950);
-INSERT INTO `instance_entities` VALUES (7300,17076951);
-INSERT INTO `instance_entities` VALUES (7300,17076952);
-INSERT INTO `instance_entities` VALUES (7300,17076953);
-INSERT INTO `instance_entities` VALUES (7300,17076954);
-INSERT INTO `instance_entities` VALUES (7300,17076955);
-INSERT INTO `instance_entities` VALUES (7300,17076956);
-INSERT INTO `instance_entities` VALUES (7300,17076957);
-INSERT INTO `instance_entities` VALUES (7300,17076958);
-INSERT INTO `instance_entities` VALUES (7300,17076959);
-INSERT INTO `instance_entities` VALUES (7300,17076960);
-INSERT INTO `instance_entities` VALUES (7300,17076961);
-INSERT INTO `instance_entities` VALUES (7300,17076962);
-INSERT INTO `instance_entities` VALUES (7300,17076963);
-INSERT INTO `instance_entities` VALUES (7300,17076964);
-INSERT INTO `instance_entities` VALUES (7300,17076965);
-INSERT INTO `instance_entities` VALUES (7300,17076966);
-INSERT INTO `instance_entities` VALUES (7300,17076967);
-INSERT INTO `instance_entities` VALUES (7300,17076968);
-INSERT INTO `instance_entities` VALUES (7300,17076969);
+    (7300,17076579),
+    (7300,17076580),
+    (7300,17076581),
+    (7300,17076582),
+    (7300,17076583),
+    (7300,17076584),
+    (7300,17076585),
+    (7300,17076586),
+    (7300,17076587),
+    (7300,17076588),
+    (7300,17076589),
+    (7300,17076916),
+    (7300,17076917),
+    (7300,17076950),
+    (7300,17076951),
+    (7300,17076952),
+    (7300,17076953),
+    (7300,17076954),
+    (7300,17076955),
+    (7300,17076956),
+    (7300,17076957),
+    (7300,17076958),
+    (7300,17076959),
+    (7300,17076960),
+    (7300,17076961),
+    (7300,17076962),
+    (7300,17076963),
+    (7300,17076964),
+    (7300,17076965),
+    (7300,17076966),
+    (7300,17076967),
+    (7300,17076968),
+    (7300,17076969)
+;
 
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- ------------------------------------------------------------
 -- Arrapago Remnants (Zone 74)
 -- ------------------------------------------------------------
 
 -- mobs
-INSERT INTO `instance_entities` VALUES (7400,17080321);
-INSERT INTO `instance_entities` VALUES (7400,17080322);
-INSERT INTO `instance_entities` VALUES (7400,17080323);
-INSERT INTO `instance_entities` VALUES (7400,17080324);
-INSERT INTO `instance_entities` VALUES (7400,17080325);
-INSERT INTO `instance_entities` VALUES (7400,17080326);
-INSERT INTO `instance_entities` VALUES (7400,17080327);
-INSERT INTO `instance_entities` VALUES (7400,17080328);
-INSERT INTO `instance_entities` VALUES (7400,17080329);
-INSERT INTO `instance_entities` VALUES (7400,17080330);
-INSERT INTO `instance_entities` VALUES (7400,17080331);
-INSERT INTO `instance_entities` VALUES (7400,17080332);
-INSERT INTO `instance_entities` VALUES (7400,17080333);
-INSERT INTO `instance_entities` VALUES (7400,17080334);
-INSERT INTO `instance_entities` VALUES (7400,17080335);
-INSERT INTO `instance_entities` VALUES (7400,17080336);
-INSERT INTO `instance_entities` VALUES (7400,17080337);
-INSERT INTO `instance_entities` VALUES (7400,17080338);
-INSERT INTO `instance_entities` VALUES (7400,17080339);
-INSERT INTO `instance_entities` VALUES (7400,17080340);
-INSERT INTO `instance_entities` VALUES (7400,17080341);
-INSERT INTO `instance_entities` VALUES (7400,17080342);
-INSERT INTO `instance_entities` VALUES (7400,17080343);
-INSERT INTO `instance_entities` VALUES (7400,17080344);
-INSERT INTO `instance_entities` VALUES (7400,17080345);
-INSERT INTO `instance_entities` VALUES (7400,17080346);
-INSERT INTO `instance_entities` VALUES (7400,17080347);
-INSERT INTO `instance_entities` VALUES (7400,17080348);
-INSERT INTO `instance_entities` VALUES (7400,17080349);
-INSERT INTO `instance_entities` VALUES (7400,17080350);
-INSERT INTO `instance_entities` VALUES (7400,17080351);
-INSERT INTO `instance_entities` VALUES (7400,17080352);
-INSERT INTO `instance_entities` VALUES (7400,17080353);
-INSERT INTO `instance_entities` VALUES (7400,17080354);
-INSERT INTO `instance_entities` VALUES (7400,17080355);
-INSERT INTO `instance_entities` VALUES (7400,17080356);
-INSERT INTO `instance_entities` VALUES (7400,17080357);
-INSERT INTO `instance_entities` VALUES (7400,17080358);
-INSERT INTO `instance_entities` VALUES (7400,17080359);
-INSERT INTO `instance_entities` VALUES (7400,17080360);
-INSERT INTO `instance_entities` VALUES (7400,17080361);
-INSERT INTO `instance_entities` VALUES (7400,17080362);
-INSERT INTO `instance_entities` VALUES (7400,17080363);
-INSERT INTO `instance_entities` VALUES (7400,17080364);
-INSERT INTO `instance_entities` VALUES (7400,17080365);
-INSERT INTO `instance_entities` VALUES (7400,17080366);
-INSERT INTO `instance_entities` VALUES (7400,17080367);
-INSERT INTO `instance_entities` VALUES (7400,17080368);
-INSERT INTO `instance_entities` VALUES (7400,17080369);
-INSERT INTO `instance_entities` VALUES (7400,17080370);
-INSERT INTO `instance_entities` VALUES (7400,17080371);
-INSERT INTO `instance_entities` VALUES (7400,17080372);
-INSERT INTO `instance_entities` VALUES (7400,17080373);
-INSERT INTO `instance_entities` VALUES (7400,17080374);
-INSERT INTO `instance_entities` VALUES (7400,17080375);
-INSERT INTO `instance_entities` VALUES (7400,17080376);
-INSERT INTO `instance_entities` VALUES (7400,17080377);
-INSERT INTO `instance_entities` VALUES (7400,17080378);
-INSERT INTO `instance_entities` VALUES (7400,17080379);
-INSERT INTO `instance_entities` VALUES (7400,17080380);
-INSERT INTO `instance_entities` VALUES (7400,17080381);
-INSERT INTO `instance_entities` VALUES (7400,17080382);
-INSERT INTO `instance_entities` VALUES (7400,17080383);
-INSERT INTO `instance_entities` VALUES (7400,17080384);
-INSERT INTO `instance_entities` VALUES (7400,17080385);
-INSERT INTO `instance_entities` VALUES (7400,17080386);
-INSERT INTO `instance_entities` VALUES (7400,17080387);
-INSERT INTO `instance_entities` VALUES (7400,17080388);
-INSERT INTO `instance_entities` VALUES (7400,17080389);
-INSERT INTO `instance_entities` VALUES (7400,17080390);
-INSERT INTO `instance_entities` VALUES (7400,17080391);
-INSERT INTO `instance_entities` VALUES (7400,17080392);
-INSERT INTO `instance_entities` VALUES (7400,17080393);
-INSERT INTO `instance_entities` VALUES (7400,17080394);
-INSERT INTO `instance_entities` VALUES (7400,17080395);
-INSERT INTO `instance_entities` VALUES (7400,17080396);
-INSERT INTO `instance_entities` VALUES (7400,17080397);
-INSERT INTO `instance_entities` VALUES (7400,17080398);
-INSERT INTO `instance_entities` VALUES (7400,17080399);
-INSERT INTO `instance_entities` VALUES (7400,17080400);
-INSERT INTO `instance_entities` VALUES (7400,17080401);
-INSERT INTO `instance_entities` VALUES (7400,17080402);
-INSERT INTO `instance_entities` VALUES (7400,17080403);
-INSERT INTO `instance_entities` VALUES (7400,17080404);
-INSERT INTO `instance_entities` VALUES (7400,17080405);
-INSERT INTO `instance_entities` VALUES (7400,17080406);
-INSERT INTO `instance_entities` VALUES (7400,17080407);
-INSERT INTO `instance_entities` VALUES (7400,17080408);
-INSERT INTO `instance_entities` VALUES (7400,17080409);
-INSERT INTO `instance_entities` VALUES (7400,17080410);
-INSERT INTO `instance_entities` VALUES (7400,17080411);
-INSERT INTO `instance_entities` VALUES (7400,17080412);
-INSERT INTO `instance_entities` VALUES (7400,17080413);
-INSERT INTO `instance_entities` VALUES (7400,17080414);
-INSERT INTO `instance_entities` VALUES (7400,17080415);
-INSERT INTO `instance_entities` VALUES (7400,17080416);
-INSERT INTO `instance_entities` VALUES (7400,17080417);
-INSERT INTO `instance_entities` VALUES (7400,17080418);
-INSERT INTO `instance_entities` VALUES (7400,17080419);
-INSERT INTO `instance_entities` VALUES (7400,17080420);
-INSERT INTO `instance_entities` VALUES (7400,17080421);
-INSERT INTO `instance_entities` VALUES (7400,17080422);
-INSERT INTO `instance_entities` VALUES (7400,17080423);
-INSERT INTO `instance_entities` VALUES (7400,17080424);
-INSERT INTO `instance_entities` VALUES (7400,17080425);
-INSERT INTO `instance_entities` VALUES (7400,17080426);
-INSERT INTO `instance_entities` VALUES (7400,17080427);
-INSERT INTO `instance_entities` VALUES (7400,17080428);
-INSERT INTO `instance_entities` VALUES (7400,17080429);
-INSERT INTO `instance_entities` VALUES (7400,17080430);
-INSERT INTO `instance_entities` VALUES (7400,17080431);
-INSERT INTO `instance_entities` VALUES (7400,17080432);
-INSERT INTO `instance_entities` VALUES (7400,17080433);
-INSERT INTO `instance_entities` VALUES (7400,17080434);
-INSERT INTO `instance_entities` VALUES (7400,17080435);
-INSERT INTO `instance_entities` VALUES (7400,17080436);
-INSERT INTO `instance_entities` VALUES (7400,17080437);
-INSERT INTO `instance_entities` VALUES (7400,17080438);
-INSERT INTO `instance_entities` VALUES (7400,17080439);
-INSERT INTO `instance_entities` VALUES (7400,17080440);
-INSERT INTO `instance_entities` VALUES (7400,17080441);
-INSERT INTO `instance_entities` VALUES (7400,17080442);
-INSERT INTO `instance_entities` VALUES (7400,17080443);
-INSERT INTO `instance_entities` VALUES (7400,17080444);
-INSERT INTO `instance_entities` VALUES (7400,17080445);
-INSERT INTO `instance_entities` VALUES (7400,17080446);
-INSERT INTO `instance_entities` VALUES (7400,17080447);
-INSERT INTO `instance_entities` VALUES (7400,17080448);
-INSERT INTO `instance_entities` VALUES (7400,17080449);
-INSERT INTO `instance_entities` VALUES (7400,17080450);
-INSERT INTO `instance_entities` VALUES (7400,17080451);
-INSERT INTO `instance_entities` VALUES (7400,17080452);
-INSERT INTO `instance_entities` VALUES (7400,17080453);
-INSERT INTO `instance_entities` VALUES (7400,17080454);
-INSERT INTO `instance_entities` VALUES (7400,17080455);
-INSERT INTO `instance_entities` VALUES (7400,17080456);
-INSERT INTO `instance_entities` VALUES (7400,17080457);
-INSERT INTO `instance_entities` VALUES (7400,17080458);
-INSERT INTO `instance_entities` VALUES (7400,17080459);
-INSERT INTO `instance_entities` VALUES (7400,17080460);
-INSERT INTO `instance_entities` VALUES (7400,17080461);
-INSERT INTO `instance_entities` VALUES (7400,17080462);
-INSERT INTO `instance_entities` VALUES (7400,17080463);
-INSERT INTO `instance_entities` VALUES (7400,17080464);
-INSERT INTO `instance_entities` VALUES (7400,17080465);
-INSERT INTO `instance_entities` VALUES (7400,17080466);
-INSERT INTO `instance_entities` VALUES (7400,17080467);
-INSERT INTO `instance_entities` VALUES (7400,17080468);
-INSERT INTO `instance_entities` VALUES (7400,17080469);
-INSERT INTO `instance_entities` VALUES (7400,17080470);
-INSERT INTO `instance_entities` VALUES (7400,17080471);
-INSERT INTO `instance_entities` VALUES (7400,17080472);
-INSERT INTO `instance_entities` VALUES (7400,17080473);
-INSERT INTO `instance_entities` VALUES (7400,17080474);
-INSERT INTO `instance_entities` VALUES (7400,17080475);
-INSERT INTO `instance_entities` VALUES (7400,17080476);
-INSERT INTO `instance_entities` VALUES (7400,17080477);
-INSERT INTO `instance_entities` VALUES (7400,17080478);
-INSERT INTO `instance_entities` VALUES (7400,17080479);
-INSERT INTO `instance_entities` VALUES (7400,17080480);
-INSERT INTO `instance_entities` VALUES (7400,17080481);
-INSERT INTO `instance_entities` VALUES (7400,17080482);
-INSERT INTO `instance_entities` VALUES (7400,17080483);
-INSERT INTO `instance_entities` VALUES (7400,17080484);
-INSERT INTO `instance_entities` VALUES (7400,17080485);
-INSERT INTO `instance_entities` VALUES (7400,17080486);
-INSERT INTO `instance_entities` VALUES (7400,17080487);
-INSERT INTO `instance_entities` VALUES (7400,17080488);
-INSERT INTO `instance_entities` VALUES (7400,17080489);
-INSERT INTO `instance_entities` VALUES (7400,17080490);
-INSERT INTO `instance_entities` VALUES (7400,17080491);
-INSERT INTO `instance_entities` VALUES (7400,17080492);
-INSERT INTO `instance_entities` VALUES (7400,17080493);
-INSERT INTO `instance_entities` VALUES (7400,17080494);
-INSERT INTO `instance_entities` VALUES (7400,17080495);
-INSERT INTO `instance_entities` VALUES (7400,17080496);
-INSERT INTO `instance_entities` VALUES (7400,17080497);
-INSERT INTO `instance_entities` VALUES (7400,17080498);
-INSERT INTO `instance_entities` VALUES (7400,17080499);
-INSERT INTO `instance_entities` VALUES (7400,17080500);
-INSERT INTO `instance_entities` VALUES (7400,17080501);
-INSERT INTO `instance_entities` VALUES (7400,17080502);
-INSERT INTO `instance_entities` VALUES (7400,17080503);
-INSERT INTO `instance_entities` VALUES (7400,17080504);
-INSERT INTO `instance_entities` VALUES (7400,17080505);
-INSERT INTO `instance_entities` VALUES (7400,17080506);
-INSERT INTO `instance_entities` VALUES (7400,17080507);
-INSERT INTO `instance_entities` VALUES (7400,17080508);
-INSERT INTO `instance_entities` VALUES (7400,17080509);
-INSERT INTO `instance_entities` VALUES (7400,17080510);
-INSERT INTO `instance_entities` VALUES (7400,17080511);
-INSERT INTO `instance_entities` VALUES (7400,17080512);
-INSERT INTO `instance_entities` VALUES (7400,17080513);
-INSERT INTO `instance_entities` VALUES (7400,17080514);
-INSERT INTO `instance_entities` VALUES (7400,17080515);
-INSERT INTO `instance_entities` VALUES (7400,17080516);
-INSERT INTO `instance_entities` VALUES (7400,17080517);
-INSERT INTO `instance_entities` VALUES (7400,17080518);
-INSERT INTO `instance_entities` VALUES (7400,17080519);
-INSERT INTO `instance_entities` VALUES (7400,17080520);
-INSERT INTO `instance_entities` VALUES (7400,17080521);
-INSERT INTO `instance_entities` VALUES (7400,17080522);
-INSERT INTO `instance_entities` VALUES (7400,17080523);
-INSERT INTO `instance_entities` VALUES (7400,17080524);
-INSERT INTO `instance_entities` VALUES (7400,17080525);
-INSERT INTO `instance_entities` VALUES (7400,17080526);
-INSERT INTO `instance_entities` VALUES (7400,17080527);
-INSERT INTO `instance_entities` VALUES (7400,17080528);
-INSERT INTO `instance_entities` VALUES (7400,17080529);
-INSERT INTO `instance_entities` VALUES (7400,17080530);
-INSERT INTO `instance_entities` VALUES (7400,17080531);
-INSERT INTO `instance_entities` VALUES (7400,17080532);
-INSERT INTO `instance_entities` VALUES (7400,17080533);
-INSERT INTO `instance_entities` VALUES (7400,17080534);
-INSERT INTO `instance_entities` VALUES (7400,17080535);
-INSERT INTO `instance_entities` VALUES (7400,17080536);
-INSERT INTO `instance_entities` VALUES (7400,17080537);
-INSERT INTO `instance_entities` VALUES (7400,17080538);
-INSERT INTO `instance_entities` VALUES (7400,17080539);
-INSERT INTO `instance_entities` VALUES (7400,17080540);
-INSERT INTO `instance_entities` VALUES (7400,17080541);
-INSERT INTO `instance_entities` VALUES (7400,17080542);
-INSERT INTO `instance_entities` VALUES (7400,17080543);
-INSERT INTO `instance_entities` VALUES (7400,17080544);
-INSERT INTO `instance_entities` VALUES (7400,17080545);
-INSERT INTO `instance_entities` VALUES (7400,17080546);
-INSERT INTO `instance_entities` VALUES (7400,17080547);
-INSERT INTO `instance_entities` VALUES (7400,17080548);
-INSERT INTO `instance_entities` VALUES (7400,17080549);
-INSERT INTO `instance_entities` VALUES (7400,17080550);
-INSERT INTO `instance_entities` VALUES (7400,17080551);
-INSERT INTO `instance_entities` VALUES (7400,17080552);
-INSERT INTO `instance_entities` VALUES (7400,17080553);
-INSERT INTO `instance_entities` VALUES (7400,17080554);
-INSERT INTO `instance_entities` VALUES (7400,17080555);
-INSERT INTO `instance_entities` VALUES (7400,17080556);
-INSERT INTO `instance_entities` VALUES (7400,17080557);
-INSERT INTO `instance_entities` VALUES (7400,17080558);
-INSERT INTO `instance_entities` VALUES (7400,17080559);
-INSERT INTO `instance_entities` VALUES (7400,17080560);
-INSERT INTO `instance_entities` VALUES (7400,17080561);
-INSERT INTO `instance_entities` VALUES (7400,17080562);
-INSERT INTO `instance_entities` VALUES (7400,17080563);
-INSERT INTO `instance_entities` VALUES (7400,17080564);
-INSERT INTO `instance_entities` VALUES (7400,17080565);
-INSERT INTO `instance_entities` VALUES (7400,17080566);
-INSERT INTO `instance_entities` VALUES (7400,17080567);
-INSERT INTO `instance_entities` VALUES (7400,17080568);
-INSERT INTO `instance_entities` VALUES (7400,17080569);
-INSERT INTO `instance_entities` VALUES (7400,17080570);
-INSERT INTO `instance_entities` VALUES (7400,17080571);
-INSERT INTO `instance_entities` VALUES (7400,17080572);
-INSERT INTO `instance_entities` VALUES (7400,17080573);
-INSERT INTO `instance_entities` VALUES (7400,17080574);
-INSERT INTO `instance_entities` VALUES (7400,17080575);
-INSERT INTO `instance_entities` VALUES (7400,17080576);
-INSERT INTO `instance_entities` VALUES (7400,17080577);
-INSERT INTO `instance_entities` VALUES (7400,17080578);
-INSERT INTO `instance_entities` VALUES (7400,17080579);
-INSERT INTO `instance_entities` VALUES (7400,17080580);
-INSERT INTO `instance_entities` VALUES (7400,17080581);
-INSERT INTO `instance_entities` VALUES (7400,17080582);
-INSERT INTO `instance_entities` VALUES (7400,17080583);
-INSERT INTO `instance_entities` VALUES (7400,17080584);
-INSERT INTO `instance_entities` VALUES (7400,17080585);
-INSERT INTO `instance_entities` VALUES (7400,17080586);
-INSERT INTO `instance_entities` VALUES (7400,17080587);
-INSERT INTO `instance_entities` VALUES (7400,17080588);
-INSERT INTO `instance_entities` VALUES (7400,17080589);
-INSERT INTO `instance_entities` VALUES (7400,17080590);
-INSERT INTO `instance_entities` VALUES (7400,17080591);
-INSERT INTO `instance_entities` VALUES (7400,17080592);
-INSERT INTO `instance_entities` VALUES (7400,17080593);
-INSERT INTO `instance_entities` VALUES (7400,17080594);
-INSERT INTO `instance_entities` VALUES (7400,17080595);
-INSERT INTO `instance_entities` VALUES (7400,17080596);
-INSERT INTO `instance_entities` VALUES (7400,17080597);
+    (7400,17080321),
+    (7400,17080322),
+    (7400,17080323),
+    (7400,17080324),
+    (7400,17080325),
+    (7400,17080326),
+    (7400,17080327),
+    (7400,17080328),
+    (7400,17080329),
+    (7400,17080330),
+    (7400,17080331),
+    (7400,17080332),
+    (7400,17080333),
+    (7400,17080334),
+    (7400,17080335),
+    (7400,17080336),
+    (7400,17080337),
+    (7400,17080338),
+    (7400,17080339),
+    (7400,17080340),
+    (7400,17080341),
+    (7400,17080342),
+    (7400,17080343),
+    (7400,17080344),
+    (7400,17080345),
+    (7400,17080346),
+    (7400,17080347),
+    (7400,17080348),
+    (7400,17080349),
+    (7400,17080350),
+    (7400,17080351),
+    (7400,17080352),
+    (7400,17080353),
+    (7400,17080354),
+    (7400,17080355),
+    (7400,17080356),
+    (7400,17080357),
+    (7400,17080358),
+    (7400,17080359),
+    (7400,17080360),
+    (7400,17080361),
+    (7400,17080362),
+    (7400,17080363),
+    (7400,17080364),
+    (7400,17080365),
+    (7400,17080366),
+    (7400,17080367),
+    (7400,17080368),
+    (7400,17080369),
+    (7400,17080370),
+    (7400,17080371),
+    (7400,17080372),
+    (7400,17080373),
+    (7400,17080374),
+    (7400,17080375),
+    (7400,17080376),
+    (7400,17080377),
+    (7400,17080378),
+    (7400,17080379),
+    (7400,17080380),
+    (7400,17080381),
+    (7400,17080382),
+    (7400,17080383),
+    (7400,17080384),
+    (7400,17080385),
+    (7400,17080386),
+    (7400,17080387),
+    (7400,17080388),
+    (7400,17080389),
+    (7400,17080390),
+    (7400,17080391),
+    (7400,17080392),
+    (7400,17080393),
+    (7400,17080394),
+    (7400,17080395),
+    (7400,17080396),
+    (7400,17080397),
+    (7400,17080398),
+    (7400,17080399),
+    (7400,17080400),
+    (7400,17080401),
+    (7400,17080402),
+    (7400,17080403),
+    (7400,17080404),
+    (7400,17080405),
+    (7400,17080406),
+    (7400,17080407),
+    (7400,17080408),
+    (7400,17080409),
+    (7400,17080410),
+    (7400,17080411),
+    (7400,17080412),
+    (7400,17080413),
+    (7400,17080414),
+    (7400,17080415),
+    (7400,17080416),
+    (7400,17080417),
+    (7400,17080418),
+    (7400,17080419),
+    (7400,17080420),
+    (7400,17080421),
+    (7400,17080422),
+    (7400,17080423),
+    (7400,17080424),
+    (7400,17080425),
+    (7400,17080426),
+    (7400,17080427),
+    (7400,17080428),
+    (7400,17080429),
+    (7400,17080430),
+    (7400,17080431),
+    (7400,17080432),
+    (7400,17080433),
+    (7400,17080434),
+    (7400,17080435),
+    (7400,17080436),
+    (7400,17080437),
+    (7400,17080438),
+    (7400,17080439),
+    (7400,17080440),
+    (7400,17080441),
+    (7400,17080442),
+    (7400,17080443),
+    (7400,17080444),
+    (7400,17080445),
+    (7400,17080446),
+    (7400,17080447),
+    (7400,17080448),
+    (7400,17080449),
+    (7400,17080450),
+    (7400,17080451),
+    (7400,17080452),
+    (7400,17080453),
+    (7400,17080454),
+    (7400,17080455),
+    (7400,17080456),
+    (7400,17080457),
+    (7400,17080458),
+    (7400,17080459),
+    (7400,17080460),
+    (7400,17080461),
+    (7400,17080462),
+    (7400,17080463),
+    (7400,17080464),
+    (7400,17080465),
+    (7400,17080466),
+    (7400,17080467),
+    (7400,17080468),
+    (7400,17080469),
+    (7400,17080470),
+    (7400,17080471),
+    (7400,17080472),
+    (7400,17080473),
+    (7400,17080474),
+    (7400,17080475),
+    (7400,17080476),
+    (7400,17080477),
+    (7400,17080478),
+    (7400,17080479),
+    (7400,17080480),
+    (7400,17080481),
+    (7400,17080482),
+    (7400,17080483),
+    (7400,17080484),
+    (7400,17080485),
+    (7400,17080486),
+    (7400,17080487),
+    (7400,17080488),
+    (7400,17080489),
+    (7400,17080490),
+    (7400,17080491),
+    (7400,17080492),
+    (7400,17080493),
+    (7400,17080494),
+    (7400,17080495),
+    (7400,17080496),
+    (7400,17080497),
+    (7400,17080498),
+    (7400,17080499),
+    (7400,17080500),
+    (7400,17080501),
+    (7400,17080502),
+    (7400,17080503),
+    (7400,17080504),
+    (7400,17080505),
+    (7400,17080506),
+    (7400,17080507),
+    (7400,17080508),
+    (7400,17080509),
+    (7400,17080510),
+    (7400,17080511),
+    (7400,17080512),
+    (7400,17080513),
+    (7400,17080514),
+    (7400,17080515),
+    (7400,17080516),
+    (7400,17080517),
+    (7400,17080518),
+    (7400,17080519),
+    (7400,17080520),
+    (7400,17080521),
+    (7400,17080522),
+    (7400,17080523),
+    (7400,17080524),
+    (7400,17080525),
+    (7400,17080526),
+    (7400,17080527),
+    (7400,17080528),
+    (7400,17080529),
+    (7400,17080530),
+    (7400,17080531),
+    (7400,17080532),
+    (7400,17080533),
+    (7400,17080534),
+    (7400,17080535),
+    (7400,17080536),
+    (7400,17080537),
+    (7400,17080538),
+    (7400,17080539),
+    (7400,17080540),
+    (7400,17080541),
+    (7400,17080542),
+    (7400,17080543),
+    (7400,17080544),
+    (7400,17080545),
+    (7400,17080546),
+    (7400,17080547),
+    (7400,17080548),
+    (7400,17080549),
+    (7400,17080550),
+    (7400,17080551),
+    (7400,17080552),
+    (7400,17080553),
+    (7400,17080554),
+    (7400,17080555),
+    (7400,17080556),
+    (7400,17080557),
+    (7400,17080558),
+    (7400,17080559),
+    (7400,17080560),
+    (7400,17080561),
+    (7400,17080562),
+    (7400,17080563),
+    (7400,17080564),
+    (7400,17080565),
+    (7400,17080566),
+    (7400,17080567),
+    (7400,17080568),
+    (7400,17080569),
+    (7400,17080570),
+    (7400,17080571),
+    (7400,17080572),
+    (7400,17080573),
+    (7400,17080574),
+    (7400,17080575),
+    (7400,17080576),
+    (7400,17080577),
+    (7400,17080578),
+    (7400,17080579),
+    (7400,17080580),
+    (7400,17080581),
+    (7400,17080582),
+    (7400,17080583),
+    (7400,17080584),
+    (7400,17080585),
+    (7400,17080586),
+    (7400,17080587),
+    (7400,17080588),
+    (7400,17080589),
+    (7400,17080590),
+    (7400,17080591),
+    (7400,17080592),
+    (7400,17080593),
+    (7400,17080594),
+    (7400,17080595),
+    (7400,17080596),
+    (7400,17080597),
 -- npc
-INSERT INTO `instance_entities` VALUES (7400,17080598);
-INSERT INTO `instance_entities` VALUES (7400,17080941);
-INSERT INTO `instance_entities` VALUES (7400,17080942);
-INSERT INTO `instance_entities` VALUES (7400,17080970);
-INSERT INTO `instance_entities` VALUES (7400,17080971);
-INSERT INTO `instance_entities` VALUES (7400,17080972);
-INSERT INTO `instance_entities` VALUES (7400,17080973);
-INSERT INTO `instance_entities` VALUES (7400,17080974);
-INSERT INTO `instance_entities` VALUES (7400,17080975);
-INSERT INTO `instance_entities` VALUES (7400,17080976);
-INSERT INTO `instance_entities` VALUES (7400,17080977);
-INSERT INTO `instance_entities` VALUES (7400,17080978);
-INSERT INTO `instance_entities` VALUES (7400,17080979);
-INSERT INTO `instance_entities` VALUES (7400,17080980);
-INSERT INTO `instance_entities` VALUES (7400,17080981);
-INSERT INTO `instance_entities` VALUES (7400,17080982);
-INSERT INTO `instance_entities` VALUES (7400,17080983);
-INSERT INTO `instance_entities` VALUES (7400,17080984);
-INSERT INTO `instance_entities` VALUES (7400,17080985);
-INSERT INTO `instance_entities` VALUES (7400,17080986);
-INSERT INTO `instance_entities` VALUES (7400,17080987);
-INSERT INTO `instance_entities` VALUES (7400,17080988);
-INSERT INTO `instance_entities` VALUES (7400,17080989);
-INSERT INTO `instance_entities` VALUES (7400,17080990);
-INSERT INTO `instance_entities` VALUES (7400,17080991);
-INSERT INTO `instance_entities` VALUES (7400,17080992);
-INSERT INTO `instance_entities` VALUES (7400,17080993);
+    (7400,17080598),
+    (7400,17080941),
+    (7400,17080942),
+    (7400,17080970),
+    (7400,17080971),
+    (7400,17080972),
+    (7400,17080973),
+    (7400,17080974),
+    (7400,17080975),
+    (7400,17080976),
+    (7400,17080977),
+    (7400,17080978),
+    (7400,17080979),
+    (7400,17080980),
+    (7400,17080981),
+    (7400,17080982),
+    (7400,17080983),
+    (7400,17080984),
+    (7400,17080985),
+    (7400,17080986),
+    (7400,17080987),
+    (7400,17080988),
+    (7400,17080989),
+    (7400,17080990),
+    (7400,17080991),
+    (7400,17080992),
+    (7400,17080993)
+;
 
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- ------------------------------------------------------------
 -- Bhaflau Remnants (Zone 75)
 -- ------------------------------------------------------------
 
 -- mobs
-INSERT INTO `instance_entities` VALUES (7500,17084427);
-INSERT INTO `instance_entities` VALUES (7500,17084428);
-INSERT INTO `instance_entities` VALUES (7500,17084429);
-INSERT INTO `instance_entities` VALUES (7500,17084430);
-INSERT INTO `instance_entities` VALUES (7500,17084431);
-INSERT INTO `instance_entities` VALUES (7500,17084432);
-INSERT INTO `instance_entities` VALUES (7500,17084433);
-INSERT INTO `instance_entities` VALUES (7500,17084434);
-INSERT INTO `instance_entities` VALUES (7500,17084435);
-INSERT INTO `instance_entities` VALUES (7500,17084436);
-INSERT INTO `instance_entities` VALUES (7500,17084437);
-INSERT INTO `instance_entities` VALUES (7500,17084438);
-INSERT INTO `instance_entities` VALUES (7500,17084439);
-INSERT INTO `instance_entities` VALUES (7500,17084440);
-INSERT INTO `instance_entities` VALUES (7500,17084441);
-INSERT INTO `instance_entities` VALUES (7500,17084442);
-INSERT INTO `instance_entities` VALUES (7500,17084443);
-INSERT INTO `instance_entities` VALUES (7500,17084444);
-INSERT INTO `instance_entities` VALUES (7500,17084445);
-INSERT INTO `instance_entities` VALUES (7500,17084446);
-INSERT INTO `instance_entities` VALUES (7500,17084447);
-INSERT INTO `instance_entities` VALUES (7500,17084448);
-INSERT INTO `instance_entities` VALUES (7500,17084449);
-INSERT INTO `instance_entities` VALUES (7500,17084450);
-INSERT INTO `instance_entities` VALUES (7500,17084451);
-INSERT INTO `instance_entities` VALUES (7500,17084452);
-INSERT INTO `instance_entities` VALUES (7500,17084453);
-INSERT INTO `instance_entities` VALUES (7500,17084454);
-INSERT INTO `instance_entities` VALUES (7500,17084455);
-INSERT INTO `instance_entities` VALUES (7500,17084456);
-INSERT INTO `instance_entities` VALUES (7500,17084457);
-INSERT INTO `instance_entities` VALUES (7500,17084458);
-INSERT INTO `instance_entities` VALUES (7500,17084459);
-INSERT INTO `instance_entities` VALUES (7500,17084460);
-INSERT INTO `instance_entities` VALUES (7500,17084461);
-INSERT INTO `instance_entities` VALUES (7500,17084462);
-INSERT INTO `instance_entities` VALUES (7500,17084463);
-INSERT INTO `instance_entities` VALUES (7500,17084464);
-INSERT INTO `instance_entities` VALUES (7500,17084465);
-INSERT INTO `instance_entities` VALUES (7500,17084466);
-INSERT INTO `instance_entities` VALUES (7500,17084467);
-INSERT INTO `instance_entities` VALUES (7500,17084468);
-INSERT INTO `instance_entities` VALUES (7500,17084469);
-INSERT INTO `instance_entities` VALUES (7500,17084470);
-INSERT INTO `instance_entities` VALUES (7500,17084471);
-INSERT INTO `instance_entities` VALUES (7500,17084472);
-INSERT INTO `instance_entities` VALUES (7500,17084473);
-INSERT INTO `instance_entities` VALUES (7500,17084474);
-INSERT INTO `instance_entities` VALUES (7500,17084475);
-INSERT INTO `instance_entities` VALUES (7500,17084476);
-INSERT INTO `instance_entities` VALUES (7500,17084477);
-INSERT INTO `instance_entities` VALUES (7500,17084478);
-INSERT INTO `instance_entities` VALUES (7500,17084479);
-INSERT INTO `instance_entities` VALUES (7500,17084480);
-INSERT INTO `instance_entities` VALUES (7500,17084481);
-INSERT INTO `instance_entities` VALUES (7500,17084482);
-INSERT INTO `instance_entities` VALUES (7500,17084483);
-INSERT INTO `instance_entities` VALUES (7500,17084484);
-INSERT INTO `instance_entities` VALUES (7500,17084485);
-INSERT INTO `instance_entities` VALUES (7500,17084486);
-INSERT INTO `instance_entities` VALUES (7500,17084487);
-INSERT INTO `instance_entities` VALUES (7500,17084488);
-INSERT INTO `instance_entities` VALUES (7500,17084489);
-INSERT INTO `instance_entities` VALUES (7500,17084490);
-INSERT INTO `instance_entities` VALUES (7500,17084491);
-INSERT INTO `instance_entities` VALUES (7500,17084492);
-INSERT INTO `instance_entities` VALUES (7500,17084493);
-INSERT INTO `instance_entities` VALUES (7500,17084494);
-INSERT INTO `instance_entities` VALUES (7500,17084495);
-INSERT INTO `instance_entities` VALUES (7500,17084496);
-INSERT INTO `instance_entities` VALUES (7500,17084497);
-INSERT INTO `instance_entities` VALUES (7500,17084498);
-INSERT INTO `instance_entities` VALUES (7500,17084499);
-INSERT INTO `instance_entities` VALUES (7500,17084500);
-INSERT INTO `instance_entities` VALUES (7500,17084501);
-INSERT INTO `instance_entities` VALUES (7500,17084502);
-INSERT INTO `instance_entities` VALUES (7500,17084503);
-INSERT INTO `instance_entities` VALUES (7500,17084504);
-INSERT INTO `instance_entities` VALUES (7500,17084505);
-INSERT INTO `instance_entities` VALUES (7500,17084506);
-INSERT INTO `instance_entities` VALUES (7500,17084507);
-INSERT INTO `instance_entities` VALUES (7500,17084508);
-INSERT INTO `instance_entities` VALUES (7500,17084509);
-INSERT INTO `instance_entities` VALUES (7500,17084510);
-INSERT INTO `instance_entities` VALUES (7500,17084511);
-INSERT INTO `instance_entities` VALUES (7500,17084512);
-INSERT INTO `instance_entities` VALUES (7500,17084513);
-INSERT INTO `instance_entities` VALUES (7500,17084514);
-INSERT INTO `instance_entities` VALUES (7500,17084515);
-INSERT INTO `instance_entities` VALUES (7500,17084516);
-INSERT INTO `instance_entities` VALUES (7500,17084517);
-INSERT INTO `instance_entities` VALUES (7500,17084518);
-INSERT INTO `instance_entities` VALUES (7500,17084519);
-INSERT INTO `instance_entities` VALUES (7500,17084520);
-INSERT INTO `instance_entities` VALUES (7500,17084521);
-INSERT INTO `instance_entities` VALUES (7500,17084522);
-INSERT INTO `instance_entities` VALUES (7500,17084523);
-INSERT INTO `instance_entities` VALUES (7500,17084524);
-INSERT INTO `instance_entities` VALUES (7500,17084525);
-INSERT INTO `instance_entities` VALUES (7500,17084526);
-INSERT INTO `instance_entities` VALUES (7500,17084527);
-INSERT INTO `instance_entities` VALUES (7500,17084528);
-INSERT INTO `instance_entities` VALUES (7500,17084529);
-INSERT INTO `instance_entities` VALUES (7500,17084530);
-INSERT INTO `instance_entities` VALUES (7500,17084531);
-INSERT INTO `instance_entities` VALUES (7500,17084532);
-INSERT INTO `instance_entities` VALUES (7500,17084533);
-INSERT INTO `instance_entities` VALUES (7500,17084534);
-INSERT INTO `instance_entities` VALUES (7500,17084535);
-INSERT INTO `instance_entities` VALUES (7500,17084536);
-INSERT INTO `instance_entities` VALUES (7500,17084537);
-INSERT INTO `instance_entities` VALUES (7500,17084538);
-INSERT INTO `instance_entities` VALUES (7500,17084539);
-INSERT INTO `instance_entities` VALUES (7500,17084540);
-INSERT INTO `instance_entities` VALUES (7500,17084541);
-INSERT INTO `instance_entities` VALUES (7500,17084542);
-INSERT INTO `instance_entities` VALUES (7500,17084543);
-INSERT INTO `instance_entities` VALUES (7500,17084544);
-INSERT INTO `instance_entities` VALUES (7500,17084545);
-INSERT INTO `instance_entities` VALUES (7500,17084546);
-INSERT INTO `instance_entities` VALUES (7500,17084547);
-INSERT INTO `instance_entities` VALUES (7500,17084548);
-INSERT INTO `instance_entities` VALUES (7500,17084549);
-INSERT INTO `instance_entities` VALUES (7500,17084550);
-INSERT INTO `instance_entities` VALUES (7500,17084551);
-INSERT INTO `instance_entities` VALUES (7500,17084552);
-INSERT INTO `instance_entities` VALUES (7500,17084553);
-INSERT INTO `instance_entities` VALUES (7500,17084554);
-INSERT INTO `instance_entities` VALUES (7500,17084555);
-INSERT INTO `instance_entities` VALUES (7500,17084556);
-INSERT INTO `instance_entities` VALUES (7500,17084557);
-INSERT INTO `instance_entities` VALUES (7500,17084558);
-INSERT INTO `instance_entities` VALUES (7500,17084559);
-INSERT INTO `instance_entities` VALUES (7500,17084560);
-INSERT INTO `instance_entities` VALUES (7500,17084561);
-INSERT INTO `instance_entities` VALUES (7500,17084562);
-INSERT INTO `instance_entities` VALUES (7500,17084563);
-INSERT INTO `instance_entities` VALUES (7500,17084564);
-INSERT INTO `instance_entities` VALUES (7500,17084565);
-INSERT INTO `instance_entities` VALUES (7500,17084566);
-INSERT INTO `instance_entities` VALUES (7500,17084567);
-INSERT INTO `instance_entities` VALUES (7500,17084568);
-INSERT INTO `instance_entities` VALUES (7500,17084569);
-INSERT INTO `instance_entities` VALUES (7500,17084570);
-INSERT INTO `instance_entities` VALUES (7500,17084571);
-INSERT INTO `instance_entities` VALUES (7500,17084572);
-INSERT INTO `instance_entities` VALUES (7500,17084573);
-INSERT INTO `instance_entities` VALUES (7500,17084574);
-INSERT INTO `instance_entities` VALUES (7500,17084575);
-INSERT INTO `instance_entities` VALUES (7500,17084576);
-INSERT INTO `instance_entities` VALUES (7500,17084577);
-INSERT INTO `instance_entities` VALUES (7500,17084578);
-INSERT INTO `instance_entities` VALUES (7500,17084579);
-INSERT INTO `instance_entities` VALUES (7500,17084580);
-INSERT INTO `instance_entities` VALUES (7500,17084581);
-INSERT INTO `instance_entities` VALUES (7500,17084582);
-INSERT INTO `instance_entities` VALUES (7500,17084583);
-INSERT INTO `instance_entities` VALUES (7500,17084584);
-INSERT INTO `instance_entities` VALUES (7500,17084585);
-INSERT INTO `instance_entities` VALUES (7500,17084586);
-INSERT INTO `instance_entities` VALUES (7500,17084587);
-INSERT INTO `instance_entities` VALUES (7500,17084588);
-INSERT INTO `instance_entities` VALUES (7500,17084589);
-INSERT INTO `instance_entities` VALUES (7500,17084590);
-INSERT INTO `instance_entities` VALUES (7500,17084591);
-INSERT INTO `instance_entities` VALUES (7500,17084592);
-INSERT INTO `instance_entities` VALUES (7500,17084593);
-INSERT INTO `instance_entities` VALUES (7500,17084594);
-INSERT INTO `instance_entities` VALUES (7500,17084595);
-INSERT INTO `instance_entities` VALUES (7500,17084596);
-INSERT INTO `instance_entities` VALUES (7500,17084597);
-INSERT INTO `instance_entities` VALUES (7500,17084598);
-INSERT INTO `instance_entities` VALUES (7500,17084599);
-INSERT INTO `instance_entities` VALUES (7500,17084600);
-INSERT INTO `instance_entities` VALUES (7500,17084601);
-INSERT INTO `instance_entities` VALUES (7500,17084602);
-INSERT INTO `instance_entities` VALUES (7500,17084603);
-INSERT INTO `instance_entities` VALUES (7500,17084604);
-INSERT INTO `instance_entities` VALUES (7500,17084605);
-INSERT INTO `instance_entities` VALUES (7500,17084606);
-INSERT INTO `instance_entities` VALUES (7500,17084607);
-INSERT INTO `instance_entities` VALUES (7500,17084608);
-INSERT INTO `instance_entities` VALUES (7500,17084609);
-INSERT INTO `instance_entities` VALUES (7500,17084610);
-INSERT INTO `instance_entities` VALUES (7500,17084611);
-INSERT INTO `instance_entities` VALUES (7500,17084612);
-INSERT INTO `instance_entities` VALUES (7500,17084613);
-INSERT INTO `instance_entities` VALUES (7500,17084614);
-INSERT INTO `instance_entities` VALUES (7500,17084615);
-INSERT INTO `instance_entities` VALUES (7500,17084616);
-INSERT INTO `instance_entities` VALUES (7500,17084617);
-INSERT INTO `instance_entities` VALUES (7500,17084618);
-INSERT INTO `instance_entities` VALUES (7500,17084619);
-INSERT INTO `instance_entities` VALUES (7500,17084620);
-INSERT INTO `instance_entities` VALUES (7500,17084621);
-INSERT INTO `instance_entities` VALUES (7500,17084622);
-INSERT INTO `instance_entities` VALUES (7500,17084623);
-INSERT INTO `instance_entities` VALUES (7500,17084624);
-INSERT INTO `instance_entities` VALUES (7500,17084625);
-INSERT INTO `instance_entities` VALUES (7500,17084626);
-INSERT INTO `instance_entities` VALUES (7500,17084627);
-INSERT INTO `instance_entities` VALUES (7500,17084628);
-INSERT INTO `instance_entities` VALUES (7500,17084629);
-INSERT INTO `instance_entities` VALUES (7500,17084630);
-INSERT INTO `instance_entities` VALUES (7500,17084631);
-INSERT INTO `instance_entities` VALUES (7500,17084632);
-INSERT INTO `instance_entities` VALUES (7500,17084633);
-INSERT INTO `instance_entities` VALUES (7500,17084634);
-INSERT INTO `instance_entities` VALUES (7500,17084635);
-INSERT INTO `instance_entities` VALUES (7500,17084636);
-INSERT INTO `instance_entities` VALUES (7500,17084637);
-INSERT INTO `instance_entities` VALUES (7500,17084638);
-INSERT INTO `instance_entities` VALUES (7500,17084639);
-INSERT INTO `instance_entities` VALUES (7500,17084640);
-INSERT INTO `instance_entities` VALUES (7500,17084641);
-INSERT INTO `instance_entities` VALUES (7500,17084642);
-INSERT INTO `instance_entities` VALUES (7500,17084643);
-INSERT INTO `instance_entities` VALUES (7500,17084644);
-INSERT INTO `instance_entities` VALUES (7500,17084645);
-INSERT INTO `instance_entities` VALUES (7500,17084646);
-INSERT INTO `instance_entities` VALUES (7500,17084647);
-INSERT INTO `instance_entities` VALUES (7500,17084648);
-INSERT INTO `instance_entities` VALUES (7500,17084649);
-INSERT INTO `instance_entities` VALUES (7500,17084650);
-INSERT INTO `instance_entities` VALUES (7500,17084651);
-INSERT INTO `instance_entities` VALUES (7500,17084652);
-INSERT INTO `instance_entities` VALUES (7500,17084653);
-INSERT INTO `instance_entities` VALUES (7500,17084654);
-INSERT INTO `instance_entities` VALUES (7500,17084655);
-INSERT INTO `instance_entities` VALUES (7500,17084656);
-INSERT INTO `instance_entities` VALUES (7500,17084657);
-INSERT INTO `instance_entities` VALUES (7500,17084658);
-INSERT INTO `instance_entities` VALUES (7500,17084659);
-INSERT INTO `instance_entities` VALUES (7500,17084660);
-INSERT INTO `instance_entities` VALUES (7500,17084661);
-INSERT INTO `instance_entities` VALUES (7500,17084662);
-INSERT INTO `instance_entities` VALUES (7500,17084663);
-INSERT INTO `instance_entities` VALUES (7500,17084664);
-INSERT INTO `instance_entities` VALUES (7500,17084665);
-INSERT INTO `instance_entities` VALUES (7500,17084666);
-INSERT INTO `instance_entities` VALUES (7500,17084667);
-INSERT INTO `instance_entities` VALUES (7500,17084668);
-INSERT INTO `instance_entities` VALUES (7500,17084669);
-INSERT INTO `instance_entities` VALUES (7500,17084670);
-INSERT INTO `instance_entities` VALUES (7500,17084671);
-INSERT INTO `instance_entities` VALUES (7500,17084672);
-INSERT INTO `instance_entities` VALUES (7500,17084673);
-INSERT INTO `instance_entities` VALUES (7500,17084674);
-INSERT INTO `instance_entities` VALUES (7500,17084675);
-INSERT INTO `instance_entities` VALUES (7500,17084676);
-INSERT INTO `instance_entities` VALUES (7500,17084677);
-INSERT INTO `instance_entities` VALUES (7500,17084678);
-INSERT INTO `instance_entities` VALUES (7500,17084679);
-INSERT INTO `instance_entities` VALUES (7500,17084680);
-INSERT INTO `instance_entities` VALUES (7500,17084681);
-INSERT INTO `instance_entities` VALUES (7500,17084682);
-INSERT INTO `instance_entities` VALUES (7500,17084683);
-INSERT INTO `instance_entities` VALUES (7500,17084684);
-INSERT INTO `instance_entities` VALUES (7500,17084685);
-INSERT INTO `instance_entities` VALUES (7500,17084686);
-INSERT INTO `instance_entities` VALUES (7500,17084687);
-INSERT INTO `instance_entities` VALUES (7500,17084688);
-INSERT INTO `instance_entities` VALUES (7500,17084689);
-INSERT INTO `instance_entities` VALUES (7500,17084690);
-INSERT INTO `instance_entities` VALUES (7500,17084691);
-INSERT INTO `instance_entities` VALUES (7500,17084692);
-INSERT INTO `instance_entities` VALUES (7500,17084693);
-INSERT INTO `instance_entities` VALUES (7500,17084694);
-INSERT INTO `instance_entities` VALUES (7500,17084695);
-INSERT INTO `instance_entities` VALUES (7500,17084696);
-INSERT INTO `instance_entities` VALUES (7500,17084697);
-INSERT INTO `instance_entities` VALUES (7500,17084698);
-INSERT INTO `instance_entities` VALUES (7500,17084699);
-INSERT INTO `instance_entities` VALUES (7500,17084700);
-INSERT INTO `instance_entities` VALUES (7500,17084701);
-INSERT INTO `instance_entities` VALUES (7500,17084702);
-INSERT INTO `instance_entities` VALUES (7500,17084703);
-INSERT INTO `instance_entities` VALUES (7500,17084704);
-INSERT INTO `instance_entities` VALUES (7500,17084705);
-INSERT INTO `instance_entities` VALUES (7500,17084706);
-INSERT INTO `instance_entities` VALUES (7500,17084707);
-INSERT INTO `instance_entities` VALUES (7500,17084708);
-INSERT INTO `instance_entities` VALUES (7500,17084709);
-INSERT INTO `instance_entities` VALUES (7500,17084710);
-INSERT INTO `instance_entities` VALUES (7500,17084711);
-INSERT INTO `instance_entities` VALUES (7500,17084712);
-INSERT INTO `instance_entities` VALUES (7500,17084713);
-INSERT INTO `instance_entities` VALUES (7500,17084714);
-INSERT INTO `instance_entities` VALUES (7500,17084715);
-INSERT INTO `instance_entities` VALUES (7500,17084716);
-INSERT INTO `instance_entities` VALUES (7500,17084717);
-INSERT INTO `instance_entities` VALUES (7500,17084718);
-INSERT INTO `instance_entities` VALUES (7500,17084719);
-INSERT INTO `instance_entities` VALUES (7500,17084720);
-INSERT INTO `instance_entities` VALUES (7500,17084721);
+    (7500,17084427),
+    (7500,17084428),
+    (7500,17084429),
+    (7500,17084430),
+    (7500,17084431),
+    (7500,17084432),
+    (7500,17084433),
+    (7500,17084434),
+    (7500,17084435),
+    (7500,17084436),
+    (7500,17084437),
+    (7500,17084438),
+    (7500,17084439),
+    (7500,17084440),
+    (7500,17084441),
+    (7500,17084442),
+    (7500,17084443),
+    (7500,17084444),
+    (7500,17084445),
+    (7500,17084446),
+    (7500,17084447),
+    (7500,17084448),
+    (7500,17084449),
+    (7500,17084450),
+    (7500,17084451),
+    (7500,17084452),
+    (7500,17084453),
+    (7500,17084454),
+    (7500,17084455),
+    (7500,17084456),
+    (7500,17084457),
+    (7500,17084458),
+    (7500,17084459),
+    (7500,17084460),
+    (7500,17084461),
+    (7500,17084462),
+    (7500,17084463),
+    (7500,17084464),
+    (7500,17084465),
+    (7500,17084466),
+    (7500,17084467),
+    (7500,17084468),
+    (7500,17084469),
+    (7500,17084470),
+    (7500,17084471),
+    (7500,17084472),
+    (7500,17084473),
+    (7500,17084474),
+    (7500,17084475),
+    (7500,17084476),
+    (7500,17084477),
+    (7500,17084478),
+    (7500,17084479),
+    (7500,17084480),
+    (7500,17084481),
+    (7500,17084482),
+    (7500,17084483),
+    (7500,17084484),
+    (7500,17084485),
+    (7500,17084486),
+    (7500,17084487),
+    (7500,17084488),
+    (7500,17084489),
+    (7500,17084490),
+    (7500,17084491),
+    (7500,17084492),
+    (7500,17084493),
+    (7500,17084494),
+    (7500,17084495),
+    (7500,17084496),
+    (7500,17084497),
+    (7500,17084498),
+    (7500,17084499),
+    (7500,17084500),
+    (7500,17084501),
+    (7500,17084502),
+    (7500,17084503),
+    (7500,17084504),
+    (7500,17084505),
+    (7500,17084506),
+    (7500,17084507),
+    (7500,17084508),
+    (7500,17084509),
+    (7500,17084510),
+    (7500,17084511),
+    (7500,17084512),
+    (7500,17084513),
+    (7500,17084514),
+    (7500,17084515),
+    (7500,17084516),
+    (7500,17084517),
+    (7500,17084518),
+    (7500,17084519),
+    (7500,17084520),
+    (7500,17084521),
+    (7500,17084522),
+    (7500,17084523),
+    (7500,17084524),
+    (7500,17084525),
+    (7500,17084526),
+    (7500,17084527),
+    (7500,17084528),
+    (7500,17084529),
+    (7500,17084530),
+    (7500,17084531),
+    (7500,17084532),
+    (7500,17084533),
+    (7500,17084534),
+    (7500,17084535),
+    (7500,17084536),
+    (7500,17084537),
+    (7500,17084538),
+    (7500,17084539),
+    (7500,17084540),
+    (7500,17084541),
+    (7500,17084542),
+    (7500,17084543),
+    (7500,17084544),
+    (7500,17084545),
+    (7500,17084546),
+    (7500,17084547),
+    (7500,17084548),
+    (7500,17084549),
+    (7500,17084550),
+    (7500,17084551),
+    (7500,17084552),
+    (7500,17084553),
+    (7500,17084554),
+    (7500,17084555),
+    (7500,17084556),
+    (7500,17084557),
+    (7500,17084558),
+    (7500,17084559),
+    (7500,17084560),
+    (7500,17084561),
+    (7500,17084562),
+    (7500,17084563),
+    (7500,17084564),
+    (7500,17084565),
+    (7500,17084566),
+    (7500,17084567),
+    (7500,17084568),
+    (7500,17084569),
+    (7500,17084570),
+    (7500,17084571),
+    (7500,17084572),
+    (7500,17084573),
+    (7500,17084574),
+    (7500,17084575),
+    (7500,17084576),
+    (7500,17084577),
+    (7500,17084578),
+    (7500,17084579),
+    (7500,17084580),
+    (7500,17084581),
+    (7500,17084582),
+    (7500,17084583),
+    (7500,17084584),
+    (7500,17084585),
+    (7500,17084586),
+    (7500,17084587),
+    (7500,17084588),
+    (7500,17084589),
+    (7500,17084590),
+    (7500,17084591),
+    (7500,17084592),
+    (7500,17084593),
+    (7500,17084594),
+    (7500,17084595),
+    (7500,17084596),
+    (7500,17084597),
+    (7500,17084598),
+    (7500,17084599),
+    (7500,17084600),
+    (7500,17084601),
+    (7500,17084602),
+    (7500,17084603),
+    (7500,17084604),
+    (7500,17084605),
+    (7500,17084606),
+    (7500,17084607),
+    (7500,17084608),
+    (7500,17084609),
+    (7500,17084610),
+    (7500,17084611),
+    (7500,17084612),
+    (7500,17084613),
+    (7500,17084614),
+    (7500,17084615),
+    (7500,17084616),
+    (7500,17084617),
+    (7500,17084618),
+    (7500,17084619),
+    (7500,17084620),
+    (7500,17084621),
+    (7500,17084622),
+    (7500,17084623),
+    (7500,17084624),
+    (7500,17084625),
+    (7500,17084626),
+    (7500,17084627),
+    (7500,17084628),
+    (7500,17084629),
+    (7500,17084630),
+    (7500,17084631),
+    (7500,17084632),
+    (7500,17084633),
+    (7500,17084634),
+    (7500,17084635),
+    (7500,17084636),
+    (7500,17084637),
+    (7500,17084638),
+    (7500,17084639),
+    (7500,17084640),
+    (7500,17084641),
+    (7500,17084642),
+    (7500,17084643),
+    (7500,17084644),
+    (7500,17084645),
+    (7500,17084646),
+    (7500,17084647),
+    (7500,17084648),
+    (7500,17084649),
+    (7500,17084650),
+    (7500,17084651),
+    (7500,17084652),
+    (7500,17084653),
+    (7500,17084654),
+    (7500,17084655),
+    (7500,17084656),
+    (7500,17084657),
+    (7500,17084658),
+    (7500,17084659),
+    (7500,17084660),
+    (7500,17084661),
+    (7500,17084662),
+    (7500,17084663),
+    (7500,17084664),
+    (7500,17084665),
+    (7500,17084666),
+    (7500,17084667),
+    (7500,17084668),
+    (7500,17084669),
+    (7500,17084670),
+    (7500,17084671),
+    (7500,17084672),
+    (7500,17084673),
+    (7500,17084674),
+    (7500,17084675),
+    (7500,17084676),
+    (7500,17084677),
+    (7500,17084678),
+    (7500,17084679),
+    (7500,17084680),
+    (7500,17084681),
+    (7500,17084682),
+    (7500,17084683),
+    (7500,17084684),
+    (7500,17084685),
+    (7500,17084686),
+    (7500,17084687),
+    (7500,17084688),
+    (7500,17084689),
+    (7500,17084690),
+    (7500,17084691),
+    (7500,17084692),
+    (7500,17084693),
+    (7500,17084694),
+    (7500,17084695),
+    (7500,17084696),
+    (7500,17084697),
+    (7500,17084698),
+    (7500,17084699),
+    (7500,17084700),
+    (7500,17084701),
+    (7500,17084702),
+    (7500,17084703),
+    (7500,17084704),
+    (7500,17084705),
+    (7500,17084706),
+    (7500,17084707),
+    (7500,17084708),
+    (7500,17084709),
+    (7500,17084710),
+    (7500,17084711),
+    (7500,17084712),
+    (7500,17084713),
+    (7500,17084714),
+    (7500,17084715),
+    (7500,17084716),
+    (7500,17084717),
+    (7500,17084718),
+    (7500,17084719),
+    (7500,17084720),
+    (7500,17084721),
 
 -- npcs
-INSERT INTO `instance_entities` VALUES (7500,17084417);
-INSERT INTO `instance_entities` VALUES (7500,17084418);
-INSERT INTO `instance_entities` VALUES (7500,17084419);
-INSERT INTO `instance_entities` VALUES (7500,17084420);
-INSERT INTO `instance_entities` VALUES (7500,17084421);
-INSERT INTO `instance_entities` VALUES (7500,17084422);
-INSERT INTO `instance_entities` VALUES (7500,17084423);
-INSERT INTO `instance_entities` VALUES (7500,17084424);
-INSERT INTO `instance_entities` VALUES (7500,17084425);
-INSERT INTO `instance_entities` VALUES (7500,17084426);
-INSERT INTO `instance_entities` VALUES (7500,17084722);
-INSERT INTO `instance_entities` VALUES (7500,17084856);
-INSERT INTO `instance_entities` VALUES (7500,17084857);
-INSERT INTO `instance_entities` VALUES (7500,17084890);
-INSERT INTO `instance_entities` VALUES (7500,17084891);
-INSERT INTO `instance_entities` VALUES (7500,17084892);
-INSERT INTO `instance_entities` VALUES (7500,17084893);
-INSERT INTO `instance_entities` VALUES (7500,17084894);
-INSERT INTO `instance_entities` VALUES (7500,17084895);
-INSERT INTO `instance_entities` VALUES (7500,17084896);
-INSERT INTO `instance_entities` VALUES (7500,17084897);
-INSERT INTO `instance_entities` VALUES (7500,17084898);
-INSERT INTO `instance_entities` VALUES (7500,17084899);
-INSERT INTO `instance_entities` VALUES (7500,17084900);
-INSERT INTO `instance_entities` VALUES (7500,17084901);
-INSERT INTO `instance_entities` VALUES (7500,17084902);
-INSERT INTO `instance_entities` VALUES (7500,17084903);
-INSERT INTO `instance_entities` VALUES (7500,17084904);
-INSERT INTO `instance_entities` VALUES (7500,17084905);
-INSERT INTO `instance_entities` VALUES (7500,17084906);
-INSERT INTO `instance_entities` VALUES (7500,17084907);
-INSERT INTO `instance_entities` VALUES (7500,17084908);
-INSERT INTO `instance_entities` VALUES (7500,17084909);
-INSERT INTO `instance_entities` VALUES (7500,17084910);
-INSERT INTO `instance_entities` VALUES (7500,17084911);
-INSERT INTO `instance_entities` VALUES (7500,17084912);
-INSERT INTO `instance_entities` VALUES (7500,17084913);
-INSERT INTO `instance_entities` VALUES (7500,17084914);
-INSERT INTO `instance_entities` VALUES (7500,17084915);
-INSERT INTO `instance_entities` VALUES (7500,17084916);
-INSERT INTO `instance_entities` VALUES (7500,17084917);
-INSERT INTO `instance_entities` VALUES (7500,17084918);
-INSERT INTO `instance_entities` VALUES (7500,17084919);
-INSERT INTO `instance_entities` VALUES (7500,17084920);
-INSERT INTO `instance_entities` VALUES (7500,17084921);
-INSERT INTO `instance_entities` VALUES (7500,17084922);
-INSERT INTO `instance_entities` VALUES (7500,17084923);
-INSERT INTO `instance_entities` VALUES (7500,17084925);
+    (7500,17084417),
+    (7500,17084418),
+    (7500,17084419),
+    (7500,17084420),
+    (7500,17084421),
+    (7500,17084422),
+    (7500,17084423),
+    (7500,17084424),
+    (7500,17084425),
+    (7500,17084426),
+    (7500,17084722),
+    (7500,17084856),
+    (7500,17084857),
+    (7500,17084890),
+    (7500,17084891),
+    (7500,17084892),
+    (7500,17084893),
+    (7500,17084894),
+    (7500,17084895),
+    (7500,17084896),
+    (7500,17084897),
+    (7500,17084898),
+    (7500,17084899),
+    (7500,17084900),
+    (7500,17084901),
+    (7500,17084902),
+    (7500,17084903),
+    (7500,17084904),
+    (7500,17084905),
+    (7500,17084906),
+    (7500,17084907),
+    (7500,17084908),
+    (7500,17084909),
+    (7500,17084910),
+    (7500,17084911),
+    (7500,17084912),
+    (7500,17084913),
+    (7500,17084914),
+    (7500,17084915),
+    (7500,17084916),
+    (7500,17084917),
+    (7500,17084918),
+    (7500,17084919),
+    (7500,17084920),
+    (7500,17084921),
+    (7500,17084922),
+    (7500,17084923),
+    (7500,17084925)
+;
 
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- ------------------------------------------------------------
 -- Silver Sea Remnants (Zone 76)
 -- ------------------------------------------------------------
 
 -- mobs
-INSERT INTO `instance_entities` VALUES (7600,17088513);
-INSERT INTO `instance_entities` VALUES (7600,17088514);
-INSERT INTO `instance_entities` VALUES (7600,17088515);
-INSERT INTO `instance_entities` VALUES (7600,17088516);
-INSERT INTO `instance_entities` VALUES (7600,17088517);
-INSERT INTO `instance_entities` VALUES (7600,17088518);
-INSERT INTO `instance_entities` VALUES (7600,17088519);
-INSERT INTO `instance_entities` VALUES (7600,17088520);
-INSERT INTO `instance_entities` VALUES (7600,17088521);
-INSERT INTO `instance_entities` VALUES (7600,17088522);
-INSERT INTO `instance_entities` VALUES (7600,17088523);
-INSERT INTO `instance_entities` VALUES (7600,17088524);
-INSERT INTO `instance_entities` VALUES (7600,17088525);
-INSERT INTO `instance_entities` VALUES (7600,17088526);
-INSERT INTO `instance_entities` VALUES (7600,17088527);
-INSERT INTO `instance_entities` VALUES (7600,17088528);
-INSERT INTO `instance_entities` VALUES (7600,17088529);
-INSERT INTO `instance_entities` VALUES (7600,17088530);
-INSERT INTO `instance_entities` VALUES (7600,17088531);
-INSERT INTO `instance_entities` VALUES (7600,17088532);
-INSERT INTO `instance_entities` VALUES (7600,17088533);
-INSERT INTO `instance_entities` VALUES (7600,17088534);
-INSERT INTO `instance_entities` VALUES (7600,17088535);
-INSERT INTO `instance_entities` VALUES (7600,17088536);
-INSERT INTO `instance_entities` VALUES (7600,17088537);
-INSERT INTO `instance_entities` VALUES (7600,17088538);
-INSERT INTO `instance_entities` VALUES (7600,17088539);
-INSERT INTO `instance_entities` VALUES (7600,17088540);
-INSERT INTO `instance_entities` VALUES (7600,17088541);
-INSERT INTO `instance_entities` VALUES (7600,17088542);
-INSERT INTO `instance_entities` VALUES (7600,17088543);
-INSERT INTO `instance_entities` VALUES (7600,17088544);
-INSERT INTO `instance_entities` VALUES (7600,17088545);
-INSERT INTO `instance_entities` VALUES (7600,17088546);
-INSERT INTO `instance_entities` VALUES (7600,17088547);
-INSERT INTO `instance_entities` VALUES (7600,17088548);
-INSERT INTO `instance_entities` VALUES (7600,17088549);
-INSERT INTO `instance_entities` VALUES (7600,17088550);
-INSERT INTO `instance_entities` VALUES (7600,17088551);
-INSERT INTO `instance_entities` VALUES (7600,17088552);
-INSERT INTO `instance_entities` VALUES (7600,17088553);
-INSERT INTO `instance_entities` VALUES (7600,17088554);
-INSERT INTO `instance_entities` VALUES (7600,17088555);
-INSERT INTO `instance_entities` VALUES (7600,17088556);
-INSERT INTO `instance_entities` VALUES (7600,17088557);
-INSERT INTO `instance_entities` VALUES (7600,17088558);
-INSERT INTO `instance_entities` VALUES (7600,17088559);
-INSERT INTO `instance_entities` VALUES (7600,17088560);
-INSERT INTO `instance_entities` VALUES (7600,17088561);
-INSERT INTO `instance_entities` VALUES (7600,17088562);
-INSERT INTO `instance_entities` VALUES (7600,17088563);
-INSERT INTO `instance_entities` VALUES (7600,17088564);
-INSERT INTO `instance_entities` VALUES (7600,17088565);
-INSERT INTO `instance_entities` VALUES (7600,17088566);
-INSERT INTO `instance_entities` VALUES (7600,17088567);
-INSERT INTO `instance_entities` VALUES (7600,17088568);
-INSERT INTO `instance_entities` VALUES (7600,17088569);
-INSERT INTO `instance_entities` VALUES (7600,17088570);
-INSERT INTO `instance_entities` VALUES (7600,17088571);
-INSERT INTO `instance_entities` VALUES (7600,17088572);
-INSERT INTO `instance_entities` VALUES (7600,17088573);
-INSERT INTO `instance_entities` VALUES (7600,17088574);
-INSERT INTO `instance_entities` VALUES (7600,17088575);
-INSERT INTO `instance_entities` VALUES (7600,17088576);
-INSERT INTO `instance_entities` VALUES (7600,17088577);
-INSERT INTO `instance_entities` VALUES (7600,17088578);
-INSERT INTO `instance_entities` VALUES (7600,17088579);
-INSERT INTO `instance_entities` VALUES (7600,17088580);
-INSERT INTO `instance_entities` VALUES (7600,17088581);
-INSERT INTO `instance_entities` VALUES (7600,17088582);
-INSERT INTO `instance_entities` VALUES (7600,17088583);
-INSERT INTO `instance_entities` VALUES (7600,17088584);
-INSERT INTO `instance_entities` VALUES (7600,17088585);
-INSERT INTO `instance_entities` VALUES (7600,17088586);
-INSERT INTO `instance_entities` VALUES (7600,17088587);
-INSERT INTO `instance_entities` VALUES (7600,17088588);
-INSERT INTO `instance_entities` VALUES (7600,17088589);
-INSERT INTO `instance_entities` VALUES (7600,17088590);
-INSERT INTO `instance_entities` VALUES (7600,17088591);
-INSERT INTO `instance_entities` VALUES (7600,17088592);
-INSERT INTO `instance_entities` VALUES (7600,17088593);
-INSERT INTO `instance_entities` VALUES (7600,17088594);
-INSERT INTO `instance_entities` VALUES (7600,17088595);
-INSERT INTO `instance_entities` VALUES (7600,17088596);
-INSERT INTO `instance_entities` VALUES (7600,17088597);
-INSERT INTO `instance_entities` VALUES (7600,17088598);
-INSERT INTO `instance_entities` VALUES (7600,17088599);
-INSERT INTO `instance_entities` VALUES (7600,17088600);
-INSERT INTO `instance_entities` VALUES (7600,17088601);
-INSERT INTO `instance_entities` VALUES (7600,17088602);
-INSERT INTO `instance_entities` VALUES (7600,17088603);
-INSERT INTO `instance_entities` VALUES (7600,17088604);
-INSERT INTO `instance_entities` VALUES (7600,17088605);
-INSERT INTO `instance_entities` VALUES (7600,17088606);
-INSERT INTO `instance_entities` VALUES (7600,17088607);
-INSERT INTO `instance_entities` VALUES (7600,17088608);
-INSERT INTO `instance_entities` VALUES (7600,17088609);
-INSERT INTO `instance_entities` VALUES (7600,17088610);
-INSERT INTO `instance_entities` VALUES (7600,17088611);
-INSERT INTO `instance_entities` VALUES (7600,17088612);
-INSERT INTO `instance_entities` VALUES (7600,17088613);
-INSERT INTO `instance_entities` VALUES (7600,17088614);
-INSERT INTO `instance_entities` VALUES (7600,17088615);
-INSERT INTO `instance_entities` VALUES (7600,17088616);
-INSERT INTO `instance_entities` VALUES (7600,17088617);
-INSERT INTO `instance_entities` VALUES (7600,17088618);
-INSERT INTO `instance_entities` VALUES (7600,17088619);
-INSERT INTO `instance_entities` VALUES (7600,17088620);
-INSERT INTO `instance_entities` VALUES (7600,17088621);
-INSERT INTO `instance_entities` VALUES (7600,17088622);
-INSERT INTO `instance_entities` VALUES (7600,17088623);
-INSERT INTO `instance_entities` VALUES (7600,17088624);
-INSERT INTO `instance_entities` VALUES (7600,17088625);
-INSERT INTO `instance_entities` VALUES (7600,17088626);
-INSERT INTO `instance_entities` VALUES (7600,17088627);
-INSERT INTO `instance_entities` VALUES (7600,17088628);
-INSERT INTO `instance_entities` VALUES (7600,17088629);
-INSERT INTO `instance_entities` VALUES (7600,17088630);
-INSERT INTO `instance_entities` VALUES (7600,17088631);
-INSERT INTO `instance_entities` VALUES (7600,17088632);
-INSERT INTO `instance_entities` VALUES (7600,17088633);
-INSERT INTO `instance_entities` VALUES (7600,17088634);
-INSERT INTO `instance_entities` VALUES (7600,17088635);
-INSERT INTO `instance_entities` VALUES (7600,17088636);
-INSERT INTO `instance_entities` VALUES (7600,17088637);
-INSERT INTO `instance_entities` VALUES (7600,17088638);
-INSERT INTO `instance_entities` VALUES (7600,17088639);
-INSERT INTO `instance_entities` VALUES (7600,17088640);
-INSERT INTO `instance_entities` VALUES (7600,17088641);
-INSERT INTO `instance_entities` VALUES (7600,17088642);
-INSERT INTO `instance_entities` VALUES (7600,17088643);
-INSERT INTO `instance_entities` VALUES (7600,17088644);
-INSERT INTO `instance_entities` VALUES (7600,17088645);
-INSERT INTO `instance_entities` VALUES (7600,17088646);
-INSERT INTO `instance_entities` VALUES (7600,17088647);
-INSERT INTO `instance_entities` VALUES (7600,17088648);
-INSERT INTO `instance_entities` VALUES (7600,17088649);
-INSERT INTO `instance_entities` VALUES (7600,17088650);
-INSERT INTO `instance_entities` VALUES (7600,17088651);
-INSERT INTO `instance_entities` VALUES (7600,17088652);
-INSERT INTO `instance_entities` VALUES (7600,17088653);
-INSERT INTO `instance_entities` VALUES (7600,17088654);
-INSERT INTO `instance_entities` VALUES (7600,17088655);
-INSERT INTO `instance_entities` VALUES (7600,17088656);
-INSERT INTO `instance_entities` VALUES (7600,17088657);
-INSERT INTO `instance_entities` VALUES (7600,17088658);
-INSERT INTO `instance_entities` VALUES (7600,17088659);
-INSERT INTO `instance_entities` VALUES (7600,17088660);
-INSERT INTO `instance_entities` VALUES (7600,17088661);
-INSERT INTO `instance_entities` VALUES (7600,17088662);
-INSERT INTO `instance_entities` VALUES (7600,17088663);
-INSERT INTO `instance_entities` VALUES (7600,17088664);
-INSERT INTO `instance_entities` VALUES (7600,17088665);
-INSERT INTO `instance_entities` VALUES (7600,17088666);
-INSERT INTO `instance_entities` VALUES (7600,17088667);
-INSERT INTO `instance_entities` VALUES (7600,17088668);
-INSERT INTO `instance_entities` VALUES (7600,17088669);
-INSERT INTO `instance_entities` VALUES (7600,17088670);
-INSERT INTO `instance_entities` VALUES (7600,17088671);
-INSERT INTO `instance_entities` VALUES (7600,17088672);
-INSERT INTO `instance_entities` VALUES (7600,17088673);
-INSERT INTO `instance_entities` VALUES (7600,17088674);
-INSERT INTO `instance_entities` VALUES (7600,17088675);
-INSERT INTO `instance_entities` VALUES (7600,17088676);
-INSERT INTO `instance_entities` VALUES (7600,17088677);
-INSERT INTO `instance_entities` VALUES (7600,17088678);
-INSERT INTO `instance_entities` VALUES (7600,17088679);
-INSERT INTO `instance_entities` VALUES (7600,17088680);
-INSERT INTO `instance_entities` VALUES (7600,17088681);
-INSERT INTO `instance_entities` VALUES (7600,17088682);
-INSERT INTO `instance_entities` VALUES (7600,17088683);
-INSERT INTO `instance_entities` VALUES (7600,17088684);
-INSERT INTO `instance_entities` VALUES (7600,17088685);
-INSERT INTO `instance_entities` VALUES (7600,17088686);
-INSERT INTO `instance_entities` VALUES (7600,17088687);
-INSERT INTO `instance_entities` VALUES (7600,17088688);
-INSERT INTO `instance_entities` VALUES (7600,17088689);
-INSERT INTO `instance_entities` VALUES (7600,17088690);
-INSERT INTO `instance_entities` VALUES (7600,17088691);
-INSERT INTO `instance_entities` VALUES (7600,17088692);
-INSERT INTO `instance_entities` VALUES (7600,17088693);
-INSERT INTO `instance_entities` VALUES (7600,17088694);
-INSERT INTO `instance_entities` VALUES (7600,17088695);
-INSERT INTO `instance_entities` VALUES (7600,17088696);
-INSERT INTO `instance_entities` VALUES (7600,17088697);
-INSERT INTO `instance_entities` VALUES (7600,17088698);
-INSERT INTO `instance_entities` VALUES (7600,17088699);
-INSERT INTO `instance_entities` VALUES (7600,17088700);
-INSERT INTO `instance_entities` VALUES (7600,17088701);
-INSERT INTO `instance_entities` VALUES (7600,17088702);
-INSERT INTO `instance_entities` VALUES (7600,17088703);
-INSERT INTO `instance_entities` VALUES (7600,17088704);
-INSERT INTO `instance_entities` VALUES (7600,17088705);
-INSERT INTO `instance_entities` VALUES (7600,17088706);
-INSERT INTO `instance_entities` VALUES (7600,17088707);
-INSERT INTO `instance_entities` VALUES (7600,17088708);
-INSERT INTO `instance_entities` VALUES (7600,17088709);
-INSERT INTO `instance_entities` VALUES (7600,17088710);
-INSERT INTO `instance_entities` VALUES (7600,17088711);
-INSERT INTO `instance_entities` VALUES (7600,17088712);
-INSERT INTO `instance_entities` VALUES (7600,17088713);
-INSERT INTO `instance_entities` VALUES (7600,17088714);
-INSERT INTO `instance_entities` VALUES (7600,17088715);
-INSERT INTO `instance_entities` VALUES (7600,17088716);
-INSERT INTO `instance_entities` VALUES (7600,17088717);
-INSERT INTO `instance_entities` VALUES (7600,17088718);
-INSERT INTO `instance_entities` VALUES (7600,17088719);
-INSERT INTO `instance_entities` VALUES (7600,17088720);
-INSERT INTO `instance_entities` VALUES (7600,17088721);
-INSERT INTO `instance_entities` VALUES (7600,17088722);
-INSERT INTO `instance_entities` VALUES (7600,17088723);
-INSERT INTO `instance_entities` VALUES (7600,17088724);
-INSERT INTO `instance_entities` VALUES (7600,17088725);
-INSERT INTO `instance_entities` VALUES (7600,17088726);
-INSERT INTO `instance_entities` VALUES (7600,17088727);
-INSERT INTO `instance_entities` VALUES (7600,17088728);
-INSERT INTO `instance_entities` VALUES (7600,17088729);
-INSERT INTO `instance_entities` VALUES (7600,17088730);
-INSERT INTO `instance_entities` VALUES (7600,17088731);
-INSERT INTO `instance_entities` VALUES (7600,17088732);
-INSERT INTO `instance_entities` VALUES (7600,17088733);
-INSERT INTO `instance_entities` VALUES (7600,17088734);
-INSERT INTO `instance_entities` VALUES (7600,17088735);
-INSERT INTO `instance_entities` VALUES (7600,17088736);
-INSERT INTO `instance_entities` VALUES (7600,17088737);
-INSERT INTO `instance_entities` VALUES (7600,17088738);
-INSERT INTO `instance_entities` VALUES (7600,17088739);
-INSERT INTO `instance_entities` VALUES (7600,17088740);
-INSERT INTO `instance_entities` VALUES (7600,17088741);
-INSERT INTO `instance_entities` VALUES (7600,17088742);
-INSERT INTO `instance_entities` VALUES (7600,17088743);
-INSERT INTO `instance_entities` VALUES (7600,17088744);
-INSERT INTO `instance_entities` VALUES (7600,17088745);
-INSERT INTO `instance_entities` VALUES (7600,17088746);
-INSERT INTO `instance_entities` VALUES (7600,17088747);
-INSERT INTO `instance_entities` VALUES (7600,17088748);
-INSERT INTO `instance_entities` VALUES (7600,17088749);
-INSERT INTO `instance_entities` VALUES (7600,17088750);
-INSERT INTO `instance_entities` VALUES (7600,17088751);
-INSERT INTO `instance_entities` VALUES (7600,17088752);
-INSERT INTO `instance_entities` VALUES (7600,17088753);
-INSERT INTO `instance_entities` VALUES (7600,17088754);
-INSERT INTO `instance_entities` VALUES (7600,17088755);
-INSERT INTO `instance_entities` VALUES (7600,17088756);
-INSERT INTO `instance_entities` VALUES (7600,17088757);
-INSERT INTO `instance_entities` VALUES (7600,17088758);
-INSERT INTO `instance_entities` VALUES (7600,17088759);
-INSERT INTO `instance_entities` VALUES (7600,17088760);
-INSERT INTO `instance_entities` VALUES (7600,17088761);
-INSERT INTO `instance_entities` VALUES (7600,17088762);
-INSERT INTO `instance_entities` VALUES (7600,17088763);
-INSERT INTO `instance_entities` VALUES (7600,17088764);
-INSERT INTO `instance_entities` VALUES (7600,17088765);
-INSERT INTO `instance_entities` VALUES (7600,17088766);
-INSERT INTO `instance_entities` VALUES (7600,17088767);
-INSERT INTO `instance_entities` VALUES (7600,17088768);
-INSERT INTO `instance_entities` VALUES (7600,17088769);
-INSERT INTO `instance_entities` VALUES (7600,17088770);
-INSERT INTO `instance_entities` VALUES (7600,17088771);
-INSERT INTO `instance_entities` VALUES (7600,17088772);
-INSERT INTO `instance_entities` VALUES (7600,17088773);
-INSERT INTO `instance_entities` VALUES (7600,17088774);
-INSERT INTO `instance_entities` VALUES (7600,17088775);
-INSERT INTO `instance_entities` VALUES (7600,17088776);
-INSERT INTO `instance_entities` VALUES (7600,17088777);
-INSERT INTO `instance_entities` VALUES (7600,17088778);
-INSERT INTO `instance_entities` VALUES (7600,17088779);
-INSERT INTO `instance_entities` VALUES (7600,17088780);
-INSERT INTO `instance_entities` VALUES (7600,17088781);
-INSERT INTO `instance_entities` VALUES (7600,17088782);
-INSERT INTO `instance_entities` VALUES (7600,17088783);
-INSERT INTO `instance_entities` VALUES (7600,17088784);
-INSERT INTO `instance_entities` VALUES (7600,17088785);
-INSERT INTO `instance_entities` VALUES (7600,17088786);
+    (7600,17088513),
+    (7600,17088514),
+    (7600,17088515),
+    (7600,17088516),
+    (7600,17088517),
+    (7600,17088518),
+    (7600,17088519),
+    (7600,17088520),
+    (7600,17088521),
+    (7600,17088522),
+    (7600,17088523),
+    (7600,17088524),
+    (7600,17088525),
+    (7600,17088526),
+    (7600,17088527),
+    (7600,17088528),
+    (7600,17088529),
+    (7600,17088530),
+    (7600,17088531),
+    (7600,17088532),
+    (7600,17088533),
+    (7600,17088534),
+    (7600,17088535),
+    (7600,17088536),
+    (7600,17088537),
+    (7600,17088538),
+    (7600,17088539),
+    (7600,17088540),
+    (7600,17088541),
+    (7600,17088542),
+    (7600,17088543),
+    (7600,17088544),
+    (7600,17088545),
+    (7600,17088546),
+    (7600,17088547),
+    (7600,17088548),
+    (7600,17088549),
+    (7600,17088550),
+    (7600,17088551),
+    (7600,17088552),
+    (7600,17088553),
+    (7600,17088554),
+    (7600,17088555),
+    (7600,17088556),
+    (7600,17088557),
+    (7600,17088558),
+    (7600,17088559),
+    (7600,17088560),
+    (7600,17088561),
+    (7600,17088562),
+    (7600,17088563),
+    (7600,17088564),
+    (7600,17088565),
+    (7600,17088566),
+    (7600,17088567),
+    (7600,17088568),
+    (7600,17088569),
+    (7600,17088570),
+    (7600,17088571),
+    (7600,17088572),
+    (7600,17088573),
+    (7600,17088574),
+    (7600,17088575),
+    (7600,17088576),
+    (7600,17088577),
+    (7600,17088578),
+    (7600,17088579),
+    (7600,17088580),
+    (7600,17088581),
+    (7600,17088582),
+    (7600,17088583),
+    (7600,17088584),
+    (7600,17088585),
+    (7600,17088586),
+    (7600,17088587),
+    (7600,17088588),
+    (7600,17088589),
+    (7600,17088590),
+    (7600,17088591),
+    (7600,17088592),
+    (7600,17088593),
+    (7600,17088594),
+    (7600,17088595),
+    (7600,17088596),
+    (7600,17088597),
+    (7600,17088598),
+    (7600,17088599),
+    (7600,17088600),
+    (7600,17088601),
+    (7600,17088602),
+    (7600,17088603),
+    (7600,17088604),
+    (7600,17088605),
+    (7600,17088606),
+    (7600,17088607),
+    (7600,17088608),
+    (7600,17088609),
+    (7600,17088610),
+    (7600,17088611),
+    (7600,17088612),
+    (7600,17088613),
+    (7600,17088614),
+    (7600,17088615),
+    (7600,17088616),
+    (7600,17088617),
+    (7600,17088618),
+    (7600,17088619),
+    (7600,17088620),
+    (7600,17088621),
+    (7600,17088622),
+    (7600,17088623),
+    (7600,17088624),
+    (7600,17088625),
+    (7600,17088626),
+    (7600,17088627),
+    (7600,17088628),
+    (7600,17088629),
+    (7600,17088630),
+    (7600,17088631),
+    (7600,17088632),
+    (7600,17088633),
+    (7600,17088634),
+    (7600,17088635),
+    (7600,17088636),
+    (7600,17088637),
+    (7600,17088638),
+    (7600,17088639),
+    (7600,17088640),
+    (7600,17088641),
+    (7600,17088642),
+    (7600,17088643),
+    (7600,17088644),
+    (7600,17088645),
+    (7600,17088646),
+    (7600,17088647),
+    (7600,17088648),
+    (7600,17088649),
+    (7600,17088650),
+    (7600,17088651),
+    (7600,17088652),
+    (7600,17088653),
+    (7600,17088654),
+    (7600,17088655),
+    (7600,17088656),
+    (7600,17088657),
+    (7600,17088658),
+    (7600,17088659),
+    (7600,17088660),
+    (7600,17088661),
+    (7600,17088662),
+    (7600,17088663),
+    (7600,17088664),
+    (7600,17088665),
+    (7600,17088666),
+    (7600,17088667),
+    (7600,17088668),
+    (7600,17088669),
+    (7600,17088670),
+    (7600,17088671),
+    (7600,17088672),
+    (7600,17088673),
+    (7600,17088674),
+    (7600,17088675),
+    (7600,17088676),
+    (7600,17088677),
+    (7600,17088678),
+    (7600,17088679),
+    (7600,17088680),
+    (7600,17088681),
+    (7600,17088682),
+    (7600,17088683),
+    (7600,17088684),
+    (7600,17088685),
+    (7600,17088686),
+    (7600,17088687),
+    (7600,17088688),
+    (7600,17088689),
+    (7600,17088690),
+    (7600,17088691),
+    (7600,17088692),
+    (7600,17088693),
+    (7600,17088694),
+    (7600,17088695),
+    (7600,17088696),
+    (7600,17088697),
+    (7600,17088698),
+    (7600,17088699),
+    (7600,17088700),
+    (7600,17088701),
+    (7600,17088702),
+    (7600,17088703),
+    (7600,17088704),
+    (7600,17088705),
+    (7600,17088706),
+    (7600,17088707),
+    (7600,17088708),
+    (7600,17088709),
+    (7600,17088710),
+    (7600,17088711),
+    (7600,17088712),
+    (7600,17088713),
+    (7600,17088714),
+    (7600,17088715),
+    (7600,17088716),
+    (7600,17088717),
+    (7600,17088718),
+    (7600,17088719),
+    (7600,17088720),
+    (7600,17088721),
+    (7600,17088722),
+    (7600,17088723),
+    (7600,17088724),
+    (7600,17088725),
+    (7600,17088726),
+    (7600,17088727),
+    (7600,17088728),
+    (7600,17088729),
+    (7600,17088730),
+    (7600,17088731),
+    (7600,17088732),
+    (7600,17088733),
+    (7600,17088734),
+    (7600,17088735),
+    (7600,17088736),
+    (7600,17088737),
+    (7600,17088738),
+    (7600,17088739),
+    (7600,17088740),
+    (7600,17088741),
+    (7600,17088742),
+    (7600,17088743),
+    (7600,17088744),
+    (7600,17088745),
+    (7600,17088746),
+    (7600,17088747),
+    (7600,17088748),
+    (7600,17088749),
+    (7600,17088750),
+    (7600,17088751),
+    (7600,17088752),
+    (7600,17088753),
+    (7600,17088754),
+    (7600,17088755),
+    (7600,17088756),
+    (7600,17088757),
+    (7600,17088758),
+    (7600,17088759),
+    (7600,17088760),
+    (7600,17088761),
+    (7600,17088762),
+    (7600,17088763),
+    (7600,17088764),
+    (7600,17088765),
+    (7600,17088766),
+    (7600,17088767),
+    (7600,17088768),
+    (7600,17088769),
+    (7600,17088770),
+    (7600,17088771),
+    (7600,17088772),
+    (7600,17088773),
+    (7600,17088774),
+    (7600,17088775),
+    (7600,17088776),
+    (7600,17088777),
+    (7600,17088778),
+    (7600,17088779),
+    (7600,17088780),
+    (7600,17088781),
+    (7600,17088782),
+    (7600,17088783),
+    (7600,17088784),
+    (7600,17088785),
+    (7600,17088786),
 
 -- npcs
-INSERT INTO `instance_entities` VALUES (7600,17088787);
-INSERT INTO `instance_entities` VALUES (7600,17088788);
-INSERT INTO `instance_entities` VALUES (7600,17088789);
-INSERT INTO `instance_entities` VALUES (7600,17088790);
-INSERT INTO `instance_entities` VALUES (7600,17088791);
-INSERT INTO `instance_entities` VALUES (7600,17088792);
-INSERT INTO `instance_entities` VALUES (7600,17088793);
-INSERT INTO `instance_entities` VALUES (7600,17088794);
-INSERT INTO `instance_entities` VALUES (7600,17088795);
-INSERT INTO `instance_entities` VALUES (7600,17088796);
-INSERT INTO `instance_entities` VALUES (7600,17088797);
-INSERT INTO `instance_entities` VALUES (7600,17088798);
-INSERT INTO `instance_entities` VALUES (7600,17088799);
-INSERT INTO `instance_entities` VALUES (7600,17088800);
-INSERT INTO `instance_entities` VALUES (7600,17088801);
-INSERT INTO `instance_entities` VALUES (7600,17088802);
-INSERT INTO `instance_entities` VALUES (7600,17088803);
-INSERT INTO `instance_entities` VALUES (7600,17088804);
-INSERT INTO `instance_entities` VALUES (7600,17088805);
-INSERT INTO `instance_entities` VALUES (7600,17088806);
-INSERT INTO `instance_entities` VALUES (7600,17088807);
-INSERT INTO `instance_entities` VALUES (7600,17088808);
-INSERT INTO `instance_entities` VALUES (7600,17088809);
-INSERT INTO `instance_entities` VALUES (7600,17088810);
-INSERT INTO `instance_entities` VALUES (7600,17088811);
-INSERT INTO `instance_entities` VALUES (7600,17088812);
-INSERT INTO `instance_entities` VALUES (7600,17088813);
-INSERT INTO `instance_entities` VALUES (7600,17088814);
-INSERT INTO `instance_entities` VALUES (7600,17088815);
-INSERT INTO `instance_entities` VALUES (7600,17088816);
-INSERT INTO `instance_entities` VALUES (7600,17088817);
-INSERT INTO `instance_entities` VALUES (7600,17088818);
-INSERT INTO `instance_entities` VALUES (7600,17088819);
-INSERT INTO `instance_entities` VALUES (7600,17088820);
-INSERT INTO `instance_entities` VALUES (7600,17088821);
-INSERT INTO `instance_entities` VALUES (7600,17088822);
-INSERT INTO `instance_entities` VALUES (7600,17088823);
-INSERT INTO `instance_entities` VALUES (7600,17089352);
-INSERT INTO `instance_entities` VALUES (7600,17089353);
-INSERT INTO `instance_entities` VALUES (7600,17089385);
-INSERT INTO `instance_entities` VALUES (7600,17089386);
-INSERT INTO `instance_entities` VALUES (7600,17089387);
-INSERT INTO `instance_entities` VALUES (7600,17089388);
-INSERT INTO `instance_entities` VALUES (7600,17089389);
-INSERT INTO `instance_entities` VALUES (7600,17089390);
-INSERT INTO `instance_entities` VALUES (7600,17089391);
-INSERT INTO `instance_entities` VALUES (7600,17089392);
-INSERT INTO `instance_entities` VALUES (7600,17089393);
-INSERT INTO `instance_entities` VALUES (7600,17089394);
-INSERT INTO `instance_entities` VALUES (7600,17089395);
-INSERT INTO `instance_entities` VALUES (7600,17089396);
-INSERT INTO `instance_entities` VALUES (7600,17089397);
-INSERT INTO `instance_entities` VALUES (7600,17089398);
-INSERT INTO `instance_entities` VALUES (7600,17089399);
-INSERT INTO `instance_entities` VALUES (7600,17089400);
-INSERT INTO `instance_entities` VALUES (7600,17089401);
-INSERT INTO `instance_entities` VALUES (7600,17089402);
-INSERT INTO `instance_entities` VALUES (7600,17089403);
-INSERT INTO `instance_entities` VALUES (7600,17089404);
-INSERT INTO `instance_entities` VALUES (7600,17089405);
-INSERT INTO `instance_entities` VALUES (7600,17089406);
-INSERT INTO `instance_entities` VALUES (7600,17089407);
-INSERT INTO `instance_entities` VALUES (7600,17089408);
-INSERT INTO `instance_entities` VALUES (7600,17089409);
-INSERT INTO `instance_entities` VALUES (7600,17089410);
-INSERT INTO `instance_entities` VALUES (7600,17089411);
-INSERT INTO `instance_entities` VALUES (7600,17089412);
-INSERT INTO `instance_entities` VALUES (7600,17089413);
-INSERT INTO `instance_entities` VALUES (7600,17089414);
-INSERT INTO `instance_entities` VALUES (7600,17089415);
-INSERT INTO `instance_entities` VALUES (7600,17089416);
-INSERT INTO `instance_entities` VALUES (7600,17089417);
-INSERT INTO `instance_entities` VALUES (7600,17089418);
-INSERT INTO `instance_entities` VALUES (7600,17089419);
-INSERT INTO `instance_entities` VALUES (7600,17089421);
+    (7600,17088787),
+    (7600,17088788),
+    (7600,17088789),
+    (7600,17088790),
+    (7600,17088791),
+    (7600,17088792),
+    (7600,17088793),
+    (7600,17088794),
+    (7600,17088795),
+    (7600,17088796),
+    (7600,17088797),
+    (7600,17088798),
+    (7600,17088799),
+    (7600,17088800),
+    (7600,17088801),
+    (7600,17088802),
+    (7600,17088803),
+    (7600,17088804),
+    (7600,17088805),
+    (7600,17088806),
+    (7600,17088807),
+    (7600,17088808),
+    (7600,17088809),
+    (7600,17088810),
+    (7600,17088811),
+    (7600,17088812),
+    (7600,17088813),
+    (7600,17088814),
+    (7600,17088815),
+    (7600,17088816),
+    (7600,17088817),
+    (7600,17088818),
+    (7600,17088819),
+    (7600,17088820),
+    (7600,17088821),
+    (7600,17088822),
+    (7600,17088823),
+    (7600,17089352),
+    (7600,17089353),
+    (7600,17089385),
+    (7600,17089386),
+    (7600,17089387),
+    (7600,17089388),
+    (7600,17089389),
+    (7600,17089390),
+    (7600,17089391),
+    (7600,17089392),
+    (7600,17089393),
+    (7600,17089394),
+    (7600,17089395),
+    (7600,17089396),
+    (7600,17089397),
+    (7600,17089398),
+    (7600,17089399),
+    (7600,17089400),
+    (7600,17089401),
+    (7600,17089402),
+    (7600,17089403),
+    (7600,17089404),
+    (7600,17089405),
+    (7600,17089406),
+    (7600,17089407),
+    (7600,17089408),
+    (7600,17089409),
+    (7600,17089410),
+    (7600,17089411),
+    (7600,17089412),
+    (7600,17089413),
+    (7600,17089414),
+    (7600,17089415),
+    (7600,17089416),
+    (7600,17089417),
+    (7600,17089418),
+    (7600,17089419),
+    (7600,17089421)
+;
 
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- ------------------------------------------------------------
 -- Nyzul Isle (Zone 77)
 -- ------------------------------------------------------------
 
 -- Path of Darkness
 -- mobs
-INSERT INTO `instance_entities` VALUES (7700,17093132);
-INSERT INTO `instance_entities` VALUES (7700,17093133);
-INSERT INTO `instance_entities` VALUES (7700,17093134);
-INSERT INTO `instance_entities` VALUES (7700,17093135);
-INSERT INTO `instance_entities` VALUES (7700,17093136);
-INSERT INTO `instance_entities` VALUES (7700,17093137);
-INSERT INTO `instance_entities` VALUES (7700,17093142);
+    (7700,17093132),
+    (7700,17093133),
+    (7700,17093134),
+    (7700,17093135),
+    (7700,17093136),
+    (7700,17093137),
+    (7700,17093142),
 -- npcs
-INSERT INTO `instance_entities` VALUES (7700,17093360);
-INSERT INTO `instance_entities` VALUES (7700,17093362);
-INSERT INTO `instance_entities` VALUES (7700,17093424);
+    (7700,17093360),
+    (7700,17093362),
+    (7700,17093424),
 
 -- Nashmeira's Plea
 -- mobs
-INSERT INTO `instance_entities` VALUES (7701,17093143);
-INSERT INTO `instance_entities` VALUES (7701,17093144);
-INSERT INTO `instance_entities` VALUES (7701,17093145);
+    (7701,17093143),
+    (7701,17093144),
+    (7701,17093145),
 -- npcs
-INSERT INTO `instance_entities` VALUES (7701,17093424);
-INSERT INTO `instance_entities` VALUES (7701,17093473);
-INSERT INTO `instance_entities` VALUES (7701,17093474);
-INSERT INTO `instance_entities` VALUES (7701,17093475);
-INSERT INTO `instance_entities` VALUES (7701,17093476);
-INSERT INTO `instance_entities` VALUES (7701,17093477);
-INSERT INTO `instance_entities` VALUES (7701,17093478);
-INSERT INTO `instance_entities` VALUES (7701,17093479);
-INSERT INTO `instance_entities` VALUES (7701,17093480);
-INSERT INTO `instance_entities` VALUES (7701,17093481);
-INSERT INTO `instance_entities` VALUES (7701,17093482);
-INSERT INTO `instance_entities` VALUES (7701,17093483);
+    (7701,17093424),
+    (7701,17093473),
+    (7701,17093474),
+    (7701,17093475),
+    (7701,17093476),
+    (7701,17093477),
+    (7701,17093478),
+    (7701,17093479),
+    (7701,17093480),
+    (7701,17093481),
+    (7701,17093482),
+    (7701,17093483),
 
 -- Waking the Colossus/Divine Intereference
 -- mobs
-INSERT INTO `instance_entities` VALUES (7702,17093148); -- Alexander_WTC
-INSERT INTO `instance_entities` VALUES (7702,17093149); -- Alexander_Image
-INSERT INTO `instance_entities` VALUES (7702,17093150); -- Alexander_Image
-INSERT INTO `instance_entities` VALUES (7702,17093151); -- Alexander_Image
+    (7702,17093148), -- Alexander_WTC
+    (7702,17093149), -- Alexander_Image
+    (7702,17093150), -- Alexander_Image
+    (7702,17093151), -- Alexander_Image
 -- npcs
-INSERT INTO `instance_entities` VALUES (7702,17093419); -- Gilded Doors
-INSERT INTO `instance_entities` VALUES (7702,17093420); -- Gilded Doors
-INSERT INTO `instance_entities` VALUES (7702,17093421); -- _k5w
-INSERT INTO `instance_entities` VALUES (7702,17093422); -- Gilded Gateway
-INSERT INTO `instance_entities` VALUES (7702,17093423); -- Test_Actor
-INSERT INTO `instance_entities` VALUES (7702,17093424); -- Weather
-INSERT INTO `instance_entities` VALUES (7702,17093425); -- GOAL_SW
-INSERT INTO `instance_entities` VALUES (7702,17093440); -- Rune_of_Transfer
+    (7702,17093419), -- Gilded Doors
+    (7702,17093420), -- Gilded Doors
+    (7702,17093421), -- _k5w
+    (7702,17093422), -- Gilded Gateway
+    (7702,17093423), -- Test_Actor
+    (7702,17093424), -- Weather
+    (7702,17093425), -- GOAL_SW
+    (7702,17093440), -- Rune_of_Transfer
 
 -- Nyzul Isle Investigation
 -- npcs
-INSERT INTO `instance_entities` VALUES (7704,17092609); -- Chests
-INSERT INTO `instance_entities` VALUES (7704,17092610);
-INSERT INTO `instance_entities` VALUES (7704,17092611);
-INSERT INTO `instance_entities` VALUES (7704,17092612);
-INSERT INTO `instance_entities` VALUES (7704,17092613);
-INSERT INTO `instance_entities` VALUES (7704,17092614);
-INSERT INTO `instance_entities` VALUES (7704,17092615);
-INSERT INTO `instance_entities` VALUES (7704,17092616);
-INSERT INTO `instance_entities` VALUES (7704,17092617);
-INSERT INTO `instance_entities` VALUES (7704,17092618);
-INSERT INTO `instance_entities` VALUES (7704,17092619);
-INSERT INTO `instance_entities` VALUES (7704,17092620);
+    (7704,17092609), -- Chests
+    (7704,17092610),
+    (7704,17092611),
+    (7704,17092612),
+    (7704,17092613),
+    (7704,17092614),
+    (7704,17092615),
+    (7704,17092616),
+    (7704,17092617),
+    (7704,17092618),
+    (7704,17092619),
+    (7704,17092620),
 -- mobs
-INSERT INTO `instance_entities` VALUES (7704,17092629);
-INSERT INTO `instance_entities` VALUES (7704,17092630);
-INSERT INTO `instance_entities` VALUES (7704,17092631);
-INSERT INTO `instance_entities` VALUES (7704,17092632);
-INSERT INTO `instance_entities` VALUES (7704,17092633);
-INSERT INTO `instance_entities` VALUES (7704,17092634);
-INSERT INTO `instance_entities` VALUES (7704,17092635);
-INSERT INTO `instance_entities` VALUES (7704,17092636);
-INSERT INTO `instance_entities` VALUES (7704,17092637);
-INSERT INTO `instance_entities` VALUES (7704,17092638);
-INSERT INTO `instance_entities` VALUES (7704,17092639);
-INSERT INTO `instance_entities` VALUES (7704,17092640);
-INSERT INTO `instance_entities` VALUES (7704,17092641);
-INSERT INTO `instance_entities` VALUES (7704,17092642);
-INSERT INTO `instance_entities` VALUES (7704,17092643);
-INSERT INTO `instance_entities` VALUES (7704,17092644);
-INSERT INTO `instance_entities` VALUES (7704,17092645);
-INSERT INTO `instance_entities` VALUES (7704,17092646);
-INSERT INTO `instance_entities` VALUES (7704,17092647);
-INSERT INTO `instance_entities` VALUES (7704,17092648);
-INSERT INTO `instance_entities` VALUES (7704,17092649);
-INSERT INTO `instance_entities` VALUES (7704,17092650);
-INSERT INTO `instance_entities` VALUES (7704,17092651);
-INSERT INTO `instance_entities` VALUES (7704,17092652);
-INSERT INTO `instance_entities` VALUES (7704,17092653);
-INSERT INTO `instance_entities` VALUES (7704,17092654);
-INSERT INTO `instance_entities` VALUES (7704,17092655);
-INSERT INTO `instance_entities` VALUES (7704,17092656);
-INSERT INTO `instance_entities` VALUES (7704,17092657);
-INSERT INTO `instance_entities` VALUES (7704,17092658);
-INSERT INTO `instance_entities` VALUES (7704,17092659);
-INSERT INTO `instance_entities` VALUES (7704,17092660);
-INSERT INTO `instance_entities` VALUES (7704,17092661);
-INSERT INTO `instance_entities` VALUES (7704,17092662);
-INSERT INTO `instance_entities` VALUES (7704,17092663);
-INSERT INTO `instance_entities` VALUES (7704,17092664);
-INSERT INTO `instance_entities` VALUES (7704,17092665);
-INSERT INTO `instance_entities` VALUES (7704,17092666);
-INSERT INTO `instance_entities` VALUES (7704,17092667);
-INSERT INTO `instance_entities` VALUES (7704,17092668);
-INSERT INTO `instance_entities` VALUES (7704,17092669);
-INSERT INTO `instance_entities` VALUES (7704,17092670);
-INSERT INTO `instance_entities` VALUES (7704,17092671);
-INSERT INTO `instance_entities` VALUES (7704,17092672);
-INSERT INTO `instance_entities` VALUES (7704,17092673);
-INSERT INTO `instance_entities` VALUES (7704,17092674);
-INSERT INTO `instance_entities` VALUES (7704,17092675);
-INSERT INTO `instance_entities` VALUES (7704,17092676);
-INSERT INTO `instance_entities` VALUES (7704,17092677);
-INSERT INTO `instance_entities` VALUES (7704,17092678);
-INSERT INTO `instance_entities` VALUES (7704,17092679);
-INSERT INTO `instance_entities` VALUES (7704,17092680);
-INSERT INTO `instance_entities` VALUES (7704,17092681);
-INSERT INTO `instance_entities` VALUES (7704,17092682);
-INSERT INTO `instance_entities` VALUES (7704,17092683);
-INSERT INTO `instance_entities` VALUES (7704,17092684);
-INSERT INTO `instance_entities` VALUES (7704,17092685);
-INSERT INTO `instance_entities` VALUES (7704,17092686);
-INSERT INTO `instance_entities` VALUES (7704,17092687);
-INSERT INTO `instance_entities` VALUES (7704,17092688);
-INSERT INTO `instance_entities` VALUES (7704,17092689);
-INSERT INTO `instance_entities` VALUES (7704,17092690);
-INSERT INTO `instance_entities` VALUES (7704,17092691);
-INSERT INTO `instance_entities` VALUES (7704,17092692);
-INSERT INTO `instance_entities` VALUES (7704,17092693);
-INSERT INTO `instance_entities` VALUES (7704,17092694);
-INSERT INTO `instance_entities` VALUES (7704,17092695);
-INSERT INTO `instance_entities` VALUES (7704,17092696);
-INSERT INTO `instance_entities` VALUES (7704,17092697);
-INSERT INTO `instance_entities` VALUES (7704,17092698);
-INSERT INTO `instance_entities` VALUES (7704,17092699);
-INSERT INTO `instance_entities` VALUES (7704,17092700);
-INSERT INTO `instance_entities` VALUES (7704,17092701);
-INSERT INTO `instance_entities` VALUES (7704,17092702);
-INSERT INTO `instance_entities` VALUES (7704,17092703);
-INSERT INTO `instance_entities` VALUES (7704,17092704);
-INSERT INTO `instance_entities` VALUES (7704,17092705);
-INSERT INTO `instance_entities` VALUES (7704,17092706);
-INSERT INTO `instance_entities` VALUES (7704,17092707);
-INSERT INTO `instance_entities` VALUES (7704,17092708);
-INSERT INTO `instance_entities` VALUES (7704,17092709);
-INSERT INTO `instance_entities` VALUES (7704,17092710);
-INSERT INTO `instance_entities` VALUES (7704,17092711);
-INSERT INTO `instance_entities` VALUES (7704,17092712);
-INSERT INTO `instance_entities` VALUES (7704,17092713);
-INSERT INTO `instance_entities` VALUES (7704,17092714);
-INSERT INTO `instance_entities` VALUES (7704,17092715);
-INSERT INTO `instance_entities` VALUES (7704,17092716);
-INSERT INTO `instance_entities` VALUES (7704,17092717);
-INSERT INTO `instance_entities` VALUES (7704,17092718);
-INSERT INTO `instance_entities` VALUES (7704,17092719);
-INSERT INTO `instance_entities` VALUES (7704,17092720);
-INSERT INTO `instance_entities` VALUES (7704,17092721);
-INSERT INTO `instance_entities` VALUES (7704,17092722);
-INSERT INTO `instance_entities` VALUES (7704,17092723);
-INSERT INTO `instance_entities` VALUES (7704,17092724);
-INSERT INTO `instance_entities` VALUES (7704,17092725);
-INSERT INTO `instance_entities` VALUES (7704,17092726);
-INSERT INTO `instance_entities` VALUES (7704,17092727);
-INSERT INTO `instance_entities` VALUES (7704,17092728);
-INSERT INTO `instance_entities` VALUES (7704,17092729);
-INSERT INTO `instance_entities` VALUES (7704,17092730);
-INSERT INTO `instance_entities` VALUES (7704,17092731);
-INSERT INTO `instance_entities` VALUES (7704,17092732);
-INSERT INTO `instance_entities` VALUES (7704,17092733);
-INSERT INTO `instance_entities` VALUES (7704,17092734);
-INSERT INTO `instance_entities` VALUES (7704,17092735);
-INSERT INTO `instance_entities` VALUES (7704,17092736);
-INSERT INTO `instance_entities` VALUES (7704,17092737);
-INSERT INTO `instance_entities` VALUES (7704,17092738);
-INSERT INTO `instance_entities` VALUES (7704,17092739);
-INSERT INTO `instance_entities` VALUES (7704,17092740);
-INSERT INTO `instance_entities` VALUES (7704,17092741);
-INSERT INTO `instance_entities` VALUES (7704,17092742);
-INSERT INTO `instance_entities` VALUES (7704,17092743);
-INSERT INTO `instance_entities` VALUES (7704,17092744);
-INSERT INTO `instance_entities` VALUES (7704,17092745);
-INSERT INTO `instance_entities` VALUES (7704,17092746);
-INSERT INTO `instance_entities` VALUES (7704,17092747);
-INSERT INTO `instance_entities` VALUES (7704,17092748);
-INSERT INTO `instance_entities` VALUES (7704,17092749);
-INSERT INTO `instance_entities` VALUES (7704,17092750);
-INSERT INTO `instance_entities` VALUES (7704,17092751);
-INSERT INTO `instance_entities` VALUES (7704,17092752);
-INSERT INTO `instance_entities` VALUES (7704,17092753);
-INSERT INTO `instance_entities` VALUES (7704,17092754);
-INSERT INTO `instance_entities` VALUES (7704,17092755);
-INSERT INTO `instance_entities` VALUES (7704,17092756);
-INSERT INTO `instance_entities` VALUES (7704,17092757);
-INSERT INTO `instance_entities` VALUES (7704,17092758);
-INSERT INTO `instance_entities` VALUES (7704,17092759);
-INSERT INTO `instance_entities` VALUES (7704,17092760);
-INSERT INTO `instance_entities` VALUES (7704,17092761);
-INSERT INTO `instance_entities` VALUES (7704,17092762);
-INSERT INTO `instance_entities` VALUES (7704,17092763);
-INSERT INTO `instance_entities` VALUES (7704,17092764);
-INSERT INTO `instance_entities` VALUES (7704,17092765);
-INSERT INTO `instance_entities` VALUES (7704,17092766);
-INSERT INTO `instance_entities` VALUES (7704,17092767);
-INSERT INTO `instance_entities` VALUES (7704,17092768);
-INSERT INTO `instance_entities` VALUES (7704,17092769);
-INSERT INTO `instance_entities` VALUES (7704,17092770);
-INSERT INTO `instance_entities` VALUES (7704,17092771);
-INSERT INTO `instance_entities` VALUES (7704,17092772);
-INSERT INTO `instance_entities` VALUES (7704,17092773);
-INSERT INTO `instance_entities` VALUES (7704,17092774);
-INSERT INTO `instance_entities` VALUES (7704,17092775);
-INSERT INTO `instance_entities` VALUES (7704,17092776);
-INSERT INTO `instance_entities` VALUES (7704,17092777);
-INSERT INTO `instance_entities` VALUES (7704,17092778);
-INSERT INTO `instance_entities` VALUES (7704,17092779);
-INSERT INTO `instance_entities` VALUES (7704,17092780);
-INSERT INTO `instance_entities` VALUES (7704,17092781);
-INSERT INTO `instance_entities` VALUES (7704,17092782);
-INSERT INTO `instance_entities` VALUES (7704,17092783);
-INSERT INTO `instance_entities` VALUES (7704,17092784);
-INSERT INTO `instance_entities` VALUES (7704,17092785);
-INSERT INTO `instance_entities` VALUES (7704,17092786);
-INSERT INTO `instance_entities` VALUES (7704,17092787);
-INSERT INTO `instance_entities` VALUES (7704,17092788);
-INSERT INTO `instance_entities` VALUES (7704,17092789);
-INSERT INTO `instance_entities` VALUES (7704,17092790);
-INSERT INTO `instance_entities` VALUES (7704,17092791);
-INSERT INTO `instance_entities` VALUES (7704,17092792);
-INSERT INTO `instance_entities` VALUES (7704,17092793);
-INSERT INTO `instance_entities` VALUES (7704,17092794);
-INSERT INTO `instance_entities` VALUES (7704,17092795);
-INSERT INTO `instance_entities` VALUES (7704,17092796);
-INSERT INTO `instance_entities` VALUES (7704,17092797);
-INSERT INTO `instance_entities` VALUES (7704,17092798);
-INSERT INTO `instance_entities` VALUES (7704,17092799);
-INSERT INTO `instance_entities` VALUES (7704,17092800);
-INSERT INTO `instance_entities` VALUES (7704,17092801);
-INSERT INTO `instance_entities` VALUES (7704,17092802);
-INSERT INTO `instance_entities` VALUES (7704,17092803);
-INSERT INTO `instance_entities` VALUES (7704,17092804);
-INSERT INTO `instance_entities` VALUES (7704,17092805);
-INSERT INTO `instance_entities` VALUES (7704,17092806);
-INSERT INTO `instance_entities` VALUES (7704,17092807);
-INSERT INTO `instance_entities` VALUES (7704,17092808);
-INSERT INTO `instance_entities` VALUES (7704,17092809);
-INSERT INTO `instance_entities` VALUES (7704,17092810);
-INSERT INTO `instance_entities` VALUES (7704,17092811);
-INSERT INTO `instance_entities` VALUES (7704,17092812);
-INSERT INTO `instance_entities` VALUES (7704,17092813);
-INSERT INTO `instance_entities` VALUES (7704,17092814);
-INSERT INTO `instance_entities` VALUES (7704,17092815);
-INSERT INTO `instance_entities` VALUES (7704,17092816);
-INSERT INTO `instance_entities` VALUES (7704,17092817);
-INSERT INTO `instance_entities` VALUES (7704,17092818);
-INSERT INTO `instance_entities` VALUES (7704,17092819);
-INSERT INTO `instance_entities` VALUES (7704,17092820);
-INSERT INTO `instance_entities` VALUES (7704,17092821);
-INSERT INTO `instance_entities` VALUES (7704,17092822);
-INSERT INTO `instance_entities` VALUES (7704,17092823);
-INSERT INTO `instance_entities` VALUES (7704,17092824);
-INSERT INTO `instance_entities` VALUES (7704,17092825);
-INSERT INTO `instance_entities` VALUES (7704,17092826);
-INSERT INTO `instance_entities` VALUES (7704,17092827);
-INSERT INTO `instance_entities` VALUES (7704,17092828);
-INSERT INTO `instance_entities` VALUES (7704,17092829);
-INSERT INTO `instance_entities` VALUES (7704,17092830);
-INSERT INTO `instance_entities` VALUES (7704,17092831);
-INSERT INTO `instance_entities` VALUES (7704,17092832);
-INSERT INTO `instance_entities` VALUES (7704,17092833);
-INSERT INTO `instance_entities` VALUES (7704,17092834);
-INSERT INTO `instance_entities` VALUES (7704,17092835);
-INSERT INTO `instance_entities` VALUES (7704,17092836);
-INSERT INTO `instance_entities` VALUES (7704,17092837);
-INSERT INTO `instance_entities` VALUES (7704,17092838);
-INSERT INTO `instance_entities` VALUES (7704,17092839);
-INSERT INTO `instance_entities` VALUES (7704,17092840);
-INSERT INTO `instance_entities` VALUES (7704,17092841);
-INSERT INTO `instance_entities` VALUES (7704,17092842);
-INSERT INTO `instance_entities` VALUES (7704,17092843);
-INSERT INTO `instance_entities` VALUES (7704,17092844);
-INSERT INTO `instance_entities` VALUES (7704,17092845);
-INSERT INTO `instance_entities` VALUES (7704,17092846);
-INSERT INTO `instance_entities` VALUES (7704,17092847);
-INSERT INTO `instance_entities` VALUES (7704,17092848);
-INSERT INTO `instance_entities` VALUES (7704,17092849);
-INSERT INTO `instance_entities` VALUES (7704,17092850);
-INSERT INTO `instance_entities` VALUES (7704,17092851);
-INSERT INTO `instance_entities` VALUES (7704,17092852);
-INSERT INTO `instance_entities` VALUES (7704,17092853);
-INSERT INTO `instance_entities` VALUES (7704,17092854);
-INSERT INTO `instance_entities` VALUES (7704,17092855);
-INSERT INTO `instance_entities` VALUES (7704,17092856);
-INSERT INTO `instance_entities` VALUES (7704,17092857);
-INSERT INTO `instance_entities` VALUES (7704,17092858);
-INSERT INTO `instance_entities` VALUES (7704,17092859);
-INSERT INTO `instance_entities` VALUES (7704,17092860);
-INSERT INTO `instance_entities` VALUES (7704,17092861);
-INSERT INTO `instance_entities` VALUES (7704,17092862);
-INSERT INTO `instance_entities` VALUES (7704,17092863);
-INSERT INTO `instance_entities` VALUES (7704,17092864);
-INSERT INTO `instance_entities` VALUES (7704,17092865);
-INSERT INTO `instance_entities` VALUES (7704,17092866);
-INSERT INTO `instance_entities` VALUES (7704,17092867);
-INSERT INTO `instance_entities` VALUES (7704,17092868);
-INSERT INTO `instance_entities` VALUES (7704,17092869);
-INSERT INTO `instance_entities` VALUES (7704,17092870);
-INSERT INTO `instance_entities` VALUES (7704,17092871);
-INSERT INTO `instance_entities` VALUES (7704,17092872);
-INSERT INTO `instance_entities` VALUES (7704,17092873);
-INSERT INTO `instance_entities` VALUES (7704,17092874);
-INSERT INTO `instance_entities` VALUES (7704,17092875);
-INSERT INTO `instance_entities` VALUES (7704,17092876);
-INSERT INTO `instance_entities` VALUES (7704,17092877);
-INSERT INTO `instance_entities` VALUES (7704,17092878);
-INSERT INTO `instance_entities` VALUES (7704,17092879);
-INSERT INTO `instance_entities` VALUES (7704,17092880);
-INSERT INTO `instance_entities` VALUES (7704,17092881);
-INSERT INTO `instance_entities` VALUES (7704,17092882);
-INSERT INTO `instance_entities` VALUES (7704,17092883);
-INSERT INTO `instance_entities` VALUES (7704,17092884);
-INSERT INTO `instance_entities` VALUES (7704,17092885);
-INSERT INTO `instance_entities` VALUES (7704,17092886);
-INSERT INTO `instance_entities` VALUES (7704,17092887);
-INSERT INTO `instance_entities` VALUES (7704,17092888);
-INSERT INTO `instance_entities` VALUES (7704,17092889);
-INSERT INTO `instance_entities` VALUES (7704,17092890);
-INSERT INTO `instance_entities` VALUES (7704,17092891);
-INSERT INTO `instance_entities` VALUES (7704,17092892);
-INSERT INTO `instance_entities` VALUES (7704,17092893);
-INSERT INTO `instance_entities` VALUES (7704,17092894);
-INSERT INTO `instance_entities` VALUES (7704,17092895);
-INSERT INTO `instance_entities` VALUES (7704,17092896);
-INSERT INTO `instance_entities` VALUES (7704,17092897);
-INSERT INTO `instance_entities` VALUES (7704,17092898);
-INSERT INTO `instance_entities` VALUES (7704,17092899);
-INSERT INTO `instance_entities` VALUES (7704,17092901);
-INSERT INTO `instance_entities` VALUES (7704,17092902);
-INSERT INTO `instance_entities` VALUES (7704,17092903);
-INSERT INTO `instance_entities` VALUES (7704,17092904);
-INSERT INTO `instance_entities` VALUES (7704,17092905);
-INSERT INTO `instance_entities` VALUES (7704,17092906);
-INSERT INTO `instance_entities` VALUES (7704,17092907);
-INSERT INTO `instance_entities` VALUES (7704,17092908);
-INSERT INTO `instance_entities` VALUES (7704,17092909);
-INSERT INTO `instance_entities` VALUES (7704,17092910);
-INSERT INTO `instance_entities` VALUES (7704,17092911);
-INSERT INTO `instance_entities` VALUES (7704,17092912);
-INSERT INTO `instance_entities` VALUES (7704,17092913);
-INSERT INTO `instance_entities` VALUES (7704,17092914);
-INSERT INTO `instance_entities` VALUES (7704,17092915);
-INSERT INTO `instance_entities` VALUES (7704,17092916);
-INSERT INTO `instance_entities` VALUES (7704,17092917);
-INSERT INTO `instance_entities` VALUES (7704,17092918);
-INSERT INTO `instance_entities` VALUES (7704,17092919);
-INSERT INTO `instance_entities` VALUES (7704,17092920);
-INSERT INTO `instance_entities` VALUES (7704,17092921);
-INSERT INTO `instance_entities` VALUES (7704,17092922);
-INSERT INTO `instance_entities` VALUES (7704,17092923);
-INSERT INTO `instance_entities` VALUES (7704,17092924);
-INSERT INTO `instance_entities` VALUES (7704,17092925);
-INSERT INTO `instance_entities` VALUES (7704,17092926);
-INSERT INTO `instance_entities` VALUES (7704,17092927);
-INSERT INTO `instance_entities` VALUES (7704,17092928);
-INSERT INTO `instance_entities` VALUES (7704,17092929);
-INSERT INTO `instance_entities` VALUES (7704,17092930);
-INSERT INTO `instance_entities` VALUES (7704,17092931);
-INSERT INTO `instance_entities` VALUES (7704,17092932);
-INSERT INTO `instance_entities` VALUES (7704,17092933);
-INSERT INTO `instance_entities` VALUES (7704,17092934);
-INSERT INTO `instance_entities` VALUES (7704,17092935);
-INSERT INTO `instance_entities` VALUES (7704,17092936);
-INSERT INTO `instance_entities` VALUES (7704,17092937);
-INSERT INTO `instance_entities` VALUES (7704,17092938);
-INSERT INTO `instance_entities` VALUES (7704,17092939);
-INSERT INTO `instance_entities` VALUES (7704,17092940);
-INSERT INTO `instance_entities` VALUES (7704,17092941);
-INSERT INTO `instance_entities` VALUES (7704,17092942);
-INSERT INTO `instance_entities` VALUES (7704,17092943);
-INSERT INTO `instance_entities` VALUES (7704,17092944);
-INSERT INTO `instance_entities` VALUES (7704,17092945);
-INSERT INTO `instance_entities` VALUES (7704,17092946);
-INSERT INTO `instance_entities` VALUES (7704,17092947);
-INSERT INTO `instance_entities` VALUES (7704,17092948);
-INSERT INTO `instance_entities` VALUES (7704,17092949);
-INSERT INTO `instance_entities` VALUES (7704,17092950);
-INSERT INTO `instance_entities` VALUES (7704,17092951);
-INSERT INTO `instance_entities` VALUES (7704,17092952);
-INSERT INTO `instance_entities` VALUES (7704,17092953);
-INSERT INTO `instance_entities` VALUES (7704,17092954);
-INSERT INTO `instance_entities` VALUES (7704,17092955);
-INSERT INTO `instance_entities` VALUES (7704,17092956);
-INSERT INTO `instance_entities` VALUES (7704,17092957);
-INSERT INTO `instance_entities` VALUES (7704,17092958);
-INSERT INTO `instance_entities` VALUES (7704,17092959);
-INSERT INTO `instance_entities` VALUES (7704,17092960);
-INSERT INTO `instance_entities` VALUES (7704,17092961);
-INSERT INTO `instance_entities` VALUES (7704,17092962);
-INSERT INTO `instance_entities` VALUES (7704,17092963);
-INSERT INTO `instance_entities` VALUES (7704,17092964);
-INSERT INTO `instance_entities` VALUES (7704,17092965);
-INSERT INTO `instance_entities` VALUES (7704,17092966);
-INSERT INTO `instance_entities` VALUES (7704,17092967);
-INSERT INTO `instance_entities` VALUES (7704,17092968);
-INSERT INTO `instance_entities` VALUES (7704,17092969);
-INSERT INTO `instance_entities` VALUES (7704,17092970);
-INSERT INTO `instance_entities` VALUES (7704,17092971);
-INSERT INTO `instance_entities` VALUES (7704,17092972);
-INSERT INTO `instance_entities` VALUES (7704,17092973);
-INSERT INTO `instance_entities` VALUES (7704,17092974);
-INSERT INTO `instance_entities` VALUES (7704,17092975);
-INSERT INTO `instance_entities` VALUES (7704,17092976);
-INSERT INTO `instance_entities` VALUES (7704,17092977);
-INSERT INTO `instance_entities` VALUES (7704,17092978);
-INSERT INTO `instance_entities` VALUES (7704,17092979);
-INSERT INTO `instance_entities` VALUES (7704,17092980);
-INSERT INTO `instance_entities` VALUES (7704,17092981);
-INSERT INTO `instance_entities` VALUES (7704,17092982);
-INSERT INTO `instance_entities` VALUES (7704,17092983);
-INSERT INTO `instance_entities` VALUES (7704,17092984);
-INSERT INTO `instance_entities` VALUES (7704,17092985);
-INSERT INTO `instance_entities` VALUES (7704,17092986);
-INSERT INTO `instance_entities` VALUES (7704,17092987);
-INSERT INTO `instance_entities` VALUES (7704,17092988);
-INSERT INTO `instance_entities` VALUES (7704,17092989);
-INSERT INTO `instance_entities` VALUES (7704,17092990);
-INSERT INTO `instance_entities` VALUES (7704,17092991);
-INSERT INTO `instance_entities` VALUES (7704,17092992);
-INSERT INTO `instance_entities` VALUES (7704,17092993);
-INSERT INTO `instance_entities` VALUES (7704,17092994);
-INSERT INTO `instance_entities` VALUES (7704,17092995);
-INSERT INTO `instance_entities` VALUES (7704,17092996);
-INSERT INTO `instance_entities` VALUES (7704,17092997);
-INSERT INTO `instance_entities` VALUES (7704,17092998);
-INSERT INTO `instance_entities` VALUES (7704,17092999);
-INSERT INTO `instance_entities` VALUES (7704,17093000);
-INSERT INTO `instance_entities` VALUES (7704,17093001);
-INSERT INTO `instance_entities` VALUES (7704,17093002);
-INSERT INTO `instance_entities` VALUES (7704,17093003);
-INSERT INTO `instance_entities` VALUES (7704,17093004);
-INSERT INTO `instance_entities` VALUES (7704,17093005);
-INSERT INTO `instance_entities` VALUES (7704,17093006);
-INSERT INTO `instance_entities` VALUES (7704,17093007);
-INSERT INTO `instance_entities` VALUES (7704,17093008);
-INSERT INTO `instance_entities` VALUES (7704,17093009);
-INSERT INTO `instance_entities` VALUES (7704,17093010);
-INSERT INTO `instance_entities` VALUES (7704,17093011);
-INSERT INTO `instance_entities` VALUES (7704,17093012);
-INSERT INTO `instance_entities` VALUES (7704,17093013);
-INSERT INTO `instance_entities` VALUES (7704,17093014);
-INSERT INTO `instance_entities` VALUES (7704,17093015);
-INSERT INTO `instance_entities` VALUES (7704,17093016);
-INSERT INTO `instance_entities` VALUES (7704,17093017);
-INSERT INTO `instance_entities` VALUES (7704,17093018);
-INSERT INTO `instance_entities` VALUES (7704,17093019);
-INSERT INTO `instance_entities` VALUES (7704,17093020);
-INSERT INTO `instance_entities` VALUES (7704,17093021);
-INSERT INTO `instance_entities` VALUES (7704,17093022);
-INSERT INTO `instance_entities` VALUES (7704,17093023);
-INSERT INTO `instance_entities` VALUES (7704,17093024);
-INSERT INTO `instance_entities` VALUES (7704,17093025);
-INSERT INTO `instance_entities` VALUES (7704,17093026);
-INSERT INTO `instance_entities` VALUES (7704,17093027);
-INSERT INTO `instance_entities` VALUES (7704,17093028);
-INSERT INTO `instance_entities` VALUES (7704,17093029);
-INSERT INTO `instance_entities` VALUES (7704,17093030);
-INSERT INTO `instance_entities` VALUES (7704,17093031);
-INSERT INTO `instance_entities` VALUES (7704,17093032);
-INSERT INTO `instance_entities` VALUES (7704,17093034);
-INSERT INTO `instance_entities` VALUES (7704,17093035);
-INSERT INTO `instance_entities` VALUES (7704,17093036);
-INSERT INTO `instance_entities` VALUES (7704,17093037);
-INSERT INTO `instance_entities` VALUES (7704,17093038);
-INSERT INTO `instance_entities` VALUES (7704,17093039);
-INSERT INTO `instance_entities` VALUES (7704,17093040);
-INSERT INTO `instance_entities` VALUES (7704,17093041);
-INSERT INTO `instance_entities` VALUES (7704,17093042);
-INSERT INTO `instance_entities` VALUES (7704,17093043);
-INSERT INTO `instance_entities` VALUES (7704,17093044);
-INSERT INTO `instance_entities` VALUES (7704,17093045);
-INSERT INTO `instance_entities` VALUES (7704,17093046);
-INSERT INTO `instance_entities` VALUES (7704,17093047);
-INSERT INTO `instance_entities` VALUES (7704,17093048);
-INSERT INTO `instance_entities` VALUES (7704,17093049);
-INSERT INTO `instance_entities` VALUES (7704,17093050);
-INSERT INTO `instance_entities` VALUES (7704,17093051);
-INSERT INTO `instance_entities` VALUES (7704,17093052);
-INSERT INTO `instance_entities` VALUES (7704,17093053);
-INSERT INTO `instance_entities` VALUES (7704,17093054);
-INSERT INTO `instance_entities` VALUES (7704,17093055);
-INSERT INTO `instance_entities` VALUES (7704,17093056);
-INSERT INTO `instance_entities` VALUES (7704,17093057);
-INSERT INTO `instance_entities` VALUES (7704,17093058);
-INSERT INTO `instance_entities` VALUES (7704,17093059);
-INSERT INTO `instance_entities` VALUES (7704,17093060);
-INSERT INTO `instance_entities` VALUES (7704,17093061);
-INSERT INTO `instance_entities` VALUES (7704,17093062);
-INSERT INTO `instance_entities` VALUES (7704,17093063);
-INSERT INTO `instance_entities` VALUES (7704,17093064);
-INSERT INTO `instance_entities` VALUES (7704,17093065);
-INSERT INTO `instance_entities` VALUES (7704,17093066);
-INSERT INTO `instance_entities` VALUES (7704,17093067);
-INSERT INTO `instance_entities` VALUES (7704,17093068);
-INSERT INTO `instance_entities` VALUES (7704,17093069);
-INSERT INTO `instance_entities` VALUES (7704,17093070);
-INSERT INTO `instance_entities` VALUES (7704,17093071);
-INSERT INTO `instance_entities` VALUES (7704,17093072);
-INSERT INTO `instance_entities` VALUES (7704,17093073);
-INSERT INTO `instance_entities` VALUES (7704,17093074);
-INSERT INTO `instance_entities` VALUES (7704,17093075);
-INSERT INTO `instance_entities` VALUES (7704,17093076);
-INSERT INTO `instance_entities` VALUES (7704,17093077);
-INSERT INTO `instance_entities` VALUES (7704,17093078);
-INSERT INTO `instance_entities` VALUES (7704,17093079);
-INSERT INTO `instance_entities` VALUES (7704,17093080);
-INSERT INTO `instance_entities` VALUES (7704,17093081);
-INSERT INTO `instance_entities` VALUES (7704,17093082);
-INSERT INTO `instance_entities` VALUES (7704,17093083);
-INSERT INTO `instance_entities` VALUES (7704,17093084);
-INSERT INTO `instance_entities` VALUES (7704,17093085);
-INSERT INTO `instance_entities` VALUES (7704,17093086);
-INSERT INTO `instance_entities` VALUES (7704,17093087);
-INSERT INTO `instance_entities` VALUES (7704,17093088);
-INSERT INTO `instance_entities` VALUES (7704,17093089);
-INSERT INTO `instance_entities` VALUES (7704,17093090);
-INSERT INTO `instance_entities` VALUES (7704,17093091);
-INSERT INTO `instance_entities` VALUES (7704,17093092);
-INSERT INTO `instance_entities` VALUES (7704,17093093);
-INSERT INTO `instance_entities` VALUES (7704,17093094);
-INSERT INTO `instance_entities` VALUES (7704,17093095);
-INSERT INTO `instance_entities` VALUES (7704,17093096);
-INSERT INTO `instance_entities` VALUES (7704,17093097);
-INSERT INTO `instance_entities` VALUES (7704,17093098);
-INSERT INTO `instance_entities` VALUES (7704,17093099);
-INSERT INTO `instance_entities` VALUES (7704,17093100);
-INSERT INTO `instance_entities` VALUES (7704,17093101);
-INSERT INTO `instance_entities` VALUES (7704,17093102);
-INSERT INTO `instance_entities` VALUES (7704,17093103);
-INSERT INTO `instance_entities` VALUES (7704,17093104);
+    (7704,17092629),
+    (7704,17092630),
+    (7704,17092631),
+    (7704,17092632),
+    (7704,17092633),
+    (7704,17092634),
+    (7704,17092635),
+    (7704,17092636),
+    (7704,17092637),
+    (7704,17092638),
+    (7704,17092639),
+    (7704,17092640),
+    (7704,17092641),
+    (7704,17092642),
+    (7704,17092643),
+    (7704,17092644),
+    (7704,17092645),
+    (7704,17092646),
+    (7704,17092647),
+    (7704,17092648),
+    (7704,17092649),
+    (7704,17092650),
+    (7704,17092651),
+    (7704,17092652),
+    (7704,17092653),
+    (7704,17092654),
+    (7704,17092655),
+    (7704,17092656),
+    (7704,17092657),
+    (7704,17092658),
+    (7704,17092659),
+    (7704,17092660),
+    (7704,17092661),
+    (7704,17092662),
+    (7704,17092663),
+    (7704,17092664),
+    (7704,17092665),
+    (7704,17092666),
+    (7704,17092667),
+    (7704,17092668),
+    (7704,17092669),
+    (7704,17092670),
+    (7704,17092671),
+    (7704,17092672),
+    (7704,17092673),
+    (7704,17092674),
+    (7704,17092675),
+    (7704,17092676),
+    (7704,17092677),
+    (7704,17092678),
+    (7704,17092679),
+    (7704,17092680),
+    (7704,17092681),
+    (7704,17092682),
+    (7704,17092683),
+    (7704,17092684),
+    (7704,17092685),
+    (7704,17092686),
+    (7704,17092687),
+    (7704,17092688),
+    (7704,17092689),
+    (7704,17092690),
+    (7704,17092691),
+    (7704,17092692),
+    (7704,17092693),
+    (7704,17092694),
+    (7704,17092695),
+    (7704,17092696),
+    (7704,17092697),
+    (7704,17092698),
+    (7704,17092699),
+    (7704,17092700),
+    (7704,17092701),
+    (7704,17092702),
+    (7704,17092703),
+    (7704,17092704),
+    (7704,17092705),
+    (7704,17092706),
+    (7704,17092707),
+    (7704,17092708),
+    (7704,17092709),
+    (7704,17092710),
+    (7704,17092711),
+    (7704,17092712),
+    (7704,17092713),
+    (7704,17092714),
+    (7704,17092715),
+    (7704,17092716),
+    (7704,17092717),
+    (7704,17092718),
+    (7704,17092719),
+    (7704,17092720),
+    (7704,17092721),
+    (7704,17092722),
+    (7704,17092723),
+    (7704,17092724),
+    (7704,17092725),
+    (7704,17092726),
+    (7704,17092727),
+    (7704,17092728),
+    (7704,17092729),
+    (7704,17092730),
+    (7704,17092731),
+    (7704,17092732),
+    (7704,17092733),
+    (7704,17092734),
+    (7704,17092735),
+    (7704,17092736),
+    (7704,17092737),
+    (7704,17092738),
+    (7704,17092739),
+    (7704,17092740),
+    (7704,17092741),
+    (7704,17092742),
+    (7704,17092743),
+    (7704,17092744),
+    (7704,17092745),
+    (7704,17092746),
+    (7704,17092747),
+    (7704,17092748),
+    (7704,17092749),
+    (7704,17092750),
+    (7704,17092751),
+    (7704,17092752),
+    (7704,17092753),
+    (7704,17092754),
+    (7704,17092755),
+    (7704,17092756),
+    (7704,17092757),
+    (7704,17092758),
+    (7704,17092759),
+    (7704,17092760),
+    (7704,17092761),
+    (7704,17092762),
+    (7704,17092763),
+    (7704,17092764),
+    (7704,17092765),
+    (7704,17092766),
+    (7704,17092767),
+    (7704,17092768),
+    (7704,17092769),
+    (7704,17092770),
+    (7704,17092771),
+    (7704,17092772),
+    (7704,17092773),
+    (7704,17092774),
+    (7704,17092775),
+    (7704,17092776),
+    (7704,17092777),
+    (7704,17092778),
+    (7704,17092779),
+    (7704,17092780),
+    (7704,17092781),
+    (7704,17092782),
+    (7704,17092783),
+    (7704,17092784),
+    (7704,17092785),
+    (7704,17092786),
+    (7704,17092787),
+    (7704,17092788),
+    (7704,17092789),
+    (7704,17092790),
+    (7704,17092791),
+    (7704,17092792),
+    (7704,17092793),
+    (7704,17092794),
+    (7704,17092795),
+    (7704,17092796),
+    (7704,17092797),
+    (7704,17092798),
+    (7704,17092799),
+    (7704,17092800),
+    (7704,17092801),
+    (7704,17092802),
+    (7704,17092803),
+    (7704,17092804),
+    (7704,17092805),
+    (7704,17092806),
+    (7704,17092807),
+    (7704,17092808),
+    (7704,17092809),
+    (7704,17092810),
+    (7704,17092811),
+    (7704,17092812),
+    (7704,17092813),
+    (7704,17092814),
+    (7704,17092815),
+    (7704,17092816),
+    (7704,17092817),
+    (7704,17092818),
+    (7704,17092819),
+    (7704,17092820),
+    (7704,17092821),
+    (7704,17092822),
+    (7704,17092823),
+    (7704,17092824),
+    (7704,17092825),
+    (7704,17092826),
+    (7704,17092827),
+    (7704,17092828),
+    (7704,17092829),
+    (7704,17092830),
+    (7704,17092831),
+    (7704,17092832),
+    (7704,17092833),
+    (7704,17092834),
+    (7704,17092835),
+    (7704,17092836),
+    (7704,17092837),
+    (7704,17092838),
+    (7704,17092839),
+    (7704,17092840),
+    (7704,17092841),
+    (7704,17092842),
+    (7704,17092843),
+    (7704,17092844),
+    (7704,17092845),
+    (7704,17092846),
+    (7704,17092847),
+    (7704,17092848),
+    (7704,17092849),
+    (7704,17092850),
+    (7704,17092851),
+    (7704,17092852),
+    (7704,17092853),
+    (7704,17092854),
+    (7704,17092855),
+    (7704,17092856),
+    (7704,17092857),
+    (7704,17092858),
+    (7704,17092859),
+    (7704,17092860),
+    (7704,17092861),
+    (7704,17092862),
+    (7704,17092863),
+    (7704,17092864),
+    (7704,17092865),
+    (7704,17092866),
+    (7704,17092867),
+    (7704,17092868),
+    (7704,17092869),
+    (7704,17092870),
+    (7704,17092871),
+    (7704,17092872),
+    (7704,17092873),
+    (7704,17092874),
+    (7704,17092875),
+    (7704,17092876),
+    (7704,17092877),
+    (7704,17092878),
+    (7704,17092879),
+    (7704,17092880),
+    (7704,17092881),
+    (7704,17092882),
+    (7704,17092883),
+    (7704,17092884),
+    (7704,17092885),
+    (7704,17092886),
+    (7704,17092887),
+    (7704,17092888),
+    (7704,17092889),
+    (7704,17092890),
+    (7704,17092891),
+    (7704,17092892),
+    (7704,17092893),
+    (7704,17092894),
+    (7704,17092895),
+    (7704,17092896),
+    (7704,17092897),
+    (7704,17092898),
+    (7704,17092899),
+    (7704,17092901),
+    (7704,17092902),
+    (7704,17092903),
+    (7704,17092904),
+    (7704,17092905),
+    (7704,17092906),
+    (7704,17092907),
+    (7704,17092908),
+    (7704,17092909),
+    (7704,17092910),
+    (7704,17092911),
+    (7704,17092912),
+    (7704,17092913),
+    (7704,17092914),
+    (7704,17092915),
+    (7704,17092916),
+    (7704,17092917),
+    (7704,17092918),
+    (7704,17092919),
+    (7704,17092920),
+    (7704,17092921),
+    (7704,17092922),
+    (7704,17092923),
+    (7704,17092924),
+    (7704,17092925),
+    (7704,17092926),
+    (7704,17092927),
+    (7704,17092928),
+    (7704,17092929),
+    (7704,17092930),
+    (7704,17092931),
+    (7704,17092932),
+    (7704,17092933),
+    (7704,17092934),
+    (7704,17092935),
+    (7704,17092936),
+    (7704,17092937),
+    (7704,17092938),
+    (7704,17092939),
+    (7704,17092940),
+    (7704,17092941),
+    (7704,17092942),
+    (7704,17092943),
+    (7704,17092944),
+    (7704,17092945),
+    (7704,17092946),
+    (7704,17092947),
+    (7704,17092948),
+    (7704,17092949),
+    (7704,17092950),
+    (7704,17092951),
+    (7704,17092952),
+    (7704,17092953),
+    (7704,17092954),
+    (7704,17092955),
+    (7704,17092956),
+    (7704,17092957),
+    (7704,17092958),
+    (7704,17092959),
+    (7704,17092960),
+    (7704,17092961),
+    (7704,17092962),
+    (7704,17092963),
+    (7704,17092964),
+    (7704,17092965),
+    (7704,17092966),
+    (7704,17092967),
+    (7704,17092968),
+    (7704,17092969),
+    (7704,17092970),
+    (7704,17092971),
+    (7704,17092972),
+    (7704,17092973),
+    (7704,17092974),
+    (7704,17092975),
+    (7704,17092976),
+    (7704,17092977),
+    (7704,17092978),
+    (7704,17092979),
+    (7704,17092980),
+    (7704,17092981),
+    (7704,17092982),
+    (7704,17092983),
+    (7704,17092984),
+    (7704,17092985),
+    (7704,17092986),
+    (7704,17092987),
+    (7704,17092988),
+    (7704,17092989),
+    (7704,17092990),
+    (7704,17092991),
+    (7704,17092992),
+    (7704,17092993),
+    (7704,17092994),
+    (7704,17092995),
+    (7704,17092996),
+    (7704,17092997),
+    (7704,17092998),
+    (7704,17092999),
+    (7704,17093000),
+    (7704,17093001),
+    (7704,17093002),
+    (7704,17093003),
+    (7704,17093004),
+    (7704,17093005),
+    (7704,17093006),
+    (7704,17093007),
+    (7704,17093008),
+    (7704,17093009),
+    (7704,17093010),
+    (7704,17093011),
+    (7704,17093012),
+    (7704,17093013),
+    (7704,17093014),
+    (7704,17093015),
+    (7704,17093016),
+    (7704,17093017),
+    (7704,17093018),
+    (7704,17093019),
+    (7704,17093020),
+    (7704,17093021),
+    (7704,17093022),
+    (7704,17093023),
+    (7704,17093024),
+    (7704,17093025),
+    (7704,17093026),
+    (7704,17093027),
+    (7704,17093028),
+    (7704,17093029),
+    (7704,17093030),
+    (7704,17093031),
+    (7704,17093032),
+    (7704,17093034),
+    (7704,17093035),
+    (7704,17093036),
+    (7704,17093037),
+    (7704,17093038),
+    (7704,17093039),
+    (7704,17093040),
+    (7704,17093041),
+    (7704,17093042),
+    (7704,17093043),
+    (7704,17093044),
+    (7704,17093045),
+    (7704,17093046),
+    (7704,17093047),
+    (7704,17093048),
+    (7704,17093049),
+    (7704,17093050),
+    (7704,17093051),
+    (7704,17093052),
+    (7704,17093053),
+    (7704,17093054),
+    (7704,17093055),
+    (7704,17093056),
+    (7704,17093057),
+    (7704,17093058),
+    (7704,17093059),
+    (7704,17093060),
+    (7704,17093061),
+    (7704,17093062),
+    (7704,17093063),
+    (7704,17093064),
+    (7704,17093065),
+    (7704,17093066),
+    (7704,17093067),
+    (7704,17093068),
+    (7704,17093069),
+    (7704,17093070),
+    (7704,17093071),
+    (7704,17093072),
+    (7704,17093073),
+    (7704,17093074),
+    (7704,17093075),
+    (7704,17093076),
+    (7704,17093077),
+    (7704,17093078),
+    (7704,17093079),
+    (7704,17093080),
+    (7704,17093081),
+    (7704,17093082),
+    (7704,17093083),
+    (7704,17093084),
+    (7704,17093085),
+    (7704,17093086),
+    (7704,17093087),
+    (7704,17093088),
+    (7704,17093089),
+    (7704,17093090),
+    (7704,17093091),
+    (7704,17093092),
+    (7704,17093093),
+    (7704,17093094),
+    (7704,17093095),
+    (7704,17093096),
+    (7704,17093097),
+    (7704,17093098),
+    (7704,17093099),
+    (7704,17093100),
+    (7704,17093101),
+    (7704,17093102),
+    (7704,17093103),
+    (7704,17093104),
 -- more npcs
-INSERT INTO `instance_entities` VALUES (7704,17093330); -- Rune of Transfer
-INSERT INTO `instance_entities` VALUES (7704,17093331); -- Rune of Transfer
-INSERT INTO `instance_entities` VALUES (7704,17093332); -- Runic Lamp 1
-INSERT INTO `instance_entities` VALUES (7704,17093333); -- Runic Lamp 2
-INSERT INTO `instance_entities` VALUES (7704,17093334); -- Runic Lamp 3
-INSERT INTO `instance_entities` VALUES (7704,17093335); -- Runic Lamp 4
-INSERT INTO `instance_entities` VALUES (7704,17093336); -- Runic Lamp 5
+    (7704,17093330), -- Rune of Transfer
+    (7704,17093331), -- Rune of Transfer
+    (7704,17093332), -- Runic Lamp 1
+    (7704,17093333), -- Runic Lamp 2
+    (7704,17093334), -- Runic Lamp 3
+    (7704,17093335), -- Runic Lamp 4
+    (7704,17093336), -- Runic Lamp 5
 -- Doors
-INSERT INTO `instance_entities` VALUES (7704,17093354);
-INSERT INTO `instance_entities` VALUES (7704,17093355);
-INSERT INTO `instance_entities` VALUES (7704,17093356);
-INSERT INTO `instance_entities` VALUES (7704,17093357);
-INSERT INTO `instance_entities` VALUES (7704,17093358);
-INSERT INTO `instance_entities` VALUES (7704,17093359);
-INSERT INTO `instance_entities` VALUES (7704,17093360);
-INSERT INTO `instance_entities` VALUES (7704,17093361);
-INSERT INTO `instance_entities` VALUES (7704,17093362);
-INSERT INTO `instance_entities` VALUES (7704,17093363);
-INSERT INTO `instance_entities` VALUES (7704,17093364);
-INSERT INTO `instance_entities` VALUES (7704,17093365);
-INSERT INTO `instance_entities` VALUES (7704,17093366);
-INSERT INTO `instance_entities` VALUES (7704,17093367);
-INSERT INTO `instance_entities` VALUES (7704,17093368);
-INSERT INTO `instance_entities` VALUES (7704,17093369);
-INSERT INTO `instance_entities` VALUES (7704,17093370);
-INSERT INTO `instance_entities` VALUES (7704,17093371);
-INSERT INTO `instance_entities` VALUES (7704,17093372);
-INSERT INTO `instance_entities` VALUES (7704,17093373);
-INSERT INTO `instance_entities` VALUES (7704,17093374);
-INSERT INTO `instance_entities` VALUES (7704,17093375);
-INSERT INTO `instance_entities` VALUES (7704,17093376);
-INSERT INTO `instance_entities` VALUES (7704,17093377);
-INSERT INTO `instance_entities` VALUES (7704,17093378);
-INSERT INTO `instance_entities` VALUES (7704,17093379);
-INSERT INTO `instance_entities` VALUES (7704,17093380);
-INSERT INTO `instance_entities` VALUES (7704,17093381);
-INSERT INTO `instance_entities` VALUES (7704,17093382);
-INSERT INTO `instance_entities` VALUES (7704,17093383);
-INSERT INTO `instance_entities` VALUES (7704,17093384);
-INSERT INTO `instance_entities` VALUES (7704,17093385);
-INSERT INTO `instance_entities` VALUES (7704,17093386);
-INSERT INTO `instance_entities` VALUES (7704,17093387);
-INSERT INTO `instance_entities` VALUES (7704,17093388);
-INSERT INTO `instance_entities` VALUES (7704,17093389);
-INSERT INTO `instance_entities` VALUES (7704,17093390);
-INSERT INTO `instance_entities` VALUES (7704,17093391);
-INSERT INTO `instance_entities` VALUES (7704,17093392);
-INSERT INTO `instance_entities` VALUES (7704,17093393);
-INSERT INTO `instance_entities` VALUES (7704,17093394);
-INSERT INTO `instance_entities` VALUES (7704,17093395);
-INSERT INTO `instance_entities` VALUES (7704,17093396);
-INSERT INTO `instance_entities` VALUES (7704,17093397);
-INSERT INTO `instance_entities` VALUES (7704,17093398);
-INSERT INTO `instance_entities` VALUES (7704,17093399);
-INSERT INTO `instance_entities` VALUES (7704,17093400);
-INSERT INTO `instance_entities` VALUES (7704,17093401);
-INSERT INTO `instance_entities` VALUES (7704,17093402);
-INSERT INTO `instance_entities` VALUES (7704,17093403);
-INSERT INTO `instance_entities` VALUES (7704,17093404);
-INSERT INTO `instance_entities` VALUES (7704,17093405);
-INSERT INTO `instance_entities` VALUES (7704,17093406);
-INSERT INTO `instance_entities` VALUES (7704,17093407);
-INSERT INTO `instance_entities` VALUES (7704,17093408);
-INSERT INTO `instance_entities` VALUES (7704,17093409);
-INSERT INTO `instance_entities` VALUES (7704,17093410);
-INSERT INTO `instance_entities` VALUES (7704,17093411);
-INSERT INTO `instance_entities` VALUES (7704,17093412);
-INSERT INTO `instance_entities` VALUES (7704,17093413);
-INSERT INTO `instance_entities` VALUES (7704,17093414);
-INSERT INTO `instance_entities` VALUES (7704,17093415);
-INSERT INTO `instance_entities` VALUES (7704,17093416);
-INSERT INTO `instance_entities` VALUES (7704,17093417);
+    (7704,17093354),
+    (7704,17093355),
+    (7704,17093356),
+    (7704,17093357),
+    (7704,17093358),
+    (7704,17093359),
+    (7704,17093360),
+    (7704,17093361),
+    (7704,17093362),
+    (7704,17093363),
+    (7704,17093364),
+    (7704,17093365),
+    (7704,17093366),
+    (7704,17093367),
+    (7704,17093368),
+    (7704,17093369),
+    (7704,17093370),
+    (7704,17093371),
+    (7704,17093372),
+    (7704,17093373),
+    (7704,17093374),
+    (7704,17093375),
+    (7704,17093376),
+    (7704,17093377),
+    (7704,17093378),
+    (7704,17093379),
+    (7704,17093380),
+    (7704,17093381),
+    (7704,17093382),
+    (7704,17093383),
+    (7704,17093384),
+    (7704,17093385),
+    (7704,17093386),
+    (7704,17093387),
+    (7704,17093388),
+    (7704,17093389),
+    (7704,17093390),
+    (7704,17093391),
+    (7704,17093392),
+    (7704,17093393),
+    (7704,17093394),
+    (7704,17093395),
+    (7704,17093396),
+    (7704,17093397),
+    (7704,17093398),
+    (7704,17093399),
+    (7704,17093400),
+    (7704,17093401),
+    (7704,17093402),
+    (7704,17093403),
+    (7704,17093404),
+    (7704,17093405),
+    (7704,17093406),
+    (7704,17093407),
+    (7704,17093408),
+    (7704,17093409),
+    (7704,17093410),
+    (7704,17093411),
+    (7704,17093412),
+    (7704,17093413),
+    (7704,17093414),
+    (7704,17093415),
+    (7704,17093416),
+    (7704,17093417),
 
-INSERT INTO `instance_entities` VALUES (7704,17093430); -- Rune of Transfer
-INSERT INTO `instance_entities` VALUES (7704,17093431); -- Vending box
+    (7704,17093430), -- Rune of Transfer
+    (7704,17093431) -- Vending box
+;
 
+insert into `instance_entities`
+(
+    `instanceid`, `id`
+)
+VALUES
 -- ------------------------------------------------------------
 -- Ruhotz Silvermines (Zone 93)
 -- ------------------------------------------------------------
 
 -- Light in the Darkness (9300)
 -- mobs
-INSERT INTO `instance_entities` VALUES (9300,17158192); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158193); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158194); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158195); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158196); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158197); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158198); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158199); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158200); -- Sapphirine Quadav
-INSERT INTO `instance_entities` VALUES (9300,17158201); -- Sapphire Quadav
+    (9300,17158192), -- Sapphirine Quadav
+    (9300,17158193), -- Sapphirine Quadav
+    (9300,17158194), -- Sapphirine Quadav
+    (9300,17158195), -- Sapphirine Quadav
+    (9300,17158196), -- Sapphirine Quadav
+    (9300,17158197), -- Sapphirine Quadav
+    (9300,17158198), -- Sapphirine Quadav
+    (9300,17158199), -- Sapphirine Quadav
+    (9300,17158200), -- Sapphirine Quadav
+    (9300,17158201), -- Sapphire Quadav
 -- npcs
-INSERT INTO `instance_entities` VALUES (9300,17158388); -- Volker
-INSERT INTO `instance_entities` VALUES (9300,17158389); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158390); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158391); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158392); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158393); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158394); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158395); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158396); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158397); -- csnpc
-INSERT INTO `instance_entities` VALUES (9300,17158398); -- csnpc
+    (9300,17158388), -- Volker
+    (9300,17158389), -- csnpc
+    (9300,17158390), -- csnpc
+    (9300,17158391), -- csnpc
+    (9300,17158392), -- csnpc
+    (9300,17158393), -- csnpc
+    (9300,17158394), -- csnpc
+    (9300,17158395), -- csnpc
+    (9300,17158396), -- csnpc
+    (9300,17158397), -- csnpc
+    (9300,17158398), -- csnpc
 
 -- ------------------------------------------------------------
 -- Rala Waterways (Zone 258)
 -- ------------------------------------------------------------
 
 -- Behind the Sluices (25900)
-INSERT INTO `instance_entities` VALUES (25900,17838146); -- Arciela
-INSERT INTO `instance_entities` VALUES (25900,17838147); -- The Keeper
-INSERT INTO `instance_entities` VALUES (25900,17838148); -- Mistdagger
-INSERT INTO `instance_entities` VALUES (25900,17838149); -- The Briars (elv)
-INSERT INTO `instance_entities` VALUES (25900,17838150); -- The Briars (gal)
+    (25900,17838146), -- Arciela
+    (25900,17838147), -- The Keeper
+    (25900,17838148), -- Mistdagger
+    (25900,17838149), -- The Briars (elv)
+    (25900,17838150), -- The Briars (gal)
 
 -- ------------------------------------------------------------
 -- Ambuscade
@@ -2577,7 +2636,8 @@ INSERT INTO `instance_entities` VALUES (25900,17838150); -- The Briars (gal)
 
 -- Ambuscade
 -- mobs
-INSERT INTO `instance_entities` VALUES (30000,17952867);
+    (30000,17952867)
+;
 
 /*!40000 ALTER TABLE `instance_entities` ENABLE KEYS */;
 UNLOCK TABLES;
