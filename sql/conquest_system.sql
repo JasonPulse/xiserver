@@ -34,25 +34,63 @@ CREATE TABLE `conquest_system` (
 
 LOCK TABLES `conquest_system` WRITE;
 /*!40000 ALTER TABLE `conquest_system` DISABLE KEYS */;
-INSERT INTO `conquest_system` VALUES (0,0,1,5000,0,0,0);
-INSERT INTO `conquest_system` VALUES (1,0,1,1500,1500,0,1000);
-INSERT INTO `conquest_system` VALUES (2,0,1,3000,0,0,2000);
-INSERT INTO `conquest_system` VALUES (3,1,1,0,5000,0,0);
-INSERT INTO `conquest_system` VALUES (4,1,0,0,3000,0,2000);
-INSERT INTO `conquest_system` VALUES (5,2,0,0,0,5000,0);
-INSERT INTO `conquest_system` VALUES (6,2,0,0,0,4000,1000);
-INSERT INTO `conquest_system` VALUES (7,2,0,0,0,3000,2000);
-INSERT INTO `conquest_system` VALUES (8,3,0,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (9,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (10,2,3,2000,750,750,1500);
-INSERT INTO `conquest_system` VALUES (11,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (12,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (13,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (14,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (15,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (16,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (17,3,3,0,0,0,5000);
-INSERT INTO `conquest_system` VALUES (18,3,3,0,0,0,5000);
+
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `conquest_system`
+(
+    `region_id`, `region_control`, `region_control_prev`,
+    `sandoria_influence`, `bastok_influence`, `windurst_influence`, `beastmen_influence`
+)
+VALUES
+    (0,0,1,5000,0,0,0),
+    (1,0,1,1500,1500,0,1000),
+    (2,0,1,3000,0,0,2000),
+    (3,1,1,0,5000,0,0),
+    (4,1,0,0,3000,0,2000),
+    (5,2,0,0,0,5000,0),
+    (6,2,0,0,0,4000,1000),
+    (7,2,0,0,0,3000,2000),
+    (8,3,0,0,0,0,5000),
+    (9,3,3,0,0,0,5000),
+    (10,2,3,2000,750,750,1500),
+    (11,3,3,0,0,0,5000),
+    (12,3,3,0,0,0,5000),
+    (13,3,3,0,0,0,5000),
+    (14,3,3,0,0,0,5000),
+    (15,3,3,0,0,0,5000),
+    (16,3,3,0,0,0,5000),
+    (17,3,3,0,0,0,5000),
+    (18,3,3,0,0,0,5000)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `region_control` = IF(`region_control` <> VALUES(`region_control`), VALUES(`region_control`), `region_control`),
+    `region_control_prev` = IF(`region_control_prev` <> VALUES(`region_control_prev`), VALUES(`region_control_prev`), `region_control_prev`),
+    `sandoria_influence` = IF(`sandoria_influence` <> VALUES(`sandoria_influence`), VALUES(`sandoria_influence`), `sandoria_influence`),
+    `bastok_influence` = IF(`bastok_influence` <> VALUES(`bastok_influence`), VALUES(`bastok_influence`), `bastok_influence`),
+    `windurst_influence` = IF(`windurst_influence` <> VALUES(`windurst_influence`), VALUES(`windurst_influence`), `windurst_influence`),
+    `beastmen_influence` = IF(`beastmen_influence` <> VALUES(`beastmen_influence`), VALUES(`beastmen_influence`), `beastmen_influence`)
+;
+
 /*!40000 ALTER TABLE `conquest_system` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -10,6 +10,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 DROP TABLE IF EXISTS `guilds`;
+
 CREATE TABLE IF NOT EXISTS `guilds` (
   `id` tinyint(1) unsigned NOT NULL,
   `points_name` varchar(20) NOT NULL,
@@ -18,14 +19,44 @@ CREATE TABLE IF NOT EXISTS `guilds` (
 
 LOCK TABLES `guilds` WRITE;
 
-INSERT INTO `guilds` VALUES (0,'guild_fishing');
-INSERT INTO `guilds` VALUES (1,'guild_woodworking');
-INSERT INTO `guilds` VALUES (2,'guild_smithing');
-INSERT INTO `guilds` VALUES (3,'guild_goldsmithing');
-INSERT INTO `guilds` VALUES (4,'guild_weaving');
-INSERT INTO `guilds` VALUES (5,'guild_leathercraft');
-INSERT INTO `guilds` VALUES (6,'guild_bonecraft');
-INSERT INTO `guilds` VALUES (7,'guild_alchemy');
-INSERT INTO `guilds` VALUES (8,'guild_cooking');
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `guilds`
+(
+    `id`, `points_name`
+)
+VALUES
+    (0,'guild_fishing'),
+    (1,'guild_woodworking'),
+    (2,'guild_smithing'),
+    (3,'guild_goldsmithing'),
+    (4,'guild_weaving'),
+    (5,'guild_leathercraft'),
+    (6,'guild_bonecraft'),
+    (7,'guild_alchemy'),
+    (8,'guild_cooking')
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `points_name` = IF(`points_name` <> VALUES(`points_name`), VALUES(`points_name`), `points_name`)
+;
 
 UNLOCK TABLES;
