@@ -34,253 +34,288 @@ CREATE TABLE `bcnm_records` (
 LOCK TABLES `bcnm_records` WRITE;
 /*!40000 ALTER TABLE `bcnm_records` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `bcnm_records` VALUES (0,139,'rank_2_mission','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1,139,'tails_of_woe','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (2,139,'dismemberment_brigade','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (3,139,'the_secret_weapon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (4,139,'hostile_herbivores','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (5,139,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (6,139,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (7,139,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (8,139,'carapace_combatants','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (9,139,'shooting_fish','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (10,139,'dropping_like_flies','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (11,139,'horns_of_war','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (12,139,'under_observation','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (13,139,'eye_of_the_tiger','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (14,139,'shots_in_the_dark','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (15,139,'double_dragonian','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (16,139,'todays_horoscope','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (17,139,'contaminated_colosseum','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (18,139,'kindergarten_cap','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (19,139,'last_orc-shunned_hero','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (20,139,'beyond_infinity','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (32,140,'save_the_children','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (33,140,'holy_crest','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (34,140,'wings_of_fury','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (35,140,'petrifying_pair','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (36,140,'toadal_recall','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (37,140,'mirror_mirror','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (64,144,'rank_2_mission','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (65,144,'worms_turn','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (66,144,'grimshell_shocktroopers','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (67,144,'on_my_way','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (68,144,'thief_in_norg','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (69,144,'3_2_1','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (70,144,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (71,144,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (72,144,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (73,144,'birds_of_a_feather','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (74,144,'crustacean_conundrum','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (75,144,'grove_guardians','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (76,144,'hills_are_alive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (77,144,'royal_jelly','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (78,144,'final_bout','nobody',0,180);
-INSERT INTO `bcnm_records` VALUES (79,144,'up_in_arms','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (80,144,'copycat','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (81,144,'operation_desert_swarm','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (82,144,'prehistoric_pigeons','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (83,144,'palborough_project','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (84,144,'shell_shocked','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (85,144,'beyond_infinity','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (96,146,'rank_2_mission','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (97,146,'steamed_sprouts','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (98,146,'divine_punishers','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (99,146,'saintly_invitation','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (100,146,'treasure_and_tribulations','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (101,146,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (102,146,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (103,146,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (104,146,'creeping_doom','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (105,146,'charming_trio','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (106,146,'harem_scarem','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (107,146,'early_bird_catches_the_wyrm','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (108,146,'royal_succession','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (109,146,'rapid_raptors','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (110,146,'wild_wild_whiskers','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (111,146,'seasons_greetings','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (112,146,'royale_ramble','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (113,146,'moa_constrictors','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (114,146,'v_formation','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (115,146,'avian_apostates','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (116,146,'beyond_infinity','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (128,163,'temple_of_uggalepih','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (129,163,'jungle_boogymen','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (130,163,'amphibian_assault','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (131,163,'project_shantottofication','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (132,163,'whom_wilt_thou_call','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (160,165,'shadow_lord_battle','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (161,165,'where_two_paths_converge','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (162,165,'kindred_spirits','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (163,165,'survival_of_the_wisest','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (164,165,'smash_a_malevolent_menace','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (192,168,'through_the_quicksand_caves','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (193,168,'legion_xi_comitatensis','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (194,168,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (195,168,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (196,168,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (197,168,'cactuar_suave','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (198,168,'eye_of_the_storm','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (199,168,'scarlet_king','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (200,168,'cat_burglar_bares_fangs','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (201,168,'dragon_scales','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (224,170,'moonlit_path','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (225,170,'moon_reading','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (226,170,'waking_the_beast_fullmoon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (227,170,'battaru_royale','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (256,179,'return_to_delkfutts_tower','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (257,179,'indomitable_triumvirate_vs3','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (258,179,'dauntless_duo_vs2','nobody',0,900); -- No Info Found
-INSERT INTO `bcnm_records` VALUES (259,179,'solitary_demolisher_vs1','nobody',0,900); -- No Info Found
-INSERT INTO `bcnm_records` VALUES (260,179,'heroines_combat','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (261,179,'mercenary_camp','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (262,179,'ode_of_life_bestowing','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (288,180,'ark_angels_1','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (289,180,'ark_angels_2','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (290,180,'ark_angels_3','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (291,180,'ark_angels_4','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (292,180,'ark_angels_5','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (293,180,'divine_might','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (320,181,'celestial_nexus','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (352,156,'fiat_lux','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (353,156,'darkness_descends','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (354,156,'bonds_of_mythril','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (385,182,'maiden_of_the_dusk','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (416,201,'trial_by_wind','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (417,201,'carbuncle_debacle','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (418,201,'trial-size_trial_by_wind','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (419,201,'waking_the_beast','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (420,201,'sugar-coated_directive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (448,202,'trial_by_lightning','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (449,202,'carbuncle_debacle','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (450,202,'trial-size_trial_by_lightning','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (451,202,'waking_the_beast','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (452,202,'sugar-coated_directive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (480,203,'trial_by_ice','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (481,203,'class_reunion','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (482,203,'trial-size_trial_by_ice','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (483,203,'waking_the_beast','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (484,203,'sugar-coated_directive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (512,206,'rank_5_mission','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (513,206,'come_into_my_parlor','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (514,206,'e-vase-ive_action','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (515,206,'infernal_swarm','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (516,206,'heir_to_the_light','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (517,206,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (518,206,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (519,206,'shattering_stars','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (520,206,'demolition_squad','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (521,206,'die_by_the_sword','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (522,206,'let_sleeping_dogs_die','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (523,206,'brothers_d_aurphe','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (524,206,'undying_promise','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (525,206,'factory_rejects','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (526,206,'idol_thoughts','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (527,206,'awful_autopsy','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (528,206,'celery','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (529,206,'mirror_images','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (530,206,'furious_finale','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (531,206,'clash_of_the_comrades','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (532,206,'those_who_lurk_in_shadows','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (533,206,'beyond_infinity','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (544,207,'trial_by_fire','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (545,207,'trial-size_trial_by_fire','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (546,207,'waking_the_beast','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (547,207,'sugar-coated_directive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (576,209,'trial_by_earth','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (577,209,'puppet_master','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (578,209,'trial-size_trial_by_earth','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (579,209,'waking_the_beast','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (580,209,'sugar-coated_directive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (608,211,'trial_by_water','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (609,211,'trial-size_trial_by_water','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (610,211,'waking_the_beast','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (611,211,'sugar-coated_directive','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (640,6,'flames_for_the_dead','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (641,6,'follow_the_white_rabbit','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (642,6,'when_hell_freezes_over','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (643,6,'brothers','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (644,6,'holy_cow','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (672,8,'head_wind','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (673,8,'like_the_wind','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (674,8,'sheep_in_antlions_clothing','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (675,8,'shell_we_dance','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (676,8,'totentanz','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (677,8,'tango_with_a_tracker','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (678,8,'requiem_of_a_sin','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (679,8,'antagonistic_ambuscade','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (704,10,'darkness_named','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (705,10,'test_your_mite','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (706,10,'waking_dreams','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (736,13,'century_of_hardship','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (737,13,'return_to_the_depths','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (738,13,'bionic_bug','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (739,13,'pulling_the_strings','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (740,13,'automaton_assault','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (741,13,'mobline_comedy','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (768,17,'ancient_flames_beckon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (769,17,'simulant','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (770,17,'empty_hopes','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (800,19,'ancient_flames_beckon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (801,19,'you_are_what_you_eat','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (802,19,'empty_dreams','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (832,21,'ancient_flames_beckon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (833,21,'playing_host','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (834,21,'empty_desires','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (864,23,'desires_of_emptiness','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (865,23,'pulling_the_plug','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (866,23,'empty_aspirations','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (896,29,'storms_of_fate','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (897,29,'wyrmking_descends','nobody',0,3600);
-INSERT INTO `bcnm_records` VALUES (928,30,'ouryu_cometh','nobody',0,3600);
-INSERT INTO `bcnm_records` VALUES (960,31,'ancient_vows','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (961,31,'savage','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (962,31,'fire_in_the_sky','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (963,31,'bad_seed','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (964,31,'bugard_in_the_clouds','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (965,31,'beloved_of_the_atlantes','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (966,31,'uninvited_guests','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (967,31,'nest_of_nightmares','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (992,32,'one_to_be_feared','nobody',0,2700);
-INSERT INTO `bcnm_records` VALUES (993,32,'warriors_path','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1024,35,'when_angels_fall','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1056,36,'dawn','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1057,36,'apocalypse_nigh','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1088,57,'call_to_arms','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1089,57,'compliments_to_the_chef','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1090,57,'puppetmaster_blues','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1091,57,'breaking_the_bonds_of_fate','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (1092,57,'legacy_of_the_lost','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1120,64,'tough_nut_to_crack','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1121,64,'happy_caster','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1122,64,'omens','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1123,64,'achieving_true_power','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (1124,64,'shield_of_diplomacy','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1152,67,'making_a_mockery','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1153,67,'shadows_of_the_mind','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1154,67,'beast_within','nobody',0,600);
-INSERT INTO `bcnm_records` VALUES (1155,67,'moment_of_truth','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1156,67,'puppet_in_peril','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1184,78,'rider_cometh','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (1290,38,'nw_apollyon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1291,38,'sw_apollyon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1292,38,'ne_apollyon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1293,38,'se_apollyon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1294,38,'cs_apollyon','nobody',0,1200);
-INSERT INTO `bcnm_records` VALUES (1295,38,'cs_apollyon_ii','nobody',0,1200);
-INSERT INTO `bcnm_records` VALUES (1296,38,'central_apollyon','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1297,38,'central_apollyon_ii','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1298,37,'temenos_western_tower','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1299,37,'temenos_northern_tower','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1300,37,'temenos_eastern_tower','nobody',0,1800);
-INSERT INTO `bcnm_records` VALUES (1301,37,'central_temenos_basement','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (1302,37,'central_temenos_basement_ii','nobody',0,900);
-INSERT INTO `bcnm_records` VALUES (1303,37,'central_temenos_1st_floor','nobody',0,2700);
-INSERT INTO `bcnm_records` VALUES (1304,37,'central_temenos_2nd_floor','nobody',0,2700);
-INSERT INTO `bcnm_records` VALUES (1305,37,'central_temenos_3rd_floor','nobody',0,2700);
-INSERT INTO `bcnm_records` VALUES (1306,37,'central_temenos_4th_floor','nobody',0,3600);
-INSERT INTO `bcnm_records` VALUES (1307,37,'central_temenos_4th_floor_ii','nobody',0,3600);
-INSERT INTO `bcnm_records` VALUES (2721,85,'purple_the_new_black','nobody',0,1800);
+
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `bcnm_records`
+(
+    `bcnmId`, `zoneId`, `name`, `fastestName`, `fastestPartySize`, `fastestTime`
+)
+VALUES
+    (0,139,'rank_2_mission','nobody',0,1800),
+    (1,139,'tails_of_woe','nobody',0,1800),
+    (2,139,'dismemberment_brigade','nobody',0,1800),
+    (3,139,'the_secret_weapon','nobody',0,1800),
+    (4,139,'hostile_herbivores','nobody',0,1800),
+    (5,139,'shattering_stars','nobody',0,600),
+    (6,139,'shattering_stars','nobody',0,600),
+    (7,139,'shattering_stars','nobody',0,600),
+    (8,139,'carapace_combatants','nobody',0,900),
+    (9,139,'shooting_fish','nobody',0,900),
+    (10,139,'dropping_like_flies','nobody',0,1800),
+    (11,139,'horns_of_war','nobody',0,1800),
+    (12,139,'under_observation','nobody',0,900),
+    (13,139,'eye_of_the_tiger','nobody',0,900),
+    (14,139,'shots_in_the_dark','nobody',0,900),
+    (15,139,'double_dragonian','nobody',0,1800),
+    (16,139,'todays_horoscope','nobody',0,1800),
+    (17,139,'contaminated_colosseum','nobody',0,1800),
+    (18,139,'kindergarten_cap','nobody',0,900),
+    (19,139,'last_orc-shunned_hero','nobody',0,1800),
+    (20,139,'beyond_infinity','nobody',0,600),
+    (32,140,'save_the_children','nobody',0,600),
+    (33,140,'holy_crest','nobody',0,600),
+    (34,140,'wings_of_fury','nobody',0,900),
+    (35,140,'petrifying_pair','nobody',0,900),
+    (36,140,'toadal_recall','nobody',0,1800),
+    (37,140,'mirror_mirror','nobody',0,900),
+    (64,144,'rank_2_mission','nobody',0,1800),
+    (65,144,'worms_turn','nobody',0,1800),
+    (66,144,'grimshell_shocktroopers','nobody',0,1800),
+    (67,144,'on_my_way','nobody',0,1800),
+    (68,144,'thief_in_norg','nobody',0,1800),
+    (69,144,'3_2_1','nobody',0,1800),
+    (70,144,'shattering_stars','nobody',0,600),
+    (71,144,'shattering_stars','nobody',0,600),
+    (72,144,'shattering_stars','nobody',0,600),
+    (73,144,'birds_of_a_feather','nobody',0,900),
+    (74,144,'crustacean_conundrum','nobody',0,900),
+    (75,144,'grove_guardians','nobody',0,1800),
+    (76,144,'hills_are_alive','nobody',0,1800),
+    (77,144,'royal_jelly','nobody',0,900),
+    (78,144,'final_bout','nobody',0,180),
+    (79,144,'up_in_arms','nobody',0,900),
+    (80,144,'copycat','nobody',0,1800),
+    (81,144,'operation_desert_swarm','nobody',0,1800),
+    (82,144,'prehistoric_pigeons','nobody',0,1800),
+    (83,144,'palborough_project','nobody',0,900),
+    (84,144,'shell_shocked','nobody',0,1800),
+    (85,144,'beyond_infinity','nobody',0,600),
+    (96,146,'rank_2_mission','nobody',0,1800),
+    (97,146,'steamed_sprouts','nobody',0,1800),
+    (98,146,'divine_punishers','nobody',0,1800),
+    (99,146,'saintly_invitation','nobody',0,1800),
+    (100,146,'treasure_and_tribulations','nobody',0,1800),
+    (101,146,'shattering_stars','nobody',0,600),
+    (102,146,'shattering_stars','nobody',0,600),
+    (103,146,'shattering_stars','nobody',0,600),
+    (104,146,'creeping_doom','nobody',0,900),
+    (105,146,'charming_trio','nobody',0,900),
+    (106,146,'harem_scarem','nobody',0,1800),
+    (107,146,'early_bird_catches_the_wyrm','nobody',0,1800),
+    (108,146,'royal_succession','nobody',0,900),
+    (109,146,'rapid_raptors','nobody',0,900),
+    (110,146,'wild_wild_whiskers','nobody',0,900),
+    (111,146,'seasons_greetings','nobody',0,1800),
+    (112,146,'royale_ramble','nobody',0,1800),
+    (113,146,'moa_constrictors','nobody',0,1800),
+    (114,146,'v_formation','nobody',0,900),
+    (115,146,'avian_apostates','nobody',0,1800),
+    (116,146,'beyond_infinity','nobody',0,600),
+    (128,163,'temple_of_uggalepih','nobody',0,1800),
+    (129,163,'jungle_boogymen','nobody',0,1800),
+    (130,163,'amphibian_assault','nobody',0,1800),
+    (131,163,'project_shantottofication','nobody',0,1800),
+    (132,163,'whom_wilt_thou_call','nobody',0,1800),
+    (160,165,'shadow_lord_battle','nobody',0,1800),
+    (161,165,'where_two_paths_converge','nobody',0,1800),
+    (162,165,'kindred_spirits','nobody',0,1800),
+    (163,165,'survival_of_the_wisest','nobody',0,600),
+    (164,165,'smash_a_malevolent_menace','nobody',0,1800),
+    (192,168,'through_the_quicksand_caves','nobody',0,1800),
+    (193,168,'legion_xi_comitatensis','nobody',0,1800),
+    (194,168,'shattering_stars','nobody',0,600),
+    (195,168,'shattering_stars','nobody',0,600),
+    (196,168,'shattering_stars','nobody',0,600),
+    (197,168,'cactuar_suave','nobody',0,1800),
+    (198,168,'eye_of_the_storm','nobody',0,1800),
+    (199,168,'scarlet_king','nobody',0,1800),
+    (200,168,'cat_burglar_bares_fangs','nobody',0,1800),
+    (201,168,'dragon_scales','nobody',0,600),
+    (224,170,'moonlit_path','nobody',0,1800),
+    (225,170,'moon_reading','nobody',0,1800),
+    (226,170,'waking_the_beast_fullmoon','nobody',0,1800),
+    (227,170,'battaru_royale','nobody',0,1800),
+    (256,179,'return_to_delkfutts_tower','nobody',0,1800),
+    (257,179,'indomitable_triumvirate_vs3','nobody',0,900),
+    (258,179,'dauntless_duo_vs2','nobody',0,900), -- No Info Found
+    (259,179,'solitary_demolisher_vs1','nobody',0,900), -- No Info Found
+    (260,179,'heroines_combat','nobody',0,900),
+    (261,179,'mercenary_camp','nobody',0,900),
+    (262,179,'ode_of_life_bestowing','nobody',0,1800),
+    (288,180,'ark_angels_1','nobody',0,1800),
+    (289,180,'ark_angels_2','nobody',0,1800),
+    (290,180,'ark_angels_3','nobody',0,1800),
+    (291,180,'ark_angels_4','nobody',0,1800),
+    (292,180,'ark_angels_5','nobody',0,1800),
+    (293,180,'divine_might','nobody',0,1800),
+    (320,181,'celestial_nexus','nobody',0,1800),
+    (352,156,'fiat_lux','nobody',0,1800),
+    (353,156,'darkness_descends','nobody',0,1800),
+    (354,156,'bonds_of_mythril','nobody',0,1800),
+    (385,182,'maiden_of_the_dusk','nobody',0,1800),
+    (416,201,'trial_by_wind','nobody',0,1800),
+    (417,201,'carbuncle_debacle','nobody',0,1800),
+    (418,201,'trial-size_trial_by_wind','nobody',0,900),
+    (419,201,'waking_the_beast','nobody',0,1800),
+    (420,201,'sugar-coated_directive','nobody',0,1800),
+    (448,202,'trial_by_lightning','nobody',0,1800),
+    (449,202,'carbuncle_debacle','nobody',0,1800),
+    (450,202,'trial-size_trial_by_lightning','nobody',0,900),
+    (451,202,'waking_the_beast','nobody',0,1800),
+    (452,202,'sugar-coated_directive','nobody',0,1800),
+    (480,203,'trial_by_ice','nobody',0,1800),
+    (481,203,'class_reunion','nobody',0,1800),
+    (482,203,'trial-size_trial_by_ice','nobody',0,900),
+    (483,203,'waking_the_beast','nobody',0,1800),
+    (484,203,'sugar-coated_directive','nobody',0,1800),
+    (512,206,'rank_5_mission','nobody',0,900),
+    (513,206,'come_into_my_parlor','nobody',0,1800),
+    (514,206,'e-vase-ive_action','nobody',0,1800),
+    (515,206,'infernal_swarm','nobody',0,1800),
+    (516,206,'heir_to_the_light','nobody',0,1800),
+    (517,206,'shattering_stars','nobody',0,600),
+    (518,206,'shattering_stars','nobody',0,600),
+    (519,206,'shattering_stars','nobody',0,600),
+    (520,206,'demolition_squad','nobody',0,1800),
+    (521,206,'die_by_the_sword','nobody',0,900),
+    (522,206,'let_sleeping_dogs_die','nobody',0,1800),
+    (523,206,'brothers_d_aurphe','nobody',0,1800),
+    (524,206,'undying_promise','nobody',0,900),
+    (525,206,'factory_rejects','nobody',0,1800),
+    (526,206,'idol_thoughts','nobody',0,1800),
+    (527,206,'awful_autopsy','nobody',0,900),
+    (528,206,'celery','nobody',0,900),
+    (529,206,'mirror_images','nobody',0,900),
+    (530,206,'furious_finale','nobody',0,600),
+    (531,206,'clash_of_the_comrades','nobody',0,600),
+    (532,206,'those_who_lurk_in_shadows','nobody',0,1800),
+    (533,206,'beyond_infinity','nobody',0,600),
+    (544,207,'trial_by_fire','nobody',0,1800),
+    (545,207,'trial-size_trial_by_fire','nobody',0,900),
+    (546,207,'waking_the_beast','nobody',0,1800),
+    (547,207,'sugar-coated_directive','nobody',0,1800),
+    (576,209,'trial_by_earth','nobody',0,1800),
+    (577,209,'puppet_master','nobody',0,1800),
+    (578,209,'trial-size_trial_by_earth','nobody',0,900),
+    (579,209,'waking_the_beast','nobody',0,1800),
+    (580,209,'sugar-coated_directive','nobody',0,1800),
+    (608,211,'trial_by_water','nobody',0,1800),
+    (609,211,'trial-size_trial_by_water','nobody',0,900),
+    (610,211,'waking_the_beast','nobody',0,1800),
+    (611,211,'sugar-coated_directive','nobody',0,1800),
+    (640,6,'flames_for_the_dead','nobody',0,1800),
+    (641,6,'follow_the_white_rabbit','nobody',0,1800),
+    (642,6,'when_hell_freezes_over','nobody',0,900),
+    (643,6,'brothers','nobody',0,1800),
+    (644,6,'holy_cow','nobody',0,1800),
+    (672,8,'head_wind','nobody',0,1800),
+    (673,8,'like_the_wind','nobody',0,900),
+    (674,8,'sheep_in_antlions_clothing','nobody',0,1800),
+    (675,8,'shell_we_dance','nobody',0,1800),
+    (676,8,'totentanz','nobody',0,1800),
+    (677,8,'tango_with_a_tracker','nobody',0,1800),
+    (678,8,'requiem_of_a_sin','nobody',0,1800),
+    (679,8,'antagonistic_ambuscade','nobody',0,900),
+    (704,10,'darkness_named','nobody',0,1800),
+    (705,10,'test_your_mite','nobody',0,1800),
+    (706,10,'waking_dreams','nobody',0,1800),
+    (736,13,'century_of_hardship','nobody',0,1800),
+    (737,13,'return_to_the_depths','nobody',0,1800),
+    (738,13,'bionic_bug','nobody',0,1800),
+    (739,13,'pulling_the_strings','nobody',0,900),
+    (740,13,'automaton_assault','nobody',0,900),
+    (741,13,'mobline_comedy','nobody',0,900),
+    (768,17,'ancient_flames_beckon','nobody',0,1800),
+    (769,17,'simulant','nobody',0,1800),
+    (770,17,'empty_hopes','nobody',0,900),
+    (800,19,'ancient_flames_beckon','nobody',0,1800),
+    (801,19,'you_are_what_you_eat','nobody',0,1800),
+    (802,19,'empty_dreams','nobody',0,900),
+    (832,21,'ancient_flames_beckon','nobody',0,1800),
+    (833,21,'playing_host','nobody',0,1800),
+    (834,21,'empty_desires','nobody',0,900),
+    (864,23,'desires_of_emptiness','nobody',0,1800),
+    (865,23,'pulling_the_plug','nobody',0,1800),
+    (866,23,'empty_aspirations','nobody',0,900),
+    (896,29,'storms_of_fate','nobody',0,1800),
+    (897,29,'wyrmking_descends','nobody',0,3600),
+    (928,30,'ouryu_cometh','nobody',0,3600),
+    (960,31,'ancient_vows','nobody',0,1800),
+    (961,31,'savage','nobody',0,1800),
+    (962,31,'fire_in_the_sky','nobody',0,900),
+    (963,31,'bad_seed','nobody',0,1800),
+    (964,31,'bugard_in_the_clouds','nobody',0,900),
+    (965,31,'beloved_of_the_atlantes','nobody',0,1800),
+    (966,31,'uninvited_guests','nobody',0,1800),
+    (967,31,'nest_of_nightmares','nobody',0,900),
+    (992,32,'one_to_be_feared','nobody',0,2700),
+    (993,32,'warriors_path','nobody',0,1800),
+    (1024,35,'when_angels_fall','nobody',0,1800),
+    (1056,36,'dawn','nobody',0,1800),
+    (1057,36,'apocalypse_nigh','nobody',0,1800),
+    (1088,57,'call_to_arms','nobody',0,1800),
+    (1089,57,'compliments_to_the_chef','nobody',0,1800),
+    (1090,57,'puppetmaster_blues','nobody',0,1800),
+    (1091,57,'breaking_the_bonds_of_fate','nobody',0,600),
+    (1092,57,'legacy_of_the_lost','nobody',0,1800),
+    (1120,64,'tough_nut_to_crack','nobody',0,1800),
+    (1121,64,'happy_caster','nobody',0,1800),
+    (1122,64,'omens','nobody',0,1800),
+    (1123,64,'achieving_true_power','nobody',0,600),
+    (1124,64,'shield_of_diplomacy','nobody',0,1800),
+    (1152,67,'making_a_mockery','nobody',0,1800),
+    (1153,67,'shadows_of_the_mind','nobody',0,1800),
+    (1154,67,'beast_within','nobody',0,600),
+    (1155,67,'moment_of_truth','nobody',0,1800),
+    (1156,67,'puppet_in_peril','nobody',0,1800),
+    (1184,78,'rider_cometh','nobody',0,900),
+    (1290,38,'nw_apollyon','nobody',0,1800),
+    (1291,38,'sw_apollyon','nobody',0,1800),
+    (1292,38,'ne_apollyon','nobody',0,1800),
+    (1293,38,'se_apollyon','nobody',0,1800),
+    (1294,38,'cs_apollyon','nobody',0,1200),
+    (1295,38,'cs_apollyon_ii','nobody',0,1200),
+    (1296,38,'central_apollyon','nobody',0,1800),
+    (1297,38,'central_apollyon_ii','nobody',0,1800),
+    (1298,37,'temenos_western_tower','nobody',0,1800),
+    (1299,37,'temenos_northern_tower','nobody',0,1800),
+    (1300,37,'temenos_eastern_tower','nobody',0,1800),
+    (1301,37,'central_temenos_basement','nobody',0,900),
+    (1302,37,'central_temenos_basement_ii','nobody',0,900),
+    (1303,37,'central_temenos_1st_floor','nobody',0,2700),
+    (1304,37,'central_temenos_2nd_floor','nobody',0,2700),
+    (1305,37,'central_temenos_3rd_floor','nobody',0,2700),
+    (1306,37,'central_temenos_4th_floor','nobody',0,3600),
+    (1307,37,'central_temenos_4th_floor_ii','nobody',0,3600),
+    (2721,85,'purple_the_new_black','nobody',0,1800)
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `zoneId` = IF(`zoneId` <> VALUES(`skilllevel`), VALUES(`skilllevel`), `skilllevel`),
+    `name` = IF(`name` <> VALUES(`heads`), VALUES(`heads`), `heads`),
+    `fastestName` = IF(`fastestName` <> VALUES(`enfeeble`), VALUES(`enfeeble`), `enfeeble`)
+    `fastestPartySize` = IF(`fastestPartySize` <> VALUES(`immunity`), VALUES(`immunity`), `immunity`)
+    `fastestTime` = IF(`fastestTime` <> VALUES(`removes`), VALUES(`removes`), `removes`)
+;
 
 /*!40000 ALTER TABLE `bcnm_records` ENABLE KEYS */;
 UNLOCK TABLES;

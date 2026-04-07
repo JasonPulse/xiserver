@@ -29,13 +29,45 @@ CREATE TABLE `despoil_effects` (
 
 LOCK TABLES `despoil_effects` WRITE;
 /*!40000 ALTER TABLE `despoil_effects` DISABLE KEYS */;
-INSERT INTO `despoil_effects` VALUES (644,149);        -- Mythril Ore, Defense Down
-INSERT INTO `despoil_effects` VALUES (842,146);     -- Giant Bird Feather, Accuracy Down
-INSERT INTO `despoil_effects` VALUES (881,149);     -- Crab Shell, Defense Down
-INSERT INTO `despoil_effects` VALUES (955,167);        -- Golem Shard, Magic Defense Down
-INSERT INTO `despoil_effects` VALUES (2334,175);    -- Poroggo Hat, Magic Attack Down
-INSERT INTO `despoil_effects` VALUES (4376,147);    -- Meat Jerky, Attack Down
-INSERT INTO `despoil_effects` VALUES (4400,13);        -- Land Crab Meat, Slow
+
+-- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
+    -- WITH DDL Sync
+        -- If you implement a way to handle syncing DDL changes to the table(s) then 
+        -- the script could be fully incremental and even faster
+        -- as you don't need to drop the table at all and wouldn't need to re-insert every row
+    
+    -- WITHOUT DDL Sync
+        -- Without adding extra steps OR scripts to deal with DDL sync's / changes
+        -- we will leave the "drop/create" pattern and 
+        -- adjust to the "multi value insert & merge" statement pattern.
+        -- In addition, we will batch the inserts to attempt to handle
+        -- "max_allowed_packet" Database setting & overflow potential
+            -- if this overflow occurs you will receive an error like:
+                -- ER_NET_PACKET_TOO_LARGE 
+                -- or 
+                -- "Lost connection to MySQL server during query".
+            -- If this happens, you can structure the inserts to have "less" VALUES() and more batches etc....
+
+insert into `despoil_effects`
+(
+    `itemId`, `effectId`
+)
+VALUES
+    (644,149),        -- Mythril Ore, Defense Down
+    (842,146),     -- Giant Bird Feather, Accuracy Down
+    (881,149),     -- Crab Shell, Defense Down
+    (955,167),        -- Golem Shard, Magic Defense Down
+    (2334,175),    -- Poroggo Hat, Magic Attack Down
+    (4376,147),    -- Meat Jerky, Attack Down
+    (4400,13)        -- Land Crab Meat, Slow
+ON DUPLICATE KEY 
+UPDATE 
+    -- if the existing value and new value DO NOT equal eachother
+        -- return the "new" inserted values "value"
+        -- else current column "value"
+    `effectId` = IF(`effectId` <> VALUES(`effectId`), VALUES(`effectId`), `effectId`)
+;
+
 /*!40000 ALTER TABLE `despoil_effects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
