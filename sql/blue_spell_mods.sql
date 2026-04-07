@@ -11,7 +11,6 @@ CREATE TABLE `blue_spell_mods` (
   PRIMARY KEY (`spellId`,`modid`)
 ) ENGINE=Aria TRANSACTIONAL=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
 -- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 

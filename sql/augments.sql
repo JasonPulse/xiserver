@@ -22,7 +22,6 @@ CREATE TABLE `augments` (
 -- Zero is MOD_NONE and should be fine..
 -- The IDs follow the packet not the dat so windower resources and polutils dumps will not match
 
-
 -- SINCE THE TABLE IS DROPPED AND RE-CREATED EVERY TIME, THERE WILL NEVER BE ANY "UPDATES" done but leave the merge pattern
     -- WITH DDL Sync
         -- If you implement a way to handle syncing DDL changes to the table(s) then 

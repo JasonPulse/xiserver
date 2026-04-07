@@ -86914,7 +86914,6 @@ UPDATE
     `value` = IF(`value` <> VALUES(`value`), VALUES(`value`), `value`)
 ;
 
-
 /*!40000 ALTER TABLE `item_mods` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
