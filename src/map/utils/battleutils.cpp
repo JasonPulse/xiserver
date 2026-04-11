@@ -1705,34 +1705,17 @@ float GetRangedDamageRatio(CBattleEntity* PAttacker, CBattleEntity* PDefender, b
     return pDIF;
 }
 
-int16 CalculateBaseTP(int32 delay)
+int16 CalculateBaseTP(CBattleEntity* PEntity, int32 delay)
 {
-    int16 x = 1;
-    if (delay <= 180)
+    int16 baseTPReturn = 0;
+
+    auto calculateBaseTPGainFunc = lua["xi"]["combat"]["tp"]["calculateTPReturn"];
+    if (calculateBaseTPGainFunc.valid())
     {
-        x = (int16)(61 + ((delay - 180) * 63.0f) / 360);
+        baseTPReturn = calculateBaseTPGainFunc(PEntity, delay);
     }
-    else if (delay <= 540)
-    {
-        x = (int16)(61 + ((delay - 180) * 88.0f) / 360);
-    }
-    else if (delay <= 630)
-    {
-        x = (int16)(149 + ((delay - 540) * 20.0f) / 360);
-    }
-    else if (delay <= 720)
-    {
-        x = (int16)(154 + ((delay - 630) * 28.0f) / 360);
-    }
-    else if (delay <= 900)
-    {
-        x = (int16)(161 + ((delay - 720) * 24.0f) / 360);
-    }
-    else
-    {
-        x = (int16)(173 + ((delay - 900) * 28.0f) / 360);
-    }
-    return x;
+
+    return baseTPReturn;
 }
 
 bool TryInterruptSpell(CBattleEntity* PAttacker, CBattleEntity* PDefender, CSpell* PSpell)
@@ -2110,7 +2093,7 @@ int32 TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHY
         {
             int32 delay = PAttacker->GetRangedWeaponDelay(true);
 
-            baseTp = CalculateBaseTP(delay * 120 / 1000);
+            baseTp = CalculateBaseTP(PAttacker, delay * 120 / 1000);
         }
         else
         {
@@ -2130,7 +2113,7 @@ int32 TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHY
                 ratio = 2.0f;
             }
 
-            baseTp = CalculateBaseTP(delay * 60.0f / 1000.0f / ratio);
+            baseTp = CalculateBaseTP(PAttacker, delay * 60.0f / 1000.0f / ratio);
         }
 
         if (giveTPtoAttacker)
@@ -2298,7 +2281,7 @@ int32 TakeWeaponskillDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, 
         if (isRanged)
         {
             int32 delay = PAttacker->GetRangedWeaponDelay(true);
-            baseTp      = CalculateBaseTP((delay * 120) / 1000);
+            baseTp      = CalculateBaseTP(PAttacker, (delay * 120) / 1000);
         }
         else
         {
@@ -2319,7 +2302,7 @@ int32 TakeWeaponskillDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, 
                 ratio = 2.0f;
             }
 
-            baseTp = CalculateBaseTP(delay * 60 / 1000 / ratio);
+            baseTp = CalculateBaseTP(PAttacker, delay * 60 / 1000 / ratio);
         }
 
         // add tp to attacker
