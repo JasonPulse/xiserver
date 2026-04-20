@@ -29,6 +29,8 @@ spellObject.onMobSpawn = function(mob)
     -- "The "Enhanced Magic Accuracy" attribute has been added."
     local power = mob:getMainLvl() / 5
     mob:addMod(xi.mod.MACC, power)
+
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.MID_RANGE)
 end
 
 spellObject.onMobDespawn = function(mob)

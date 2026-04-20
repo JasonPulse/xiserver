@@ -59,6 +59,8 @@ public:
 
     uint8 GetPartyPosition();
 
+    bool IsSongNearMelee() const { return m_SongNearMelee; }
+
     std::unique_ptr<gambits::CGambitsContainer> m_GambitsContainer;
 
 private:

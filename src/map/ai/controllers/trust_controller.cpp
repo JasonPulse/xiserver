@@ -193,14 +193,10 @@ void CTrustController::DoCombatTick(timer::time_point tick)
                 }
                 case TRUST_MOVEMENT_TYPE::NO_MOVE:
                 {
-                    if (currentDistanceToMaster > CastingDistance)
-                    {
-                        PathOutToDistance(PTarget, 9.0f);
-                    }
-                    else if (currentDistanceToTarget > CastingDistance)
-                    {
-                        PathOutToDistance(PTarget, 9.0f);
-                    }
+                    // Actively path to the caster cluster (master's side of mob) so support/caster
+                    // trusts separate from melee. PathOutToDistance has its own distance tolerance,
+                    // so once positioned the trust stays put.
+                    PathOutToDistance(PTarget, 9.0f, true);
                     break;
                 }
                 case TRUST_MOVEMENT_TYPE::MELEE:

@@ -49,6 +49,8 @@ spellObject.onMobSpawn = function(mob)
             end
         end
     end)
+
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.NO_MOVE)
 end
 
 spellObject.onMobDespawn = function(mob)
