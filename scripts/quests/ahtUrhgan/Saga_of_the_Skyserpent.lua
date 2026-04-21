@@ -120,7 +120,7 @@ quest.sections =
 
         [xi.zone.AHT_URHGAN_WHITEGATE] =
         {
-            ['Fari-Wari'] = quest:progressEvent(825, { text_table = 0 }),
+            ['Fari-Wari'] =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Stage') < VanadielUniqueDay() then

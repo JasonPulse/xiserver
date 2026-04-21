@@ -226,7 +226,7 @@ New agent? Read these files in order:
 Track cross-cutting issues here so they don't get lost:
 
 - **Mog Garden is a stub** -- Zone loads, Green Thumb Moogle opens mog menu + seed shop, but no gathering NPCs, no tutorial quests, no monster rearing. Massive effort to implement. (from mog_house.md)
-- **Mog Sack defaults to 0 slots** -- No unlock quest/mechanism found. Retail unlocked via PlayOnline service. Needs GM command or DB default change. (from mog_house.md)
+- ~~**Mog Sack defaults to 0 slots**~~ -- FIXED (2026-04-21): char_storage.sql defaults for locker/satchel/sack bumped from 0 to 30 each. New characters get base capacity automatically. For existing characters: `UPDATE char_storage SET locker=GREATEST(locker,30), satchel=GREATEST(satchel,30), sack=GREATEST(sack,30);`
 - ~~**71/120 trusts have no AI**~~ -- FIXED (2026-04-02): All 120 trusts now have AI gambits. Tank trusts also have 1.5x ATT boost (2026-04-04).
 - **No trust iLvl scaling** -- Trusts capped at player level stats, weak in endgame. (from trusts.md)
 - **Alter Ego Extravaganza disabled** -- Hard-coded to return NONE regardless of settings. (from trusts.md)

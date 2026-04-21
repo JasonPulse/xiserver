@@ -79,8 +79,8 @@ quest.sections =
             {
                 [8] = function(player, csid, option, npc)
                     player:delKeyItem(xi.ki.ANCIENT_TABLET_FRAGMENT)
-                    player.addKeyItem(player, xi.ki.TABLET_OF_ANCIENT_MAGIC)
-                    player.addKeyItem(player, xi.ki.LETTER_FROM_ALFESAR)
+                    player:addKeyItem(xi.ki.TABLET_OF_ANCIENT_MAGIC)
+                    player:addKeyItem(xi.ki.LETTER_FROM_ALFESAR)
                     quest:setVar(player, 'Prog', 2)
                     player:messageSpecial(rabaoID.text.ACCEPTED_KEYITEM, 0, xi.ki.TABLET_OF_ANCIENT_MAGIC, xi.ki.LETTER_FROM_ALFESAR)
                 end,
