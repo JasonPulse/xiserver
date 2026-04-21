@@ -150,7 +150,6 @@ void CTrustController::DoCombatTick(timer::time_point tick)
         if (POwner->PAI->CanFollowPath() && POwner->GetSpeed() > 0)
         {
             float currentDistanceToTarget = distance(POwner->loc.p, PTarget->loc.p);
-            float currentDistanceToMaster = distance(POwner->loc.p, PMaster->loc.p);
 
             if (currentDistanceToTarget > WarpDistance)
             {
