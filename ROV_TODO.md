@@ -135,10 +135,11 @@ Zone-in triggers: 17969923, 17969924. Iroha: 17969928. Known: event 2=3-1, 6=3-3
 
 ---
 
-## Missing Cipher Items
+## ~~Missing Cipher Items~~ FIXED (2026-04-20)
 
-- **Cipher: Iroha** — awarded at ROV 3-28 (Nary a Cloud in Sight) on retail. Item not in `scripts/enum/item.lua`.
-- **Cipher: Iroha II** — awarded at ROV 3-34 (The Orb's Radiance) on retail. Item not in `scripts/enum/item.lua`.
+- **Cipher: Iroha** (10185) — added to enum, awarded via ROV 3-28 reward table
+- **Cipher: Iroha II** (10186) — added to enum, awarded via ROV 3-34 reward table
+- Items already existed in `item_basic.sql`; only enum + mission reward hooks needed
 
 ---
 

@@ -68,7 +68,7 @@ New agent? Read these files in order:
 - [x] phase2/base_game/zones/zone_accessibility.md — All 300 zones reachable, no broken links (2026-03-28)
 - [x] phase2/base_game/npcs/vendors_and_currency.md — Sparks/Conquest/Cruor WORKS, Ambuscade STUB, DI vendor works but no battles (2026-03-28)
 - [x] phase2/base_game/crafting/crafting_system.md — All 8 crafts WORKS, 4389 recipes, fishing disabled by default (2026-03-28)
-- [x] phase2/base_game/nms/nm_systems.md — NMs/drops WORKS, pre-RMT drops not enabled, VEmperor droplist bug (2026-03-28)
+- [x] phase2/base_game/nms/nm_systems.md — NMs/drops WORKS, pre-RMT drops not enabled, VEmperor droplist bug FIXED (2026-04-20) (2026-03-28)
 - [x] phase2/base_game/npcs/misc_systems.md — Signet/Sanction/Fame/LS WORKS, Ionis STUB, AH empty (2026-03-28)
 
 ---
@@ -239,7 +239,7 @@ Track cross-cutting issues here so they don't get lost:
 - **Besieged MISSING** -- NPC/currency/Sanction works but actual siege battles don't exist. (from toau)
 - **Assault 9/50** -- Only 18% of assault scenarios implemented. Framework solid. (from toau)
 - **~8 WotG missions PARTIAL** -- Battlefields exist but completion not fully wired. (from wotg)
-- **69 Abyssea Atma have empty mods** -- Equipped but grant no stats. (from abyssea)
+- ~~**69 Abyssea Atma have empty mods**~~ -- CLARIFIED (2026-04-20): audit was wrong, only 3 atma had empty mods (Hateful Stream, Ace Angler, Shattering Star) because they're HP-conditional. Ace Angler + Shattering Star now implemented via xi.atma.conditionalAtmaMods with HP<25% runtime gate. Hateful Stream still unimplemented (requires reflect/drain mechanic).
 - **144/172 Abyssea NMs lack custom AI** -- Use default behavior only. (from abyssea)
 - **Atma Fabricant STUB** -- Can't craft atma. (from abyssea)
 - **Silent fail QOL pattern** -- Some NPC scripts silently fail on position checks with no player feedback. Example: Phomiuna Aqueducts _ir9.lua (fixed). May exist elsewhere. (from manual QA)
@@ -266,7 +266,7 @@ Track cross-cutting issues here so they don't get lost:
 - **Unity gear upgrade (Perle/Aurore/Teal +1)** -- FIXED (2026-04-02): trade handler in unity.lua, Harold's Ore added to shop
 - **8 jobs missing AF quest scripts** -- BLM/PLD/RNG/DRG (body+legs), BRD/SMN (legs), COR/SCH (coffer pieces) (from AF audit)
 - ~~**RUN and GEO have NO AF quests**~~ -- FIXED (2026-04-02): RUN quests 2-5 + Octavien commissions, GEO quests 2-5 + Wescolina commissions. All 5 AF pieces obtainable for both jobs.
-- **PUP has NO AF quests** -- Still missing AF3 (Puppetmaster Blues) + commission NPC for body/hands/feet. (from AF audit)
+- ~~**PUP has NO AF quests**~~ -- PARTIAL FIX (2026-04-19): Puppetmaster Blues AF3 implemented (quest, battlefield, Valkeng mob, Iruki-Waraki/Sajhra NPCs). Still missing commission NPC (Dhima Polevhia) for body/hands/feet.
 - **Adoulin quests 19.2% coverage** -- lowest of any area (from other areas)
 
 ---
@@ -277,5 +277,5 @@ Track cross-cutting issues here so they don't get lost:
 - Vanadversary ROE: partially implemented (see ROE_CAPTURE.md)
 - RUN/GEO: jobs work but unlock quest zones may require GM teleport
 - Mog Garden: zone exists but tutorial quests may be missing
-- Client version mismatch: server 30251227_0, client 30251101_1 (see CLIENT_VERSION_MISMATCH.md)
+- Client version staying pinned at server 30251227_0 — not tracking upstream client bumps (user decision 2026-04-20)
 - DB performance: innodb_flush_log_at_trx_commit = 2 fix applied for Orange Pi Longhorn storage

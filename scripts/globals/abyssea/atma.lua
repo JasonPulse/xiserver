@@ -140,14 +140,14 @@ xi.atma.atmaMods =
     [xi.ki.ATMA_OF_THE_EINHERJAR]              = { xi.mod.STR, 20, xi.mod.MND, 20, xi.mod.DEATHRES, 50 },
     [xi.ki.ATMA_OF_THE_ILLUMINATOR]            = { xi.mod.VIT, 20, xi.mod.DUAL_WIELD, 1, xi.mod.ALL_WSDMG_ALL_HITS, 40 }, -- WS dmg applies to 2H weapons
     [xi.ki.ATMA_OF_THE_BUSHIN]                 = { xi.mod.HP, 200, xi.mod.MP, 200, xi.mod.SAVETP, 10 },
-    [xi.ki.ATMA_OF_THE_ACE_ANGLER]             = { }, -- HP below 25%: Regen 20, Refresh 20, Status Ailment Resist (conditional, not implementable in static mod table)
+    [xi.ki.ATMA_OF_THE_ACE_ANGLER]             = { }, -- Conditional: applied by xi.atma.conditionalAtmaMods when HP < 25%
     [xi.ki.ATMA_OF_THE_MASTER_CRAFTER]         = { xi.mod.STUNRES, 50, xi.mod.ELEM, 10, xi.mod.MOVE_SPEED_GEAR_BONUS, 12 }, -- Note: Speed modifier is the same as positive gear. Meaning, it doesnt stack
     [xi.ki.ATMA_OF_INGENUITY]                  = { xi.mod.HP, -150, xi.mod.MP, 150, xi.mod.MATT, 20 },
     [xi.ki.ATMA_OF_THE_GRIFFONS_CLAW]          = { xi.mod.ALL_WSDMG_ALL_HITS, 20, xi.mod.SCYTHE, 10, xi.mod.GSWORD, 10 }, -- WS dmg applies to 2H weapons and ranged WS
     [xi.ki.ATMA_OF_THE_FETCHING_FOOTPAD]       = { xi.mod.MATT, 20, xi.mod.MAGIC_CRIT_DMG_INCREASE, 10, xi.mod.CONSERVE_MP, 36 },
     [xi.ki.ATMA_OF_UNDYING_LOYALTY]            = { xi.mod.CHR, 20, xi.mod.ACC, 30, xi.mod.MACC, 30 },
     [xi.ki.ATMA_OF_THE_ROYAL_LINEAGE]          = { xi.mod.HPP, 10, xi.mod.ACC, 15 }, -- Also: Cruor Yield +20% (not implementable in static mod table)
-    [xi.ki.ATMA_OF_THE_SHATTERING_STAR]        = { }, -- HP below 25%: AGI+50, VIT+100, Regain+4 (conditional, not implementable in static mod table)
+    [xi.ki.ATMA_OF_THE_SHATTERING_STAR]        = { }, -- Conditional: applied by xi.atma.conditionalAtmaMods when HP < 25%
     [xi.ki.ATMA_OF_THE_COBRA_COMMANDER]        = { xi.mod.DOUBLE_ATTACK, 10 }, -- Also: HP above 50%: Slow+20%, HP below 50%: Haste+20% (conditional, not implementable)
     [xi.ki.ATMA_OF_ROARING_LAUGHTER]           = { xi.mod.STR, 50, xi.mod.COUNTER, 10 }, -- Also: substantial Evasion penalty (exact value unknown)
     [xi.ki.ATMA_OF_THE_DARK_BLADE]             = { xi.mod.HPP, 40, xi.mod.STR, 30, xi.mod.DMG, 2000 },
@@ -371,7 +371,8 @@ local function addAtma(player, selectedAtma)
         availableAtmaSlot > 0 and
         not hasDuplicateAtmaEffect(player, atmaValue)
     then
-        player:addStatusEffectEx(xi.effect.ATMA, xi.effect.ATMA, atmaValue, 0, 0, availableAtmaSlot)
+        -- 3s tick so onEffectTick fires (needed for conditional HP-gated atma like Ace Angler)
+        player:addStatusEffectEx(xi.effect.ATMA, xi.effect.ATMA, atmaValue, 3, 0, availableAtmaSlot)
 
         local atmaEffect = player:getStatusEffect(xi.effect.ATMA, availableAtmaSlot)
         atmaEffect:addEffectFlag(xi.effectFlag.ON_ZONE)
@@ -379,6 +380,35 @@ local function addAtma(player, selectedAtma)
         updateReinfusedMask(player, availableAtmaSlot, atmaValue)
         updateHistoryMask(player, atmaValue)
         player:delCurrency('cruor', atmaPrice)
+    end
+end
+
+-- Atma that only apply mods when a runtime condition is met (currently HP%-gated).
+-- Mods here are applied/removed dynamically in onEffectTick; effect:getSubPower()
+-- tracks whether the conditional bonus is currently active (0 = inactive, 1 = active).
+xi.atma.conditionalAtmaMods =
+{
+    [xi.ki.ATMA_OF_THE_ACE_ANGLER] =
+    {
+        hppThreshold = 25,
+        mods         = { xi.mod.REGEN, 20, xi.mod.REFRESH, 20, xi.mod.STATUSRES, 25 },
+    },
+    [xi.ki.ATMA_OF_THE_SHATTERING_STAR] =
+    {
+        hppThreshold = 25,
+        mods         = { xi.mod.AGI, 50, xi.mod.VIT, 100, xi.mod.REGAIN, 4 },
+    },
+}
+
+local function applyConditionalMods(target, mods)
+    for i = 1, #mods, 2 do
+        target:addMod(mods[i], mods[i + 1])
+    end
+end
+
+local function removeConditionalMods(target, mods)
+    for i = 1, #mods, 2 do
+        target:delMod(mods[i], mods[i + 1])
     end
 end
 
@@ -395,6 +425,23 @@ end
 xi.atma.onEffectTick = function(target, effect)
     if not xi.abyssea.isInAbysseaZone(target) then
         target:delStatusEffect(effect)
+        return
+    end
+
+    local conditional = xi.atma.conditionalAtmaMods[effect:getPower()]
+    if conditional == nil then
+        return
+    end
+
+    local active       = effect:getSubPower() == 1
+    local shouldBeOn   = target:getHPP() < conditional.hppThreshold
+
+    if shouldBeOn and not active then
+        applyConditionalMods(target, conditional.mods)
+        effect:setSubPower(1)
+    elseif not shouldBeOn and active then
+        removeConditionalMods(target, conditional.mods)
+        effect:setSubPower(0)
     end
 end
 
@@ -406,6 +453,11 @@ xi.atma.onEffectLose = function(target, effect)
         for i = 1, #mods, 2 do
             target:delMod(mods[i], mods[i + 1])
         end
+    end
+
+    local conditional = xi.atma.conditionalAtmaMods[atma]
+    if conditional ~= nil and effect:getSubPower() == 1 then
+        removeConditionalMods(target, conditional.mods)
     end
 end
 

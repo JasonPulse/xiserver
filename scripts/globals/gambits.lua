@@ -91,6 +91,8 @@ ai.condition =
     MP_GTE             = 33,
     HP_LT              = 34,
     HP_GTE             = 35,
+    SONG_PHASE_MELEE   = 36,
+    SONG_PHASE_CASTER  = 37,
 }
 ai.c = ai.condition
 
@@ -126,6 +128,7 @@ ai.select =
     STORM_MOB_WEAKNESS  = 14,
     HELIX_MOB_WEAKNESS  = 15,
     MP_SCALED           = 16,
+    SECOND_HIGHEST      = 17,
 }
 ai.s = ai.select
 

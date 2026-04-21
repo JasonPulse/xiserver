@@ -98,6 +98,10 @@ enum class G_CONDITION : uint16
     MP_GTE          = 33, // Raw MP >= arg
     HP_LT           = 34, // Raw HP < arg (not percentage)
     HP_GTE          = 35, // Raw HP >= arg
+
+    // BRD song rotation phase (for trusts using SONG_ROTATION movement)
+    SONG_PHASE_MELEE  = 36, // Trust is currently positioned near melee cluster
+    SONG_PHASE_CASTER = 37, // Trust is currently positioned near caster cluster
 };
 
 enum class G_REACTION : uint16
@@ -130,7 +134,8 @@ enum class G_SELECT : uint16
     HELIX_MOB_WEAKNESS  = 15,
 
     // Custom selectors
-    MP_SCALED = 16, // Pick spell tier scaled to current MP% (smart resource management)
+    MP_SCALED      = 16, // Pick spell tier scaled to current MP% (smart resource management)
+    SECOND_HIGHEST = 17, // Second-highest tier in family (pair with HIGHEST for stacking, e.g. Ballad II + III)
 };
 
 enum class G_TP_TRIGGER : uint16

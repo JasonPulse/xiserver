@@ -103,9 +103,9 @@ You need: Tank, healer, Haste, straightforward support
 | 4 | **Uka Totlihn** | Quickstep + Violent Flourish interrupts protect your long Jump animations |
 | 5 | **Gilgamesh** | Self-sufficient SAM DPS (Hasso/Third Eye/Meditate), no support overlap |
 
-## Ranger/Corsair (you ranged DPS)
+## Ranger (you ranged DPS, no self-buffs)
 
-You need: Tank, healer, melee DPS to fill gap, Flurry
+You need: Tank, healer, melee DPS to fill gap, Flurry for ranged haste
 
 | Slot | Trust | Why |
 |------|-------|-----|
@@ -114,6 +114,90 @@ You need: Tank, healer, melee DPS to fill gap, Flurry
 | 3 | **Joachim** | Madrigal for accuracy, March for speed, Elegy |
 | 4 | **Zeid II** | Melee DPS + 4 stun interrupts |
 | 5 | **Ayame** | Self-sufficient SAM DPS |
+
+## Corsair (you ranged DPS + you have Rolls/Quick Draw)
+
+You need: Tank, healer, Flurry for ranged haste, melee DPS — your Rolls replace songs
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **Rughadjeen** | Tank with 75% cure threshold + sleep wake |
+| 2 | **Koru-Moru** | Flurry on ranged (you!), Haste/Refresh, debuffs |
+| 3 | **Apururu UC** | Healer with Haste on melee, full status removal, Convert for sustain |
+| 4 | **Zeid II** | Melee DPS + 4 stun interrupts |
+| 5 | **Ayame** | Self-sufficient SAM DPS |
+
+## Ninja (you evasion tank or DPS, you have Utsusemi/Dual Wield)
+
+You need: Healer (no self-cures), Haste (you have Hasso-like only via Innin), DPS
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **Apururu UC** | Healer — NIN has zero self-cures, shadows drop, you need reliable backup |
+| 2 | **Koru-Moru** | Haste on melee (Dual Wield loves Haste), Refresh, Slow/Dispel on mob |
+| 3 | **Joachim** | March + Madrigal — NIN eats accuracy, boosts throwing weapon hit rate |
+| 4 | **Zeid II** | DPS + 4 stun interrupts — backup for when your Utsusemi drops |
+| 5 | **Ayame** | Self-sufficient SAM DPS, no overlap |
+
+## Beastmaster (you solo DPS, you have Call Beast/Charm/Sic)
+
+You need: Full tank/healer party — trust party replaces charmed pets in most content
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **August** | Tank — BST without Charm has no damage sink, needs hate magnet |
+| 2 | **Apururu UC** | Healer with Haste on melee, Convert |
+| 3 | **Koru-Moru** | Refresh (BST pet abilities use MP via Familiar/Reward), Haste, debuffs |
+| 4 | **Joachim** | March + Madrigal boost your ranged axe throws and melee |
+| 5 | **Zeid II** | DPS + stun interrupts |
+
+## Summoner (you BP DPS, you have avatars/Apogee/Astral Conduit)
+
+You need: Tank, MP sustain (BPs drain fast), healer — avatars cover most debuffs via Predator Claws/Crag/etc.
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **August** | Tank — you stand back casting, need stable hate |
+| 2 | **Koru-Moru** | Refresh on casters (you!) — SMN is MP-starved without it, plus Phalanx II on August |
+| 3 | **Arciela** | Backup Refresh + Haste + Cure — stacks Refresh from two sources for BP spam |
+| 4 | **Joachim** | Ballad adds third MP source, March on melee trusts |
+| 5 | **Zeid II** | Melee DPS + stun covers your long BP animations |
+
+## Blue Mage (you melee/magic hybrid, you have BLU spells/Chain Affinity/Burst Affinity)
+
+You need: Tank, healer, Refresh (BLU spells cost MP), Haste
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **August** | Tank — BLU has no hate reduction tools |
+| 2 | **Apururu UC** | Healer with Haste on melee, Convert — BLU has self-cures but they eat BLU slots |
+| 3 | **Koru-Moru** | Refresh (for BLU spell spam), Haste, Slow/Distract reduce incoming damage |
+| 4 | **Joachim** | March + Madrigal for BLU's multi-hit physical spells (Heavy Strike, Disseverment, etc.) |
+| 5 | **Zeid II** | DPS + stun interrupts |
+
+## Puppetmaster (you pet DPS, you have Automaton/Maneuvers/Overdrive)
+
+You need: Automaton doesn't benefit from party buffs — you need trusts that cover what your puppet frame can't
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **August** | Tank — PUP automaton can tank but is fragile in endgame, August is more reliable |
+| 2 | **Apururu UC** | Healer — automaton healer frames need specific heads/attachments, Apururu is a guaranteed backup |
+| 3 | **Koru-Moru** | Haste on you (master gets Haste), Refresh, debuffs |
+| 4 | **Joachim** | March/Madrigal boost your master melee and your Valoredge/Sharpshot puppet |
+| 5 | **Zeid II** | DPS + stun interrupts |
+
+## Dancer (you self-sustaining DPS, you have Waltzes/Steps/Samba)
+
+You need: Tank (no enmity tools), healer (frees your TP for WS instead of Waltzes), Haste, DPS fill. Avoid other DNC trusts — steps/sambas/waltzes all overlap and don't stack.
+
+| Slot | Trust | Why |
+|------|-------|-----|
+| 1 | **August** | Tank — DNC has no Provoke/Flash equivalent |
+| 2 | **Apururu UC** | Healer — every Waltz you skip is TP going to a WS instead |
+| 3 | **Joachim** | March speeds TP gain (more WSes), Madrigal for accuracy |
+| 4 | **Koru-Moru** | Haste on melee (you!), Slow/Distract/Dispel on mob reduce incoming damage |
+| 5 | **Zeid II** | DPS + 4 stun interrupts protect your melee windows |
 
 ## Black Mage (you nuke, you have Elemental Seal/Manafont)
 

@@ -5,18 +5,33 @@ local ID = zones[xi.zone.ILRUSI_ATOLL]
 -----------------------------------
 local instanceObject = {}
 
-instanceObject.afterInstanceRegister = function(player)
-    local instance = player:getInstance()
+instanceObject.registryRequirements = function(player)
+    return player:hasKeyItem(xi.ki.ILRUSI_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.EXTERMINATION and
+        player:getCharVar('assaultEntered') == 0 and
+        player:hasKeyItem(xi.ki.ASSAULT_ARMBAND) and
+        player:getMainLvl() > 50
+end
 
-    player:messageSpecial(ID.text.ASSAULT_43_START, 43)
-    player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit())
+instanceObject.entryRequirements = function(player)
+    return player:hasKeyItem(xi.ki.ILRUSI_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.EXTERMINATION and
+        player:getCharVar('assaultEntered') == 0 and
+        player:getMainLvl() > 50
 end
 
 instanceObject.onInstanceCreated = function(instance)
-    for i, v in pairs(ID.mob[43]) do
-        SpawnMob(v, instance)
-    end
+end
 
+instanceObject.onInstanceCreatedCallback = function(player, instance)
+    xi.assault.onInstanceCreatedCallback(player, instance)
+    xi.instance.onInstanceCreatedCallback(player, instance)
+end
+
+instanceObject.afterInstanceRegister = function(player)
+    local instance = player:getInstance()
+
+    xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_REEF_FIREFLIES)
     GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(290.857, -3.424, 132.339, 148)
     GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(293.637, -3.376, 130.364, 148)
     GetNPCByID(ID.npc._1jo, instance):setAnimation(8)
@@ -25,24 +40,12 @@ instanceObject.onInstanceCreated = function(instance)
     GetNPCByID(ID.npc._jjc, instance):setAnimation(8)
 end
 
-instanceObject.onInstanceCreatedCallback = function(player, instance)
-    if instance then
-        player:setInstance(instance)
-        player:setPos(0, 0, 0, 0, instance:getZone():getID())
-    end
-end
-
 instanceObject.onInstanceTimeUpdate = function(instance, elapsed)
     xi.instance.updateInstanceTime(instance, elapsed, ID.text)
 end
 
 instanceObject.onInstanceFailure = function(instance)
-    local chars = instance:getChars()
-
-    for i, v in pairs(chars) do
-        v:messageSpecial(ID.text.MISSION_FAILED, 10, 10)
-        v:startEvent(102)
-    end
+    xi.assault.onInstanceFailure(instance)
 end
 
 instanceObject.onInstanceProgressUpdate = function(instance, progress)
@@ -52,17 +55,7 @@ instanceObject.onInstanceProgressUpdate = function(instance, progress)
 end
 
 instanceObject.onInstanceComplete = function(instance)
-    local chars = instance:getChars()
-
-    for i, v in pairs(chars) do
-        v:messageSpecial(ID.text.RUNE_UNLOCKED_POS, 8, 8)
-    end
-
-    GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setStatus(xi.status.NORMAL)
-    GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setStatus(xi.status.NORMAL)
-end
-
-instanceObject.onEventUpdate = function(player, csid, option, npc)
+    xi.assault.onInstanceComplete(instance, 8, 8)
 end
 
 instanceObject.onEventFinish = function(player, csid, option, npc)

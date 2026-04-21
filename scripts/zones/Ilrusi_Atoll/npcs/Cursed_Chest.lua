@@ -21,7 +21,7 @@ entity.onTrigger = function(player, npc)
     if npcID == figureheadChest then
         player:messageSpecial(ID.text.GOLDEN)
         instance:complete()
-        for i, v in pairs(ID.mob[2]) do
+        for _, v in pairs(ID.mob.CURSED_CHESTS) do
             DespawnMob(v, instance)
         end
     else

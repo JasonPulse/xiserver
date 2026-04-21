@@ -20235,7 +20235,7 @@ INSERT INTO `mob_droplist` VALUES (2532,0,0,1000,5374,@ALWAYS); -- Opacus Cell (
 
 -- ZoneID: 103 - Valkurm Emperor
 INSERT INTO `mob_droplist` VALUES (2533,0,0,1000,846,@ALWAYS);   -- Insect Wing (Always, 100%)
-INSERT INTO `mob_droplist` VALUES (2533,0,0,1000,15224,@COMMON); -- Empress Hairpin (Common, 15%)
+INSERT INTO `mob_droplist` VALUES (2533,0,0,1000,15224,@VCOMMON); -- Empress Hairpin (Very Common, 24%) per bg-wiki
 
 -- ZoneID: 176 - Vampire Bat
 INSERT INTO `mob_droplist` VALUES (2534,0,0,1000,922,@COMMON);   -- Bat Wing (Common, 15%)

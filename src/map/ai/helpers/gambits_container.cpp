@@ -155,6 +155,10 @@ const char* ConditionToString(G_CONDITION c)
             return "HP_LT";
         case G_CONDITION::HP_GTE:
             return "HP_GTE";
+        case G_CONDITION::SONG_PHASE_MELEE:
+            return "SONG_PHASE_MELEE";
+        case G_CONDITION::SONG_PHASE_CASTER:
+            return "SONG_PHASE_CASTER";
         default:
             return "UNKNOWN";
     }
@@ -219,6 +223,8 @@ const char* SelectToString(G_SELECT s)
             return "HELIX_MOB_WEAKNESS";
         case G_SELECT::MP_SCALED:
             return "MP_SCALED";
+        case G_SELECT::SECOND_HIGHEST:
+            return "SECOND_HIGHEST";
         default:
             return "UNKNOWN";
     }
@@ -597,6 +603,25 @@ void CGambitsContainer::Tick(timer::time_point tick)
                     else
                     {
                         DebugTrusts("[Trust:%s] -> MA HIGHEST: family=%u NO SPELL AVAILABLE",
+                                    POwner->name.c_str(),
+                                    action.select_arg);
+                    }
+                }
+                else if (action.select == G_SELECT::SECOND_HIGHEST)
+                {
+                    auto spell_id = POwner->SpellContainer->GetSecondBestAvailable(static_cast<SPELLFAMILY>(action.select_arg));
+                    if (spell_id.has_value())
+                    {
+                        DebugTrusts("[Trust:%s] -> MA SECOND_HIGHEST: family=%u resolved spell=%u on %s",
+                                    POwner->name.c_str(),
+                                    action.select_arg,
+                                    static_cast<uint16>(spell_id.value()),
+                                    target->name.c_str());
+                        controller->Cast(target->targid, spell_id.value());
+                    }
+                    else
+                    {
+                        DebugTrusts("[Trust:%s] -> MA SECOND_HIGHEST: family=%u FEWER THAN 2 TIERS AVAILABLE",
                                     POwner->name.c_str(),
                                     action.select_arg);
                     }
@@ -1227,6 +1252,18 @@ bool CGambitsContainer::CheckTrigger(const CBattleEntity* triggerTarget, Predica
             case G_CONDITION::HP_GTE:
             {
                 predicateResults.push_back(triggerTarget->health.hp >= (int32)predicate.condition_arg);
+                continue;
+            }
+            case G_CONDITION::SONG_PHASE_MELEE:
+            {
+                auto* trustController = dynamic_cast<CTrustController*>(POwner->PAI->GetController());
+                predicateResults.push_back(trustController && trustController->IsSongNearMelee());
+                continue;
+            }
+            case G_CONDITION::SONG_PHASE_CASTER:
+            {
+                auto* trustController = dynamic_cast<CTrustController*>(POwner->PAI->GetController());
+                predicateResults.push_back(trustController && !trustController->IsSongNearMelee());
                 continue;
             }
             default:

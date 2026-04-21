@@ -12,6 +12,7 @@ local mission = Mission:new(xi.mission.log_id.ROV, xi.mission.id.rov.THE_ORBS_RA
 mission.reward =
 {
     keyItem     = xi.ki.SCINTILLATING_RHAPSODY,
+    item        = xi.item.CIPHER_OF_IROHAS_ALTER_EGO_II,
     nextMission = { xi.mission.log_id.ROV, xi.mission.id.rov.A_RHAPSODY_FOR_THE_AGES },
 }
 
@@ -26,7 +27,6 @@ mission.sections =
         {
             onZoneIn = function(player, prevZone)
                 -- TODO: Implement Cloud of Darkness battlefield. Auto-completing for now.
-                -- Retail also awards Cipher: Iroha II here but cipher item not in DB.
                 mission:complete(player)
             end,
         },

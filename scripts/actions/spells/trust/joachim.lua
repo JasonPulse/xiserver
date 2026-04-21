@@ -29,13 +29,19 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.PARTY, { ai.c.STATUS, xi.effect.DISEASE }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.VIRUNA })
     mob:addGambit(ai.t.PARTY, { ai.c.STATUS, xi.effect.CURSE_I }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.CURSNA })
 
-    -- Song rotation: SONG_ROTATION movement type handles positioning
-    -- Phase 1 (near melee/mob): March + Madrigal → melee get attack speed + accuracy
-    -- Phase 2 (near casters): Ballad I + II → casters get MP regen
-    -- Songs have 10' AoE radius so positioning determines who gets what
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.MARCH }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.MARCH }, 90)
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.MADRIGAL }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.MADRIGAL }, 90)
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.BALLAD }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.MAGES_BALLAD }, 90)
+    -- Phase-gated song rotation. Gambits fire purely on retry_delay and the
+    -- current SONG_ROTATION phase (not NOT_STATUS) so Joachim ignores the 2-song
+    -- cap on his own status and pushes 4 distinct songs into the cluster he's
+    -- standing in. Songs have 10' AoE so positioning decides who gets what:
+    --   Melee phase: March + Madrigal → melee cluster (attack speed + accuracy)
+    --   Caster phase: Ballad HIGHEST + SECOND_HIGHEST → stacked MP regen
+    -- HIGHEST/SECOND_HIGHEST resolve to whatever tiers Joachim has unlocked at
+    -- his current level (below 55 only Ballad I exists, SECOND_HIGHEST gambit
+    -- simply no-ops). 60s retry syncs with the 60s full phase cycle.
+    mob:addGambit(ai.t.SELF, { ai.c.SONG_PHASE_MELEE, 0 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.MARCH }, 60)
+    mob:addGambit(ai.t.SELF, { ai.c.SONG_PHASE_MELEE, 0 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.MADRIGAL }, 60)
+    mob:addGambit(ai.t.SELF, { ai.c.SONG_PHASE_CASTER, 0 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.MAGES_BALLAD }, 60)
+    mob:addGambit(ai.t.SELF, { ai.c.SONG_PHASE_CASTER, 0 }, { ai.r.MA, ai.s.SECOND_HIGHEST, xi.magic.spellFamily.MAGES_BALLAD }, 60)
 
     -- Elegy is a debuff on mob, does not count toward 2-song limit
     mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.ELEGY }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.ELEGY }, 120)
