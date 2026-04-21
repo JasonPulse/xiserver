@@ -6,33 +6,43 @@ local ID = zones[xi.zone.ILRUSI_ATOLL]
 -----------------------------------
 local instanceObject = {}
 
-instanceObject.afterInstanceRegister = function(player)
-    local instance = player:getInstance()
+instanceObject.registryRequirements = function(player)
+    return player:hasKeyItem(xi.ki.ILRUSI_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.GOLDEN_SALVAGE and
+        player:getCharVar('assaultEntered') == 0 and
+        player:hasKeyItem(xi.ki.ASSAULT_ARMBAND) and
+        player:getMainLvl() > 50
+end
 
-    player:messageSpecial(ID.text.ASSAULT_41_START, 41)
-    player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit())
+instanceObject.entryRequirements = function(player)
+    return player:hasKeyItem(xi.ki.ILRUSI_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.GOLDEN_SALVAGE and
+        player:getCharVar('assaultEntered') == 0 and
+        player:getMainLvl() > 50
 end
 
 instanceObject.onInstanceCreated = function(instance)
-    local figureheadChest = math.random(ID.npc.ILRUSI_CURSED_CHEST_OFFSET, ID.npc.ILRUSI_CURSED_CHEST_OFFSET + 11)
+end
 
-    for i, v in pairs(ID.mob[1]) do
-        SpawnMob(v, instance)
-    end
+instanceObject.onInstanceCreatedCallback = function(player, instance)
+    xi.assault.onInstanceCreatedCallback(player, instance)
+    xi.instance.onInstanceCreatedCallback(player, instance)
+end
 
+instanceObject.afterInstanceRegister = function(player)
+    local instance = player:getInstance()
+
+    xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_REEF_FIREFLIES)
     GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(420, -15, 72, 148)
     GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(415, -15, 75, 148)
     GetNPCByID(ID.npc._1jp, instance):setAnimation(8)
     GetNPCByID(ID.npc._jja, instance):setAnimation(8)
     GetNPCByID(ID.npc._jjb, instance):setAnimation(8)
 
-    instance:setProgress(instance:getProgress() + (figureheadChest))
-end
-
-instanceObject.onInstanceCreatedCallback = function(player, instance)
-    if instance then
-        player:setInstance(instance)
-        player:setPos(0, 0, 0, 0, instance:getZone():getID())
+    -- Progress stores the random figurehead chest NPC ID; Cursed_Chest.lua reads it on trigger
+    if instance:getProgress() == 0 then
+        local figureheadChest = math.random(ID.npc.ILRUSI_CURSED_CHEST_OFFSET, ID.npc.ILRUSI_CURSED_CHEST_OFFSET + 11)
+        instance:setProgress(figureheadChest)
     end
 end
 
@@ -41,29 +51,14 @@ instanceObject.onInstanceTimeUpdate = function(instance, elapsed)
 end
 
 instanceObject.onInstanceFailure = function(instance)
-    local chars = instance:getChars()
-
-    for i, v in pairs(chars) do
-        v:messageSpecial(ID.text.MISSION_FAILED, 10, 10)
-        v:startEvent(102)
-    end
+    xi.assault.onInstanceFailure(instance)
 end
 
 instanceObject.onInstanceProgressUpdate = function(instance, progress)
 end
 
 instanceObject.onInstanceComplete = function(instance)
-    local chars = instance:getChars()
-
-    for i, v in pairs(chars) do
-        v:messageSpecial(ID.text.RUNE_UNLOCKED_POS, 8, 8)
-    end
-
-    GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setStatus(xi.status.NORMAL)
-    GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setStatus(xi.status.NORMAL)
-end
-
-instanceObject.onEventUpdate = function(player, csid, option, npc)
+    xi.assault.onInstanceComplete(instance, 8, 8)
 end
 
 instanceObject.onEventFinish = function(player, csid, option, npc)

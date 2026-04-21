@@ -38,18 +38,21 @@ zones[xi.zone.ILRUSI_ATOLL] =
     },
     mob =
     {
-        [1] =
+        [xi.assault.mission.GOLDEN_SALVAGE] =
         {
-            PERCIPIENT_FISH1 = 17002497,
-            PERCIPIENT_FISH2 = 17002498,
-            PERCIPIENT_FISH3 = 17002499,
-            PERCIPIENT_FISH4 = 17002500,
-            PERCIPIENT_FISH5 = 17002501,
-            PERCIPIENT_FISH6 = 17002502,
-            PERCIPIENT_FISH7 = 17002503,
-            PERCIPIENT_FISH8 = 17002504,
+            MOBS_START =
+            {
+                PERCIPIENT_FISH1 = 17002497,
+                PERCIPIENT_FISH2 = 17002498,
+                PERCIPIENT_FISH3 = 17002499,
+                PERCIPIENT_FISH4 = 17002500,
+                PERCIPIENT_FISH5 = 17002501,
+                PERCIPIENT_FISH6 = 17002502,
+                PERCIPIENT_FISH7 = 17002503,
+                PERCIPIENT_FISH8 = 17002504,
+            },
         },
-        [2] =
+        CURSED_CHESTS =
         {
             CURSED_CHEST1  = 17002505,
             CURSED_CHEST2  = 17002506,
@@ -64,32 +67,35 @@ zones[xi.zone.ILRUSI_ATOLL] =
             CURSED_CHEST11 = 17002515,
             CURSED_CHEST12 = 17002516,
         },
-        [43] =
+        [xi.assault.mission.EXTERMINATION] =
         {
-            CARRION_CRAB1   = 17002521,
-            CARRION_LEECH1  = 17002522,
-            CARRION_CRAB2   = 17002523,
-            CARRION_CRAB3   = 17002524,
-            CARRION_LEECH2  = 17002525,
-            CARRION_CRAB4   = 17002526,
-            CARRION_CRAB5   = 17002527,
-            CARRION_CRAB6   = 17002528,
-            CARRION_SLIME1  = 17002529,
-            CARRION_SLIME2  = 17002530,
-            CARRION_SLIME3  = 17002531,
-            CARRION_CRAB7   = 17002532,
-            CARRION_LEECH3  = 17002533,
-            CARRION_LEECH4  = 17002534,
-            CARRION_LEECH5  = 17002535,
-            CARRION_LEECH6  = 17002536,
-            CARRION_LEECH7  = 17002537,
-            CARRION_LEECH8  = 17002538,
-            CARRION_TOAD1   = 17002539,
-            CARRION_TOAD2   = 17002540,
-            UNDEAD_CRAB     = 17002541,
-            UNDEAD_LEECH    = 17002542,
-            UNDEAD_SLIME    = 17002543,
-            UNDEAD_TOAD     = 17002544,
+            MOBS_START =
+            {
+                CARRION_CRAB1   = 17002521,
+                CARRION_LEECH1  = 17002522,
+                CARRION_CRAB2   = 17002523,
+                CARRION_CRAB3   = 17002524,
+                CARRION_LEECH2  = 17002525,
+                CARRION_CRAB4   = 17002526,
+                CARRION_CRAB5   = 17002527,
+                CARRION_CRAB6   = 17002528,
+                CARRION_SLIME1  = 17002529,
+                CARRION_SLIME2  = 17002530,
+                CARRION_SLIME3  = 17002531,
+                CARRION_CRAB7   = 17002532,
+                CARRION_LEECH3  = 17002533,
+                CARRION_LEECH4  = 17002534,
+                CARRION_LEECH5  = 17002535,
+                CARRION_LEECH6  = 17002536,
+                CARRION_LEECH7  = 17002537,
+                CARRION_LEECH8  = 17002538,
+                CARRION_TOAD1   = 17002539,
+                CARRION_TOAD2   = 17002540,
+                UNDEAD_CRAB     = 17002541,
+                UNDEAD_LEECH    = 17002542,
+                UNDEAD_SLIME    = 17002543,
+                UNDEAD_TOAD     = 17002544,
+            },
         },
     },
     npc =

@@ -99,7 +99,8 @@ zones[xi.zone.AHT_URHGAN_WHITEGATE] =
     },
     npc =
     {
-        SANRAKU = GetFirstID('Sanraku'),
+        SANRAKU        = GetFirstID('Sanraku'),
+        DHIMA_POLEVHIA = GetFirstID('Dhima_Polevhia'),
     },
 }
 
