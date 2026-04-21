@@ -29,4 +29,3 @@
   - [ ] Ruhotz_Silvermines/IDs.lua (add Ulbrecht mob reference)
 - **Blockers**: Need to verify event CSIDs via !cs testing at Erlene
 - **Mob data**: Ulbrecht pool 4078, group 4659, zone 93, Lv67, ~12k HP, Tabula Rasa at 50%
-
