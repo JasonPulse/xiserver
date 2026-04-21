@@ -113,7 +113,7 @@ New agent? Read these files in order:
 - [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692/14,874 (24.8%) have zero mods, 713 at iLvl119 (2026-03-28)
 - [x] phase2/base_game/quests/all_job_quest_chains.md — All 22 unlock, 7 full AF, 10 partial, 5 none (2026-03-28)
 
-- [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692 items, 1,714 at lv99 (mostly hexed/jug/crafted) (2026-03-28)
+- [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692 items, 1,714 at lv99 (mostly hexed/jug/crafted) (2026-03-28) — RESCOPED 2026-04-21: inflated count, weapon stats live in item_weapon.sql not item_mods, many are legit cursed flavor items. Fix on-demand when a player flags a specific broken item.
 - [x] phase2/base_game/quests/all_job_quest_chains.md — 8 full AF, 3 at 4/5, 4 at 3/5, 3 at 2/5, 1 at 1/5, 3 at 0/5 (2026-03-28)
 - [x] phase2/base_game/nms/wrong_drops_audit.md — DB clean, no cross-family errors (Diremite was only one, fixed) (2026-03-28)
 - [x] phase2/base_game/nms/drop_consistency_audit.md — 0 errors across 7 checks, 5 dungeon spot-checks clean (2026-03-28)
@@ -229,24 +229,24 @@ Track cross-cutting issues here so they don't get lost:
 - ~~**Mog Sack defaults to 0 slots**~~ -- FIXED (2026-04-21): char_storage.sql defaults for locker/satchel/sack bumped from 0 to 30 each. New characters get base capacity automatically. For existing characters: `UPDATE char_storage SET locker=GREATEST(locker,30), satchel=GREATEST(satchel,30), sack=GREATEST(sack,30);`
 - ~~**71/120 trusts have no AI**~~ -- FIXED (2026-04-02): All 120 trusts now have AI gambits. Tank trusts also have 1.5x ATT boost (2026-04-04).
 - **No trust iLvl scaling** -- Trusts capped at player level stats, weak in endgame. (from trusts.md)
-- **Alter Ego Extravaganza disabled** -- Hard-coded to return NONE regardless of settings. (from trusts.md)
-- **PLD SP2 (Guardian) missing** -- No ability script found. (from advanced_jobs.md)
-- **GEO missing 4 abilities** -- Radial Arcana, Concentric Pulse, Mending Halation, Collimated Fervor. (from expansion_jobs.md)
+- ~~**Alter Ego Extravaganza disabled**~~ -- FIXED (2026-04-21): campaignActive() now returns BOTH unconditionally; bonus cipher drops + Shadow Era vendors always on
+- ~~**PLD SP2 (Guardian) missing**~~ -- FALSE ALARM: already implemented (from JOB_FIXES_TODO.md completed list)
+- ~~**GEO missing 4 abilities**~~ -- FIXED: Radial Arcana / Concentric Pulse / Mending Halation already present; Collimated Fervor routing added (from JOB_FIXES_TODO.md completed list)
 - **RUN/GEO Adoulin access** -- Scripts exist but user reported needing GM teleport. Needs re-testing. (from expansion_jobs.md)
 - **Bastok 9-2 BCNM no Trusts** -- FIXED: added `allowTrusts = true` to `where_two_paths_converge.lua` (from missions_rank7-10.md)
 - **Campaign Battles MISSING** -- DB infrastructure tracks zone control but actual battle spawning/rewards don't exist. No way to earn Allied Notes. (from wotg)
 - **Campaign Ops MISSING** -- Zero of 100+ ops implemented. (from wotg)
 - **Besieged MISSING** -- NPC/currency/Sanction works but actual siege battles don't exist. (from toau)
-- **Assault 9/50** -- Only 18% of assault scenarios implemented. Framework solid. (from toau)
+- **Assault 11/50** -- 2026-04-20: 6 Tier 2 assaults upgraded to modern framework (now awarding points); 2026-04-21: Lebros Supplies (22) implemented from pre-existing mob data. 38 remaining missing assaults need mob_pools + mob_spawn_points SQL + in-game placement before scripts can be written.
 - **~8 WotG missions PARTIAL** -- Battlefields exist but completion not fully wired. (from wotg)
 - ~~**69 Abyssea Atma have empty mods**~~ -- CLARIFIED (2026-04-20): audit was wrong, only 3 atma had empty mods (Hateful Stream, Ace Angler, Shattering Star) because they're HP-conditional. Ace Angler + Shattering Star now implemented via xi.atma.conditionalAtmaMods with HP<25% runtime gate. Hateful Stream still unimplemented (requires reflect/drain mechanic).
 - **144/172 Abyssea NMs lack custom AI** -- Use default behavior only. (from abyssea)
 - **Atma Fabricant STUB** -- Can't craft atma. (from abyssea)
-- **Silent fail QOL pattern** -- Some NPC scripts silently fail on position checks with no player feedback. Example: Phomiuna Aqueducts _ir9.lua (fixed). May exist elsewhere. (from manual QA)
-- **Snipper droplist 3913 missing** -- FALSE ALARM: Snippers use droplists 482/483/2281, all exist. Agent confused pool ID 3913 (Thunder_Fiend) with a droplist. (verified 2026-03-28)
+- ~~**Silent fail QOL pattern**~~ -- AUDITED 2026-04-21: scanned all ~600 zone NPC files with Python regex for silent position-check returns; 0 found outside the original Phomiuna _ir9 fix. Door NPCs consistently messageSpecial on the wrong-side branch.
+- ~~**Snipper droplist 3913 missing**~~ -- FALSE ALARM verified 2026-03-28; Snippers use 482/483/2281 which all exist
 - ~~**Monisette has no script**~~ -- FIXED (2026-04-02): Monisette implemented with 421 reforge mappings, proper Rem's Tale + slot material requirements for all 22 jobs. (from gear audit)
 - ~~**Oboro has no script**~~ -- FIXED (2026-04-04): Oboro implemented with 48 weapon reforges (14 Relic + 20 Mythic + 14 Empyrean), lv90 + 300 materials → iLvl 119. (from gear audit)
-- **Curio Vendor gated behind ROV KI** -- Retail-accurate but harsh for new players on small server. (from phase2 lv1-10)
+- ~~**Curio Vendor gated behind ROV KI**~~ -- Tuned by user to their preference; not touching. (2026-04-21)
 - **Maiden of the Dusk (WotG 51) Lilith battlefield MISSING** -- No battlefield script, no Walk_of_Echoes battlefield dir. Blocks WotG story but not level caps. (from phase2 lv75-99)
 - **SoA imprimaturGate BLOCKS at mission 1-6** -- FIXED: function now returns true. (from phase2 soa)
 - ~~**Limbus entry BROKEN**~~ -- FALSE ALARM (2026-04-04): Re-investigated — AlTaieu/npcs/Swirling_Vortex.lua EXISTS and is functional, xi.limbus module EXISTS at scripts/globals/limbus.lua. Both Temenos and Apollyon instances work. Phase 1 "WORKS" was correct after all.
@@ -264,10 +264,11 @@ Track cross-cutting issues here so they don't get lost:
 - **Valorous Mitts/Greaves zero mods** -- FIXED (2026-04-02): added mods
 - **Lustratio Harness zero mods** -- FIXED (2026-04-02): added mods
 - **Unity gear upgrade (Perle/Aurore/Teal +1)** -- FIXED (2026-04-02): trade handler in unity.lua, Harold's Ore added to shop
-- **8 jobs missing AF quest scripts** -- BLM/PLD/RNG/DRG (body+legs), BRD/SMN (legs), COR/SCH (coffer pieces) (from AF audit)
+- ~~**8 jobs missing AF quest scripts**~~ -- RECLASSIFIED 2026-04-21: deep audit (af_partial_jobs_detailed.md) shows 7/8 jobs (BLM/PLD/RNG/DRG/BRD/SMN/COR) already fully functional. Only SCH AF3 (Seeing Blood Red) genuinely missing; tracked in JOB_FIXES_TODO.md as blocked on in-game CSID verification.
 - ~~**RUN and GEO have NO AF quests**~~ -- FIXED (2026-04-02): RUN quests 2-5 + Octavien commissions, GEO quests 2-5 + Wescolina commissions. All 5 AF pieces obtainable for both jobs.
-- ~~**PUP has NO AF quests**~~ -- PARTIAL FIX (2026-04-19): Puppetmaster Blues AF3 implemented (quest, battlefield, Valkeng mob, Iruki-Waraki/Sajhra NPCs). Still missing commission NPC (Dhima Polevhia) for body/hands/feet.
+- ~~**PUP has NO AF quests**~~ -- FULLY FIXED 2026-04-20: AF3 Puppetmaster Blues + Dhima Polevhia commission NPC (crystal + Imperial Standing for body/hands/legs/feet) both live. All 5 AF pieces obtainable.
 - **Adoulin quests 19.2% coverage** -- lowest of any area (from other areas)
+- **Adoulin Coalitions 0/77** -- SCOPED 2026-04-21: shop infrastructure works (Ujlei Zelekko etc.), all ~90 repeatable quest scripts missing. Enum defined, no scripts/quests/coalition/ dir. Multi-week effort or parametrized framework build.
 
 ---
 

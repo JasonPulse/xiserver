@@ -1,0 +1,61 @@
+-----------------------------------
+-- Assault: Lebros Supplies
+-----------------------------------
+local ID = zones[xi.zone.LEBROS_CAVERN]
+-----------------------------------
+local instanceObject = {}
+
+instanceObject.registryRequirements = function(player)
+    return player:hasKeyItem(xi.ki.LEBROS_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.LEBROS_SUPPLIES and
+        player:getCharVar('assaultEntered') == 0 and
+        player:hasKeyItem(xi.ki.ASSAULT_ARMBAND) and
+        player:getMainLvl() > 50
+end
+
+instanceObject.entryRequirements = function(player)
+    return player:hasKeyItem(xi.ki.LEBROS_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.LEBROS_SUPPLIES and
+        player:getCharVar('assaultEntered') == 0 and
+        player:getMainLvl() > 50
+end
+
+instanceObject.onInstanceCreated = function(instance)
+end
+
+instanceObject.onInstanceCreatedCallback = function(player, instance)
+    xi.assault.onInstanceCreatedCallback(player, instance)
+    xi.instance.onInstanceCreatedCallback(player, instance)
+end
+
+instanceObject.afterInstanceRegister = function(player)
+    local instance = player:getInstance()
+
+    xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_ZHAYOLM_FIREFLIES)
+    GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(-376.272, -9.893, 89.189, 0)
+    GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(-384.097, -10, 84.954, 49)
+end
+
+instanceObject.onInstanceTimeUpdate = function(instance, elapsed)
+    xi.instance.updateInstanceTime(instance, elapsed, ID.text)
+end
+
+instanceObject.onInstanceFailure = function(instance)
+    xi.assault.onInstanceFailure(instance)
+end
+
+instanceObject.onInstanceProgressUpdate = function(instance, progress)
+    -- 18 mobs total in MOBS_START; clear all to complete
+    if progress >= 18 then
+        instance:complete()
+    end
+end
+
+instanceObject.onInstanceComplete = function(instance)
+    xi.assault.onInstanceComplete(instance, 8, 8)
+end
+
+instanceObject.onEventFinish = function(player, csid, option, npc)
+end
+
+return instanceObject

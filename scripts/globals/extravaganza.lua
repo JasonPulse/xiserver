@@ -17,11 +17,10 @@ xi.extravaganza.campaign =
 
 ---@return xi.extravaganza.campaign
 xi.extravaganza.campaignActive = function()
-    -- Extravaganza NPCs are currently not present in the client.  This function is disabled until
-    -- such a time that they are reintroduced, or confirmed to be permanently removed.  If this changes,
-    -- return to using xi.settings.main.ENABLE_TRUST_ALTER_EGO_EXTRAVAGANZA
-
-    return xi.extravaganza.campaign.NONE
+    -- Small private server: both extravaganza campaigns always on so players
+    -- get the Shadow Era cipher vendors and the bonus cipher drops from
+    -- sparks/conquest/besieged without waiting on a seasonal event.
+    return xi.extravaganza.campaign.BOTH
 end
 
 -----------------------------------
