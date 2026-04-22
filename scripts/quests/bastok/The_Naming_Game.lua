@@ -11,7 +11,7 @@
 -- with its upstream-default name).
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local ORDRYNITE = 1728
+local ordrynite = 1728
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.THE_NAMING_GAME)
 
@@ -36,7 +36,7 @@ quest.sections =
             ['Raibaht'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, ORDRYNITE) then
+                    if npcUtil.tradeHasExactly(trade, ordrynite) then
                         return quest:progressEvent(504)
                     end
                 end,

@@ -73,6 +73,7 @@ quest.sections =
                 if quest:getVar(player, 'Delivered') == 0 then
                     quest:setVar(player, 'Delivered', 1)
                 end
+
                 return -1
             end,
         },

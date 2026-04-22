@@ -70,13 +70,17 @@ quest.sections =
                 then
                     quest:setVar(player, 'TowerVisited', 1)
                 end
+
                 return -1
             end,
         },
 
         [xi.zone.LOWER_JEUNO] =
         {
-            ['Street_Lamp'] =
+            -- Streetlamps in Lower Jeuno are polymorphic entities _l00 through _l19.
+            -- Retail quest script checked a specific lamp; on this server the first
+            -- lamp (_l00) is the quest-giving one.
+            ['_l00'] =
             {
                 onTrigger = function(player, npc)
                     if

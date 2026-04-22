@@ -10,7 +10,7 @@
 -- speak to Olavia for the Completion certificate, return to Trilok.
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local MIRATETES_MEMOIRS = xi.item.MIRATETES_MEMOIRS
+local miratetesMemoirs = xi.item.MIRATETES_MEMOIRS
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.ESCORT_FOR_HIRE)
 
@@ -102,8 +102,9 @@ quest.sections =
                             player:addGil(10000)
                             player:messageSpecial(zones[xi.zone.PORT_BASTOK].text.GIL_OBTAINED, 10000)
                         end
-                        player:addItem(MIRATETES_MEMOIRS)
-                        player:messageSpecial(zones[xi.zone.PORT_BASTOK].text.ITEM_OBTAINED, MIRATETES_MEMOIRS)
+
+                        player:addItem(miratetesMemoirs)
+                        player:messageSpecial(zones[xi.zone.PORT_BASTOK].text.ITEM_OBTAINED, miratetesMemoirs)
                         player:completeQuest(xi.questLog.BASTOK, xi.quest.id.bastok.ESCORT_FOR_HIRE)
                         player:addFame(xi.fameArea.BASTOK, 10)
                     end

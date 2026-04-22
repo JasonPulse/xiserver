@@ -67,6 +67,7 @@ quest.sections =
                     player:delKeyItem(xi.ki.CORKED_AMPOULE)
                     npcUtil.giveKeyItem(player, xi.ki.AMPOULE_OF_GOLD_DUST)
                 end
+
                 return -1
             end,
         },

@@ -13,8 +13,8 @@
 -- Halver, returns, and receives BOTH rings. CSIDs are best-guess from
 -- the client event dump; verify with !cs in-game.
 -----------------------------------
-local CASTORS_RING = 14628
-local POLLUXS_RING = 14629
+local castorsRing = 14628
+local polluxsRing = 14629
 
 local quest = Quest:new(xi.questLog.SANDORIA, xi.quest.id.sandoria.FIT_FOR_A_PRINCE)
 
@@ -74,8 +74,8 @@ quest.sections =
                         player:getFreeSlotsCount() >= 2 and
                         quest:complete(player)
                     then
-                        player:addItem(CASTORS_RING)
-                        player:addItem(POLLUXS_RING)
+                        player:addItem(castorsRing)
+                        player:addItem(polluxsRing)
                         player:setTitle(xi.title.CONSORT_CANDIDATE) -- retail gives one title per partner; grant both on solo server
                     end
                 end,

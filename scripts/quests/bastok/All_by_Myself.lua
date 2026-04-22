@@ -60,6 +60,7 @@ quest.sections =
                 if quest:getVar(player, 'Shadowed') == 0 then
                     quest:setVar(player, 'Shadowed', 1)
                 end
+
                 return -1
             end,
         },

@@ -27,7 +27,7 @@ local logBits =
     [xi.item.WALNUT_LOG]    = 16,
 }
 
-local ALL_LOGS_MASK = 31
+local allLogsMask = 31
 
 quest.sections =
 {
@@ -79,7 +79,7 @@ quest.sections =
 
                     for itemId, bit in pairs(logBits) do
                         if
-                            utils.mask.getBit(checklist, bit - 1) == false and
+                            not utils.mask.getBit(checklist, bit - 1) and
                             npcUtil.tradeHas(trade, itemId)
                         then
                             newChecklist = utils.mask.setBit(newChecklist, bit - 1, true)
@@ -87,7 +87,7 @@ quest.sections =
                         end
                     end
 
-                    if newChecklist == ALL_LOGS_MASK then
+                    if newChecklist == allLogsMask then
                         return quest:progressEvent(636)
                     elseif progressed then
                         quest:setVar(player, 'Checklist', newChecklist)
@@ -104,7 +104,7 @@ quest.sections =
             onEventFinish =
             {
                 [636] = function(player, csid, option, npc)
-                    if quest:getVar(player, 'Checklist') == ALL_LOGS_MASK then
+                    if quest:getVar(player, 'Checklist') == allLogsMask then
                         if quest:complete(player) then
                             player:confirmTrade()
                             player:delKeyItem(xi.ki.TIMBER_SURVEY_CHECKLIST)

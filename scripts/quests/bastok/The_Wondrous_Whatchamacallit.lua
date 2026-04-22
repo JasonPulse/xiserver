@@ -11,7 +11,7 @@
 -- on a private server.
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local PORTAFURNACE = 13078
+local portafurnace = 13078
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.THE_WONDROUS_WHATCHAMACALLIT)
 
@@ -68,7 +68,7 @@ quest.sections =
             {
                 [801] = function(player, csid, option, npc)
                     if player:getFreeSlotsCount() > 0 and quest:complete(player) then
-                        player:addItem(PORTAFURNACE)
+                        player:addItem(portafurnace)
                     end
                 end,
             },

@@ -15,7 +15,7 @@
 -- quest can be re-accepted from Rondipur immediately after completion.
 -- CSIDs are best-guess from client event dump; verify with !cs in-game.
 -----------------------------------
-local MIRATETES_MEMOIRS = xi.item.MIRATETES_MEMOIRS
+local miratetesMemoirs = xi.item.MIRATETES_MEMOIRS
 
 local quest = Quest:new(xi.questLog.SANDORIA, xi.quest.id.sandoria.ESCORT_FOR_HIRE)
 
@@ -31,8 +31,9 @@ local function grantReward(player)
         player:addGil(10000)
         player:messageSpecial(zones[xi.zone.NORTHERN_SAN_DORIA].text.GIL_OBTAINED, 10000)
     end
-    player:addItem(MIRATETES_MEMOIRS)
-    player:messageSpecial(zones[xi.zone.NORTHERN_SAN_DORIA].text.ITEM_OBTAINED, MIRATETES_MEMOIRS)
+
+    player:addItem(miratetesMemoirs)
+    player:messageSpecial(zones[xi.zone.NORTHERN_SAN_DORIA].text.ITEM_OBTAINED, miratetesMemoirs)
 end
 
 local function canAccept(player)
@@ -120,8 +121,10 @@ quest.sections =
                         grantReward(player)
                         -- addFame handled via quest.reward table on first completion only;
                         -- for repeats we pay the item directly above.
-                        if player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.ESCORT_FOR_HIRE) == xi.questStatus.QUEST_ACCEPTED and
-                            player:getCharVar('EscortForHireCleared') == 1 then
+                        if
+                            player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.ESCORT_FOR_HIRE) == xi.questStatus.QUEST_ACCEPTED and
+                            player:getCharVar('EscortForHireCleared') == 1
+                        then
                             -- first completion goes through the framework reward
                             quest:complete(player)
                         else

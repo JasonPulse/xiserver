@@ -13,7 +13,7 @@
 -- "Somewhere in the City" path which only needs Fish Bones traded once.
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local WITHERED_BERRY = 5675
+local witheredBerry = 5675
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.A_PROPER_BURIAL)
 
@@ -21,7 +21,7 @@ quest.reward =
 {
     fame     = 40,
     fameArea = xi.fameArea.BASTOK,
-    item     = WITHERED_BERRY,
+    item     = witheredBerry,
 }
 
 -- Prog

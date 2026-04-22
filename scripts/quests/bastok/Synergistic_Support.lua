@@ -8,25 +8,25 @@
 --   water=2789, light=2790, dark=2791 (contiguous from orb_of_fire_fewell).
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local FEWELL_FIRE      = 2784
-local FEWELL_ICE       = 2785
-local FEWELL_WIND      = 2786
-local FEWELL_EARTH     = 2787
-local FEWELL_LIGHTNING = 2788
-local FEWELL_WATER     = 2789
-local FEWELL_LIGHT     = 2790
-local FEWELL_DARK      = 2791
+local fewellFire      = 2784
+local fewellIce       = 2785
+local fewellWind      = 2786
+local fewellEarth     = 2787
+local fewellLightning = 2788
+local fewellWater     = 2789
+local fewellLight     = 2790
+local fewellDark      = 2791
 
 local fewellByOption =
 {
-    [0] = FEWELL_FIRE,
-    [1] = FEWELL_ICE,
-    [2] = FEWELL_WIND,
-    [3] = FEWELL_EARTH,
-    [4] = FEWELL_LIGHTNING,
-    [5] = FEWELL_WATER,
-    [6] = FEWELL_LIGHT,
-    [7] = FEWELL_DARK,
+    [0] = fewellFire,
+    [1] = fewellIce,
+    [2] = fewellWind,
+    [3] = fewellEarth,
+    [4] = fewellLightning,
+    [5] = fewellWater,
+    [6] = fewellLight,
+    [7] = fewellDark,
 }
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.SYNERGISTIC_SUPPORT)
@@ -68,11 +68,13 @@ quest.sections =
                     if fewellId == nil then
                         return
                     end
+
                     if player:getFreeSlotsCount() > 0 then
                         player:confirmTrade()
                         for _ = 1, 3 do
                             player:addItem(fewellId)
                         end
+
                         quest:begin(player)
                         quest:complete(player)
                     end

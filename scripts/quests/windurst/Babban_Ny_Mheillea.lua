@@ -15,12 +15,12 @@
 -- pinpoint rootprint position hunt.
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local BAG_OF_TREE_SAPLINGS = xi.item.BAG_OF_TREE_SAPLINGS
+local bagOfTreeSaplings = xi.item.BAG_OF_TREE_SAPLINGS
 
-local ROLANBERRY_BIT   = 1
-local GUSTABERG_BIT    = 2
-local MERIPHATAUD_BIT  = 4
-local ALL_ROOTS_MASK   = 7
+local rolanberryBit   = 1
+local gustabergBit    = 2
+local meriphataudBit  = 4
+local allRootsMask   = 7
 
 local quest = Quest:new(xi.questLog.WINDURST, xi.quest.id.windurst.BABBAN_NY_MHEILLEA)
 
@@ -73,7 +73,7 @@ quest.sections =
         [xi.zone.ROLANBERRY_FIELDS_S] =
         {
             onZoneIn = function(player, prevZone)
-                flagRoot(player, ROLANBERRY_BIT)
+                flagRoot(player, rolanberryBit)
                 return -1
             end,
         },
@@ -81,7 +81,7 @@ quest.sections =
         [xi.zone.NORTH_GUSTABERG_S] =
         {
             onZoneIn = function(player, prevZone)
-                flagRoot(player, GUSTABERG_BIT)
+                flagRoot(player, gustabergBit)
                 return -1
             end,
         },
@@ -89,7 +89,7 @@ quest.sections =
         [xi.zone.MERIPHATAUD_MOUNTAINS_S] =
         {
             onZoneIn = function(player, prevZone)
-                flagRoot(player, MERIPHATAUD_BIT)
+                flagRoot(player, meriphataudBit)
                 return -1
             end,
         },
@@ -99,7 +99,7 @@ quest.sections =
             ['Khoto_Rokkorah'] =
             {
                 onTrigger = function(player, npc)
-                    if quest:getVar(player, 'Roots') == ALL_ROOTS_MASK then
+                    if quest:getVar(player, 'Roots') == allRootsMask then
                         return quest:progressEvent(990)
                     end
                 end,
@@ -110,7 +110,7 @@ quest.sections =
                 [990] = function(player, csid, option, npc)
                     if quest:complete(player) then
                         for _ = 1, 3 do
-                            player:addItem(BAG_OF_TREE_SAPLINGS)
+                            player:addItem(bagOfTreeSaplings)
                         end
                     end
                 end,

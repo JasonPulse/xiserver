@@ -13,7 +13,7 @@
 -- return and trade Shelling Piece to Ropunono for reward.
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local SHELLING_PIECE = 545
+local shellingPiece = 545
 
 local quest = Quest:new(xi.questLog.WINDURST, xi.quest.id.windurst.HEAVEN_CENT)
 
@@ -65,10 +65,11 @@ quest.sections =
                     quest:getVar(player, 'ShellingGranted') == 0 and
                     player:getFreeSlotsCount() > 0
                 then
-                    player:addItem(SHELLING_PIECE)
-                    player:messageSpecial(zones[xi.zone.MAZE_OF_SHAKHRAMI].text.ITEM_OBTAINED, SHELLING_PIECE)
+                    player:addItem(shellingPiece)
+                    player:messageSpecial(zones[xi.zone.MAZE_OF_SHAKHRAMI].text.ITEM_OBTAINED, shellingPiece)
                     quest:setVar(player, 'ShellingGranted', 1)
                 end
+
                 return -1
             end,
         },
@@ -78,7 +79,7 @@ quest.sections =
             ['Ropunono'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, SHELLING_PIECE) then
+                    if npcUtil.tradeHasExactly(trade, shellingPiece) then
                         return quest:progressEvent(285)
                     end
                 end,

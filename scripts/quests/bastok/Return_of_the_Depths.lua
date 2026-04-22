@@ -17,8 +17,8 @@
 -- the reward step to gate on battlefield victory.
 -- CSIDs best-guess; verify with !cs in-game.
 -----------------------------------
-local BOWYER_RING      = 14660
-local MISAREAUX_GARLIC = 1661
+local bowyerRing      = 14660
+local misareauxGarlic = 1661
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.RETURN_OF_THE_DEPTHS)
 
@@ -76,7 +76,7 @@ quest.sections =
                 onTrade = function(player, npc, trade)
                     if
                         quest:getVar(player, 'Prog') == 0 and
-                        npcUtil.tradeHasExactly(trade, MISAREAUX_GARLIC)
+                        npcUtil.tradeHasExactly(trade, misareauxGarlic)
                     then
                         return quest:progressEvent(300)
                     end
@@ -147,7 +147,7 @@ quest.sections =
                 [200] = function(player, csid, option, npc)
                     if player:getFreeSlotsCount() > 0 then
                         player:confirmTrade()
-                        player:addItem(BOWYER_RING)
+                        player:addItem(bowyerRing)
                         player:addGil(3000)
                         player:messageSpecial(zones[xi.zone.OLDTON_MOVALPOLOS].text.GIL_OBTAINED, 3000)
                         quest:complete(player)
