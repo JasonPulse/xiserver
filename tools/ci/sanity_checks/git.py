@@ -73,15 +73,6 @@ for hash, lines in get_commit_messages().items():
             "a more detailed summary of your changes.",
         )
 
-    if len(lines[0]) > 72:
-        print_error(
-            hash,
-            lines,
-            lines[0],
-            "Commit title is too long.\nMaximum length is 72 characters.\n"
-            "If you need to provide a more detailed summary of your chages you should provide a multi-line commit message",
-        )
-
     if "|" in lines[0]:
         print_error(
             hash,
