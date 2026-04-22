@@ -3,8 +3,8 @@
 -----------------------------------
 -- Log ID: 3, Quest ID: 80
 -- Luto_Mewrilah : Upper Jeuno (G-8)
--- Adventuring Fellow bond-cap chain (2/5). Raises bondcap to 50.
--- Simplified for 4-player server: accept → immediate complete.
+-- Adventuring Fellow bond-cap chain (2/5). Retail bondcap 50 reward
+-- dropped — server has no fellow API binding. Quest still completes.
 -----------------------------------
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.PAST_REFLECTIONS)
 
@@ -36,9 +36,7 @@ quest.sections =
                 [10038] = function(player, csid, option, npc)
                     if option == 1 then
                         quest:begin(player)
-                        if quest:complete(player) then
-                            player:setFellowValue('bondcap', 50)
-                        end
+                        quest:complete(player)
                     end
                 end,
             },

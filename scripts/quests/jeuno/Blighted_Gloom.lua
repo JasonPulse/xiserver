@@ -3,9 +3,8 @@
 -----------------------------------
 -- Log ID: 3, Quest ID: 81
 -- Luto_Mewrilah : Upper Jeuno (G-8)
--- Adventuring Fellow bond-cap chain (3/5). Raises bondcap to 70.
--- Retail: kill Metallic Slime for Vitrallum KI. Simplified: accept →
--- immediate complete.
+-- Adventuring Fellow bond-cap chain (3/5). Retail bondcap 70 reward
+-- dropped — server has no fellow API binding. Quest still completes.
 -----------------------------------
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.BLIGHTED_GLOOM)
 
@@ -20,8 +19,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.PAST_REFLECTIONS) and
-                player:getFellowValue('bond') >= 45
+                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.PAST_REFLECTIONS)
         end,
 
         [xi.zone.UPPER_JEUNO] =
@@ -38,9 +36,7 @@ quest.sections =
                 [10039] = function(player, csid, option, npc)
                     if option == 1 then
                         quest:begin(player)
-                        if quest:complete(player) then
-                            player:setFellowValue('bondcap', 70)
-                        end
+                        quest:complete(player)
                     end
                 end,
             },

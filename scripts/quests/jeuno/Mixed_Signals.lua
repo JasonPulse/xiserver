@@ -3,7 +3,7 @@
 -----------------------------------
 -- Log ID: 3, Quest ID: 87
 -- Luto_Mewrilah : Upper Jeuno (G-8)
--- Raises fellow level cap to 65. Simplified: accept → complete.
+-- Retail raised fellow lvlcap to 65 — dropped (no fellow API binding).
 -----------------------------------
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.MIXED_SIGNALS)
 
@@ -18,9 +18,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.REGAINING_TRUST) and
-                player:getFellowValue('level') >= 56 and
-                player:getFellowValue('bond') >= 80
+                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.REGAINING_TRUST)
         end,
 
         [xi.zone.UPPER_JEUNO] =
@@ -37,9 +35,7 @@ quest.sections =
                 [10042] = function(player, csid, option, npc)
                     if option == 1 then
                         quest:begin(player)
-                        if quest:complete(player) then
-                            player:setFellowValue('lvlcap', 65)
-                        end
+                        quest:complete(player)
                     end
                 end,
             },

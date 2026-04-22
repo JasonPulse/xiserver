@@ -3,7 +3,8 @@
 -----------------------------------
 -- Log ID: 3, Quest ID: 84
 -- Luto Mewrilah : Upper Jeuno (G-8), default event 10034
--- Retail: fellow familiarity 65+ costume kit child sidequest.
+-- Retail: fellow familiarity 65+ costume kit child sidequest. Server
+-- has no fellow API binding yet, so the familiarity gate is dropped.
 -- Simplified for 4-player server: accept → immediate complete, random
 -- Tactics Manual reward (Strategy / Discipline / Theory).
 -----------------------------------
@@ -21,8 +22,7 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getFellowValue('bond') >= 65
+            return status == xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.UPPER_JEUNO] =

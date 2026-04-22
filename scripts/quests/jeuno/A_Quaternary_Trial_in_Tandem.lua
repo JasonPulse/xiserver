@@ -4,7 +4,7 @@
 -- Log ID: 3, Quest ID: 163
 -- Luto_Mewrilah : Upper Jeuno (G-8)
 -- Magian_Moogle : Ru'Lude Gardens
--- Fellow lvlcap chain. Raises fellow lvlcap to 90.
+-- Fellow lvlcap chain. Retail raised fellow lvlcap to 90 — dropped (no fellow API binding).
 -----------------------------------
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.A_QUATERNARY_TRIAL_IN_TANDEM)
 
@@ -19,8 +19,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.YET_ANOTHER_TRIAL_IN_TANDEM) and
-                player:getFellowValue('level') >= 81
+                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.YET_ANOTHER_TRIAL_IN_TANDEM)
         end,
 
         [xi.zone.UPPER_JEUNO] =
@@ -60,9 +59,7 @@ quest.sections =
             onEventFinish =
             {
                 [10051] = function(player, csid, option, npc)
-                    if quest:complete(player) then
-                        player:setFellowValue('lvlcap', 90)
-                    end
+                    quest:complete(player)
                 end,
             },
         },

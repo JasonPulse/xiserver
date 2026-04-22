@@ -3,9 +3,8 @@
 -----------------------------------
 -- Log ID: 3, Quest ID: 82
 -- Luto_Mewrilah : Upper Jeuno (G-8)
--- Adventuring Fellow bond-cap chain (4/5). Raises bondcap to 90.
--- Retail: gather Mistroot/Lunascent Log/Glimmering Mica with fellow,
--- scry at Beaucedine Mirror Pond. Simplified: accept → immediate complete.
+-- Adventuring Fellow bond-cap chain (4/5). Retail bondcap 90 reward
+-- dropped — server has no fellow API binding. Quest still completes.
 -----------------------------------
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.BLESSED_RADIANCE)
 
@@ -20,8 +19,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.BLIGHTED_GLOOM) and
-                player:getFellowValue('bond') >= 70
+                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.BLIGHTED_GLOOM)
         end,
 
         [xi.zone.UPPER_JEUNO] =
@@ -38,9 +36,7 @@ quest.sections =
                 [10040] = function(player, csid, option, npc)
                     if option == 1 then
                         quest:begin(player)
-                        if quest:complete(player) then
-                            player:setFellowValue('bondcap', 90)
-                        end
+                        quest:complete(player)
                     end
                 end,
             },
