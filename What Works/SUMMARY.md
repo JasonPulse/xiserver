@@ -113,10 +113,11 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Adoulin | 14 | 96 | 14.6% |
 | Other Areas | 204 | 482 | 42.3% |
 
-### AF Armor by Job
-- 11 jobs fully complete (WAR/MNK/WHM/RDM/THF/DRK/BST/SAM/NIN/BLU/DNC)
-- 8 jobs partial (BLM/PLD/RNG/DRG/BRD/SMN/COR/SCH — missing 1-2 quests)
-- 1 job completely missing (PUP). RUN/GEO IMPLEMENTED (2026-04-02) with quests 2-5 + commission NPCs
+### AF Armor by Job (CORRECTED 2026-04-21)
+- 21/22 jobs fully complete. Deep audit (af_partial_jobs_detailed.md) found that BLM/PLD/RNG/DRG/BRD/SMN/COR already work end-to-end via NPC scripts (prior Phase 2 undercounted)
+- PUP IMPLEMENTED (2026-04-20): Puppetmaster Blues AF3 + Dhima Polevhia commission NPC
+- RUN/GEO IMPLEMENTED (2026-04-02): quests 2-5 + Octavien/Wescolina commissions
+- Only gap: **SCH AF3 (Seeing Blood Red)** — blocked on in-game !cs verification of Erlene CSIDs, tracked in `JOB_FIXES_TODO.md`
 
 ### Zone Accessibility
 - All base game zones reachable without GM commands
@@ -140,7 +141,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 3. ~~**High value**: Fill empty atma mods~~ DONE (2026-04-04) — 39/42 filled (3 conditional-only left empty)
 4. ~~**Medium value**: Fix Limbus entry~~ NOT BROKEN (audit was wrong, entry script exists and works)
 5. ~~**Medium value**: Fix AF+3 zero-mod pieces~~ DONE (2026-04-04) — 35 items got full stat blocks (670 mod entries)
-6. **Medium value**: Add PUP AF quests, wire up WotG battlefields
+6. ~~**Medium value**: Add PUP AF quests~~ DONE (2026-04-20). **Still open**: wire up WotG battlefields (Maiden of the Dusk, 51 Lilith)
 5. **Continue**: Voidwatch (in progress), ROV boss battles
 6. **Don't worry about**: Campaign, Besieged, Odyssey, Master Levels — designed for large populations
 7. **Consider**: `UNLOCK_OUTPOST_WARPS=1`, increase Mog Sack slots, seed AH with common items

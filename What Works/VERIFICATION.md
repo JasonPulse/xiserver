@@ -59,7 +59,7 @@ The AF audit revealed that agents were checking `scripts/quests/` files only, mi
 | quests/expansion_quests.md | HIGH | CORRECTED | All 7 areas corrected with quests.lua counts |
 | quests/af_armor_all_jobs.md | HIGH | CORRECTED | 18/22 complete (was 8/22) |
 | quests/all_job_quest_chains.md | HIGH | CORRECTED | Updated with verified AF data |
-| quests/af_partial_jobs_detailed.md | HIGH | CORRECTED | Only SCH + PUP have real gaps |
+| quests/af_partial_jobs_detailed.md | HIGH | CORRECTED | Only SCH AF3 (head) has a real gap — PUP fixed 2026-04-20 |
 
 ### Phase 2 — Deep Quest Logic (MIXED — checked logic but may have missed NPC-based quests)
 | File | Risk | Status | Notes |
@@ -140,7 +140,7 @@ The gaps are in Abyssea (25.5%), Adoulin (18.6%), and Coalition (0%).
 |-----|-----------|-------|
 | WAR, MNK, WHM, THF, DRK, SAM, BLU, DNC | 5/5 or 3/3 | Complete |
 | PLD, BLM, DRG, RNG, NIN, SMN, BRD, RDM, BST, COR | 5/5 or 3/3 | Complete (many via NPC scripts) |
-| SCH | 2/3 | Missing Seeing Blood Red (head) |
-| PUP | 2/3 | Missing Puppetmaster Blues (AF3) |
+| SCH | 2/3 | Missing Seeing Blood Red (head) — blocked on in-game !cs verification of Erlene CSIDs |
+| PUP | 5/5 | IMPLEMENTED (2026-04-20): Puppetmaster Blues + Dhima Polevhia commission NPC |
 | GEO | 5/5 | IMPLEMENTED (2026-04-02): quests 2-5 + Wescolina commissions |
 | RUN | 5/5 | IMPLEMENTED (2026-04-02): quests 2-5 + Octavien commissions |

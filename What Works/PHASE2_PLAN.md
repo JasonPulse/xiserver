@@ -70,7 +70,7 @@ what works/Research/phase2/
 ```
 
 ## Priority Order (based on user's current progress)
-User is: Level 76, Rank 6, COP 3-4
+User state snapshot (2026-03-28): Level 76, Rank 6, COP 3-4. This is now historical — confirm with the user before using this section to prioritize work.
 
 ### Immediate Priority (affects current gameplay)
 1. Limit breaks (already past 75 but verify the chain works)
