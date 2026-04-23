@@ -625,13 +625,13 @@ xi.quest.id =
         ARTS_AND_CRAFTS                  = 1, -- + Converted
         OLDUUM                           = 2, -- + Converted
         GOT_IT_ALL                       = 3, -- + Converted
-        GET_THE_PICTURE                  = 4,
+        GET_THE_PICTURE                  = 4, -- + Converted
         AN_EMPTY_VESSEL                  = 5, -- + Converted
         LUCK_OF_THE_DRAW                 = 6, -- + Converted
         NO_STRINGS_ATTACHED              = 7, -- + Converted
-        FINDING_FAULTS                   = 8,
+        FINDING_FAULTS                   = 8, -- + Converted
         GIVE_PEACE_A_CHANCE              = 9, -- + Converted
-        THE_ART_OF_WAR                   = 10,
+        THE_ART_OF_WAR                   = 10, -- + Converted
         -- JP ENTRIES OR INVALID
         A_TASTE_OF_HONEY                 = 12, -- + Converted
         SUCH_SWEET_SORROW                = 13, -- + Converted
@@ -639,7 +639,7 @@ xi.quest.id =
         COOK_A_ROON                      = 15, -- + Converted
         THE_DIE_IS_CAST                  = 16, -- + Converted
         TWO_HORN_THE_SAVAGE              = 17, -- + Converted
-        TOTOROONS_TREASURE_HUNT          = 18,
+        TOTOROONS_TREASURE_HUNT          = 18, -- + Converted
         WHAT_FRIENDS_ARE_FOR             = 19, -- + Converted
         ROCK_BOTTOM                      = 20, -- + Converted
         BEGINNINGS                       = 21, -- + Converted
@@ -651,12 +651,12 @@ xi.quest.id =
         THE_WAYWARD_AUTOMATON            = 27, -- +
         OPERATION_TEATIME                = 28, -- +
         PUPPETMASTER_BLUES               = 29, -- + Converted
-        MOMENT_OF_TRUTH                  = 30,
+        MOMENT_OF_TRUTH                  = 30, -- + Converted
         THREE_MEN_AND_A_CLOSET           = 31, -- + Converted
-        FIVE_SECONDS_OF_FAME             = 32,
+        FIVE_SECONDS_OF_FAME             = 32, -- + Converted
         -- JP ENTRIES OR INVALID
-        THE_BEAST_WITHIN                 = 40,
-        BREAKING_THE_BONDS_OF_FATE       = 41,
+        THE_BEAST_WITHIN                 = 40, -- + Converted
+        BREAKING_THE_BONDS_OF_FATE       = 41, -- + Converted
         -- JP ENTRIES OR INVALID
         SAGA_OF_THE_SKYSERPENT           = 43, -- + Converted
         ODE_TO_THE_SERPENTS              = 44, -- + Converted
@@ -673,17 +673,17 @@ xi.quest.id =
         LED_ASTRAY                       = 65, -- + Converted
         RAT_RACE                         = 66, -- + Converted
         THE_PRINCE_AND_THE_HOPPER        = 67, -- + Converted
-        VW_OP_050_AHT_URGAN_ASSAULT      = 68,
-        VW_OP_068_SUBTERRAINEAN_SKIRMISH = 69,
-        AN_IMPERIAL_HEIST                = 70,
-        DUTIES_TASKS_AND_DEEDS           = 71,
-        FORGING_A_NEW_MYTH               = 72,
-        COMING_FULL_CIRCLE               = 73,
+        VW_OP_050_AHT_URGAN_ASSAULT      = 68, -- + Converted
+        VW_OP_068_SUBTERRAINEAN_SKIRMISH = 69, -- + Converted
+        AN_IMPERIAL_HEIST                = 70, -- + Converted
+        DUTIES_TASKS_AND_DEEDS           = 71, -- + Converted
+        FORGING_A_NEW_MYTH               = 72, -- + Converted
+        COMING_FULL_CIRCLE               = 73, -- + Converted
         WAKING_THE_COLOSSUS              = 74, -- + Converted
         DIVINE_INTERFERENCE              = 75, -- + Converted
-        THE_RIDER_COMETH                 = 76,
-        UNWAVERING_RESOLVE               = 77,
-        A_STYGIAN_PACT                   = 78,
+        THE_RIDER_COMETH                 = 76, -- + Converted
+        UNWAVERING_RESOLVE               = 77, -- + Converted
+        A_STYGIAN_PACT                   = 78, -- + Converted
         -- JP ENTRIES OR INVALID
         PROMOTION_PRIVATE_FIRST_CLASS    = 90, -- + Converted
         PROMOTION_SUPERIOR_PRIVATE       = 91, -- + Converted
@@ -694,11 +694,11 @@ xi.quest.id =
         PROMOTION_CHIEF_SERGEANT         = 96, -- + Converted
         PROMOTION_SECOND_LIEUTENANT      = 97, -- + Converted
         PROMOTION_FIRST_LIEUTENANT       = 98, -- + Converted
-        PROMOTION_CAPTAIN                = 99,
+        PROMOTION_CAPTAIN                = 99, -- + Converted
         -- JP ENTRIES OR INVALID
-        SCOUTING_THE_ASHU_TALIF          = 101,
-        ROYAL_PAINTER_ESCORT             = 102,
-        TARGETING_THE_CAPTAIN            = 103,
+        SCOUTING_THE_ASHU_TALIF          = 101, -- + Converted
+        ROYAL_PAINTER_ESCORT             = 102, -- + Converted
+        TARGETING_THE_CAPTAIN            = 103, -- + Converted
     },
 
     -----------------------------------
