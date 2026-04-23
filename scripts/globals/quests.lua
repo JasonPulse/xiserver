@@ -550,7 +550,7 @@ xi.quest.id =
     [xi.quest.area[xi.questLog.OUTLANDS]] =
     {
         -- Kazham (1-15)
-        THE_FIREBLOOM_TREE              = 1,
+        THE_FIREBLOOM_TREE              = 1, -- + Converted
         GREETINGS_TO_THE_GUARDIAN       = 2,  -- +
         A_QUESTION_OF_TASTE             = 3,  -- + Converted
         EVERYONES_GRUDGING              = 4,  -- + Converted
@@ -562,21 +562,21 @@ xi.quest.id =
         THE_OPO_OPO_AND_I               = 11, -- +
         TRIAL_BY_FIRE                   = 12, -- +
         CLOAK_AND_DAGGER                = 13, -- + Converted
-        A_DISCERNING_EYE                = 14,
+        A_DISCERNING_EYE                = 14, -- + Converted
         TRIAL_SIZE_TRIAL_BY_FIRE        = 15, -- +
 
         -- Voidwatch (100-105)
-        VOIDWATCH_OPS_BORDER_CROSSING   = 100,
-        VW_OP_054_ELSHIMO_LIST          = 101,
-        VW_OP_101_DETOUR_TO_ZEPWELL     = 102,
-        VW_OP_115_LI_TELOR_VARIANT      = 103,
-        SKYWARD_HO_VOIDWATCHER          = 104,
+        VOIDWATCH_OPS_BORDER_CROSSING   = 100, -- + Converted
+        VW_OP_054_ELSHIMO_LIST          = 101, -- + Converted
+        VW_OP_101_DETOUR_TO_ZEPWELL     = 102, -- + Converted
+        VW_OP_115_LI_TELOR_VARIANT      = 103, -- + Converted
+        SKYWARD_HO_VOIDWATCHER          = 104, -- + Converted
 
         -- Norg (128-149)
         THE_SAHAGINS_KEY                = 128, -- +
         FORGE_YOUR_DESTINY              = 129, -- + Converted
-        BLACK_MARKET                    = 130,
-        MAMA_MIA                        = 131,
+        BLACK_MARKET                    = 130, -- +
+        MAMA_MIA                        = 131, -- +
         STOP_YOUR_WHINING               = 132, -- + Converted
         TRIAL_BY_WATER                  = 133, -- +
         EVERYONES_GRUDGE                = 134, -- +
@@ -594,7 +594,7 @@ xi.quest.id =
         THE_POTENTIAL_WITHIN            = 146, -- + Converted
         BUGI_SODEN                      = 147, -- + Converted
         TRIAL_SIZE_TRIAL_BY_WATER       = 148, -- +
-        AN_UNDYING_PLEDGE               = 149,
+        AN_UNDYING_PLEDGE               = 149, -- +
 
         -- Misc (160-165)
         WRATH_OF_THE_OPO_OPOS           = 160, -- + Converted
@@ -612,7 +612,7 @@ xi.quest.id =
         THE_IMMORTAL_LU_SHANG           = 196, -- +
         TRIAL_SIZE_TRIAL_BY_WIND        = 197, -- +
         CHASING_DREAMS                  = 199, -- + Converted       -- CoP Quest
-        THE_SEARCH_FOR_GOLDMANE         = 200,            -- CoP Quest
+        THE_SEARCH_FOR_GOLDMANE         = 200, -- + Converted     -- CoP Quest
         INDOMITABLE_SPIRIT              = 201, -- +
     },
 

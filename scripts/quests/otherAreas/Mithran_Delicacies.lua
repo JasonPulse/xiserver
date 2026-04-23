@@ -10,7 +10,7 @@ local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.MITHRAN_
 quest.reward =
 {
     fame     = 10,
-    fameArea = xi.fameArea.OTHER_AREAS,
+    fameArea = xi.fameArea.WINDURST,
     item     = xi.item.BLACKENED_MUDDY_SIREDON,
 }
 

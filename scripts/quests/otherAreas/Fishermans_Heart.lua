@@ -11,7 +11,7 @@ local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.FISHERMA
 quest.reward =
 {
     fame     = 10,
-    fameArea = xi.fameArea.OTHER_AREAS,
+    fameArea = xi.fameArea.WINDURST,
 }
 
 quest.sections =

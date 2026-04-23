@@ -14,15 +14,14 @@ local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.PICTURE_
 quest.reward =
 {
     fame     = 30,
-    fameArea = xi.fameArea.OTHER_AREAS,
+    fameArea = xi.fameArea.BASTOK,
 }
 
 quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
-                player:isFellow()
+            return status == xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.PORT_BASTOK] =

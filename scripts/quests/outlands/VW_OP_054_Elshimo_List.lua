@@ -1,14 +1,14 @@
 -----------------------------------
--- VW Op. 004: Bibiki Bombardment
+-- VW Op. 054: Elshimo List
 -----------------------------------
--- Log ID: 4, Quest ID: 85
--- Owain : Tavnazian Safehold (verified in npc_list.sql)
+-- Log ID: 5, Quest ID: 101
+-- Hildegard : Kazham (F-8)
 -----------------------------------
--- Voidwatch Op quest — retail required VW infrastructure to spawn
--- Bismarck in Bibiki Bay. Voidwatch not yet implemented on this server;
--- stub accepts + immediately completes until VW Lite is built.
+-- Voidwatch Op — retail targeted Holy Moly / Neith / Ildebrann Tier I
+-- NMs across Elshimo Region. VW not yet implemented; stub accepts and
+-- immediately completes until VW Lite is built.
 -----------------------------------
-local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.VW_OP_004_BIBIKI_BOMBARDMENT)
+local quest = Quest:new(xi.questLog.OUTLANDS, xi.quest.id.outlands.VW_OP_054_ELSHIMO_LIST)
 
 quest.reward =
 {
@@ -21,21 +21,21 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.VW_OP_026_TAVNAZIAN_TERRORS)
+                player:hasCompletedQuest(xi.questLog.OUTLANDS, xi.quest.id.outlands.VOIDWATCH_OPS_BORDER_CROSSING)
         end,
 
-        [xi.zone.TAVNAZIAN_SAFEHOLD] =
+        [xi.zone.KAZHAM] =
         {
-            ['Owain'] =
+            ['Hildegard'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(601)
+                    return quest:progressEvent(301)
                 end,
             },
 
             onEventFinish =
             {
-                [601] = function(player, csid, option, npc)
+                [301] = function(player, csid, option, npc)
                     if option == 1 then
                         quest:begin(player)
                         quest:complete(player)

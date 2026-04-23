@@ -14,7 +14,7 @@ local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.VW_OP_02
 quest.reward =
 {
     fame     = 20,
-    fameArea = xi.fameArea.OTHER_AREAS,
+    fameArea = xi.fameArea.WINDURST,
 }
 
 quest.sections =
