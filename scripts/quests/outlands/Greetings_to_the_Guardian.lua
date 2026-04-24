@@ -67,10 +67,12 @@ quest.sections =
 
                     if status == xi.questStatus.QUEST_ACCEPTED and pamamas == 1 then
                         npcUtil.giveCurrency(player, 'gil', 5000)
+
                         if quest:complete(player) then
                             player:addFame(xi.fameArea.WINDURST, 100)
                             player:addTitle(xi.title.KAZHAM_CALLER)
                         end
+
                         player:setCharVar('PamamaVar', 0)
                         player:needToZone(true)
                     elseif pamamas == 2 then
