@@ -53,7 +53,7 @@ xi.quest.id =
         A_SQUIRES_TEST_II               = 19, -- + Converted
         TO_CURE_A_COUGH                 = 20, -- +
         TIGERS_TEETH                    = 23, -- + Converted
-        UNDYING_FLAMES                  = 26, -- +
+        UNDYING_FLAMES                  = 26, -- + Converted
         A_PURCHASE_OF_ARMS              = 27, -- + Converted
         A_KNIGHTS_TEST                  = 29, -- + Converted
         THE_MEDICINE_WOMAN              = 30, -- + Converted
@@ -499,7 +499,7 @@ xi.quest.id =
         TEST_MY_METTLE                  = 25, -- + Converted
         INSIDE_THE_BELLY                = 26, -- + Converted
         TRIAL_BY_LIGHTNING              = 27, -- +
-        TRIAL_SIZE_TRIAL_BY_LIGHTNING   = 28, -- +
+        TRIAL_SIZE_TRIAL_BY_LIGHTNING   = 28, -- + Converted
         ITS_RAINING_MANNEQUINS          = 29, -- + Converted
         RECYCLING_RODS                  = 30, -- + Converted
         PICTURE_PERFECT                 = 31, -- + Converted
@@ -563,7 +563,7 @@ xi.quest.id =
         TRIAL_BY_FIRE                   = 12, -- +
         CLOAK_AND_DAGGER                = 13, -- + Converted
         A_DISCERNING_EYE                = 14, -- + Converted
-        TRIAL_SIZE_TRIAL_BY_FIRE        = 15, -- +
+        TRIAL_SIZE_TRIAL_BY_FIRE        = 15, -- + Converted
 
         -- Voidwatch (100-105)
         VOIDWATCH_OPS_BORDER_CROSSING   = 100, -- + Converted
@@ -575,11 +575,11 @@ xi.quest.id =
         -- Norg (128-149)
         THE_SAHAGINS_KEY                = 128, -- +
         FORGE_YOUR_DESTINY              = 129, -- + Converted
-        BLACK_MARKET                    = 130, -- +
-        MAMA_MIA                        = 131, -- +
+        BLACK_MARKET                    = 130, -- + Converted
+        MAMA_MIA                        = 131, -- + Converted
         STOP_YOUR_WHINING               = 132, -- + Converted
         TRIAL_BY_WATER                  = 133, -- +
-        EVERYONES_GRUDGE                = 134, -- +
+        EVERYONES_GRUDGE                = 134, -- + Converted
         SECRET_OF_THE_DAMP_SCROLL       = 135, -- + Converted
         THE_SAHAGINS_STASH              = 136, -- + Converted
         ITS_NOT_YOUR_VAULT              = 137, -- +
@@ -593,8 +593,8 @@ xi.quest.id =
         TRUE_WILL                       = 145, -- +
         THE_POTENTIAL_WITHIN            = 146, -- + Converted
         BUGI_SODEN                      = 147, -- + Converted
-        TRIAL_SIZE_TRIAL_BY_WATER       = 148, -- +
-        AN_UNDYING_PLEDGE               = 149, -- +
+        TRIAL_SIZE_TRIAL_BY_WATER       = 148, -- + Converted
+        AN_UNDYING_PLEDGE               = 149, -- + Converted
 
         -- Misc (160-165)
         WRATH_OF_THE_OPO_OPOS           = 160, -- + Converted
@@ -605,15 +605,15 @@ xi.quest.id =
         OPEN_SESAME                     = 165, -- + Converted
 
         -- Rabao (192-201)
-        DONT_FORGET_THE_ANTIDOTE        = 192, -- +
+        DONT_FORGET_THE_ANTIDOTE        = 192, -- + Converted
         THE_MISSING_PIECE               = 193, -- + Converted
         TRIAL_BY_WIND                   = 194, -- +
         THE_KUFTAL_TOUR                 = 195, -- + Converted
-        THE_IMMORTAL_LU_SHANG           = 196, -- +
-        TRIAL_SIZE_TRIAL_BY_WIND        = 197, -- +
+        THE_IMMORTAL_LU_SHANG           = 196, -- + Converted
+        TRIAL_SIZE_TRIAL_BY_WIND        = 197, -- + Converted
         CHASING_DREAMS                  = 199, -- + Converted       -- CoP Quest
         THE_SEARCH_FOR_GOLDMANE         = 200, -- + Converted     -- CoP Quest
-        INDOMITABLE_SPIRIT              = 201, -- +
+        INDOMITABLE_SPIRIT              = 201, -- + Converted
     },
 
     -----------------------------------
