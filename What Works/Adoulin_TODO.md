@@ -18,6 +18,10 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 - [x] **Lamaron Yahse boat** — EA G-5, event 590, ports to Yahse default coords (361,4,-211,136). *Verify option byte 0 is the "set sail" choice.*
 - [x] **Patient_Snake Library Card** — F-9, sells Celennia Memorial Library Card KI for 1000 bayld (event 7535 / 7591). Rank gate intentionally skipped per user direction.
 - [x] **Ujlei_Zelekko ungated** — removed `if active > 0` campaign gate. Peacekeepers shop now opens always; cipher count still respects campaign state.
+- [x] **Iyvah_Halohm via CharVars** — coalition ranks read from `Coalition_Pioneers_Rank` etc. CharVars (default 0). Future coalition system writes to these without script changes; admins can `!setvar` for testing.
+- [x] **Bayld vendors (5)** — Vesca (EA, Karieyh Morion 505), Craggy_Bluff (EA, Vineslash Cesti 500), Wortherton (WA, Craftkeeper's Ring 20000), Kithvalio (WA, Critical Chop KI 20000), Ceciliotte (WA, Arborscent Seed 270). All ungated. Real event IDs from client DAT YAMLs.
+- [x] **Gobbie events corrected** — Winrix base 5135, Rewardox base 5129 (verified against client DAT YAMLs, not the 6000 guess from earlier).
+- [x] **Ornery_Dhole skipped** — Skirmish stones aren't usable without Skirmish system, and Obsidian Fragments aren't an item/currency yet.
 - [x] **6 item enums** added (Trail Cookie / Campfire Chocolate / Cascade Candy / Frontier Soda / Ulbuconut Milk / Senroh Skewer)
 
 ## Investigated and dismissed

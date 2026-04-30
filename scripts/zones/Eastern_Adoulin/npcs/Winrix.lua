@@ -8,18 +8,18 @@ local entity = {}
 
 local events =
 {
-    INTRO           = 6000,
-    DEFAULT         = 6001,
-    HOLDING_ITEM    = 6002,
-    TRADE           = 6003,
-    BAD_TRADE       = 6004,
-    DAILY_COOLDOWN  = 6005,
-    HIT_MAX         = 6006,
-    RESULT          = 6009,
-    KEY_TRADE       = 6010,
-    NO_THANKS       = 6011,
-    FULL_INV        = 6012,
-    OTHER_BAD_TRADE = 6013,
+    INTRO           = 5135,
+    DEFAULT         = 5136,
+    HOLDING_ITEM    = 5137,
+    TRADE           = 5138,
+    BAD_TRADE       = 5139,
+    DAILY_COOLDOWN  = 5140,
+    HIT_MAX         = 5141,
+    RESULT          = 5144,
+    KEY_TRADE       = 5145,
+    NO_THANKS       = 5146,
+    FULL_INV        = 5147,
+    OTHER_BAD_TRADE = 5148,
 }
 
 entity.onTrade = function(player, npc, trade)
