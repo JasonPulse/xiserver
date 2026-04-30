@@ -404,7 +404,7 @@ void CTrustController::PathOutToDistance(CBattleEntity* PTarget, float amount, b
             // Quantize masterAngle to 16-step buckets so jitter from master movement
             // doesn't shift the camp between trust ticks. Try exact master angle first,
             // then alternate outward, so all trusts converge on the same spot when valid.
-            uint8 masterAngle = worldAngle(PTarget->loc.p, POwner->PMaster->loc.p) & 0xF0;
+            uint8                masterAngle      = worldAngle(PTarget->loc.p, POwner->PMaster->loc.p) & 0xF0;
             static constexpr int spreadOffsets[5] = { 0, -16, 16, -32, 32 };
             for (std::size_t i = 0; i < positions.size(); ++i)
             {
