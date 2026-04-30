@@ -4,11 +4,20 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 
 ## Done this session
 
-- [x] **Trust AI** — Gilgamesh given 5 Tachi WSs (was empty), Zeid II gained Spinning Slash + Resolution + Weapon Bash JA fallback for stuns, Meikyo Shisui added to Gilgamesh gambit. Gilgamesh and Zeid II now actually weaponskill.
+- [x] **Trust skill lists populated** — 10 trusts had empty/wrong mob_skill_lists, now fixed:
+  - Gilgamesh, Iroha, Iroha_II — Tachi WS sets (Jinpu/Yukikaze/Kasha/Gekko/Fudo)
+  - Zeid II — Spinning Slash/Ground Strike/Resolution + Weapon Bash JA fallback
+  - August, Halver, Mnejing, Excenmille_S — PLD Sword sets (Burning/Red Lotus/Spirits Within/Atonement/Vorpal/Savage)
+  - Cid — WAR Great Axe set (Shield Break/Sturmwind/Raging Rush/Steel Cyclone/Fell Cleave/Ukko's Fury)
+  - Maximilian — THF Dagger set (Dancing Edge/Shark Bite/Evisceration/Aeolian Edge)
+- [x] **Trust gambits** — Meikyo Shisui added to Gilgamesh; Soul Eater/Last Resort gated with NOT_STATUS on Zeid II.
 - [x] **Gobbie Mystery Box** — Winrix (EA) + Rewardox (WA) wired with standard event 6000 base. *In-game verification needed: if dialog doesn't open or text is wrong, the event base needs adjusting.*
 - [x] **EA gil shops** — Bernegeois (cafe), Old_Bellows (seeds), Malgrom (seafood), Tallula (HELM tools/ammo). Standard `xi.shop.general`, no rank gating.
 - [x] **Ionis dispenser** — Quiri-Aliri (EA G-6) wired with event 1200, 10-bayld cost, 9000s duration. *Verify in-game: option byte `1` is a guess; Ionis menu may need refining if it's a multi-branch select.*
 - [x] **Delivery boxes** — Malulu + Jaded_Hawk (EA) stubbed with their respective events (7584 / 7585). *Verify: the byte_code's `0x21 0x00` tail typically opens delivery box client-side, but if it doesn't, will need a different mechanism.*
+- [x] **Lamaron Yahse boat** — EA G-5, event 590, ports to Yahse default coords (361,4,-211,136). *Verify option byte 0 is the "set sail" choice.*
+- [x] **Patient_Snake Library Card** — F-9, sells Celennia Memorial Library Card KI for 1000 bayld (event 7535 / 7591). Rank gate intentionally skipped per user direction.
+- [x] **Ujlei_Zelekko ungated** — removed `if active > 0` campaign gate. Peacekeepers shop now opens always; cipher count still respects campaign state.
 - [x] **6 item enums** added (Trail Cookie / Campfire Chocolate / Cascade Candy / Frontier Soda / Ulbuconut Milk / Senroh Skewer)
 
 ## Investigated and dismissed
@@ -19,10 +28,10 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 
 ## Real bugs still open (single-file, no rank dependency)
 
-- [ ] **`Iyvah_Halohm.lua:14-20`** — all 6 coalition ranks hardcoded to 0. Fix needs the coalition rank read API to exist; without it, can't display real ranks. Could leave as-is or stub a "coalition system pending" message.
-- [ ] **`Ujlei_Zelekko.lua:28,37`** — Peacekeepers shop gated behind Campaign extravaganza only. Either ungate entirely (always-open) or wait for coalition rank API.
-- [ ] **`Sifa_Alani.lua:40-44`** — frontier-station bitmask hardcoded all-on. Cosmetic.
-- [ ] **`DefaultActions.lua:9`** — `Nhili_Uvolep = event 545`. Possibly stale copy from Western Adoulin (where 545 = Clautaire). Verify.
+- [ ] **`Iyvah_Halohm.lua:14-20`** — all 6 coalition ranks hardcoded to 0. **Deferred** — without coalition rank API, the display would still show 0/0/0/0/0/0 (which is accurate). Wait for coalition system.
+- [x] **`Ujlei_Zelekko.lua`** — campaign gate removed. Shop now always opens.
+- [ ] **`Sifa_Alani.lua:40-44`** — frontier-station bitmask hardcoded all-on. Cosmetic, low priority.
+- [ ] **`DefaultActions.lua:9`** — `Nhili_Uvolep = event 545`. Possibly stale copy from Western Adoulin (where 545 = Clautaire). Verify next time someone triggers Nhili_Uvolep — if dialog is wrong, replace event ID.
 
 ## Behind the rank/coalition wall (skip per user — too far behind)
 
@@ -56,6 +65,8 @@ These were wired blind on best-guess data and may need iteration:
 2. Rewardox dialog flow (Gobbie Mystery Box, WA)
 3. Quiri-Aliri Ionis casting flow — option byte and event branches
 4. Malulu / Jaded_Hawk delivery box menu opening
+5. Lamaron boat — option byte 0 → Yahse setPos
+6. Patient_Snake Library Card purchase — option byte 1 → bayld deduction + KI grant
 
 ## Reminder: not Adoulin-specific but flagged
 
