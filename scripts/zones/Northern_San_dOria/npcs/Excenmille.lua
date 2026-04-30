@@ -4,8 +4,6 @@
 -- Type: Trust NPC, Ballista Pursuivant
 -- !pos -229.344 6.999 22.976 231
 -----------------------------------
-local ID = zones[xi.zone.NORTHERN_SAN_DORIA]
------------------------------------
 ---@type TNpcEntity
 local entity = {}
 
