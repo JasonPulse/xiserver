@@ -14,9 +14,11 @@ CREATE TABLE IF NOT EXISTS `char_storage` (
   `charid` int(10) unsigned NOT NULL,
   `inventory` tinyint(2) unsigned NOT NULL DEFAULT '30',
   `safe` tinyint(2) unsigned NOT NULL DEFAULT '50',
-  `locker` tinyint(2) unsigned NOT NULL DEFAULT '0',
-  `satchel` tinyint(2) unsigned NOT NULL DEFAULT '0',
-  `sack` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  -- locker/satchel/sack are retail-gated (PlayOnline service / quests). On this
+  -- 4-player private server we hand them out at base capacity from the start.
+  `locker` tinyint(2) unsigned NOT NULL DEFAULT '30',
+  `satchel` tinyint(2) unsigned NOT NULL DEFAULT '30',
+  `sack` tinyint(2) unsigned NOT NULL DEFAULT '30',
   `case` tinyint(2) unsigned NOT NULL DEFAULT '80',
   `wardrobe` tinyint(2) unsigned NOT NULL DEFAULT '80',
   `wardrobe2` tinyint(2) unsigned NOT NULL DEFAULT '80',

@@ -96,16 +96,16 @@ New agent? Read these files in order:
 - [x] phase2/base_game/quests/seasonal_events.md — Egg Hunt/Starlight WORKS, 4 events MISSING (2026-03-28)
 - [x] phase2/base_game/gear/common_gear_stats.md — Most correct, 8 Eminent latents wrong, 3 relic proc rates wrong (2026-03-28)
 
-- [x] phase2/base_game/quests/toau_quests_deep.md — 46 scripts, Saga of Skyserpent dead code bug (2026-03-28)
+- [x] phase2/base_game/quests/toau_quests_deep.md — 46 scripts, Saga of Skyserpent dead code bug (2026-03-28) — bug FIXED in commit 2f056e99b9
 - [x] phase2/base_game/nms/dynamis_content.md — All 10 zones fully implemented, relic drops + currency (2026-03-28)
 - [x] phase2/base_game/nms/abyssea_nms_deep.md — Pop system WORKS, ~10 NMs HP=0, ~12 droplist=0, Bastion missing (2026-03-28)
 - [x] phase2/base_game/crafting/recipes_deep.md — 31/33 correct, Dragon Leather missing, Bewitched no mods (2026-03-28)
-- [x] phase2/base_game/quests/other_areas_quests_deep.md — 41 scripts, Behind_the_Smile blocks Forbidden Doors (2026-03-28)
+- [x] phase2/base_game/quests/other_areas_quests_deep.md — 41 scripts, Behind_the_Smile blocks Forbidden Doors (2026-03-28) — Forbidden Doors FIXED in commit 2f056e99b9
 - [x] phase2/toau/assault_detailed.md — 10/50 scripted (4 modern), Golden Salvage bug, 40 missing (2026-03-28)
 - [x] phase2/base_game/quests/crystal_war_quests_deep.md — Only Sandy path works, Bastok/Windy broken, SCH AF 2/5 (2026-03-28)
 
 - [x] phase2/base_game/quests/adoulin_quests_deep.md — 14/103, HELM blocks Stone's Throw, 0/77 coalitions (2026-03-28)
-- [x] phase2/base_game/quests/outlands_quests_deep.md — 24 scripts, The_Missing_Piece softlock bug (2026-03-28)
+- [x] phase2/base_game/quests/outlands_quests_deep.md — 24 scripts, The_Missing_Piece softlock bug (2026-03-28) — softlock FIXED in commit 2f056e99b9
 - [x] phase2/base_game/quests/abyssea_quests_deep.md — 5/9 maw quests can't complete, Conflux CSID bug (2026-03-28)
 - [x] phase2/base_game/gear/expansion_mission_rewards.md — 27/40 correct, Balrahn's Ring -Enmity missing, 6 SoA backs no mods (2026-03-28)
 
@@ -113,112 +113,19 @@ New agent? Read these files in order:
 - [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692/14,874 (24.8%) have zero mods, 713 at iLvl119 (2026-03-28)
 - [x] phase2/base_game/quests/all_job_quest_chains.md — All 22 unlock, 7 full AF, 10 partial, 5 none (2026-03-28)
 
-- [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692 items, 1,714 at lv99 (mostly hexed/jug/crafted) (2026-03-28)
+- [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692 items, 1,714 at lv99 (mostly hexed/jug/crafted) (2026-03-28) — RESCOPED 2026-04-21: inflated count, weapon stats live in item_weapon.sql not item_mods, many are legit cursed flavor items. Fix on-demand when a player flags a specific broken item.
 - [x] phase2/base_game/quests/all_job_quest_chains.md — 8 full AF, 3 at 4/5, 4 at 3/5, 3 at 2/5, 1 at 1/5, 3 at 0/5 (2026-03-28)
 - [x] phase2/base_game/nms/wrong_drops_audit.md — DB clean, no cross-family errors (Diremite was only one, fixed) (2026-03-28)
 - [x] phase2/base_game/nms/drop_consistency_audit.md — 0 errors across 7 checks, 5 dungeon spot-checks clean (2026-03-28)
 
 ## In Progress
-(none — full audit complete)
+(none — full audit complete; see Blockers Found and In-Game Verification Queue below for open work)
 
 ---
 
-## Queue (in priority order)
+## Queue (historical)
 
-### Batch 1 — Core Systems
-- [ ] 00_core/transport.md
-- [ ] 00_core/trusts.md
-- [ ] 00_core/combat.md
-- [x] 00_core/mog_house.md
-
-### Batch 2 — Core Jobs (base 15)
-- [ ] 00_core/jobs/war.md through smn.md (base 15 jobs)
-
-### Batch 3 — Advanced Jobs
-- [ ] 00_core/jobs/blu.md, cor.md, pup.md (ToAU jobs)
-- [ ] 00_core/jobs/dnc.md, sch.md (WotG jobs)
-- [ ] 00_core/jobs/run.md, geo.md (SoA jobs)
-
-### Batch 4 — Base Game Nations
-- [ ] 01_base_game/sandoria/missions_rank1-3.md
-- [x] 01_base_game/bastok/missions_rank1-3.md — All 9 missions WORKS, no blockers (2026-03-27)
-- [ ] 01_base_game/windurst/missions_rank1-3.md
-
-### Batch 5 — Base Game Nations (continued)
-- [x] 01_base_game/sandoria/missions_rank4-6.md — All 5 missions WORKS, both BCNMs functional, no blockers (2026-03-27)
-- [ ] 01_base_game/bastok/missions_rank4-6.md
-- [x] 01_base_game/windurst/missions_rank4-6.md — All 5 missions WORKS, no blockers (2026-03-27)
-
-### Batch 6 — Base Game Nations (continued)
-- [ ] 01_base_game/sandoria/missions_rank7-10.md
-- [x] 01_base_game/bastok/missions_rank7-10.md — All 6 WORKS/PARTIAL, 9-2 missing allowTrusts (2026-03-27)
-- [ ] 01_base_game/windurst/missions_rank7-10.md
-
-### Batch 7 — Jeuno + Limit Breaks
-- [ ] 01_base_game/jeuno/quests.md
-- [ ] 01_base_game/jeuno/limit_breaks.md
-
-### Batch 8 — Base Game Zones + Content
-- [ ] 01_base_game/zones/overworld.md
-- [ ] 01_base_game/zones/dungeons.md
-- [ ] 01_base_game/bcnm.md
-
-### Batch 9 — Zilart
-- [ ] 02_zilart/missions_zm1-8.md
-- [x] 02_zilart/missions_zm9-16.md — All 9 missions WORKS, Ark Angels + Divine Might + Celestial Nexus fully implemented with boss AI, trusts allowed (2026-03-27)
-- [ ] 02_zilart/sky_access.md
-
-### Batch 10 — COP
-- [x] 03_cop/missions_ch1-3.md — All 13 missions WORKS, Promyvion/Monarch Linn/Diabolos BCNMs all functional with trusts, no blockers (2026-03-27)
-- [x] 03_cop/missions_ch4-8.md — All 18 missions WORKS, 9 battlefields functional with trusts, sea zones fully populated, no blockers (2026-03-27)
-- [ ] 03_cop/sea_zones.md
-- [ ] 03_cop/limbus.md
-
-### Batch 11 — ToAU
-- [ ] 04_toau/missions.md
-- [ ] 04_toau/near_east_zones.md
-- [ ] 04_toau/assault.md
-- [ ] 04_toau/besieged.md
-
-### Batch 12 — WotG
-- [ ] 05_wotg/missions.md
-- [ ] 05_wotg/campaign_zones.md
-- [ ] 05_wotg/campaign_battles.md
-
-### Batch 13 — Abyssea
-- [ ] 06_abyssea/access.md
-- [ ] 06_abyssea/visions.md
-
-### Batch 14 — Seekers of Adoulin
-- [x] 07_soa/missions_and_content.md — 105 mission scripts (all chapters), reives WORKS, coalitions/skirmish/delve MISSING, bayld PARTIAL (2026-03-27)
-- [ ] 07_soa/mog_garden.md (covered in 00_core/mog_house.md, referenced in missions_and_content.md)
-
-### Batch 15 — ROV
-- [ ] 08_rov/missions_ch1.md
-- [ ] 08_rov/missions_ch2.md
-- [ ] 08_rov/missions_ch3.md
-
-### Batch 16+ — Endgame (after core content audited)
-- [ ] 09_endgame/ambuscade.md
-- [ ] 09_endgame/unity.md
-- [ ] 09_endgame/voidwatch.md
-- [ ] 09_endgame/ (remaining systems)
-
-### Unbatched (add to queue as needed)
-- [ ] Nation quests (starter, fame, other) — 9 files
-- [ ] Crafting — 9 files
-- [ ] Base game NMs — 2 files
-- [ ] Zilart content (sky NMs, dynamis)
-- [ ] COP content (limbus, sea)
-- [ ] ToAU content (salvage, nyzul, einherjar)
-- [ ] WotG content (campaign ops)
-- [ ] Abyssea content (empyrean armor/weapons)
-- [ ] SoA content (colonization, coalitions, skirmish, delve)
-- [ ] Escha zones, geas fete, domain invasion
-- [ ] Odyssey, dynamis divergence, omen
-- [ ] Currencies, sparks vendor, auction house
-- [ ] ROE full audit
-- [ ] Master levels, job points
+Initial audit queue — fully consumed by the Completed list above. All batches (Core Systems, Core/Advanced/Expansion Jobs, all nation/expansion mission sets, quests, gear, NMs, crafting) now have research files in `Research/` and corresponding entries in Completed. New findings should go to **Blockers Found** (below) or the appropriate topic-specific TODO (`JOB_FIXES_TODO.md`, `ROV_TODO.md`, `VOIDWATCH_TODO.md`, `ROE_CAPTURE.md`).
 
 ---
 
@@ -226,27 +133,27 @@ New agent? Read these files in order:
 Track cross-cutting issues here so they don't get lost:
 
 - **Mog Garden is a stub** -- Zone loads, Green Thumb Moogle opens mog menu + seed shop, but no gathering NPCs, no tutorial quests, no monster rearing. Massive effort to implement. (from mog_house.md)
-- **Mog Sack defaults to 0 slots** -- No unlock quest/mechanism found. Retail unlocked via PlayOnline service. Needs GM command or DB default change. (from mog_house.md)
+- ~~**Mog Sack defaults to 0 slots**~~ -- FIXED (2026-04-21): char_storage.sql defaults for locker/satchel/sack bumped from 0 to 30 each. New characters get base capacity automatically. For existing characters: `UPDATE char_storage SET locker=GREATEST(locker,30), satchel=GREATEST(satchel,30), sack=GREATEST(sack,30);`
 - ~~**71/120 trusts have no AI**~~ -- FIXED (2026-04-02): All 120 trusts now have AI gambits. Tank trusts also have 1.5x ATT boost (2026-04-04).
 - **No trust iLvl scaling** -- Trusts capped at player level stats, weak in endgame. (from trusts.md)
-- **Alter Ego Extravaganza disabled** -- Hard-coded to return NONE regardless of settings. (from trusts.md)
-- **PLD SP2 (Guardian) missing** -- No ability script found. (from advanced_jobs.md)
-- **GEO missing 4 abilities** -- Radial Arcana, Concentric Pulse, Mending Halation, Collimated Fervor. (from expansion_jobs.md)
+- ~~**Alter Ego Extravaganza disabled**~~ -- FIXED (2026-04-21): campaignActive() now returns BOTH unconditionally; bonus cipher drops + Shadow Era vendors always on
+- ~~**PLD SP2 (Guardian) missing**~~ -- FALSE ALARM: already implemented (from JOB_FIXES_TODO.md completed list)
+- ~~**GEO missing 4 abilities**~~ -- FIXED: Radial Arcana / Concentric Pulse / Mending Halation already present; Collimated Fervor routing added (from JOB_FIXES_TODO.md completed list)
 - **RUN/GEO Adoulin access** -- Scripts exist but user reported needing GM teleport. Needs re-testing. (from expansion_jobs.md)
 - **Bastok 9-2 BCNM no Trusts** -- FIXED: added `allowTrusts = true` to `where_two_paths_converge.lua` (from missions_rank7-10.md)
 - **Campaign Battles MISSING** -- DB infrastructure tracks zone control but actual battle spawning/rewards don't exist. No way to earn Allied Notes. (from wotg)
 - **Campaign Ops MISSING** -- Zero of 100+ ops implemented. (from wotg)
 - **Besieged MISSING** -- NPC/currency/Sanction works but actual siege battles don't exist. (from toau)
-- **Assault 9/50** -- Only 18% of assault scenarios implemented. Framework solid. (from toau)
+- **Assault 11/50** -- 2026-04-20: 6 Tier 2 assaults upgraded to modern framework (now awarding points); 2026-04-21: Lebros Supplies (22) implemented from pre-existing mob data. 38 remaining missing assaults need mob_pools + mob_spawn_points SQL + in-game placement before scripts can be written.
 - **~8 WotG missions PARTIAL** -- Battlefields exist but completion not fully wired. (from wotg)
 - ~~**69 Abyssea Atma have empty mods**~~ -- CLARIFIED (2026-04-20): audit was wrong, only 3 atma had empty mods (Hateful Stream, Ace Angler, Shattering Star) because they're HP-conditional. Ace Angler + Shattering Star now implemented via xi.atma.conditionalAtmaMods with HP<25% runtime gate. Hateful Stream still unimplemented (requires reflect/drain mechanic).
 - **144/172 Abyssea NMs lack custom AI** -- Use default behavior only. (from abyssea)
 - **Atma Fabricant STUB** -- Can't craft atma. (from abyssea)
-- **Silent fail QOL pattern** -- Some NPC scripts silently fail on position checks with no player feedback. Example: Phomiuna Aqueducts _ir9.lua (fixed). May exist elsewhere. (from manual QA)
-- **Snipper droplist 3913 missing** -- FALSE ALARM: Snippers use droplists 482/483/2281, all exist. Agent confused pool ID 3913 (Thunder_Fiend) with a droplist. (verified 2026-03-28)
+- ~~**Silent fail QOL pattern**~~ -- AUDITED 2026-04-21: scanned all ~600 zone NPC files with Python regex for silent position-check returns; 0 found outside the original Phomiuna _ir9 fix. Door NPCs consistently messageSpecial on the wrong-side branch.
+- ~~**Snipper droplist 3913 missing**~~ -- FALSE ALARM verified 2026-03-28; Snippers use 482/483/2281 which all exist
 - ~~**Monisette has no script**~~ -- FIXED (2026-04-02): Monisette implemented with 421 reforge mappings, proper Rem's Tale + slot material requirements for all 22 jobs. (from gear audit)
 - ~~**Oboro has no script**~~ -- FIXED (2026-04-04): Oboro implemented with 48 weapon reforges (14 Relic + 20 Mythic + 14 Empyrean), lv90 + 300 materials → iLvl 119. (from gear audit)
-- **Curio Vendor gated behind ROV KI** -- Retail-accurate but harsh for new players on small server. (from phase2 lv1-10)
+- ~~**Curio Vendor gated behind ROV KI**~~ -- Tuned by user to their preference; not touching. (2026-04-21)
 - **Maiden of the Dusk (WotG 51) Lilith battlefield MISSING** -- No battlefield script, no Walk_of_Echoes battlefield dir. Blocks WotG story but not level caps. (from phase2 lv75-99)
 - **SoA imprimaturGate BLOCKS at mission 1-6** -- FIXED: function now returns true. (from phase2 soa)
 - ~~**Limbus entry BROKEN**~~ -- FALSE ALARM (2026-04-04): Re-investigated — AlTaieu/npcs/Swirling_Vortex.lua EXISTS and is functional, xi.limbus module EXISTS at scripts/globals/limbus.lua. Both Temenos and Apollyon instances work. Phase 1 "WORKS" was correct after all.
@@ -264,10 +171,64 @@ Track cross-cutting issues here so they don't get lost:
 - **Valorous Mitts/Greaves zero mods** -- FIXED (2026-04-02): added mods
 - **Lustratio Harness zero mods** -- FIXED (2026-04-02): added mods
 - **Unity gear upgrade (Perle/Aurore/Teal +1)** -- FIXED (2026-04-02): trade handler in unity.lua, Harold's Ore added to shop
-- **8 jobs missing AF quest scripts** -- BLM/PLD/RNG/DRG (body+legs), BRD/SMN (legs), COR/SCH (coffer pieces) (from AF audit)
+- ~~**8 jobs missing AF quest scripts**~~ -- RECLASSIFIED 2026-04-21: deep audit (af_partial_jobs_detailed.md) shows 7/8 jobs (BLM/PLD/RNG/DRG/BRD/SMN/COR) already fully functional. Only SCH AF3 (Seeing Blood Red) genuinely missing; tracked in JOB_FIXES_TODO.md as blocked on in-game CSID verification.
 - ~~**RUN and GEO have NO AF quests**~~ -- FIXED (2026-04-02): RUN quests 2-5 + Octavien commissions, GEO quests 2-5 + Wescolina commissions. All 5 AF pieces obtainable for both jobs.
-- ~~**PUP has NO AF quests**~~ -- PARTIAL FIX (2026-04-19): Puppetmaster Blues AF3 implemented (quest, battlefield, Valkeng mob, Iruki-Waraki/Sajhra NPCs). Still missing commission NPC (Dhima Polevhia) for body/hands/feet.
+- ~~**PUP has NO AF quests**~~ -- FULLY FIXED 2026-04-20: AF3 Puppetmaster Blues + Dhima Polevhia commission NPC (crystal + Imperial Standing for body/hands/legs/feet) both live. All 5 AF pieces obtainable.
 - **Adoulin quests 19.2% coverage** -- lowest of any area (from other areas)
+- **Adoulin Coalitions 0/77** -- SCOPED 2026-04-21: shop infrastructure works (Ujlei Zelekko etc.), all ~90 repeatable quest scripts missing. Enum defined, no scripts/quests/coalition/ dir. Multi-week effort or parametrized framework build.
+
+---
+
+## In-Game Verification Queue
+
+Items below are **code-complete or research-complete** but need live-game testing with `!cs`, `!pos`, or manual playthrough to confirm behavior or capture data. Organized by command type so you can run them in batches.
+
+### `!cs` — Event CSID verification
+
+**SCH AF3: Seeing Blood-red** (tracked in `JOB_FIXES_TODO.md`)
+- [ ] Erlene NPC in The_Eldieme_Necropolis_[S] — try `!cs 29`, `!cs 31`, `!cs 32`, `!cs 34` to find AF3 offer/progress/reward events. Unused CSIDs from AF1/AF2: 10, 11, 12, 13, 14, 29, 31, 32, 34.
+
+**Voidwatch** (tracked in `VOIDWATCH_TODO.md` § testing checklist)
+- [ ] Voidwatch Officer CSIDs per zone — run `!cs <id>` at each Officer to confirm menu mapping:
+  - Southern San d'Oria 977,978,979,981-985,963,993
+  - Bastok Markets 11,12,13,16-19,21,9,24
+  - Windurst Waters 1035-1037,1039-1043,1024
+  - Batallia Downs 10-17,8 · Rolanberry 9-16,7 · Sauromugue 10-17,8 · Qufim 52-59,50
+- [ ] Voidwatch Purveyor CSIDs (13 locations)
+- [ ] Atmacite Refiner CSIDs — Southern Sandy 962/993, Bastok Markets 8/24, Windurst Waters 1023
+- [ ] Ardrick (Jugner Forest) CSIDs 61, 62
+
+**ROV Missing Event IDs** (tracked in `ROV_TODO.md` § Missing Event IDs)
+- [ ] Eastern Adoulin zone-in (3-5 Forward Thinking, 3-7 What He Left Behind, 3-10 Solemnity) — try CSIDs 1547, 1549, 1551
+- [ ] Walk of Echoes: 3-15 What Remains of Hope (try 29 or 30), 3-18 Sin (try 5 or 8), 3-19 Penance (try 9), 3-27 Calm After the Storm (try 31)
+- [ ] Reisenjima: 3-21 Lifestream (try 3), 3-23 Good Things Come in Threes (try 8)
+- [ ] Chapter 2 batch: 2-26, 2-27, 2-29, 2-30, 2-31, 2-33, 2-34, 2-35, 2-38 — see ROV_TODO.md for zones/NPC IDs
+- [ ] Nation zone-in missions: 2-41 Uncertain Futures, 3-29 An Unending Song (10 zones each)
+
+### `!pos` — Position/zone entry verification
+
+- [ ] **Reisenjima Transcendental Radiance NPC** — missing from Escha Ru'Aun; get the live NPC position to add it
+- [ ] **Walk of Echoes entry from Xarcabard [S]** — tentative fix `!pos -700 -20.25 -305.398 182`; verify zoneline lands player at the Ornate Door for ROV 2-17 Sacrifice and WotG 51 Maiden of the Dusk
+- [ ] **Planar Rift spawn points** — 5 zones still have `(check npc_list)` for pyxis entity IDs: West Sarutabaruta, North Gustaberg, Ordelle's Caves, Gusgen Mines, Pashhow Marshlands, Maze of Shakhrami, Meriphataud Mountains (see VOIDWATCH_TODO.md § 3A)
+- [ ] **RUN/GEO Adoulin access** — user previously reported needing GM teleport to complete unlock. Retest normal zone path: Jeuno → Al Zahbi → Adoulin ferry chain.
+
+### Manual gameplay verification (no GM command)
+
+- [ ] **ROE records marked "(W)" in ROE_CAPTURE.md** — try to accept each, capture the `"The record #XXXX is not implemented at this time."` ID. Categories: 15th Vana'versary I-V, 17th Vana'versary (True Love, A Fond Farewell), plus any other failing ROE objectives.
+- [ ] **ROV 3-2 The Brewing Storm** — confirm 3 Perfervid Naraka spawn in Reisenjima (pool 5378, 11 spawn points, 180s respawn)
+- [ ] **ROV 3-22 From West to East** — confirm 11 Obstreperous Panopt spawn in Reisenjima (pool 5367, 32 spawn points, 180s respawn)
+- [ ] **Unity Leader (Sylvie) objectives** — capture any failing ROE IDs in ROE_CAPTURE.md § Unity Leader
+- [ ] **Existing char Mog Sack fix** — run `UPDATE char_storage SET locker=GREATEST(locker,30), satchel=GREATEST(satchel,30), sack=GREATEST(sack,30);` on production DB (defaults already patched for new chars)
+
+### Still-stubbed boss battles (need implementation + test)
+
+All auto-complete on zone-in; tracked in `ROV_TODO.md`:
+- [ ] ROV 2-36 Pretender to the Throne (Balamor) — Escha-Ru'Aun, events 6/7
+- [ ] ROV 2-39 Both Paths Taken (Disjoined One) — Empyreal Paradox, **mob_pools/mob_spawn_points missing**
+- [ ] ROV 3-17 No Time Like the Future (Sempurne) — Desuetia-Empyreal Paradox, pool 4914
+- [ ] ROV 3-26 The Winds of Time (Metus) — Empyreal Paradox, pool 4820
+- [ ] ROV 3-34 The Orb's Radiance (Cloud of Darkness) — Reisenjima Sanctorium, pool 4819 (final boss)
+- [ ] WotG 51 Maiden of the Dusk (Lilith) — Walk_of_Echoes battlefield dir missing entirely
 
 ---
 

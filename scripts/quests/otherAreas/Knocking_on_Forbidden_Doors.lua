@@ -17,10 +17,11 @@ quest.sections =
 {
     -- START: Talk to Enaremand (J-7) on the upper level in Tavnazian Safehold
     -- QUEST AVAILABLE
+    -- Retail prereq was "Behind the Smile" (quest 77), but that quest has no script
+    -- in this repo — gating on it would make Forbidden Doors permanently unreachable.
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.BEHIND_THE_SMILE)
+            return status == xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.TAVNAZIAN_SAFEHOLD] =

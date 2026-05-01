@@ -20,6 +20,7 @@ zones[xi.zone.WESTERN_ADOULIN] =
         LOGIN_CAMPAIGN_UNDERWAY       = 7003,  -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!
         LOGIN_NUMBER                  = 7004,  -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
         BAYLD_OBTAINED                = 7008,  -- You have obtained <number> bayld!
+        NOT_ENOUGH_BAYLD              = 7009,  -- You do not have enough bayld!
         YOU_CAN_NOW_BECOME            = 7012,  -- You can now become a [geomancer/rune fencer]!
         MEMBERS_LEVELS_ARE_RESTRICTED = 7024,  -- Your party is unable to participate because certain members' levels are restricted.
         MOG_LOCKER_OFFSET             = 7593,  -- Your Mog Locker lease is valid until <timestamp>, kupo.

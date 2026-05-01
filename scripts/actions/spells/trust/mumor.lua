@@ -58,7 +58,7 @@ spellObject.onMobSpawn = function(mob)
             master and
             master:getMainJob() == healingJobs[i]
         then
-            mob:addGambit(ai.t.SELF, { ai.c.NO_SAMBA, ai.r.JA }, { 0, ai.s.SPECIFIC, xi.ja.HASTE_SAMBA })
+            mob:addGambit(ai.t.SELF, { ai.c.NO_SAMBA, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.HASTE_SAMBA })
         end
     end
 

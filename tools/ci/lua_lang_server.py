@@ -112,7 +112,11 @@ os_to_asset = {
 # URL of the GitHub API
 api_url = f"https://api.github.com/repos/LuaLS/lua-language-server/releases/{f"tags/{args.version}" if args.version else "latest"}"
 
-response = requests.get(api_url)
+# Use GITHUB_TOKEN when available (CI) to avoid anonymous rate limits.
+github_token = os.environ.get("GITHUB_TOKEN")
+request_headers = {"Authorization": f"Bearer {github_token}"} if github_token else {}
+
+response = requests.get(api_url, headers=request_headers)
 
 if response.status_code == 200:
     release_data = response.json()
@@ -126,7 +130,7 @@ if response.status_code == 200:
             break
 
     if download_url:
-        response = requests.get(download_url, stream=True)
+        response = requests.get(download_url, stream=True, headers=request_headers)
         if response.status_code == 200:
             with open(
                 f"./lua-language-server.{os_to_asset.get(current_os)}", "wb"
@@ -135,9 +139,13 @@ if response.status_code == 200:
                     file.write(chunk)
             print("Language server downloaded successfully.")
         else:
-            print("Failed to download the language server.")
+            print(f"Failed to download the language server (HTTP {response.status_code}).")
 else:
-    print("Failed to access the release page.")
+    print(
+        f"Failed to access the release page (HTTP {response.status_code}). "
+        "Skipping LuaLS check — GitHub API likely rate-limited."
+    )
+    exit(0)
 
 if os.path.exists(f"./lua-language-server.{os_to_asset.get(current_os)}"):
     if current_os == "Windows":
@@ -152,7 +160,8 @@ if os.path.exists(f"./lua-language-server.{os_to_asset.get(current_os)}"):
             tar_ref.extractall("./lua-language-server")
     print("Language server extracted successfully.")
 else:
-    print("The downloaded file does not exist.")
+    print("The downloaded file does not exist. Skipping LuaLS check.")
+    exit(0)
 
 lua_server_path = os.path.join("./lua-language-server", "bin", "lua-language-server")
 config_path = "./.vscode/settings.json"

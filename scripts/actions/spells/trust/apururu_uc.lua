@@ -64,7 +64,7 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setAutoAttackEnabled(false)
 
-    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.MID_RANGE)
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end
 
 spellObject.onMobDespawn = function(mob)

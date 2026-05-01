@@ -50,7 +50,8 @@ enum TRUST_MOVEMENT_TYPE : int8
     //     : Will set the combat distance the trust tries to stick to to 20'
     // NOTE: If a Trust doesn't immediately sprint to a certain distance at the start of battle, it's probably NO_MOVE or MELEE.
     SONG_ROTATION = -2, // BRD: alternates between melee range (for March/Madrigal) and caster range (for Ballad) every 30s
-    NO_MOVE       = -1, // Will stand still providing they're within casting distance of their master and target when the fight starts. Otherwise will reposition to be within 9.0' of both
+    NO_MOVE       = -1, // Don't move from where summoned. Repositions only if master gets too far for casting.
+    CASTER_CAMP   = 15, // Caster camp: 15' from mob on master's side, all CASTER_CAMP trusts cluster at the same spot
     MELEE         = 0,  // Default: will continually reposition to stay within melee range of the target
     MID_RANGE     = 6,  // Will path at the start of battle to 6' away from the target, and try to stay at that distance
     LONG_RANGE    = 12, // Will path at the start of battle to 12' away from the target, and try to stay at that distance
@@ -192,10 +193,12 @@ void CTrustController::DoCombatTick(timer::time_point tick)
                 }
                 case TRUST_MOVEMENT_TYPE::NO_MOVE:
                 {
-                    // Actively path to the caster cluster (master's side of mob) so support/caster
-                    // trusts separate from melee. PathOutToDistance has its own distance tolerance,
-                    // so once positioned the trust stays put.
-                    PathOutToDistance(PTarget, 9.0f, true);
+                    // Stand still near where summoned. Only reposition if outside casting
+                    // range from the master (so spells can still land on the party).
+                    if (POwner->PMaster && distance(POwner->loc.p, POwner->PMaster->loc.p) > 18.0f)
+                    {
+                        PathOutToDistance(PTarget, 9.0f, true);
+                    }
                     break;
                 }
                 case TRUST_MOVEMENT_TYPE::MELEE:
@@ -397,13 +400,15 @@ void CTrustController::PathOutToDistance(CBattleEntity* PTarget, float amount, b
 
         if (groupWithMaster && POwner->PMaster)
         {
-            // Position on master's side of the mob — all ranged trusts group together
-            auto masterAngle = worldAngle(PTarget->loc.p, POwner->PMaster->loc.p);
+            // Position on master's side of the mob — all ranged trusts group together.
+            // Quantize masterAngle to 16-step buckets so jitter from master movement
+            // doesn't shift the camp between trust ticks. Try exact master angle first,
+            // then alternate outward, so all trusts converge on the same spot when valid.
+            uint8                masterAngle      = worldAngle(PTarget->loc.p, POwner->PMaster->loc.p) & 0xF0;
+            static constexpr int spreadOffsets[5] = { 0, -16, 16, -32, 32 };
             for (std::size_t i = 0; i < positions.size(); ++i)
             {
-                // Small spread around the master's angle (+/- 16 out of 256)
-                int        spread             = static_cast<int>(i) * 8 - 16;
-                int        angle              = (masterAngle + spread) & 0xFF;
+                int        angle              = (masterAngle + spreadOffsets[i]) & 0xFF;
                 position_t potential_position = {
                     PTarget->loc.p.x - (cosf(rotationToRadian(angle)) * amount),
                     PTarget->loc.p.y,

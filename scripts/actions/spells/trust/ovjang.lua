@@ -22,7 +22,7 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 75 }, { ai.r.MA, ai.s.MP_SCALED, xi.magic.spellFamily.CURE })
 
     mob:setAutoAttackEnabled(false)
-    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.MID_RANGE)
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end
 
 spellObject.onMobDespawn = function(mob)

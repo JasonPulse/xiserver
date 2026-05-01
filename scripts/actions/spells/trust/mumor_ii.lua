@@ -20,7 +20,7 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.TARGET, { ai.c.NOT_SC_AVAILABLE, 0 }, { ai.r.MA, ai.s.BEST_AGAINST_TARGET, xi.magic.spellFamily.FIRE })
 
     mob:setAutoAttackEnabled(false)
-    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.NO_MOVE)
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end
 
 spellObject.onMobDespawn = function(mob)

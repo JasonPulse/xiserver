@@ -255,24 +255,24 @@ xi.settings.main =
 
     -- CELEBRATIONS
     EXPLORER_MOOGLE_LV              = 10, -- Enables Explorer Moogle teleports and sets required level. Zero to disable.
-    HALLOWEEN_2005                  = 0,  -- Set to 1 to Enable the 2005 version of Harvest Festival, will start on Oct. 20 and end Nov. 1.
+    HALLOWEEN_2005                  = 1,  -- Set to 1 to Enable the 2005 version of Harvest Festival, will start on Oct. 20 and end Nov. 1.
     HALLOWEEN_YEAR_ROUND            = 0,  -- Set to 1 to have Harvest Festival initialize outside of normal times.
     EGG_HUNT                        =
     {
         START                       = { DAY = 6,  MONTH = 4 },
         FINISH                      = { DAY = 17, MONTH = 4 },
 
-        -- Default era is 2005
-        ERA_2006 = false, -- Orphic Egg
-        ERA_2007 = false, -- Jeweled Egg and Egg Helm
-        ERA_2008 = false, -- Tier 2 nation eggs, allows trading Hard-Boiled Eggs
-        ERA_2009 = false, -- Egg Buffet set
-        -- 2009, 2010, 2011 and 2012 are identical
-        ERA_2013 = false, -- Prinseggstarta
-        ERA_2014 = false, -- Hatchling Shield, Copse Candy, Cracker
-        ERA_2015 = false, -- Rabbit Cap, show Rabbit Cap wearing NPCs
-        ERA_2018 = false, -- Allows trading Sairui-Ran x99 and Imperial Egg
-        ERA_2019 = false, -- Allows trading Apkallu Egg
+        -- All eras enabled on this small private server so every Egg Hunt
+        -- reward tier is reachable without waiting for retail-era gating.
+        ERA_2006 = true, -- Orphic Egg
+        ERA_2007 = true, -- Jeweled Egg and Egg Helm
+        ERA_2008 = true, -- Tier 2 nation eggs, allows trading Hard-Boiled Eggs
+        ERA_2009 = true, -- Egg Buffet set
+        ERA_2013 = true, -- Prinseggstarta
+        ERA_2014 = true, -- Hatchling Shield, Copse Candy, Cracker
+        ERA_2015 = true, -- Rabbit Cap, show Rabbit Cap wearing NPCs
+        ERA_2018 = true, -- Allows trading Sairui-Ran x99 and Imperial Egg
+        ERA_2019 = true, -- Allows trading Apkallu Egg
 
         -- Consolation prizes for repeating combinations where
         -- the player has already received the relevant reward
@@ -289,7 +289,7 @@ xi.settings.main =
 
     -- Login Campaign (Set to 0 if you don't want to run a Login Campaign)
     -- Please visit scripts/globals/events/login_campaign.lua for assigning the correct campaign dates.
-    ENABLE_LOGIN_CAMPAIGN = 0,
+    ENABLE_LOGIN_CAMPAIGN = 1,
 
     -- FISH RANKING CONTEST
     -- Set to false to require manual progression of contest

@@ -34,11 +34,7 @@ entity.onTrigger = function(player, npc)
         [3] = 116, -- Both campaigns
     }
 
-    if active > 0 then -- TODO: implement logic to know when to display full Coalition Menu
-        player:startEvent(7513, 0, ciphers[active], edification, bayld)
-    else
-        -- Stare blankly For now
-    end
+    player:startEvent(7513, 0, ciphers[active], edification, bayld)
 end
 
 entity.onEventFinish = function(player, csid, option, npc)
