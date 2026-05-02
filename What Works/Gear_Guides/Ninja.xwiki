@@ -1,0 +1,476 @@
+= 🥷 Ninja — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You evasion tank or DPS — Utsusemi / Dual Wield. You need: healer (no self-cures), Haste, DPS.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Healer — NIN has zero self-cures, shadows drop, you need reliable backup</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Koru-Moru">Koru-Moru</a></strong></td><td>Haste on melee (Dual Wield loves Haste), Refresh, Slow/Dispel on mob</td></tr>
+<tr><td class="lv">3</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March + Madrigal — NIN eats accuracy, boosts throwing weapon hit rate</td></tr>
+<tr><td class="lv">4</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + 4 stun interrupts — backup when your Utsusemi drops</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Ayame">Ayame</a></strong></td><td>Self-sufficient SAM DPS, no overlap</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Main ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Kunai_+1">Kunai +1</a></td><td>Starter</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Wakizashi_+1">Wakizashi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Beestinger">Beestinger</a></td><td>—</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Aspir_Knife">Aspir Knife</a></td><td>—</td></tr>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Shinobi-gatana_+1">Shinobi-gatana +1</a> · <a href="https://www.bg-wiki.com/ffxi/Kyofu_+1">Kyofu +1</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Gassan">Gassan</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Mokuto_+1">Mokuto +1</a></td><td>—</td></tr>
+<tr><td class="lv">19</td><td><a href="https://www.bg-wiki.com/ffxi/Suzume">Suzume</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Ganko">Ganko</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Hibari_+1">Hibari +1</a></td><td>—</td></tr>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Busuto_+1">Busuto +1</a></td><td>—</td></tr>
+<tr><td class="lv">28</td><td><a href="https://www.bg-wiki.com/ffxi/Fukuro">Fukuro</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Nikkariaoe">Nikkariaoe</a></td><td>—</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/Kodachi_+1">Kodachi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Reppu_+1">Reppu +1</a></td><td>—</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Midare_+1">Midare +1</a></td><td>—</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Niokiyotsuna">Niokiyotsuna</a></td><td>—</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Ohaguro">Ohaguro</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Anju">Anju</a> · <a href="https://www.bg-wiki.com/ffxi/Zushio">Zushio</a></td><td>—</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Bokuto_+1">Bokuto +1</a></td><td>—</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Sakurafubuki_+1">Sakurafubuki +1</a></td><td>—</td></tr>
+<tr><td class="lv">46</td><td><a href="https://www.bg-wiki.com/ffxi/Yoto_+1">Yoto +1</a></td><td>—</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Hien_+1">Hien +1</a></td><td>—</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Sai_+1">Sai +1</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Shinogi">Shinogi</a></td><td>—</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Keppu_+1">Keppu +1</a> · <a href="https://www.bg-wiki.com/ffxi/Muketsu_+1">Muketsu +1</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Dotanuki">Dotanuki</a></td><td>—</td></tr>
+<tr><td class="lv">57</td><td><a href="https://www.bg-wiki.com/ffxi/Hocho">Hocho</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Sairen">Sairen</a></td><td>—</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Kabutowari_+1">Kabutowari +1</a></td><td>—</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Kogitsunemaru">Kogitsunemaru</a></td><td>—</td></tr>
+<tr><td class="lv">66</td><td><a href="https://www.bg-wiki.com/ffxi/Kororito_+1">Kororito +1</a></td><td>—</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Imanotsurugi">Imanotsurugi</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Amanojaku">Amanojaku</a></td><td>—</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Osoraku">Osoraku</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Fudo">Fudo</a> · <a href="https://www.bg-wiki.com/ffxi/Karasuageha">Karasuageha</a> · <a href="https://www.bg-wiki.com/ffxi/Ryumon">Ryumon</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Kodachi_of_Trials">Kodachi of Trials</a> · <a href="https://www.bg-wiki.com/ffxi/Sayosamonji">Sayosamonji</a> · <a href="https://www.bg-wiki.com/ffxi/Unsho">Unsho</a> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hayabusa_+1">Hayabusa +1</a></strong></td><td>Hayabusa: low delay TP build</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mamushito_+1">Mamushito +1</a> · <a href="https://www.bg-wiki.com/ffxi/Senjuinrikio">Senjuinrikio</a> · <a href="https://www.bg-wiki.com/ffxi/Shamo">Shamo</a> · <a href="https://www.bg-wiki.com/ffxi/Unji">Unji</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Hirenjaku_+1">Hirenjaku +1</a> · <a href="https://www.bg-wiki.com/ffxi/Shiranui">Shiranui</a> · <a href="https://www.bg-wiki.com/ffxi/Izayoi_+1">Izayoi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Tojaku">Tojaku</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Kugui">Kugui</a> · <a href="https://www.bg-wiki.com/ffxi/Otori">Otori</a> · <a href="https://www.bg-wiki.com/ffxi/Rai_Kunimitsu">Rai Kunimitsu</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Kikoku">Kikoku</a></strong></td><td>NIN relic — best main hand</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Sub ==
+
+**Note:** From lvl 10 with Dual Wield, any single-handed weapon in the main list can also be used sub.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Wakizashi_+1">Wakizashi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Beestinger">Beestinger</a></td><td>—</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Hornetneedle">Hornetneedle</a></td><td>Death from Above NM</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Buboso">Buboso</a> · <a href="https://www.bg-wiki.com/ffxi/Kageboshi">Kageboshi</a> · <a href="https://www.bg-wiki.com/ffxi/Mercurial_Kris">Mercurial Kris</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Hototogisu">Hototogisu</a></td><td>—</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Kitsutsuki">Kitsutsuki</a></td><td>—</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Yagentoshiro">Yagentoshiro</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Perdu_Blade">Perdu Blade</a></strong></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🏹 Ranged & Ammo =
+
+== Range ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Rogetsurin">Rogetsurin</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Junior_Musketeer%27s_Chakram_+1">Junior Musketeer's Chakram +1 / +2</a></td><td>—</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Bailathorn">Bailathorn</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ungur_Boomerang">Ungur Boomerang</a></strong></td><td>Endgame ranged — very low delay + Eva +8</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ammo ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">30</td><td>RSE Ammo</td><td>Race-locked +stat sachets</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Bomb_Core">Bomb Core</a></td><td>+Atk piece if not pulling</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Fenrir%27s_Stone">Fenrir's Stone</a> · <a href="https://www.bg-wiki.com/ffxi/Fire_Bomblet">Fire Bomblet</a></td><td>+6 Acc · -6 Atk vs Bomb Core</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Cap_+1">Bronze Cap +1</a> · <a href="https://www.bg-wiki.com/ffxi/Cache-nez">Cache-nez</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Bandana_+1">Leather Bandana +1</a></td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Hachimaki_+1">Hachimaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Bandana">Royal Footman's Bandana</a> · <a href="https://www.bg-wiki.com/ffxi/Sol_Cap">Sol Cap</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Erudite%27s_Headband">Erudite's Headband</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Kingdom_Bandana">Kingdom Bandana</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Mask_+1">Bone Mask +1</a></td><td>—</td></tr>
+<tr><td class="lv">17</td><td><a href="https://www.bg-wiki.com/ffxi/Lizard_Helm_+1">Lizard Helm +1</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Cotton_Hachimaki_+1">Cotton Hachimaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Hachimaki">Mercenary's Hachimaki</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Mask_+1">Beetle Mask +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> / <a href="https://www.bg-wiki.com/ffxi/Emperor_Hairpin">Emperor Hairpin</a> · <a href="https://www.bg-wiki.com/ffxi/Iron_Mask_+1">Iron Mask +1</a></td><td>Hairpin: HP -15 · DEX/AGI +3 · Eva +10 — NIN evasion staple</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Hachimaki">Federation Hachimaki</a> · <a href="https://www.bg-wiki.com/ffxi/Shade_Tiara_+1">Shade Tiara +1</a></td><td>—</td></tr>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Dodge_Headband">Dodge Headband</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Soil_Hachimaki_+1">Soil Hachimaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Helm">Royal Squire's Helm</a></td><td>—</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Kingdom_Helm">Kingdom Helm</a></td><td>—</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Alluring_Headband">Alluring Headband</a></td><td>—</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Dobson_Bandanna">Dobson Bandanna</a></td><td>—</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a></td><td>STR +3 · DEX +4</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Walkure_Mask">Walkure Mask</a></td><td>—</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Carapace_Mask_+1">Carapace Mask +1</a></td><td>—</td></tr>
+<tr><td class="lv">46</td><td><a href="https://www.bg-wiki.com/ffxi/Juggler%27s_Headband">Juggler's Headband</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Shinobi_Hachigane_+1">Shinobi Hachigane +1</a></td><td>NIN AF</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Super_Ribbon">Super Ribbon</a></td><td>—</td></tr>
+<tr><td class="lv">53</td><td><a href="https://www.bg-wiki.com/ffxi/Monsoon_Jinpachi">Monsoon Jinpachi</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Akinji_Khud">Akinji Khud</a> · <a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Bascinet">Royal Knight's Bascinet</a></td><td>—</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Hatsuburi">Ninja Hatsuburi</a></td><td>—</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Arhat%27s_Jinpachi_+1">Arhat's Jinpachi +1</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Wivre_Mask_+1">Wivre Mask +1</a></td><td>—</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Prism_Headband">Prism Headband</a></td><td>—</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Goblin_Cracker">Goblin Cracker</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Feral_Mask">Feral Mask</a></td><td>Hakutaku — Acc/R.Acc/Eva +10</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Yasha_Jinpachi_+1">Yasha Jinpachi +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Qalansuwa">Pahluwan Qalansuwa</a> · <a href="https://www.bg-wiki.com/ffxi/Rasetsu_Jinpachi_+1">Rasetsu Jinpachi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Cap">Enkidu's Cap</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Koga_Hatsuburi">Koga Hatsuburi</a> · <a href="https://www.bg-wiki.com/ffxi/Roshi_Jinpachi_+1">Roshi Jinpachi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Shura_Zunari_Kabuto_+1">Shura Zunari Kabuto +1</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Hatsuburi_+1">Ninja Hatsuburi +1</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Genbu%27s_Kabuto">Genbu's Kabuto</a> · <a href="https://www.bg-wiki.com/ffxi/Koga_Hatsuburi_+1">Koga Hatsuburi +1</a> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Denali_Bonnet">Denali Bonnet</a></strong></td><td>Walahra: Haste +5%. Denali: Haste +4% with extra Acc/Eva.</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Beret">Aurore Beret</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Wing_Pendant">Wing Pendant</a></td><td>AGI +1</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>STR/DEX +3</td></tr>
+<tr><td class="lv">33</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a> / <a href="https://www.bg-wiki.com/ffxi/Peacock_Amulet">Peacock Amulet</a></strong></td><td>Acc/R.Acc +10</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Spirit_Torque">Spirit Torque</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>STR +3 · Acc +5 · Store TP +1</td></tr>
+<tr><td class="lv">65</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Evasion_Torque">Evasion Torque</a></strong></td><td>NIN evasion-tank essential</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Ritter_Gorget">Ritter Gorget</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Hope_Torque">Hope Torque</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Harness_+1">Bronze Harness +1</a> · <a href="https://www.bg-wiki.com/ffxi/Fourth_Tunica">Fourth Tunica</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Vest_+1">Leather Vest +1</a></td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Kenpogi_+1">Kenpogi +1</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Vest">Royal Footman's Vest</a></td><td>—</td></tr>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Power_Gi">Power Gi</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/San_d%27Orian_Vest">San d'Orian Vest</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Harness_+1">Bone Harness +1</a></td><td>—</td></tr>
+<tr><td class="lv">17</td><td><a href="https://www.bg-wiki.com/ffxi/Fine_Jerkin">Fine Jerkin</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Cotton_Dogi_+1">Cotton Dogi +1</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Gi">Mercenary's Gi</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Harness_+1">Beetle Harness +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Chainmail_+1">Chainmail +1</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Gi">Federation Gi</a> · <a href="https://www.bg-wiki.com/ffxi/Shade_Harness_+1">Shade Harness +1</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Soil_Gi_+1">Soil Gi +1</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Nanban_Kariginu">Nanban Kariginu</a></td><td>—</td></tr>
+<tr><td class="lv">33</td><td>RSE Body</td><td>Race-locked stats</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Jujitsu_Gi">Jujitsu Gi</a> · <a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Chainmail">Royal Squire's Chainmail</a></td><td>—</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Chainmail_+2">Royal Squire's Chainmail +2</a></td><td>—</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Brigandine_+1">Brigandine +1</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Shinobi_Gi_+1">Shinobi Gi +1</a></td><td>NIN AF</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Nokizaru_Gi">Nokizaru Gi</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Akinji_Peti">Akinji Peti</a> · <a href="https://www.bg-wiki.com/ffxi/Master%27s_Gi_+1">Master's Gi +1</a> · <a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Chainmail">Royal Knight's Chainmail</a></td><td>—</td></tr>
+<tr><td class="lv">57</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness_+1">Scorpion Harness +1</a></strong></td><td>HP/Acc/Eva +12 — TP/Eva staple</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Chainmail">Ninja Chainmail</a></td><td>—</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Haubergeon_+1">Haubergeon +1</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Byrnie_+1">Byrnie +1</a></td><td>—</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Arhat%27s_Gi_+1">Arhat's Gi +1</a></td><td>—</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Assault_Jerkin">Assault Jerkin</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/War_Shinobi_Gi_+1">War Shinobi Gi +1</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Yasha_Samue_+1">Yasha Samue +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Khazagand">Pahluwan Khazagand</a> · <a href="https://www.bg-wiki.com/ffxi/Rasetsu_Samue_+1">Rasetsu Samue +1</a> · <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Harness">Enkidu's Harness</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Shura_Togi_+1">Shura Togi +1</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Koga_Chainmail">Koga Chainmail</a> · <a href="https://www.bg-wiki.com/ffxi/Ninja_Chainmail_+1">Ninja Chainmail +1</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Kirin%27s_Osode">Kirin's Osode</a> · <span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Koga_Chainmail_+1">Koga Chainmail +1</a></strong> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Denali_Jacket">Denali Jacket</a></strong></td><td>Koga +1: NIN relic</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Doublet">Aurore Doublet</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Mittens_+1">Bronze Mittens +1</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Gloves_+1">Leather Gloves +1</a></td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Tekko_+1">Tekko +1</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Gloves">Royal Footman's Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Kingdom_Gloves">Kingdom Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Mittens_+1">Bone Mittens +1</a></td><td>—</td></tr>
+<tr><td class="lv">17</td><td><a href="https://www.bg-wiki.com/ffxi/Fine_Gloves">Fine Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Cotton_Tekko_+1">Cotton Tekko +1</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Tekko">Mercenary's Tekko</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Mittens_+1">Beetle Mittens +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Chain_Mittens_+1">Chain Mittens +1</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Tekko">Federation Tekko</a> · <a href="https://www.bg-wiki.com/ffxi/Shade_Mittens_+1">Shade Mittens +1</a></td><td>—</td></tr>
+<tr><td class="lv">27</td><td>RSE Hands</td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Soil_Tekko_+1">Soil Tekko +1</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Mufflers">Royal Squire's Mufflers</a></td><td>—</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Horomusha_Kote">Horomusha Kote</a> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ochiudo%27s_Kote">Ochiudo's Kote</a></strong></td><td>Atk +20 — long-running standard</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Gothic_Gauntlets">Gothic Gauntlets</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Shinobi_Tekko_+1">Shinobi Tekko +1</a></td><td>NIN AF</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Mufflers">Royal Knight's Mufflers</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Mufflers_+2">Royal Knight's Mufflers +2</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Akinji_Bazubands">Akinji Bazubands</a></td><td>—</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Sand_Gloves">Sand Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Tekko">Ninja Tekko</a></td><td>—</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Arhat%27s_Tekko_+1">Arhat's Tekko +1</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Praefectus%27s_Gloves">Praefectus's Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Yasha_Tekko_+1">Yasha Tekko +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Dastanas">Pahluwan Dastanas</a> · <a href="https://www.bg-wiki.com/ffxi/Rasetsu_Tekko_+1">Rasetsu Tekko +1</a> · <a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves">Dusk Gloves</a> · <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Mittens">Enkidu's Mittens</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Bandomusha_Kote">Bandomusha Kote</a> · <span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hanzo_Tekko">Hanzo Tekko</a></strong></td><td>Hanzo: NIN-specific endgame</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Tekko_+1">Ninja Tekko +1</a> · <a href="https://www.bg-wiki.com/ffxi/Noritsune_Kote">Noritsune Kote</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Koga_Tekko">Koga Tekko</a> · <a href="https://www.bg-wiki.com/ffxi/Koga_Tekko_+1">Koga Tekko +1</a> · <a href="https://www.bg-wiki.com/ffxi/Denali_Wristbands">Denali Wristbands</a></td><td>Koga +1: relic upgrade</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Gloves">Aurore Gloves</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Subligar_+1">Bronze Subligar +1</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Trousers_+1">Leather Trousers +1</a></td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Sitabaki_+1">Sitabaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Subligar_+1">Bone Subligar +1</a></td><td>—</td></tr>
+<tr><td class="lv">17</td><td><a href="https://www.bg-wiki.com/ffxi/Fine_Trousers">Fine Trousers</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Cotton_Sitabaki_+1">Cotton Sitabaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Sitabaki">Mercenary's Sitabaki</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Subligar_+1">Beetle Subligar +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Chain_Hose_+1">Chain Hose +1</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Sitabaki">Federation Sitabaki</a> · <a href="https://www.bg-wiki.com/ffxi/Kingdom_Trousers">Kingdom Trousers</a> · <a href="https://www.bg-wiki.com/ffxi/Republic_Subligar">Republic Subligar</a> · <a href="https://www.bg-wiki.com/ffxi/Shade_Tights_+1">Shade Tights +1</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Soil_Sitabaki_+1">Soil Sitabaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">31</td><td>RSE Legs</td><td>—</td></tr>
+<tr><td class="lv">37</td><td><a href="https://www.bg-wiki.com/ffxi/Jujitsu_Sitabaki">Jujitsu Sitabaki</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Breeches">Royal Squire's Breeches</a></td><td>—</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Breeches_+2">Royal Squire's Breeches +2</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Shinobi_Hakama_+1">Shinobi Hakama +1</a></td><td>NIN AF</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Nokizaru_Hakama">Nokizaru Hakama</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Hakama">Ninja Hakama</a></td><td>—</td></tr>
+<tr><td class="lv">53</td><td><a href="https://www.bg-wiki.com/ffxi/Master%27s_Sitabaki_+1">Master's Sitabaki +1</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Akinji_Salvars">Akinji Salvars</a> · <a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Breeches">Royal Knight's Breeches</a></td><td>—</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Arhat%27s_Hakama_+1">Arhat's Hakama +1</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Koga_Hakama">Koga Hakama</a> · <a href="https://www.bg-wiki.com/ffxi/Yasha_Hakama_+1">Yasha Hakama +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Seraweels">Pahluwan Seraweels</a> · <a href="https://www.bg-wiki.com/ffxi/Rasetsu_Hakama_+1">Rasetsu Hakama +1</a> · <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Subligar">Enkidu's Subligar</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Shura_Haidate_+1">Shura Haidate +1</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Hakama_+1">Ninja Hakama +1</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Byakko%27s_Haidate">Byakko's Haidate</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Koga_Hakama_+1">Koga Hakama +1</a> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Denali_Kecks">Denali Kecks</a></strong></td><td>Byakko: Haste +5%, DEX +15</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Brais">Aurore Brais</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Leggings_+1">Bronze Leggings +1</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Bounding_Boots">Bounding Boots</a> / <a href="https://www.bg-wiki.com/ffxi/Leaping_Boots">Leaping Boots</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Leather_Highboots_+1">Leather Highboots +1</a></td><td>Leaping Lizzy — DEX/AGI +3</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Kyahan_+1">Kyahan +1</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Boots">Royal Footman's Boots</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Kingdom_Boots">Kingdom Boots</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Leggings_+1">Bone Leggings +1</a></td><td>—</td></tr>
+<tr><td class="lv">17</td><td><a href="https://www.bg-wiki.com/ffxi/Lizard_Ledelsens">Lizard Ledelsens</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Cotton_Kyahan_+1">Cotton Kyahan +1</a> · <a href="https://www.bg-wiki.com/ffxi/Power_Sandals">Power Sandals</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Kyahan">Mercenary's Kyahan</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Leggings_+1">Beetle Leggings +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Greaves_+1">Greaves +1</a> · <a href="https://www.bg-wiki.com/ffxi/Winged_Boots_+1">Winged Boots +1</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Kyahan">Federation Kyahan</a> · <a href="https://www.bg-wiki.com/ffxi/Shade_Leggings_+1">Shade Leggings +1</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td>RSE Boots · <a href="https://www.bg-wiki.com/ffxi/Soil_Kyahan_+1">Soil Kyahan +1</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Sollerets">Royal Squire's Sollerets</a></td><td>—</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Mountain_Gaiters">Mountain Gaiters</a></td><td>—</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Fuma_Kyahan">Fuma Kyahan</a></td><td>Haste +3%</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Gothic_Sabatons">Gothic Sabatons</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Shinobi_Kyahan_+1">Shinobi Kyahan +1</a></td><td>NIN AF</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Sollerets">Royal Knight's Sollerets</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Sollerets_+2">Royal Knight's Sollerets +2</a></td><td>—</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Kyahan">Ninja Kyahan</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Akinji_Nails">Akinji Nails</a></td><td>—</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Arhat%27s_Sune-Ate_+1">Arhat's Sune-Ate +1</a></td><td>—</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Rutter_Sabatons">Rutter Sabatons</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Yasha_Sune-Ate_+1">Yasha Sune-Ate +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Rasetsu_Sune-Ate_+1">Rasetsu Sune-Ate +1</a> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Fuma_Sune-Ate">Fuma Sune-Ate</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Koga_Kyahan">Koga Kyahan</a> · <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Leggings">Enkidu's Leggings</a></td><td>Fuma: Haste +3%</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Shura_Sune-Ate_+1">Shura Sune-Ate +1</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ninja_Kyahan_+1">Ninja Kyahan +1</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Koga_Kyahan_+1">Koga Kyahan +1</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Suzaku%27s_Sune-Ate">Suzaku's Sune-Ate</a> · <a href="https://www.bg-wiki.com/ffxi/Denali_Gamashes">Denali Gamashes</a></td><td>—</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Gaiters">Aurore Gaiters</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">4</td><td><a href="https://www.bg-wiki.com/ffxi/Rabbit_Mantle_+1">Rabbit Mantle +1</a></td><td>—</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Traveler%27s_Mantle">Traveler's Mantle</a></td><td>Eva +3</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Night_Cape">Night Cape</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Nomad%27s_Mantle_+1">Nomad's Mantle +1</a></td><td>—</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/High_Breath_Mantle">High Breath Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Resentment_Cape">Resentment Cape</a> · <a href="https://www.bg-wiki.com/ffxi/Agile_Mantle">Agile Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">46</td><td><a href="https://www.bg-wiki.com/ffxi/Bat_Cape">Bat Cape</a></td><td>—</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Jaguar_Mantle">Jaguar Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Behemoth_Mantle_+1">Behemoth Mantle +1</a> · <a href="https://www.bg-wiki.com/ffxi/Bushido_Cape">Bushido Cape</a></td><td>—</td></tr>
+<tr><td class="lv">61</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">Amemet Mantle +1</a></strong></td><td>STR +2 · Atk/R.Atk +15</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Psilos_Mantle">Psilos Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Boxer%27s_Mantle">Boxer's Mantle</a> · <a href="https://www.bg-wiki.com/ffxi/Charger_Mantle">Charger Mantle</a> · <a href="https://www.bg-wiki.com/ffxi/Fenrir%27s_Cape">Fenrir's Cape</a></td><td>Boxer's: +10 Eva/Shield/Parry — tank/solo</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Corse_Cape">Corse Cape</a> · <span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Forager%27s_Mantle">Forager's Mantle</a></strong></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Toreador%27s_Cape">Toreador's Cape</a></td><td>Hidden +40% Crit Rate <strong>taken</strong></td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Commander%27s_Cape">Commander's Cape</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Cerberus_Mantle_+1">Cerberus Mantle +1</a></strong></td><td>Best WS back</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Dash_Sash">Dash Sash</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">5</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Bandolier">Bronze Bandolier</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt_+1">Warrior's Belt +1</a></td><td>—</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/Silver_Belt_+1">Silver Belt +1</a></td><td>—</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Survival_Belt">Survival Belt</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Druid%27s_Rope">Druid's Rope</a> · <a href="https://www.bg-wiki.com/ffxi/Tilt_Belt">Tilt Belt</a></td><td>—</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Quick_Belt">Quick Belt</a></td><td>—</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Swordbelt_+1">Swordbelt +1</a></td><td>—</td></tr>
+<tr><td class="lv">44</td><td><a href="https://www.bg-wiki.com/ffxi/Powerful_Rope">Powerful Rope</a> · <a href="https://www.bg-wiki.com/ffxi/Headlong_Belt">Headlong Belt</a></td><td>—</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Vanguard_Belt">Vanguard Belt</a></td><td>—</td></tr>
+<tr><td class="lv">48</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></strong></td><td>Acc +10</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Belt">Royal Knight's Belt</a> · <a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a></td><td>Swift: Haste +4%</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Belt_+2">Royal Knight's Belt +2</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Speed_Belt">Speed Belt</a></td><td>Haste +6%</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Potent_Belt">Potent Belt</a> · <a href="https://www.bg-wiki.com/ffxi/Precise_Belt">Precise Belt</a> · <a href="https://www.bg-wiki.com/ffxi/Resolute_Belt">Resolute Belt</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Mithran_Stone">Mithran Stone</a></td><td>Mithra only</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Koga_Sarashi">Koga Sarashi</a></td><td>NIN relic</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Venturer%27s_Belt">Venturer's Belt</a> · <a href="https://www.bg-wiki.com/ffxi/Warwolf_Belt">Warwolf Belt</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Scouter%27s_Rope">Scouter's Rope</a></td><td>Excellent evasion</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ninurta%27s_Sash">Ninurta's Sash</a></strong></td><td>AV drop — pipe dream</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Silver_Earring_+1">Silver Earring +1</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Earring_+1">Bone Earring +1</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Mythril_Earring_+1">Mythril Earring +1</a> · <a href="https://www.bg-wiki.com/ffxi/Reraise_Earring">Reraise Earring</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Dodge_Earring">Dodge Earring</a></td><td>—</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Drone_Earring">Drone Earrings</a> · <a href="https://www.bg-wiki.com/ffxi/Evasion_Earring">Evasion Earring</a> · <a href="https://www.bg-wiki.com/ffxi/Parrying_Earring">Parrying Earring</a></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Velocity_Earring">Velocity Earring</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Melody_Earring">Melody Earring</a> / <a href="https://www.bg-wiki.com/ffxi/Melody_Earring_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Elusive_Earring">Elusive Earring</a></td><td>—</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Minuet_Earring">Minuet Earring</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Ethereal_Earring">Ethereal Earring</a> · <a href="https://www.bg-wiki.com/ffxi/Hollow_Earring">Hollow Earring</a></td><td>Suppanomimi: extra Dual Wield with /NIN</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a></strong></td><td>Double Attack +5%</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Reflex_Ring">Reflex Ring</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a></strong> · <a href="https://www.bg-wiki.com/ffxi/Shikaree_Ring">Shikaree Ring</a></td><td>Rajas: STR/DEX +5 · Store TP +5 · Subtle Blow +5</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Venerer_Ring">Venerer Ring</a></td><td>—</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Jaeger_Ring">Jaeger Ring</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring_+1">Sniper's Ring +1</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Ecphoria_Ring">Ecphoria Ring</a></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Garrulous_Ring">Garrulous Ring</a> · <a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Emerald_Ring">Emerald Ring</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Iota_Ring">Iota Ring</a></strong></td><td>DEX/VIT/AGI/Acc +3 (Einherjar)</td></tr>
+</tbody>
+</table>
+{{/html}}

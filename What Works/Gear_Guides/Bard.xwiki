@@ -1,0 +1,499 @@
+= 🎵 Bard — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You buff: March / Madrigal / Ballad / Minuet — //bard trusts are wasted on you//. You need a **tank**, a **healer**, and **pure DPS**.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Karaha-Baruha">Karaha-Baruha</a></strong></td><td>Healer with Haste + Bar-element — doesn't overlap with your songs</td></tr>
+<tr><td class="lv">3</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + 4 stun gambits</td></tr>
+<tr><td class="lv">4</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Ayame">Ayame</a></strong></td><td>Self-sufficient SAM DPS</td></tr>
+<tr><td class="lv">5</td><td>💃 <strong><a href="https://www.bg-wiki.com/ffxi/Uka_Totlihn">Uka Totlihn</a></strong></td><td>Quickstep / Violent Flourish + Drain Samba — DNC utility stacks with your songs</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Staves ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">17</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Monster_Signa">Monster Signa</a></strong> <em>(HP+5 MP+5 VIT-5 CHR+8)</em></td><td>Expensive for a low-level weapon, but a huge CHR source. Good to Lv.40.</td></tr>
+<tr><td class="lv">40</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Chanter%27s_Staff">Chanter's Staff</a></strong> <em>(CHR+6 Singing Skill+4)</em></td><td>Better than Monster Signa due to Singing Skill+4.</td></tr>
+<tr><td class="lv">51</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Elemental_Staves">Elemental Staves</a></strong></td><td>Macro-switch for debuffs. <strong><a href="https://www.bg-wiki.com/ffxi/Light_Staff">Light</a></strong> / <strong><a href="https://www.bg-wiki.com/ffxi/Apollo%27s_Staff">Apollo's</a></strong> for Lullaby/Finale/Requiem · <strong><a href="https://www.bg-wiki.com/ffxi/Earth_Staff">Earth</a></strong> / <strong><a href="https://www.bg-wiki.com/ffxi/Terra%27s_Staff">Terra's</a></strong> for Elegy. Keep Chanter's for buffs.</td></tr>
+<tr><td class="lv">73</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Alkalurops">Alkalurops</a></strong> <em>(HP-10 INT/MND/CHR+10 M.Acc+20)</em></td><td>Won't replace HQ staves. Drops from Tinnin (ZNM Tier IV).</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+=== Grips ===
+
+Use in conjunction with Staves.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Lizard_Strap">Lizard Strap</a> / <a href="https://www.bg-wiki.com/ffxi/Lizard_Strap_+1">+1</a></td><td>MP +5 / +10</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Raptor_Strap">Raptor Strap</a> / <a href="https://www.bg-wiki.com/ffxi/Raptor_Strap_+1">+1</a></td><td>MP +5/+10 · MND +1</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Bugard_Strap">Bugard Strap</a> / <a href="https://www.bg-wiki.com/ffxi/Bugard_Strap_+1">+1</a></td><td>MP +5/+10 · MND +1 · CHR +1</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Staff_Strap">Staff Strap</a></td><td>MP +20 · Enmity -2</td></tr>
+<tr><td class="lv">70</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Light_Grip">Light Grip</a></strong></td><td>Macro-switch for Lullaby/Finale/Requiem. Light M.Acc +2.</td></tr>
+<tr><td class="lv">70</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Earth_Grip">Earth Grip</a></strong></td><td>Macro-switch for Elegy. Earth M.Acc +2.</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Reign_Grip">Reign Grip</a></td><td>MND +3 · CHR +3</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Quire_Grip">Quire Grip</a></td><td>Singing Skill +3</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== One-Handed Weapons ==
+
+**Note:** Staves with Grips are a better choice up until **Felibre's Dague**.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Wax_Sword_+1">Wax Sword +1</a></td><td>Best soloing weapon before the Dunes.</td></tr>
+<tr><td class="lv">1</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Ceremonial_Dagger">Ceremonial Dagger</a></strong> <em>(MP+10)</em></td><td>Best weapon for early PT until you get the Signa.</td></tr>
+<tr><td class="lv">38</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Minstrel%27s_Dagger">Minstrel's Dagger</a></strong> <em>(CHR+5)</em></td><td>Riverne A01. Best option short of the Signa, ideal if pairing with shield.</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Paper_Knife">Paper Knife</a> <em>(CHR+2)</em></td><td>Cheap step up from the Ceremonial Dagger.</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Shellbuster">Shellbuster</a> <em>(CHR+4)</em></td><td>Upgrade if still using AF Weapon.</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Swan_Bilbo">Swan Bilbo</a> <em>(CHR+4)</em></td><td>Only BRD-specific Sword outside of AF.</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Kard">Kard</a> <em>(CHR+5)</em></td><td>Still not as good as Signa or Chanter's.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Joyeuse">Joyeuse</a></td><td>Bard can wear it. Double Attack — best for soloing.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Dweomer_Knife">Dweomer Knife</a></td><td>Pair two for Song Spellcasting Time -10%.</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Carnwenhan">Carnwenhan</a></strong></td><td>Mythic. M.Acc+10, Song Duration +20% (~+24s). Pairs with Dweomer Knife.</td></tr>
+<tr><td class="lv">89</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Felibre%27s_Dague">Felibre's Dague</a></strong> <em>(Singing Skill+7, Song SCT-6%)</em></td><td><strong>Best singing weapon.</strong></td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Reminder:** if you're not on a staff, equip a Shield too.
+
+----
+
+= 🎶 Instruments =
+
+== String Instruments ==
+
+String Instruments have a //variable, expanding AOE//. Used less than wind, but some songs are string-only and the larger AOE is great for resting Paeon.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Song / Bonus</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Maple_Harp_+1">Maple Harp +1</a></td><td>Minne +1 (starter)</td></tr>
+<tr><td class="lv">14</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Harp_+1">Harp +1</a></strong></td><td>Minne +2 — staple Paeon harp</td></tr>
+<tr><td class="lv">33</td><td><a href="https://www.bg-wiki.com/ffxi/Military_Harp">Military Harp</a></td><td>Finale +2 (only non-Relic Finale string)</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Ebony_Harp_+1">Ebony Harp +1</a></td><td>Paeon +2</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Angel_Lyre">Angel Lyre</a></td><td>Haste +2% · Hymnus +2</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Cythara_Anglica_+1">Cythara Anglica +1</a></td><td>CHR +3 · Virelai +2</td></tr>
+<tr><td class="lv">81</td><td><a href="https://www.bg-wiki.com/ffxi/Vihuela">Vihuela</a></td><td>Mazurka +3 · Mambo +3 — great for Chocobo Mazurka</td></tr>
+<tr><td class="lv">85</td><td><a href="https://www.bg-wiki.com/ffxi/Crooner%27s_Cithara">Crooner's Cithara</a></td><td>Ballad +1</td></tr>
+<tr><td class="lv">88</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Oneiros_Harp">Oneiros Harp</a></strong></td><td>Adds Regen · Paeon +3 — best idle and Paeon harp</td></tr>
+<tr><td class="lv">90</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Daurdabla">Daurdabla</a></strong></td><td>Singing/String Skill +20 · Increases song duration · <strong>Grants an extra song slot</strong></td></tr>
+<tr><td class="lv">90</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Langeleik">Langeleik</a></strong></td><td>March +3 · Etude +3 — best March instrument (tied with 90 Gjallarhorn)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Wind Instruments ==
+
+Wind has //consistent AOE size// — generally more popular than string.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Song / Bonus</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Flute_+1">Flute +1</a></strong></td><td>Requiem +1 — default for unmatched songs</td></tr>
+<tr><td class="lv">4</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Cornette_+1">Cornette +1</a></strong></td><td>Minuet +2 — <em>critical</em>, used constantly</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Piccolo_+1">Piccolo +1</a></td><td>Threnody +2 — staple for skillchains</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Mary%27s_Horn">Mary's Horn</a></td><td>Lullaby +1 — lands more reliably than Nursemaid's</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Spearman%27s_Horn">Royal Spearman's Horn</a></td><td>CHR +3 · March +1 — new default for unmatched songs</td></tr>
+<tr><td class="lv">23</td><td><a href="https://www.bg-wiki.com/ffxi/Siren_Flute">Siren Flute</a></td><td>Requiem +2</td></tr>
+<tr><td class="lv">32</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Traversiere_+1">Traversiere +1</a></strong></td><td>Madrigal +2 — used as much as Cornette</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Faerie_Piccolo">Faerie Piccolo</a></td><td>March +2</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Horn_+1">Horn +1</a></td><td>Elegy +2</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Oliphant">Oliphant</a> <em>(optional)</em></td><td>Wind Skill +3 in non-own-nation Conquest areas — limited utility</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Angel_Flute_+1">Angel Flute +1</a></td><td>Prelude +2 — RNGs will love you</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Storm_Fife">Storm Fife</a></td><td>Assault: Ballad +1 — useful for Marduk</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Crumhorn_+1">Crumhorn +1</a></td><td>Carol +2</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Hamelin_Flute">Hamelin Flute</a> <em>(optional)</em></td><td>CHR +2 · Requiem +2</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Iron_Ram_Horn">Iron Ram Horn</a></td><td>CHR +4 · March +2</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Hellish_Bugle_+1">Hellish Bugle +1</a></td><td>Mambo +2 — useful for HNMs</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Shofar_+1">Shofar +1</a></td><td>Requiem +3</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Harlequin%27s_Horn">Harlequin's Horn</a></td><td>Mazurka +2</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Cradle_Horn">Cradle Horn</a></td><td>Lullaby +2 · CHR +1</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Requiem_Flute">Requiem Flute</a></td><td>Requiem +4</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Gjallarhorn">Gjallarhorn</a></strong></td><td>CHR +4 · <strong>All Songs +2</strong> · Singing/Wind Skill +10 — <strong>the best instrument in the game</strong></td></tr>
+<tr><td class="lv">82</td><td><a href="https://www.bg-wiki.com/ffxi/Ney">Ney</a></td><td>Finale +2</td></tr>
+<tr><td class="lv">82</td><td><a href="https://www.bg-wiki.com/ffxi/Cantabank%27s_Horn">Cantabank's Horn</a></td><td>Madrigal +3 · Prelude +3</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Syrinx">Syrinx</a></td><td>Elegy +3 · Minne +3</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Apollo%27s_Flute">Apollo's Flute</a></td><td>Minuet +3</td></tr>
+<tr><td class="lv">86</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Pan%27s_Horn">Pan's Horn</a></strong></td><td>Finale +3 · Lullaby +3</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Shield ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Elegant_Shield">Elegant Shield</a></td><td>MP +6 · CHR +1 — for CHR dagger setups</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Genbu%27s_Shield">Genbu's Shield</a></strong></td><td>DEF 24 · Eva +10 · Phys Dmg Taken -10% — best for soloing or off-hand on Felibre's Dague</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Cap">Bronze Cap</a> / <a href="https://www.bg-wiki.com/ffxi/Copper_Hairpin">Copper Hairpin</a></td><td>Defense filler</td></tr>
+<tr><td class="lv">6</td><td><a href="https://www.bg-wiki.com/ffxi/Traveler%27s_Hat">Traveler's Hat</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Bandana">Leather Bandana</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Hairpin">Brass Hairpin</a></td><td>HP -4 · MP +10</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Entrancing_Ribbon">Entrancing Ribbon</a> <span class="rex">🟣</span></td><td>CHR +2 (upstaged 3 levels later)</td></tr>
+<tr><td class="lv">14</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Noble%27s_Ribbon">Noble's Ribbon</a></strong></td><td>CHR +3 — use until Opo-opo Crown / Bard's Roundlet / Demon Helm</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Trump_Crown">Trump Crown</a></td><td>HP+14~ · MP+14~ · CHR +2</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Rain_Hat">Rain Hat</a></td><td>MP +20 · MND +2 · CHR +2 · Rain: Adds Regen</td></tr>
+<tr><td class="lv">65</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Opo-opo_Crown">Opo-opo Crown</a></strong> <span class="rex">🟣</span></td><td>Under Pamamas: HP+50 MP+50 STR-2 DEX+1 VIT+1 AGI-2 INT+2 MND+1 <strong>CHR+7</strong></td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ebon_Tam">Ebon Tam</a></strong></td><td>CHR +2 · M.Acc +2 · Fast Cast +5% — best party head</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Roundlet">Bard's Roundlet</a></td><td>CHR +5 · Singing Skill +5</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Demon_Helm">Demon Helm</a> / <a href="https://www.bg-wiki.com/ffxi/Demon_Helm_+1">+1</a></td><td>Singing Skill +5 / +6</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Roundlet_+1">Bard's Roundlet +1</a></strong></td><td>CHR +6 · Singing Skill +5 — Dynamis</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Marduk%27s_Tiara">Marduk's Tiara</a></strong></td><td>CHR +3 · <strong>Singing Skill +7</strong> — Salvage</td></tr>
+<tr><td class="lv">85</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Calot_+2">Aoidos' Calot +2</a></td><td>CHR +8 · Song SCT -12% · Enmity -7 · Madrigal +1</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Roundlet +1 vs Marduk's Tiara:** player preference. Marduk's wins because you can stack CHR elsewhere; Singing Skill is hard to find.
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Tunica">Cobra Tunica</a> / <a href="https://www.bg-wiki.com/ffxi/Bronze_Harness">Bronze Harness</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Vest">Leather Vest</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Harness">Legionnaire's Harness</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Bastokan_Harness">Bastokan Harness</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Harness">Bone Harness</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Garrison_Tunica">Garrison Tunica</a></td><td>CHR +1 — only CHR+ this early</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Baron%27s_Saio">Baron's Saio</a></td><td>INT +1 · MND +1</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Ea%27s_Doublet">Ea's Doublet</a></td><td>CHR +1 · MND +1 (Salvage alt)</td></tr>
+<tr><td class="lv">33</td><td>RSE <em>(Hume / Mithra / Galka only)</em></td><td>CHR +1</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Crow_Jupon">Crow Jupon</a></td><td>Eva +8 · Enmity -8</td></tr>
+<tr><td class="lv">50</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Gaudy_Harness">Gaudy Harness</a></strong></td><td>CHR +3 · Latent Refresh while MP&lt;49</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Coat">Cobra Coat</a></td><td>INT/MND/CHR +2 (Gaudy alt)</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Choral_Justaucorps">Choral Justaucorps</a></td><td>HP +13 · VIT +3 · String Skill +3 · Enmity -1</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Justaucorps_+1">Justaucorps +1</a></td><td>MND +3 · CHR +3 (pulling alt)</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Minstrel%27s_Coat">Minstrel's Coat</a></td><td>HP +15 · Eva +3 · Wind/String Skill +3 — best March body</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Errant_Houppelande">Errant Houppelande</a></td><td>INT/MND/CHR +10 · Enmity -3 — cheap CHR +10</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Sha%27ir_Manteel">Sha'ir Manteel</a></td><td>MP +14 · CHR +7 · Haste +2% · Song SCT -12% (3.5–5m gil)</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Yigit_Gomlek">Yigit Gomlek</a></td><td>Eva +7 · MAB +5 · Song SCT -10% · Set: Refresh (20k Periqia AP)</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Choral_Justaucorps_+1">Choral Justaucorps +1</a></strong></td><td>HP +20 · VIT +10 · CHR +10 · String Skill +6 · Enmity -3</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Redingote">Royal Redingote</a></td><td>MP +20 · INT/MND/CHR +5 · Aug: M.Acc +4, Fast Cast +5</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Kirin%27s_Osode">Kirin's Osode</a></td><td>All stats +10 · MP +30</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Marduk%27s_Jubbah">Marduk's Jubbah</a></strong></td><td>HP/MP +3% · MND +12 · CHR +12 · Fast Cast +5% · Auto Refresh</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Shadow_Coat">Shadow Coat</a></td><td>M.Acc +10 · Enmity -4 — best M.Acc body for non-light debuffs (Odin abj)</td></tr>
+<tr><td class="lv">79</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Augur%27s_Jaseran">Augur's Jaseran</a></strong></td><td>INT/MND/CHR +13 · Light M.Acc +10 — best for Lullaby (Ovni)</td></tr>
+<tr><td class="lv">89</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Hongreline_+1">Aoidos' Hongreline +1</a></td><td>DEF 48 · CHR +8 · Singing/Wind Skill +8 · Increases Song Duration</td></tr>
+<tr><td class="lv">89</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Hongreline_+2">Aoidos' Hongreline +2</a></td><td>DEF 51 · CHR +10 · Singing/Wind Skill +10 · Minuet +1</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cuffs">Cuffs</a> / RSE</td><td>—</td></tr>
+<tr><td class="lv">6</td><td><a href="https://www.bg-wiki.com/ffxi/Asbestos_Mitts">Asbestos Mitts</a> / <a href="https://www.bg-wiki.com/ffxi/Leather_Gloves">Leather Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Zealot%27s_Mitts">Zealot's Mitts</a></td><td>MP +5 · MND +3</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>Eva +3</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Devotee%27s_Mitts">Devotee's Mitts</a></td><td>MP +8 · MND +5</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Enlil%27s_Kolluks">Enlil's Kolluks</a></td><td>CHR +1 (Salvage)</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Storm_Gages">Storm Gages</a></td><td>MP +22 (??? Gloves)</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Cuffs">Cobra Cuffs</a></td><td>INT/MND/CHR +1 · Eva +5</td></tr>
+<tr><td class="lv">60</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Choral_Cuffs">Choral Cuffs</a></strong></td><td>CHR +4 · Singing Skill +5</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Sha%27ir_Gages">Sha'ir Gages</a></td><td>MP +12 · CHR +5 · Song Recast Delay -2</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Cuffs">Bard's Cuffs</a></td><td>HP +16 · Eva +5 · Wind Skill +3 · Enmity -3</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Choral_Cuffs_+1">Choral Cuffs +1</a></strong></td><td>HP +14 · VIT +7 · CHR +7 · <strong>Singing Skill +10</strong></td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Cuffs_+1">Bard's Cuffs +1</a></td><td>HP +16 · Eva +5 · Wind Skill +5 · Enmity -4</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Teal_Cuffs">Teal Cuffs</a></td><td>HP +12 · MND/CHR +3 · M.Acc +5 · Enmity -2</td></tr>
+<tr><td class="lv">79</td><td><a href="https://www.bg-wiki.com/ffxi/Augur%27s_Gloves">Augur's Gloves</a></td><td>INT/MND +7 · Healing/Enhancing +5 · Cure Potency +4%</td></tr>
+<tr><td class="lv">82</td><td><a href="https://www.bg-wiki.com/ffxi/Schellenband">Schellenband</a></td><td>VIT -6 · CHR +5 · Song SCT -5%</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Race-specific lvl 27 hand variants:**
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Magna_Gauntlets">Magna Gauntlets</a></td><td>MP +24 · M. Elvaan only</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Magna_Gloves">Magna Gloves</a></td><td>MP +24 · F. Elvaan only</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Savage_Gauntlets">Savage Gauntlets</a></td><td>MP +16 · MND +2 · Mithra only</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Elder%27s_Bracers">Elder's Bracers</a></td><td>MP +32 · Galka only</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Custom_F_Gloves">Custom F Gloves</a></td><td>HP +12 · MP +4 · STR/DEX +3 · VIT/AGI -1 · Hume F</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Custom_M_Gloves">Custom M Gloves</a></td><td>HP +12 · MP +4 · STR/DEX +3 · VIT/AGI -1 · Hume M</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Marine_F_Gloves">Marine F Gloves</a> (lv 62)</td><td>MP +35 · INT/MND +4 · CHR +3 · Hume F</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Marine_M_Gloves">Marine M Gloves</a> (lv 62)</td><td>MP +35 · INT/MND +4 · CHR +3 · Hume M</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Sha'ir Gages vs Choral Cuffs +1:** situational. Choral +1 wins for HNM/God debuff accuracy. Sha'ir helps crowd control / faster pulls + MP.
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Slops">Slops</a> / RSE</td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Trousers">Leather Trousers</a></td><td>—</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Brais">Brais</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Windurstian_Slops">Windurstian Slops</a> / <a href="https://www.bg-wiki.com/ffxi/Federation_Slops">Federation Slops</a></td><td>MP +4 / +5</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Subligar_+1">Bone Subligar +1</a></td><td>Eva +1</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Baron%27s_Slops">Baron's Slops</a></td><td>hMP +1</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Subligar_+1">Beetle Subligar +1</a></td><td>Eva +1</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Martial_Slacks">Martial Slacks</a></td><td>AGI +2 · Eva +3</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Crow_Hose">Crow Hose</a></td><td>Eva +5 · Enmity -5</td></tr>
+<tr><td class="lv">56</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Choral_Cannions">Choral Cannions</a></strong></td><td>HP +12 · STR +5 · Wind Skill +3 · Enmity -1 — can last to 75</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Clown%27s_Subligar">Clown's Subligar</a></td><td>CHR +4</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Errant_Slops">Errant Slops</a></td><td>INT/MND/CHR +7 · Enmity -3</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Sha%27ir_Seraweels">Sha'ir Seraweels</a></td><td>HP +2% · MP +1% · CHR +8</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Zenith_Slacks">Zenith Slacks</a></td><td>MND/CHR +4 · Convert HP→MP +50</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Choral_Cannions_+1">Choral Cannions +1</a></strong></td><td>HP +12 · STR/DEX/Wind Skill +8 · Enmity -2 — best for March tiers</td></tr>
+<tr><td class="lv">75</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Cannions">Bard's Cannions</a></strong> / <strong><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Cannions_+1">+1</a></strong></td><td>HP +17/+26 · MP +42 · Courtly Measure</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Marduk%27s_Shalwar">Marduk's Shalwar</a></strong></td><td>MP +3% · CHR +10 · Wind Skill +5 · Hidden Enmity -4</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Teal_Slops">Teal Slops</a></td><td>HP +14 · INT/CHR +5 · M.Acc/MAB +3</td></tr>
+<tr><td class="lv">79</td><td><a href="https://www.bg-wiki.com/ffxi/Augur%27s_Brais">Augur's Brais</a></td><td>MND/CHR +9 · Singing Skill +4</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Rhingrave_+2">Aoidos' Rhingrave +2</a></td><td>M.Acc +7 · Singing Skill +10 · Song Recast Delay -6 · Ballad +1</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Race-specific lvl 31 RSE legs:**
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Race</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td>Hume M/F</td><td>MP +32 · STR -1 · MND +3 · CHR +1</td></tr>
+<tr><td>Galka</td><td>MP +20 · AGI +2 · INT +1 · CHR +2</td></tr>
+<tr><td>Elvaan F/M</td><td>HP +12 · MP +12 · DEX +2 · AGI +2</td></tr>
+<tr><td>Mithra</td><td>MP +32 · VIT +1 · MND +1</td></tr>
+<tr><td>Tarutaru</td><td>HP +21 · STR +1 · VIT +2 · MND +2</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Light_Soleas">Light Soleas</a></td><td>Eva +3</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mage%27s_Sandals">Mage's Sandals</a></td><td>MP +3 · AGI +1</td></tr>
+<tr><td class="lv">28</td><td><a href="https://www.bg-wiki.com/ffxi/Air_Solea">Air Solea</a></td><td>Eva +4</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Mannequin_Pumps">Mannequin Pumps</a></td><td>MP +12 · MND +2</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Pigaches">Cobra Pigaches</a></td><td>MND +2 · CHR +2</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Sha%27ir_Crackows">Sha'ir Crackows</a></td><td>MP +11 · CHR +4 · Haste +1%</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Oracle%27s_Pigaches">Oracle's Pigaches</a></td><td>HP +15 · MP +25 · Wind Skill +5 · hMP +2</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Aoide%27s_Pumps">Aoide's Pumps</a></td><td>Singing Skill +3</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Rostrum_Pumps">Rostrum Pumps</a></td><td>MP +30 · INT/MND +3 · Fast Cast</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Goliard_Clogs">Goliard Clogs</a></strong></td><td>DEX/INT/MND/CHR +4 · Eva +5 · hMP +3 · M.Acc +2</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Shadow_Clogs">Shadow Clogs</a></td><td>MND/CHR +5 · M.Acc +2 · Enmity -2 (Einherjar abj)</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Teal_Pigaches">Teal Pigaches</a></td><td>HP +8 · MND/CHR +6 · Enmity -4 · Set: Fast Cast</td></tr>
+<tr><td class="lv">79</td><td><a href="https://www.bg-wiki.com/ffxi/Augur%27s_Gaiters">Augur's Gaiters</a></td><td>Enhances Fast Cast</td></tr>
+<tr><td class="lv">81</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Cothurnes_+2">Aoidos' Cothurnes +2</a></td><td>CHR +11 · Movement +12% · Adds Regen · Scherzo +1</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Race-specific lvl 29 RSE feet:**
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Magna_F_Ledelsens">Magna F Ledelsens</a></td><td>MP +20 · AGI +3 · INT +2 · Elvaan F</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Magna_M_Ledelsens">Magna M Ledelsens</a></td><td>MP +20 · AGI +3 · INT +2 · Elvaan M</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Savage_Gaiters">Savage Gaiters</a></td><td>HP +16 · STR +3 · CHR +2 · Mithra</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Elder%27s_Sandals">Elder's Sandals</a></td><td>MP +12 · AGI +3 · INT +2 · Galka</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Custom_F_Boots">Custom F Boots</a></td><td>MP +12 · AGI +3 · INT +3 · Hume F</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Custom_M_Boots">Custom M Boots</a></td><td>MP +12 · AGI +3 · INT +3 · Hume M</td></tr>
+<tr><td><a href="https://www.bg-wiki.com/ffxi/Dune_Sandals">Dune Sandals</a> (lv 62)</td><td>MP +45 · CHR +4 · Galka</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Justice_Badge">Justice Badge</a></td><td>MND +3</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Bird_Whistle">Bird Whistle</a></td><td>HP +5 · CHR +3</td></tr>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Holy_Phial">Holy Phial</a></td><td>MP +9 · MND +3</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Flower_Necklace">Flower Necklace</a></td><td>CHR +3 (cheap)</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Star_Necklace">Star Necklace</a></td><td>CHR +3 · Convert HP→MP +15</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/String_Torque">String Torque</a></td><td>String Skill +7</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Wind_Torque">Wind Torque</a></td><td>Wind Skill +7</td></tr>
+<tr><td class="lv">69</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Piper%27s_Torque">Piper's Torque</a></strong></td><td>CHR +5 · Wind Skill +5 (Campaign: +10)</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Temperance_Torque">Temperance Torque</a></td><td>CHR +5 · Staff Skill +7</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Barcarolle_Medal">Barcarolle Medal</a></td><td>CHR +2 · Singing Skill +5</td></tr>
+<tr><td class="lv">84</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Matinee">Aoidos' Matinee</a></td><td>Song SCT -3% · Song Duration +10%</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Nomad%27s_Mantle">Nomad's Mantle</a></td><td>AGI +1 · Eva +3</td></tr>
+<tr><td class="lv">42</td><td><a href="https://www.bg-wiki.com/ffxi/Lucent_Cape">Lucent Cape</a></td><td>HP/MP +7 · CHR +3</td></tr>
+<tr><td class="lv">54</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Jester%27s_Cape_+1">Jester's Cape +1</a></strong></td><td>CHR +10</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Echo_Cape">Echo Cape</a></td><td>Wind Skill +3</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Birdman_Cape">Birdman Cape</a></td><td>MP +30 · CHR +9</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Bard%27s_Cape">Bard's Cape</a></td><td>CHR/Acc/Eva +7 — solo/skillup</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Astute_Cape">Astute Cape</a></td><td>MP +25 · Summon/Ninjutsu/Singing Skill +5</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ixion_Cape">Ixion Cape</a></td><td>INT/MND/CHR +5 · Convert HP→MP 20 · Enmity -2</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Harmony_Cape">Harmony Cape</a></td><td>Song Recast Delay -3</td></tr>
+<tr><td class="lv">79</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Mesmeric_Cape">Mesmeric Cape</a></strong></td><td>CHR +8 · M.Acc +4</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Friar%27s_Rope">Friar's Rope</a></td><td>MP +5 · MND +1</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mohbwa_Sash">Mohbwa Sash</a></td><td>MP +10 · hMP +1</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Belt">Mercenary Captain's Belt</a></td><td>DEX/VIT/AGI/INT/MND/CHR +1</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Qiqirn_Sash">Qiqirn Sash</a></td><td>MP +12 · hMP +2</td></tr>
+<tr><td class="lv">40</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Corsette">Corsette</a></strong> / <strong><a href="https://www.bg-wiki.com/ffxi/Corsette_+1">+1</a></strong></td><td>CHR +5 / +6 — lasts until Aristo. Aug Haste +3% may top Gleeman's.</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Belt">Royal Knight's Belt</a></td><td>All stats +2</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a></td><td>Haste +4% (situational)</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Speed_Belt">Speed Belt</a> / <a href="https://www.bg-wiki.com/ffxi/Velocious_Belt">Velocious Belt</a></td><td>Haste +6%</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Gleeman%27s_Belt">Gleeman's Belt</a></td><td>CHR +6 · Acc +8</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Marching_Belt">Marching Belt</a></td><td>Wind Skill +3 · Convert HP→MP +15</td></tr>
+<tr><td class="lv">80</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Aristo_Belt">Aristo Belt</a></strong></td><td>CHR +8 · Enmity -1 — best for debuffs</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Belt">Aoidos' Belt</a></td><td>Song SCT -3%</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Race-specific lvl 50 BCNM Stones (Hostile Herbivores):**
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Race</th><th>Stone</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td>Galka</td><td><a href="https://www.bg-wiki.com/ffxi/Desert_Stone">Desert Stone</a></td><td>MP +40 · DEX -5 · INT +3 · CHR +2</td></tr>
+<tr><td>Elvaan</td><td><a href="https://www.bg-wiki.com/ffxi/Forest_Stone">Forest Stone</a></td><td>MP +40 · DEX -5 · AGI +2 · INT +3</td></tr>
+<tr><td>Mithra</td><td><a href="https://www.bg-wiki.com/ffxi/Jungle_Stone">Jungle Stone</a></td><td>MP +30 · AGI -5 · INT +2 · MND +3</td></tr>
+<tr><td>Hume</td><td><a href="https://www.bg-wiki.com/ffxi/Ocean_Stone">Ocean Stone</a></td><td>MP +30 · STR -5 · INT +3 · MND +2</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Hope_Ring">Hope Ring</a></td><td>CHR +2</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Loyalty_Ring">Loyalty Ring</a></td><td>CHR +3</td></tr>
+<tr><td class="lv">50</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Minstrel%27s_Ring">Minstrel's Ring</a></strong></td><td>Latent: <strong>Song SCT -25%</strong> when HP &lt;76% AND TP &lt;100%. Largest single SCT source. Equip <em>before</em> casting.</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Balrahn%27s_Ring">Balrahn's Ring</a></td><td>M.Acc +4 · Assault: INT/MND/CHR +4 · Adds Refresh</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Trumpet_Ring">Trumpet Ring</a> / <a href="https://www.bg-wiki.com/ffxi/Nereid_Ring">Nereid Ring</a></td><td>Wind Skill +2 / +3</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Allure_Ring">Allure Ring</a></td><td>CHR +4</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Angel%27s_Ring">Angel's Ring</a> / <a href="https://www.bg-wiki.com/ffxi/Heavens_Ring">Heavens Ring</a></td><td>CHR +4 / +5</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Light_Ring">Light Ring</a></td><td>HP +20 · MP -20 · CHR +5</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Omega_Ring">Omega Ring</a></td><td>INT/MND/CHR +3 · M.Acc +3 (Einherjar)</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Veela_Ring">Veela Ring</a></strong></td><td>CHR +6 · Enmity -2</td></tr>
+<tr><td class="lv">80</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Apollo%27s_Ring">Apollo's Ring</a></strong></td><td>CHR +6 · Resist Vs. Dark -30</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Energy_Earring_+1">Energy Earring +1</a></td><td>MP +4</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Mythril_Earring">Mythril Earring</a> / <a href="https://www.bg-wiki.com/ffxi/Mythril_Earring_+1">+1</a></td><td>Evasion</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Healer%27s_Earring">Healer's Earring</a></td><td>Latent Enmity -1 with WHM sub</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Singing_Earring">Singing Earring</a> / <a href="https://www.bg-wiki.com/ffxi/Wind_Earring">Wind Earring</a></td><td>Both very helpful</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Melody_Earring">Melody Earring</a></strong> / <strong><a href="https://www.bg-wiki.com/ffxi/Melody_Earring_+1">+1</a></strong></td><td>CHR +2 · Latent Eva +6 under song. Buy two.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Musical_Earring">Musical Earring</a></td><td>Eva +5 · String/Wind Skill +5</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Loquacious_Earring">Loquacious Earring</a></strong></td><td>MP +30 · Enhances Fast Cast</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Delta_Earring">Delta Earring</a></td><td>DEX/CHR +2 · Enmity -3 (Einherjar)</td></tr>
+<tr><td class="lv">89</td><td><a href="https://www.bg-wiki.com/ffxi/Skald_Breloque">Skald Breloque</a></td><td>MP +10 · CHR +3 (Abyssea-Altepa)</td></tr>
+<tr><td class="lv">90</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Aoidos%27_Earring">Aoidos' Earring</a></strong></td><td>CHR +4 · Song SCT -2% (Abyssea-Uleguerand)</td></tr>
+</tbody>
+</table>
+{{/html}}

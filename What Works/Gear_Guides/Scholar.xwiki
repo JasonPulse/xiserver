@@ -1,0 +1,386 @@
+= 📚 Scholar — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+(% class="legend-box" %)
+**SCH is hybrid by design.** Light Arts → cures/enhancing/divine. Dark Arts → nukes/enfeebles/dark. Stratagems (Penury/Celerity/Alacrity/Parsimony/Modus Veritas/Helix/Klimaform) shape your weather. Subliminal MP via **Sublimation** = self-sufficient mage.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You nuke/heal hybrid — Sublimation / Stratagems / Storm / Helix. Self-sufficient on MP.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank</td></tr>
+<tr><td class="lv">2</td><td>📚 <strong><a href="https://www.bg-wiki.com/ffxi/Adelheid">Adelheid</a></strong></td><td>**SCH trust** — Dark Arts/Addendum Black, Stun on 4 triggers, Storm/Helix matching day, tank cures at <50%</td></tr>
+<tr><td class="lv">3</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>Ballad for MP, March on melee</td></tr>
+<tr><td class="lv">4</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Gilgamesh">Gilgamesh</a></strong></td><td>Pure melee DPS</td></tr>
+<tr><td class="lv">5</td><td>🦁 <strong><a href="https://www.bg-wiki.com/ffxi/Lion">Lion</a></strong></td><td>4 interrupt gambits — you + Adelheid + Lion = **nothing casts**</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Wand / Club ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Maple_Wand_+1">Maple Wand +1</a></td><td>INT/MND</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Willow_Wand_+1">Willow Wand +1</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Pilgrim%27s_Wand">Pilgrim's Wand</a> <span class="rex">🟣</span></td><td>HMP +2 — Nunyenunc</td></tr>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Hermit%27s_Wand">Hermit's Wand</a></td><td>INT/MND +2, SIR -25%</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Yew_Wand_+1">Yew Wand +1</a></td><td>—</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Astaroth_Cane">Astaroth Cane</a></td><td>—</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/Solid_Wand">Solid Wand</a></td><td>—</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/High_Mana_Wand">High Mana Wand</a></td><td>—</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Rose_Wand_+1">Rose Wand +1</a></td><td>—</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Asklepios">Asklepios</a> <span class="rex">🟣</span></td><td>Convert 30 HP→MP, Cure Potency +5%</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Fourth_Mace">Fourth Mace</a></td><td>HP/MP +30, MAB +4, Conserve MP +4</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Seveneyes">Seveneyes</a> <span class="rex">🟣</span></td><td>Conserve MP +7</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Staff ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">5</td><td><a href="https://www.bg-wiki.com/ffxi/Ash_Pole_+1">Ash Pole +1</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Republic_Staff">Republic Staff</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Spiro_Staff">Spiro Staff</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Elm_Pole_+1">Elm Pole +1</a></td><td>Best DPS pre-elementals</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Passaddhi_Staff_+1">Passaddhi Staff +1</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Oak_Pole_+1">Oak Pole +1</a></td><td>—</td></tr>
+<tr><td class="lv">51</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Elemental_Staves">Elemental Staves</a></td><td>**The backbone of SCH** — match staff to your nuke. HQ Thunder/Ice/Dark are mandatory. Light staff for cures, Earth for stoneskin/storms</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Kirin%27s_Pole">Kirin's Pole</a> <span class="rex">🟣</span></td><td>MND for Stoneskin, elemental DoT debuff potency</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Diabolos%27s_Pole">Diabolos's Pole</a> <span class="rar">🟡</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Sub / Grips ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Pelte">Pelte</a> <span class="rar">🟡</span></td><td>MP +5</td></tr>
+<tr><td class="lv">19</td><td><a href="https://www.bg-wiki.com/ffxi/Succubus_Grip">Succubus Grip</a> <span class="rar">🟡</span></td><td>MP +8 — first MP grip</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Faerie_Shield">Faerie Shield</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Warlock%27s_Shield">Warlock's Shield</a></td><td>INT/MND</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Nymph_Shield_+1">Nymph Shield +1</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Raptor_Strap_+1">Raptor Strap +1</a></td><td>HP/MP, MND</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Astral_Shield">Astral Shield</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Bugard_Strap_+1">Bugard Strap +1</a></td><td>HP/MP, INT/MND/CHR</td></tr>
+<tr><td class="lv">65</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Staff_Strap">Staff Strap</a></td><td>**MP +20, Enmity -2** — endgame standard</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Genbu%27s_Shield">Genbu's Shield</a> <span class="rex">🟣</span></td><td>Eva +10, PDT -10% — sky god</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ammo ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Fortune_Egg">Fortune Egg</a> <span class="rex">🟣</span></td><td>VIT/MP</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Morion_Tathlum">Morion Tathlum</a></td><td>MP +3, INT +1</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Mantra_Coin">Mantra Coin</a></td><td>MP — BCNM</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Jasper_Tathlum">Jasper Tathlum</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Sturm%27s_Report">Sturm's Report</a></td><td>**Magic Accuracy** — Bastok Campaign</td></tr>
+<tr><td class="lv">66</td><td><a href="https://www.bg-wiki.com/ffxi/Phantom_Tathlum">Phantom Tathlum</a></td><td>MP +5, INT +2</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Hedgehog_Bomb">Hedgehog Bomb</a></td><td>MP +30, -Enmity</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/White_Tathlum">White Tathlum</a></td><td>HP/MP, -Enmity, Store TP — alt</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Hairpin_+1">Brass Hairpin +1</a></td><td>MP +11</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Erudite%27s_Headband">Erudite's Headband</a></td><td>HQ Cotton</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Silver_Hairpin">Silver Hairpin</a></td><td>MP +16</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Seer%27s_Crown_+1">Seer's Crown +1</a></td><td>INT +1, MND +1</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Electrum_Hairpin">Electrum Hairpin</a></td><td>MP +25</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Rain_Hat">Rain Hat</a> <span class="rex">🟣</span></td><td>MP +20, MND +2, Regen rain</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Gold_Hairpin_+1">Gold Hairpin +1</a></td><td>MP +30</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Tactician_Magician%27s_Hat_+2">Tactician Magician's Hat +2</a></td><td>HMP set bonus</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Hat">Cobra Hat</a></td><td>HMP set</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Mortarboard">Scholar's Mortarboard</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Cloche">Cobra Cloche</a> <span class="rex">🟣</span></td><td>HP/MP, Conserve MP, MAB</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Maat%27s_Cap">Maat's Cap</a> <span class="rex">🟣</span></td><td>All stats +7 — LB5</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Yigit_Turban">Yigit Turban</a> <span class="rex">🟣</span></td><td>MND, HMP, Refresh — Assault</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Hat">Mahatma Hat</a></td><td>INT/MND/CHR +4, -Enmity</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Elite_Beret_+1">Elite Beret +1</a> <span class="rex">🟣</span></td><td>**Skill +5** to Enfeeb/Elem/Sum/Divine</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Mortarboard_+1">Scholar's Mortarboard +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Argute_Mortarboard_+1">Argute Mortarboard +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — Enhances Stratagems</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a> <span class="rex">🟣</span></td><td>Haste 5%</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Chapeau">Goliard Chapeau</a> <span class="rex">🟣</span></td><td>HMP +2, MND +5, -Enmity</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Seer%27s_Tunic_+1">Seer's Tunic +1</a></td><td>MP, HMP +1 — long-running</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Bishop%27s_Robe_+1">Bishop's Robe +1</a></td><td>MND +3</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Combat_Caster%27s_Cloak">Combat Caster's Cloak</a></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Glamor_Jupon">Glamor Jupon</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Tactician_Magician%27s_Coat_+2">Tactician Magician's Coat +2</a></td><td>HMP set</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Shaman%27s_Cloak">Shaman's Cloak</a> <span class="rex">🟣</span></td><td>All-rounder mid-game (no head)</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Gown">Scholar's Gown</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Cloak">Royal Cloak</a> <span class="rar">🟡</span></td><td>HQ Vermillion — Refresh, Eva -10 (idle)</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Ebon_Coat">Ebon Coat</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Houppelande">Mahatma Houppelande</a></td><td>INT/MND/CHR +11, HMP +6</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Yigit_Gomlek">Yigit Gomlek</a> <span class="rex">🟣</span></td><td>HMP, Refresh — Assault</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Gown_+1">Scholar's Gown +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ixion_Cloak">Ixion Cloak</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Argute_Gown_+1">Argute Gown +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Saio">Goliard Saio</a> <span class="rex">🟣</span></td><td>Haste 4%, Conserve MP +5</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Zealot%27s_Mitts">Zealot's Mitts</a></td><td>MND</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Mycophile_Cuffs">Mycophile Cuffs</a> <span class="rex">🟣</span></td><td>INT/MND, -Enmity</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Devotee%27s_Mitts_+1">Devotee's Mitts +1</a></td><td>MP/MND — long-running</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Storm_Gages">Storm Gages</a> <span class="rex">🟣</span></td><td>MP, HMP — Assault</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Bracers">Scholar's Bracers</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Marine_F_Gloves">Marine F/M Gloves</a></td><td>Hume RSE2 — INT/MND</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Gloves">Cobra Gloves</a> <span class="rex">🟣</span></td><td>HMP, Conserve MP — buff macro</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Patrician%27s_Cuffs">Patrician's Cuffs</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Argute_Bracers">Argute Bracers</a> <span class="rex">🟣</span></td><td>**Relic** — Conserve MP, Stratagem</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Yigit_Gages">Yigit Gages</a> <span class="rex">🟣</span></td><td>MND, Refresh</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Cuffs">Mahatma Cuffs</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Genie_Gages">Genie Gages</a></td><td>HMP, Elem Skill +8</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Bracers_+1">Scholar's Bracers +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Argute_Bracers_+1">Argute Bracers +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Cuffs">Goliard Cuffs</a> <span class="rex">🟣</span></td><td>Acc/Att/M.Acc/MAB +4</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Baron%27s_Slops">Baron's Slops</a></td><td>HMP +1 — long-running</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Seer%27s_Slacks_+1">Seer's Slacks +1</a></td><td>MP, INT</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Magic_Slacks">Magic Slacks</a></td><td>MND +2, Restore MP enchant</td></tr>
+<tr><td class="lv">56</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Pants">Scholar's Pants</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Druid%27s_Slops">Druid's Slops</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Trews">Cobra Trews</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Prince%27s_Slops">Prince's Slops</a></td><td>HP/MP +30, MND, Acc</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Yigit_Seraweels">Yigit Seraweels</a> <span class="rex">🟣</span></td><td>MP, HMP, Refresh set</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Slops">Mahatma Slops</a></td><td>INT — nuke macro</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Argute_Pants">Argute Pants</a> <span class="rex">🟣</span></td><td>**Relic**</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Pants_+1">Scholar's Pants +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Argute_Pants_+1">Argute Pants +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Trews">Goliard Trews</a> <span class="rex">🟣</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Seer%27s_Pumps_+1">Seer's Pumps +1</a></td><td>MP, MND</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Mannequin_Pumps">Mannequin Pumps</a> <span class="rex">🟣</span></td><td>MP, INT/MND</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Tactician_Magician%27s_Pigaches_+2">Tactician Magician's Pigaches +2</a></td><td>HMP set</td></tr>
+<tr><td class="lv">54</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Loafers">Scholar's Loafers</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Pigaches">Cobra Pigaches</a></td><td>HMP set</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Crackows">Cobra Crackows</a> <span class="rex">🟣</span></td><td>HP/MP, Conserve MP, MAB</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Numerist_Pumps">Numerist Pumps</a></td><td>HMP +3, Elem Skill +4</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Herald%27s_Gaiters">Herald's Gaiters</a> <span class="rex">🟣</span></td><td>Movement +12% — kite</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Pigaches">Mahatma Pigaches</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Argute_Loafers">Argute Loafers</a> <span class="rex">🟣</span></td><td>**Relic** — Stratagem charges/recast</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Loafers_+1">Scholar's Loafers +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Argute_Loafers_+1">Argute Loafers +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Rostrum_Pumps">Rostrum Pumps</a> <span class="rex">🟣</span></td><td>MP, MND, **Fast Cast**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Clogs">Goliard Clogs</a> <span class="rex">🟣</span></td><td>HMP +3, MND +4, M.Acc +2</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Holy_Phial">Holy Phial</a></td><td>MP +9, MND +3</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Scholar%27s_Torque">Scholar's Torque</a></td><td>MP, INT</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Beak_Necklace_+1">Beak Necklace +1</a></td><td>MP, HMP</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Spider_Torque">Spider Torque</a></td><td>Enfeeb Skill +5 — debuff</td></tr>
+<tr><td class="lv">65</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Elemental_Torque">Elemental Torque</a></td><td>**Elem Skill +7** — nuke macro</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Dark_Torque">Dark Torque</a></td><td>Drain/Aspir/Stun</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Enfeebling_Torque">Enfeebling Torque</a></td><td>Enfeeb Skill +7</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Enhancing_Torque">Enhancing Torque</a></td><td>Stoneskin/barspells</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Uggalepih_Pendant">Uggalepih Pendant</a> <span class="rex">🟣</span></td><td>**MAB +8 latent <51% MP** — nuke combo with Sublimation drain</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Morgana%27s_Choker">Morgana's Choker</a> <span class="rex">🟣</span></td><td>Convert 40 HP→MP, MND</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Wit_Pendant">Wit Pendant</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Caract_Choker">Caract Choker</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Aesir_Torque">Aesir Torque</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Energy_Earring_+1">Energy Earring +1</a></td><td>MP +4</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Cunning_Earring">Cunning Earring</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Wizard%27s_Earring">Wizard's Earring</a></td><td>—</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Elemental_Earring">Elemental Earring</a></td><td>**Elem Skill +2** — nuke</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Enfeebling_Earring">Enfeebling Earring</a> <span class="rar">🟡</span></td><td>**Only enfeebling earring** in game</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Geist_Earring">Geist Earring</a></td><td>MP, MND</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Moldavite_Earring">Moldavite Earring</a> <span class="rex">🟣</span></td><td>**MAB +4** — Mysticmaker Profblix</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Antivenom_Earring">Antivenom Earring</a> <span class="rar">🟡</span></td><td>MP, HMP</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Relaxing_Earring">Relaxing Earring</a> <span class="rex">🟣</span></td><td>HMP +2 — best HMP ear</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Magnetic_Earring">Magnetic Earring</a> <span class="rex">🟣</span></td><td>MP, HMP, Conserve MP, SIR</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Static_Earring">Static Earring</a> <span class="rex">🟣</span></td><td>MND, **Bonus DMG to magic burst**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Loquacious_Earring">Loquacious Earring</a> <span class="rex">🟣</span></td><td>MP +30, **Fast Cast**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Novio_Earring">Novio Earring</a> <span class="rex">🟣</span></td><td>INT/MAB/M.Acc — Jailer of Love</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Astral_Ring">Astral Ring</a></td><td>Convert 25 HP→MP</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Carect_Ring">Carect Ring</a> <span class="rex">🟣</span></td><td>MP, MND</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Tamas_Ring">Tamas Ring</a> <span class="rex">🟣</span></td><td>**Best general ring** — MP/INT/MND/-Enmity (CoP)</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Wisdom_Ring_+1">Wisdom Ring +1</a></td><td>INT</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Ether_Ring">Ether Ring</a> <span class="rar">🟡</span></td><td>Convert 30 HP→MP</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Serket_Ring">Serket Ring</a> <span class="rar">🟡</span></td><td>Convert 50 HP→MP</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Genius_Ring_+1">Genius Ring +1</a></td><td>INT</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Vivian_Ring">Vivian Ring</a> <span class="rex">🟣</span></td><td>Convert 50 HP→MP, INT/MND</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Communion_Ring_+1">Communion Ring +1</a></td><td>MND +5</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Omniscient_Ring_+1">Omniscient Ring +1</a></td><td>INT +5</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Snow_Ring">Snow Ring</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Aqua_Ring">Aqua Ring</a></td><td>STR/MND — WS</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Omega_Ring">Omega Ring</a> <span class="rex">🟣</span></td><td>INT/MND/CHR +3, M.Acc +3 — Einherjar</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Pi_Ring">Pi Ring</a> <span class="rex">🟣</span></td><td>MND +5, Fast Cast set</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Epsilon_Ring">Epsilon Ring</a> <span class="rex">🟣</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Mist_Silk_Cape">Mist Silk Cape</a></td><td>MND +1</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/White_Cape_+1">White Cape +1</a></td><td>MND +3</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Red_Cape_+1">Red Cape +1</a></td><td>INT/MND +3</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Sapient_Cape">Sapient Cape</a></td><td>MND, -Enmity</td></tr>
+<tr><td class="lv">66</td><td><a href="https://www.bg-wiki.com/ffxi/Peace_Cape_+1">Peace Cape +1</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Aslan_Cape">Aslan Cape</a> <span class="rex">🟣</span></td><td>MP, MND +5 — Einherjar</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Altruistic_Cape">Altruistic Cape</a> <span class="rex">🟣</span></td><td>Divine/Heal/Enfeeb Skill +5</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Merciful_Cape">Merciful Cape</a> <span class="rex">🟣</span></td><td>**Elem/Enhancing/Dark Skill +5** — nuke/Drain</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Hecate%27s_Cape">Hecate's Cape</a></td><td>**MAB +6** — best nuke back</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Friar%27s_Rope">Friar's Rope</a></td><td>MP, MND</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mohbwa_Sash_+1">Mohbwa Sash +1</a></td><td>HMP — resting</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Qiqirn_Sash_+1">Qiqirn Sash +1</a></td><td>HMP +3</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Reverend_Sash">Reverend Sash</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Penitent%27s_Rope">Penitent's Rope</a></td><td>INT/MND +5, -Enmity</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Argute_Belt">Argute Belt</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Anrin_Obi">Elemental Obis</a></td><td>**Day/weather elemental burst** — must-have nuke set: Anrin (Dark), Hyorin (Ice), Rairin (Thunder), Furin (Wind), Korin (Light), Suirin (Water), Karin (Fire), Doton (Earth)</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Hierarch_Belt">Hierarch Belt</a></td><td>MP, HMP — KS BCNM</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Lambda_Sash">Lambda Sash</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Theta_Sash">Theta Sash</a> <span class="rex">🟣</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 Endgame Set Cheat-Sheet =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Set</th><th>Pieces</th></tr></thead>
+<tbody>
+<tr><td><strong>Elemental Nuke (T4 / T5)</strong></td><td>Element-matched HQ Staff (Pluto/Aquilo/Jupiter etc.) · Argute Mortarboard +1 · Argute Gown +1 · Argute Bracers +1 · Mahatma Slops · Argute Loafers +1 · **Elemental Torque** · **Elemental Obi** (matching day/weather) · **Hecate's Cape** · **Uggalepih Pendant** (<51% MP) / Moldavite Earring · Static Earring (Magic Burst) · Omniscient Ring +1 · Omega Ring · Sturm's Report ammo</td></tr>
+<tr><td><strong>Helix Macro</strong></td><td>Storm-day matched obi · Argute Gown +1 (Stratagem) · Argute Loafers +1 (Stratagem charges) · element staff · Elemental Torque</td></tr>
+<tr><td><strong>Cure (Light Arts)</strong></td><td>Apollo's Staff · Goliard Chapeau · Cleric's-style mage gear · Pi Ring (Fast Cast set) · Loquacious Earring · Korin Obi (light weather +Cure)</td></tr>
+<tr><td><strong>Enfeebling</strong></td><td>Elite Beret +1 · Argute Gown +1 · Goliard Cuffs · Enfeebling Torque · **Enfeebling Earring** · Sturm's Report · Aqua Ring · Novio Earring</td></tr>
+<tr><td><strong>HMP Resting</strong></td><td>Mahatma Hat / Yigit Turban · Mahatma Houppelande / Yigit Gomlek · Cobra Gloves · Yigit Seraweels · Avocat Pigaches / Goliard Clogs · Beak Necklace +1 · Mohbwa Sash +1 · Pluto's Staff · Relaxing Earring · Magnetic Earring</td></tr>
+<tr><td><strong>Sublimation</strong></td><td>Macro **HP+ gear** to charge: Healer's Cap +1 (HP) / VIT-heavy gear → fill the Sublimation reservoir with maximum HP</td></tr>
+</tbody>
+</table>
+{{/html}}

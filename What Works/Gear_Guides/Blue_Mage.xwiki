@@ -1,0 +1,317 @@
+= 🟦 Blue Mage — Gear Guide =
+
+(% class="legend-box" %)
+**Source:** Aislin's BLU Equipment Guide (FFXIclopedia) — adapted, key picks only.
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+(% class="legend-box" %)
+**BLU is a physical DD by default.** Spell mods + Chain Affinity rely on **STR + Acc + multi-hit** for the Big Three (Vorpal Blade / Savage Blade / Expiacion). Cannonball / Healing / Magical-nuke / Breath builds are situational and called out where relevant.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You melee/magic hybrid — BLU spells / Chain Affinity / Burst Affinity / Diffusion. Need: Tank, healer, **Refresh** (spells eat MP), Haste.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank — BLU has no hate reduction tools</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Haste on melee, Convert — your self-cures eat BLU slots</td></tr>
+<tr><td class="lv">3</td><td>🔮 <strong><a href="https://www.bg-wiki.com/ffxi/Koru-Moru">Koru-Moru</a></strong></td><td>**Refresh for spell spam**, Haste, Slow/Distract</td></tr>
+<tr><td class="lv">4</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March/Madrigal boost multi-hit physical spells (Heavy Strike, Disseverment)</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + stun interrupts</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Sword ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Wax_Sword_+1">Wax Sword +1</a></td><td>Acc +2 — keep until 13</td></tr>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Scimitar_+1">Scimitar +1</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Sword">Flame Sword</a></td><td>Long-running</td></tr>
+<tr><td class="lv">30</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Centurion%27s_Sword">Centurion's Sword</a></td><td>Acc +2, Att +3 — Bastokan CP free</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Immortal%27s_Scimitar">Immortal's Scimitar</a> <span class="rex">🟣</span></td><td>**AF1** — needed for AF questline (5 of 6 Runic Portals)</td></tr>
+<tr><td class="lv">40</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Combat_Caster%27s_Scimitar">Combat Caster's Scimitar</a></td><td>HQ at 43 — strong long-running</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Musketeer_Commander%27s_Falchion">Musketeer Commander's Falchion</a></td><td>Acc/Att — Bastokan CP</td></tr>
+<tr><td class="lv">65</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Ifrit%27s_Blade">Ifrit's Blade</a> <span class="rex">🟣</span></td><td>STR +3 — long-running (still good at 75 for spells)</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Senior_Gold_Musketeer%27s_Scimitar">Senior Gold Musketeer's Scimitar</a></td><td>Fast, strong — good offhand</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Anelace">Anelace</a></td><td>DEX/VIT +2 — cheap mainhand filler</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Martial_Anelace">Martial Anelace</a></td><td>**TP Bonus** — cheap</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Koggelmander">Koggelmander</a> <span class="rex">🟣</span></td><td>**Best for spell damage** — Tanihwa drop. Beasts intimidate you</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Perdu_Hanger">Perdu Hanger</a> <span class="rex">🟣</span></td><td>**The BLU Blau Dolch / Hagun** — 40k IS Chief Sergeant. Get this.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Beast_Slayer">Beast Slayer</a></td><td>Easy T1 ZNM — common offhand</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Wightslayer">Wightslayer</a> <span class="rex">🟣</span></td><td>BLU "base weapon" from Nyzul — needed for Tizona Mythic upgrade</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Tizona">Tizona</a> <span class="rex">🟣</span></td><td>**Mythic** — endgame</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Shield ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Astral_Aspis">Astral Aspis</a> <span class="rex">🟣</span></td><td>HP→MP — Pelican NM (Kuftal Tunnel) 100% drop</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Genbu%27s_Shield">Genbu's Shield</a> <span class="rex">🟣</span></td><td>**Best all-purpose** — Eva +10, PDT -10%</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Acheron_Shield_+1">Acheron Shield +1</a></td><td>**Cannonball-only** — bigger DEF = bigger Cannonball</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ranged / Ammo ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Rogetsurin">Rogetsurin</a></td><td>AGI +1 — Konschtat NM 100% drop</td></tr>
+<tr><td class="lv">30</td><td>RSE Sachet</td><td>Hume / Elvaan / Mithra ammo</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Junior_Musketeer%27s_Chakram_+2">Junior Musketeer's Chakram +2</a></td><td>STR latent in nation/sea</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Tiphia_Sting">Tiphia Sting</a></td><td>Acc/Att +2 — long-running</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Bibiki_Seashell">Bibiki Seashell</a></td><td>**Cannonball ammo** — VIT +4</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Compound_Eye_Circlet">Compound Eye Circlet</a></td><td>Eva +5</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Trump_Crown">Trump Crown</a></td><td>**CHR +2** (Bludgeon mod), scaling HP/MP</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> <span class="rex">🟣</span></td><td>DEX/AGI +3</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Headgear">Mercenary Captain's Headgear</a></td><td>Windurst CP — HQ at 34</td></tr>
+<tr><td class="lv">41</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a> <span class="rex">🟣</span></td><td>STR +3, DEX +4 — best WS/spell head for many levels</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Super_Ribbon">Super Ribbon</a></td><td>+1 all stats</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Magus_Keffiyeh">Magus Keffiyeh</a> <span class="rex">🟣</span></td><td>**AF3** — situational healing/family-killer</td></tr>
+<tr><td class="lv">68</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Cobra_Cap">Cobra Cap</a></td><td>Acc, Store TP, -Enmity — Allied Notes long-running</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a> <span class="rex">🟣</span></td><td>Acc +10 — Hakutaku</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Cap">Enkidu's Cap</a> <span class="rex">🟣</span></td><td>**Best multi-hit spell head** — T4 ZNM</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a> <span class="rex">🟣</span></td><td>Haste 5%, HP/MP — best TP head</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Homam_Zucchetto">Homam Zucchetto</a> <span class="rex">🟣</span></td><td>Acc/M.Acc +4</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Mirage_Keffiyeh">Mirage Keffiyeh</a> <span class="rex">🟣</span></td><td>**Relic** — best magical-nuke head, only Maat's/Gnadbhod beat for physical spells</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Doublet">Mercenary Captain's Doublet</a></td><td>—</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Brigandine_+1">Brigandine +1</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Jaridah_Peti">Jaridah Peti</a></td><td>Acc/Att +5</td></tr>
+<tr><td class="lv">57</td><td><a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness">Scorpion Harness</a> <span class="rex">🟣</span></td><td>Acc +10 — multi-job staple</td></tr>
+<tr><td class="lv">58</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Magus_Jubbah">Magus Jubbah</a> <span class="rex">🟣</span></td><td>**AF** — full-time forever — most BLUs never replace this</td></tr>
+<tr><td class="lv">67</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Assault_Jerkin">Assault Jerkin</a> <span class="rex">🟣</span></td><td>Best WS body — Ose drop</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Mirage_Jubbah">Mirage Jubbah</a> <span class="rex">🟣</span></td><td>**Relic** — Refresh + Acc +10. Best TP/idle body</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Mirke_Wardecors">Mirke Wardecors</a></td><td>**Best WS body** w/ Acc+10/DA+2% augments — A Crystalline Prophecy</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>Acc/Eva +3 — long-running</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Akinji_Bazubands">Akinji Bazubands</a></td><td>Acc — TP</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Magus_Bazubands">Magus Bazubands</a> <span class="rex">🟣</span></td><td>**AF — spell learning macro only**</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Pallas%27s_Bracelets">Pallas's Bracelets</a></td><td>**STR-spell macro** — Death Scissors/Vertical Cleave</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Mittens">Cobra Mittens</a></td><td>TP gain — Allied Notes</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves_+1">Dusk Gloves +1</a> <span class="rex">🟣</span></td><td>Haste 4%</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Mittens">Enkidu's Mittens</a> <span class="rex">🟣</span></td><td>**Best WS / multi-hit spell hands** — T3 ZNM</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Mirage_Bazubands">Mirage Bazubands</a> <span class="rex">🟣</span></td><td>Relic — MND for healing</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Denali_Wristbands">Denali Wristbands</a> <span class="rex">🟣</span></td><td>STR/MND/Att — Savage Blade WS</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Homam_Manopolas">Homam Manopolas</a> <span class="rex">🟣</span></td><td>**Best TP gain hands** — Acc/Haste/HP/MP</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Republic_Subligar">Republic Subligar</a></td><td>**Att +5** — keep until 71. Suck up the metal panties</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Magus_Shalwar">Magus Shalwar</a> <span class="rex">🟣</span></td><td>**AF** — Cannonball macro alt</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Vendor%27s_Slops">Vendor's Slops</a></td><td>HQ Prince's — Acc, HP, MP — replaces Republigar</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Mirage_Shalwar">Mirage Shalwar</a> <span class="rex">🟣</span></td><td>**Relic** — STR +3, Acc +5, M.Acc +3 — best general legs</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Subligar">Enkidu's Subligar</a> <span class="rex">🟣</span></td><td>WS / multi-hit spell macro</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Denali_Kecks">Denali Kecks</a> <span class="rex">🟣</span></td><td>Head Butt stun stick</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Homam_Cosciales">Homam Cosciales</a> <span class="rex">🟣</span></td><td>**Best TP/Head Butt legs** — Haste + Fast Cast</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Bounding_Boots">Bounding Boots</a></td><td>**Camp Leaping Lizzy** — DEX/AGI. Hume keeps to 62</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Magus_Charuqs">Magus Charuqs</a> <span class="rex">🟣</span></td><td>AF — skip if you have boots</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Marine_F_Boots">Marine F/M Boots</a></td><td>Hume RSE2 — strong WS/multi-hit spell feet, also **Cannonball top piece**</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Creek_F_Clomps">Creek F/M Clomps</a></td><td>**Best Cannonball feet** — Tarutaru</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Leggings">Cobra Leggings</a></td><td>TP gain (non-Hume)</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Mirage_Charuqs">Mirage Charuqs</a> <span class="rex">🟣</span></td><td>Relic — meh</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Ledelsens_+1">Dusk Ledelsens +1</a> <span class="rex">🟣</span></td><td>Haste 2% (-MS)</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Denali_Gamashes">Denali Gamashes</a> <span class="rex">🟣</span></td><td>STR/Acc/M.Acc — **Head Butt stun**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Homam_Gambieras">Homam Gambieras</a> <span class="rex">🟣</span></td><td>**Best TP feet** — Acc/Haste</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Justice_Badge">Justice Badge</a></td><td>MND +3 — cure swap</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>STR/DEX +3</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Auditory_Torque">Auditory Torque</a> <span class="rex">🟣</span></td><td>**Cannonball-only** — STR/VIT +4 latent (BRD/COR active)</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>Acc +5, Store TP +1</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Soil_Gorget">Soil Gorget</a> <span class="rex">🟣</span></td><td>**Vorpal Blade / Savage Blade / Expiacion fTP**</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Fortitude_Torque">Fortitude Torque</a> <span class="rex">🟣</span></td><td>VIT +5, Sword Skill +7 — JoF</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>Att +3</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Pilferer%27s_Earring">Pilferer's Earring</a></td><td>**DEX +2 latent** when /THF</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Earring">Spike Earring</a></td><td>Att — long-running</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Minuet_Earring">Minuet Earring</a></td><td>STR +2, Acc +3 with Minuet</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Diabolos%27s_Earring">Diabolos's Earring</a> <span class="rex">🟣</span></td><td>Acc +3 (no dark weather)</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Triumph_Earring">Triumph Earring</a></td><td>STR +2 — spell macro</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a> <span class="rex">🟣</span></td><td>**Sword Skill +5** — Divine Might reward</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a> <span class="rex">🟣</span></td><td>**Store TP +1, 5% Double Attack** — pair with Suppanomimi</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>STR +2</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Venerer_Ring">Venerer Ring</a></td><td>Acc +3</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Puissance_Ring">Puissance Ring</a></td><td>STR +3 — Chain Affinity macro</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring_+1">Sniper's Ring +1</a></td><td>Acc +7 HQ</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Ecphoria_Ring">Ecphoria Ring</a></td><td>Acc/Store TP, Amnesia removal</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Victory_Ring">Victory Ring</a></td><td>STR +4 — pair for SA spells</td></tr>
+<tr><td class="lv">60</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a> <span class="rex">🟣</span></td><td>**Best ring you'll ever see** — STR/DEX, Store TP +5 (CoP)</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blood_Ring">Blood Ring</a></td><td>Acc +5 — free T1 ZNM</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Triumph_Ring">Triumph Ring</a></td><td>STR — WS</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Ring">Flame Ring</a></td><td>STR +5 — WS</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>Acc/Att +4 — ToAU completion</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Bellicose_Mantle">Bellicose Mantle</a></td><td>Att +6</td></tr>
+<tr><td class="lv">61</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">Amemet Mantle +1</a></td><td>STR +3 — DD staple</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Smilodon_Mantle_+1">Smilodon Mantle +1</a></td><td>**STR +5** — Chain Affinity / STR-only spell macro</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Mirage_Mantle">Mirage Mantle</a> <span class="rex">🟣</span></td><td>Relic — Acc/M.Acc</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Commander%27s_Cape">Commander's Cape</a></td><td>2nd-best multi-hit spell back, much cheaper than Cuchulain's</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Cuchulain%27s_Mantle">Cuchulain's Mantle</a></td><td>**Best multi-hit spell back** — 3M+ gil</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mohbwa_Sash_+1">Mohbwa Sash +1</a></td><td>HMP — resting</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Tilt_Belt">Tilt Belt</a></td><td>Acc +5</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Swordbelt_+1">Swordbelt +1</a></td><td>Att +12 — WS macro</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></td><td>Acc +10 — TP through 60</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a> <span class="rex">🟣</span></td><td>Haste 4% (Att -5) — TP/spells</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Potent_Belt">Potent Belt</a></td><td>STR +3, Acc +8 — Vorpal Blade-friendly</td></tr>
+<tr><td class="lv">71</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Warwolf_Belt">Warwolf Belt</a> <span class="rex">🟣</span></td><td>**STR/DEX/VIT +5** — WS/spell macro</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 Endgame Set Cheat-Sheet =
+
+(% class="legend-box" %)
+**The Big Three WS** = Vorpal Blade · Savage Blade · Expiacion. They share Soil Gorget fTP.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Set</th><th>Pieces</th></tr></thead>
+<tbody>
+<tr><td><strong>TP Build</strong></td><td>Walahra Turban · **Mirage Jubbah** (Refresh) · Homam Manopolas · Homam Cosciales · Homam Gambieras · Chivalrous Chain · Cuchulain's Mantle · Swift Belt · Peacock Charm · Rajas Ring · Sniper's Ring · Brutal Earring · Suppanomimi · Perdu Hanger / Tizona</td></tr>
+<tr><td><strong>WS (Vorpal/Savage/Expiacion)</strong></td><td>Optical Hat / Mirke Wardecors · Mirke Wardecors body · Enkidu's Mittens · Mirage Shalwar / Enkidu's Subligar · Marine Boots · **Soil Gorget** · Warwolf Belt · Cuchulain's Mantle · Rajas Ring · Flame Ring · Brutal Earring</td></tr>
+<tr><td><strong>Chain Affinity (Physical Spells)</strong></td><td>Voyager Sallet / Enkidu's Cap · Magus Jubbah · Enkidu's Mittens · Enkidu's Subligar / Mirage Shalwar · Marine Boots · Soil Gorget · Warwolf Belt · **Smilodon Mantle +1** (STR-only) / Cuchulain's Mantle (multi-hit) · Rajas + Triumph Ring · Triumph Earring</td></tr>
+<tr><td><strong>Cannonball</strong></td><td>**Acheron Shield +1** · Magus Shalwar (or Relic legs) · **Creek Clomps** (Tarutaru) / **Marine Boots** (Hume) · **Auditory Torque** (BRD/COR active) · **Bibiki Seashell** ammo — stack DEF</td></tr>
+<tr><td><strong>Magical Nuke</strong></td><td>**Mirage Keffiyeh** (Relic) · Magus Jubbah · Mirage Bazubands · Triumph Earring · Pluto's/Aquilo's Staff · INT/MAB pieces — situational</td></tr>
+<tr><td><strong>Head Butt (Stun)</strong></td><td>Denali Gamashes · Denali Kecks · Denali Wristbands · Homam Cosciales · M.Acc on neck/back — keep stun proc rate up</td></tr>
+<tr><td><strong>Healing</strong></td><td>Magus Keffiyeh · Justice Badge · Mirage Bazubands · MND-friendly RSE</td></tr>
+</tbody>
+</table>
+{{/html}}

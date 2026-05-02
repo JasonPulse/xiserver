@@ -1,0 +1,336 @@
+= 🤖 Puppetmaster — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+(% class="legend-box" %)
+**No Ranged/Ammo column** — those slots are always **Animator** (and **Automaton Oil**) for your puppet to function. Don't gear them with anything else.
+
+(% class="legend-box" %)
+**Augment your "Add-on" pieces.** Mirke Wardecors (body), Anwig Salade (head), and Desultor Tassets (legs) take Pet- or Master-side augments. Magic puppet → Pet MAB/M.Acc. Melee/ranged → Pet Att/Acc. Decide before you augment — it's a one-shot.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You pet DPS — Automaton / Maneuvers / Overdrive / Repair / Activate. Automaton doesn't benefit from party buffs — pick trusts that cover what your puppet's frame can't.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank — Valoredge can tank but fragile in endgame</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Healer backup — Soulsoother needs specific attachments to be reliable</td></tr>
+<tr><td class="lv">3</td><td>🔮 <strong><a href="https://www.bg-wiki.com/ffxi/Koru-Moru">Koru-Moru</a></strong></td><td>**Haste on you** (master gets Haste), Refresh, debuffs</td></tr>
+<tr><td class="lv">4</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March/Madrigal boost master melee + Valoredge/Sharpshot</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + 4 stun interrupts</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🦾 Frame Choices =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Lv</th><th>Frame Pick</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><strong>Sharpshot</strong> (party) or <strong>Stormwaker</strong> (solo)</td><td>First frame upgrade — Sharpshot ranges in pulls, Stormwaker self-heals/nukes for solo</td></tr>
+<tr><td class="lv">40</td><td><strong>Soulsoother</strong></td><td>Healer head — best general pick for endgame parties</td></tr>
+<tr><td class="lv">50</td><td><strong>Soulsoother</strong> or <strong>Spiritreaver</strong></td><td>Last head choice. Soulsoother for parties, Spiritreaver for nuke/burn parties</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons (Hand-to-Hand) =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cat_Baghnakhs_+1">Cat Baghnakhs +1</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Strike_Baghnakhs">Strike Baghnakhs</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Cougar_Baghnakhs">Cougar Baghnakhs</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Lynx_Baghnakhs">Lynx Baghnakhs</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Claws_+1">Claws +1</a></td><td>—</td></tr>
+<tr><td class="lv">33</td><td><a href="https://www.bg-wiki.com/ffxi/Katars_+1">Katars +1</a></td><td>—</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Vampiric_Claws">Vampiric Claws</a> <span class="rex">🟣</span></td><td>HP Drain proc</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Mythril_Claws_+1">Mythril Claws +1</a></td><td>—</td></tr>
+<tr><td class="lv">46</td><td><a href="https://www.bg-wiki.com/ffxi/Exocets">Exocets</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Tactician_Magician%27s_Hooks_+2">Tactician Magician's Hooks +2</a></td><td>—</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Birdbanes">Birdbanes</a> <span class="rex">🟣</span></td><td>**Piercing DD** — beasts/birds</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Sainti">Sainti</a></td><td>**Tanking** — block proc</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Poppet_Katars">Poppet Katars</a> <span class="rar">🟡</span></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Black_Adargas">Black Adargas</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Shiva%27s_Claws">Shiva's Claws</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">66</td><td><a href="https://www.bg-wiki.com/ffxi/Feral_Fangs">Feral Fangs</a></td><td>—</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Avengers">Avengers</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hades_Sainti">Hades Sainti</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Gem_Sainti">Gem Sainti</a></td><td>Augmentable</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Shenlong%27s_Baghnakhs">Shenlong's Baghnakhs</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Wagh_Baghnakhs">Wagh Baghnakhs</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Indra_Katars">Indra Katars</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Lyft_Sainti">Lyft Sainti</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Inferno_Claws">Inferno Claws</a> <span class="rex">🟣</span></td><td>**Relic** — fully upgraded</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Kenkonken">Kenkonken</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">77</td><td><a href="https://www.bg-wiki.com/ffxi/Afflictors">Afflictors</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">80</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Verethragna">Verethragna</a> <span class="rex">🟣</span></td><td>**Mythic** — endgame</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Taipan_Fangs">Taipan Fangs</a> <span class="rex">🟣</span></td><td>**Magian** — INT +6 / Pet MAB +8 augment makes a strong nuke weapon</td></tr>
+<tr><td class="lv">85</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Verethragna_+1">Verethragna +1</a> <span class="rex">🟣</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Compound_Eye_Circlet">Compound Eye Circlet</a></td><td>Eva +5</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> <span class="rex">🟣</span></td><td>DEX/AGI +3</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Headgear">Mercenary Captain's Headgear</a></td><td>Windurst CP</td></tr>
+<tr><td class="lv">41</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a> <span class="rex">🟣</span></td><td>STR +3, DEX +4 — long-running</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Super_Ribbon">Super Ribbon</a></td><td>+1 all stats</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Taj">Puppetry Taj</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Cap">Cobra Cap</a> <span class="rex">🟣</span></td><td>Acc, Store TP</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a> <span class="rex">🟣</span></td><td>Acc +10 — Hakutaku</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Breeder_Mask">Breeder Mask</a> <span class="rex">🟣</span></td><td>Pet bonus</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Gnadbhod%27s_Helm">Gnadbhod's Helm</a> <span class="rex">🟣</span></td><td>STR/DEX, Slow proc</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Qalansuwa">Pahluwan Qalansuwa</a> <span class="rex">🟣</span></td><td>Subtle Blow, Acc</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Cap">Enkidu's Cap</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Taj_+1">Puppetry Taj +1</a> <span class="rex">🟣</span></td><td>**AF+1** (Apollyon/Temenos)</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Anwig_Salade">Anwig Salade</a> <span class="rex">🟣</span></td><td>**Augmentable** — Pet/Master stat aug — top-tier</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Pantin_Taj_+1">Pantin Taj +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — Dynamis</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Somen">Usukane Somen</a> <span class="rex">🟣</span></td><td>Salvage — DT-</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a> <span class="rex">🟣</span></td><td>Haste 5%</td></tr>
+<tr><td class="lv">85</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Cirque_Capello_+2">Cirque Capello +2</a></td><td>Empyrean</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Doublet">Mercenary Captain's Doublet</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Fomor_Tunic">Fomor Tunic</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Cerise_Doublet">Cerise Doublet</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Aketon">Royal Knight's Aketon</a></td><td>—</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Tobe">Puppetry Tobe</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Tabin_Jupon_+1">Tabin Jupon +1</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Harness">Cobra Harness</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Antares_Harness">Antares Harness</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Avalon_Breastplate">Avalon Breastplate</a> <span class="rex">🟣</span></td><td>HNM body</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Khazagand">Pahluwan Khazagand</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Harness">Enkidu's Harness</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Tobe_+1">Puppetry Tobe +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Pantin_Tobe">Pantin Tobe</a> <span class="rex">🟣</span></td><td>**Relic** — Pet enhance</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Mirke_Wardecors">Mirke Wardecors</a> <span class="rex">🟣</span></td><td>**Augmentable** — Pet or Master aug</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Pantin_Tobe_+1">Pantin Tobe +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Haramaki">Usukane Haramaki</a> <span class="rex">🟣</span></td><td>Salvage — DT- set</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Saio">Goliard Saio</a> <span class="rex">🟣</span></td><td>Haste 4%, Conserve MP</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Combat_Mittens_+1">Combat Mittens +1</a></td><td>Long-running</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Combat_Caster%27s_Mitts">Combat Caster's Mitts</a></td><td>—</td></tr>
+<tr><td class="lv">56</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Dastanas">Puppetry Dastanas</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Tabin_Bracers_+1">Tabin Bracers +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Mittens">Enkidu's Mittens</a> <span class="rex">🟣</span></td><td>WS</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Pantin_Dastanas">Pantin Dastanas</a> <span class="rex">🟣</span></td><td>**Relic**</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Dastanas_+1">Puppetry Dastanas +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Pantin_Dastanas_+1">Pantin Dastanas +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Gote">Usukane Gote</a> <span class="rex">🟣</span></td><td>DT- set</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Tsukikazu_Haidate">Tsukikazu Haidate</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Herder%27s_Subligar">Herder's Subligar</a> <span class="rex">🟣</span></td><td>**Pet Acc** — long-running</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Combat_Caster%27s_Slacks">Combat Caster's Slacks</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Churidars">Puppetry Churidars</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Pantin_Churidars">Pantin Churidars</a> <span class="rex">🟣</span></td><td>**Relic**</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Seraweels">Pahluwan Seraweels</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Subligar">Enkidu's Subligar</a> <span class="rex">🟣</span></td><td>WS</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Surge_Subligar">Surge Subligar</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Churidars_+1">Puppetry Churidars +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Desultor_Tassets">Desultor Tassets</a> <span class="rex">🟣</span></td><td>**Augmentable** — **Pet JA recast** classic pick</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Pantin_Churidars_+1">Pantin Churidars +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Bahamut%27s_Hose">Bahamut's Hose</a> <span class="rex">🟣</span></td><td>Sky god</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Hizayoroi">Usukane Hizayoroi</a> <span class="rex">🟣</span></td><td>DT- set</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">54</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Babouches">Puppetry Babouches</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Tabin_Boots_+1">Tabin Boots +1</a></td><td>Acc/Eva</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Promptitude_Solea">Promptitude Solea</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hermes%27_Sandals">Hermes' Sandals</a></td><td>Movement Speed +12% — kite</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Leggings">Enkidu's Leggings</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pantin_Babouches">Pantin Babouches</a> <span class="rex">🟣</span></td><td>**Relic**</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Puppetry_Babouches_+1">Puppetry Babouches +1</a> <span class="rex">🟣</span></td><td>**AF+1**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Pantin_Babouches_+1">Pantin Babouches +1</a> <span class="rex">🟣</span></td><td>**Relic+1**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Sune-Ate">Usukane Sune-Ate</a> <span class="rex">🟣</span></td><td>DT- set</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">5</td><td><a href="https://www.bg-wiki.com/ffxi/Buffoon%27s_Collar_+1">Buffoon's Collar +1</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Focus_Collar_+1">Focus Collar +1</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>STR/DEX +3</td></tr>
+<tr><td class="lv">33</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a> <span class="rex">🟣</span></td><td>Acc +10 — TP staple</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Spirit_Torque">Spirit Torque</a></td><td>Tank — MP/Eva</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Storm_Gorget">Storm Gorget</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>Store TP</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Shepherd%27s_Chain">Shepherd's Chain</a> <span class="rex">🟣</span></td><td>Pet stat</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Evasion_Torque">Evasion Torque</a></td><td>Tank/solo</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Soil_Gorget">Soil Gorget</a> <span class="rex">🟣</span></td><td>**Asuran Fists / Stringing Pummel fTP**</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Faith_Torque">Faith Torque</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">80</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Cirque_Necklace">Cirque Necklace</a> <span class="rex">🟣</span></td><td>Empyrean</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Optical_Earring">Optical Earring</a></td><td>Acc — early</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>Att +3</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Heims_Earring">Heims Earring</a> <span class="rar">🟡</span></td><td>STR — WS</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Earring">Spike Earring</a></td><td>—</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Minuet_Earring">Minuet Earring</a></td><td>BRD-active stats</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Coral_Earring">Coral Earring</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Diabolos%27s_Earring">Diabolos's Earring</a> <span class="rex">🟣</span></td><td>Acc +3 (no dark weather)</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Guignol_Earring">Guignol Earring</a> <span class="rex">🟣</span></td><td>**PUP-specific** — pet enhance</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a> <span class="rex">🟣</span></td><td>Store TP +1, Double Attack</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Loquacious_Earring">Loquacious Earring</a> <span class="rex">🟣</span></td><td>MP +30, Fast Cast — mage sub</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>STR +2</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a> <span class="rex">🟣</span></td><td>**TP/WS** — STR/DEX, Store TP +5 (CoP)</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Venerer_Ring">Venerer Ring</a></td><td>Acc +3</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring">Sniper's Ring</a></td><td>Acc +5</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Ecphoria_Ring">Ecphoria Ring</a></td><td>Acc/Store TP, Amnesia removal</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>Acc/Att +4</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Lava%27s_Ring">Lava's Ring</a> + <a href="https://www.bg-wiki.com/ffxi/Kusha%27s_Ring">Kusha's Ring</a></td><td>Set: Att +6, Acc +12 — only paired</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Jelly_Ring">Jelly Ring</a> <span class="rex">🟣</span></td><td>PDT -5%</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Bellicose_Mantle">Bellicose Mantle</a></td><td>Att +6</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cheviot_Cape">Cheviot Cape</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Umbra_Cape">Umbra Cape</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Boxer%27s_Mantle">Boxer's Mantle</a> <span class="rex">🟣</span></td><td>H2H/Eva/Parry/Shield/Guard +10 — H2H staple</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Pantin_Cape">Pantin Cape</a> <span class="rex">🟣</span></td><td>**Pet enhance** — Einherjar</td></tr>
+<tr><td class="lv">98</td><td><a href="https://www.bg-wiki.com/ffxi/Rancorous_Mantle">Rancorous Mantle</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt_+1">Warrior's Belt +1</a></td><td>Long-running</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Cestus_Belt">Cestus Belt</a></td><td>**MNK sub** — H2H DMG +3</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></td><td>Acc +10</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a> <span class="rex">🟣</span></td><td>Haste 4%</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Virtuoso_Belt">Virtuoso Belt</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Potent_Belt">Potent Belt</a></td><td>STR +3, Acc +8</td></tr>
+<tr><td class="lv">79</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Shaolin_Belt">Shaolin Belt</a> <span class="rex">🟣</span></td><td>**H2H DMG +5**</td></tr>
+<tr><td class="lv">84</td><td><a href="https://www.bg-wiki.com/ffxi/Cirque_Sash">Cirque Sash</a> <span class="rex">🟣</span></td><td>Empyrean</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 Endgame Set Cheat-Sheet =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Set</th><th>Pieces</th></tr></thead>
+<tbody>
+<tr><td><strong>Master TP (Hand-to-Hand)</strong></td><td>Walahra Turban / Anwig Salade · Pantin Tobe +1 / Mirke Wardecors · Pantin Dastanas +1 · Pantin Churidars +1 / Bahamut's Hose · Pantin Babouches +1 · Peacock Charm · Boxer's Mantle · Shaolin Belt · Rajas Ring · Sniper's Ring · Brutal Earring · Verethragna / Inferno Claws · **Animator** ammo</td></tr>
+<tr><td><strong>Master WS (Asuran Fists / Stringing Pummel)</strong></td><td>Optical Hat / Anwig Salade · Mirke Wardecors · Enkidu's Mittens · Enkidu's Subligar · Marine Boots · Soil Gorget · Warwolf Belt · Boxer's Mantle · Rajas Ring · Flame Ring · Brutal Earring</td></tr>
+<tr><td><strong>Pet (Master casts JA on automaton)</strong></td><td>**Anwig Salade** (Pet aug) · **Mirke Wardecors** (Pet aug) · **Desultor Tassets** (Pet JA recast) · Pantin Tobe +1 · Pantin Cape · Shepherd's Chain · Guignol Earring · Herder's Subligar · Cirque pieces — anything **Pet:** prefixed</td></tr>
+<tr><td><strong>Maneuver Cast (Fast Cast)</strong></td><td>Loquacious Earring · Mirke Wardecors (FC aug) · Goliard Saio (Conserve MP) · master gear that doesn't kick puppet off cooldown</td></tr>
+<tr><td><strong>Tank (Valoredge backup)</strong></td><td>Sainti weapon · Spirit Torque / Evasion Torque · Aketon +1 · Hermes' Sandals (kite) · Jelly Ring · Cestus Belt</td></tr>
+</tbody>
+</table>
+{{/html}}
