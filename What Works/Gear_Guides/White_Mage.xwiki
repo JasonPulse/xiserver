@@ -1,0 +1,416 @@
+= ⛪ White Mage — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You're the healer — Cure/Protect/Shell/Haste/full status removal. You need: Tank, Refresh, DPS. Healing trusts are wasted on you.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank — Provoke/Flash/Sentinel/Defender/Rampart/Palisade keeps mobs off you</td></tr>
+<tr><td class="lv">2</td><td>🔮 <strong><a href="https://www.bg-wiki.com/ffxi/Arciela_II">Arciela II</a></strong></td><td>Slow/Paralyze/Dispel + weakness-targeted nukes — no healing overlap</td></tr>
+<tr><td class="lv">3</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>Ballad for YOUR MP, March on melee, Elegy on mob</td></tr>
+<tr><td class="lv">4</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + 4 stun interrupts reduce healing pressure on you</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Volker">Volker</a></strong></td><td>Auto-DPS — detects August tanking, switches to Berserk/Aggressor</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Wands & Maces (Party / Cures) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Maple_Wand_+1">Maple Wand +1</a></td><td>Optional starter — soloing with a club is usually better</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Willow_Wand_+1">Willow Wand +1</a></td><td>MND for cures</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Pilgrim%27s_Wand">Pilgrim's Wand</a> <span class="rex">🟣</span></td><td>HMP +2 — camp Nunyenunc, lasts to 51</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Melampus_Staff">Melampus Staff</a> <span class="rar">🟡</span></td><td>Cure Potency +3% — early cure stick</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Dia_Wand">Dia Wand</a></td><td>Enhances Cure Potency + Dia — ENM drop</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Ceres%27_Spica">Ceres' Spica</a> <span class="rar">🟡</span></td><td>Cure Potency +6% — best cure wand pre-51</td></tr>
+<tr><td class="lv">51</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Apollo%27s_Staff">Apollo's Staff (Light)</a></td><td>Cure Potency +10%, all stats — keep forever for Repose</td></tr>
+<tr><td class="lv">51</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Pluto%27s_Staff">Pluto's Staff (Dark)</a></td><td>HMP +10 — replaces Pilgrim's Wand for resting</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Healing_Staff">Healing Staff</a> <span class="rex">🟣</span></td><td>Cure Potency +10%, MP +50 — luxury, Light Staff already covers you</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Asklepios">Asklepios</a> <span class="rex">🟣</span></td><td>Cure Potency +5%, Convert 30 HP→MP — pairs with Templar Mace</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Templar_Mace">Templar Mace</a></td><td>MND +5, Cure Potency +10% — pair with Numinous Shield</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Seveneyes">Seveneyes</a> <span class="rex">🟣</span></td><td>Conserve MP +7 — Khimaira drop, buff macro</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Fourth_Mace">Fourth Mace</a></td><td>Conserve MP +4, MAB +4 — buff macro</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Jadagna_+1">Brass Jadagna +1</a></td><td>HP +30, VIT +6 — Devotion macro</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Capricorn_Staff">Capricorn Staff</a></td><td>Haste +5% — long-cast buff macro</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Yagrush">Yagrush</a> <span class="rex">🟣</span></td><td>**Mythic** — passive Divine Veil → AoE Erase always. Endgame BIS</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Clubs (Melee / WS) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Pixie_Mace">Pixie Mace</a></td><td>Acc +5 — early offhand for /NIN</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Holy_Maul_+1">Holy Maul +1</a></td><td>MND +3 — dual-wield for Seraph Strike</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Kraken_Club">Kraken Club</a></td><td>2-8 hit proc — best TP-build offhand if you can find one</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Darksteel_Maul_+1">Darksteel Maul +1</a></td><td>Mainhand TP — replaces Arcana Breaker</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Sea_Robber_Cudgel">Sea Robber Cudgel</a> <span class="rex">🟣</span></td><td>MND +5, Att +15 — placeholder mainhand</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Seawolf_Cudgel">Seawolf Cudgel</a> <span class="rex">🟣</span></td><td>STR +5, Acc +15 — solid offhand</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Purgatory_Mace">Purgatory Mace</a></td><td>STR +3 / MND +3 + Stun proc — best buyable mainhand</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Morgenstern">Morgenstern</a> <span class="rex">🟣</span></td><td>Crit +6% latent — KSNM offhand</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Perdu_Wand">Perdu Wand</a> <span class="rex">🟣</span></td><td>Delay 216 + hidden Acc/Att — best non-relic mainhand for DPS</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Prudence_Rod">Prudence Rod</a> <span class="rex">🟣</span></td><td>Virtue Stone proc → occasional double — fast TP offhand</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Deae_Gratia">Deae Gratia</a></td><td>Acc +9, Att +9, HP Drain proc — strong offhand</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Mjollnir">Mjollnir</a> <span class="rex">🟣</span></td><td>**Relic** — Att +20, Randgrith, occasional 3x damage. BIS mainhand</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Staves (Melee + Magic Burst) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Terra%27s_Staff">Terra's Staff (Earth)</a></td><td>PDT -20% — solo macro</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Auster%27s_Staff">Auster's Staff (Wind)</a></td><td>Silence macro</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Aquilo%27s_Staff">Aquilo's Staff (Ice)</a></td><td>Paralyze macro</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Primate_Staff_+1">Primate Staff +1</a></td><td>Crit +7% latent (Pamamas) — best DD staff</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Mekki_Shakki">Mekki Shakki</a></td><td>STR +5, Att +12, Store TP +5 — Primate alternative</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Shield ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Holy_Shield">Holy Shield</a></td><td>Def 13, MP +10, MND +1 — first real shield</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Numinous_Shield_+1">Numinous Shield +1</a></td><td>MND +3, all elemental resists — pair with Templar Mace</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Legion_Scutum">Legion Scutum</a> <span class="rex">🟣</span></td><td>HMP +5, MP +20, -2 Enmity — ZNM, beats Dark Staff w/ nation rod</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Muse_Tariqah">Muse Tariqah</a> <span class="rex">🟣</span></td><td>MND +7, CHR +7, SIR -10% — pair with Templar Mace</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Hairpin_+1">Brass Hairpin +1</a></td><td>MP +11 — early cure macro</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Silver_Hairpin_+1">Silver Hairpin +1</a></td><td>MP +16</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> <span class="rex">🟣</span></td><td>DEX/AGI +3, Eva +10 — soloing</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Rain_Hat">Rain Hat</a> <span class="rex">🟣</span></td><td>MP +20, MND +2, Regen in rain — Noble Mold drop</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Raven_Beret">Raven Beret</a></td><td>-9 Enmity, Eva +5 — best general curing hat through 60s</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Healer%27s_Cap">Healer's Cap</a> <span class="rex">🟣</span></td><td>AF — debuff macro</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Mirror_Tiara">Mirror Tiara</a></td><td>HMP +3, -7 Enmity — best HMP head</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Carline_Ribbon">Carline Ribbon</a> <span class="rex">🟣</span></td><td>MP +30, M.Acc +4 — Repose macro</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a> <span class="rex">🟣</span></td><td>Acc +10, R.Acc +10, Eva +10 — TP/melee acc</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Hat">Mahatma Hat</a></td><td>INT/MND/CHR +4, -6 Enmity — HQ Errant Hat replaces Raven Beret</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Zenith_Crown_+1">Zenith Crown +1</a> <span class="rex">🟣</span></td><td>Convert HP→MP 55 — Medicine Ring latent trigger</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Elite_Beret_+1">Elite Beret +1</a> <span class="rex">🟣</span></td><td>Enfeeb/Elem/Sum/Divine Skill +5 — debuffs/Repose</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Healer%27s_Cap_+1">Healer's Cap +1</a> <span class="rex">🟣</span></td><td>MP +28, MND +7, HMP +1 — best general WHM head</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Marduk%27s_Tiara">Marduk's Tiara</a> <span class="rex">🟣</span></td><td>Divine/Singing/Sum Skill +7, MND +3 — best Repose head</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Nashira_Turban">Nashira Turban</a> <span class="rex">🟣</span></td><td>M.Acc +5, Haste 2%, SIR -10% — debuff hat</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Valkyrie%27s_Hat">Valkyrie's Hat</a> <span class="rex">🟣</span></td><td>MP +40, M.Acc +6, -4 Enmity — best enfeebling head</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a> <span class="rex">🟣</span></td><td>Haste 5% — recast macro / TP</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Maat%27s_Cap">Maat's Cap</a> <span class="rex">🟣</span></td><td>All stats +7 — best WS hat (LB5 reward)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">19</td><td><a href="https://www.bg-wiki.com/ffxi/Priest%27s_Robe">Priest's Robe</a></td><td>MND +1</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Baron%27s_Saio">Baron's Saio</a></td><td>INT/MND +1 — long-running mid-game</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Seer%27s_Tunic_+1">Seer's Tunic +1</a></td><td>MP +9, HMP +1 — keep for HMP</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Bishop%27s_Robe_+1">Bishop's Robe +1</a></td><td>MND +3 — debuff macro through 60s</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Raven_Jupon">Raven Jupon</a></td><td>-9 Enmity, Eva +9 — general curing through 68</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Healer%27s_Briault">Healer's Briault</a> <span class="rex">🟣</span></td><td>Enfeeb Skill +10 — AF, debuff macro</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Cloak">Royal Cloak</a> <span class="rar">🟡</span></td><td>HQ Vermillion — Refresh, Eva -10 (downtime only)</td></tr>
+<tr><td class="lv">68</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Aristocrat%27s_Coat">Aristocrat's Coat</a></td><td>HQ Noble's Tunic — Cure Potency +10% + Refresh — top priority</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blessed_Briault_+1">Blessed Briault +1</a></td><td>MND +6, Enhances elemental resist spells — barspells</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hydra_Doublet">Hydra Doublet</a> <span class="rex">🟣</span></td><td>Refresh latent, Acc/Eva +10 — Dynamis-Tav TP</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Mahatma_Houppelande">Mahatma Houppelande</a></td><td>INT/MND/CHR +11, HMP +6 — endgame HMP</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Oracle%27s_Robe">Oracle's Robe</a> <span class="rex">🟣</span></td><td>HMP +6, M.Acc +6 — Repose / HMP combo</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Dalmatica_+1">Dalmatica +1</a> <span class="rex">🟣</span></td><td>Refresh, Convert HP→MP 55 — luxury</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Cleric%27s_Briault_+1">Cleric's Briault +1</a> <span class="rex">🟣</span></td><td>**Relic** — Refresh + Regen Potency Up — Regen macro</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Healer%27s_Briault_+1">Healer's Briault +1</a> <span class="rex">🟣</span></td><td>HMP +5, Enfeeb Skill +12 — best HMP body</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Saio">Goliard Saio</a> <span class="rex">🟣</span></td><td>HP/MP +42, Conserve MP +5, Haste 4% — buff macro</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Nashira_Manteel">Nashira Manteel</a> <span class="rex">🟣</span></td><td>M.Acc +5, Healing/Dark Skill +5, Haste 3% — Repose</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Valkyrie%27s_Coat">Valkyrie's Coat</a> <span class="rex">🟣</span></td><td>M.Acc +11, -5 Enmity — best Repose body</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Marduk%27s_Jubbah">Marduk's Jubbah</a> <span class="rex">🟣</span></td><td>MND +12, Refresh, Fast Cast — best WS/MND body</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Reverend_Mail">Reverend Mail</a> <span class="rex">🟣</span></td><td>Acc/Eva +10 — TP melee body (WS in something else)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>Eva/Acc +3 — TP through 60s</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Devotee%27s_Mitts_+1">Devotee's Mitts +1</a></td><td>MP +9, MND +6 — long-running cure mitts</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ivory_Mitts">Ivory Mitts</a></td><td>MP +12, MND +5 — better than Healer's Mitts</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Blessed_Mitts_+1">Blessed Mitts +1</a></td><td>MND +8, Haste 6%, -4 Enmity — endgame general/buffs</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Oracle%27s_Gloves">Oracle's Gloves</a> <span class="rex">🟣</span></td><td>HMP +2, Enfeeb Skill +5 — best HMP hands</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Genie_Gages">Genie Gages</a></td><td>HMP +1, Elem Skill +8 — alt HMP</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Zenith_Mitts_+1">Zenith Mitts +1</a> <span class="rex">🟣</span></td><td>Convert HP→MP 55 — Medicine Ring trigger</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Healer%27s_Mitts_+1">Healer's Mitts +1</a> <span class="rex">🟣</span></td><td>STR +7, MND +7, Heal Skill +15 — best WS hands</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Cleric%27s_Mitts_+1">Cleric's Mitts +1</a> <span class="rex">🟣</span></td><td>**Relic** — Enfeeb Skill +15 — best enfeebling hands</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Cuffs">Goliard Cuffs</a> <span class="rex">🟣</span></td><td>Acc/Att/M.Acc/MAB +4 — Repose/melee acc</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Valkyrie%27s_Cuffs">Valkyrie's Cuffs</a> <span class="rex">🟣</span></td><td>INT +6, M.Acc +4 — Repose alternate</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Baron%27s_Slops">Baron's Slops</a></td><td>HMP +1 — keep forever for early HMP macro</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Garrison_Hose">Garrison Hose</a></td><td>STR/DEX +1 — TP through 60</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Raven_Hose">Raven Hose</a></td><td>-6 Enmity, Eva +6 — general curing through 60s</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Healer%27s_Pantaloons">Healer's Pantaloons</a> <span class="rex">🟣</span></td><td>AF — Divine Skill +15 (Repose)</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Blessed_Trousers_+1">Blessed Trousers +1</a></td><td>MND +7, Haste 4%, -6 Enmity — best general WHM legs</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hydra_Brais">Hydra Brais</a> <span class="rex">🟣</span></td><td>Acc/Eva +10 — Dynamis-Tav TP</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Prince%27s_Slops">Prince's Slops</a></td><td>HP/MP +30, Acc +4 — Devotion / acc</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Yigit_Seraweels">Yigit Seraweels</a> <span class="rex">🟣</span></td><td>HMP +2, Refresh set — best HMP legs (easier than Oracle's)</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Cleric%27s_Pantaloons_+1">Cleric's Pantaloons +1</a> <span class="rex">🟣</span></td><td>**Relic** — Elem Resist Spells +22, Heal Skill +15 — barspells</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Healer%27s_Pantaloons_+1">Healer's Pantaloons +1</a> <span class="rex">🟣</span></td><td>MP +30, Divine Skill +15 — best Repose legs</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Nashira_Seraweels">Nashira Seraweels</a> <span class="rex">🟣</span></td><td>Haste 2%, Enfeeb/Divine +5, M.Acc +3 — debuff legs</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Valkyrie%27s_Trews">Valkyrie's Trews</a> <span class="rex">🟣</span></td><td>M.Acc +5, MAB +5 — Repose alt</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Seer%27s_Pumps_+1">Seer's Pumps +1</a></td><td>MP +5, MND +2 — long-running</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Raven_Gaiters">Raven Gaiters</a></td><td>-5 Enmity, Eva +5 — general curing</td></tr>
+<tr><td class="lv">59</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Cure_Clogs">Cure Clogs</a></td><td>Cure cast time -15% — equip BEFORE casting in macro</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blessed_Pumps_+1">Blessed Pumps +1</a></td><td>MND +4, Haste 3%, -5 Enmity — buff/cure recast</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Herald%27s_Gaiters">Herald's Gaiters</a></td><td>Movement +12% — luxury travel feet</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Numerist_Pumps">Numerist Pumps</a></td><td>HMP +3, Elem Skill +4 — ZNM HMP</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Cleric%27s_Duckbills_+1">Cleric's Duckbills +1</a> <span class="rex">🟣</span></td><td>**Relic** — MND +6, Enhancing Skill +10 — barspells/Stoneskin</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Avocat_Pigaches">Avocat Pigaches</a> <span class="rex">🟣</span></td><td>HMP +3, -3 Enmity, Enfeeb Skill +3 — best HMP feet</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Marduk%27s_Crackows">Marduk's Crackows</a> <span class="rex">🟣</span></td><td>MND +10, Fast Cast set, Enfeeb Skill +5 — best cure/WS feet</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Goliard_Clogs">Goliard Clogs</a> <span class="rex">🟣</span></td><td>HMP +3, MND +4, M.Acc +2</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Valkyrie%27s_Clogs">Valkyrie's Clogs</a> <span class="rex">🟣</span></td><td>MND/CHR +6, M.Acc +3 — best Repose feet</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Holy_Phial">Holy Phial</a></td><td>MP +9, MND +3</td></tr>
+<tr><td class="lv">33</td><td><a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a> <span class="rex">🟣</span></td><td>Acc/R.Acc +10 — TP/melee</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Stone_Gorget">Stone Gorget</a> <span class="rex">🟣</span></td><td>Stoneskin +30 HP — soloing</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Beak_Necklace_+1">Beak Necklace +1</a></td><td>MP +22, HMP +2 — resting</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Enfeebling_Torque">Enfeebling Torque</a></td><td>Enfeeb Skill +7 — debuff macro</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Divine_Torque">Divine Torque</a></td><td>Divine Skill +7 — Repose macro</td></tr>
+<tr><td class="lv">64</td><td><a href="https://www.bg-wiki.com/ffxi/Enhancing_Torque">Enhancing Torque</a></td><td>Enhancing Skill +7 — barspells</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Morgana%27s_Choker">Morgana's Choker</a> <span class="rex">🟣</span></td><td>MND +5, Convert HP→MP 40 — Einherjar</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Gnole_Torque">Gnole Torque</a> <span class="rex">🟣</span></td><td>MND +5, HMP +3 — best HMP/general neck</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Phi_Necklace">Phi Necklace</a> <span class="rex">🟣</span></td><td>HMP +3, Heal/Enfeeb Skill +3 — Salvage alt</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Light_Gorget">Light Gorget</a> <span class="rex">🟣</span></td><td>Hexa Strike WS</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Gorget">Flame Gorget</a> <span class="rex">🟣</span></td><td>Hexa Strike WS</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Breeze_Gorget">Breeze Gorget</a> <span class="rex">🟣</span></td><td>Black Halo / Randgrith WS</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Prudence_Torque">Prudence Torque</a> <span class="rex">🟣</span></td><td>Club Skill +7 — best club WS neck</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Mist_Silk_Cape">Mist Silk Cape</a></td><td>MND +1 — early cape</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/White_Cape_+1">White Cape +1</a></td><td>MND +3 — long-running</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Bellicose_Mantle">Bellicose Mantle</a></td><td>Att +6 — TP for melee WHM</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Miraculous_Cape">Miraculous Cape</a></td><td>MP +15, MND +3 — assault points</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Invigorating_Cape">Invigorating Cape</a></td><td>HMP +1 — only HMP back option</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Altruistic_Cape">Altruistic Cape</a> <span class="rex">🟣</span></td><td>Divine/Heal/Enfeeb Skill +5 — Repose/debuff</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Mahatma_Cape">Mahatma Cape</a></td><td>HQ Errant Cape — MP +30, -5 Enmity — best general curing back</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Aslan_Cape">Aslan Cape</a> <span class="rex">🟣</span></td><td>MND +5 (HP -20) — Einherjar</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Friar%27s_Rope">Friar's Rope</a></td><td>MP +5, MND +1 — long-running</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mohbwa_Sash_+1">Mohbwa Sash +1</a></td><td>MP +12, HMP +2 — resting macro</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Qiqirn_Sash_+1">Qiqirn Sash +1</a></td><td>MP +14, HMP +3 — keep until Cleric's Belt</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></td><td>Acc +10 — TP</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a> <span class="rex">🟣</span></td><td>Haste 4%, Acc +3 — only Haste belt besides Ninurta's</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Penitent%27s_Rope">Penitent's Rope</a></td><td>INT/MND +5, -3 Enmity — replaces RSE</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Cleric%27s_Belt">Cleric's Belt</a></td><td>MP +40, MND +6, HMP +3 — best WHM belt (Dynamis-Qufim/Valkurm)</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Korin_Obi">Korin Obi</a> <span class="rex">🟣</span></td><td>Full Lightsday/light weather bonus — +10-35% cures with Scholar/Temenos</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Saintly_Ring_+1">Saintly Ring +1</a></td><td>MND +3</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Astral_Ring">Astral Ring</a></td><td>Convert HP→MP 25</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Tamas_Ring">Tamas Ring</a> <span class="rex">🟣</span></td><td>MP/INT/MND +2-5, -3 Enmity — best WHM ring (CoP)</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a> <span class="rex">🟣</span></td><td>STR/DEX +2-5, Store TP +5 — TP/WS</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Solace_Ring_+1">Solace Ring +1</a></td><td>MND +3 — until Tamas</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring_+1">Sniper's Ring +1</a></td><td>Acc/R.Acc +7 — TP</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Medicine_Ring">Medicine_Ring</a> <span class="rar">🟡</span></td><td>Cure Potency +10% latent (HP ≤75%, TP ≤100%) — situational</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Balrahn%27s_Ring">Balrahn's Ring</a> <span class="rex">🟣</span></td><td>M.Acc +4, Refresh in Assault — Repose/debuffs</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Serket_Ring">Serket Ring</a> <span class="rar">🟡</span></td><td>Convert HP→MP 50</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Serenity_Ring_+1">Serenity Ring +1</a></td><td>MND +4 — until Communion</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Bomb_Queen_Ring">Bomb Queen Ring</a> <span class="rex">🟣</span></td><td>HP +75 — Devotion</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Serene_Ring">Serene Ring</a> <span class="rar">🟡</span></td><td>INT/MND/CHR +2, -2 Enmity — ENM drop</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Communion_Ring_+1">Communion Ring +1</a></td><td>MND +5 — replaces Serenity</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Star_Ring">Star Ring</a></td><td>HQ Celestial Ring — MP +20, MND +5, HMP +1 — best Tamas pair</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Aqua_Ring">Aqua Ring</a></td><td>STR +2, MND +5 — best WS ring</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Omega_Ring">Omega Ring</a> <span class="rex">🟣</span></td><td>INT/MND/CHR +3, M.Acc +3 — Repose/debuffs (Einherjar)</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Mars%27s_Ring">Mars's Ring</a> <span class="rar">🟡</span></td><td>Acc/Att +8 — AV drop, best acc ring</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Energy_Earring_+1">Energy Earring +1</a></td><td>MP +4</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Divine_Earring">Divine Earring</a> <span class="rar">🟡</span></td><td>Divine Skill +3 — Repose macro</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Enfeebling_Earring">Enfeebling Earring</a> <span class="rar">🟡</span></td><td>Enfeeb Skill +3 — debuff macro</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Geist_Earring">Geist Earring</a></td><td>MP +5, MND +1</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Antivenom_Earring">Antivenom Earring</a> <span class="rar">🟡</span></td><td>MP +15, HMP +1, Resist Poison — alt resting</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Relaxing_Earring">Relaxing Earring</a> <span class="rex">🟣</span></td><td>HMP +2 — best HMP ear (sea organs)</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Celestial_Earring">Celestial Earring</a></td><td>MP +22, MND +3 — Einherjar HQ</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Magnetic_Earring">Magnetic Earring</a> <span class="rex">🟣</span></td><td>MP +10, HMP +1 — Apocalypse Nigh, beats Antivenom</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a> <span class="rex">🟣</span></td><td>Dual Wield enhance — TP for /NIN</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Roundel_Earring">Roundel Earring</a> <span class="rar">🟡</span></td><td>Cure Potency +5%, Waltz potency +5% — best WHM earring period</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Loquacious_Earring">Loquacious Earring</a> <span class="rex">🟣</span></td><td>MP +30, Fast Cast — buff macro</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Novia_Earring">Novia Earring</a> <span class="rex">🟣</span></td><td>-7 Enmity, Eva +7 — best Roundel companion (Jailer of Love)</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a> <span class="rex">🟣</span></td><td>Store TP +1, enhances Double Attack — TP/WS</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+== Ammo ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Morion_Tathlum">Morion Tathlum</a></td><td>MP +3, INT +1</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Holy_Ampulla">Holy Ampulla</a></td><td>MP +5, MND +1</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Tiphia_Sting">Tiphia Sting</a></td><td>Acc/Att +2 — TP</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Healing_Feather">Healing Feather</a> <span class="rex">🟣</span></td><td>Cure Potency +15% for 3 min — ENM drop</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Hedgehog_Bomb">Hedgehog Bomb</a></td><td>MP +30, -1 Enmity — best general ammo</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/White_Tathlum">White Tathlum</a></td><td>HP/MP +15, -2 Enmity, Store TP +2 — alt</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Aureole">Aureole</a> <span class="rar">🟡</span></td><td>M.Acc +8 — AV drop, Repose/debuffs</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 Endgame Set Cheat-Sheet =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Set</th><th>Pieces</th></tr></thead>
+<tbody>
+<tr><td><strong>General Cures</strong></td><td>Healer's Cap +1 · Aristocrat's Coat · Blessed Mitts +1 · Blessed Trousers +1 · Marduk's Crackows · Gnole Torque · Mahatma Cape · Cleric's Belt · Tamas Ring · Star Ring · Roundel Earring · Loquacious Earring · Hedgehog Bomb</td></tr>
+<tr><td><strong>HMP Resting</strong></td><td>Mirror Tiara · Healer's Briault +1 · Oracle's Gloves · Yigit Seraweels · Avocat Pigaches · Gnole Torque · Invigorating Cape · Cleric's Belt · Star Ring · Relaxing Earring · Magnetic Earring</td></tr>
+<tr><td><strong>Repose / Enfeebling</strong></td><td>Marduk's Tiara / Valkyrie's Hat · Valkyrie's Coat · Cleric's Mitts +1 · Healer's Pantaloons +1 · Valkyrie's Clogs · Divine Torque · Altruistic Cape · Korin Obi · Omega Ring · Balrahn's Ring · Divine Earring · Aureole</td></tr>
+<tr><td><strong>Buff Macro (Haste/Reraise/Pro)</strong></td><td>Walahra Turban · Goliard Saio · Blessed Mitts +1 · Blessed Trousers +1 · Blessed Pumps +1 · Capricorn Staff · Loquacious Earring · Magnetic Earring</td></tr>
+<tr><td><strong>Melee TP (/NIN)</strong></td><td>Optical Hat / Walahra Turban · Reverend Mail / Hydra Doublet · Hydra Gloves · Hydra Brais · Hydra Gaiters · Peacock Charm · Bellicose Mantle · Swift Belt · Rajas Ring · Sniper's Ring +1 · Suppanomimi · Brutal Earring</td></tr>
+<tr><td><strong>Hexa Strike WS</strong></td><td>Maat's Cap / Healer's Cap +1 · Marduk's Jubbah · Healer's Mitts +1 · Blessed Trousers +1 · Marduk's Crackows · Light/Flame Gorget or Prudence Torque · Mahatma Cape · Penitent's Rope · Aqua Ring · Rajas Ring · Brutal Earring · Celestial Earring</td></tr>
+</tbody>
+</table>
+{{/html}}

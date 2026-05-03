@@ -1,0 +1,528 @@
+= 🥷 Thief — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You DPS — SA / TA / Flee. You need: **tank for TA positioning**, Haste, debuffs.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Stable tank — TA requires standing behind mob relative to tank, August's aggressive enmity holds position</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Haste on melee (you), full status removal, Convert</td></tr>
+<tr><td class="lv">3</td><td>🌹 <strong><a href="https://www.bg-wiki.com/ffxi/Arciela_II">Arciela II</a></strong></td><td>Slow/Paralyze/Dispel on mob + Haste/Refresh on party + nukes</td></tr>
+<tr><td class="lv">4</td><td>🥷 <strong><a href="https://www.bg-wiki.com/ffxi/Maximilian">Maximilian</a></strong></td><td>Also uses SA/TA constantly — two thieves do more positional damage than one + generic DPS</td></tr>
+<tr><td class="lv">5</td><td>💃 <strong><a href="https://www.bg-wiki.com/ffxi/Mumor">Mumor</a></strong></td><td>Haste Samba, Stutter Step DEF debuff, Violent Flourish interrupts</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Main Weapons =
+
+**Note:** At low levels, daggers' low DMG and weak WS make them poor for soloing/early parties. The first dagger WS that works well with SA/TA is **Viper Bite**, so most THFs use Hand-to-Hand or Sword early. **Fast Blade** and **Combo** stack fully with SA, and at low skill rank the difference is small.
+
+== Dagger ==
+
+NIN sub for Dual Wield is most common; WAR before lvl 20, then /NIN 30+ unless going for Berserk. Avoid daggers until 20-33 minimum (Wasp Sting / Shadowstitch still work on SA).
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Knife">Bronze Knife</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Beestinger">Beestinger</a> / <a href="https://www.bg-wiki.com/ffxi/Blind_Dagger">Blind Dagger</a></td><td>—</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Dagger">Brass Dagger</a></td><td>—</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Dagger">Dagger</a> / <a href="https://www.bg-wiki.com/ffxi/Silence_Dagger">Silence Dagger</a> / <a href="https://www.bg-wiki.com/ffxi/Spark_Dagger">Spark Dagger</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Decurion%27s_Dagger">Decurion's Dagger</a> / <a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Knife">Mercenary's Knife</a></td><td>—</td></tr>
+<tr><td class="lv">23</td><td><a href="https://www.bg-wiki.com/ffxi/Corrosive_Dagger">Corrosive Dagger</a></td><td>Optional</td></tr>
+<tr><td class="lv">25</td><td>2× <a href="https://www.bg-wiki.com/ffxi/Federation_Knife">Federation Knife</a> / <a href="https://www.bg-wiki.com/ffxi/Windurstian_Knife">Windurstian Knife</a></td><td>—</td></tr>
+<tr><td class="lv">28</td><td>2× <a href="https://www.bg-wiki.com/ffxi/Archer%27s_Knife">Archer's Knife</a></td><td>Build TP with crossbow</td></tr>
+<tr><td class="lv">30</td><td>2× <a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Kukri">Mercenary Captain's Kukri</a> / <a href="https://www.bg-wiki.com/ffxi/Royal_Squire%27s_Dagger">Royal Squire's Dagger</a></td><td>—</td></tr>
+<tr><td class="lv">34</td><td>2× <a href="https://www.bg-wiki.com/ffxi/Federation_Kukri">Federation Kukri</a> / <a href="https://www.bg-wiki.com/ffxi/San_d%27Orian_Dagger">San d'Orian Dagger</a> / <a href="https://www.bg-wiki.com/ffxi/Kingdom_Dagger">Kingdom Dagger</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Marauder%27s_Knife">Marauder's Knife</a> · <a href="https://www.bg-wiki.com/ffxi/Corrosive_Baselard">Corrosive Baselard</a></td><td>Marauder is THF AF — lower DPS but DEX/AGI bonuses</td></tr>
+<tr><td class="lv">42</td><td><a href="https://www.bg-wiki.com/ffxi/Calveley%27s_Dagger">Calveley's Dagger</a></td><td>DEX +3, lower DPS</td></tr>
+<tr><td class="lv">46</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Knife_+1">Bone Knife +1</a></td><td>If you're missing a lot, dual-wield</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Hornetneedle">Hornetneedle</a></td><td>Replaces Calveley if you can get it (Death from Above)</td></tr>
+<tr><td class="lv">50</td><td>2× <a href="https://www.bg-wiki.com/ffxi/Corsair%27s_Knife">Corsair's Knife</a></td><td>If no Hornetneedle</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Mercurial_Kris">Mercurial Kris</a></td><td>Excellent off-hand if you have it</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Chicken_Knife">Chicken Knife</a></td><td>Good damage, low delay, additional Flee effect</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Darksteel_Kukri">Darksteel Kukri</a> / <a href="https://www.bg-wiki.com/ffxi/Darksteel_Kukri_+1">+1</a></td><td>Not too pricey</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Cermet_Kukri">Cermet Kukri</a> / <a href="https://www.bg-wiki.com/ffxi/Cermet_Kukri_+1">+1</a></td><td>Same as Darksteel — Chicken Knife pairs well</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Garuda%27s_Dagger">Garuda's Dagger</a></td><td>Or keep 2× Cermet</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Hoplites_Harpe">Hoplites Harpe</a> / <a href="https://www.bg-wiki.com/ffxi/Harpe">Harpe</a></td><td>—</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Sirocco_Kukri">Sirocco Kukri</a></td><td>Blau Dolch + relic upgrades are the only better off-hands</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Magnet_Knife">Magnet Knife</a></td><td>Swap out Hoplites or Garuda's</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Behemoth_Knife_+1">Behemoth Knife +1</a></td><td>NQ not better than Harpe / Magnet</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Thief%27s_Knife">Thief's Knife</a></strong></td><td>DMG 28 · Delay 194 · <strong>Treasure Hunter +1</strong> — farming/HNM/NM</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Stylet">Stylet</a></td><td>Slightly better than Behemoth Knife +1</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Adder_Jambiya_+1">Adder Jambiya +1</a> · <a href="https://www.bg-wiki.com/ffxi/Amir_Jambiya">Amir Jambiya</a> · <a href="https://www.bg-wiki.com/ffxi/Jambiya_+1">Jambiya +1</a> · <a href="https://www.bg-wiki.com/ffxi/Adder_Jambiya">Adder Jambiya</a></td><td>Best to worst — each is marginally better than Stylet</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Ermine%27s_Tail">Ermine's Tail</a></td><td>Free, daily-attemptable, quite good — much better drop rate than Blau / X's</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/X%27s_Knife">X's Knife</a></td><td>Requiem of Sin ENM. Only Blau Dolch is better.</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Blau_Dolch">Blau Dolch</a></strong></td><td>Best non-relic main hand. Latent: DMG 33 + hidden Acc +5/Atk +16 when TP &lt;100%. Useless if subbing DNC.</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Perseus%27s_Harpe">Perseus's Harpe</a></td><td>Good Blau Dolch substitute, also good off-hand</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Azoth">Azoth</a></td><td>Best for /DNC — high dmg/delay = high Samba potency</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Batardeau">Batardeau</a></td><td>Second-to-final relic upgrade. WS: Mercy Stroke.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Mandau">Mandau</a></strong></td><td>THF relic. WS: Mercy Stroke. <strong>A thief's dream.</strong></td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Vajra">Vajra</a></td><td>THF Mythic (Nyzul floor 100)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Sword ==
+
+Recommended for lvl 15-30 — higher DMG, stronger first WS, similar attack speed. **Fast Blade** is the first WS that benefits from SA. Past 33 (Viper Bite), stick with daggers.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Scimitar">Scimitar</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Fire_Sword">Fire Sword</a> / <a href="https://www.bg-wiki.com/ffxi/Flame_Sword">Flame Sword</a> / <a href="https://www.bg-wiki.com/ffxi/Iron_Sword">Iron Sword</a> / <a href="https://www.bg-wiki.com/ffxi/Iron_Sword_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">19</td><td><a href="https://www.bg-wiki.com/ffxi/Small_Sword">Small Sword</a></td><td>+DEX off-hand for a long time</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Nadrs">Nadrs</a> <span class="rex">🟣</span></td><td>Cargo Crab Colin drop. Good to 33, best to 28.</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Gladius">Gladius</a></td><td>Often skipped for Mithran Scimitar</td></tr>
+<tr><td class="lv">28</td><td><a href="https://www.bg-wiki.com/ffxi/Mithran_Scimitar">Mithran Scimitar</a></td><td>Often dual-wielded, +DEX bonus</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Centurion%27s_Sword">Centurion's Sword</a></td><td>Debatable vs Mithran Scimitar</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hand to Hand ==
+
+Best lvl 1-15. With MNK sub, decent damage and speed. **Combo** is strongest WS until Viper Bite, but loses some Acc/Atk vs Sword. Switch to Sword at 15 for SA + Fast Blade.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cesti">Cesti</a> / <a href="https://www.bg-wiki.com/ffxi/Cesti_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">5</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Knuckles">Bronze Knuckles</a> / <a href="https://www.bg-wiki.com/ffxi/Bronze_Knuckles_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Knuckles">Brass Knuckles</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Knuckles">Legionnaire's Knuckles</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Bastokan_Knuckles">Bastokan Knuckles</a> / <a href="https://www.bg-wiki.com/ffxi/Republic_Knuckles">Republic Knuckles</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🏹 Ranged Weapons =
+
+THF makes one of the best pullers — typical cheap option is Boomerang (unlimited use, +AGI). Marksmanship is also useful for status bolts. Pulling lets a THF land 2 SATAs in quick succession (instead of one).
+
+== Bow ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Shortbow">Shortbow</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Self_Bow">Self Bow</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Windurstian_Bow">Windurstian Bow</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Wrapped_Bow">Wrapped Bow</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Hamayumi">Hamayumi</a></td><td>Best bow a THF can use to lvl 70 (Promyvion-Vahzl NM drop)</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Composite_Bow">Composite Bow</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Lightning_Bow">Lightning Bow</a> / <a href="https://www.bg-wiki.com/ffxi/Lightning_Bow_+1">+1</a></td><td>Will last forever for bow users</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Arrow ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Wooden_Arrow">Wooden Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Arrow">Bone Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Iron_Arrow">Iron Arrow</a> · lvl 15 <a href="https://www.bg-wiki.com/ffxi/Fang_Arrow">Fang Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">17</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Arrow">Beetle Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">19</td><td><a href="https://www.bg-wiki.com/ffxi/Poison_Arrow">Poison Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Silver_Arrow">Silver Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Horn_Arrow">Horn Arrow</a></td><td>—</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Sleep_Arrow">Sleep Arrow</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Crossbow ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Crossbow">Legionnaire's Crossbow</a></td><td>—</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Crossbow">Crossbow</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Power_Crossbow">Power Crossbow</a></td><td>+1 AGI — keep for TA pulls</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Thug%27s_Zamburak">Thug's Zamburak</a></td><td>+AGI · +R.Acc</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Arbalest_+1">Arbalest +1</a></td><td>Noticeable extra damage</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Velocity_Bow">Velocity Bow</a></td><td>Cheap, optional, nice upgrade from Thug's</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Ziska%27s_Crossbow">Ziska's Crossbow</a></td><td>Very low delay, R.Acc +8</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Perdu_Crossbow">Perdu Crossbow</a></td><td>Latent: R.Acc +5 / R.Atk +18 · Free with Second Lieutenant rank</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Staurobow">Staurobow</a></td><td>+4 AGI — great for TA</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Bolts ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Blind_Bolt">Blind Bolt</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Acid_Bolt">Acid Bolt</a></strong></td><td>Lowers DEF — switch to others to save these</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Sleep_Bolt">Sleep Bolt</a></td><td>SA mid-fight while soloing</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Venom_Bolt">Venom Bolt</a></td><td>Cheap, low delay, high damage — great for TP</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Bloody_Bolt">Bloody Bolt</a></td><td>Solo T+ combo: Blind to keep shadows up, Bloody for HP, Sleep for Utsusemi recast</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Throwing Weapons ==
+
+Most popular pulling tool — shortest delay, infinite use. Changing ranged weapon resets TP.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">6</td><td><a href="https://www.bg-wiki.com/ffxi/Coarse_Boomerang">Coarse Boomerang</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Boomerang">Boomerang</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Rogetsurin">Rogetsurin</a></td><td>+1 AGI, low damage</td></tr>
+<tr><td class="lv">19</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Boomerang">Flame Boomerang</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Wingedge">Wingedge</a></td><td>—</td></tr>
+<tr><td class="lv">28</td><td><a href="https://www.bg-wiki.com/ffxi/Chakram">Chakram</a></td><td>—</td></tr>
+<tr><td class="lv">33</td><td><a href="https://www.bg-wiki.com/ffxi/Long_Boomerang">Long Boomerang</a></td><td>+2 AGI · best ranged for SATA for a while</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Smart_Grenade">Smart Grenade</a></td><td>+Atk piece if not pulling. <strong>Throwable</strong> — unlike Bomb Core / Fire Bomblet.</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Bomb_Core">Bomb Core</a></td><td>Upgrade from Smart Grenade. Use Darts for pulling without losing TP.</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ungur_Boomerang">Ungur Boomerang</a></strong></td><td>Endgame THF — very low delay + Eva +8</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Fire_Bomblet">Fire Bomblet</a></td><td>+6 Acc (great with meat), -6 Atk vs Bomb Core</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+A THF wants two sets: **Acc/Atk** for TP gain, **DEX/AGI** for SATA. Optionally a third for ranged accuracy / status bolts. After 30, defense doesn't matter much (TA transfers hate). 15-29 may need defense gear (SA generates large damage hate; /NIN at 24 fixes it).
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Cap">Bronze Cap</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Bandana">Leather Bandana</a></td><td>—</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Compound_Eye_Circlet">Compound Eye Circlet</a></td><td>Many keep over higher DEF for evasion at 10-15</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Bandana">Royal Footman's Bandana</a> / <a href="https://www.bg-wiki.com/ffxi/Sol_Cap">Sol Cap</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Mask">Bone Mask</a> · lvl 17 <a href="https://www.bg-wiki.com/ffxi/Lizard_Helm">Lizard Helm</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Trader%27s_Chapeau">Trader's Chapeau</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Mask">Beetle Mask</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> / <a href="https://www.bg-wiki.com/ffxi/Emperor_Hairpin">Emperor Hairpin</a></td><td>Empress drops from Valkurm Emperor — TH2 helps. /RNG eases the headache.</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Headgear">Mercenary Captain's Headgear</a> / <a href="https://www.bg-wiki.com/ffxi/Noct_Beret_+1">Noct Beret +1</a></td><td>—</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a></td><td>Competes with Hairpin. Use for Atk set.</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Walkure_Mask">Walkure Mask</a></td><td>Good TP gain if no Voyager Sallet</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Crow_Beret">Crow Beret</a></td><td>Soloing without Empress / Emperor</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Rogue%27s_Bonnet">Rogue's Bonnet</a></td><td>THF AF — useful for stealing from Maat</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Zeal_Cap">Zeal Cap</a> / <a href="https://www.bg-wiki.com/ffxi/Zeal_Cap_+1">+1</a></td><td>Easier to get than Patroclus's Helm</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Patroclus%27s_Helm">Patroclus's Helm</a></td><td>For haste build</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Cap">Cobra Cap</a></td><td>Good for TP on ranged with enough Acc</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a></strong></td><td>Melee staple — good for exp, excellent for soloing</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Assassin%27s_Bonnet">Assassin's Bonnet</a></strong></td><td>+5 DEX for SA — upgrade to +1 if you can</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Panther_Mask">Panther Mask</a></td><td>Decent DEF, high CHR, small haste — great /DNC, paralysis resist</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hecatomb_Cap">Hecatomb Cap</a></strong></td><td>Best WS head, big STR</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Denali_Bonnet">Denali Bonnet</a></strong></td><td>Haste +4% (1% less than Walahra) + AGI +4 / Eva +3 / Atk +3</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a></td><td>Strong TP gain piece with Acc gear / food</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>Starting RSE / <a href="https://www.bg-wiki.com/ffxi/Aketon">Aketon</a> / <a href="https://www.bg-wiki.com/ffxi/Bronze_Harness">Bronze Harness</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Vest">Leather Vest</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Harness">Legionnaire's Harness</a> · lvl 11 <a href="https://www.bg-wiki.com/ffxi/Brass_Harness">Brass Harness</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Harness">Bone Harness</a> / <a href="https://www.bg-wiki.com/ffxi/Lizard_Jerkin">Lizard Jerkin</a></td><td>—</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Garrison_Tunica">Garrison Tunica</a></td><td>Only +DEX for a while</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Harness">Beetle Harness</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Doublet">Mercenary Captain's Doublet</a> / <a href="https://www.bg-wiki.com/ffxi/Noct_Doublet_+1">Noct Doublet +1</a></td><td>TP/SATA / RA</td></tr>
+<tr><td class="lv">33</td><td>RSE for DD set</td><td>None have enough +DEX/AGI to macro for SATA</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Iron_Musketeer%27s_Gambison">Iron Musketeer's Gambison</a></td><td>Good RA macro</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Brigandine_Armor">Brigandine Armor</a></td><td>Replaces Merc Captain Doublet</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Crow_Jupon">Crow Jupon</a></td><td>Solo</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rapparee_Harness">Rapparee Harness</a></strong></td><td>Better than AF — Haste +4%, great TP piece to 75</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Jaridah_Peti">Jaridah Peti</a></td><td>Better than AF, nice price</td></tr>
+<tr><td class="lv">57</td><td><a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness">Scorpion Harness</a> / <a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness_+1">+1</a></td><td>Acc/Eva +10 (HQ +12). Solid TP / multihit non-SATA WS.</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Rogue%27s_Vest">Rogue's Vest</a></td><td>THF AF — Hide macro only</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Black_Cotehardie">Black Cotehardie</a></td><td>SATA macro if you have Scorpion / Rapparee</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Assault_Jerkin">Assault Jerkin</a></td><td>Macro for non-SATA WS</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Blue_Cotehardie">Blue Cotehardie</a></td><td>Better SATA WS macro</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Antares_Harness">Antares Harness</a></strong></td><td>Acc/Eva + DEX/AGI +8 — second-best SATA piece, great TP. Hard to acquire.</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Hecatomb_Harness">Hecatomb Harness</a></td><td>Great for Dancing Edge damage</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Dragon_Harness">Dragon Harness</a></td><td>Used to be best SATA WS macro, now outranked by Antares</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Denali_Jacket">Denali Jacket</a></td><td>Pair with Rogue's Armlets +1 for AGI 10 / -1 Atk vs Dragon Harness</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Homam_Corazza">Homam Corazza</a></td><td>Good TP if you can lose Rapparee haste</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Cuirie">Skadi's Cuirie</a></strong></td><td>Best WS body — ~12m gil + 3 R/E Salvage drops</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Mirke_Wardecors">Mirke Wardecors</a></td><td>With proper augments almost in Antares league. ACP reward.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>Starting RSE / <a href="https://www.bg-wiki.com/ffxi/Bronze_Mittens">Bronze Mittens</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Gloves">Leather Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Mittens">Legionnaire's Mittens</a> / <a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Gloves">Royal Footman's Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>Best Atk gloves for a long time — +Acc, decent DEF, Eva</td></tr>
+<tr><td class="lv">27</td><td>RSE — Hume / Taru / Elvaan</td><td>Hume full-time, Elvaan SATA macro, Taru melee + macro DEX/AGI for SATA</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Gloves">Mercenary Captain's Gloves</a> / <a href="https://www.bg-wiki.com/ffxi/Noct_Gloves_+1">Noct Gloves +1</a></td><td>SATA macro / RA</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Windurstian_Gloves">Windurstian Gloves</a> / <a href="https://www.bg-wiki.com/ffxi/Federation_Gloves">Federation Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Mage%27s_Cuffs">Mage's Cuffs</a></td><td>SATA macro</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Crow_Bracers">Crow Bracers</a></td><td>Solo</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Rogue%27s_Armlets">Rogue's Armlets</a></td><td>THF AF — SA if not Hume. Steal bonus.</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Jaridah_Bazubands">Jaridah Bazubands</a></td><td>Better than AF — Acc bonus</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Wood_Gauntlets">Wood Gauntlets</a> / <a href="https://www.bg-wiki.com/ffxi/Wood_Gloves">Wood Gloves</a></td><td>Elvaan only — +4 DEX SA/SATA, pricey (M version much more)</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Finesse_Gloves">Finesse Gloves</a></td><td>Decent upgrade from Battle Gloves</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Fencing_Bracers">Fencing Bracers</a></td><td>Soloing / Acc-cap. Expensive.</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Mittens">Cobra Mittens</a></td><td>Store TP · Acc · Enmity-</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/War_Gloves">War Gloves</a> / <a href="https://www.bg-wiki.com/ffxi/War_Gloves_+1">+1</a></td><td>Standard solo / TP piece</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Tarasque_Mitts">Tarasque Mitts</a> / <a href="https://www.bg-wiki.com/ffxi/Tarasque_Mitts_+1">+1</a></td><td>Good SATA WS macro · CHR (Dancing Edge mod)</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Alkyoneus%27s_Bracelets">Alkyoneus's Bracelets</a> / <a href="https://www.bg-wiki.com/ffxi/Pallas%27s_Bracelets">Pallas's Bracelets</a></td><td>Non-SATA WS</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves">Dusk Gloves</a></td><td>Expensive but very good TP</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hecatomb_Mittens">Hecatomb Mittens</a></strong></td><td>Perfect WS gear</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rogue%27s_Armlets_+1">Rogue's Armlets +1</a></strong></td><td>Best Trick Attack hands</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Homam_Manopolas">Homam Manopolas</a></td><td>Like Dusk but trades 5 Atk for 4 Acc — your choice</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>Starting RSE / <a href="https://www.bg-wiki.com/ffxi/Bronze_Subligar">Bronze Subligar</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Trousers">Leather Trousers</a></td><td>—</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Subligar">Bone Subligar</a> · lvl 17 <a href="https://www.bg-wiki.com/ffxi/Lizard_Trousers">Lizard Trousers</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Subligar">Beetle Subligar</a> / <a href="https://www.bg-wiki.com/ffxi/Garrison_Hose">Garrison Hose</a></td><td>Garrison: TP/SATA, pricey</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Republic_Subligar">Republic Subligar</a></td><td>TP — macro Hose for SATA</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Noct_Brais_+1">Noct Brais +1</a></td><td>SATA / RA macro</td></tr>
+<tr><td class="lv">31</td><td>Elvaan RSE</td><td>Perfect SATA macro</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Bravo%27s_Subligar">Bravo's Subligar</a></td><td>Haste piece — undesirable price for +2%</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Rogue%27s_Culottes">Rogue's Culottes</a></td><td>THF AF — pure AGI swap. Don't TP in. +Steal for Steal set.</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Tabin_Hose_+1">Tabin Hose +1</a></td><td>Upgrade SATA from Noct Brais +1</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Feral_Trousers">Feral Trousers</a></td><td>Awesome — nice DEF. Camp early; rare on some servers.</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Unit_Subligar">Cobra Unit Subligar</a></td><td>Store TP · Acc · Enmity-</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Trousers">Dusk Trousers</a></td><td>Best Atk legs (after Hecatomb), expensive</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Subligar">Enkidu's Subligar</a></strong></td><td>Like wearing another Rajas — free with Zeni-farming</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Seraweels">Pahluwan Seraweels</a></td><td>Good TP for Acc + higher normal damage</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Dragon_Subligar">Dragon Subligar</a></td><td>WS macro</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hecatomb_Subligar">Hecatomb Subligar</a></strong></td><td>Excellent for WS and SA</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Oily_Trousers">Oily Trousers</a></strong></td><td>Best SATA piece to date</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Homam_Cosciales">Homam Cosciales</a></td><td>Amazing TP legs</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>Starting RSE / <a href="https://www.bg-wiki.com/ffxi/Bronze_Leggings">Bronze Leggings</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Leather_Highboots">Leather Highboots</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Leaping_Boots">Leaping Boots</a></strong> / <a href="https://www.bg-wiki.com/ffxi/Bounding_Boots">Bounding Boots</a></td><td>Leaping Lizzy NM — staple THF footwear (expensive / annoying NM hunt). Get by 45 if missing.</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Leggings_+1">Bone Leggings +1</a> · lvl 17 <a href="https://www.bg-wiki.com/ffxi/Lizard_Ledelsens">Lizard Ledelsens</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Footman%27s_Clogs">Royal Footman's Clogs</a></td><td>—</td></tr>
+<tr><td class="lv">20</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Trotter_Boots">Trotter Boots</a> / <a href="https://www.bg-wiki.com/ffxi/Strider_Boots">Strider Boots</a></strong></td><td>Movement boost — luxury and life-saver for kiting</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Leggings_+1">Beetle Leggings +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Winged_Boots">Winged Boots</a></td><td>Same as Leaping/Bounding with more DEF — not worth extra gil unless you have</td></tr>
+<tr><td class="lv">29</td><td>Almost all RSE useful</td><td>Hume/Elvaan/Galka SATA macro · Mithra/Taru melee + macro AGI</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Noct_Gaiters_+1">Noct Gaiters +1</a></td><td>Get +1 — lasts to Jaridah / AF if no Leaping/Bounding</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Jaridah_Nails">Jaridah Nails</a> / <a href="https://www.bg-wiki.com/ffxi/Akinji_Nails">Akinji Nails</a></td><td>Useful without Leaping/Bounding · RA set</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Tabin_Boots_+1">Tabin Boots +1</a></td><td>Get +1 — best feet TP for a while (+3 Acc/Eva)</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Rogue%27s_Poulaines">Rogue's Poulaines</a></td><td>THF AF — Flee bonus macro = 15s extra speed</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Feral_Ledelsens">Feral Ledelsens</a></td><td>Alternative to Tabin Boots +1</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Leggings">Cobra Leggings</a></td><td>Store TP · Acc · Enmity-</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Emissary_Boots">Emissary Boots</a></td><td>Best feet for Evasion</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Ledelsens">Dusk Ledelsens</a></td><td>Good TP</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Leggings">Enkidu's Leggings</a></td><td>+2 Atk · Haste +2% · R.Atk +4 · Subtle Blow +2 vs Dragon Leggings</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Dragon_Leggings">Dragon Leggings</a></strong></td><td>HQ is best SATA piece in the game</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Hecatomb_Leggings">Hecatomb Leggings</a></td><td>WS macro</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Assassin%27s_Poulaines">Assassin's Poulaines</a></td><td>Triple Attack +1, big CHR (Dancing Edge)</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Jambeaux">Skadi's Jambeaux</a></td><td>Same speed as Trotter/Strider with melee/ranged stats. Worse for kiting (no AGI/Eva).</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Homam_Gambieras">Homam Gambieras</a></td><td>Powerful TP. Like Dusk but trades 4 Atk / 2% Haste for 6 Acc/R.Acc / 3% Haste.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Feather_Collar_+1">Feather Collar +1</a></td><td>—</td></tr>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Rabbit_Charm">Rabbit Charm</a></td><td>Useful to 75 for Steal macro</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>Nice +STR/+DEX</td></tr>
+<tr><td class="lv">33</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Peacock_Amulet">Peacock Amulet</a> / <a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a></strong></td><td>Big Acc — pricey. Macro Spike for SATA.</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Spectacles">Spectacles</a></td><td>Great TP/RA piece, cheaper than Peacock</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>Without Peacock — also good for WS</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Evasion_Torque">Evasion Torque</a> / <a href="https://www.bg-wiki.com/ffxi/Parrying_Torque">Parrying Torque</a></td><td>Evasion setup for tank/solo · Parry skill-up</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Kubira_Bead_Necklace">Kubira Bead Necklace</a></td><td>Upgrade from Spike for WS/SA (Einherjar)</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Elemental_Gorgets">Elemental Gorgets</a></strong></td><td>WS only — +Acc on all hits of Dancing Edge / Shark Bite + 0.1 fTP</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Love_Torque">Love Torque</a></td><td>Hard to get — great DoT</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Blood_Stone">Blood Stone</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt">Warrior's Belt</a> / <a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt_+1">+1</a></td><td>Defensive if you pull hate</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Key_Ring_Belt">Key Ring Belt</a></td><td>SATA macro. Once-weekly from Bait and Switch.</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Belt">Mercenary Captain's Belt</a></td><td>SATA belt</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Tilt_Belt">Tilt Belt</a></td><td>TP build. Use Merc Belt for SATA.</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Swordbelt_+1">Swordbelt +1</a></td><td>+Atk for SATA</td></tr>
+<tr><td class="lv">44</td><td><a href="https://www.bg-wiki.com/ffxi/Headlong_Belt">Headlong Belt</a></td><td>First haste belt — somewhat pricey</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></td><td>Acc for TP / multihit WS. Macro another for SATA Viper Bite. Use on Dancing Edge.</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a></td><td>Haste good for TP</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Belt">Royal Knight's Belt</a></td><td>Upgrade from Merc for SATA</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Virtuoso_Belt">Virtuoso Belt</a></td><td>Upgrade from Life for Acc TP / multihit WS</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Speed_Belt">Speed Belt</a></td><td>Higher haste than Swift, less Acc — favored</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Warwolf_Belt">Warwolf Belt</a></td><td>Cheap, excellent WS macro</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Scouter%27s_Rope">Scouter's Rope</a></td><td>Excellent evasion piece</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ninurta%27s_Sash">Ninurta's Sash</a></strong></td><td>Speed Belt haste + Atk. Drop from Absolute Virtue.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">4</td><td><a href="https://www.bg-wiki.com/ffxi/Rabbit_Mantle">Rabbit Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Traveler%27s_Mantle">Traveler's Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Night_Cape">Night Cape</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Nomad%27s_Mantle_+1">Nomad's Mantle +1</a></td><td>—</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Jaguar_Mantle">Jaguar Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Republican_Army_Mantle">Republican Army Mantle</a></td><td>+2 DEX SA/SATA. Bastok CP only.</td></tr>
+<tr><td class="lv">61</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle">Amemet Mantle</a> / <a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">+1</a></strong></td><td>Affordable, lasts to endgame</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Psilos_Mantle">Psilos Mantle</a></td><td>Cheaper alt to Amemet — slightly better stats than NQ for THF</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Boxer%27s_Mantle">Boxer's Mantle</a></td><td>+10 Eva / Shield / Parry — tank/solo</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Assassin%27s_Cape">Assassin's Cape</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Corse_Cape">Corse Cape</a></td><td>Evasion</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Forager%27s_Mantle">Forager's Mantle</a></td><td>Last upgrade for perfection — price isn't worth it before others</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Toreador%27s_Cape">Toreador's Cape</a></td><td>Eva + Enmity for evasion tank. Hidden +40% Crit Hit Rate <strong>taken</strong>.</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Commander%27s_Cape">Commander's Cape</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Cerberus_Mantle_+1">Cerberus Mantle +1</a></strong></td><td>Best WS item</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Earring_+1">Bone Earring +1</a></td><td>Melee earring</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>Melee — useable to 55</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Dodge_Earring">Dodge Earring</a></td><td>Soloing</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Genin_Earring">Genin Earring</a></td><td>Pricey, best earring with /NIN</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Drone_Earring">Drone Earring</a></td><td>If no Genin / not /NIN</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Intruder_Earring">Intruder Earring</a></td><td>DEX/AGI +1 — Centurio XII-I NM at 55</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Earring">Spike Earring</a></td><td>Use to 63</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Wilhelm%27s_Earring">Wilhelm's Earring</a> + <a href="https://www.bg-wiki.com/ffxi/Altdorf%27s_Earring">Altdorf's Earring</a></td><td>Set: great for TA</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Minuet_Earring">Minuet Earring</a></td><td>BRD parties</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Coral_Earring">Coral Earring</a> / <a href="https://www.bg-wiki.com/ffxi/Merman%27s_Earring">Merman's Earring</a></td><td>Merman's recommended if affordable</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Diabolos%27s_Earring">Diabolos's Earring</a></td><td>Free Acc earring</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Pixie_Earring">Pixie Earring</a></strong></td><td>DEX +3 — best SA earring</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Hollow_Earring">Hollow Earring</a></td><td>DEX +2 / Acc +3 — second-best SA. R.Acc +3.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a></td><td>Slight Atk increase with /NIN</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Delta_Earring">Delta Earring</a></td><td>Great DE / SA earring (Einherjar)</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a></strong></td><td>Excellent TP gain — Limbus / 75 Ancient Beastcoins</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Novia_Earring">Novia Earring</a></td><td>Eva +7 — solo</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ring ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bastokan_Ring">Bastokan Ring</a> / <a href="https://www.bg-wiki.com/ffxi/San_d%27Orian_Ring">San d'Orian Ring</a> / <a href="https://www.bg-wiki.com/ffxi/Windurstian_Ring">Windurstian Ring</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>Melee</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Balance_Ring">Balance Ring</a></td><td>SATA</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a></strong></td><td>Best ring melee + SATA into 40s. CoP completion reward.</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Venerer_Ring">Venerer Ring</a></td><td>TP build</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Jaeger_Ring">Jaeger Ring</a></td><td>Carmine Dobsonfly drop (Riverne A01)</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Puissance_Ring">Puissance Ring</a></td><td>Minor dmg boost</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Deft_Ring">Deft Ring</a></td><td>DEX</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring">Sniper's Ring</a> / <a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring_+1">+1</a></td><td>Good Acc, expensive</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Ecphoria_Ring">Ecphoria Ring</a></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>Acc/Atk +4 — free Sniper's substitute</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Unyielding_Ring">Unyielding Ring</a></td><td>DEX + survivability</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Garrulous_Ring">Garrulous Ring</a></td><td>AGI + STR</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Grace_Ring">Grace Ring</a></td><td>Lasts to 72+ for WS</td></tr>
+<tr><td class="lv">57</td><td><a href="https://www.bg-wiki.com/ffxi/Toreador%27s_Ring">Toreador's Ring</a></td><td>Acc +7 (very expensive)</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Lightning_Ring">Lightning Ring</a></td><td>Macro: +15 Acc/R.Acc on Lightningday</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blood_Ring">Blood Ring</a></td><td>Same Acc as Sniper's NQ, no negative stats. ~1000 zeni.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Spinel_Ring">Spinel Ring</a></td><td>Cheaper endgame DEX WS ring</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Adroit_Ring">Adroit Ring</a></td><td>HQ of Spinel — same DEX +5</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Angel%27s_Ring">Angel's Ring</a> *augmented*</td><td>Acc +6 augment makes a great TP ring; CHR +4 for solo Dancing Edge. ACP11.</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Thunder_Ring">Thunder Ring</a></strong></td><td>Best DEX source for WS in a ring</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Mars%27s_Ring">Mars's Ring</a></td><td>+1 Acc more than Toreador's</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Iota_Ring">Iota Ring</a></td><td>DEX/VIT/AGI/Acc +3 — alternative if no Thunder x2 or CoP. Einherjar.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Note:** At lvl 75, Rajas Ring (STR/DEX/Store TP +5) is a better choice than Thunder Ring for WS.

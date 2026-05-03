@@ -1,0 +1,352 @@
+= ⚔️ Samurai — Gear Guide =
+
+(% class="legend-box" %)
+**Source:** Ashmada's analytical SAM guide (FFXIclopedia) — adapted, with armor picks added beyond the GK section.
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You DPS — Hasso / Meditate / Third Eye / Seigan / Sekkanoki / Meikyo Shisui. Trusts with Hasso/Meditate are wasted. Need: Tank, healer, attack buffs.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/Rahal">Rahal</a></strong></td><td>Tank w/ Shield Bash interrupt, Enlight, Phalanx — **only tank that casts Berserk on YOU**</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Haste on melee (you), full status removal, Convert</td></tr>
+<tr><td class="lv">3</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March/Madrigal directly boost your melee DPS and Acc</td></tr>
+<tr><td class="lv">4</td><td>🔮 <strong><a href="https://www.bg-wiki.com/ffxi/Arciela_II">Arciela II</a></strong></td><td>Slow/Paralyze/Dispel + weakness-targeted nukes</td></tr>
+<tr><td class="lv">5</td><td>💃 <strong><a href="https://www.bg-wiki.com/ffxi/Uka_Totlihn">Uka Totlihn</a></strong></td><td>Quickstep debuff, Violent Flourish interrupts, Drain Samba</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🥷 Subjob Notes =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:120px;">Subjob</th><th>Best for</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>/WAR</strong></td><td>EXP, merits, Nyzul, most polearm DD</td><td>Old staple — Berserk/Aggressor/Provoke. **Polearm + /WAR + Penta Thrust** is the standard 5-hit build. No SJ-specific gear</td></tr>
+<tr><td><strong>/DRG</strong></td><td>Endgame GK with Wyvern</td><td>Main GK sub at 75 — Wyvern healing covers MP-less SAM. **SJ gear: Wyvern Earring**</td></tr>
+<tr><td><strong>/NIN</strong></td><td>Endgame AoE absorbs</td><td>**Overused**. Useful for nasty AoE NMs only. Avoid in EXP/merit/Nyzul/Puk ISNM</td></tr>
+<tr><td><strong>/THF</strong></td><td>Niche endgame fights</td><td>Mostly obsolete. SA/TA piggyback for opener WS</td></tr>
+<tr><td><strong>/DNC</strong></td><td>Solo / Campaign</td><td>**SJ gear: Soboro** (TP for waltzes), VIT gear for Curing Waltz</td></tr>
+<tr><td><strong>/RNG</strong></td><td>Obsolete (replaced by /WAR Penta build)</td><td>Soboro + Sidewinder spam. **SJ gear: Soboro, Shigeto Bow**, R.Acc/R.Att gear</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Great Katana ==
+
+(% class="legend-box" %)
+**TP gain matters more than DMG/DPS**. Some HQs are *worse* than NQs because they slow your TP build. The Rajas vs non-Rajas split disappears around 70 — by then you should own Rajas.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Katayama_Ichimonji">Katayama Ichimonji</a></td><td>STR/DEX +1 — strong for level</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Uchigatana_+1">Uchigatana +1</a></td><td>HQ — get if no Katayama</td></tr>
+<tr><td class="lv">23</td><td><a href="https://www.bg-wiki.com/ffxi/Okanehira">Okanehira</a></td><td>Damage upgrade</td></tr>
+<tr><td class="lv">42</td><td><a href="https://www.bg-wiki.com/ffxi/Magoroku">Magoroku</a></td><td>**AF Weapon**</td></tr>
+<tr><td class="lv">44</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Mikazuki_+1">Mikazuki +1</a></td><td>**Get the HQ** — 437 dly is faster than 450 thanks to StoreTPII</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Koryukagemitsu">Koryukagemitsu</a></td><td>STR +1, Acc +2 — long-running</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Soboro_Sukehiro">Soboro Sukehiro</a></td><td>**2-3 hit proc** — TP monster (keep higher-D for 2HR)</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Daihannya">Daihannya</a></td><td>STR +3 — get</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Onikiri">Onikiri</a></td><td>Vs Demons crit +5%</td></tr>
+<tr><td class="lv">67</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Kazaridachi_+1">Kazaridachi +1</a></td><td>437 dly — Rajas: get NQ. Others: get HQ</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Kamewari">Kamewari</a></td><td>Acc +5 — strong if you can get</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Tachi_of_Trials">Tachi of Trials</a></td><td>Mythic upgrade path</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hagun">Hagun</a> <span class="rex">🟣</span></td><td>**TP Bonus** — Yuki/Gekko/Kasha at 200TP do +33% WS damage. YGK king at 100-200 TP</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Onimaru">Onimaru</a></td><td>Decent + cheap — D 83 latent, hidden Acc/Att</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Ushikirimaru">Ushikirimaru</a></td><td>Decent + easy</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Amanomurakumo">Amanomurakumo</a> <span class="rex">🟣</span></td><td>**No GK can touch this** — Tachi: Kaiten, Acc +20, hidden 2.5x proc. ~+82% WS damage over generic</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Kogarasumaru">Kogarasumaru</a> <span class="rex">🟣</span></td><td>**Mythic** — Tachi: Rana, Third Eye enhance</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Futsuno_Mitama">Futsuno Mitama</a> <span class="rex">🟣</span></td><td>DEX +8, **Store TP +8** (latent +STR) — easy 5-hit build</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Pachipachio">Pachipachio</a></td><td>Att +12, Store TP +2 — strong DPS</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Radennotachi">Radennotachi</a></td><td>D89 — high potential</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+(% class="legend-box" %)
+**Weaponskill picks:** **Tachi: Yukikaze** (Yuki — added effect) · **Tachi: Kasha** (added effect + makes Light) · **Tachi: Gekko** (highest Att bonus, the standard YGK go-to) · **Tachi: Rana** (no Att bonus — only when Att >> Def) · **Tachi: Kaiten** (Amano-only, beats YGK in most cases — 3.0 fTP at 100 TP).
+
+== Polearm (SAM/WAR Penta build) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Gae_Bolg">Gae Bolg</a> <span class="rex">🟣</span></td><td>**Relic** — long-running</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Thalassocrat">Thalassocrat</a> <span class="rex">🟣</span></td><td>Best general DRG/SAM polearm</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Valkyrie%27s_Fork">Valkyrie's Fork</a> <span class="rex">🟣</span></td><td>HQ — strong alt</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Bow (SAM/RNG Sidewinder) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Yoichinoyumi">Yoichinoyumi</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Selene%27s_Bow">Selene's Bow</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Shigeto_Bow_+1">Shigeto Bow +1</a> <span class="rex">🟣</span></td><td>SAM/RNG specific</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Sub / Ammo ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Smart_Grenade">Smart Grenade</a></td><td>Hidden Att +4</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Tiphia_Sting">Tiphia Sting</a></td><td>Acc/Att +2</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Bomb_Core">Bomb Core</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Fire_Bomblet">Fire Bomblet</a></td><td>STR +2, Att +8 — best general ammo</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/White_Tathlum">White Tathlum</a></td><td>HP/MP +15, -Enmity, Store TP +2</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> <span class="rex">🟣</span></td><td>DEX/AGI +3</td></tr>
+<tr><td class="lv">41</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a> <span class="rex">🟣</span></td><td>STR +3, DEX +4</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Zeal_Cap_+1">Zeal Cap +1</a></td><td>TP/Acc</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Myochin_Kabuto">Myochin Kabuto</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a> <span class="rex">🟣</span></td><td>Acc +10 — Hakutaku</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Maat%27s_Cap">Maat's Cap</a> <span class="rex">🟣</span></td><td>All stats +7 — LB5</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hecatomb_Cap">Hecatomb Cap</a> <span class="rex">🟣</span></td><td>**WS only**</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Saotome_Kabuto_+1">Saotome Kabuto +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — Store TP +5, Zanshin enhance</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a> <span class="rex">🟣</span></td><td>HP +30, Haste 5% — best TP head</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Askar_Zucchetto">Askar Zucchetto</a> <span class="rex">🟣</span></td><td>STR/DEX/VIT +4</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Genbu%27s_Kabuto">Genbu's Kabuto</a> <span class="rex">🟣</span></td><td>WS macro / tank</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Senshin_Hachimaki">Senshin Hachimaki</a></td><td>Acc +12, GK Skill +5, Conserve TP +5</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">59</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Haubergeon">Haubergeon</a></td><td>First endgame body</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Saotome_Domaru">Saotome Domaru</a> <span class="rex">🟣</span></td><td>**AF** — Store TP +3</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hecatomb_Harness">Hecatomb Harness</a> <span class="rex">🟣</span></td><td>**WS only**</td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Saotome_Domaru_+1">Saotome Domaru +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — **Store TP +5**, Zanshin enhance — TP body</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Usukane_Haramaki">Usukane Haramaki</a> <span class="rex">🟣</span></td><td>Salvage — DT-, **Store TP +6** w/ set</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Ares%27s_Cuirass">Ares's Cuirass</a> <span class="rex">🟣</span></td><td>Salvage — top-tier</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Kirin%27s_Osode">Kirin's Osode</a> <span class="rex">🟣</span></td><td>+10 all stats — **WS body**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Hauberk">Hauberk</a></td><td>Strong TP if no Saotome+1</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Cuirie">Skadi's Cuirie</a> <span class="rex">🟣</span></td><td>R.Att — Sidewinder builds</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>Acc/Eva +3</td></tr>
+<tr><td class="lv">54</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Saotome_Kote">Saotome Kote</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Fourth_Hentzes">Fourth Hentzes</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Tarasque_Mitts_+1">Tarasque Mitts +1</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves">Dusk Gloves</a> <span class="rex">🟣</span></td><td>Haste 3% — best TP gloves bar HQ</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hecatomb_Mittens">Hecatomb Mittens</a> <span class="rex">🟣</span></td><td>**WS only**</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Saotome_Kote_+1">Saotome Kote +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — Store TP +5</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Ares%27s_Gauntlets">Ares's Gauntlets</a> <span class="rex">🟣</span></td><td>Salvage — top-tier</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Bazubands">Skadi's Bazubands</a> <span class="rex">🟣</span></td><td>R.Att — Sidewinder</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Garrison_Hose">Garrison Hose</a></td><td>STR/DEX</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Saotome_Hakama">Saotome Hakama</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Aurum_Cuisses">Aurum Cuisses</a> <span class="rex">🟣</span></td><td>Strong — ZNM</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Saotome_Hakama_+1">Saotome Hakama +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — Store TP +5</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Byakko%27s_Haidate">Byakko's Haidate</a> <span class="rex">🟣</span></td><td>**Best TP legs** — DEX +15, Haste 5% (Haidate)</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Ares%27s_Flanchard">Ares's Flanchard</a> <span class="rex">🟣</span></td><td>Salvage</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Hizayoroi">Usukane Hizayoroi</a> <span class="rex">🟣</span></td><td>Salvage — DT- set</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Chausses">Skadi's Chausses</a> <span class="rex">🟣</span></td><td>R.Att/Snapshot</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Bounding_Boots">Bounding Boots</a></td><td>Leaping Lizzy NM</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Saotome_Sune-Ate">Saotome Sune-Ate</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Rutter_Sabatons">Rutter Sabatons</a></td><td>WS only — Slow +2</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Aurum_Sabatons">Aurum Sabatons</a> <span class="rex">🟣</span></td><td>**Best TP feet** — Acc/Att/Haste</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hecatomb_Leggings">Hecatomb Leggings</a> <span class="rex">🟣</span></td><td>**WS only**</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Saotome_Sune-Ate_+1">Saotome Sune-Ate +1</a> <span class="rex">🟣</span></td><td>**Relic+1** — Store TP +5</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Ares%27s_Sollerets">Ares's Sollerets</a> <span class="rex">🟣</span></td><td>Salvage — top-tier</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Usukane_Sune-Ate">Usukane Sune-Ate</a> <span class="rex">🟣</span></td><td>Salvage — DT- set</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Jambeaux">Skadi's Jambeaux</a> <span class="rex">🟣</span></td><td>R.Att/Snapshot</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt_+1">Warrior's Belt +1</a></td><td>Long-running</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></td><td>Acc +10</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a> <span class="rex">🟣</span></td><td>Haste 4%</td></tr>
+<tr><td class="lv">55</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Speed_Belt">Speed Belt</a> <span class="rex">🟣</span></td><td>Haste 6% — **best TP belt**</td></tr>
+<tr><td class="lv">71</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Warwolf_Belt">Warwolf Belt</a> <span class="rex">🟣</span></td><td>STR/DEX/VIT +5 — WS macro</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Ninurta%27s_Sash">Ninurta's Sash</a> <span class="rex">🟣</span></td><td>Haste 3%, Acc/Att — Speed alt</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">Amemet Mantle +1</a></td><td>STR +3</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Forager%27s_Mantle">Forager's Mantle</a></td><td>TP/WS</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Cuchulain%27s_Mantle">Cuchulain's Mantle</a></td><td>TP</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Cerberus_Mantle_+1">Cerberus Mantle +1</a> <span class="rex">🟣</span></td><td>STR +3, Att +12, Enmity +3 — best TP/WS</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>STR/DEX +3</td></tr>
+<tr><td class="lv">33</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a> <span class="rex">🟣</span></td><td>Acc +10 — TP staple to 75</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>Store TP</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Kubira_Bead_Necklace">Kubira Bead Necklace</a> <span class="rex">🟣</span></td><td>STR/DEX +4</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Soil_Gorget">Soil Gorget</a> <span class="rex">🟣</span></td><td>**Penta Thrust / Tachi: Yukikaze fTP**</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Light_Gorget">Light Gorget</a> <span class="rex">🟣</span></td><td>**Tachi: Light SC**</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Gorget">Flame Gorget</a> <span class="rex">🟣</span></td><td>**Tachi: Kasha**</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Snow_Gorget">Snow Gorget</a> <span class="rex">🟣</span></td><td>**Tachi: Gekko**</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>STR — early WS</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a> <span class="rex">🟣</span></td><td>**Pivotal SAM ring** — STR/DEX +2-5, **Store TP +5** (CoP)</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring">Sniper's Ring</a></td><td>Acc +5</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>Acc/Att +4</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Lava%27s_Ring">Lava's Ring</a> + <a href="https://www.bg-wiki.com/ffxi/Kusha%27s_Ring">Kusha's Ring</a></td><td>Set: Att +6, Acc +12</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Ring">Flame Ring</a></td><td>STR +5 — WS only</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Mars%27s_Ring">Mars's Ring</a> <span class="rar">🟡</span></td><td>Acc/Att +8 — TP/WS, AV drop</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Strigoi_Ring">Strigoi Ring</a> <span class="rex">🟣</span></td><td>**Best WS ring**</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Iota_Ring">Iota Ring</a></td><td>STR/Att +5 — Penta WS</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Optical_Earring">Optical Earring</a></td><td>Acc — early</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>Att +3</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Assault_Earring">Assault Earring</a></td><td>Acc +5 — long-running</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Wyvern_Earring">Wyvern Earring</a></td><td>**SAM/DRG specific** — wyvern healing</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Brilliant_Earring">Brilliant Earring</a></td><td>From Mukademaru — niche</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Bushinomimi">Bushinomimi</a> <span class="rex">🟣</span></td><td>STR +2, GK Skill +5, Parrying +5 — WS</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a> <span class="rex">🟣</span></td><td>**Store TP +1, Double Attack** — TP/WS</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Aesir_Ear_Pendant">Aesir Ear Pendant</a></td><td>Att +7, **Conserve TP** — ToAU</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 Endgame Set Cheat-Sheet =
+
+(% class="legend-box" %)
+**Build for a 5-hit or 6-hit.** With Hagun (TP Bonus) you want to land WS at 200% TP for the +33% damage; with Amano (Kaiten) you can WS at any TP. Saotome +1 set + Brutal Earring + Rajas Ring + Soboro is the classic Store TP backbone.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Set</th><th>Pieces</th></tr></thead>
+<tbody>
+<tr><td><strong>TP Build (Store TP focus, 5/6-hit)</strong></td><td>Walahra Turban · **Saotome Domaru +1** · Dusk Gloves / Saotome Kote +1 · Byakko's Haidate · Aurum Sabatons · Saotome Kabuto +1 · Speed Belt · Cerberus Mantle +1 · Peacock Charm · Rajas Ring · Sniper's Ring · Brutal Earring · Assault Earring · Hagun / Amanomurakumo · Fire Bomblet</td></tr>
+<tr><td><strong>Tachi: Gekko / Yukikaze WS</strong></td><td>Hecatomb Cap / Maat's Cap · Kirin's Osode · Hecatomb Mittens · Hecatomb Subligar · Hecatomb Leggings · Snow Gorget (Gekko) / Soil Gorget (Yuki) · Warwolf Belt · Cerberus Mantle +1 · Strigoi Ring · Mars's Ring · Brutal Earring · Bushinomimi</td></tr>
+<tr><td><strong>Tachi: Kasha</strong></td><td>Same as above, swap **Flame Gorget**</td></tr>
+<tr><td><strong>Tachi: Kaiten (Amano-only)</strong></td><td>Same WS set — Kaiten's 3.0 fTP at 100 TP outperforms YGK without needing Att gorget</td></tr>
+<tr><td><strong>Penta Thrust (SAM/WAR Polearm)</strong></td><td>Hecatomb Cap · Kirin's Osode · Hecatomb Mittens · Hecatomb Subligar · Hecatomb Leggings · Soil Gorget · Warwolf Belt · Cerberus Mantle +1 · Iota Ring · Flame Ring · Brutal Earring · Aesir Ear Pendant · Thalassocrat / Gae Bolg</td></tr>
+<tr><td><strong>Meditate Macro</strong></td><td>Saotome Kote +1 (full set bonus enhances Meditate)</td></tr>
+<tr><td><strong>Zanshin Macro</strong></td><td>Saotome Kabuto +1 (Zanshin enhance) — AA, IT, etc. fights where Att is high</td></tr>
+</tbody>
+</table>
+{{/html}}

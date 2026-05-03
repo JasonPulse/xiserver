@@ -1,0 +1,428 @@
+= 💃 Dancer — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You self-sustaining DPS — Waltzes / Steps / Samba. You need: tank (no enmity tools), healer (frees TP for WS), Haste, DPS fill. //Avoid other DNC trusts — steps/sambas/waltzes overlap and don't stack.//
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank — DNC has no Provoke/Flash equivalent</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Healer — every Waltz you skip is TP going to a WS instead</td></tr>
+<tr><td class="lv">3</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March speeds TP gain (more WSes), Madrigal for accuracy</td></tr>
+<tr><td class="lv">4</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Koru-Moru">Koru-Moru</a></strong></td><td>Haste on melee (you!), Slow/Distract/Dispel reduce incoming damage</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + 4 stun interrupts protect your melee windows</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+Until you get Dual Wield at 20, **H2H** is the way to go — Combo will out-damage anything you can throw at a mob with a dagger.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cesti">Cesti</a> / <a href="https://www.bg-wiki.com/ffxi/Cesti_+1">+1</a></td><td>Leather/Wood synth — starter H2H</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Strike_Baghnakhs">Strike Baghnakhs</a></td><td>Orcish Wallbreacher NM. Best until at least 20.</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Knife">Mercenary's Knife</a></td><td>Windurst Conquest 2,000 CP</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Poison_Knife">Poison Knife</a> / <a href="https://www.bg-wiki.com/ffxi/Poison_Knife_+1">+1</a></td><td>Pair with Mercenary's Knife — good duo to 30</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Kukri">Mercenary Captain's Kukri</a></td><td>Windurst Conquest 4,000 CP</td></tr>
+<tr><td class="lv">31</td><td><a href="https://www.bg-wiki.com/ffxi/Acid_Knife">Acid Knife</a> / <a href="https://www.bg-wiki.com/ffxi/Corrosive_Knife">Corrosive Knife</a></td><td>MCK + this = next dynamic duo</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Windurstian_Kukri">Windurstian Kukri</a> / <a href="https://www.bg-wiki.com/ffxi/Federation_Kukri">Federation Kukri</a></td><td>—</td></tr>
+<tr><td class="lv">46</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Knife_+1">Bone Knife +1</a></td><td>Get +1 — DNC lives off Drain Samba so dmg/delay matters</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Knife_+1">Beetle Knife +1</a></td><td>—</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Sleight_Kukri">Sleight Kukri</a></td><td>Great off-hand. Hovering Hotpot NM (camped for weapon trials).</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Stun_Kukri">Stun Kukri</a> / <a href="https://www.bg-wiki.com/ffxi/Stun_Kukri_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">69</td><td><a href="https://www.bg-wiki.com/ffxi/Valiant_Knife">Valiant Knife</a></td><td>Lindwurm NM. Great hidden effect for solo.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Behemoth_Knife_+1">Behemoth Knife +1</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Unit_Knife">Cobra Unit Knife</a></td><td>Great off-hand — 20,000 Allied Notes</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Azoth">Azoth</a></strong></td><td>Best main hand until Mythic / trial daggers — Dark Ixion drop. Price dropped due to spawning.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Terpsichore">Terpsichore</a></td><td>Mythic — only great for added step effects. Massive grind.</td></tr>
+<tr><td class="lv">75+</td><td><a href="https://www.bg-wiki.com/ffxi/Trial_of_the_Magians">Trial of the Magians daggers</a></td><td>See Dagger Trials page for options</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Auric_Dagger">Auric Dagger</a></td><td>Cuelebre (Abyssea-Uleguerand). <strong>Main hand.</strong></td></tr>
+<tr><td class="lv">85</td><td><a href="https://www.bg-wiki.com/ffxi/Daka_+1">Daka +1</a></td><td>Trial 1887</td></tr>
+<tr><td class="lv">85</td><td><a href="https://www.bg-wiki.com/ffxi/Twashtar_(85)">Twashtar (85)</a></td><td>Trial 1886. Empyrean.</td></tr>
+<tr><td class="lv">89</td><td><a href="https://www.bg-wiki.com/ffxi/Phurba">Phurba</a></td><td>Apademak (Abyssea-Uleguerand). Pray for blue !! proc. <strong>Waltz.</strong></td></tr>
+<tr><td class="lv">90</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Angr_Harpe">Angr Harpe</a></strong></td><td>Highest base damage dagger after lvl 90 Twashtar — much easier. Awahondo (Abyssea-Uleguerand). <strong>Main hand.</strong></td></tr>
+<tr><td class="lv">90</td><td><a href="https://www.bg-wiki.com/ffxi/Twilight_Knife">Twilight Knife</a></td><td>Shinryu (Abyssea-Empyreal Paradox). <strong>Off hand.</strong></td></tr>
+<tr><td class="lv">90</td><td><a href="https://www.bg-wiki.com/ffxi/Trial_2286">Trial 2286 Fusetto</a></td><td>Off-hand with Phurba — TP gain potency for solo</td></tr>
+<tr><td class="lv">90</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Twashtar_(90)">Twashtar (90)</a></strong></td><td>Trial of the Magians. Highest base dmg + Empyrean WS — punishing Eviscerations.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🎯 Ammo / Ranged =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Attar_Sachet">Attar Sachet</a> / <a href="https://www.bg-wiki.com/ffxi/Olibanum_Sachet">Olibanum Sachet</a></td><td>Elvaan RSE</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/War_Hoop">War Hoop</a></td><td>DNC AF — handy puller, CHR +3 for Waltz potency</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Tiphia_Sting">Tiphia Sting</a></td><td>Demonic Tiphia NM. When not pulling, every bit helps.</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Sonia%27s_Plectrum">Sonia's Plectrum</a></td><td>Bastok 4th Division 30,000 / 45,000 AN</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Black_Tathlum">Black Tathlum</a></td><td>Guivre [S] via Doomvoid</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Thew_Bomblet">Thew Bomblet</a></td><td>Gancanagh (Abyssea-Tahrongi)</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Jinx_Discus">Jinx Discus</a></td><td>Gaizkin (Abyssea-Attohwa). <strong>Pulling.</strong></td></tr>
+<tr><td class="lv">84</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Feather">Charis Feather</a></strong></td><td>Ironclad Executioner (Abyssea-Vunkerl). 5% Crit Hit Damage / DEX.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Mask_+1">Bone Mask +1</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Mask_+1">Beetle Mask +1</a></td><td>—</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> / <a href="https://www.bg-wiki.com/ffxi/Emperor_Hairpin">Emperor Hairpin</a></td><td>Valkurm Emperor / Dropping Like Flies</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Tiara">Dancer's Tiara</a></td><td>DNC AF. Sambas / WS.</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Zeal_Cap">Zeal Cap</a> / <a href="https://www.bg-wiki.com/ffxi/Zeal_Cap_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Cap">Cobra Cap</a></td><td>Bastok 4th Division 40,000 / 60,000 AN</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a></strong></td><td>Hakutaku NM. Great for accuracy.</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Ebon_Headgear">Ebon Headgear</a></td><td>Synergy</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Tiara">Etoile Tiara</a></td><td>Dynamis-Bastok. Waltz / Pyrrhic Kleos.</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Tiara_+1">Dancer's Tiara +1</a></td><td>DNC AF +1</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a></td><td>1,000 Imperial Bronze Pieces. <strong>TP.</strong></td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Anwig_Salade">Anwig Salade</a></td><td>A Moogle Kupo d'Etat — augmentable</td></tr>
+<tr><td class="lv">77</td><td><a href="https://www.bg-wiki.com/ffxi/Maestria_Mask">Maestria Mask</a></td><td>Abas (Abyssea-Tahrongi). DEX mods for Dancing Edge / Evisceration.</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Issen_Hachimaki">Issen Hachimaki</a></td><td>Chloris (Abyssea-Tahrongi)</td></tr>
+<tr><td class="lv">79</td><td><a href="https://www.bg-wiki.com/ffxi/Brisk_Mask">Brisk Mask</a></td><td>Glavoid (Abyssea-Tahrongi)</td></tr>
+<tr><td class="lv">84</td><td><a href="https://www.bg-wiki.com/ffxi/Aias">Aias</a></td><td>Yaanei (Abyssea-Attohwa). <strong>WS.</strong></td></tr>
+<tr><td class="lv">85</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Tiara_+2">Charis Tiara +1 / +2</a></strong></td><td>Trials 4174 / 4234 — DNC Empyrean</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Focus_Collar">Focus Collar</a> / <a href="https://www.bg-wiki.com/ffxi/Focus_Collar_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>—</td></tr>
+<tr><td class="lv">33</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Peacock_Amulet">Peacock Amulet</a> / <a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a></strong></td><td>Argus / Under Observation</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>8,000 Lebros Cavern AP</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Knack_Pendant">Knack Pendant</a></td><td>Splacknuck NM</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Kubira_Bead_Necklace">Kubira Bead Necklace</a></td><td>15,000 Ampoules of Therion Ichor (Einherjar)</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Love_Torque">Love Torque</a></strong></td><td>Jailer of Love</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Ancient_Torque">Ancient Torque</a></td><td>Lambton Worm NM</td></tr>
+<tr><td class="lv">80</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Necklace">Charis Necklace</a></strong></td><td>Khalamari (Abyssea-Konschtat). <strong>Dual Wield +3%.</strong></td></tr>
+<tr><td class="lv">84</td><td><a href="https://www.bg-wiki.com/ffxi/Agasaya%27s_Collar">Agasaya's Collar</a></td><td>Es'euvhi (Abyssea-Attohwa). TP/WS substitute for Love Torque or Charis.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Dodge_Earring">Dodge Earring</a></td><td>Beadeaux ooze drop</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Intruder_Earring">Intruder Earring</a></td><td>Centurio XII-I NM</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Harvest_Earring">Harvest Earring</a></td><td>Colorful Leshy NM</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Accurate_Earring">Accurate Earring</a></td><td>Garrison reward</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Earring">Spike Earring</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Diabolos%27s_Earring">Diabolos's Earring</a></td><td>Waking Dreams quest</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Adroit_Earring">Adroit Earring</a></td><td>Goldsmithing HQ</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Pixie_Earring">Pixie Earring</a></td><td>King Behemoth</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a></td><td>Divine Might quest. <strong>TP.</strong></td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Ethereal_Earring">Ethereal Earring</a> / <a href="https://www.bg-wiki.com/ffxi/Hollow_Earring">Hollow Earring</a></td><td>Apocalypse Nigh — pick one</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a></strong></td><td>75 Ancient Beastcoins (Sagheera)</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Delta_Earring">Delta Earring</a></td><td>15,000 Therion Ichor. Waltz / WS.</td></tr>
+<tr><td class="lv">76</td><td><a href="https://www.bg-wiki.com/ffxi/Jupiter%27s_Earring">Jupiter's Earring</a></td><td>Synergy. DEX +3 / Lightning/Water resist.</td></tr>
+<tr><td class="lv">84</td><td><a href="https://www.bg-wiki.com/ffxi/Kemas_Earring">Kemas Earring</a></td><td>Cep-Kamuy (Abyssea-Misareaux). <strong>WS.</strong></td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Harness_+1">Bone Harness +1</a></td><td>—</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Harness_+1">Beetle Harness +1</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Doublet">Mercenary Captain's Doublet</a></td><td>4,000 CP</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Brigandine_+1">Brigandine +1</a></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rapparee_Harness">Rapparee Harness</a></strong></td><td>Brygid the Stylist Returns quest. <strong>TP.</strong></td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Jaridah_Peti">Jaridah Peti</a> / <a href="https://www.bg-wiki.com/ffxi/Akinji_Peti">Akinji Peti</a></td><td>—</td></tr>
+<tr><td class="lv">57</td><td><a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness">Scorpion Harness</a> / <a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness_+1">+1</a></td><td>WS / TP until 70s</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Casaque">Dancer's Casaque</a></td><td>Comeback Queen — DNC AF. WS / Waltz.</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Unit_Harness">Cobra Unit Harness</a></td><td>75,000 / 112,500 AN</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Antares_Harness">Antares Harness</a></strong></td><td>Guivre [S] NM. <strong>WS.</strong></td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Casaque_+1">Dancer's Casaque +1</a></td><td>DNC AF +1. WS / Waltz.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Casaque">Etoile Casaque</a></td><td>Dynamis-Xarcabard. WS / Violent Flourish.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Mirke_Wardecors">Mirke Wardecors</a></td><td>A Crystalline Prophecy — augment for Dual Wield +3% / Acc +10. <strong>Free TP & WS.</strong></td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Doublet">Aurore Doublet</a></td><td>3,000 Cruor (Abyssea)</td></tr>
+<tr><td class="lv">79</td><td><a href="https://www.bg-wiki.com/ffxi/Loki%27s_Kaftan">Loki's Kaftan</a></td><td>Turul (Abyssea-Konschtat)</td></tr>
+<tr><td class="lv">85</td><td><a href="https://www.bg-wiki.com/ffxi/Velox_Harness">Velox Harness</a></td><td>Ironclad Cleaver (Abyssea-Attohwa)</td></tr>
+<tr><td class="lv">87</td><td><a href="https://www.bg-wiki.com/ffxi/Alcides_Harness">Alcides Harness</a></td><td>Synergy</td></tr>
+<tr><td class="lv">89</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Casaque_+2">Charis Casaque +1 / +2</a></strong></td><td>Trials 4354 / 4394</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>King Ranperre's Tomb chest</td></tr>
+<tr><td class="lv">27</td><td>RSE — <a href="https://www.bg-wiki.com/ffxi/Custom_F_Gloves">Custom F/M</a> · <a href="https://www.bg-wiki.com/ffxi/Magna_Gauntlets">Magna</a> · <a href="https://www.bg-wiki.com/ffxi/Wonder_Mitts">Wonder Mitts</a></td><td>The Goblin Tailor. WS.</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Bangles">Dancer's Bangles</a></td><td>DNC AF</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Mittens">Cobra Mittens</a></td><td>40,000 / 60,000 AN</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves">Dusk Gloves</a> / <a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves_+1">+1</a></td><td>TP</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Mittens">Enkidu's Mittens</a></td><td>ZNMs (Nuhn / Gotoh Zha). <strong>WS.</strong></td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Ocelot_Gloves">Ocelot Gloves</a></td><td>Eccentric Eve (Abyssea-Konschtat). TP / Tank.</td></tr>
+<tr><td class="lv">81</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ample_Gloves">Ample Gloves</a></strong></td><td>Iktomi (Abyssea-Vunkerl). Versatile WS / Waltz.</td></tr>
+<tr><td class="lv">87</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Bangles_+2">Charis Bangles +1 / +2</a></strong></td><td>Trials 4334 / 4374</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Balance_Ring">Balance Ring</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Archer%27s_Ring">Archer's Ring</a></td><td>Royal Jelly BCNM</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Shikaree_Ring">Shikaree Ring</a></td><td>Stroper Chyme drop</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a></strong></td><td>CoP completion. <strong>Lasts past 75.</strong></td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Venerer_Ring">Venerer Ring</a></td><td>Chasing Dreams quest</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Jaeger_Ring">Jaeger Ring</a></td><td>Carmine Dobsonfly</td></tr>
+<tr><td class="lv">36</td><td><a href="https://www.bg-wiki.com/ffxi/Puissance_Ring">Puissance Ring</a></td><td>WS</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring">Sniper's Ring</a></td><td>—</td></tr>
+<tr><td class="lv">49</td><td><a href="https://www.bg-wiki.com/ffxi/Ecphoria_Ring">Ecphoria</a> / <a href="https://www.bg-wiki.com/ffxi/Kshama_Ring_No._8">Kshama 8</a></td><td>WS</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Garrulous_Ring">Garrulous Ring</a></td><td>WS</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>ToAU completion (3 rewards)</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Victory_Ring">Victory Ring</a></td><td>WS</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blood_Ring">Blood Ring</a></td><td>Chigre ZNM</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Adroit_Ring">Adroit Ring</a></td><td>WS</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Thunder_Ring">Thunder Ring</a></td><td>WS</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Zilant_Ring">Zilant Ring</a></td><td>Yilbegan VNM. WS.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Strigoi_Ring">Strigoi Ring</a></td><td>Lord Ruthven VNM. WS.</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Jupiter%27s_Ring">Jupiter's Ring</a> / <a href="https://www.bg-wiki.com/ffxi/Vulcan%27s_Ring">Vulcan's Ring</a></td><td>Synergy</td></tr>
+<tr><td class="lv">82</td><td><a href="https://www.bg-wiki.com/ffxi/Heed_Ring">Heed Ring</a></td><td>Kampe (Abyssea-Attohwa)</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Airy_Ring">Airy Ring</a></td><td>Nightshade (Abyssea-Attohwa)</td></tr>
+<tr><td class="lv">89</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Epona%27s_Ring">Epona's Ring</a></strong></td><td>Rani (Abyssea-Altepa). Double / Triple Attack.</td></tr>
+<tr><td class="lv">90</td><td><a href="https://www.bg-wiki.com/ffxi/Pyrosoul_Ring">Pyrosoul Ring</a></td><td>Synergy</td></tr>
+<tr><td class="lv">90</td><td><a href="https://www.bg-wiki.com/ffxi/Thundersoul_Ring">Thundersoul Ring</a></td><td>DEX +7 · VIT -3 · Resist Poison. Synergy.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Nomad%27s_Mantle">Nomad's Mantle</a> / <a href="https://www.bg-wiki.com/ffxi/Nomad%27s_Mantle_+1">+1</a></td><td>—</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Jaguar_Mantle">Jaguar Mantle</a></td><td>For the Birds quest</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">Amemet Mantle +1</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Cape">Etoile Cape</a></td><td>Dynamis-Valkurm</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Forager%27s_Mantle">Forager's Mantle</a></td><td>Sheep in Antlion's Clothing ENM</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Cuchulain%27s_Mantle">Cuchulain's Mantle</a></td><td>Splitting Heirs Campaign Op</td></tr>
+<tr><td class="lv">77</td><td><a href="https://www.bg-wiki.com/ffxi/Nifty_Mantle">Nifty Mantle</a></td><td>Adamastor (Abyssea-La Theine)</td></tr>
+<tr><td class="lv">89</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Atheling_Mantle">Atheling Mantle</a></strong></td><td>Orthrus (Abyssea-Altepa). Double Attack.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt_+1">Warrior's Belt +1</a></td><td>—</td></tr>
+<tr><td class="lv">44</td><td><a href="https://www.bg-wiki.com/ffxi/Headlong_Belt">Headlong Belt</a></td><td>Chonchon NM</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a></td><td>Tonberry NMs. <strong>TP.</strong></td></tr>
+<tr><td class="lv">50</td><td>Race-specific RSE Stones (BCNM <em>3, 2, 1...</em> / <em>Hostile Herbivores</em>)</td><td>WS</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Knight%27s_Belt">Royal Knight's Belt</a></td><td>San d'Oria 16,000 CP. WS.</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Potent_Belt">Potent Belt</a></td><td>10,000 Leujaoam Sanctum AP. WS.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Cuchulain%27s_Belt">Cuchulain's Belt</a></td><td>Plucking Wings Campaign Op. WS.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ninurta%27s_Sash">Ninurta's Sash</a></strong></td><td>Absolute Virtue. Pipe dream — only a few exist.</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Goading_Belt">Goading Belt</a></td><td>Lacovie (Abyssea-Tahrongi). <strong>TP.</strong></td></tr>
+<tr><td class="lv">90</td><td><a href="https://www.bg-wiki.com/ffxi/Twilight_Belt">Twilight Belt</a></td><td>Shinryu</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Subligar_+1">Bone Subligar +1</a></td><td>Cheap, lasts to Beetle +1</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Subligar_+1">Beetle Subligar +1</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Republic_Subligar">Republic Subligar</a></td><td>—</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Tights">Dancer's Tights</a></td><td>The Road to Divadom — DNC AF. TP / Waltz / Dancing Edge.</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Subligar">Cobra Subligar</a></td><td>50,000 / 75,000 AN. <strong>TP.</strong></td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Furia_Tights">Furia Tights</a></td><td>Synergy</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Subligar">Enkidu's Subligar</a></td><td>ZNMs (Dea / Khromasoul Bhurborlor). WS / TP until AF2.</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Surge_Subligar">Surge Subligar</a></td><td>Boompadu NM. Alt WS.</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Tights">Etoile Tights</a></td><td>Dynamis-Beaucedine. TP / WS.</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Oily_Trousers">Oily Trousers</a></td><td>Lambton Worm. Alt WS.</td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Brais">Aurore Brais</a></td><td>3,000 Cruor. <strong>TP.</strong></td></tr>
+<tr><td class="lv">79</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ocelot_Trousers">Ocelot Trousers</a></strong></td><td>Usurper (Abyssea-Tahrongi). TP / Eva / Tank.</td></tr>
+<tr><td class="lv">79</td><td><a href="https://www.bg-wiki.com/ffxi/Tumbler_Trunks">Tumbler Trunks</a></td><td>Megantereon (Abyssea-La Theine). Dancing Edge / Evisceration.</td></tr>
+<tr><td class="lv">83</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Tights_+2">Charis Tights +1 / +2</a></strong></td><td>Trials 4194 / 4254</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Bounding_Boots">Bounding Boots</a> / <a href="https://www.bg-wiki.com/ffxi/Leaping_Boots">Leaping Boots</a></strong></td><td>Leaping Lizzy / Petrifying Pair. <strong>Movement boost — life-changing.</strong></td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Marine_F_Boots">Marine F/M Boots</a></td><td>Brothers D'Aurphe / Jungle Boogymen BCNM</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Ebur_Gaiters">Ebur Gaiters</a> / <a href="https://www.bg-wiki.com/ffxi/Furia_Gaiters">Furia Gaiters</a></td><td>Synergy. DEX +3 · Acc/Eva +4 · Subtle Blow +4.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Leggings">Enkidu's Leggings</a></td><td>ZNMs (Nosferatu / Experimental Lamia)</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Ledelsens">Dusk Ledelsens</a> / <a href="https://www.bg-wiki.com/ffxi/Dusk_Ledelsens_+1">+1</a></td><td><strong>TP.</strong></td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Toe_Shoes">Etoile Toe Shoes</a></td><td>Dynamis-Qufim/Jeuno. <strong>Steps.</strong></td></tr>
+<tr><td class="lv">74</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Setanta%27s_Ledelsens">Setanta's Ledelsens</a></strong></td><td>Lugh NM. <strong>The best full-time DNC foot piece.</strong></td></tr>
+<tr><td class="lv">78</td><td><a href="https://www.bg-wiki.com/ffxi/Aurore_Gaiters">Aurore Gaiters</a></td><td>3,000 Cruor</td></tr>
+<tr><td class="lv">81</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Charis_Toeshoes_+2">Charis Toeshoes +1 / +2</a></strong></td><td>Trials 4214 / 4274</td></tr>
+<tr><td class="lv">83</td><td><a href="https://www.bg-wiki.com/ffxi/Tandava_Crackows">Tandava Crackows</a></td><td>Ironclad Cleaver. <strong>Special purpose.</strong></td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🎯 Personal Sets (Eclipstic, lvl 90+) =
+
+== TP Set ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Slot</th><th>Item</th><th>Bonus</th></tr></thead>
+<tbody>
+<tr><td>Head</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Tiara_+2">Charis Tiara +2</a></td><td>Acc · Store TP</td></tr>
+<tr><td>Neck</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Necklace">Charis Necklace</a></td><td>Dual Wield 3% · Subtle Blow</td></tr>
+<tr><td>Ear 1</td><td><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a></td><td>Double Attack</td></tr>
+<tr><td>Ear 2</td><td><a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a></td><td>Dual Wield 5%</td></tr>
+<tr><td>Body</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Casaque_+2">Charis Casaque +2</a></td><td>Dual Wield 10% · Subtle Blow</td></tr>
+<tr><td>Hands</td><td><a href="https://www.bg-wiki.com/ffxi/Ocelot_Gloves">Ocelot Gloves</a></td><td>—</td></tr>
+<tr><td>Ring 1</td><td><a href="https://www.bg-wiki.com/ffxi/Epona%27s_Ring">Epona's Ring</a></td><td>Double / Triple Attack</td></tr>
+<tr><td>Ring 2</td><td><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a></td><td>Store TP · Subtle Blow</td></tr>
+<tr><td>Back</td><td><a href="https://www.bg-wiki.com/ffxi/Atheling_Mantle">Atheling Mantle</a></td><td>Double Attack</td></tr>
+<tr><td>Waist</td><td><a href="https://www.bg-wiki.com/ffxi/Twilight_Belt">Twilight Belt</a></td><td>Double Attack</td></tr>
+<tr><td>Legs</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Tights_+2">Charis Tights +2</a></td><td>Dagger Skill (Acc) · Tactical Parry</td></tr>
+<tr><td>Feet</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Toeshoes_+2">Charis Toeshoes +2</a></td><td>Store TP</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+**Totals:** 25% Haste reduction · 13% Double Attack · 3% Triple Attack · Store TP +21 · Subtle Blow +20
+
+== Evasion (Solo / Tank) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Eva</th><th>Item</th></tr></thead>
+<tbody>
+<tr><td>+10</td><td><a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a></td></tr>
+<tr><td>+19</td><td><a href="https://www.bg-wiki.com/ffxi/Torero_Torque">Torero Torque</a></td></tr>
+<tr><td>+29</td><td><a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness">Scorpion Harness</a></td></tr>
+<tr><td>+39</td><td><a href="https://www.bg-wiki.com/ffxi/Boxer%27s_Mantle">Boxer's Mantle</a></td></tr>
+<tr><td>+42</td><td><a href="https://www.bg-wiki.com/ffxi/Ballerines">Ballerines</a></td></tr>
+<tr><td>+51</td><td><a href="https://www.bg-wiki.com/ffxi/Slither_Gloves">Slither Gloves</a></td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waltz Set ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Slot</th><th>Item</th><th>Modifier</th></tr></thead>
+<tbody>
+<tr><td>Main</td><td><a href="https://www.bg-wiki.com/ffxi/Phurba">Phurba</a></td><td>Waltz Potency</td></tr>
+<tr><td>Head</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Tiara">Etoile Tiara</a></td><td>CHR</td></tr>
+<tr><td>Neck</td><td><a href="https://www.bg-wiki.com/ffxi/Aristo_Belt">Aristo Belt</a> (Waist)</td><td>CHR</td></tr>
+<tr><td>Ear 1</td><td><a href="https://www.bg-wiki.com/ffxi/Delta_Earring">Delta Earring</a></td><td>CHR</td></tr>
+<tr><td>Ear 2</td><td><a href="https://www.bg-wiki.com/ffxi/Roundel_Earring">Roundel Earring</a></td><td>Waltz Potency</td></tr>
+<tr><td>Body</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Casaque_+1">Dancer's Casaque +1</a></td><td>Waltz Potency</td></tr>
+<tr><td>Hands</td><td><a href="https://www.bg-wiki.com/ffxi/Ample_Gloves">Ample Gloves</a></td><td>VIT · CHR</td></tr>
+<tr><td>Ring 1</td><td><a href="https://www.bg-wiki.com/ffxi/Omega_Ring">Omega Ring</a></td><td>CHR</td></tr>
+<tr><td>Ring 2</td><td><a href="https://www.bg-wiki.com/ffxi/Airy_Ring">Airy Ring</a></td><td>CHR</td></tr>
+<tr><td>Back</td><td><a href="https://www.bg-wiki.com/ffxi/Etoile_Cape">Etoile Cape</a></td><td>CHR</td></tr>
+<tr><td>Legs</td><td><a href="https://www.bg-wiki.com/ffxi/Dancer%27s_Tights_+1">Dancer's Tights +1</a></td><td>VIT · CHR</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Weaponskill Set (Pyrrhic Kleos / Evisceration) ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th>Slot</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Main</td><td><a href="https://www.bg-wiki.com/ffxi/Twashtar_(85)">Twashtar (85)</a></td><td>Rudra's Storm</td></tr>
+<tr><td>Off</td><td><a href="https://www.bg-wiki.com/ffxi/Fusetto_T2305">Fusetto Trial 2305</a></td><td>TP Bonus — guarantees Climactic Flourish crit</td></tr>
+<tr><td>Ammo</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Feather">Charis Feather</a></td><td>5% Crit Hit Damage · DEX</td></tr>
+<tr><td>Head</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Tiara_+2">Charis Tiara +2</a></td><td>10% chance bonus dmg on Climactic Flourish crit</td></tr>
+<tr><td>Neck</td><td><a href="https://www.bg-wiki.com/ffxi/Love_Torque">Love Torque</a></td><td>DEX · Dagger Skill</td></tr>
+<tr><td>Ear 1</td><td><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a></td><td>Double Attack · Store TP</td></tr>
+<tr><td>Body</td><td><a href="https://www.bg-wiki.com/ffxi/Loki%27s_Kaftan">Loki's Kaftan</a></td><td>Crit Hit Damage · DEX · Store TP</td></tr>
+<tr><td>Hands</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Bangles_+2">Charis Bangles +2</a></td><td>DEX · Acc</td></tr>
+<tr><td>Ring 1</td><td><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a></td><td>DEX · STR · Store TP</td></tr>
+<tr><td>Ring 2</td><td><a href="https://www.bg-wiki.com/ffxi/Epona%27s_Ring">Epona's Ring</a></td><td>Double / Triple Attack</td></tr>
+<tr><td>Back</td><td><a href="https://www.bg-wiki.com/ffxi/Cavaros_Mantle">Cavaros Mantle</a></td><td>3% Crit Hit Damage</td></tr>
+<tr><td>Waist</td><td><a href="https://www.bg-wiki.com/ffxi/Snow_Belt">Snow Belt</a></td><td>Increased WS Damage</td></tr>
+<tr><td>Legs</td><td><a href="https://www.bg-wiki.com/ffxi/Tumbler_Trunks">Tumbler Trunks</a></td><td>Atk · DEX</td></tr>
+<tr><td>Feet</td><td><a href="https://www.bg-wiki.com/ffxi/Charis_Toeshoes_+2">Charis Toeshoes +2</a></td><td>DEX · Store TP</td></tr>
+</tbody>
+</table>
+{{/html}}

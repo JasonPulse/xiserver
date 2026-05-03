@@ -1,0 +1,346 @@
+= 🥋 Monk — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · Links go to **bg-wiki.com**.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You DPS — Chakra / Focus / Dodge / Counterstance. You need: tank, healer, Haste, attack buffs.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Yoran-Oran_(UC)">Yoran-Oran UC</a></strong></td><td>+50 Cure Potency, Stoneskin, Afflatus Solace, full status removal — strongest raw healer</td></tr>
+<tr><td class="lv">3</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Koru-Moru">Koru-Moru</a></strong></td><td>Haste on you, Phalanx II on August, Slow/Distract debuffs on mob</td></tr>
+<tr><td class="lv">4</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March/Madrigal boost your multi-hit attacks</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Volker">Volker</a></strong></td><td>Smart AI — detects August is tanking, auto-switches to Berserk/Aggressor DPS mode</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🥊 Weapons =
+
+**Note:** MNK can equip Clubs and Staves but Hand-to-Hand delivers the same blunt damage at A+ skill (vs B for clubs/staves), generally higher DMG/Delay, and is the only weapon affected by **Martial Arts**.
+
+== Hand to Hand ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>DMG / Delay</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cesti">Cesti</a> / <a href="https://www.bg-wiki.com/ffxi/Cesti_+1">+1</a></td><td>+1 / +48 (+2 / +43)</td><td>Acc +3 / +4 — NPC vendor</td></tr>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cat_Baghnakhs">Cat Baghnakhs</a> / <a href="https://www.bg-wiki.com/ffxi/Cat_Baghnakhs_+1">+1</a></td><td>+2 / +60 (+3 / +51)</td><td>—</td></tr>
+<tr><td class="lv">5</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Knuckles">Bronze Knuckles</a> / <a href="https://www.bg-wiki.com/ffxi/Bronze_Knuckles_+1">+1</a></td><td>+2 / +96 (+3 / +91)</td><td>Acc +2 / +3</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Knuckles">Brass Knuckles</a> / <a href="https://www.bg-wiki.com/ffxi/Brass_Knuckles_+1">+1</a></td><td>+4 / +96 (+5 / +91)</td><td>Acc +2 / +3</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Knuckles">Legionnaire's Knuckles</a></td><td>+4 / +96</td><td>Acc +2 · Atk +3 · Bastok 1,000 CP</td></tr>
+<tr><td class="lv">15</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Republic_Knuckles">Republic Knuckles</a></strong></td><td>+6 / +76</td><td>HP/MP +3 · Acc +2 · Atk +3. <strong>Best for a long time</strong> — last well, cheap.</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Metal_Knuckles_+1">Metal Knuckles +1</a></td><td>+7 / +91</td><td>Acc +3. +1 may be better than Republic — debatable</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Boreas_Cesti">Boreas Cesti</a> <span class="rex">🟣</span></td><td>+6 / +48</td><td>Additional Wind dmg (100% proc, 0-7 dmg). Kirata NM (Beaucedine).</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/Impact_Knuckles">Impact Knuckles</a></td><td>+8 / +86</td><td>STR +1 · Acc +3. Mee Deggi the Punisher NM.</td></tr>
+<tr><td class="lv">38</td><td><a href="https://www.bg-wiki.com/ffxi/Mythril_Knuckles_+1">Mythril Knuckles +1</a></td><td>+10 / +91</td><td>Acc +3. Get +1 or stick with Impact.</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Tourney_Patas">Tourney Patas</a> <span class="rar">🟡</span></td><td>+11 / +96</td><td>VIT +3. BCNM 40 (Under Observation / Undying Promise). Cheap.</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Patas_+1">Patas +1</a></td><td>+15 / +86</td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Tactician_Magician%27s_Hooks">Tactician Magician's Hooks</a></td><td>+15 / +91</td><td>Atk +10 · DEF -10</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Cross-Counters">Cross-Counters</a></strong></td><td>+19 / +96</td><td>Acc +3 · Eva -10 · <strong>Counter +5</strong>. Most powerful single-hit / WS damage. Camp Western Shadow for R/E <a href="https://www.bg-wiki.com/ffxi/Retaliators">Retaliators</a>. BCNM 60.</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Tactician_Magician%27s_Hooks_+2">Tactician Magician's Hooks +2</a></td><td>+16 / +71</td><td>Atk +10 · DEF -10. Argued better DoT than +1. Use until 72 if no Cross-Counters.</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Birdbanes">Birdbanes</a> <span class="rex">🟣</span></td><td>+14 / +84</td><td>Vs. Birds: Acc +3. Hidden: Piercing damage (WSes still blunt). Chaneque drop in Batallia (S).</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hades_Sainti">Hades Sainti</a></td><td>+18 / +51</td><td>Acc/Eva/Subtle Blow +7 · Enmity +7. Solo / Salvage tank.</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Shenlong%27s_Baghnakhs">Shenlong's Baghnakhs</a></strong> <span class="rex">🟣</span></td><td>+21 / +51</td><td>STR +3 · Acc +10 · Double Atk +1% · Subtle Blow +3. Pandemonium Warden drop — **best non-relic h2h**, hardest second only to AV.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Wagh_Baghnakhs">Wagh Baghnakhs</a> <span class="rar">🟡</span></td><td>+13 / +60</td><td>Latent: DMG +18, hidden Atk +14 / Acc +5 when TP &lt;100%. Like the Wind / Boneyard Gully ENM.</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Destroyers">Destroyers</a></strong> <span class="rex">🟣</span></td><td>+5 / +48</td><td>Latent: DMG +18 · Crit Hit Rate +6%. Beats most non-Shenlong's. KS30 BCNM (Copycat / Double Dragonian / Royale Ramble).</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Faith_Baghnakhs">Faith Baghnakhs</a> <span class="rex">🟣</span></td><td>+9 / +113</td><td>MND +7 · Virtue stone: occasional double attack. Jailer of Faith.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Glanzfaust">Glanzfaust</a></strong> <span class="rex">🟣</span></td><td>+20 / +96</td><td>MNK Mythic. Augments Focus / Dodge · Ascetic's Fury · Aftermath: Acc/Atk · occasional double attack. (18,000 alexandrite — massive cost.)</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Spharai">Spharai</a></strong> <span class="rex">🟣</span></td><td>+23 / +86</td><td>MNK relic. Atk +20 · Counter +10. WS: <strong>Final Heaven</strong>. Hidden: occasional 3× damage.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+**Note:** Most picks below assume DPS Monk. Carry separate defense pieces — good melee gear is generally bad for defense.
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Cap">Bronze Cap</a></td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Hachimaki">Hachimaki</a></td><td>—</td></tr>
+<tr><td class="lv">9</td><td><a href="https://www.bg-wiki.com/ffxi/Compound_Eye_Circlet">Compound Eye Circlet</a></td><td>Eva +5 (quest: Star Struck)</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Sol_Cap">Sol Cap</a> <span class="rex">🟣</span></td><td>Adds Regen · hHP/hMP +1 (Adventurer Recruitment)</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Monk%27s_Headgear">Monk's Headgear</a></td><td>VIT +2 (quest: Out of One's Shell)</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary%27s_Hachimaki">Mercenary's Hachimaki</a></td><td>STR +1 · 2,000 CP</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Empress_Hairpin">Empress Hairpin</a> / <a href="https://www.bg-wiki.com/ffxi/Emperor_Hairpin">Emperor Hairpin</a></td><td>HP -15 · DEX +3 · AGI +3 · Eva +10. Costly — sacrifices STR. Optional.</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Fancy_Spectacles">Fancy Spectacles</a></td><td>Daytime only · Acc +3, Night: Acc -30</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Headgear">Mercenary Captain's Headgear</a></td><td>STR +1 · DEX +1 · 4,000 CP</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Sinister_Mask">Sinister Mask</a> <span class="rex">🟣</span></td><td>STR/INT +2 · VIT/MND -2. Mahisha drop.</td></tr>
+<tr><td class="lv">41</td><td><a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a> <span class="rex">🟣</span></td><td>STR +3 · DEX +4 — amazing piece. Carmine Dobsonfly.</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Storm_Zucchetto">Storm Zucchetto</a> <span class="rex">🟣</span></td><td>Acc +4 · M.Acc +2. ??? Headpiece (Sagelord Elimination).</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Raven_Beret">Raven Beret</a></td><td>Enmity -8 · Eva +5</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Vampire_Mask">Vampire Mask</a></td><td>Night: Acc +3</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Temple_Crown">Temple Crown</a> <span class="rex">🟣</span></td><td>HP +16 · MND +5 · Enhances Focus (+10 Acc bonus, persists). Useful for Chi Blast / debuff resist. MNK AF.</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Zeal_Cap">Zeal Cap</a></td><td>Acc/Atk +2 · Haste +1%. NQ — +1 not worth the price.</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a></strong> <span class="rex">🟣</span></td><td>Acc/R.Acc/Eva +10. Hakutaku NM.</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hissho_Hachimaki">Hissho Hachimaki</a></strong> <span class="rex">🟣</span></td><td>Acc +8 · Atk +8 — best <strong>Asuran Fists</strong> head (Wulgaru ZNM).</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Shura_Zunari_Kabuto">Shura Zunari Kabuto</a> <span class="rex">🟣</span></td><td>STR +5 · Acc +5. Seiryu (Dryadic abj).</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a></strong> <span class="rex">🟣</span></td><td>HP +30 · MP +30 · <strong>Haste +5%</strong>. 1,000 Imperial Bronze Pieces.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Anwig_Salade">Anwig Salade</a> <span class="rex">🟣</span></td><td>HP/MP +10 · Subtle Blow +3. Augmentable (Acc +10 / Atk +5 / STR +4 / WS Acc +15). A Moogle Kupo d'Etat.</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Usukane_Somen">Usukane Somen</a></strong> <span class="rex">🟣</span></td><td>STR/AGI +3 · Acc/Eva +7 · Haste +3% · Set: +5% Haste extra.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Harness">Bronze Harness</a></td><td>—</td></tr>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Fourth_Tunica">Fourth Tunica</a></td><td>HP +8 · 1000 AN Bastok (S)</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Kenpogi">Kenpogi</a> / <a href="https://www.bg-wiki.com/ffxi/Kenpogi_+1">+1</a></td><td>+1: DEX +1</td></tr>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Power_Gi">Power Gi</a></td><td>STR +1 (quest: Overnight Delivery)</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Gi">Federation Gi</a></td><td>VIT +1 · Eva +3 — solo or first-Provoke macro. Power Gi STR is better otherwise.</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Mercenary_Captain%27s_Doublet">Mercenary Captain's Doublet</a></td><td>DEX +1 · AGI +1</td></tr>
+<tr><td class="lv">33</td><td><a href="https://www.bg-wiki.com/ffxi/Savage_Separates">Savage Separates</a></td><td>Mithra RSE · HP +32 · STR +1 · CHR +1</td></tr>
+<tr><td class="lv">33</td><td><a href="https://www.bg-wiki.com/ffxi/Wonder_Kaftan">Wonder Kaftan</a></td><td>Tarutaru RSE · HP +36 · STR +1 · VIT +2 · MND +1</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Hikazu_Hara-Ate">Hikazu Hara-Ate</a> <span class="rex">🟣</span></td><td>DEX +1 · Acc +1 · Store TP +1. Citadel Chelonian.</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Jujitsu_Gi">Jujitsu Gi</a></td><td>Acc +4. Poisonhand Gnadgad NM.</td></tr>
+<tr><td class="lv">57</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Scorpion_Harness">Scorpion Harness</a></strong></td><td>HP +15 · Acc/Eva +10</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Temple_Cyclas">Temple Cyclas</a> <span class="rex">🟣</span></td><td>HP +20 · VIT +3 · Acc +5 · Enhances <strong>Chakra</strong> (VIT 2× → 3×, removes paralysis). MNK AF.</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Arakan_Samue">Arakan Samue</a></td><td>AGI +4 · Atk +5 · Eva +10 · Subtle Blow +3. Solo alt to Scorpion when Acc is fine.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Khazagand">Pahluwan Khazagand</a> <span class="rex">🟣</span></td><td>HP +20 · Acc/R.Acc +10 · Crit rate up · hHP +2 · Set: Subtle Blow. 20,000 Ilrusi AP.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Enkidu%27s_Harness">Enkidu's Harness</a> <span class="rex">🟣</span></td><td>STR/AGI +5 · Acc/Atk +10 · Eva +5 · Subtle Blow +5. Tinnin ZNM.</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Shura_Togi">Shura Togi</a> <span class="rex">🟣</span></td><td>HP -50 · Acc +10 · Atk +20</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Kirin%27s_Osode">Kirin's Osode</a></td><td>All stats +10 · MP +30. Great Chi Blast piece.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Mirke_Wardecors">Mirke Wardecors</a> <span class="rex">🟣</span></td><td>HP/MP +10 · STR/DEX/AGI +5. Best aug: Acc +10 · Atk +10. ACP reward.</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Usukane_Haramaki">Usukane Haramaki</a></strong> <span class="rex">🟣</span></td><td>STR/DEX/INT +8 · Acc/Eva +12 · Store TP +6 · Set: +5% Haste extra.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Hachiryu_Haramaki">Hachiryu Haramaki</a></strong> <span class="rar">🟡</span></td><td>Acc/Atk +20 · Crit +5% · Enhances Zanshin · Set: Store TP +20. Pandemonium Warden.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Mittens">Bronze Mittens</a> / RSE</td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Tekko">Tekko</a></td><td>—</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Mittens">Legionnaire's Mittens</a></td><td>Atk +3</td></tr>
+<tr><td class="lv">14</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></strong></td><td>Acc +3 · Eva +3 — best DD gloves for a long time</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Tekko">Federation Tekko</a></td><td>Acc/R.Acc +3 — same Acc as Battle Gloves but more DEF</td></tr>
+<tr><td class="lv">34</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Ochiudo%27s_Kote">Ochiudo's Kote</a> / <a href="https://www.bg-wiki.com/ffxi/Ochimusha_Kote">Ochimusha Kote</a></strong> <span class="rex">🟣</span></td><td>Atk +20 · Eva -5. Best hands until possibly endgame. <strong>Pricey but a must.</strong></td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Horomusha_Kote">Horomusha Kote</a> <span class="rar">🟡</span></td><td>Atk +15. Cheaper alt to Ochimusha — no -Eva.</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Temple_Gloves">Temple Gloves</a> <span class="rex">🟣</span></td><td>HP +14 · STR +4 · Enhances Boost. MNK AF.</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Bandomusha_Kote">Bandomusha Kote</a></strong> <span class="rex">🟣</span></td><td>HP +3% · Atk +22 · Eva -10. Replaces Ochimusha. Xolotl drop (Attohwa).</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Melee_Gloves">Melee Gloves</a> <span class="rex">🟣</span></td><td>HP +3% · Atk +16 · Subtle Blow +4 · Enhances Chakra. MNK Relic.</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Noritsune_Kote">Noritsune Kote</a></td><td>Acc +10. Tiamat drop.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Usukane_Gote">Usukane Gote</a></strong> <span class="rex">🟣</span></td><td>Acc +10 · Counter +2 · Eva +10 · Subtle Blow +5 · Set: +5% Haste extra.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Subligar">Bronze Subligar</a> / RSE</td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Sitabaki">Sitabaki</a></td><td>—</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Subligar">Brass Subligar</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Hoshikazu_Hakama">Hoshikazu Hakama</a> <span class="rex">🟣</span></td><td>STR +1. Silver Sea Remnants.</td></tr>
+<tr><td class="lv">25</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Republic_Subligar">Republic Subligar</a></strong></td><td>VIT +1 · Atk/R.Atk +5. <strong>Best legs in the game</strong> for MNK until 60s.</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Aikido_Koshita">Aikido Koshita</a></td><td>Counter +2. Tank only.</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Strike_Subligar">Strike Subligar</a></td><td>Eva +3 · Kick Attacks +3</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Temple_Hose">Temple Hose</a> <span class="rex">🟣</span></td><td>HP +18 · Guarding +10 · Counter +1. MNK AF — best until AF2.</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Subligar">Cobra Subligar</a> <span class="rex">🟣</span></td><td>Acc +5 · Store TP +3 · Enmity -4 · Set: Counter</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Seraweels">Pahluwan Seraweels</a> <span class="rex">🟣</span></td><td>STR +3 · Acc/R.Acc +4 · Set: Subtle Blow</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Melee_Hose">Melee Hose</a> <span class="rex">🟣</span></td><td>HP +6% · AGI +4 · Kick Attacks +5 · Subtle Blow +5. MNK Relic — pair with Dune Boots.</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Shura_Haidate">Shura Haidate</a> <span class="rex">🟣</span></td><td>HP -35 · STR +5 · Acc +7</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Barbarossa%27s_Zerehs">Barbarossa's Zerehs</a> <span class="rex">🟣</span></td><td>STR +4 · VIT +4 · Haste +3%</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Byakko%27s_Haidate">Byakko's Haidate</a></strong> <span class="rex">🟣</span></td><td>DEX +15 · <strong>Haste +5%</strong>. Highest haste build standard.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Bahamut%27s_Hose">Bahamut's Hose</a> <span class="rex">🟣</span></td><td>Kick Attacks +6 · Breath dmg taken -5%</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Usukane_Hizayoroi">Usukane Hizayoroi</a></strong> <span class="rex">🟣</span></td><td>STR/DEX +5 · Atk +10 · Haste +3% · Set: +5% Haste extra.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Bronze_Leggings">Bronze Leggings</a> / RSE</td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Kyahan">Kyahan</a></td><td>—</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Leggings">Brass Leggings</a></td><td>—</td></tr>
+<tr><td class="lv">13</td><td><a href="https://www.bg-wiki.com/ffxi/Light_Soleas">Light Soleas</a></td><td>Eva +3</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Federation_Kyahan">Federation Kyahan</a></td><td>Atk/R.Atk +4</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Wonder_Clomps">Wonder Clomps</a></td><td>Taru RSE · HP +20 · STR +2</td></tr>
+<tr><td class="lv">29</td><td><a href="https://www.bg-wiki.com/ffxi/Savage_Gaiters">Savage Gaiters</a></td><td>Mithra RSE · HP +16 · STR +3 · CHR +2</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/Fuma_Kyahan">Fuma Kyahan</a> / <a href="https://www.bg-wiki.com/ffxi/Sarutobi_Kyahan">Sarutobi Kyahan</a> <span class="rex">🟣</span></td><td>Haste +3% — debatable due to price; haste matters more at higher levels</td></tr>
+<tr><td class="lv">51</td><td><a href="https://www.bg-wiki.com/ffxi/Kung_Fu_Shoes">Kung Fu Shoes</a></td><td>Hidden: Kick Attack DMG +25. Replace Federation Kyahan.</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Temple_Gaiters">Temple Gaiters</a> <span class="rex">🟣</span></td><td>HP +12 · DEX +3 · Enhances Dodge. MNK AF.</td></tr>
+<tr><td class="lv">66</td><td><a href="https://www.bg-wiki.com/ffxi/Wulong_Shoes">Wulong Shoes</a></td><td>Hidden: Kick Attack DMG +27</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Cobra_Leggings">Cobra Leggings</a> <span class="rex">🟣</span></td><td>Acc +4 · Store TP +4 · Enmity -3 · Set: Counter</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Dune_Boots">Dune Boots</a> <span class="rex">🟣</span></td><td>Hidden: Kick Attack DMG +30. Use with Dragon Kick / Footwork.</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Melee_Gaiters">Melee Gaiters</a> <span class="rex">🟣</span></td><td>HP +4% · DEX +4 · Guard Skill +12 · Enhances Counterstance. MNK Relic.</td></tr>
+<tr><td class="lv">72</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Fuma_Sune-Ate">Fuma Sune-Ate</a></strong></td><td>HP +12 · AGI +3 · <strong>Haste +3%</strong>. TP standard — beats Kick Attack +30.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Denali_Gamashes">Denali Gamashes</a> <span class="rex">🟣</span></td><td>STR/INT/MND +3 · Acc +5 · M.Acc +3</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Usukane_Sune-Ate">Usukane Sune-Ate</a></strong> <span class="rex">🟣</span></td><td>Acc/Atk +7 · Store TP +7 · Haste +2% · Enmity +5. Top piece for MNK (mind the +Enmity).</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Belt ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/White_Belt">White Belt</a></td><td>STR +1. Starter, can't sell to NPCs.</td></tr>
+<tr><td class="lv">18</td><td><a href="https://www.bg-wiki.com/ffxi/Purple_Belt">Purple Belt</a></td><td>STR +3 · Haste +4%. Quest Silence of the Rams.</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Brown_Belt">Brown Belt</a></td><td>STR +5 · Haste +8%. Quest Fistful of Fury.</td></tr>
+<tr><td class="lv">48</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></strong></td><td>Acc +10 — must-have. Sub for Asuran Fists. Fei'Yin chest.</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Virtuoso_Belt">Virtuoso Belt</a> <span class="rex">🟣</span></td><td>Atk +4 · Acc +12. Superior to Life Belt for multihit WS (Raging Fists / Asuran).</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Potent_Belt">Potent Belt</a></td><td>STR +3 · Acc +8. Alt to Life Belt. 10,000 Leujaoam Sanctum AP.</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Black_Belt">Black Belt</a></strong> <span class="rex">🟣</span></td><td>STR +7 · <strong>Haste +12%</strong> · Subtle Blow +5 · Phys dmg taken -5%. Quest Beat Around the Bushin. **One of the best in the game.**</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Warwolf_Belt">Warwolf Belt</a></td><td>STR/DEX/VIT +5 · Enmity +3. Macro for Chakra. Don't use full-time — Brown/Black only.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><a href="https://www.bg-wiki.com/ffxi/Wing_Pendant">Wing Pendant</a> <span class="rex">🟣</span></td><td>AGI +1 · Wind/Earth resist +1</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>STR/DEX +3 · MND -6</td></tr>
+<tr><td class="lv">24</td><td><a href="https://www.bg-wiki.com/ffxi/Tiger_Stole">Tiger Stole</a></td><td>Atk +5 (quest: Black Tiger Skins)</td></tr>
+<tr><td class="lv">33</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a></strong> <span class="rar">🟡</span></td><td>Acc/R.Acc +10 · Resist Dark -10. BCNM 40 / Argus NM.</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Spectacles">Spectacles</a> <span class="rar">🟡</span></td><td>Acc/R.Acc +7. Use until Peacock or Faith.</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Chivalrous_Chain">Chivalrous Chain</a></td><td>STR +3 · Acc +5 · Store TP +1. Spectacles still better for MNK.</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Faith_Torque">Faith Torque</a></strong> <span class="rex">🟣</span></td><td>MND +5 · H2H Skill +7 · Marksmanship +7. Jailer of Faith.</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Ancient_Torque">Ancient Torque</a> <span class="rar">🟡</span></td><td>DEX +4 · Acc +9. Lambton Worm.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ear ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Cassie_Earring">Cassie Earring</a> <span class="rar">🟡</span></td><td>STR/VIT +1 · Convert MP→HP +50</td></tr>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Optical_Earring">Optical Earring</a> <span class="rex">🟣</span></td><td>Acc +1 · Atk -2. Maighdean Uaine NM.</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Bone_Earring_+1">Bone Earring +1</a></td><td>Atk +2 · Eva -1</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>Atk +3 · Eva -2</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Storm_Loop">Storm Loop</a> <span class="rex">🟣</span></td><td>Atk +5 · Assault: Atk +10. ??? Earring (Excavation Duty).</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Earring">Spike Earring</a></td><td>Atk +5 · Eva -5</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Minuet_Earring">Minuet Earring</a> <span class="rar">🟡</span></td><td>STR/DEX +1 · Minuet: Acc +3</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Merman%27s_Earring">Merman's Earring</a></td><td>Atk +6 · Eva -4 · Magic dmg taken -2%</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Diabolos%27s_Earring">Diabolos's Earring</a> <span class="rex">🟣</span></td><td>Acc +3 (Dark weather: Acc -3) · M.Acc +2. Quest Waking Dreams.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Fenrir%27s_Earring">Fenrir's Earring</a> <span class="rex">🟣</span></td><td>Day: Atk +10, Night: R.Atk +10. Quest The Moonlit Path.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Hollow_Earring">Hollow Earring</a> <span class="rex">🟣</span></td><td>DEX +2 · Acc +3 · R.Acc +3. Apocalypse Nigh.</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Ethereal_Earring">Ethereal Earring</a> <span class="rex">🟣</span></td><td>HP +15 · Atk +5 · Eva +5 · 3% dmg taken → MP. Apocalypse Nigh.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a></strong> <span class="rex">🟣</span></td><td><strong>Double Attack +5%</strong> · Store TP +1. 75 Ancient Beastcoins.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ring ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Mighty_Ring">Mighty Ring</a></td><td>STR +1 · Enchant: Atk/R.Atk +5</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>STR +2</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a></strong> <span class="rex">🟣</span></td><td>STR/DEX +2~5 · Store TP +5 · Subtle Blow +5. CoP reward.</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Divisor_Ring">Divisor Ring</a> <span class="rex">🟣</span></td><td>Latent: Acc +6 · Atk +3 (lvl multiple of 5)</td></tr>
+<tr><td class="lv">34</td><td><a href="https://www.bg-wiki.com/ffxi/Venerer_Ring">Venerer Ring</a> <span class="rar">🟡</span></td><td>Acc +3</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Jaeger_Ring">Jaeger Ring</a> <span class="rex">🟣</span></td><td>Acc/R.Acc +4. Carmine Dobsonfly.</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring">Sniper's Ring</a></td><td>Acc/R.Acc +5 · DEF -10</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Woodsman_Ring">Woodsman Ring</a></td><td>Acc/R.Acc +5 · Eva -5</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a> <span class="rex">🟣</span></td><td>Acc/Atk +4 · Assault: STR/DEX +4 · Adds Regen. ToAU 47 reward.</td></tr>
+<tr><td class="lv">57</td><td><a href="https://www.bg-wiki.com/ffxi/Toreador%27s_Ring">Toreador's Ring</a></td><td>HP +10 · Acc +7. ENM Pulling the Plug.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blood_Ring">Blood Ring</a> <span class="rex">🟣</span></td><td>Acc +5 · Resist Blind/Curse/Paralyze. Chigre ZNM.</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Mars%27s_Ring">Mars's Ring</a></strong> <span class="rex">🟣</span></td><td>Acc/Atk +8 · Eva/DEF -8. Sin of Insolence (Absolute Virtue).</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">4</td><td><a href="https://www.bg-wiki.com/ffxi/Rabbit_Mantle">Rabbit Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">12</td><td><a href="https://www.bg-wiki.com/ffxi/Traveler%27s_Mantle">Traveler's Mantle</a></td><td>Eva +3</td></tr>
+<tr><td class="lv">16</td><td><a href="https://www.bg-wiki.com/ffxi/Besieger_Mantle">Besieger Mantle</a></td><td>Atk +2. Habrok drop.</td></tr>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Exactitude_Mantle_+1">Exactitude Mantle +1</a></td><td>Acc +2</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Jaguar_Mantle">Jaguar Mantle</a></td><td>Atk +3 · Eva +1 (quest: For the Birds)</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Army_Mantle">Royal Army Mantle</a></td><td>STR/MND +2. 24,000 San d'Oria CP.</td></tr>
+<tr><td class="lv">61</td><td><strong><a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">Amemet Mantle +1</a></strong></td><td>STR +2 · Atk/R.Atk +15</td></tr>
+<tr><td class="lv">71</td><td><span class="eg">⭐</span> <strong><a href="https://www.bg-wiki.com/ffxi/Forager%27s_Mantle">Forager's Mantle</a></strong></td><td>STR +3 · Atk +15. Brothers / Sheep in Antlion's Clothing ENM. ~3× Amemet +1 cost.</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ranged ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Stats</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Pebble">Pebble</a></td><td>5/276 — Pellet Belt useful</td></tr>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Happy_Egg">Happy Egg</a> <span class="rex">🟣</span></td><td>HP +1% · VIT +1. Egg Hunt Egg-stravaganza.</td></tr>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Orphic_Egg">Orphic Egg</a> <span class="rex">🟣</span></td><td>Singing Skill +1 · Latent: Acc/Atk/Eva +1 under Song/Roll. Egg Hunt.</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Attar_Sachet">Attar Sachet</a> / <a href="https://www.bg-wiki.com/ffxi/Olibanum_Sachet">Olibanum</a> / <a href="https://www.bg-wiki.com/ffxi/Balm_Sachet">Balm</a> <span class="rex">🟣</span></td><td>Race-locked +stat sachets (Aroma NMs)</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Tathlum">Tathlum</a></td><td>24/276. Tathlum Belt useful — macro out for eggs/sachets without losing TP.</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Optical_Needle">Optical Needle</a> <span class="rar">🟡</span></td><td>Acc +1. BCNM 50 / Fort Karugo-Narugo (S).</td></tr>
+<tr><td class="lv">54</td><td><a href="https://www.bg-wiki.com/ffxi/Smart_Grenade">Smart Grenade</a> <span class="rex">🟣</span></td><td>R.Acc -4 · Add Fire dmg · Hidden Atk +4. Quest Message on the Wind. <strong>Throwable</strong>.</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Tiphia_Sting">Tiphia Sting</a> <span class="rar">🟡</span></td><td>HP -25 · Acc/Atk +2 · Eva -4. Demonic Tiphia NM.</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Bibiki_Seashell">Bibiki Seashell</a> <span class="rex">🟣</span></td><td>VIT +4 · Aquan Killer. VIT WS / Chakra macro. Quest Got It All.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Mamoolbane">Mamoolbane</a> <span class="rex">🟣</span></td><td>Latent: Acc +6 (Mamook/Arrapago/Halvung) · Enchant: Eva +10. 4,000 ISC.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Astrolabe">Astrolabe</a> <span class="rex">🟣</span></td><td>STR +1 · Acc +3. Marquis Sabnock NM. Best TP piece before Black Tathlum.</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Trollbane">Trollbane</a> <span class="rex">🟣</span></td><td>Latent: Crit rate up · Enchant: VIT +10. 4,000 ISC.</td></tr>
+<tr><td class="lv">71</td><td><span class="bis">🏆</span> <strong><a href="https://www.bg-wiki.com/ffxi/Black_Tathlum">Black Tathlum</a></strong> <span class="rar">🟡</span></td><td>DEX +1 · Acc/Atk +4. Guivre (Ruhotz Silvermines).</td></tr>
+</tbody>
+</table>
+{{/html}}

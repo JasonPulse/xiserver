@@ -1,0 +1,438 @@
+= 🐺 Beastmaster — Gear Guide =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.lv { width:60px; text-align:center; font-weight:600; color:#9aa0a6; }
+.bis { color:#f1c40f; font-weight:bold; }
+.eg  { color:#7fdbff; font-weight:bold; }
+.rex { color:#b39ddb; }
+.rar { color:#fff176; }
+.chr { color:#81c784; font-weight:bold; }
+.legend-box { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**Legend:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%) · (% style="color:#81c784" %)🟢 Charm-only piece(%%) · Links go to **bg-wiki.com**.
+
+(% class="legend-box" %)
+**BST runs multiple sets.** Charm-only (max **CHR**), TP/melee (Acc/Att), and optional MP-recovery and STR-WS sets. CHR is the **only** stat that improves charm success — stack it for any high-level charm. Galka especially want to shore up CHR.
+
+{{toc/}}
+
+----
+
+= Trust Recommendations =
+
+You solo DPS — Call Beast / Charm / Sic / Reward. With trusts you get a full party that replaces the pet sink in most content.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:60px;">Slot</th><th style="width:200px;">Trust</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td>🛡️ <strong><a href="https://www.bg-wiki.com/ffxi/August">August</a></strong></td><td>Tank — BST without Charm has no damage sink, needs hate magnet</td></tr>
+<tr><td class="lv">2</td><td>✨ <strong><a href="https://www.bg-wiki.com/ffxi/Apururu_(UC)">Apururu UC</a></strong></td><td>Healer with Haste on melee, full status removal, Convert</td></tr>
+<tr><td class="lv">3</td><td>🔮 <strong><a href="https://www.bg-wiki.com/ffxi/Koru-Moru">Koru-Moru</a></strong></td><td>Refresh (Familiar/Reward eat MP), Haste, debuffs</td></tr>
+<tr><td class="lv">4</td><td>🎵 <strong><a href="https://www.bg-wiki.com/ffxi/Joachim">Joachim</a></strong></td><td>March + Madrigal boost your axe throws / melee</td></tr>
+<tr><td class="lv">5</td><td>⚔️ <strong><a href="https://www.bg-wiki.com/ffxi/Zeid_II">Zeid II</a></strong></td><td>DPS + 4 stun interrupts</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Weapons =
+
+== Axe ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Plantreaper">Plantreaper</a></td><td>Early staple</td></tr>
+<tr><td class="lv">20</td><td><a href="https://www.bg-wiki.com/ffxi/Battleaxe">Battleaxe</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Tomahawk">Tomahawk</a></td><td>Throwable — pet management</td></tr>
+<tr><td class="lv">26</td><td><a href="https://www.bg-wiki.com/ffxi/Tigerhunter">Tigerhunter</a></td><td>Beast killer</td></tr>
+<tr><td class="lv">32</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Axe">Warrior's Axe</a></td><td>—</td></tr>
+<tr><td class="lv">39</td><td><a href="https://www.bg-wiki.com/ffxi/De_Saintre%27s_Axe">De Saintre's Axe</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Combat_Caster%27s_Axe">Combat Caster's Axe</a></td><td>**AF1**</td></tr>
+<tr><td class="lv">48</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Viking_Axe">Viking Axe</a></td><td>Acc +10 — long-running offhand/main</td></tr>
+<tr><td class="lv">56</td><td><a href="https://www.bg-wiki.com/ffxi/Wrath_Tabar">Wrath Tabar</a></td><td>—</td></tr>
+<tr><td class="lv">59</td><td><a href="https://www.bg-wiki.com/ffxi/Kabrakan%27s_Axe">Kabrakan's Axe</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Tungi">Tungi</a></td><td>Quicksand Caves NM</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Sirocco_Axe">Sirocco Axe</a></td><td>Higher DPS than Tungi</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/A_l%27Outrance">A l'Outrance</a></td><td>—</td></tr>
+<tr><td class="lv">63</td><td><a href="https://www.bg-wiki.com/ffxi/Fransisca">Fransisca</a></td><td>Aquarius drop</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Darksteel_Tabar">Darksteel Tabar</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Acha_d%27Armas">Acha d'Armas</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Nadziak">Nadziak</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Juggernaut">Juggernaut</a> <span class="rex">🟣</span></td><td>**Best offhand** — unprecedented Att/STR</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/King_Maker">King Maker</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Rune_Axe">Rune Axe</a></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Tabarzin">Tabarzin</a></td><td>Viable offhand</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Woodville%27s_Axe">Woodville's Axe</a> <span class="rex">🟣</span></td><td>**Best WS mainhand**</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Leopard_Axe">Leopard Axe</a></td><td>Beast killer</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Retributor">Retributor</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Maneater">Maneater</a> <span class="rex">🟣</span></td><td>**Most favored** — DMG 49 latent under 100% TP & during WS</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Zoraal_Ja%27s_Axe">Zoraal Ja's Axe</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Lion_Tamer">Lion Tamer</a></td><td>Beast killer</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Aymur">Aymur</a> <span class="rex">🟣</span></td><td>**Mythic** — Mistral Axe, hidden Acc/Att, BST endgame</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Guttler">Guttler</a> <span class="rex">🟣</span></td><td>**Relic** — best DPS axe</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Sirius_Axe">Sirius Axe</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Bonebiter">Bonebiter</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skeggiold">Skeggiold</a></td><td>—</td></tr>
+<tr><td class="lv">77</td><td><a href="https://www.bg-wiki.com/ffxi/Glyph_Axe">Glyph Axe</a></td><td>—</td></tr>
+<tr><td class="lv">80</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Farsha">Farsha</a></td><td>—</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Guichard%27s_Axe">Guichard's Axe</a></td><td>—</td></tr>
+<tr><td class="lv">99</td><td><a href="https://www.bg-wiki.com/ffxi/Eminent_Axe">Eminent Axe</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Scythe ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Legionnaire%27s_Scythe">Legionnaire's Scythe</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Bastokan_Scythe">Bastokan Scythe</a></td><td>—</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Frostreaper">Frostreaper</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Lex_Talionis">Lex Talionis</a></td><td>BST scythe</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Suzaku%27s_Scythe">Suzaku's Scythe</a> <span class="rex">🟣</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Sub / Grips ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">1</td><td><a href="https://www.bg-wiki.com/ffxi/Lauan_Shield_+1">Lauan Shield +1</a></td><td>—</td></tr>
+<tr><td class="lv">8</td><td><a href="https://www.bg-wiki.com/ffxi/Maple_Shield">Maple Shield</a></td><td>—</td></tr>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Fish_Scale_Shield">Fish Scale Shield</a></td><td>—</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Republic_Targe">Republic Targe</a></td><td>—</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Brass_Grip_+1">Brass Grip +1</a></td><td>—</td></tr>
+<tr><td class="lv">45</td><td><a href="https://www.bg-wiki.com/ffxi/Viking_Shield">Viking Shield</a></td><td>—</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Sentinel_Shield">Sentinel Shield</a></td><td>STR +3, Haste +1%</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Bugard_Strap_+1">Bugard Strap +1</a></td><td>HP/MP for 2H</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Storm_Shield">Storm Shield</a></td><td>**+5 CHR** — charm shield</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pallas%27s_Shield">Pallas's Shield</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Tatami_Shield">Tatami Shield</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Reign_Grip">Reign Grip</a></td><td>2H grip</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Ranged / Ammo ==
+
+(% class="legend-box" %)
+Ammo slot is usually **Pet Food** or **Jug Pets**. Ranged slot defaults to Lightning Bow / Tiphia Sting / Bibiki Seashell depending on stat priority.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Lightning_Bow_+1">Lightning Bow +1</a></td><td>DEX +3 — TP/Acc</td></tr>
+<tr><td class="lv">58</td><td><a href="https://www.bg-wiki.com/ffxi/Tiphia_Sting">Tiphia Sting</a></td><td>Acc/Att +2</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Bibiki_Seashell">Bibiki Seashell</a></td><td>VIT — tank/WS</td></tr>
+<tr><td class="lv">—</td><td><strong>Pet Food</strong></td><td>Pet healing — Alpha/Beta/Gamma/Delta/Epsilon/Zeta/Theta — match level</td></tr>
+<tr><td class="lv">—</td><td><strong>Jug Pets</strong></td><td>Carbi Pomme +1 / Snarling Mary / Sheep Familiar / etc. — Call Beast</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🛡️ Armor =
+
+== Head ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">11</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Entrancing_Ribbon">Entrancing Ribbon</a></td><td>**CHR +2** — earliest charm head</td></tr>
+<tr><td class="lv">14</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Noble%27s_Ribbon">Noble's Ribbon</a></td><td>CHR +1</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Shade_Tiara_+1">Shade Tiara +1</a></td><td>—</td></tr>
+<tr><td class="lv">36</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Alluring_Headband">Alluring Headband</a></td><td>**CHR +5** — long-running charm head</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Spelunker%27s_Hat">Spelunker's Hat</a></td><td>—</td></tr>
+<tr><td class="lv">41</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Voyager_Sallet">Voyager Sallet</a> <span class="rex">🟣</span></td><td>STR +3, DEX +4</td></tr>
+<tr><td class="lv">50</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Storm_Turban">Storm Turban</a></td><td>CHR +4</td></tr>
+<tr><td class="lv">56</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Beast_Helm">Beast Helm</a> <span class="rex">🟣</span></td><td>**AF** — Reward enhance</td></tr>
+<tr><td class="lv">60</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Reraise_Hairpin">Reraise Hairpin</a></td><td>—</td></tr>
+<tr><td class="lv">65</td><td><a href="https://www.bg-wiki.com/ffxi/Wivre_Mask">Wivre Mask</a> <span class="rar">🟡</span></td><td>STR/VIT/Eva</td></tr>
+<tr><td class="lv">70</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Optical_Hat">Optical Hat</a> <span class="rex">🟣</span></td><td>Acc +10 — Hakutaku</td></tr>
+<tr><td class="lv">70</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Breeder_Mask">Breeder Mask</a></td><td>**CHR set piece**</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Maat%27s_Cap">Maat's Cap</a> <span class="rex">🟣</span></td><td>All stats +7 — LB5</td></tr>
+<tr><td class="lv">71</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Bison_Warbonnet">Bison Warbonnet</a></td><td>**CHR +6, Charm +5** — Bison set</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Khimaira_Bonnet">Khimaira Bonnet</a></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hecatomb_Cap">Hecatomb Cap</a> <span class="rex">🟣</span></td><td>**WS only**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Walahra_Turban">Walahra Turban</a> <span class="rex">🟣</span></td><td>HP +30, Haste 5% — best TP head</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Askar_Zucchetto">Askar Zucchetto</a> <span class="rex">🟣</span></td><td>STR/DEX/VIT +4</td></tr>
+<tr><td class="lv">75</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Anwig_Salade">Anwig Salade</a></td><td>**Augmentable** — CHR +5 / Charm + (BiS charm head)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Body ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Shade_Harness_+1">Shade Harness +1</a></td><td>—</td></tr>
+<tr><td class="lv">32</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Aega%27s_Doublet">Aega's Doublet</a></td><td>**CHR +3** — early charm body</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Gaudy_Harness">Gaudy Harness</a></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><a href="https://www.bg-wiki.com/ffxi/Gaia_Doublet">Gaia Doublet</a></td><td>—</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Jaridah_Peti">Jaridah Peti</a></td><td>Acc/Att</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Beast_Jackcoat">Beast Jackcoat</a> <span class="rex">🟣</span></td><td>**AF** — set bonus with Helm</td></tr>
+<tr><td class="lv">59</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Haubergeon">Haubergeon</a></td><td>First endgame body</td></tr>
+<tr><td class="lv">69</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hauberk">Hauberk</a></td><td>WAR/DRK/BST exclusive</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hydra_Harness">Hydra Harness</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Avalon_Breastplate">Avalon Breastplate</a> <span class="rex">🟣</span></td><td>HNM body</td></tr>
+<tr><td class="lv">71</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Bison_Jacket">Bison Jacket</a></td><td>**Charm set body**</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Khimaira_Jacket">Khimaira Jacket</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Khazagand">Pahluwan Khazagand</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dusk_Jerkin">Dusk Jerkin</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Adaman_Hauberk">Adaman Hauberk</a> <span class="rex">🟣</span></td><td>Earthen abjuration</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Bst._Jackcoat_+1">Beast Jackcoat +1</a> <span class="rex">🟣</span></td><td>AF+1 — top BST charm/Reward body</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Kirin%27s_Osode">Kirin's Osode</a> <span class="rex">🟣</span></td><td>+10 all stats — WS</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Askar_Korazin">Askar Korazin</a> <span class="rex">🟣</span></td><td>Tank/HP — Nyzul</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Mirke_Wardecors">Mirke Wardecors</a></td><td>Augmentable</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Hands ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Battle_Gloves">Battle Gloves</a></td><td>Acc/Eva +3</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Shade_Mittens_+1">Shade Mittens +1</a></td><td>—</td></tr>
+<tr><td class="lv">43</td><td><a href="https://www.bg-wiki.com/ffxi/Gothic_Gauntlets">Gothic Gauntlets</a></td><td>Enmity, Ice Spikes</td></tr>
+<tr><td class="lv">54</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Beast_Gloves">Beast Gloves</a> <span class="rex">🟣</span></td><td>**AF** — CHR +3, Charm gambit</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Trainer%27s_Wristbands">Trainer's Wristbands</a></td><td>BST JSE</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Thick_Mufflers">Thick Mufflers</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Beast_Bazubands">Beast Bazubands</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Trainer%27s_Gloves">Trainer's Gloves</a></td><td>BST JSE</td></tr>
+<tr><td class="lv">71</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Bison_Wristbands">Bison Wristbands</a></td><td>Charm set</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Dusk_Gloves_+1">Dusk Gloves +1</a> <span class="rex">🟣</span></td><td>Haste 4% — best TP gloves</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Dastanas">Pahluwan Dastanas</a> <span class="rex">🟣</span></td><td>Snapshot</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Hecatomb_Mittens">Hecatomb Mittens</a> <span class="rex">🟣</span></td><td>**WS only**</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Seiryu%27s_Kote">Seiryu's Kote</a> <span class="rar">🟡</span></td><td>**Best ranged Acc + STR** — sky god drop</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Monster_Gloves">Monster Gloves</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Askar_Manopolas">Askar Manopolas</a> <span class="rex">🟣</span></td><td>Haste set</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Legs ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Shade_Tights_+1">Shade Tights +1</a></td><td>—</td></tr>
+<tr><td class="lv">42</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Frog_Trousers">Frog Trousers</a> <span class="rex">🟣</span></td><td>**CHR-friendly mid-game**</td></tr>
+<tr><td class="lv">60</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Beast_Trousers">Beast Trousers</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">62</td><td><a href="https://www.bg-wiki.com/ffxi/Luna_Subligar">Luna Subligar</a></td><td>—</td></tr>
+<tr><td class="lv">68</td><td><a href="https://www.bg-wiki.com/ffxi/Fourth_Schoss">Fourth Schoss</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Tracker%27s_Kecks">Tracker's Kecks</a></td><td>—</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hydra_Tights">Hydra Tights</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Bison_Kecks">Bison Kecks</a></td><td>Charm set</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Seraweels">Pahluwan Seraweels</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Monster_Trousers">Monster Trousers</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Bst._Trousers_+1">Beast Trousers +1</a> <span class="rex">🟣</span></td><td>AF+1</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Byakko%27s_Haidate">Byakko's Haidate</a> <span class="rex">🟣</span></td><td>**Best TP legs** — DEX +15, Haste 5%</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Askar_Dirs">Askar Dirs</a> <span class="rex">🟣</span></td><td>Tank — Nyzul</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Chausses">Skadi's Chausses</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Desultor_Tassets">Desultor Tassets</a></td><td>**Pet JA recast** — situational</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Feet ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">7</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Bounding_Boots">Bounding Boots</a></td><td>Leaping Lizzy NM</td></tr>
+<tr><td class="lv">25</td><td><a href="https://www.bg-wiki.com/ffxi/Shade_Leggings_+1">Shade Leggings +1</a></td><td>—</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Mannequin_Pumps">Mannequin Pumps</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">52</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Beast_Gaiters">Beast Gaiters</a> <span class="rex">🟣</span></td><td>**AF**</td></tr>
+<tr><td class="lv">67</td><td><a href="https://www.bg-wiki.com/ffxi/Rutter_Sabatons">Rutter Sabatons</a></td><td>WS only</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Hydra_Spats">Hydra Spats</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">71</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Bison_Gamashes">Bison Gamashes</a></td><td>Charm set</td></tr>
+<tr><td class="lv">72</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Aurum_Sabatons">Aurum Sabatons</a> <span class="rex">🟣</span></td><td>**Best TP feet** — Acc/Att/Haste</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Dance_Shoes">Dance Shoes</a></td><td>—</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Pahluwan_Crackows">Pahluwan Crackows</a> <span class="rex">🟣</span></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Bst._Gaiters_+1">Beast Gaiters +1</a> <span class="rex">🟣</span></td><td>AF+1 — pet enhance</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Askar_Gambieras">Askar Gambieras</a> <span class="rex">🟣</span></td><td>MP/Enmity</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Skadi%27s_Jambeaux">Skadi's Jambeaux</a> <span class="rex">🟣</span></td><td>R.Acc/Snapshot</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Waist ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">15</td><td><a href="https://www.bg-wiki.com/ffxi/Warrior%27s_Belt_+1">Warrior's Belt +1</a></td><td>Long-running</td></tr>
+<tr><td class="lv">48</td><td><a href="https://www.bg-wiki.com/ffxi/Life_Belt">Life Belt</a></td><td>Acc +10</td></tr>
+<tr><td class="lv">50</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Swift_Belt">Swift Belt</a> <span class="rex">🟣</span></td><td>Haste 4%</td></tr>
+<tr><td class="lv">55</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Speed_Belt">Speed Belt</a> <span class="rex">🟣</span></td><td>Haste 6% — best TP belt</td></tr>
+<tr><td class="lv">60</td><td><a href="https://www.bg-wiki.com/ffxi/Potent_Belt">Potent Belt</a></td><td>STR +3, Acc +8</td></tr>
+<tr><td class="lv">71</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Warwolf_Belt">Warwolf Belt</a> <span class="rex">🟣</span></td><td>STR/DEX/VIT +5 — WS</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Cuchulain%27s_Belt">Cuchulain's Belt</a></td><td>—</td></tr>
+<tr><td class="lv">75</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Ninurta%27s_Sash">Ninurta's Sash</a> <span class="rex">🟣</span></td><td>Haste 3%, Acc/Att — alt-Speed</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Back ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">28</td><td><a href="https://www.bg-wiki.com/ffxi/Wolf_Mantle">Wolf Mantle</a></td><td>Resist Charm</td></tr>
+<tr><td class="lv">42</td><td><a href="https://www.bg-wiki.com/ffxi/Casaba_Melon_Tank">Casaba Melon Tank</a></td><td>Reward enhance</td></tr>
+<tr><td class="lv">47</td><td><a href="https://www.bg-wiki.com/ffxi/Jaguar_Mantle">Jaguar Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Amemet_Mantle_+1">Amemet Mantle +1</a></td><td>STR +3</td></tr>
+<tr><td class="lv">64</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Lyricist%27s_Gonnelle">Lyricist's Gonnelle</a></td><td>**CHR +5** — charm</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Boxer%27s_Mantle">Boxer's Mantle</a> <span class="rex">🟣</span></td><td>Eva/Parry/Shield/Guard +10</td></tr>
+<tr><td class="lv">71</td><td><a href="https://www.bg-wiki.com/ffxi/Forager%27s_Mantle">Forager's Mantle</a></td><td>TP/WS</td></tr>
+<tr><td class="lv">73</td><td><a href="https://www.bg-wiki.com/ffxi/Commander%27s_Cape">Commander's Cape</a></td><td>—</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Cuchulain%27s_Mantle">Cuchulain's Mantle</a></td><td>TP</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Cerberus_Mantle_+1">Cerberus Mantle +1</a> <span class="rex">🟣</span></td><td>STR +3, Att +12 — best TP/WS</td></tr>
+<tr><td class="lv">76</td><td><a href="https://www.bg-wiki.com/ffxi/Belenos%27_Mantle">Belenos' Mantle</a></td><td>—</td></tr>
+<tr><td class="lv">80</td><td><a href="https://www.bg-wiki.com/ffxi/Ferine_Mantle">Ferine Mantle</a></td><td>BST AF3</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Neck ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">3</td><td><a href="https://www.bg-wiki.com/ffxi/Pile_Chain">Pile Chain</a> <span class="rex">🟣</span></td><td>HP +3, Acc +1 — early</td></tr>
+<tr><td class="lv">11</td><td><a href="https://www.bg-wiki.com/ffxi/Scale_Gorget">Scale Gorget</a></td><td>—</td></tr>
+<tr><td class="lv">15</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Bird_Whistle">Bird Whistle</a></td><td>**Charm key item** for fauna</td></tr>
+<tr><td class="lv">20</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Chocobo_Whistle">Chocobo Whistle</a></td><td>**Charm chocobos**</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Spike_Necklace">Spike Necklace</a></td><td>STR/DEX +3</td></tr>
+<tr><td class="lv">24</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Beast_Whistle">Beast Whistle</a></td><td>**Charm beasts**</td></tr>
+<tr><td class="lv">27</td><td><a href="https://www.bg-wiki.com/ffxi/Flower_Necklace">Flower Necklace</a></td><td>CHR +3</td></tr>
+<tr><td class="lv">31</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Dhalmel_Whistle">Dhalmel Whistle</a></td><td>**Charm dhalmels**</td></tr>
+<tr><td class="lv">33</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Peacock_Charm">Peacock Charm</a> <span class="rex">🟣</span></td><td>Acc +10 — TP staple</td></tr>
+<tr><td class="lv">50</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Storm_Gorget">Storm Gorget</a></td><td>**CHR neck** — pair with Storm gear</td></tr>
+<tr><td class="lv">55</td><td><a href="https://www.bg-wiki.com/ffxi/Royal_Guard%27s_Collar">Royal Guard's Collar</a></td><td>—</td></tr>
+<tr><td class="lv">60</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Shepherd%27s_Chain">Shepherd's Chain</a></td><td>**CHR + Charm** — niche endgame</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Ritter_Gorget">Ritter Gorget</a> <span class="rex">🟣</span></td><td>HP +25, Enmity +3</td></tr>
+<tr><td class="lv">73</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Temperance_Torque">Temperance Torque</a> <span class="rex">🟣</span></td><td>CHR +5, Axe Skill +7</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Orochi_Nodowa_+1">Orochi Nodowa +1</a></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Earrings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">10</td><td><a href="https://www.bg-wiki.com/ffxi/Optical_Earring">Optical Earring</a></td><td>Acc — early</td></tr>
+<tr><td class="lv">21</td><td><a href="https://www.bg-wiki.com/ffxi/Beetle_Earring_+1">Beetle Earring +1</a></td><td>Att +3</td></tr>
+<tr><td class="lv">35</td><td><a href="https://www.bg-wiki.com/ffxi/Drone_Earring">Drone Earring</a> <span class="rar">🟡</span></td><td>AGI</td></tr>
+<tr><td class="lv">40</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Intruder_Earring">Intruder Earring</a></td><td>**CHR-friendly**</td></tr>
+<tr><td class="lv">58</td><td><span class="eg">⭐</span> <a href="https://www.bg-wiki.com/ffxi/Assault_Earring">Assault Earring</a></td><td>Acc +5 — long-running</td></tr>
+<tr><td class="lv">70</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Tamer%27s_Earring">Tamer's Earring</a></td><td>**CHR +1, Charm enhance** — BST signature</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Beastly_Earring">Beastly Earring</a></td><td>BST JSE</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Suppanomimi">Suppanomimi</a> <span class="rex">🟣</span></td><td>Sword Skill +5 — sub-job dual wield</td></tr>
+<tr><td class="lv">72</td><td><a href="https://www.bg-wiki.com/ffxi/Ethereal_Earring">Ethereal Earring</a></td><td>3% damage→MP — soloing /mage</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Brutal_Earring">Brutal Earring</a> <span class="rex">🟣</span></td><td>Store TP +1, Double Attack — TP/WS</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Delta_Earring">Delta Earring</a> <span class="rex">🟣</span></td><td>—</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+== Rings ==
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th class="lv">Lv</th><th>Item</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="lv">14</td><td><a href="https://www.bg-wiki.com/ffxi/Courage_Ring">Courage Ring</a></td><td>STR — early WS</td></tr>
+<tr><td class="lv">30</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Rajas_Ring">Rajas Ring</a> <span class="rex">🟣</span></td><td>**TP/WS** — STR/DEX, Store TP +5</td></tr>
+<tr><td class="lv">30</td><td><a href="https://www.bg-wiki.com/ffxi/Tamas_Ring">Tamas Ring</a> <span class="rex">🟣</span></td><td>MP/INT/MND — Reward set</td></tr>
+<tr><td class="lv">30</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Shikaree_Ring">Shikaree Ring</a></td><td>—</td></tr>
+<tr><td class="lv">40</td><td><a href="https://www.bg-wiki.com/ffxi/Sniper%27s_Ring">Sniper's Ring</a></td><td>Acc +5</td></tr>
+<tr><td class="lv">50</td><td><span class="chr">🟢</span> <a href="https://www.bg-wiki.com/ffxi/Tamer%27s_Ring">Tamer's Ring</a></td><td>**Charm +5%** — best charm ring</td></tr>
+<tr><td class="lv">50</td><td><a href="https://www.bg-wiki.com/ffxi/Ulthalam%27s_Ring">Ulthalam's Ring</a></td><td>Acc/Att +4</td></tr>
+<tr><td class="lv">61</td><td><a href="https://www.bg-wiki.com/ffxi/Vivian_Ring">Vivian Ring</a> <span class="rar">🟡</span></td><td>Convert HP→MP 50</td></tr>
+<tr><td class="lv">70</td><td><a href="https://www.bg-wiki.com/ffxi/Blood_Ring">Blood Ring</a></td><td>Acc +5 — cheap</td></tr>
+<tr><td class="lv">74</td><td><a href="https://www.bg-wiki.com/ffxi/Flame_Ring">Flame Ring</a></td><td>STR +5 — WS only</td></tr>
+<tr><td class="lv">75</td><td><span class="bis">🏆</span> <a href="https://www.bg-wiki.com/ffxi/Iota_Ring">Iota Ring</a></td><td>STR/Att +5 — best WS ring</td></tr>
+<tr><td class="lv">75</td><td><a href="https://www.bg-wiki.com/ffxi/Omega_Ring">Omega Ring</a> <span class="rex">🟣</span></td><td>INT/MND/CHR +3 — Reward set</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🐾 Charm Set (Maximize CHR) =
+
+(% class="legend-box" %)
+**The whole point of BST is charm.** Stack CHR for any high-level mob. Charm's success is **CHR-only** — Att/Acc gear is dead weight here.
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Slot</th><th>Best Picks (CHR-focused)</th></tr></thead>
+<tbody>
+<tr><td><strong>Sub</strong></td><td>Storm Shield (CHR +5)</td></tr>
+<tr><td><strong>Head</strong></td><td>**Anwig Salade** (augmentable CHR/Charm) → Bison Warbonnet → Storm Turban → Alluring Headband (mid)</td></tr>
+<tr><td><strong>Neck</strong></td><td>Storm Gorget · Shepherd's Chain · **Bird/Beast/Dhalmel Whistle** (mob-specific)</td></tr>
+<tr><td><strong>Body</strong></td><td>Bison Jacket · Beast Jackcoat +1 · Gaudy Harness</td></tr>
+<tr><td><strong>Hands</strong></td><td>Beast Gloves (AF — Charm gambit) · Bison Wristbands</td></tr>
+<tr><td><strong>Legs</strong></td><td>Bison Kecks · Frog Trousers (mid)</td></tr>
+<tr><td><strong>Feet</strong></td><td>Bison Gamashes</td></tr>
+<tr><td><strong>Back</strong></td><td>Lyricist's Gonnelle (CHR +5)</td></tr>
+<tr><td><strong>Waist</strong></td><td>Gosha Sarashi · Sarashi (CHR-ish belts)</td></tr>
+<tr><td><strong>Earrings</strong></td><td>**Tamer's Earring** (Charm enhance) · Intruder Earring</td></tr>
+<tr><td><strong>Rings</strong></td><td>**Tamer's Ring** (Charm +5%) · Shikaree Ring</td></tr>
+<tr><td><strong>Ammo</strong></td><td>Pet Food / Jug Pet (no CHR-specific)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 Endgame Set Cheat-Sheet =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:140px;">Set</th><th>Pieces</th></tr></thead>
+<tbody>
+<tr><td><strong>Charm</strong></td><td>See above — stack CHR aggressively</td></tr>
+<tr><td><strong>Melee TP</strong></td><td>Walahra Turban · Hauberk / Adaman Hauberk · Dusk Gloves +1 · Byakko's Haidate · Aurum Sabatons · Speed Belt · Cerberus Mantle +1 · Peacock Charm · Rajas Ring · Sniper's Ring · Brutal Earring · Assault Earring · Maneater / Juggernaut</td></tr>
+<tr><td><strong>WS (Decimation / Mistral / Ruinator)</strong></td><td>Hecatomb Cap · Kirin's Osode · Hecatomb Mittens · Hecatomb Leggings · Hecatomb Subligar · Warwolf Belt · Cerberus Mantle +1 · Light Gorget · Iota Ring · Flame Ring · Brutal Earring</td></tr>
+<tr><td><strong>Reward / Pet Heal (MND/INT)</strong></td><td>Beast Helm · Beast Jackcoat +1 · Beast Gaiters +1 · Casaba Melon Tank · Tamas Ring · Omega Ring</td></tr>
+<tr><td><strong>Ranged Pull</strong></td><td>Lightning Bow +1 + Bibiki Seashell · Optical Hat · Seiryu's Kote · Skadi's Jambeaux · Pahluwan Dastanas (Snapshot)</td></tr>
+</tbody>
+</table>
+{{/html}}
