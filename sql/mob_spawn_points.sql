@@ -52929,12 +52929,12 @@ INSERT INTO `mob_spawn_points` VALUES (17375388,0,'Wyrm','Wyrm',35,80,80,21.231,
 INSERT INTO `mob_spawn_points` VALUES (17375390,0,'Wyrm','Wyrm',35,80,80,181.059,-64.000,174.999,194);
 
 -- Rapid Raptors
-INSERT INTO `mob_spawn_points` VALUES (17375392,0,'Dromiceiomimus','Dromiceiomimus',36,50,50,-134.000,56.000,-224.000,190);
-INSERT INTO `mob_spawn_points` VALUES (17375393,0,'Dromiceiomimus','Dromiceiomimus',36,50,50,-142.000,56.000,-224.000,190);
-INSERT INTO `mob_spawn_points` VALUES (17375395,0,'Dromiceiomimus','Dromiceiomimus',36,50,50,26.231,-4.000,-24.076,190);
-INSERT INTO `mob_spawn_points` VALUES (17375396,0,'Dromiceiomimus','Dromiceiomimus',36,50,50,18.231,-4.000,-24.076,190);
-INSERT INTO `mob_spawn_points` VALUES (17375398,0,'Dromiceiomimus','Dromiceiomimus',36,50,50,186.059,-64.000,175.999,190);
-INSERT INTO `mob_spawn_points` VALUES (17375399,0,'Dromiceiomimus','Dromiceiomimus',36,50,50,178.059,-64.000,175.999,190);
+INSERT INTO `mob_spawn_points` VALUES (17375392,0,'Dromiceiomimus','Dromiceiomimus',36,52,53,-136.186,56.241,-224.183,192);
+INSERT INTO `mob_spawn_points` VALUES (17375393,0,'Dromiceiomimus','Dromiceiomimus',36,52,53,-142.186,56.241,-224.183,192);
+INSERT INTO `mob_spawn_points` VALUES (17375395,0,'Dromiceiomimus','Dromiceiomimus',36,52,53,24.045,-3.759,-24.259,192);
+INSERT INTO `mob_spawn_points` VALUES (17375396,0,'Dromiceiomimus','Dromiceiomimus',36,52,53,18.045,-3.759,-24.259,192);
+INSERT INTO `mob_spawn_points` VALUES (17375398,0,'Dromiceiomimus','Dromiceiomimus',36,52,53,183.873,-63.759,175.816,192);
+INSERT INTO `mob_spawn_points` VALUES (17375399,0,'Dromiceiomimus','Dromiceiomimus',36,52,53,177.873,-63.759,175.816,192);
 
 -- Wild Wild Whiskers
 INSERT INTO `mob_spawn_points` VALUES (17375401,0,'Macan_Gadangan','Macan Gadangan',37,62,62,-139.000,56.043,-224.199,192);
