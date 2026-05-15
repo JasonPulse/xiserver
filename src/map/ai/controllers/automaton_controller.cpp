@@ -1495,7 +1495,7 @@ bool CAutomatonController::TryTPMove()
 {
     if (PAutomaton->health.tp >= 1000)
     {
-        const auto& FamilySkills = battleutils::GetMobSkillList(PAutomaton->m_Family);
+        const auto& FrameSkills = battleutils::GetMobSkillList(PAutomaton->m_MobSkillList);
 
         std::vector<CMobSkill*> validSkills;
 
@@ -1507,7 +1507,7 @@ bool CAutomatonController::TryTPMove()
             skilltype = SKILL_AUTOMATON_RANGED;
         }
 
-        for (auto skillid : FamilySkills)
+        for (auto skillid : FrameSkills)
         {
             auto* PSkill = battleutils::GetMobSkill(skillid);
             if (PSkill && PAutomaton->GetSkill(skilltype) > PSkill->getParam() && PSkill->getParam() != -1 &&
