@@ -4128,14 +4128,14 @@ end
 function CBaseEntity:getDespoilDebuff(itemID)
 end
 
----@nodiscard
----@return boolean
-function CBaseEntity:itemStolen()
+---@param stolen boolean
+---@return nil
+function CBaseEntity:itemStolen(stolen)
 end
 
----@nodiscard
----@return boolean
-function CBaseEntity:itemDespoiled()
+---@param despoiled boolean
+---@return nil
+function CBaseEntity:itemDespoiled(despoiled)
 end
 
 ---@nodiscard
