@@ -3952,8 +3952,13 @@ function CBaseEntity:getBattleTime()
 end
 
 ---@nodiscard
----@return integer
+---@return xi.element
 function CBaseEntity:getCrystalElement()
+end
+
+---@param element xi.element
+---@return nil
+function CBaseEntity:setCrystalElement(element)
 end
 
 ---@nodiscard
