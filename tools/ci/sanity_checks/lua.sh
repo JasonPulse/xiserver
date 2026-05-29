@@ -99,6 +99,7 @@ global_objects=(
     BuildString
 
     GetFirstID
+    GetTableOfIDs
 
     ReloadSynthRecipes
 
