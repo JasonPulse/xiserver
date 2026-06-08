@@ -32,28 +32,37 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 
 ## Real bugs still open (single-file, no rank dependency)
 
-- [ ] **`Iyvah_Halohm.lua:14-20`** — all 6 coalition ranks hardcoded to 0. **Deferred** — without coalition rank API, the display would still show 0/0/0/0/0/0 (which is accurate). Wait for coalition system.
+- [x] **`Iyvah_Halohm.lua`** — now reads via the new `xi.coalition` API instead of inline CharVar reads. Same data, but `!setvar Coalition_*_Rank N` (or `xi.coalition.setRank`) now propagates everywhere.
 - [x] **`Ujlei_Zelekko.lua`** — campaign gate removed. Shop now always opens.
 - [ ] **`Sifa_Alani.lua:40-44`** — frontier-station bitmask hardcoded all-on. Cosmetic, low priority.
 - [ ] **`DefaultActions.lua:9`** — `Nhili_Uvolep = event 545`. Possibly stale copy from Western Adoulin (where 545 = Clautaire). Verify next time someone triggers Nhili_Uvolep — if dialog is wrong, replace event ID.
 
-## Behind the rank/coalition wall (skip per user — too far behind)
+## Coalition rank API (built — see `project_coalition_api.md`)
 
-- Coalition rank/edification API (blocks Civil_Registrar, Task_Delegator, Vesca, Craggy_Bluff, Wortherton, Ceciliotte, etc.)
-- Vesca + Craggy_Bluff (EA Peacekeepers Bayld weapon/gear shops)
-- Ornery_Dhole (WA Skirmish Obsidian-Fragment vendor)
-- Wortherton (WA Inventors Bayld vendor)
-- Kithvalio (WA Inventors Bayld vendor)
-- Ceciliotte (WA Mog Garden seed Bayld vendor)
-- Mandragora_Assistant (Mancala minigame)
-- Anomaly_Expert (Skirmish entry)
-- Dimmian (Wildskeeper Reives entry items)
-- Lola/Oston/Xavinien (Skirmish system)
-- Chamulele (Ergon Loci)
+- [x] **Lua enum** `scripts/enum/coalition.lua` — IDs + var-name table + `MAX_RANK = 15`.
+- [x] **Lua API** `scripts/globals/coalition.lua` — `xi.coalition.{getRank, setRank, addRank, getAllRanks, getImprimatursBalance, addImprimatursBalance, getImprimatursSpent, addImprimatursSpent, spendImprimaturs}`.
+- [x] **COLONIZATION packet wired** — `0x071_influence_colonization.cpp` reads CharVars and the client now sees the player's actual ranks instead of the hardcoded `1` placeholder.
+- [x] **SOA mission gates active** — `xi.soa.helpers.imprimaturGate` now checks `Coalition_Imprimaturs_Spent` instead of always returning true. Affects missions 1-6 (10), 1-8 (20), 2-7-3 (30).
+- [x] **`Iyvah_Halohm.lua` uses the API.**
+
+### Still unbuilt (gameplay flow, not API)
+
+- [ ] **Civil_Registrar** (WA, NPC for joining a coalition). Until built, ranks must be set directly via `!setvar Coalition_*_Rank N` or `xi.coalition.setRank` — there is no in-game flow to join a coalition.
+- [ ] **Task_Delegator** (Coalition Assignments / Lights — the system that grants imprimaturs as currency on completion). Until built, imprimatur balance must be granted directly via `xi.coalition.addImprimatursBalance(player, N)` — players have no in-game way to earn them.
+- [ ] **Edification NPCs** — the per-coalition rank-up NPCs that the player pays imprimaturs at to advance rank. Until built, ranks must be raised via `xi.coalition.addRank` or `!setvar`.
+- [x] **Bayld-tier vendor gating** — Vesca, Craggy_Bluff (Peacekeepers) and Wortherton, Kithvalio, Ceciliotte (Inventors) now gated. Each script has a `REQUIRED_RANK = 1` local at top — bump it for tighter gating. Rank-fail uses `printToPlayer` with a clear coalition-name message. To set a player's rank: `!setvar Coalition_Peacekeepers_Rank 1` (or `Inventors`) — that's a normal CharVar write, which is where ranks live.
+
+## Behind other subsystems (skip per user — too far behind)
+
+- Ornery_Dhole (WA Skirmish Obsidian-Fragment vendor) — needs Skirmish system
+- Mandragora_Assistant (Mancala minigame) — needs minigame
+- Anomaly_Expert (Skirmish entry) — needs Skirmish
+- Dimmian (Wildskeeper Reives entry items) — needs WKR
+- Lola/Oston/Xavinien (Skirmish system) — needs Skirmish
+- Chamulele (Ergon Loci) — needs Loci
 
 ## Subsystems entirely missing (large work)
 
-- Coalition rank/edification storage + API
 - Skirmish system
 - Delve system
 - Wildskeeper Reives
