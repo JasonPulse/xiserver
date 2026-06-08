@@ -8,7 +8,7 @@
 -----------------------------------
 xi = xi or {}
 
----@enum xi.coalition
+---@class xi.coalition
 xi.coalition =
 {
     PIONEERS     = 1,
