@@ -34,7 +34,7 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 
 - [x] **`Iyvah_Halohm.lua`** — now reads via the new `xi.coalition` API instead of inline CharVar reads. Same data, but `!setvar Coalition_*_Rank N` (or `xi.coalition.setRank`) now propagates everywhere.
 - [x] **`Ujlei_Zelekko.lua`** — campaign gate removed. Shop now always opens.
-- [ ] **`Sifa_Alani.lua:40-44`** — frontier-station bitmask hardcoded all-on. Cosmetic, low priority.
+- [x] **`Sifa_Alani.lua`** — frontier-station bitmask hardcoded all-on is intentional (no colonization sim). Now documented in the script so a future agent doesn't try to "fix" it.
 - [ ] **`DefaultActions.lua:9`** — `Nhili_Uvolep = event 545`. Possibly stale copy from Western Adoulin (where 545 = Clautaire). Verify next time someone triggers Nhili_Uvolep — if dialog is wrong, replace event ID.
 
 ## Coalition rank API (built — see `project_coalition_api.md`)
@@ -45,11 +45,11 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 - [x] **SOA mission gates active** — `xi.soa.helpers.imprimaturGate` now checks `Coalition_Imprimaturs_Spent` instead of always returning true. Affects missions 1-6 (10), 1-8 (20), 2-7-3 (30).
 - [x] **`Iyvah_Halohm.lua` uses the API.**
 
-### Still unbuilt (gameplay flow, not API)
+### Gameplay flow (stubbed — usable, not retail-accurate)
 
-- [ ] **Civil_Registrar** (WA, NPC for joining a coalition). Until built, ranks must be set directly via `!setvar Coalition_*_Rank N` or `xi.coalition.setRank` — there is no in-game flow to join a coalition.
-- [ ] **Task_Delegator** (Coalition Assignments / Lights — the system that grants imprimaturs as currency on completion). Until built, imprimatur balance must be granted directly via `xi.coalition.addImprimatursBalance(player, N)` — players have no in-game way to earn them.
-- [ ] **Edification NPCs** — the per-coalition rank-up NPCs that the player pays imprimaturs at to advance rank. Until built, ranks must be raised via `xi.coalition.addRank` or `!setvar`.
+- [x] **Civil_Registrar** — single shared script in both WA + EA. First click grants rank 1 in all six coalitions; subsequent clicks tell the player they're already registered. Retail's per-coalition menu plumbing intentionally skipped (4-player private server).
+- [x] **Task_Delegator** — single shared script in both WA + EA. One click per Vana'diel day grants 100 imprimaturs balance + 10 imprimaturs spent, gated on coalition membership. Tunables (`IMPRIMATURS_REWARD`, `CURRENCY_REWARD`) at top of script.
+- [ ] **Edification NPCs** — the per-coalition rank-up NPCs that the player pays imprimaturs at to advance rank. Until built, ranks must be raised via `xi.coalition.addRank` or `!setvar`. Lower priority since Task_Delegator's daily spent-counter grant covers the SOA mission gates organically.
 - [x] **Bayld-tier vendor gating** — Vesca, Craggy_Bluff (Peacekeepers) and Wortherton, Kithvalio, Ceciliotte (Inventors) now gated. Each script has a `REQUIRED_RANK = 1` local at top — bump it for tighter gating. Rank-fail uses `printToPlayer` with a clear coalition-name message. To set a player's rank: `!setvar Coalition_Peacekeepers_Rank 1` (or `Inventors`) — that's a normal CharVar write, which is where ranks live.
 
 ## Behind other subsystems (skip per user — too far behind)

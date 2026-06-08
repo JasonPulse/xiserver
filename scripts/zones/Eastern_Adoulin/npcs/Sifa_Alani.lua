@@ -37,14 +37,14 @@ entity.onTrigger = function(player, npc)
     -- 2 : Bitmask for established Frontier Stations
     -- 3 : Player's current amount of Bayld
 
-    -- TODO: Frontier Station bitmask currently locked to make all maps available, and
-    -- needs to change once Frontier Station logic has been implemented.
-
-    -- TODO: Needs verification to see if the map vendor is available prior to becoming
-    -- a Pioneer
+    -- Frontier Station bitmask is locked to all-on by design: we don't
+    -- simulate colonization (see project_coalition_api.md / colonization
+    -- packet sends 0 for every zone), so there are no station states to
+    -- track. Leaving this hardcoded is correct for our setup; gate when
+    -- and if a colonization simulation is added.
 
     local mapMask      = 0
-    local frontierMask = 8388607 -- All Maps Available
+    local frontierMask = 8388607 -- All Maps Available (intentional, see above)
     local playerBayld  = player:getCurrency('bayld')
 
     for maskPos, mapItem in ipairs(mapList) do

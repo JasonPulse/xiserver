@@ -2,29 +2,26 @@ import mariadb
 
 
 def migration_name():
-    return "Adjusting char_storage default satchel to size 0"
+    return "[disabled] char_storage satchel default to 0 (superseded by 050)"
 
 
 def check_preconditions(cur):
     return
 
 
+# This migration was originally from upstream LSB (commit 8eae83e2d5 —
+# "Tie initial satchel to OTP") and lowers the satchel column's DEFAULT
+# from 30 back to 0 so that the OTP-grant flow gates capacity.
+#
+# We keep locker/satchel/sack at DEFAULT 30 for new characters on this
+# private server (see sql/char_storage.sql header comment). Leaving the
+# upstream migration enabled would silently revert that intent on every
+# `dbtool update`, breaking new-character provisioning.
+#
+# Migration 050 supersedes this one and backfills existing characters.
 def needs_to_run(cur):
-    # check
-    cur.execute(
-        "show columns from char_storage where field = 'satchel' and `Default` = 30;"
-    )
-    if cur.fetchone():
-        return True
     return False
 
 
 def migrate(cur, db):
     pass
-    try:
-        cur.execute(
-            "ALTER TABLE char_storage MODIFY satchel tinyint(2) unsigned NOT NULL DEFAULT '0';"
-        )
-        db.commit()
-    except mariadb.Error as err:
-        print("Something went wrong: {}".format(err))
