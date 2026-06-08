@@ -33,3 +33,38 @@ xi.coalition.varNames =
     [xi.coalition.INVENTORS]    = 'Coalition_Inventors_Rank',
     [xi.coalition.MUMMERS]      = 'Coalition_Mummers_Rank',
 }
+
+xi.coalition.displayNames =
+{
+    [xi.coalition.PIONEERS]     = 'Pioneers',
+    [xi.coalition.PEACEKEEPERS] = 'Peacekeepers',
+    [xi.coalition.COURIERS]     = 'Couriers',
+    [xi.coalition.SCOUTS]       = 'Scouts',
+    [xi.coalition.INVENTORS]    = 'Inventors',
+    [xi.coalition.MUMMERS]      = 'Mummers',
+}
+
+-- Imprimatur cost to advance from rank N to rank N+1 (index = current rank).
+-- Approximates retail edification curve; tuned for our small-server pacing
+-- so Task_Delegator's daily 100-imprimatur trickle is meaningful but not free.
+xi.coalition.RANK_UP_COSTS =
+{
+    [1]  =   500,
+    [2]  =  1000,
+    [3]  =  2000,
+    [4]  =  3000,
+    [5]  =  5000,
+    [6]  =  7500,
+    [7]  = 10000,
+    [8]  = 12500,
+    [9]  = 15000,
+    [10] = 20000,
+    [11] = 25000,
+    [12] = 30000,
+    [13] = 40000,
+    [14] = 50000,
+}
+
+-- Optional GM override: per-player CharVar that pins edification to a single
+-- coalition id (1..6). When 0/unset the edifier auto-picks the lowest rank.
+xi.coalition.EDIFY_TARGET_VAR = 'Coalition_Edify_Target'

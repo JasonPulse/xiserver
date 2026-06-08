@@ -14,8 +14,6 @@
 -- For GM testing:
 --   !setvar Coalition_Pioneers_Rank 10
 -----------------------------------
-require('scripts/enum/coalition')
-
 xi = xi or {}
 xi.coalition = xi.coalition or {}
 
@@ -24,6 +22,7 @@ local function varFor(coalition)
     if not name then
         error(string.format('Unknown coalition id: %s', tostring(coalition)))
     end
+
     return name
 end
 
@@ -31,9 +30,11 @@ local function clampRank(rank)
     if rank < 0 then
         return 0
     end
+
     if rank > xi.coalition.MAX_RANK then
         return xi.coalition.MAX_RANK
     end
+
     return rank
 end
 
@@ -56,6 +57,7 @@ xi.coalition.getAllRanks = function(player)
     for coalition, _ in pairs(xi.coalition.varNames) do
         out[coalition] = xi.coalition.getRank(player, coalition)
     end
+
     return out
 end
 
@@ -92,7 +94,78 @@ xi.coalition.spendImprimaturs = function(player, amount)
     if xi.coalition.getImprimatursBalance(player) < amount then
         return false
     end
+
     player:delCurrency('imprimaturs', amount)
     xi.coalition.addImprimatursSpent(player, amount)
     return true
+end
+
+-- Returns (coalitionId, rank) for the coalition with the lowest non-zero
+-- rank (i.e. the next one to advance for an unbiased player). Ties broken
+-- by enum order so behavior is deterministic. Returns nil if the player
+-- is not yet registered in any coalition.
+xi.coalition.lowestRank = function(player)
+    local bestId, bestRank
+    for coalition = xi.coalition.PIONEERS, xi.coalition.MUMMERS do
+        local rank = xi.coalition.getRank(player, coalition)
+        if rank > 0 and (bestRank == nil or rank < bestRank) then
+            bestId   = coalition
+            bestRank = rank
+        end
+    end
+
+    return bestId, bestRank
+end
+
+-- Cost to advance the given coalition by one rank. nil at MAX_RANK.
+xi.coalition.rankUpCost = function(player, coalition)
+    local rank = xi.coalition.getRank(player, coalition)
+    return xi.coalition.RANK_UP_COSTS[rank]
+end
+
+-- Returns the coalition id the player has pinned via the EDIFY_TARGET_VAR
+-- CharVar (1..6), or nil if unset/invalid. Does NOT check whether the
+-- pinned coalition is at max rank — callers should report 'maxed' against
+-- the pin so the player sees an actionable message instead of silently
+-- switching to a different coalition.
+local function pinnedTarget(player)
+    local pinned = player:getCharVar(xi.coalition.EDIFY_TARGET_VAR)
+    if pinned >= xi.coalition.PIONEERS and pinned <= xi.coalition.MUMMERS then
+        return pinned
+    end
+
+    return nil
+end
+
+-- Edification: spend imprimaturs to advance one rank. Picks the player's
+-- pinned target if set, otherwise the lowest non-zero coalition. Returns:
+--   true,  coalition, newRank, cost          on success
+--   false, reason, coalition, cost
+-- where reason is one of: 'unregistered', 'maxed', 'insufficient'.
+xi.coalition.edify = function(player)
+    local target = pinnedTarget(player)
+    if not target then
+        local lowestId, lowestRank = xi.coalition.lowestRank(player)
+        if not lowestId then
+            return false, 'unregistered'
+        end
+
+        if lowestRank >= xi.coalition.MAX_RANK then
+            return false, 'maxed', lowestId
+        end
+
+        target = lowestId
+    end
+
+    local cost = xi.coalition.rankUpCost(player, target)
+    if cost == nil then
+        return false, 'maxed', target
+    end
+
+    if not xi.coalition.spendImprimaturs(player, cost) then
+        return false, 'insufficient', target, cost
+    end
+
+    xi.coalition.addRank(player, target, 1)
+    return true, target, xi.coalition.getRank(player, target), cost
 end

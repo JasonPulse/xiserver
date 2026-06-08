@@ -12,11 +12,11 @@ local ID = zones[xi.zone.EASTERN_ADOULIN]
 local entity = {}
 
 local cost          = 500
-local REQUIRED_RANK = 1 -- Peacekeepers; raise for tighter gating
+local requiredRank = 1 -- Peacekeepers; raise for tighter gating
 
 entity.onTrigger = function(player, npc)
-    if xi.coalition.getRank(player, xi.coalition.PEACEKEEPERS) < REQUIRED_RANK then
-        player:printToPlayer('You must be a Peacekeepers Coalition member of rank ' .. REQUIRED_RANK .. ' or higher.')
+    if xi.coalition.getRank(player, xi.coalition.PEACEKEEPERS) < requiredRank then
+        player:printToPlayer('You must be a Peacekeepers Coalition member of rank ' .. requiredRank .. ' or higher.')
         return
     end
 

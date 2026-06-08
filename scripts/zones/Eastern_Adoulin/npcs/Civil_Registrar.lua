@@ -23,6 +23,7 @@ local function alreadyRegistered(player)
             return true
         end
     end
+
     return false
 end
 

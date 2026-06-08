@@ -27,21 +27,21 @@
 
 namespace
 {
-    // Coalition rank field is 4 bits — clamp anything stored in CharVars
-    // to the legal packet range. Defaults to 0 if the CharVar is unset.
-    inline uint32_t readCoalitionRank(CCharEntity* PChar, const std::string& varName)
+// Coalition rank field is 4 bits — clamp anything stored in CharVars
+// to the legal packet range. Defaults to 0 if the CharVar is unset.
+inline uint32_t readCoalitionRank(CCharEntity* PChar, const std::string& varName)
+{
+    const auto raw = PChar->getCharVar(varName);
+    if (raw <= 0)
     {
-        const auto raw = PChar->getCharVar(varName);
-        if (raw <= 0)
-        {
-            return 0;
-        }
-        if (raw >= 15)
-        {
-            return 15;
-        }
-        return static_cast<uint32_t>(raw);
+        return 0;
     }
+    if (raw >= 15)
+    {
+        return 15;
+    }
+    return static_cast<uint32_t>(raw);
+}
 } // namespace
 
 // Coalition ranks and zone colonization rates come from CharVars; the
