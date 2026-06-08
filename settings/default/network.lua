@@ -37,6 +37,15 @@ xi.settings.network =
     HTTP_HOST   = 'localhost',
     HTTP_PORT   = 8088,
 
+    -- Map process HTTP server (always on — liveness/readiness probes for k8s).
+    -- Not exposed externally; intended for in-cluster probing.
+    MAP_HTTP_HOST                      = '0.0.0.0',
+    MAP_HTTP_PORT                      = 8089,
+    -- /healthz returns 503 if more than this many ms have passed since the
+    -- last main-loop tick. With kMainLoopInterval ~= 400ms, anything north
+    -- of a few seconds is a genuine hang.
+    MAP_HEALTHCHECK_STALE_THRESHOLD_MS = 10000,
+
     -- Central message server settings (ensure these are the same on both all map servers and the central (lobby) server
     ZMQ_IP   = '127.0.0.1',
     ZMQ_PORT = 54003,

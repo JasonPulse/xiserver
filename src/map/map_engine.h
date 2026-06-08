@@ -37,6 +37,7 @@
 class IPP;
 class MapNetworking;
 class MapStatistics;
+class MapHTTPServer;
 class CZone;
 
 struct MapConfig final
@@ -103,5 +104,6 @@ private:
     std::unique_ptr<MapStatistics> mapStatistics_;
     std::unique_ptr<MapNetworking> networking_;
     std::unique_ptr<Watchdog>      watchdog_;
+    std::unique_ptr<MapHTTPServer> httpServer_;
     MapConfig&                     engineConfig_;
 };

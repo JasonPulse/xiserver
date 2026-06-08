@@ -38,6 +38,7 @@
 
 #include "ability.h"
 #include "daily_system.h"
+#include "http_server.h"
 #include "ipc_client.h"
 #include "job_points.h"
 #include "latent_effect_container.h"
@@ -193,6 +194,11 @@ void MapEngine::gameLoop()
     if (watchdog_)
     {
         watchdog_->update();
+    }
+
+    if (httpServer_)
+    {
+        httpServer_->recordTick();
     }
 
     if (tickDiffTime > 0ms)
@@ -351,6 +357,9 @@ void MapEngine::do_init()
     {
         prepareWatchdog();
     }
+
+    httpServer_ = std::make_unique<MapHTTPServer>();
+    httpServer_->markReady();
 
 #ifdef TRACY_ENABLE
     ShowInfo("*** TRACY IS ENABLED ***");
