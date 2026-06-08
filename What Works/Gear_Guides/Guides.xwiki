@@ -1,0 +1,143 @@
+= 📖 FFXI Job Gear Guides =
+
+{{html clean="false"}}
+<style>
+.gt { width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14px; }
+.gt th { background:#2a3540; color:#fff; padding:10px 12px; text-align:left; border:1px solid #555; font-weight:600; }
+.gt td { padding:10px 12px; border:1px solid #3a3f48; vertical-align:top; }
+.gt tbody tr:nth-child(odd)  { background:#1a1d23; }
+.gt tbody tr:nth-child(even) { background:#22262d; }
+.gt tbody tr:hover { background:#2f3540; }
+.role-tank   { color:#f1c40f; font-weight:bold; }
+.role-melee  { color:#ff6b6b; font-weight:bold; }
+.role-ranged { color:#4ecdc4; font-weight:bold; }
+.role-heal   { color:#a8e6cf; font-weight:bold; }
+.role-buff   { color:#c5a3ff; font-weight:bold; }
+.role-mage   { color:#7fdbff; font-weight:bold; }
+.role-pet    { color:#ffb347; font-weight:bold; }
+.legend-box  { background:#1f2933; border-left:4px solid #f1c40f; padding:10px 14px; margin:12px 0 18px; border-radius:3px; }
+.job-link    { font-weight:600; font-size:15px; }
+</style>
+{{/html}}
+
+(% class="legend-box" %)
+**One guide per job — 22 total.** Each guide covers level 1 → endgame, organised by slot. Trust recommendations, every-slot picks, and an endgame cheat-sheet at the bottom. Items use **bg-wiki.com** links.
+
+(% class="legend-box" %)
+**Marker key:** (% style="color:#f1c40f" %)🏆 Best-in-slot(%%) · (% style="color:#7fdbff" %)⭐ Strong endgame(%%) · (% style="color:#b39ddb" %)🟣 Rare/Ex(%%) · (% style="color:#fff176" %)🟡 Rare(%%)
+
+----
+
+= 🛡️ Tanks =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Job</th><th>Role / Niche</th></tr></thead>
+<tbody>
+<tr><td class="role-tank"><a class="job-link" href="Paladin">Paladin</a></td><td>Sword + shield, divine cures, Sentinel/Cover/Flash. The classic tank — eats hits, holds hate, cures with MND</td></tr>
+<tr><td class="role-tank"><a class="job-link" href="Rune%20Fencer">Rune Fencer</a></td><td>Sword/GS hybrid tank. Runes for elemental damage + resistance. Phalanx, Vallation, Lunge magic, self-Refresh</td></tr>
+<tr><td class="role-tank"><a class="job-link" href="Ninja">Ninja</a></td><td>Evasion / Utsusemi tank or DPS. Dual wield, no self-cures — needs healer backup</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= ⚔️ Melee DPS =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Job</th><th>Role / Niche</th></tr></thead>
+<tbody>
+<tr><td class="role-melee"><a class="job-link" href="Warrior">Warrior</a></td><td>Great Axe / Axe / Sword. Berserk/Aggressor/Defender. Tank-or-DD flex, Steel Cyclone WS king</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Monk">Monk</a></td><td>Hand-to-Hand. Chakra / Counterstance / Focus. Self-cure via Chakra, Asuran Fists endgame</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Thief">Thief</a></td><td>Dagger. Sneak Attack + Trick Attack + Treasure Hunter. Positional burst DPS</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Dark%20Knight">Dark Knight</a></td><td>Scythe / GS. Stun / Last Resort / Souleater / Drain / Aspir. Glass-cannon DPS</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Samurai">Samurai</a></td><td>Great Katana. Hasso / Meditate / Third Eye. Store TP master — 5/6-hit builds</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Dragoon">Dragoon</a></td><td>Polearm + Wyvern pet. Jumps / High Jump / Spirit Surge. Penta Thrust / Stardiver burst</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Beastmaster">Beastmaster</a></td><td>Axe + charmed pet. Solo king. CHR-stacked charm gear, pet sink for any mob</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Blue%20Mage">Blue Mage</a></td><td>Sword + BLU spells. Melee/magic hybrid — Chain Affinity, Cannonball, Vorpal Blade</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Dancer">Dancer</a></td><td>Dagger + self-Waltzes/Steps/Samba. Self-sustaining DPS with no MP</td></tr>
+<tr><td class="role-melee"><a class="job-link" href="Puppetmaster">Puppetmaster</a></td><td>Hand-to-Hand + Automaton pet. Frame-based gameplay (Sharpshot/Stormwaker/Soulsoother/Spiritreaver/Valoredge)</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🏹 Ranged DPS =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Job</th><th>Role / Niche</th></tr></thead>
+<tbody>
+<tr><td class="role-ranged"><a class="job-link" href="Ranger">Ranger</a></td><td>Bow / Gun. Snapshot / Sharpshot / Barrage / Eagle Eye Shot. Pure ranged DPS</td></tr>
+<tr><td class="role-ranged"><a class="job-link" href="Corsair">Corsair</a></td><td>Gun + Phantom Rolls + Quick Draw. Ranged DD with party-buff utility</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 💚 Healer =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Job</th><th>Role / Niche</th></tr></thead>
+<tbody>
+<tr><td class="role-heal"><a class="job-link" href="White%20Mage">White Mage</a></td><td>Cures / Protect / Shell / Haste / full status removal. The healer — Cure Potency + MND + HMP</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🎵 Support / Buffer =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Job</th><th>Role / Niche</th></tr></thead>
+<tbody>
+<tr><td class="role-buff"><a class="job-link" href="Bard">Bard</a></td><td>String + Wind instruments. Marches/Madrigals/Ballads. Party Haste/Acc/MP</td></tr>
+<tr><td class="role-buff"><a class="job-link" href="Red%20Mage">Red Mage</a></td><td>Sword + magic. Haste/Refresh/Phalanx/Stoneskin/Convert. Enfeebling king</td></tr>
+<tr><td class="role-buff"><a class="job-link" href="Geomancer">Geomancer</a></td><td>Handbell + Luopan pet. Indi/Geo bubbles for buff/debuff/damage</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 🔮 Mages =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:160px;">Job</th><th>Role / Niche</th></tr></thead>
+<tbody>
+<tr><td class="role-mage"><a class="job-link" href="Black%20Mage">Black Mage</a></td><td>Staff + Elemental nukes. T4/T5 burst, Manafont, Elemental Seal</td></tr>
+<tr><td class="role-mage"><a class="job-link" href="Scholar">Scholar</a></td><td>Light/Dark Arts + Stratagems + Storms + Helix. Hybrid nuke/heal/enfeeble</td></tr>
+<tr><td class="role-pet"><a class="job-link" href="Summoner">Summoner</a></td><td>Avatars (Carbuncle/Ifrit/Garuda/etc.). Blood Pact DPS, perpetuation cost gearing</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+= 📋 What's in each guide =
+
+{{html clean="false"}}
+<table class="gt">
+<thead><tr><th style="width:200px;">Section</th><th>Contents</th></tr></thead>
+<tbody>
+<tr><td><strong>Trust Recommendations</strong></td><td>5-trust party tailored to that job — based on what gambits each trust actually casts. **Every job has a different ideal team.**</td></tr>
+<tr><td><strong>Weapons</strong></td><td>Full level 1 → 75/95/99 progression for every weapon type the job uses. Mythic / Relic / Empyrean called out</td></tr>
+<tr><td><strong>Armor (per slot)</strong></td><td>Head / Body / Hands / Legs / Feet — every slot, every level bracket, no gaps</td></tr>
+<tr><td><strong>Accessories</strong></td><td>Neck · Earrings · Rings · Back · Waist · Ammo</td></tr>
+<tr><td><strong>Endgame Cheat-Sheet</strong></td><td>Pre-built loadouts: TP Build, WS, Healing, Pet, Tank, MP-Recovered-While-Healing, etc. — whatever the job actually swaps between</td></tr>
+</tbody>
+</table>
+{{/html}}
+
+----
+
+(% class="legend-box" %)
+**Sources:** Gear data adapted from FFXIclopedia community guides (Eclipstic, Aislin, Ashmada, Andres, Alamoth, Mogul, Juso, Derableska) and BG-Wiki (Community Rune Fencer Guide, Compendium of Colure for Geomancer). Trust recommendations built from the actual gambits in our trust scripts.
