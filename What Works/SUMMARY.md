@@ -61,7 +61,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 - **Assault** — 11 of 50 scenarios (all on modern framework); 38 missing assaults need mob_spawn_points placement before scripts can be written
 - **SoA zones** — mobs exist via DB but minimal Lua scripts
 - **Ambuscade** — framework exists, monthly rotation table now defined (`xi.ambuscade.rotation` / `getCurrentRotation`), simplified CharVar-pin shop on Gorpa-Masorpa (16 starter items: Abdhaljs materials + Ambuscade Vouchers). Per-family mob spawning + difficulty event flow still unwired.
-- **Unity** — warps/shops work, no Wanted NMs
+- **Unity** — warps/shops work; Wanted NM weekly menu still stubbed but **endgame NM kills now grant Unity Accolades** (Geas Fete 25, WKR 50, Domain Invasion 10) via `xi.unity.grantWantedAccolades`. CAP_CURRENCY_ACCOLADES (99999) honored.
 
 ## What's Missing (major gaps)
 

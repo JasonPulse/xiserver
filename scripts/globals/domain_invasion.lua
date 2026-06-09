@@ -27,6 +27,8 @@
 -- when wiring per-zone IDs; we resolve via mob_spawn_points entity IDs at
 -- runtime instead.
 -----------------------------------
+require('scripts/globals/unity')
+-----------------------------------
 xi = xi or {}
 xi.domainInvasion = {}
 
@@ -45,6 +47,7 @@ local rotationVar     = 'DomainInvasion_RotationIndex'  -- ServerVariable: 0-bas
 local lastSpawnVar    = 'DomainInvasion_LastSpawnTime'  -- ServerVariable: last spawn UNIX timestamp
 
 local pointsPerKill     = 10  -- per-player base award; party scaling applied below
+local accoladeReward    = 10  -- Unity Wanted-NM bonus per kill
 local dailyCap          = 600 -- retail-style daily cap on domain_points_daily
 local cruorRangeYalms   = 50  -- "participated" radius for point distribution
 
@@ -76,6 +79,8 @@ xi.domainInvasion.grantPoints = function(mob, player)
                     member:printToPlayer(string.format('You earn %d Domain Invasion points.', clamped))
                 end
             end
+
+            xi.unity.grantWantedAccolades(member, accoladeReward)
         end
     end
 end

@@ -23,6 +23,8 @@
 -- bosses). The remaining ~60 Geas Fete NMs follow the same pattern — extend
 -- xi.geasFete.pops with `{ label, mobName, zoneId }` as needed.
 -----------------------------------
+require('scripts/globals/unity')
+-----------------------------------
 xi = xi or {}
 xi.geasFete = xi.geasFete or {}
 
@@ -105,6 +107,7 @@ xi.geasFete.pops =
 }
 
 local bayldReward      = 3000  -- per alliance member on kill
+local accoladeReward   = 25    -- Unity Wanted-NM bonus per kill
 local rewardRadius     = 100   -- yalms
 
 xi.geasFete.popBoss = function(player, kiId)
@@ -162,6 +165,7 @@ xi.geasFete.grantRewards = function(mob, player)
             member:addCurrency('bayld', bayldReward)
             member:setCharVar(defeatedVar, (member:getCharVar(defeatedVar) or 0) + 1)
             member:printToPlayer(string.format('You earn %d bayld for defeating %s.', bayldReward, mobName))
+            xi.unity.grantWantedAccolades(member, accoladeReward)
         end
     end
 end

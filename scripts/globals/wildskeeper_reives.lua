@@ -24,6 +24,8 @@
 -- Periodic auto-respawn is intentionally NOT included — WKRs are an
 -- on-demand fight, not a rotation. Players use a pop KI per attempt.
 -----------------------------------
+require('scripts/globals/unity')
+-----------------------------------
 xi = xi or {}
 xi.wildskeeperReives = xi.wildskeeperReives or {}
 
@@ -40,8 +42,9 @@ xi.wildskeeperReives.pops =
     [xi.ki.ANTI_GLACIATION_GEAR]        = { label = 'Kumhau',  mobName = 'Kumhau',  zoneId = xi.zone.KAMIHR_DRIFTS         },
 }
 
-local bayldReward = 5000 -- per alliance member on kill (retail varies; flat for our server)
-local rewardRadius = 100 -- yalms; Reive engagements are large
+local bayldReward    = 5000 -- per alliance member on kill (retail varies; flat for our server)
+local accoladeReward = 50   -- Unity Wanted-NM bonus per kill (Naakuals are top-tier)
+local rewardRadius   = 100  -- yalms; Reive engagements are large
 
 xi.wildskeeperReives.popBoss = function(player, kiId)
     if not player or not kiId then
@@ -98,6 +101,7 @@ xi.wildskeeperReives.grantRewards = function(mob, player)
             member:addCurrency('bayld', bayldReward)
             member:setCharVar(defeatedVar, (member:getCharVar(defeatedVar) or 0) + 1)
             member:printToPlayer(string.format('You earn %d bayld for defeating %s.', bayldReward, mobName))
+            xi.unity.grantWantedAccolades(member, accoladeReward)
         end
     end
 end
