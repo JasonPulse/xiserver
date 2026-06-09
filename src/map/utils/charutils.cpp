@@ -287,9 +287,9 @@ void CalculateStats(CCharEntity* PChar)
         sJobStat = sJobStat / 2;
     }
 
-    uint16 MeritBonus   = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_HP, PChar);
+    uint16 MeritBonus = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_HP, PChar);
     // Master Level grants +5 HP per level (retail rate). No effect at ML 0.
-    int16  MasterHPBonus = static_cast<int16>(PChar->GetMasterLevel()) * 5;
+    int16 MasterHPBonus = static_cast<int16>(PChar->GetMasterLevel()) * 5;
     PChar->health.maxhp = (int16)(raceStat + jobStat + bonusStat + sJobStat + MeritBonus + MasterHPBonus);
 
     // The beginning of the MP
@@ -332,9 +332,9 @@ void CalculateStats(CCharEntity* PChar)
         sJobStat = (grade::GetMPScale(grade, 0) + grade::GetMPScale(grade, scaleTo60Column) * (slvl - 1)) / settings::get<float>("map.SJ_MP_DIVISOR");
     }
 
-    MeritBonus          = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_MP, PChar);
+    MeritBonus = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_MP, PChar);
     // Master Level grants +5 MP per level (retail rate). No effect at ML 0.
-    int16  MasterMPBonus = static_cast<int16>(PChar->GetMasterLevel()) * 5;
+    int16 MasterMPBonus = static_cast<int16>(PChar->GetMasterLevel()) * 5;
     PChar->health.maxmp = (int16)(raceStat + jobStat + sJobStat + MeritBonus + MasterMPBonus); // MP calculation result
 
     // Start calculating Stats

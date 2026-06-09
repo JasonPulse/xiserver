@@ -56,34 +56,28 @@ xi.domainInvasion.grantPoints = function(mob, player)
         return
     end
 
-    local mobLevel = mob:GetMLevel() or 99
+    local mobLevel = mob:getMainLvl() or 99
+    local alliance = player:getAlliance() or { player }
 
-    player:ForAlliance(function(member)
+    for _, member in pairs(alliance) do
         if
-            not member or
-            member:getZoneID() ~= mob:getZoneID() or
-            member:checkDistance(mob) > cruorRangeYalms
+            member and
+            member:getZoneID() == mob:getZoneID() and
+            member:checkDistance(mob) <= cruorRangeYalms
         then
-            return
+            local award       = pointsPerKill + math.max(0, mobLevel - 99)
+            local dailyEarned = member:getCurrency('domain_points_daily')
+
+            if dailyEarned < dailyCap then
+                local clamped = math.min(award, dailyCap - dailyEarned)
+                if clamped > 0 then
+                    member:addCurrency('domain_points', clamped)
+                    member:addCurrency('domain_points_daily', clamped)
+                    member:printToPlayer(string.format('You earn %d Domain Invasion points.', clamped))
+                end
+            end
         end
-
-        local pcMember = member
-        local award    = pointsPerKill + math.max(0, mobLevel - 99)
-
-        local dailyEarned = pcMember:getCurrency('domain_points_daily')
-        if dailyEarned >= dailyCap then
-            return
-        end
-
-        local clamped = math.min(award, dailyCap - dailyEarned)
-        if clamped <= 0 then
-            return
-        end
-
-        pcMember:addCurrency('domain_points', clamped)
-        pcMember:addCurrency('domain_points_daily', clamped)
-        pcMember:printToPlayer(string.format('You earn %d Domain Invasion points.', clamped))
-    end)
+    end
 end
 
 -- Spawn the next rotation NM. Cycles through xi.domainInvasion.rotation via

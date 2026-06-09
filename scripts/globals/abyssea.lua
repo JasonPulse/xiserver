@@ -1115,10 +1115,11 @@ xi.abyssea.grantAtmaDrop = function(mob, player, atmaKi)
         return
     end
 
-    if player.ForAlliance then
-        player:ForAlliance(function(member)
+    local alliance = player:getAlliance()
+    if alliance and #alliance > 0 then
+        for _, member in pairs(alliance) do
             tryGrant(member)
-        end)
+        end
     else
         tryGrant(player)
     end

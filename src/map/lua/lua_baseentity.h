@@ -451,18 +451,18 @@ public:
     void unseenKeyItem(KeyItem keyItemID) const; // Attempt to remove the keyitem from the seen key item collection, only works on logout
 
     // Player Points
-    void  addExp(uint32 exp);
-    void  addCapacityPoints(uint32 capacity);
-    void  delExp(uint32 exp);
+    void addExp(uint32 exp);
+    void addCapacityPoints(uint32 capacity);
+    void delExp(uint32 exp);
 
     // Master Levels (post-99 progression)
     uint8  getMasterLevel();
     void   setMasterLevel(uint8 level);
     uint32 getExemplarPoints();
     void   addExemplarPoints(uint32 amount);
-    int32 getMerit(uint16 merit);
-    uint8 getMeritCount();
-    void  setMerits(uint8 numPoints);
+    int32  getMerit(uint16 merit);
+    uint8  getMeritCount();
+    void   setMerits(uint8 numPoints);
 
     uint16 getSpentJobPoints();
     uint8  getJobPointLevel(uint16 jpType);

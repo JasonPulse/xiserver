@@ -254,7 +254,7 @@ void CJobPoints::AddExemplarPoints(uint32 amount)
         return;
     }
 
-    uint8        masterLevel = m_PChar->GetMasterLevel();
+    uint8 masterLevel = m_PChar->GetMasterLevel();
     if (masterLevel >= maxMasterLevel)
     {
         // already capped — nothing to do.

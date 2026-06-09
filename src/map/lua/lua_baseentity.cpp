@@ -9060,8 +9060,8 @@ void CLuaBaseEntity::setMasterLevel(uint8 level)
         return;
     }
 
-    auto*       PChar  = static_cast<CCharEntity*>(m_PBaseEntity);
-    const uint8 maxML  = settings::get<uint8>("main.MAX_MASTER_LEVEL");
+    auto*       PChar = static_cast<CCharEntity*>(m_PBaseEntity);
+    const uint8 maxML = settings::get<uint8>("main.MAX_MASTER_LEVEL");
     PChar->SetMasterLevel(std::min<uint8>(level, maxML));
     PChar->SetExemplarPoints(0);
     charutils::CalculateStats(PChar);
@@ -19995,8 +19995,8 @@ void CLuaBaseEntity::Register()
     SOL_REGISTER("getJobPointLevel", CLuaBaseEntity::getJobPointLevel);
     SOL_REGISTER("addCapacityPoints", CLuaBaseEntity::addCapacityPoints);
     SOL_REGISTER("setCapacityPoints", CLuaBaseEntity::setCapacityPoints);
-    SOL_REGISTER("getMasterLevel",    CLuaBaseEntity::getMasterLevel);
-    SOL_REGISTER("setMasterLevel",    CLuaBaseEntity::setMasterLevel);
+    SOL_REGISTER("getMasterLevel", CLuaBaseEntity::getMasterLevel);
+    SOL_REGISTER("setMasterLevel", CLuaBaseEntity::setMasterLevel);
     SOL_REGISTER("getExemplarPoints", CLuaBaseEntity::getExemplarPoints);
     SOL_REGISTER("addExemplarPoints", CLuaBaseEntity::addExemplarPoints);
     SOL_REGISTER("setJobPoints", CLuaBaseEntity::setJobPoints);
