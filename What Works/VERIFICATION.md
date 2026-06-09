@@ -118,21 +118,26 @@ The AF audit revealed that agents were checking `scripts/quests/` files only, mi
 
 | Area | Total | Implemented | Rate | Previous (wrong) |
 |------|-------|-------------|------|-----------------|
-| San d'Oria | 82 | 77 | 93.9% | 93.9% (same) |
-| Bastok | 93 | 80 | 86.0% | 83.0% |
-| Windurst | 90 | 84 | 93.3% | 92.4% |
-| Jeuno | 145 | 115 | 79.3% | 71.4% |
-| Other Areas | 67 | 52 | 77.6% | 42.3% |
-| Outlands | 56 | 45 | 80.4% | 51.1% |
-| Aht Urhgan | 72 | 50 | 69.4% | 61.3% |
-| Crystal War | 95 | 37 | 38.9% | 30.6% |
-| Abyssea | 192 | 49 | 25.5% | 31.6% |
-| Adoulin | 97 | 18 | 18.6% | 14.6% |
+| San d'Oria | 82 | 82 | 100% | 93.9% |
+| Bastok | 93 | 93 | 100% | 83.0% |
+| Windurst | 90 | 86 | 95.6% | 92.4% |
+| Jeuno | 145 | 145 | 100% | 71.4% |
+| Other Areas | 67 | 67 | 100% | 42.3% |
+| Outlands | 56 | 48 | 85.7% | 51.1% |
+| Aht Urhgan | 72 | 72 | 100% | 61.3% |
+| Crystal War | 95 | 80 | 84.2% | 30.6% |
+| Abyssea | 192 | 68 | 35.4% | 31.6% |
+| Adoulin | 97 | 28 | 28.9% | 14.6% |
 | Coalition | 95 | 0 | 0.0% | 0.0% |
-| **TOTAL** | **1,084** | **607** | **56.0%** | was 54.1% |
+| **TOTAL** | **1,084** | **769** | **70.9%** | was 54.1% |
 
-Note: Base game nations + Outlands are much healthier than originally reported (77-94%).
-The gaps are in Abyssea (25.5%), Adoulin (18.6%), and Coalition (0%).
+> **Reconciled 2026-06-09:** Many "Implemented" cells include simplified
+> auto-complete scripts (4-player server policy) — quest log clears but the
+> retail mechanics (Campaign, Voidwatch, fame grinds) may be skipped. Adoulin
+> Coalition rank API now works (xi.coalition), so the 0/95 figure is about
+> the **77 repeatable rank-up quest scripts**, not the system itself.
+
+The remaining gaps are in Abyssea (35.4%), Adoulin (28.9%), and Coalition repeatable-quest scripts (0%).
 
 ## Corrected AF Status
 

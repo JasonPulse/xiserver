@@ -25,7 +25,7 @@ New agent? Read these files in order:
 - [x] 00_core/combat.md — All 15 subsystems WORKS. 208 WS, 342 abilities, 588 effects (2026-03-27)
 - [x] 00_core/transport.md — All 16 transport methods WORKS. No blockers (2026-03-27)
 - [x] 00_core/trusts.md — 120 scripts, only 49 have AI gambits. 71 auto-attack only (2026-03-27)
-- [x] 00_core/mog_house.md — Mog Garden STUB, Mog Sack 0 slots, 9/12 systems work (2026-03-27)
+- [x] 00_core/mog_house.md — Mog Garden STUB, Mog Sack 0 slots, 9/12 systems work (2026-03-27) — RECONCILED 2026-06-09: 11/12 systems work (Mog Sack fixed via migration 050, Festive Moogle in 3 zones); only Mog Garden remains stub
 - [x] 00_core/jobs/base_jobs.md — All 6 base jobs WORKS, SP1/SP2 complete (2026-03-27)
 - [x] 00_core/jobs/advanced_jobs.md — All 9 unlock quests work, PLD SP2 (Guardian) MISSING (2026-03-27)
 - [x] 00_core/jobs/expansion_jobs.md — 7 jobs, RUN/GEO PARTIAL (Adoulin access needs retest, GEO missing 4 abilities) (2026-03-27)
@@ -64,7 +64,7 @@ New agent? Read these files in order:
 - [x] phase2/base_game/quests/windurst_quests.md — 85/92 (92.4%), Nothing Matters prereq gap (2026-03-28)
 - [x] phase2/base_game/quests/jeuno_quests.md — 100/140 (71.4%), all critical present (2026-03-28)
 - [x] phase2/zilart/missions_detailed.md — All 17 ZM verified step-by-step, clean (2026-03-28)
-- [x] phase2/base_game/quests/af_armor_all_jobs.md — 11 WORKS, 8 PARTIAL, 3 MISSING (PUP/RUN/GEO) (2026-03-28)
+- [x] phase2/base_game/quests/af_armor_all_jobs.md — 11 WORKS, 8 PARTIAL, 3 MISSING (PUP/RUN/GEO) (2026-03-28) — RECONCILED 2026-06-09: 21 WORKS, 1 PARTIAL (SCH Mortarboard stub), 0 MISSING; PUP/RUN/GEO completed in trust+AF overhaul (2026-04-02 / 2026-04-20)
 - [x] phase2/cop/missions_detailed.md — All 33 COP verified step-by-step, clean (2026-03-28)
 - [x] phase2/toau/missions_detailed.md — All 48 ToAU verified, fully completable (2026-03-28)
 - [x] phase2/wotg/missions_detailed.md — 41 WORKS, 6 stub instances, 3 missing battlefields (2026-03-28)
@@ -75,7 +75,7 @@ New agent? Read these files in order:
 - [x] phase2/base_game/npcs/vendors_and_currency.md — Sparks/Conquest/Cruor WORKS, Ambuscade STUB, DI vendor works but no battles (2026-03-28)
 - [x] phase2/base_game/crafting/crafting_system.md — All 8 crafts WORKS, 4389 recipes, fishing disabled by default (2026-03-28)
 - [x] phase2/base_game/nms/nm_systems.md — NMs/drops WORKS, pre-RMT drops not enabled, VEmperor droplist bug FIXED (2026-04-20) (2026-03-28)
-- [x] phase2/base_game/npcs/misc_systems.md — Signet/Sanction/Fame/LS WORKS, Ionis STUB, AH empty (2026-03-28)
+- [x] phase2/base_game/npcs/misc_systems.md — Signet/Sanction/Fame/LS WORKS, Ionis WORKS (Quiri-Aliri vendor in EA wired 2026-05-03), AH empty (2026-03-28)
 
 ---
 
@@ -84,7 +84,7 @@ New agent? Read these files in order:
 - [x] phase2/base_game/zones/battlefield_access.md — 146 battlefields work, Limbus BROKEN, Einherjar FIXED (2026-03-28)
 - [x] phase2/base_game/crafting/crafting_system.md — All 8 crafts WORKS, 4389 recipes (2026-03-28)
 - [x] phase2/base_game/nms/nm_systems.md — NMs/drops WORKS, pre-RMT module FIXED (2026-03-28)
-- [x] phase2/base_game/npcs/misc_systems.md — Signet/Sanction/Fame/LS WORKS, Ionis STUB, AH empty (2026-03-28)
+- [x] phase2/base_game/npcs/misc_systems.md — Signet/Sanction/Fame/LS WORKS, Ionis WORKS (Quiri-Aliri vendor in EA wired 2026-05-03), AH empty (2026-03-28)
 
 - [x] phase2/base_game/quests/expansion_quests.md — ToAU 61.3%, WotG 30.6%, Adoulin 14.6% (2026-03-28)
 - [x] phase2/base_game/nms/treasure_chests.md — Chests/coffers/caskets/pyxis all WORKS (2026-03-28)
@@ -112,7 +112,7 @@ New agent? Read these files in order:
 
 - [x] phase2/base_game/quests/adoulin_quests_deep.md — 14/103, HELM blocks Stone's Throw, 0/77 coalitions (2026-03-28)
 - [x] phase2/base_game/quests/outlands_quests_deep.md — 24 scripts, The_Missing_Piece softlock bug (2026-03-28) — softlock FIXED in commit 2f056e99b9
-- [x] phase2/base_game/quests/abyssea_quests_deep.md — 5/9 maw quests can't complete, Conflux CSID bug (2026-03-28)
+- [x] phase2/base_game/quests/abyssea_quests_deep.md — 5/9 maw quests can't complete, Conflux CSID bug (2026-03-28) — RECONCILED 2026-06-09: all 9 maw quests now have scripts (commit 7dd032fc23); Conflux CSID bug FIXED 2026-06-09 (#08 was 2138, now 2139)
 - [x] phase2/base_game/gear/expansion_mission_rewards.md — 27/40 correct, Balrahn's Ring -Enmity missing, 6 SoA backs no mods (2026-03-28)
 
 - [x] phase2/base_game/quests/quest_flag_dependencies.md — All 7 chains clean, no broken flags (2026-03-28)
@@ -183,6 +183,7 @@ Track cross-cutting issues here so they don't get lost:
 - **Adoulin quests 19.2% coverage** -- lowest of any area (from other areas)
 - ~~**Adoulin Coalitions 0/77**~~ -- API SHIPPED 2026-05-03, gameplay loop SHIPPED 2026-05-03 to 2026-06-08: `xi.coalition.{getRank,setRank,addRank,spendImprimaturs,edify}` API + COLONIZATION packet wired; Civil_Registrar (registration), Task_Delegator (daily imprimaturs + edification rank-up), 5 Bayld vendors gated. 77 individual repeatable quest scripts still absent but the *coalition system* is no longer "stuck at 0".
 - ~~**MapHTTPServer hangs xi_test**~~ -- FIXED (2026-06-09): MapHTTPServer construction now gated on `!isTestServer` in map_engine.cpp:363. Was causing CI test timeouts (6-hour kills) because httplib::listen() held a thread that blocked shutdown.
+- ~~**Master Levels MISSING**~~ -- IMPLEMENTED (2026-06-09): `master_level` + `exemplar_points` columns in char_stats (migration 051); EP accrues from CP overflow when JP cap is hit; +5 HP, +5 MP, +1 to each base stat per ML in CalculateStats; `/check` packet's `mlvl`/`mflags` fields populated. Lua API: `player:{get,set}MasterLevel()`, `player:{get,add}ExemplarPoints()`. Settings: `MAX_MASTER_LEVEL` (default 50), `EXEMPLAR_RATE`, `EXEMPLAR_PER_LEVEL` (default 30000). UI display depends on client version — stat bonuses apply regardless.
 
 ---
 

@@ -401,6 +401,10 @@ public:
     uint32 GetCapacityPoints();              // Get Capacity Points for Character's Current Job
     void   SetCapacityPoints(uint16 amount); // Set Capacity Points for Character's Current Job, does not handle JP increase!
 
+    // Feed excess capacity-point overflow into the player's Exemplar Points pool;
+    // grants Master Level rank-ups when EP crosses settings.main.EXEMPLAR_PER_LEVEL.
+    void AddExemplarPoints(uint32 amount);
+
     // Returns the level of a given job point type. Will return 0 if the type doesn't match the
     // player's main job or if their main job is not 99
     uint8 GetJobPointValue(JOBPOINT_TYPE jpType);

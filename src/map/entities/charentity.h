@@ -470,6 +470,33 @@ public:
     std::unique_ptr<CJobPoints>   PJobPoints;
     bool                          MeritMode;
 
+    // Master Levels progression (post-99 endgame). Earned once a job is at
+    // JP cap; 1 ML per `settings.main.EXEMPLAR_PER_LEVEL` exemplar points,
+    // capped at `settings.main.MAX_MASTER_LEVEL`. Bonus stats applied in
+    // charutils::CalculateStats(). See CCharEntity::GetMasterLevel().
+    uint8  m_masterLevel    = 0;
+    uint32 m_exemplarPoints = 0;
+
+    uint8 GetMasterLevel() const
+    {
+        return m_masterLevel;
+    }
+
+    void SetMasterLevel(uint8 level)
+    {
+        m_masterLevel = level;
+    }
+
+    uint32 GetExemplarPoints() const
+    {
+        return m_exemplarPoints;
+    }
+
+    void SetExemplarPoints(uint32 points)
+    {
+        m_exemplarPoints = points;
+    }
+
     CLatentEffectContainer* PLatentEffectContainer;
     bool                    retriggerLatents; // used to retrigger all latent effects if some event requires them to be retriggered
 

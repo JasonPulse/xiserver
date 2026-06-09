@@ -21,6 +21,7 @@
 
 #include "0x0c9_equip_inspect_general.h"
 
+#include "common/settings.h"
 #include "entities/charentity.h"
 #include "items/item_linkshell.h"
 
@@ -47,10 +48,14 @@ GP_SERV_COMMAND_EQUIP_INSPECT::GENERAL::GENERAL(const CCharEntity* PChar, const 
         packet.lvl[0] = PTarget->GetMLevel();
         packet.lvl[1] = PTarget->GetSLevel();
 
-        // TODO: Master levels
-        packet.mjob   = PTarget->GetMJob(); // This is sent even if the job isnt mastered
-        packet.mlvl   = 0;                  // The checked entities master job level.
-        packet.mflags = 0;                  // 0x01: Leveling, 0x02: Capped
+        // Master Levels: populate from the target's tracked ML. Client may or
+        // may not render this depending on version; the stat bonuses still
+        // apply server-side regardless of UI display.
+        packet.mjob       = PTarget->GetMJob(); // This is sent even if the job isnt mastered
+        const uint8 maxML = settings::get<uint8>("main.MAX_MASTER_LEVEL");
+        packet.mlvl       = PTarget->GetMasterLevel();
+        // 0x01: actively earning (below cap), 0x02: capped.
+        packet.mflags = packet.mlvl >= maxML ? 0x02 : (packet.mlvl > 0 ? 0x01 : 0x00);
     }
 
     // TODO: Ballista info

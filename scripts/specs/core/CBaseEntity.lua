@@ -1896,6 +1896,26 @@ end
 function CBaseEntity:addCapacityPoints(capacity)
 end
 
+---@nodiscard
+---@return integer
+function CBaseEntity:getMasterLevel()
+end
+
+---@param level integer
+---@return nil
+function CBaseEntity:setMasterLevel(level)
+end
+
+---@nodiscard
+---@return integer
+function CBaseEntity:getExemplarPoints()
+end
+
+---@param amount integer
+---@return nil
+function CBaseEntity:addExemplarPoints(amount)
+end
+
 ---@param exp integer
 ---@return nil
 function CBaseEntity:delExp(exp)

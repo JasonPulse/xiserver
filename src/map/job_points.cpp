@@ -204,10 +204,15 @@ bool CJobPoints::AddCapacityPoints(uint16 amount)
 
     if (adjustedCapacity >= 30000)
     {
-        // check if player has reached cap
+        // check if player has reached cap — at JP cap (500), excess capacity
+        // points feed Exemplar Points (Master Level XP) instead of being
+        // discarded. Master Levels themselves are capped server-side at
+        // settings.main.MAX_MASTER_LEVEL; once that's hit the excess is dropped.
         if (currentJobPoints == 500)
         {
+            const uint32 excess = adjustedCapacity - 30000 + 1;
             this->SetCapacityPoints(30000 - 1);
+            this->AddExemplarPoints(excess);
             return false;
         }
 
@@ -227,6 +232,57 @@ bool CJobPoints::AddCapacityPoints(uint16 amount)
     }
 
     return false;
+}
+
+// Feed `amount` Exemplar Points into the player's ML pool, awarding +1 Master
+// Level for every EXEMPLAR_PER_LEVEL accumulated, up to MAX_MASTER_LEVEL.
+// Excess EP past the cap is discarded.
+void CJobPoints::AddExemplarPoints(uint32 amount)
+{
+    const float  rate           = settings::get<float>("main.EXEMPLAR_RATE");
+    const uint32 perLevel       = settings::get<uint32>("main.EXEMPLAR_PER_LEVEL");
+    const uint8  maxMasterLevel = settings::get<uint8>("main.MAX_MASTER_LEVEL");
+
+    if (rate <= 0.0f || perLevel == 0 || maxMasterLevel == 0)
+    {
+        return;
+    }
+
+    const uint32 scaled = static_cast<uint32>(amount * rate);
+    if (scaled == 0)
+    {
+        return;
+    }
+
+    uint8        masterLevel = m_PChar->GetMasterLevel();
+    if (masterLevel >= maxMasterLevel)
+    {
+        // already capped — nothing to do.
+        m_PChar->SetExemplarPoints(0);
+        return;
+    }
+
+    uint64 totalPoints = static_cast<uint64>(m_PChar->GetExemplarPoints()) + scaled;
+    while (totalPoints >= perLevel && masterLevel < maxMasterLevel)
+    {
+        totalPoints -= perLevel;
+        masterLevel += 1;
+    }
+
+    if (masterLevel >= maxMasterLevel)
+    {
+        m_PChar->SetMasterLevel(maxMasterLevel);
+        m_PChar->SetExemplarPoints(0);
+    }
+    else
+    {
+        m_PChar->SetMasterLevel(masterLevel);
+        m_PChar->SetExemplarPoints(static_cast<uint32>(totalPoints));
+    }
+
+    // Stats need to be recomputed so the new ML bonus shows up immediately.
+    charutils::CalculateStats(m_PChar);
+    m_PChar->UpdateHealth();
 }
 
 uint32 CJobPoints::GetCapacityPoints()
