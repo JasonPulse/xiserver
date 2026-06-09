@@ -1,12 +1,17 @@
 -----------------------------------
 -- Seekers of Adoulin Helpers
 -----------------------------------
+require('scripts/globals/coalition')
+
 xi = xi or {}
 xi.soa = xi.soa or {}
 xi.soa.helpers = xi.soa.helpers or {}
 
+-- SOA missions gate progression behind cumulative imprimatur spend
+-- (e.g. 1-6 = 10, 1-8 = 20, 2-7-3 = 30). The counter is tracked by
+-- xi.coalition.spendImprimaturs / addImprimatursSpent.
 xi.soa.helpers.imprimaturGate = function(player, gateAmount)
-    return true
+    return xi.coalition.getImprimatursSpent(player) >= gateAmount
 end
 
 -- Helper Functions for Mission 3-4 and 3-5 Minigame

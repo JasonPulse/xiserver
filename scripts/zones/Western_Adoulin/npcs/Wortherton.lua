@@ -4,14 +4,22 @@
 -- Inventors Coalition crafting ring vendor
 -- !pos 91 -0.651 -78 256
 -----------------------------------
+require('scripts/globals/coalition')
+-----------------------------------
 local ID = zones[xi.zone.WESTERN_ADOULIN]
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
-local cost = 20000
+local cost          = 20000
+local requiredRank = 1 -- Inventors; raise for tighter gating
 
 entity.onTrigger = function(player, npc)
+    if xi.coalition.getRank(player, xi.coalition.INVENTORS) < requiredRank then
+        player:printToPlayer('You must be an Inventors Coalition member of rank ' .. requiredRank .. ' or higher.')
+        return
+    end
+
     player:startEvent(7593, 0, cost, 0, player:getCurrency('bayld'))
 end
 

@@ -68,6 +68,8 @@ set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/grades.h
     ${CMAKE_CURRENT_SOURCE_DIR}/guild.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/guild.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/http_server.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/http_server.h
     ${CMAKE_CURRENT_SOURCE_DIR}/instance_loader.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/instance_loader.h
     ${CMAKE_CURRENT_SOURCE_DIR}/instance.cpp

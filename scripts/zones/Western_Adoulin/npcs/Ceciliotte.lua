@@ -4,14 +4,22 @@
 -- Mog Garden seed vendor (Inventors 2nd Floor)
 -- !pos 82 -0.150 -45 256
 -----------------------------------
+require('scripts/globals/coalition')
+-----------------------------------
 local ID = zones[xi.zone.WESTERN_ADOULIN]
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
-local cost = 270
+local cost          = 270
+local requiredRank = 1 -- Inventors; raise for tighter gating
 
 entity.onTrigger = function(player, npc)
+    if xi.coalition.getRank(player, xi.coalition.INVENTORS) < requiredRank then
+        player:printToPlayer('You must be an Inventors Coalition member of rank ' .. requiredRank .. ' or higher.')
+        return
+    end
+
     player:startEvent(7594, 0, cost, 0, player:getCurrency('bayld'))
 end
 

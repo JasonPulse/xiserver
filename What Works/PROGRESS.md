@@ -218,7 +218,7 @@ Items below are **code-complete or research-complete** but need live-game testin
 - [ ] **ROV 3-2 The Brewing Storm** — confirm 3 Perfervid Naraka spawn in Reisenjima (pool 5378, 11 spawn points, 180s respawn)
 - [ ] **ROV 3-22 From West to East** — confirm 11 Obstreperous Panopt spawn in Reisenjima (pool 5367, 32 spawn points, 180s respawn)
 - [ ] **Unity Leader (Sylvie) objectives** — capture any failing ROE IDs in ROE_CAPTURE.md § Unity Leader
-- [ ] **Existing char Mog Sack fix** — run `UPDATE char_storage SET locker=GREATEST(locker,30), satchel=GREATEST(satchel,30), sack=GREATEST(sack,30);` on production DB (defaults already patched for new chars)
+- [x] **Existing char Mog Sack fix** — handled by `tools/migrations/050_char_storage_default_to_30.py`; runs on next `dbtool update`. Also disables upstream migration 049 which was silently reverting our DEFAULT 30 on every dbtool run (so brand-new chars were being created with 0 capacity).
 
 ### Still-stubbed boss battles (need implementation + test)
 

@@ -4,14 +4,22 @@
 -- Sells Critical Chop key item for 20000 bayld (Inventors Coalition)
 -- !pos -90 3.349 5 256
 -----------------------------------
+require('scripts/globals/coalition')
+-----------------------------------
 local ID = zones[xi.zone.WESTERN_ADOULIN]
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
-local cost = 20000
+local cost          = 20000
+local requiredRank = 1 -- Inventors; raise for tighter gating
 
 entity.onTrigger = function(player, npc)
+    if xi.coalition.getRank(player, xi.coalition.INVENTORS) < requiredRank then
+        player:printToPlayer('You must be an Inventors Coalition member of rank ' .. requiredRank .. ' or higher.')
+        return
+    end
+
     if player:hasKeyItem(xi.ki.CRITICAL_CHOP) then
         player:startEvent(7573, 1, cost, 0, player:getCurrency('bayld'))
     else

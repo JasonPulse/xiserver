@@ -4,14 +4,22 @@
 -- Peacekeepers Coalition gear vendor
 -- !pos -94 -0.650 17 257
 -----------------------------------
+require('scripts/globals/coalition')
+-----------------------------------
 local ID = zones[xi.zone.EASTERN_ADOULIN]
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
-local cost = 505
+local cost          = 505
+local requiredRank = 1 -- Peacekeepers; raise for tighter gating
 
 entity.onTrigger = function(player, npc)
+    if xi.coalition.getRank(player, xi.coalition.PEACEKEEPERS) < requiredRank then
+        player:printToPlayer('You must be a Peacekeepers Coalition member of rank ' .. requiredRank .. ' or higher.')
+        return
+    end
+
     player:startEvent(7574, 0, cost, 0, player:getCurrency('bayld'))
 end
 

@@ -22,9 +22,31 @@
 #include "0x071_influence_colonization.h"
 
 #include "0x071_influence.h"
+#include "entities/charentity.h"
 #include "utils/charutils.h"
 
-// TODO: Not implemented but you just need to plug the values!
+namespace
+{
+// Coalition rank field is 4 bits — clamp anything stored in CharVars
+// to the legal packet range. Defaults to 0 if the CharVar is unset.
+inline uint32_t readCoalitionRank(CCharEntity* PChar, const std::string& varName)
+{
+    const auto raw = PChar->getCharVar(varName);
+    if (raw <= 0)
+    {
+        return 0;
+    }
+    if (raw >= 15)
+    {
+        return 15;
+    }
+    return static_cast<uint32_t>(raw);
+}
+} // namespace
+
+// Coalition ranks and zone colonization rates come from CharVars; the
+// Lua-side API lives in scripts/globals/coalition.lua. Zone colonization
+// state isn't yet tracked per-server, so those stay 0.
 GP_SERV_COMMAND_INFLUENCE::COLONIZATION::COLONIZATION(CCharEntity* PChar)
 {
     auto& packet = this->data();
@@ -34,12 +56,12 @@ GP_SERV_COMMAND_INFLUENCE::COLONIZATION::COLONIZATION(CCharEntity* PChar)
     packet.Bayld  = charutils::GetPoints(PChar, "bayld");
 
     packet.Ranks = {
-        .Pioneers     = 1,
-        .Peacekeepers = 1,
-        .Couriers     = 1,
-        .Scouts       = 1,
-        .Inventors    = 1,
-        .Mummers      = 1,
+        .Pioneers     = readCoalitionRank(PChar, "Coalition_Pioneers_Rank"),
+        .Peacekeepers = readCoalitionRank(PChar, "Coalition_Peacekeepers_Rank"),
+        .Couriers     = readCoalitionRank(PChar, "Coalition_Couriers_Rank"),
+        .Scouts       = readCoalitionRank(PChar, "Coalition_Scouts_Rank"),
+        .Inventors    = readCoalitionRank(PChar, "Coalition_Inventors_Rank"),
+        .Mummers      = readCoalitionRank(PChar, "Coalition_Mummers_Rank"),
     };
 
     packet.Zones = {
