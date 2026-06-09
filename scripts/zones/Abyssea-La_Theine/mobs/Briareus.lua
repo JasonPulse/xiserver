@@ -61,6 +61,7 @@ end
 
 entity.onMobDeath = function(mob, player, optParams)
     player:addTitle(xi.title.BRIAREUS_FELLER)
+    xi.abyssea.grantAtmaDrop(mob, player, xi.ki.ATMA_OF_THE_STOUT_ARM)
 end
 
 return entity

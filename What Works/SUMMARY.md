@@ -60,7 +60,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 - **WotG missions** — ~8 need battlefield wiring
 - **Assault** — 11 of 50 scenarios (all on modern framework); 38 missing assaults need mob_spawn_points placement before scripts can be written
 - **SoA zones** — mobs exist via DB but minimal Lua scripts
-- **Ambuscade** — framework exists, no monthly rotation
+- **Ambuscade** — framework exists, monthly rotation table now defined (`xi.ambuscade.rotation` / `getCurrentRotation`), simplified CharVar-pin shop on Gorpa-Masorpa (16 starter items: Abdhaljs materials + Ambuscade Vouchers). Per-family mob spawning + difficulty event flow still unwired.
 - **Unity** — warps/shops work, no Wanted NMs
 
 ## What's Missing (major gaps)

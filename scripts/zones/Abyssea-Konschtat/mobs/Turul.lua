@@ -30,6 +30,7 @@ end
 
 entity.onMobDeath = function(mob, player, optParams)
     player:addTitle(xi.title.TURUL_GROUNDER)
+    xi.abyssea.grantAtmaDrop(mob, player, xi.ki.ATMA_OF_THE_STORMBIRD)
 end
 
 return entity
