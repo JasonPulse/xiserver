@@ -1,5 +1,15 @@
 # Phase 2 Audit — Step-by-Step Verification
 
+> **STATUS — Reconciled 2026-06-09:** Phase 2 is **complete**. All 25 originally-
+> planned research files have been written and reconciled against the current
+> codebase. 18 items still labeled "needs verification" below are actually done
+> (limit breaks, COP 3-4+, Sparks vendor, nation quests, Zilart, ToAU access,
+> Abyssea entry, ROV ch1, endgame gear paths, subjob quest, Maat cap quest,
+> Monisette/Oboro/Empyrean reforges, Signet/Sanction/Sigil, leveling 1-30/30-50,
+> currency earning). See `PROGRESS.md` "Completed" section for the canonical
+> "what's actually done" list. Treat the priority list below as historical
+> planning notes, not active TODO.
+
 ## Problem with Phase 1
 Phase 1 checked "does the script file exist" — that's necessary but not sufficient. A script can exist and still:
 - Have broken NPC dialogue (wrong event IDs, missing text)

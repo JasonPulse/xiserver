@@ -43,8 +43,8 @@
 
 | Zone | Entity ID | CSIDs | Script | Status |
 |------|-----------|-------|--------|--------|
-| Southern San d'Oria | 17719635 | 977,978,979,981-985,963,993 | `Southern_San_dOria/npcs/Voidwatch_Officer.lua` | [ ] |
-| Bastok Markets | 17739951 | 11,12,13,16-19,21,9,24 | `Bastok_Markets/npcs/Voidwatch_Officer.lua` | [ ] |
+| Southern San d'Oria | 17719635 | 977,978,979,981-985,963,993 | `Southern_San_dOria/npcs/Voidwatch_Officer.lua` | [x] |
+| Bastok Markets | 17739951 | 11,12,13,16-19,21,9,24 | `Bastok_Markets/npcs/Voidwatch_Officer.lua` | [x] |
 | Windurst Waters | 17752374 | 1035-1037,1039-1043,1024 | `Windurst_Waters/npcs/Voidwatch_Officer.lua` | [ ] |
 | Batallia Downs | 17207943 | 10-17,8 | `Batallia_Downs/npcs/Voidwatch_Officer.lua` | [ ] |
 | Rolanberry Fields | 17228397 | 9-16,7 | `Rolanberry_Fields/npcs/Voidwatch_Officer.lua` | [ ] |
@@ -55,9 +55,9 @@
 
 | Zone | Entity ID | CSIDs | Script | Status |
 |------|-----------|-------|--------|--------|
-| Southern San d'Oria | 17719636 | 975,993 | `Southern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Bastok Markets | 17739952 | 10,24 | `Bastok_Markets/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Windurst Waters | 17752375 | 1034 | `Windurst_Waters/npcs/Voidwatch_Purveyor.lua` | [ ] |
+| Southern San d'Oria | 17719636 | 975,993 | `Southern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [x] |
+| Bastok Markets | 17739952 | 10,24 | `Bastok_Markets/npcs/Voidwatch_Purveyor.lua` | [x] |
+| Windurst Waters | 17752375 | 1034 | `Windurst_Waters/npcs/Voidwatch_Purveyor.lua` | [x] |
 | Lower Jeuno | 17780980 | 10109 | `Lower_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
 | Upper Jeuno | 17776885 | 10213 | `Upper_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
 | Port Jeuno | 17784986 | 351 | `Port_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
@@ -73,9 +73,9 @@
 
 | Zone | Entity ID | CSIDs | Script | Status |
 |------|-----------|-------|--------|--------|
-| Southern San d'Oria | 17719634 | 962,993 | `Southern_San_dOria/npcs/Atmacite_Refiner.lua` | [ ] |
-| Bastok Markets | 17739950 | 8,24 | `Bastok_Markets/npcs/Atmacite_Refiner.lua` | [ ] |
-| Windurst Waters | 17752373 | 1023 | `Windurst_Waters/npcs/Atmacite_Refiner.lua` | [ ] |
+| Southern San d'Oria | 17719634 | 962,993 | `Southern_San_dOria/npcs/Atmacite_Refiner.lua` | [x] |
+| Bastok Markets | 17739950 | 8,24 | `Bastok_Markets/npcs/Atmacite_Refiner.lua` | [x] |
+| Windurst Waters | 17752373 | 1023 | `Windurst_Waters/npcs/Atmacite_Refiner.lua` | [x] |
 
 ### 2D. Ardrick (Jugner Forest)
 
@@ -92,14 +92,14 @@
 | Zone | Rift Entity IDs | Pyxis Entity IDs |
 |------|----------------|-----------------|
 | East Ronfaure | 17191577-79 | 17191580-82 |
-| West Sarutabaruta | 17248914-16 | (check npc_list) |
-| North Gustaberg | 17212116-18 | (check npc_list) |
+| West Sarutabaruta | 17248914-16 | 17248917-19 |
+| North Gustaberg | 17212116-18 | 17212119-21 |
 | Jugner Forest | 17203939-41 | 17203942-44 |
-| Ordelle's Caves | 17568199-201 | (check npc_list) |
-| Gusgen Mines | 17580411-13 | (check npc_list) |
-| Pashhow Marshlands | 17224371-73 | (check npc_list) |
-| Maze of Shakhrami | 17588783-85 | (check npc_list) |
-| Meriphataud Mountains | 17265315-17 | (check npc_list) |
+| Ordelle's Caves | 17568199-201 | 17568202-04 |
+| Gusgen Mines | 17580411-13 | 17580414-16 |
+| Pashhow Marshlands | 17224371-73 | 17224374-76 |
+| Maze of Shakhrami | 17588783-85 | 17588786-88 |
+| Meriphataud Mountains | 17265315-17 | 17265318-20 |
 
 ### 3B. Battle Engine
 - [ ] **Voidwatcher status effect** — proximity check to rift (~50 foot leash)

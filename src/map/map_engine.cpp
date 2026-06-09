@@ -358,8 +358,13 @@ void MapEngine::do_init()
         prepareWatchdog();
     }
 
-    httpServer_ = std::make_unique<MapHTTPServer>();
-    httpServer_->markReady();
+    // Skip the liveness HTTP server in test mode: it binds a port and runs
+    // listen() on the Async thread pool, which can deadlock test shutdown.
+    if (!engineConfig_.isTestServer)
+    {
+        httpServer_ = std::make_unique<MapHTTPServer>();
+        httpServer_->markReady();
+    }
 
 #ifdef TRACY_ENABLE
     ShowInfo("*** TRACY IS ENABLED ***");

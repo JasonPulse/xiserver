@@ -49,7 +49,7 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 
 - [x] **Civil_Registrar** — single shared script in both WA + EA. First click grants rank 1 in all six coalitions; subsequent clicks tell the player they're already registered. Retail's per-coalition menu plumbing intentionally skipped (4-player private server).
 - [x] **Task_Delegator** — single shared script in both WA + EA. One click per Vana'diel day grants 100 imprimaturs balance + 10 imprimaturs spent, gated on coalition membership. Tunables (`IMPRIMATURS_REWARD`, `CURRENCY_REWARD`) at top of script.
-- [x] **Edification** — folded into `Task_Delegator` (single NPC handles both flows). Player sets `Coalition_Edify_Target` CharVar to 1..6 (Pioneers..Mummers); each `Task_Delegator` click after the daily claim consumes imprimaturs and advances that coalition by one rank. No pin → no auto-spend (so players don't accidentally burn imprimaturs). Cost table in `scripts/enum/coalition.lua` (`RANK_UP_COSTS`, 500 → 50000 across ranks 1→14). Per-coalition rep NPCs intentionally skipped — none exist in our `npc_list` and the client-version pin blocks pulling them from upstream.
+- [x] **Edification** — folded into `Task_Delegator` (single NPC handles both flows). Player sets `Coalition_Edify_Target` CharVar to 1..6 (Pioneers..Mummers); each `Task_Delegator` click after the daily claim consumes imprimaturs and advances that coalition by one rank. No pin → no auto-spend (so players don't accidentally burn imprimaturs). Cost table in `scripts/enum/coalition.lua` (`RANK_UP_COSTS`, 500 → 50000 across ranks 1→14). Per-coalition rep NPCs intentionally skipped — upstream LSB doesn't have them either, so there's nothing to pull.
 - [x] **Bayld-tier vendor gating** — Vesca, Craggy_Bluff (Peacekeepers) and Wortherton, Kithvalio, Ceciliotte (Inventors) now gated. Each script has a `REQUIRED_RANK = 1` local at top — bump it for tighter gating. Rank-fail uses `printToPlayer` with a clear coalition-name message. To set a player's rank: `!setvar Coalition_Peacekeepers_Rank 1` (or `Inventors`) — that's a normal CharVar write, which is where ranks live.
 
 ## Behind other subsystems (skip per user — too far behind)
@@ -79,7 +79,7 @@ These were wired blind on best-guess data and may need iteration:
 3. Quiri-Aliri Ionis casting flow — option byte and event branches
 4. Malulu / Jaded_Hawk delivery box menu opening
 5. Lamaron boat — option byte 0 → Yahse setPos
-6. Patient_Snake Library Card purchase — option byte 1 → bayld deduction + KI grant
+6. ~~Patient_Snake Library Card purchase~~ VERIFIED 2026-06-09 — option 1 → bayld deduction + KI grant implemented at `Patient_Snake.lua:24-33`
 
 ## Reminder: not Adoulin-specific but flagged
 
