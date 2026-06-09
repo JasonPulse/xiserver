@@ -74,7 +74,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Delve | Large | SoA endgame content |
 | Odyssey/Sheol | Massive | Modern endgame, no code exists |
 | Omen | Large | Modern endgame, empty zone |
-| Domain Invasion | Medium | Daily Escha content |
+| Domain Invasion | Medium | Daily Escha content — vendor + currency wired; mob death handlers + GM-callable rotation spawn shipped 2026-06-09. Periodic auto-spawn (every N hours) still unwired. |
 | Geas Fete | Large | Escha NM system, SQL data exists but no pop system |
 | Voidwatch | Large | In progress (see VOIDWATCH_TODO.md) |
 | Mog Garden | Massive | Tutorial/gathering/rearing all missing |

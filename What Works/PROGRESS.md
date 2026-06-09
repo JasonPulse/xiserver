@@ -157,6 +157,7 @@ Track cross-cutting issues here so they don't get lost:
 - ~~**Atma Fabricant STUB**~~ -- IMPLEMENTED (2026-06-09): simplified cruor + 7-lights purchase keyed to `Atma_Selection` CharVar (pin to atma KI 1279-1699). Unblocks Abyssea progression — atmas are otherwise unobtainable (NM scripts don't grant them, atma stones don't exist in DB).
 - **NM atma drops** -- PARTIAL (2026-06-09): `xi.abyssea.grantAtmaDrop(mob, player, atmaKi)` helper added; 10 NMs wired to canonical bg-wiki atma drops (Kukulkan→Noxious Fang, Balaur→Stormbreath, Fistule→Vicissitude, Eccentric Eve→Voracious Violet, Hadal Satiator→Beyond, Turul→Stormbird, Briareus→Stout Arm, Iratham→Cosmos, Rani→Merciless Matriarch, Sippoy→Would-Be King). 4-player server policy: always grants on kill (no proc/chance gating). Remaining ~18 Abyssea NM scripts have no documented atma drop on bg-wiki — Fabricant covers acquisition.
 - **Ambuscade shop** -- PARTIAL (2026-06-09): monthly rotation table (24 enemy families, cycles by Vana'diel month via `xi.ambuscade.getCurrentRotation()`); simplified CharVar-pin shop on Gorpa-Masorpa via `Ambuscade_Item_Selection` (16 starter items: Abdhaljs Thread/Dust/Sap/Dye/Resin/Nuggets/Gem/Anima/Matter + 7 Ambuscade Vouchers). Players can now spend hallmarks/gallantry. Per-family mob spawning in Maquette_Abdhaljs_Legion_B and the difficulty event flow (CSID 386 menu) still unwired — needs in-game capture.
+- **Domain Invasion** -- PARTIAL (2026-06-09): `scripts/globals/domain_invasion.lua` with `grantPoints(mob, player)` (alliance-distribute, 50yalm range, daily cap 600 honored) and `spawnNext()` (rotation: Yumcax/Naga_Raja/Kyou/Suttung). Mob death scripts written for all 4 bosses. Zurim vendor + char_points.domain_points already worked — closing the loop. Auto-rotation cron still unwired (manual `!exec xi.domainInvasion.spawnNext()` only).
 - ~~**Silent fail QOL pattern**~~ -- AUDITED 2026-04-21: scanned all ~600 zone NPC files with Python regex for silent position-check returns; 0 found outside the original Phomiuna _ir9 fix. Door NPCs consistently messageSpecial on the wrong-side branch.
 - ~~**Snipper droplist 3913 missing**~~ -- FALSE ALARM verified 2026-03-28; Snippers use 482/483/2281 which all exist
 - ~~**Monisette has no script**~~ -- FIXED (2026-04-02): Monisette implemented with 421 reforge mappings, proper Rem's Tale + slot material requirements for all 22 jobs. (from gear audit)
@@ -239,6 +240,18 @@ All auto-complete on zone-in; tracked in `ROV_TODO.md`:
 - [ ] ROV 3-26 The Winds of Time (Metus) — Empyreal Paradox, pool 4820
 - [ ] ROV 3-34 The Orb's Radiance (Cloud of Darkness) — Reisenjima Sanctorium, pool 4819 (final boss)
 - [ ] WotG 51 Maiden of the Dusk (Lilith) — Walk_of_Echoes battlefield dir missing entirely
+
+### Verification queue — new shipments this session (2026-06-09)
+
+These were built without in-game verification — list of behaviors a play-test needs to confirm:
+- [ ] **Master Levels `/check` packet** — `mlvl`/`mflags` populated, but pinned client may not render the ML number in the UI (stat bonuses still apply server-side regardless)
+- [ ] **Master Levels EP gain** — when JP is capped on current job and an lv 100+ mob is killed, excess CP should redirect to Exemplar Points; verify EP accrues per kill and ML increments at 30k
+- [ ] **Master Levels stat application** — confirm HP/MP/STR/DEX/VIT/AGI/INT/MND/CHR all gain bonuses on `setMasterLevel`
+- [ ] **Atma Fabricant** — set `Atma_Selection` to a valid atma KI, ensure Visitant Status check passes, cruor deduction matches setting, lights deducted from `abysseaLights1`/`abysseaLights2`, atma KI granted
+- [ ] **NM atma drops** — kill one of the 10 wired NMs (Kukulkan, Briareus, etc.), confirm KI grant to alliance members with Visitant Status who don't already have it
+- [ ] **Ambuscade simplified shop** — set `Ambuscade_Item_Selection` to an item id from the shop table, trigger Gorpa-Masorpa, verify currency deduction and item grant
+- [ ] **Domain Invasion** — manually `!exec xi.domainInvasion.spawnNext()`, kill the boss, confirm `domain_points` award (10 base + level diff) honors daily cap (600); verify rotation cursor advances on each subsequent spawn
+- [ ] **Domain Invasion daily reset** — does `domain_points_daily` reset at Conquest tally? If not, players will hit the cap after one fight day. (May need a cron task or daily-reset hook.)
 
 ---
 
