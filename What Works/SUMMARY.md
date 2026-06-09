@@ -71,11 +71,12 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Campaign Ops | Large | 100+ ops, nation-specific |
 | Besieged | Massive | ToAU city defense system |
 | Skirmish | Large | SoA endgame content |
+| Wildskeeper Reives | Partial | popBoss + 6 Naakual death handlers (Colkhab/Tchakka/Achuka/Yumcax/Hurkan/Kumhau) shipped 2026-06-09 |
 | Delve | Large | SoA endgame content |
 | Odyssey/Sheol | Massive | Modern endgame, no code exists |
 | Omen | Large | Modern endgame, empty zone |
 | Domain Invasion | Medium | Daily Escha content — vendor + currency wired; mob death handlers + GM-callable rotation spawn shipped 2026-06-09. Periodic auto-spawn (every N hours) still unwired. |
-| Geas Fete | Large | Escha NM system, SQL data exists but no pop system |
+| Geas Fete | Partial | Escha NM system — popBoss helper + 20-NM pop table + 10 NM death handlers (Gods + Ark Angels) shipped 2026-06-09; remaining ~60 NMs need death-script wiring |
 | Voidwatch | Large | In progress (see VOIDWATCH_TODO.md) |
 | Mog Garden | Massive | Tutorial/gathering/rearing all missing |
 | Dynamis Divergence | Large | Empty zone shells only |
