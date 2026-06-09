@@ -110,7 +110,7 @@ xi.popTrigger.tryPop = function(player)
 
     -- No pin: auto-scan for the first KI the player holds that maps here.
     local kiId, entry, popBoss = findHeldPopForZone(player)
-    if not kiId then
+    if not kiId or not entry or not popBoss then
         return false
     end
 
