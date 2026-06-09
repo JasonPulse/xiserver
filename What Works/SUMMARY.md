@@ -76,7 +76,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Odyssey/Sheol | Massive | Modern endgame, no code exists |
 | Omen | Large | Modern endgame, empty zone |
 | Domain Invasion | Medium | Daily Escha content — vendor + currency wired; mob death handlers + GM-callable rotation spawn shipped 2026-06-09. Periodic auto-spawn (every N hours) still unwired. |
-| Geas Fete | Partial | Escha NM system — popBoss helper + 20-NM pop table + 10 NM death handlers (Gods + Ark Angels) shipped 2026-06-09; remaining ~60 NMs need death-script wiring |
+| Geas Fete | Partial | Escha NM system — popBoss helper + 60+ NM pop table + 58 mob death scripts across Escha-Zi'Tah/Ru'Aun/Reisenjima shipped 2026-06-09 |
 | Voidwatch | Large | In progress (see VOIDWATCH_TODO.md) |
 | Mog Garden | Massive | Tutorial/gathering/rearing all missing |
 | Dynamis Divergence | Large | Empty zone shells only |
