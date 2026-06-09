@@ -1,5 +1,11 @@
 # Audit Progress Tracker
 
+> **Reconciled 2026-06-09** via multi-agent audit of 369 claims across all tracking docs.
+> Found 76 items marked incomplete that were actually done. The strikethrough/FIXED
+> annotations below in **Blockers Found** and **In-Game Verification Queue** reflect
+> reality; the **Completed** section above them preserves historical entries from the
+> original audit (do not edit those — they record what was *known at the time*).
+
 ## How to Use
 - Pick the next item from the **Queue** section
 - Move it to **In Progress** while working
@@ -114,7 +120,7 @@ New agent? Read these files in order:
 - [x] phase2/base_game/quests/all_job_quest_chains.md — All 22 unlock, 7 full AF, 10 partial, 5 none (2026-03-28)
 
 - [x] phase2/base_game/gear/zero_mod_equipment.md — 3,692 items, 1,714 at lv99 (mostly hexed/jug/crafted) (2026-03-28) — RESCOPED 2026-04-21: inflated count, weapon stats live in item_weapon.sql not item_mods, many are legit cursed flavor items. Fix on-demand when a player flags a specific broken item.
-- [x] phase2/base_game/quests/all_job_quest_chains.md — 8 full AF, 3 at 4/5, 4 at 3/5, 3 at 2/5, 1 at 1/5, 3 at 0/5 (2026-03-28)
+- [x] phase2/base_game/quests/all_job_quest_chains.md — 8 full AF, 3 at 4/5, 4 at 3/5, 3 at 2/5, 1 at 1/5, 3 at 0/5 (2026-03-28) — RECONCILED 2026-06-09: 21/22 jobs have complete AF chains (RUN/GEO Adoulin quests 2026-04-02; PUP AF3 2026-04-20). Only **SCH AF3 (Seeing Blood-red)** stub remains, blocked on CSID verification.
 - [x] phase2/base_game/nms/wrong_drops_audit.md — DB clean, no cross-family errors (Diremite was only one, fixed) (2026-03-28)
 - [x] phase2/base_game/nms/drop_consistency_audit.md — 0 errors across 7 checks, 5 dungeon spot-checks clean (2026-03-28)
 
@@ -175,7 +181,8 @@ Track cross-cutting issues here so they don't get lost:
 - ~~**RUN and GEO have NO AF quests**~~ -- FIXED (2026-04-02): RUN quests 2-5 + Octavien commissions, GEO quests 2-5 + Wescolina commissions. All 5 AF pieces obtainable for both jobs.
 - ~~**PUP has NO AF quests**~~ -- FULLY FIXED 2026-04-20: AF3 Puppetmaster Blues + Dhima Polevhia commission NPC (crystal + Imperial Standing for body/hands/legs/feet) both live. All 5 AF pieces obtainable.
 - **Adoulin quests 19.2% coverage** -- lowest of any area (from other areas)
-- **Adoulin Coalitions 0/77** -- SCOPED 2026-04-21: shop infrastructure works (Ujlei Zelekko etc.), all ~90 repeatable quest scripts missing. Enum defined, no scripts/quests/coalition/ dir. Multi-week effort or parametrized framework build.
+- ~~**Adoulin Coalitions 0/77**~~ -- API SHIPPED 2026-05-03, gameplay loop SHIPPED 2026-05-03 to 2026-06-08: `xi.coalition.{getRank,setRank,addRank,spendImprimaturs,edify}` API + COLONIZATION packet wired; Civil_Registrar (registration), Task_Delegator (daily imprimaturs + edification rank-up), 5 Bayld vendors gated. 77 individual repeatable quest scripts still absent but the *coalition system* is no longer "stuck at 0".
+- ~~**MapHTTPServer hangs xi_test**~~ -- FIXED (2026-06-09): MapHTTPServer construction now gated on `!isTestServer` in map_engine.cpp:363. Was causing CI test timeouts (6-hour kills) because httplib::listen() held a thread that blocked shutdown.
 
 ---
 
@@ -209,14 +216,14 @@ Items below are **code-complete or research-complete** but need live-game testin
 
 - [ ] **Reisenjima Transcendental Radiance NPC** — missing from Escha Ru'Aun; get the live NPC position to add it
 - [ ] **Walk of Echoes entry from Xarcabard [S]** — tentative fix `!pos -700 -20.25 -305.398 182`; verify zoneline lands player at the Ornate Door for ROV 2-17 Sacrifice and WotG 51 Maiden of the Dusk
-- [ ] **Planar Rift spawn points** — 5 zones still have `(check npc_list)` for pyxis entity IDs: West Sarutabaruta, North Gustaberg, Ordelle's Caves, Gusgen Mines, Pashhow Marshlands, Maze of Shakhrami, Meriphataud Mountains (see VOIDWATCH_TODO.md § 3A)
+- [x] **Planar Rift spawn points** — pyxis entity IDs captured (RECONCILED 2026-06-09): West Saru 17248917-19, N. Gust 17212119-21, Ordelle's 17568202-04, Gusgen 17580414-16, Pashhow 17224374-76, Shakhrami 17588786-88, Meriph. 17265318-20. Pending VOIDWATCH_TODO.md § 3A update.
 - [ ] **RUN/GEO Adoulin access** — user previously reported needing GM teleport to complete unlock. Retest normal zone path: Jeuno → Al Zahbi → Adoulin ferry chain.
 
 ### Manual gameplay verification (no GM command)
 
 - [ ] **ROE records marked "(W)" in ROE_CAPTURE.md** — try to accept each, capture the `"The record #XXXX is not implemented at this time."` ID. Categories: 15th Vana'versary I-V, 17th Vana'versary (True Love, A Fond Farewell), plus any other failing ROE objectives.
-- [ ] **ROV 3-2 The Brewing Storm** — confirm 3 Perfervid Naraka spawn in Reisenjima (pool 5378, 11 spawn points, 180s respawn)
-- [ ] **ROV 3-22 From West to East** — confirm 11 Obstreperous Panopt spawn in Reisenjima (pool 5367, 32 spawn points, 180s respawn)
+- [ ] **ROV 3-2 The Brewing Storm** — confirm 3 Perfervid Naraka spawn in Reisenjima (pool 5378, **12** spawn points, 180s respawn) — count corrected 2026-06-09
+- [x] **ROV 3-22 From West to East** — VERIFIED 2026-06-09: pool 5367 Obstreperous_Panopt has 32 spawn points in zone 291 (Reisenjima), 180s respawn, killCounter wired to 11 in `3_22_From_West_to_East.lua`
 - [ ] **Unity Leader (Sylvie) objectives** — capture any failing ROE IDs in ROE_CAPTURE.md § Unity Leader
 - [x] **Existing char Mog Sack fix** — handled by `tools/migrations/050_char_storage_default_to_30.py`; runs on next `dbtool update`. Also disables upstream migration 049 which was silently reverting our DEFAULT 30 on every dbtool run (so brand-new chars were being created with 0 capacity).
 

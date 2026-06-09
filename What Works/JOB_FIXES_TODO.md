@@ -20,11 +20,11 @@
 - **Erlene events**: Unused from AF1/AF2: 10, 11, 12, 13, 14, 29, 31, 32, 34
 - **Likely AF3 events**: 29, 31, 32, 34 (need in-game verification with !cs)
 - **Files to create**:
-  - [ ] scripts/quests/crystalWar/SCH_AF3_Seeing_Blood_Red.lua
+  - [x] scripts/quests/crystalWar/SCH_AF3_Seeing_Blood_Red.lua (stub — auto-completes; awaiting CSID for real progression flow)
   - [ ] scripts/zones/Ruhotz_Silvermines/instances/seeing_blood_red.lua
   - [ ] scripts/zones/Ruhotz_Silvermines/mobs/Ulbrecht.lua
 - **Files to modify**:
-  - [ ] Erlene NPC in The_Eldieme_Necropolis_[S] (add AF3 handlers)
+  - [x] Erlene NPC stub handlers exist in SCH_AF3_Seeing_Blood_Red.lua; still need verified CSID + real reward branch
   - [ ] Indescript_Markings in Pashhow_Marshlands_[S] (add letter pickup)
   - [ ] Ruhotz_Silvermines/IDs.lua (add Ulbrecht mob reference)
 - **Blockers**: Need to verify event CSIDs via !cs testing at Erlene

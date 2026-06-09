@@ -2,15 +2,21 @@
 
 Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files). Total: 47 research files.
 
+> **Reconciled 2026-06-09** against actual codebase via multi-agent audit
+> (369 claims verified, 76 closed as actually-done that this doc still flagged
+> as incomplete). The "What Partially Works", "What's Missing", and "Quick Wins"
+> sections below have been updated. The quest-coverage table reflects an
+> older snapshot — see `scripts/globals/quests.lua` for current state.
+
 ## Overall Status
 
 | Content Area | Status | Details |
 |-------------|--------|---------|
 | **Core Combat** | WORKS | All 15 subsystems, 208 WS, 342 abilities, 588 effects |
 | **Core Transport** | WORKS | All 16 methods functional |
-| **Core Jobs (22)** | WORKS/PARTIAL | All unlock quests work. PLD SP2 missing, GEO missing 4 abilities |
+| **Core Jobs (22)** | WORKS | All unlock quests work. PLD SP2 (Intervene) + all 16 GEO abilities implemented |
 | **Trusts** | WORKS | All 120 have AI gambits. Tank trusts have 1.5x ATT boost. No iLvl scaling |
-| **Mog House** | PARTIAL | Mog Garden STUB, Mog Sack 0 slots |
+| **Mog House** | PARTIAL | Mog Garden STUB (storage/capacity all default 30) |
 | **San d'Oria Missions** | WORKS | All ranks 1-10, all BCNMs |
 | **Bastok Missions** | WORKS | All ranks 1-10 (9-2 trusts fixed) |
 | **Windurst Missions** | WORKS | All ranks 1-10 |
@@ -22,7 +28,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | **WotG Content** | MISSING | Campaign battles AND ops not implemented |
 | **Abyssea** | PARTIAL | 172 NMs (28 w/AI), 69/149 atma empty, Fabricant stub |
 | **SoA Missions** | WORKS | 105 scripts across all chapters |
-| **SoA Content** | MISSING | Coalitions stub, Skirmish/Delve missing |
+| **SoA Content** | PARTIAL | Coalitions WORK via xi.coalition API + Civil_Registrar/Task_Delegator. Skirmish/Delve missing |
 | **ROV Missions** | PARTIAL | 93 scripts, 5 boss battles stubbed |
 | **Endgame (Classic)** | WORKS | Dynamis, Limbus, Job Points |
 | **Endgame (Modern)** | MISSING | Odyssey, Omen, Domain Invasion, Geas Fete, Master Levels |
@@ -64,7 +70,6 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Campaign Battles | Massive | WotG main content loop, no Allied Notes earning |
 | Campaign Ops | Large | 100+ ops, nation-specific |
 | Besieged | Massive | ToAU city defense system |
-| Coalitions (SoA) | Large | All 6 stuck at rank 0 |
 | Skirmish | Large | SoA endgame content |
 | Delve | Large | SoA endgame content |
 | Odyssey/Sheol | Massive | Modern endgame, no code exists |
@@ -83,7 +88,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 |-----|------|--------|
 | Bastok 9-2 allow trusts | `battlefields/Throne_Room/where_two_paths_converge.lua` | FIXED |
 | Phomiuna gate silent fail | `zones/Phomiuna_Aqueducts/npcs/_ir9.lua` | FIXED |
-| Mog Sack 0 slots | `sql/char_storage.sql` or GM command | TODO |
+| Mog Sack 0 slots | `sql/char_storage.sql` + migration 050 | FIXED (DEFAULT 30, backfill applied) |
 | Acuex mob family for Sylvie ROE | `scripts/globals/roe_records.lua` record 3690 | FIXED |
 | ROV ROE records 1417-1425 | `scripts/globals/roe_records.lua` | ADDED |
 | Vanadversary ROE (27 records) | `scripts/globals/roe_records.lua` | ADDED |
@@ -144,4 +149,4 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 6. ~~**Medium value**: Add PUP AF quests~~ DONE (2026-04-20). **Still open**: wire up WotG battlefields (Maiden of the Dusk, 51 Lilith)
 5. **Continue**: Voidwatch (in progress), ROV boss battles
 6. **Don't worry about**: Campaign, Besieged, Odyssey, Master Levels — designed for large populations
-7. **Consider**: `UNLOCK_OUTPOST_WARPS=1`, increase Mog Sack slots, seed AH with common items
+7. ~~**Consider**: `UNLOCK_OUTPOST_WARPS=1`~~ DONE (2026-06-08) — set to 2 (all warps incl. Tu'Lia/Tavnazia). ~~increase Mog Sack slots~~ DONE (migration 050). **Consider**: seed AH with common items
