@@ -7,10 +7,14 @@
 --
 -- Each system's popBoss() checks zone + KI possession before SpawnMob. This
 -- module wraps both into a single onTrigger handler that any in-zone NPC
--- (Undulating_Confluence, qm_droplet, an Eschan portal helper, etc.) can
--- delegate to. The player optionally pins a specific KI via the
--- `Pop_Selection` CharVar; if unset we scan all registered pops and fire
--- whichever KI the player holds that maps to the current zone.
+-- (Undulating_Confluence, qm_droplet, Reive zone Waypoints, etc.) can
+-- delegate to.
+--
+-- The player must explicitly opt-in by pinning a pop KI to the
+-- `Pop_Selection` CharVar before triggering. We deliberately do NOT
+-- auto-scan held KIs — that would risk accidentally popping a boss when the
+-- player just wanted the NPC's other functionality (waypoint menu, droplet,
+-- etc.) and happened to be carrying the KI for later use.
 --
 -- Usage (in any NPC script):
 --   require('scripts/globals/pop_trigger')
@@ -49,38 +53,6 @@ local function dispatcherFor(kiId)
     return nil, nil
 end
 
--- Scan every registered pop table for a KI the player holds that maps to
--- the player's current zone. Returns (kiId, entry) or nil.
-local function findHeldPopForZone(player)
-    local zoneId = player:getZoneID()
-
-    local function scan(popTable)
-        if not popTable then
-            return nil, nil
-        end
-
-        for kiId, entry in pairs(popTable) do
-            if entry.zoneId == zoneId and player:hasKeyItem(kiId) then
-                return kiId, entry
-            end
-        end
-
-        return nil, nil
-    end
-
-    local kiId, entry = scan(xi.wildskeeperReives and xi.wildskeeperReives.pops)
-    if kiId then
-        return kiId, entry, xi.wildskeeperReives.popBoss
-    end
-
-    kiId, entry = scan(xi.geasFete and xi.geasFete.pops)
-    if kiId then
-        return kiId, entry, xi.geasFete.popBoss
-    end
-
-    return nil, nil, nil
-end
-
 -- Returns true if a pop was attempted (success or failure with a player
 -- message). Returns false when the player has nothing pop-able here and
 -- the caller should fall through to other NPC behaviour.
@@ -90,31 +62,27 @@ xi.popTrigger.tryPop = function(player)
     end
 
     local pinned = player:getCharVar(popSelectionVar)
-    if pinned ~= 0 then
-        local popBoss, entry = dispatcherFor(pinned)
-        if popBoss and entry then
-            local ok, msg = popBoss(player, pinned)
-            if ok then
-                player:printToPlayer(msg)
-                player:setCharVar(popSelectionVar, 0) -- clear pin on success
-            else
-                player:printToPlayer(string.format('Pop_Selection %d failed: %s', pinned, msg))
-            end
+    if pinned == 0 then
+        -- No pin = not opted-in. Fall through to the host NPC's normal
+        -- behaviour (waypoint menu, droplet grant, etc.). We deliberately do
+        -- NOT auto-scan the player's KIs — that risk-of-accidental-pop bit
+        -- players who happened to be carrying a pop KI for later use.
+        return false
+    end
 
-            return true
-        end
-
+    local popBoss, entry = dispatcherFor(pinned)
+    if not (popBoss and entry) then
         player:printToPlayer(string.format('Pop_Selection %d is not a registered pop key item.', pinned))
         return true
     end
 
-    -- No pin: auto-scan for the first KI the player holds that maps here.
-    local kiId, entry, popBoss = findHeldPopForZone(player)
-    if not kiId or not entry or not popBoss then
-        return false
+    local ok, msg = popBoss(player, pinned)
+    if ok then
+        player:printToPlayer(msg)
+        player:setCharVar(popSelectionVar, 0) -- clear pin on success
+    else
+        player:printToPlayer(string.format('Pop_Selection %d failed: %s', pinned, msg))
     end
 
-    local ok, msg = popBoss(player, kiId)
-    player:printToPlayer(ok and msg or string.format('Pop attempt for %s failed: %s', entry.label, msg))
     return true
 end
