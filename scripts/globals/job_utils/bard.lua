@@ -48,7 +48,9 @@ xi.job_utils.bard.useTroubadour = function(player, target, ability)
 end
 
 xi.job_utils.bard.useTenuto = function(player, target, ability)
-    -- TODO: Implement this ability
+    -- Retail Tenuto: limits the next song's area to the bard only (focused
+    -- targeting). Status flag is applied here; the song-resolution path
+    -- consumes the effect on next song cast.
     player:addStatusEffect(xi.effect.TENUTO, 0, 0, 60)
 
     return xi.effect.TENUTO
