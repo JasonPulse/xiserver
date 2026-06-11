@@ -183,9 +183,81 @@ xi.mog_garden.furrowOnTrigger = function(player, npc)
 
     local item = yields[math.random(#yields)]
     if npcUtil.giveItem(player, item) then
-        local ID = zones[player:getZoneID()]
         player:setCharVar(seedVar, 0)
         player:setCharVar(dayVar, 0)
+        player:messageSpecial(ID.text.ITEM_OBTAINED, item)
+    end
+end
+
+-- Gathering nodes ──────────────────────────────────────────────────────────
+-- Mog Garden has 5 gathering node families. Retail gives N uses per node-
+-- family per Vana'diel day with random yields. We track uses via a single
+-- CharVar per family (uses-and-day packed: uses * 1000 + day for cheap
+-- single-var storage). The numbered NPC variants (e.g. Arboreal_Grove vs
+-- Arboreal_Grove_#2) all share a family pool.
+local nodeFamilies =
+{
+    -- prefix             max uses/day   yield pool
+    Arboreal_Grove      = { 3, { xi.item.LAUAN_LOG, xi.item.HOLLY_LOG, xi.item.MAPLE_LOG, xi.item.WALNUT_LOG } },
+    Mineral_Vein        = { 3, { xi.item.CHUNK_OF_IRON_ORE, xi.item.CHUNK_OF_COPPER_ORE, xi.item.CHUNK_OF_ZINC_ORE, xi.item.CHUNK_OF_TIN_ORE, xi.item.LAPIS_LAZULI } },
+    Pond_Dredger        = { 3, { xi.item.QUUS_1, xi.item.CHEVAL_SALMON, xi.item.TRICOLORED_CARP, xi.item.COPPER_FROG_2 } },
+    Coastal_Fishing_Net = { 3, { xi.item.BLUETAIL_1, xi.item.TIGER_COD_1, xi.item.BIBIKI_URCHIN } },
+    Flotsam             = { 3, { xi.item.LAUAN_LOG, xi.item.BIBIKI_URCHIN, xi.item.QUUS_1 } },
+}
+
+-- Map any node display name to its family prefix.
+local function familyFor(name)
+    if not name then
+        return nil
+    end
+
+    if nodeFamilies[name] then
+        return name
+    end
+
+    -- Strip optional "_#N" suffix.
+    local base = name:match('^(.-)_#%d+$')
+    if base and nodeFamilies[base] then
+        return base
+    end
+
+    return nil
+end
+
+local function familyVarFor(prefix)
+    return 'Mog_Garden_Node_' .. prefix
+end
+
+xi.mog_garden.nodeOnTrigger = function(player, npc)
+    local prefix = familyFor(npc:getName())
+    if not prefix then
+        return
+    end
+
+    local maxUses, yields = nodeFamilies[prefix][1], nodeFamilies[prefix][2]
+    local var             = familyVarFor(prefix)
+    local packed          = player:getCharVar(var)
+    local today           = VanadielUniqueDay()
+    local storedDay       = packed % 1000
+    local storedUses      = math.floor(packed / 1000)
+
+    if storedDay ~= today then
+        storedUses = 0
+    end
+
+    if storedUses >= maxUses then
+        player:printToPlayer(string.format('%s has nothing more to give today.', (prefix:gsub('_', ' '))))
+        return
+    end
+
+    local item = yields[math.random(#yields)]
+    if not item then
+        return
+    end
+
+    if npcUtil.giveItem(player, item) then
+        local newPacked = (storedUses + 1) * 1000 + today
+        player:setCharVar(var, newPacked)
         player:messageSpecial(ID.text.ITEM_OBTAINED, item)
     end
 end
