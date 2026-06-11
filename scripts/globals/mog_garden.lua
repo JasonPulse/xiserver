@@ -73,11 +73,61 @@ local harvestPool =
 }
 
 local dailyHarvestVar = 'Mog_Garden_Daily_Harvest'
+local tutorialDoneVar = 'Mog_Garden_Tutorial_Done'
+
+-- Starter pack for the first-visit tutorial bypass. Bit flags track which
+-- seeds the player has already received so a full inventory on first visit
+-- doesn't permanently skip the remaining seeds — the un-granted ones drop
+-- on the next zone-in until the player has them all.
+local tutorialSeedPack =
+{
+    { item = xi.item.BAG_OF_VEGETABLE_SEEDS, flag = 0x01 },
+    { item = xi.item.BAG_OF_FRUIT_SEEDS,     flag = 0x02 },
+    { item = xi.item.BAG_OF_GRAIN_SEEDS,     flag = 0x04 },
+    { item = xi.item.BAG_OF_HERB_SEEDS,      flag = 0x08 },
+    { item = xi.item.BAG_OF_WILDGRASS_SEEDS, flag = 0x10 },
+    { item = xi.item.BAG_OF_FLOWER_SEEDS,    flag = 0x20 },
+}
+
+local tutorialCompleteMask = 0x3F -- 0b111111 — all 6 flags set
+
+local function runTutorialBypass(player)
+    local state = player:getCharVar(tutorialDoneVar)
+    if state >= tutorialCompleteMask then
+        return -- already complete
+    end
+
+    if state == 0 then
+        player:printToPlayer('Welcome to your Mog Garden! Plant the seeds I\'ve given you in any Garden Furrow, and return after a Vana\'diel day or two to harvest.')
+    end
+
+    local newState = state
+    for _, entry in ipairs(tutorialSeedPack) do
+        if
+            bit.band(newState, entry.flag) == 0 and
+            npcUtil.giveItem(player, entry.item)
+        then
+            newState = bit.bor(newState, entry.flag)
+        end
+
+        -- If giveItem failed (full inventory) the flag stays unset and we
+        -- retry that seed on the next zone-in.
+    end
+
+    if newState ~= state then
+        player:setCharVar(tutorialDoneVar, newState)
+    end
+end
 
 xi.mog_garden.onZoneIn = function(player, prevZone)
     if not player or player:getZoneID() ~= xi.zone.MOG_GARDEN then
         return
     end
+
+    -- First-visit tutorial: drop the starter seed pack on the player. Run
+    -- this BEFORE the daily harvest so a tutorial-complete player still
+    -- gets their harvest on the same zone-in.
+    runTutorialBypass(player)
 
     local today     = VanadielUniqueDay()
     local lastClaim = player:getCharVar(dailyHarvestVar)
