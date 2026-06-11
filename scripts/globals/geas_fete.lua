@@ -142,6 +142,13 @@ xi.geasFete.popBoss = function(player, kiId)
         return false, string.format('no entity id for %s in zone %d', entry.mobName, entry.zoneId)
     end
 
+    -- Don't consume the KI if the boss is already alive (e.g. another player
+    -- popped it). Check the runtime mob state before debiting.
+    local existing = GetMobByID(mobEntityId)
+    if existing and existing:isSpawned() and existing:isAlive() then
+        return false, string.format('%s is already engaged. Wait until current fight ends.', entry.label)
+    end
+
     player:delKeyItem(kiId)
     SpawnMob(mobEntityId)
     return true, string.format('Spawned %s.', entry.label)
