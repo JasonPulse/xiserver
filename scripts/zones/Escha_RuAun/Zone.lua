@@ -1,6 +1,8 @@
 -----------------------------------
 -- Zone: Escha_RuAun (289)
 -----------------------------------
+require('scripts/globals/domain_invasion')
+-----------------------------------
 ---@type TZone
 local zoneObject = {}
 
@@ -17,6 +19,9 @@ zoneObject.onZoneIn = function(player, prevZone)
     then
         player:setPos(-0.371, -34.277, -466.98, 187)
     end
+
+    -- Domain Invasion rotation check (rate-limited).
+    xi.domainInvasion.checkRotation()
 
     return cs
 end

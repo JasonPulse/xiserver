@@ -1,6 +1,8 @@
 -----------------------------------
 -- Zone: Reisenjima_Henge (292)
 -----------------------------------
+require('scripts/globals/domain_invasion')
+-----------------------------------
 ---@type TZone
 local zoneObject = {}
 
@@ -18,6 +20,10 @@ zoneObject.onZoneIn = function(player, prevZone)
         player:setPos(?, ?, ?, ?)
     end
     ]]
+
+    -- Domain Invasion rotation check (rate-limited).
+    xi.domainInvasion.checkRotation()
+
     return cs
 end
 

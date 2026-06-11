@@ -1,6 +1,8 @@
 -----------------------------------
 -- Zone: Yorcia Weald
 -----------------------------------
+require('scripts/globals/domain_invasion')
+-----------------------------------
 ---@type TZone
 local zoneObject = {}
 
@@ -18,6 +20,10 @@ zoneObject.onZoneIn = function(player, prevZone)
     then
         player:setPos(254, 6, 64, 219)
     end
+
+    -- Domain Invasion rotation check. Internally rate-limited so multiple
+    -- zone-ins don't double-spawn.
+    xi.domainInvasion.checkRotation()
 
     return cs
 end

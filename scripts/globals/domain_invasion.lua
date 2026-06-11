@@ -124,3 +124,21 @@ xi.domainInvasion.currentLabel = function()
     local idx     = (GetServerVariable(rotationVar) % #entries) + 1
     return entries[idx] and entries[idx].label or 'unknown'
 end
+
+-- Auto-rotation hook. Call from each DI zone's Zone.lua onZoneIn (or any
+-- zone that should trigger checks); if no spawn has happened in the last
+-- `rotationIntervalSeconds`, fires spawnNext(). Multiple concurrent calls
+-- rate-limit naturally via the lastSpawn ServerVariable update inside
+-- spawnNext().
+local rotationIntervalSeconds = 4 * 60 * 60 -- 4 hours, retail-ish
+
+xi.domainInvasion.checkRotation = function()
+    local lastSpawn = GetServerVariable(lastSpawnVar)
+    local now       = GetSystemTime()
+    if now - lastSpawn < rotationIntervalSeconds then
+        return false
+    end
+
+    local ok, _ = xi.domainInvasion.spawnNext()
+    return ok
+end
