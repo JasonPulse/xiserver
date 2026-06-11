@@ -79,7 +79,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Domain Invasion | Medium | Daily Escha content — vendor + currency wired; mob death handlers + GM-callable rotation spawn shipped 2026-06-09. Periodic auto-spawn (every N hours) still unwired. |
 | Geas Fete | Partial | Escha NM system — popBoss helper + 60+ NM pop table + 58 mob death scripts across Escha-Zi'Tah/Ru'Aun/Reisenjima shipped 2026-06-09 |
 | Voidwatch | Large | In progress (see VOIDWATCH_TODO.md) |
-| Mog Garden | Partial | Daily harvest claim shipped 2026-06-11 (one item per Vana'diel day from a 10-item pool); tutorial/plot/rearing still missing |
+| Mog Garden | Partial | Visibility bug fixed 2026-06-11 (NPCs now show), daily zone-in harvest + 3-plot planting/harvest loop shipped 2026-06-11; tutorial quest chain + monster rearing + Bonanza still missing |
 | Dynamis Divergence | Large | Empty zone shells only |
 | Vagary | Medium | No code exists |
 

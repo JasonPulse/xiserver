@@ -96,6 +96,100 @@ xi.mog_garden.onZoneIn = function(player, prevZone)
     end
 end
 
+-- Garden plots ─────────────────────────────────────────────────────────────
+-- Each player has up to 3 plots (Garden_Furrow / Garden_Furrow_#2 /
+-- Garden_Furrow_#3). State is per-player via CharVars:
+--   Mog_Garden_Plot_<n>_Seed — item id of the seed planted (0 = empty)
+--   Mog_Garden_Plot_<n>_Day  — VanadielUniqueDay() of planting
+-- Plot becomes harvestable after `daysToHarvest` Vana'diel days; trade the
+-- corresponding seed bag to a furrow to plant; trigger when ripe to harvest.
+local plotSlotByNpcName =
+{
+    ['Garden_Furrow']    = 1,
+    ['Garden_Furrow_#2'] = 2,
+    ['Garden_Furrow_#3'] = 3,
+}
+
+local seedYields =
+{
+    [xi.item.BAG_OF_VEGETABLE_SEEDS]  = { xi.item.SAN_DORIAN_CARROT,             xi.item.SARUTA_ORANGE },
+    [xi.item.BAG_OF_FRUIT_SEEDS]      = { xi.item.SARUTA_ORANGE,                 xi.item.SARUTA_ORANGE },
+    [xi.item.BAG_OF_GRAIN_SEEDS]      = { xi.item.BOX_OF_TARUTARU_RICE,          xi.item.CLUMP_OF_WINDURSTIAN_TEA_LEAVES },
+    [xi.item.BAG_OF_HERB_SEEDS]       = { xi.item.WOOZYSHROOM,                   xi.item.SLEEPSHROOM, xi.item.REISHI_MUSHROOM },
+    [xi.item.BAG_OF_WILDGRASS_SEEDS]  = { xi.item.CLUMP_OF_MOKO_GRASS,           xi.item.CLUMP_OF_MOKO_GRASS },
+    [xi.item.BAG_OF_FLOWER_SEEDS]     = { xi.item.JUG_OF_SELBINA_MILK,           xi.item.BOTTLE_OF_YAGUDO_DRINK },
+}
+
+local daysToHarvest = 2
+
+local function plotVars(slot)
+    return
+        string.format('Mog_Garden_Plot_%d_Seed', slot),
+        string.format('Mog_Garden_Plot_%d_Day', slot)
+end
+
+xi.mog_garden.furrowOnTrade = function(player, npc, trade)
+    local slot = plotSlotByNpcName[npc:getName()]
+    if not slot then
+        return
+    end
+
+    local seedVar, dayVar = plotVars(slot)
+    if player:getCharVar(seedVar) ~= 0 then
+        player:printToPlayer('This plot is already in use. Harvest before replanting.')
+        return
+    end
+
+    local tradedItem = trade:getItemId()
+    if not seedYields[tradedItem] or trade:getItemCount() ~= 1 then
+        return
+    end
+
+    player:confirmTrade()
+    player:setCharVar(seedVar, tradedItem)
+    player:setCharVar(dayVar, VanadielUniqueDay())
+    player:printToPlayer(string.format('Planted. Return in %d Vana\'diel day(s) to harvest.', daysToHarvest))
+end
+
+xi.mog_garden.furrowOnTrigger = function(player, npc)
+    local slot = plotSlotByNpcName[npc:getName()]
+    if not slot then
+        return
+    end
+
+    local seedVar, dayVar = plotVars(slot)
+    local planted         = player:getCharVar(seedVar)
+    if planted == 0 then
+        player:printToPlayer('The plot is empty. Trade a bag of seeds to plant.')
+        return
+    end
+
+    local plantedDay = player:getCharVar(dayVar)
+    local elapsed    = VanadielUniqueDay() - plantedDay
+    if elapsed < daysToHarvest then
+        local remaining = daysToHarvest - elapsed
+        player:printToPlayer(string.format('The crop needs %d more Vana\'diel day(s) to ripen.', remaining))
+        return
+    end
+
+    local yields = seedYields[planted]
+    if not yields or #yields == 0 then
+        -- Stale seed id (post-balance changes). Clear the plot so the player
+        -- isn't stuck.
+        player:setCharVar(seedVar, 0)
+        player:setCharVar(dayVar, 0)
+        return
+    end
+
+    local item = yields[math.random(#yields)]
+    if npcUtil.giveItem(player, item) then
+        local ID = zones[player:getZoneID()]
+        player:setCharVar(seedVar, 0)
+        player:setCharVar(dayVar, 0)
+        player:messageSpecial(ID.text.ITEM_OBTAINED, item)
+    end
+end
+
 xi.mog_garden.onTriggerAreaEnter = function(player, triggerArea)
 end
 
