@@ -70,6 +70,7 @@ Phase 1 completed 2026-03-27 (22 files). Phase 2 completed 2026-03-28 (25 files)
 | Campaign Battles | Massive | WotG main content loop, no Allied Notes earning |
 | Campaign Ops | Large | 100+ ops, nation-specific |
 | Besieged | Massive | ToAU city defense system |
+| Bastion | Partial | Bastion_Prefect daily cruor stipend (5000 per zone per day) shipped 2026-06-11; wave-defense mechanic still missing |
 | Skirmish | Large | SoA endgame content |
 | Wildskeeper Reives | Partial | popBoss + 6 Naakual death handlers (Colkhab/Tchakka/Achuka/Yumcax/Hurkan/Kumhau) shipped 2026-06-09 |
 | Delve | Large | SoA endgame content |
