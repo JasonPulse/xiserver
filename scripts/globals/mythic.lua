@@ -106,5 +106,6 @@ xi.mythic.tryGrant = function(player)
     else
         player:printToPlayer(string.format('%s granted (already at ilvl 119 — no further trial path needed).', entry.name))
     end
+
     return true
 end
