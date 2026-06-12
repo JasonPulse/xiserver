@@ -1,7 +1,12 @@
 require('scripts/globals/abyssea')
+require('scripts/globals/assault')
+require('scripts/globals/besieged')
 require('scripts/globals/daily_reset')
 require('scripts/globals/gear_sets')
+require('scripts/globals/mythic')
 require('scripts/globals/quests')
+require('scripts/globals/salvage')
+require('scripts/globals/sky_access')
 require('scripts/globals/teleports')
 require('scripts/events/login_campaign')
 -----------------------------------
@@ -236,6 +241,14 @@ xi.player.onGameIn = function(player, firstLogin, zoning)
     if not zoning then
         xi.dailyReset.check(player)
     end
+
+    -- Simplified content access pins (Salvage / Assault / Sky / Mythic /
+    -- Besieged). Each checks its own CharVar pin and no-ops if unset.
+    xi.salvage.tryEnter(player)
+    xi.assault.tryGrantOrders(player)
+    xi.skyAccess.tryWarp(player)
+    xi.mythic.tryGrant(player)
+    xi.besieged.tryStartSimplified(player)
 
     -- Slight delay to ensure player is fully logged in
     player:timer(2500, function(playerArg)
