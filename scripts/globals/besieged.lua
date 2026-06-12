@@ -310,6 +310,35 @@ local besiegedBosses =
     [3] = { name = 'Thunderclap Sareel Ja', mobId = 16973903 },
 }
 
+-- Reward distribution helper for the simplified-Besieged bosses. Called
+-- from each besieged-boss mob script's onMobDeath. Alliance-distribute
+-- Imperial Standing to everyone in range (100 yalms, matches WKR/GF
+-- range).
+xi.besieged.grantSimplifiedReward = function(mob, player, bossName)
+    local reward = xi.settings.main.BESIEGED_SIMPLIFIED_REWARD or 1000
+    if reward <= 0 then
+        return
+    end
+
+    local recipients = {}
+    local alliance = player:getAlliance()
+    if alliance and #alliance > 0 then
+        for _, m in pairs(alliance) do
+            if m and m:checkDistance(mob) <= 100 then
+                table.insert(recipients, m)
+            end
+        end
+    else
+        table.insert(recipients, player)
+    end
+
+    for _, m in pairs(recipients) do
+        m:addCurrency('imperial_standing', reward)
+        m:printToPlayer(string.format('Defeated %s. +%d Imperial Standing (total: %d).',
+            bossName, reward, m:getCurrency('imperial_standing')))
+    end
+end
+
 xi.besieged.tryStartSimplified = function(player)
     if not player then
         return false

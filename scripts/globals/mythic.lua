@@ -4,9 +4,21 @@
 -- Retail mythics gate behind a long quest chain (Magnificent Mossbed →
 -- Stop! Imposter! → Pulling the Strings), 49 Dynamis-Bastok runs to pop
 -- the Goldsmith NM, plus 50,000 Alexandrite contributed to the Trial of
--- the Magians. This module bypasses the chain entirely: player pins a
--- mythic slot, the next onGameIn grants the base (lv75) mythic for that
--- slot. Upgrade trials still go through Magian Moogles (already wired).
+-- the Magians. This module bypasses the quest chain entirely: player
+-- pins a mythic slot, the next onGameIn grants a usable mythic for that
+-- slot.
+--
+-- Grant tier per job:
+--   * 18 of 20 jobs: granted the **lv75 mythic** (e.g. YAGRUSH_75).
+--     Magian Moogles in Ru'Lude Gardens have full trial paths from _75
+--     through _99 / ilvl 119 — verified against
+--     scripts/globals/magian_data.lua trial entries.
+--   * THF (Twashtar) and SCH (Idris): granted the **ilvl 119 finished
+--     version** (TWASHTAR_119_III = 20587, IDRIS_119_II = 21080). These
+--     two mythics have **no Magian trial path** in this server's
+--     magian_data.lua (Twashtar/Idris were added later in retail's
+--     lifecycle and use different progression). Granting a finished
+--     version keeps the system complete for those jobs.
 --
 -- Usage:
 --   !setvar Mythic_Selection N    (1-20, see table below)
@@ -14,9 +26,6 @@
 --
 -- Costs settings main.MYTHIC_GRANT_COST in Imperial Standing (default
 -- 50000). Set to 0 to give them away free.
---
--- 18 of 22 jobs have a mythic in retail; the four (BLU lacks one until
--- 2010 patch; SCH and DNC came later; PUP late) are all covered here.
 -----------------------------------
 require('scripts/globals/npc_util')
 -----------------------------------
@@ -25,29 +34,30 @@ xi.mythic = xi.mythic or {}
 
 local mythicPinVar = 'Mythic_Selection'
 
--- All canonical mythic weapons. Names match item_basic.sql entries.
+-- 18 mythics granted at _75 (Magian trial start) + 2 pre-finished (no
+-- trial path documented in magian_data.lua).
 local mythicWeapons =
 {
-    [ 1] = { job = 'WAR', name = 'Conqueror',     itemId = 18971 },
-    [ 2] = { job = 'MNK', name = 'Glanzfaust',    itemId = 18972 },
-    [ 3] = { job = 'WHM', name = 'Yagrush',       itemId = 18973 },
-    [ 4] = { job = 'BLM', name = 'Laevateinn',    itemId = 18974 },
-    [ 5] = { job = 'RDM', name = 'Murgleis',      itemId = 18975 },
-    [ 6] = { job = 'THF', name = 'Twashtar',      itemId = 19398 },
-    [ 7] = { job = 'PLD', name = 'Burtgang',      itemId = 18977 },
-    [ 8] = { job = 'DRK', name = 'Liberator',     itemId = 18978 },
-    [ 9] = { job = 'BST', name = 'Aymur',         itemId = 18979 },
-    [10] = { job = 'BRD', name = 'Carnwenhan',    itemId = 18980 },
-    [11] = { job = 'RNG', name = 'Gastraphetes',  itemId = 18981 },
-    [12] = { job = 'SAM', name = 'Kogarasumaru',  itemId = 18982 },
-    [13] = { job = 'NIN', name = 'Nagi',          itemId = 18983 },
-    [14] = { job = 'DRG', name = 'Ryunohige',     itemId = 18984 },
-    [15] = { job = 'SMN', name = 'Tupsimati',     itemId = 18970 },
-    [16] = { job = 'BLU', name = 'Tizona',        itemId = 18986 },
-    [17] = { job = 'COR', name = 'Death Penalty', itemId = 18987 },
-    [18] = { job = 'PUP', name = 'Kenkonken',     itemId = 18988 },
-    [19] = { job = 'DNC', name = 'Terpsichore',   itemId = 18969 },
-    [20] = { job = 'SCH', name = 'Idris',         itemId = 21070 },
+    [ 1] = { job = 'WAR', name = 'Conqueror',           itemId = 18991, hasMagianPath = true  },
+    [ 2] = { job = 'MNK', name = 'Glanzfaust',          itemId = 18992, hasMagianPath = true  },
+    [ 3] = { job = 'WHM', name = 'Yagrush',             itemId = 18993, hasMagianPath = true  },
+    [ 4] = { job = 'BLM', name = 'Laevateinn',          itemId = 18994, hasMagianPath = true  },
+    [ 5] = { job = 'RDM', name = 'Murgleis',            itemId = 18995, hasMagianPath = true  },
+    [ 6] = { job = 'THF', name = 'Twashtar (ilvl 119)', itemId = 20587, hasMagianPath = false },
+    [ 7] = { job = 'PLD', name = 'Burtgang',            itemId = 18997, hasMagianPath = true  },
+    [ 8] = { job = 'DRK', name = 'Liberator',           itemId = 18998, hasMagianPath = true  },
+    [ 9] = { job = 'BST', name = 'Aymur',               itemId = 18999, hasMagianPath = true  },
+    [10] = { job = 'BRD', name = 'Carnwenhan',          itemId = 19000, hasMagianPath = true  },
+    [11] = { job = 'RNG', name = 'Gastraphetes',        itemId = 19001, hasMagianPath = true  },
+    [12] = { job = 'SAM', name = 'Kogarasumaru',        itemId = 19002, hasMagianPath = true  },
+    [13] = { job = 'NIN', name = 'Nagi',                itemId = 19003, hasMagianPath = true  },
+    [14] = { job = 'DRG', name = 'Ryunohige',           itemId = 19004, hasMagianPath = true  },
+    [15] = { job = 'SMN', name = 'Tupsimati',           itemId = 18990, hasMagianPath = true  },
+    [16] = { job = 'BLU', name = 'Tizona',              itemId = 19006, hasMagianPath = true  },
+    [17] = { job = 'COR', name = 'Death Penalty',       itemId = 19007, hasMagianPath = true  },
+    [18] = { job = 'PUP', name = 'Kenkonken',           itemId = 19008, hasMagianPath = true  },
+    [19] = { job = 'DNC', name = 'Terpsichore',         itemId = 18989, hasMagianPath = true  },
+    [20] = { job = 'SCH', name = 'Idris (ilvl 119)',    itemId = 21080, hasMagianPath = false },
 }
 
 xi.mythic.tryGrant = function(player)
@@ -91,6 +101,10 @@ xi.mythic.tryGrant = function(player)
     end
 
     player:setCharVar(mythicPinVar, 0)
-    player:printToPlayer(string.format('%s (%s mythic) granted. Upgrade via Magian Moogles in Ru\'Lude Gardens.', entry.name, entry.job))
+    if entry.hasMagianPath then
+        player:printToPlayer(string.format('%s (%s mythic, lv75) granted. Upgrade via Magian Moogles in Ru\'Lude Gardens.', entry.name, entry.job))
+    else
+        player:printToPlayer(string.format('%s granted (already at ilvl 119 — no further trial path needed).', entry.name))
+    end
     return true
 end
