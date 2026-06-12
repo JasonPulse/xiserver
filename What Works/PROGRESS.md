@@ -252,6 +252,7 @@ All auto-complete on zone-in; tracked in `ROV_TODO.md`:
 - [ ] ROV 3-26 The Winds of Time (Metus) — Empyreal Paradox, pool 4820
 - [ ] ROV 3-34 The Orb's Radiance (Cloud of Darkness) — Reisenjima Sanctorium, pool 4819 (final boss)
 - [ ] WotG 51 Maiden of the Dusk (Lilith) — Walk_of_Echoes battlefield dir missing entirely
+  - **xidat findings (2026-06-09)**: Walk_of_Echoes (zone 182) has 80 entities and exposes battlefield CSIDs **32000, 32001, 32002, 32003, 32004, 32005** on the zone-server entity `0x7FFFFFF0` (standard BCNM trigger). Entry NPCs **17523214** and **17523217** (door variants) expose CSID 32000/32001 as well. Six battlefield slots (32000–32005) likely map to: Lilith (Maiden of the Dusk), Tenzen/When Wills Collide (WotG 46), and 4 other WoE/ROV variants. Wiring needs: battlefield script in `scripts/battlefields/Walk_of_Echoes/` + Ornate_Door NPC wired to CSID 32000 entry / 32001 win events.
 
 ### Verification queue — new shipments this session (2026-06-09)
 

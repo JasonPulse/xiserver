@@ -38,7 +38,8 @@ _REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if _REPO not in sys.path:
     sys.path.insert(0, _REPO)
 
-from tools.headlessxi.hxiclient import HXIClient   # noqa: E402
+# pylint: disable=import-error,wrong-import-position
+from tools.headlessxi.hxiclient import HXIClient  # noqa: E402
 from tools.headlessxi.util import util, PACKET_HEAD  # noqa: E402
 
 BIND_HOST = "0.0.0.0"
@@ -52,7 +53,7 @@ def to_map_5b(unique_no, act_index, csid, option, mode_end=True):
     body = 0x14  # 20 bytes
     data = bytearray(PACKET_HEAD + body + 16)  # head + body + md5
     data[PACKET_HEAD + 0x00] = 0x5B
-    data[PACKET_HEAD + 0x01] = body // 4       # size in 4-byte words
+    data[PACKET_HEAD + 0x01] = body // 4  # size in 4-byte words
     struct.pack_into("<I", data, PACKET_HEAD + 0x04, unique_no & 0xFFFFFFFF)
     struct.pack_into("<I", data, PACKET_HEAD + 0x08, option & 0xFFFFFFFF)
     struct.pack_into("<H", data, PACKET_HEAD + 0x0C, act_index & 0xFFFF)
@@ -83,10 +84,17 @@ class AgentBridge(HXIClient):
             conn, _ = srv.accept()
             with self.clients_lock:
                 self.clients.append(conn)
-            self._emit_to(conn, {"type": "hello", "puppet": "headless",
-                                 "char": getattr(self, "char_name", "")})
-            threading.Thread(target=self._client_loop, args=(conn,),
-                             daemon=True).start()
+            self._emit_to(
+                conn,
+                {
+                    "type": "hello",
+                    "puppet": "headless",
+                    "char": getattr(self, "char_name", ""),
+                },
+            )
+            threading.Thread(
+                target=self._client_loop, args=(conn,), daemon=True
+            ).start()
 
     def _emit_to(self, conn, obj):
         try:
@@ -130,23 +138,33 @@ class AgentBridge(HXIClient):
         if cmd == "ping":
             self._emit_to(conn, {"type": "pong"})
         elif cmd == "send":
-            self.send_say(msg["text"])   # GM `!cs ...` is invoked via chat
+            self.send_say(msg["text"])  # GM `!cs ...` is invoked via chat
             self._emit_to(conn, {"type": "ack", "cmd": "send"})
         elif cmd == "answer":
             if not self.active_event:
-                self._emit_to(conn, {"type": "error",
-                                     "msg": "no active event captured yet"})
+                self._emit_to(
+                    conn, {"type": "error", "msg": "no active event captured yet"}
+                )
                 return
             ev = self.active_event
-            pkt = to_map_5b(ev["unique_no"], ev["act_index"], ev["csid"],
-                            int(msg.get("option", 0)),
-                            mode_end=(msg.get("mode", "end") == "end"))
+            pkt = to_map_5b(
+                ev["unique_no"],
+                ev["act_index"],
+                ev["csid"],
+                int(msg.get("option", 0)),
+                mode_end=(msg.get("mode", "end") == "end"),
+            )
             self.map_sock.sendto(pkt, self.map_server)
             self._emit_to(conn, {"type": "ack", "cmd": "answer"})
         elif cmd == "state":
-            self._emit_to(conn, {"type": "state",
-                                 "char": getattr(self, "char_name", ""),
-                                 "note": "headless: no render; mechanical state only"})
+            self._emit_to(
+                conn,
+                {
+                    "type": "state",
+                    "char": getattr(self, "char_name", ""),
+                    "note": "headless: no render; mechanical state only",
+                },
+            )
         else:
             self._emit_to(conn, {"type": "error", "msg": f"unknown cmd {cmd}"})
 
@@ -154,30 +172,49 @@ class AgentBridge(HXIClient):
 
     def parse_incoming_packet(self, data):
         """Override HXIClient's stub. Pipeline to implement against a live server:
-            1) self.bf.decrypt(...)  de-blowfish the map payload
-            2) decompress.py         inflate the compressed block
-            3) walk sub-packets: each starts [u16 id_and_size]; id = low 9 bits,
-               size = high 7 bits (in 4-byte words)
-            4) for id in (0x032, 0x033, 0x034): parse fields, call on_event_*
+        1) self.bf.decrypt(...)  de-blowfish the map payload
+        2) decompress.py         inflate the compressed block
+        3) walk sub-packets: each starts [u16 id_and_size]; id = low 9 bits,
+           size = high 7 bits (in 4-byte words)
+        4) for id in (0x032, 0x033, 0x034): parse fields, call on_event_*
         """
         # TODO(1-3): decrypt + decompress + split. Until done, nothing is parsed.
         return
 
     def on_event_in(self, csid, unique_no, act_index, params, raw_hex):
         """Call this from parse_incoming_packet once 0x032 is decoded."""
-        self.active_event = {"unique_no": unique_no, "act_index": act_index,
-                             "csid": csid}
-        self.broadcast({"type": "event_in", "id": "0x032", "csid": csid,
-                        "unique_no": unique_no, "act_index": act_index,
-                        "params": params, "raw": raw_hex})
+        self.active_event = {
+            "unique_no": unique_no,
+            "act_index": act_index,
+            "csid": csid,
+        }
+        self.broadcast(
+            {
+                "type": "event_in",
+                "id": "0x032",
+                "csid": csid,
+                "unique_no": unique_no,
+                "act_index": act_index,
+                "params": params,
+                "raw": raw_hex,
+            }
+        )
 
     def on_event_update(self, csid, params, raw_hex):
-        self.broadcast({"type": "event_update", "id": "0x034", "csid": csid,
-                        "params": params, "raw": raw_hex})
+        self.broadcast(
+            {
+                "type": "event_update",
+                "id": "0x034",
+                "csid": csid,
+                "params": params,
+                "raw": raw_hex,
+            }
+        )
 
 
 def main():
     import argparse
+
     ap = argparse.ArgumentParser(description="headless FFXI puppet bridge")
     ap.add_argument("--user", required=True)
     ap.add_argument("--password", required=True)
