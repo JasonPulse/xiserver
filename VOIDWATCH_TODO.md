@@ -58,16 +58,16 @@
 | Southern San d'Oria | 17719636 | 975,993 | `Southern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [x] |
 | Bastok Markets | 17739952 | 10,24 | `Bastok_Markets/npcs/Voidwatch_Purveyor.lua` | [x] |
 | Windurst Waters | 17752375 | 1034 | `Windurst_Waters/npcs/Voidwatch_Purveyor.lua` | [x] |
-| Lower Jeuno | 17780980 | 10109 | `Lower_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Upper Jeuno | 17776885 | 10213 | `Upper_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Port Jeuno | 17784986 | 351 | `Port_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Ru'Lude Gardens | 17772838 | 10187 | `RuLude_Gardens/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Port Windurst | 17760468 | 875 | `Port_Windurst/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Northern San d'Oria | 17723671 | 877 | `Northern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Bastok Mines | 17735871 | 288 | `Bastok_Mines/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Port Bastok | 17744058 | 32718-32720 | `Port_Bastok/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Windurst Woods | 17764602 | 836,848 | `Windurst_Woods/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Aht Urhgan Whitegate | 16982636 | 968 | `Aht_Urhgan_Whitegate/npcs/Voidwatch_Purveyor.lua` | [ ] |
+| Lower Jeuno | 17780980 | 10109 | `Lower_Jeuno/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Upper Jeuno | 17776885 | 10213 | `Upper_Jeuno/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Port Jeuno | 17784986 | 351 | `Port_Jeuno/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Ru'Lude Gardens | 17772838 | 10187 | `RuLude_Gardens/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Port Windurst | 17760468 | 875 | `Port_Windurst/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Northern San d'Oria | 17723671 | 877 | `Northern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Bastok Mines | 17735871 | 288 | `Bastok_Mines/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Port Bastok | 17744058 | 32718-32720 | `Port_Bastok/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Windurst Woods | 17764602 | 836,848 | `Windurst_Woods/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Aht Urhgan Whitegate | 16982636 | 968 | `Aht_Urhgan_Whitegate/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
 
 ### 2C. Atmacite Refiner (3 city locations with CSIDs)
 
@@ -81,7 +81,7 @@
 
 | Zone | Entity ID | CSIDs | Status |
 |------|-----------|-------|--------|
-| Jugner Forest | 17203945 | 61,62 | [ ] |
+| Jugner Forest | 17203945 | 61,62 | [x] (2026-06-15) |
 
 ---
 
