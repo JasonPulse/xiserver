@@ -45,11 +45,11 @@
 |------|-----------|-------|--------|--------|
 | Southern San d'Oria | 17719635 | 977,978,979,981-985,963,993 | `Southern_San_dOria/npcs/Voidwatch_Officer.lua` | [x] |
 | Bastok Markets | 17739951 | 11,12,13,16-19,21,9,24 | `Bastok_Markets/npcs/Voidwatch_Officer.lua` | [x] |
-| Windurst Waters | 17752374 | 1035-1037,1039-1043,1024 | `Windurst_Waters/npcs/Voidwatch_Officer.lua` | [ ] |
-| Batallia Downs | 17207943 | 10-17,8 | `Batallia_Downs/npcs/Voidwatch_Officer.lua` | [ ] |
-| Rolanberry Fields | 17228397 | 9-16,7 | `Rolanberry_Fields/npcs/Voidwatch_Officer.lua` | [ ] |
-| Sauromugue Champaign | 17269282 | 10-17,8 | `Sauromugue_Champaign/npcs/Voidwatch_Officer.lua` | [ ] |
-| Qufim Island | 17293815 | 52-59,50 | `Qufim_Island/npcs/Voidwatch_Officer.lua` | [ ] |
+| Windurst Waters | 17752374 | 1035-1037,1039-1043,1024 | `Windurst_Waters/npcs/Voidwatch_Officer.lua` | [x] |
+| Batallia Downs | 17207943 | 10-17,8 | `Batallia_Downs/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
+| Rolanberry Fields | 17228397 | 9-16,7 | `Rolanberry_Fields/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
+| Sauromugue Champaign | 17269282 | 10-17,8 | `Sauromugue_Champaign/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
+| Qufim Island | 17293815 | 52-59,50 | `Qufim_Island/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
 
 ### 2B. Voidwatch Purveyor (13 locations with CSIDs)
 
