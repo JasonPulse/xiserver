@@ -34,8 +34,16 @@ xi.mythic = xi.mythic or {}
 
 local mythicPinVar = 'Mythic_Selection'
 
--- 18 mythics granted at _75 (Magian trial start) + 2 pre-finished (no
--- trial path documented in magian_data.lua).
+-- 20 retail Mythic weapons (verified against bg-wiki Mythic_Weapons),
+-- granted at _75 (Magian trial start point). Plus 2 Ergon weapons
+-- (Idris=GEO, Epeolatry=RUN) added with newer jobs — no Magian chain
+-- documented, so granted at ilvl 119 final form.
+--
+-- Earlier mapping errors corrected on 2026-06-15 after bg-wiki audit:
+--   slot 6 THF was Twashtar (Empyrean) -> now Vajra (THF Mythic)
+--   slot 15 SMN was Tupsimati -> now Nirvana (SMN Mythic, Tupsimati is SCH)
+--   slot 20 SCH was Idris (GEO Ergon) -> now Tupsimati (SCH Mythic)
+-- GEO Ergon (Idris) and RUN Ergon (Epeolatry) added as slots 21-22.
 local mythicWeapons =
 {
     [ 1] = { job = 'WAR', name = 'Conqueror',           itemId = 18991, hasMagianPath = true  },
@@ -43,7 +51,7 @@ local mythicWeapons =
     [ 3] = { job = 'WHM', name = 'Yagrush',             itemId = 18993, hasMagianPath = true  },
     [ 4] = { job = 'BLM', name = 'Laevateinn',          itemId = 18994, hasMagianPath = true  },
     [ 5] = { job = 'RDM', name = 'Murgleis',            itemId = 18995, hasMagianPath = true  },
-    [ 6] = { job = 'THF', name = 'Twashtar (ilvl 119)', itemId = 20587, hasMagianPath = false },
+    [ 6] = { job = 'THF', name = 'Vajra',               itemId = 18996, hasMagianPath = true  },
     [ 7] = { job = 'PLD', name = 'Burtgang',            itemId = 18997, hasMagianPath = true  },
     [ 8] = { job = 'DRK', name = 'Liberator',           itemId = 18998, hasMagianPath = true  },
     [ 9] = { job = 'BST', name = 'Aymur',               itemId = 18999, hasMagianPath = true  },
@@ -52,12 +60,14 @@ local mythicWeapons =
     [12] = { job = 'SAM', name = 'Kogarasumaru',        itemId = 19002, hasMagianPath = true  },
     [13] = { job = 'NIN', name = 'Nagi',                itemId = 19003, hasMagianPath = true  },
     [14] = { job = 'DRG', name = 'Ryunohige',           itemId = 19004, hasMagianPath = true  },
-    [15] = { job = 'SMN', name = 'Tupsimati',           itemId = 18990, hasMagianPath = true  },
+    [15] = { job = 'SMN', name = 'Nirvana',             itemId = 19005, hasMagianPath = true  },
     [16] = { job = 'BLU', name = 'Tizona',              itemId = 19006, hasMagianPath = true  },
     [17] = { job = 'COR', name = 'Death Penalty',       itemId = 19007, hasMagianPath = true  },
     [18] = { job = 'PUP', name = 'Kenkonken',           itemId = 19008, hasMagianPath = true  },
     [19] = { job = 'DNC', name = 'Terpsichore',         itemId = 18989, hasMagianPath = true  },
-    [20] = { job = 'SCH', name = 'Idris (ilvl 119)',    itemId = 21080, hasMagianPath = false },
+    [20] = { job = 'SCH', name = 'Tupsimati',           itemId = 18990, hasMagianPath = true  },
+    [21] = { job = 'GEO', name = 'Idris (ilvl 119)',    itemId = 21080, hasMagianPath = false },
+    [22] = { job = 'RUN', name = 'Epeolatry',           itemId = 20753, hasMagianPath = false },
 }
 
 xi.mythic.tryGrant = function(player)
