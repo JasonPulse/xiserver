@@ -89,17 +89,17 @@
 
 ### 3A. Planar Rift CSIDs (all zones use 6000/6001/6002 for rifts, 6003/6004/6005 for pyxis)
 
-| Zone | Rift Entity IDs | Pyxis Entity IDs |
-|------|----------------|-----------------|
-| East Ronfaure | 17191577-79 | 17191580-82 |
-| West Sarutabaruta | 17248914-16 | 17248917-19 |
-| North Gustaberg | 17212116-18 | 17212119-21 |
-| Jugner Forest | 17203939-41 | 17203942-44 |
-| Ordelle's Caves | 17568199-201 | 17568202-04 |
-| Gusgen Mines | 17580411-13 | 17580414-16 |
-| Pashhow Marshlands | 17224371-73 | 17224374-76 |
-| Maze of Shakhrami | 17588783-85 | 17588786-88 |
-| Meriphataud Mountains | 17265315-17 | 17265318-20 |
+| Zone | Rift Entity IDs | Pyxis Entity IDs | Status |
+|------|----------------|-----------------|---|
+| East Ronfaure | 17191577-79 | 17191580-82 | [x] (2026-06-15) |
+| West Sarutabaruta | 17248914-16 | 17248917-19 | [x] (2026-06-15) |
+| North Gustaberg | 17212116-18 | 17212119-21 | [x] (2026-06-15) |
+| Jugner Forest | 17203939-41 | 17203942-44 | [x] (2026-06-15) |
+| Ordelle's Caves | 17568199-201 | 17568202-04 | [x] (2026-06-15) |
+| Gusgen Mines | 17580411-13 | 17580414-16 | [x] (2026-06-15) |
+| Pashhow Marshlands | 17224371-73 | 17224374-76 | [x] (2026-06-15) |
+| Maze of Shakhrami | 17588783-85 | 17588786-88 | [x] (2026-06-15) |
+| Meriphataud Mountains | 17265315-17 | 17265318-20 | [x] (2026-06-15) |
 
 ### 3B. Battle Engine
 - [ ] **Voidwatcher status effect** — proximity check to rift (~50 foot leash)
