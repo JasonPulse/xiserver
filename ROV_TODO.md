@@ -15,14 +15,15 @@
 
 ## Stubbed Boss Battles
 
-All boss fights currently auto-complete on zone-in. Mob data exists in SQL for all except Disjoined One.
+Three of 5 ROV boss missions now have real `onMobDeath` handlers (Balamor / Sempurne / Metus, all 2026-06-16). Disjoined One still SQL-blocked (mob_groups.poolId = 0); Cloud of Darkness is the ROV final boss with a more complex multi-phase requirement.
 
 ### ROV 2-36 — Pretender to the Throne (Balamor)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/2_36_Pretender_to_the_Throne.lua`
-- **Zone**: Escha - Ru'Aun
-- **Boss**: Balamor
-- **Event Data**: Escha Ru'Aun events 6 (Selh'teus/Balamor pre-fight) and 7 (post-fight)
-- **Mob Data**: Needs investigation
+- **Zone**: Escha - Ru'Aun (zone 289)
+- **Boss**: Balamor — entity 17961637 (group 95, pool 5631)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`. Mob spawning is still GM-required (no QM trigger yet), but mission progression now requires the actual fight.
+- **Event Data**: Escha Ru'Aun events 6 (Selh'teus/Balamor pre-fight) and 7 (post-fight) — not wired into the script; players still need GM to fire them for the full cinematic.
 - **Difficulty**: Medium
 
 ### ROV 2-39 — Both Paths Taken (Disjoined One)
@@ -30,27 +31,27 @@ All boss fights currently auto-complete on zone-in. Mob data exists in SQL for a
 - **Zone**: Empyreal Paradox (zone 36)
 - **Boss**: Disjoined One
 - **Battlefield**: Listed in Empyreal Paradox event 32000 as "Both Paths Taken"
-- **Mob Data**: INCOMPLETE — mob_groups entry exists but NO mob_pools or mob_spawn_points entries
-- **SQL needed**: mob_pools entry (pool ID, family, stats) and mob_spawn_points
+- **Mob Data**: INCOMPLETE — mob_spawn_points entries (16924685/87/89) exist but `mob_groups` group ID 5 has `poolId = 0`, meaning no pool stats. SQL fix needed: add a `mob_pools` entry and link group 5 to it before the mob can be properly spawned. Auto-complete-on-zone-in retained until SQL ships.
 - **Difficulty**: Medium-Hard
 
 ### ROV 3-17 — No Time Like the Future (Sempurne)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/3_17_No_Time_Like_the_Future.lua`
 - **Zone**: Desuetia - Empyreal Paradox (zone 290) — NOT regular Empyreal Paradox
-- **Boss**: Sempurne
+- **Boss**: Sempurne — entity 17965057 (group 1, pool 4914, lv125 / 20000 HP)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`. Earlier stub fired in zone 36 (wrong zone); fixed to fire in zone 290.
 - **Battlefield**: Event 32000 in Desuetia-Empyreal Paradox
-- **Event Data**: Event 2 (Sempurne dialogue), Cait Sith events 1-8 (cutscene support)
-- **Mob Data**: Pool ID 4914, Family 475, Level 125, HP 20000, 3 spawn points
-- **Mob Resistances**: Not found — needs investigation
+- **Event Data**: Event 2 (Sempurne dialogue), Cait Sith events 1-8 (cutscene support) — not wired into the script.
 - **Difficulty**: Medium
 
 ### ROV 3-26 — The Winds of Time (Metus)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/3_26_The_Winds_of_Time.lua`
 - **Zone**: Empyreal Paradox (zone 36)
-- **Boss**: Metus
+- **Boss**: Metus — entity 16924721 (group 8, pool 4820, lv125 / 20000 HP)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`.
 - **Battlefield**: Listed in Empyreal Paradox event 32000 as "The Winds of Time"
-- **Event Data**: Empyreal Paradox events 9-17 surround this fight
-- **Mob Data**: Pool ID 4820, Family 478 (Promathia-Metus), Level 125, HP 20000, 3 spawn points
+- **Event Data**: Empyreal Paradox events 9-17 surround this fight — not wired into the script.
 - **Mob Resistances**: mob_resistances.sql line 529
 - **Difficulty**: Medium (likely multi-phase)
 

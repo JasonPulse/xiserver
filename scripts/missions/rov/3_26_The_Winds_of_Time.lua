@@ -3,8 +3,9 @@
 -- Rhapsodies of Vana'diel Mission 3-26
 -----------------------------------
 -- !addmission 13 202
--- Empyreal Paradox - Defeat Metus
--- NOTE: Retail requires defeating Metus. Stubbed to auto-complete.
+-- Empyreal Paradox - Defeat Metus.
+-- Real onMobDeath wired against entity 16924721 (group 8, pool 4820,
+-- lv125 / 20000 HP — pool data verified complete).
 -----------------------------------
 
 local mission = Mission:new(xi.mission.log_id.ROV, xi.mission.id.rov.THE_WINDS_OF_TIME)
@@ -23,10 +24,12 @@ mission.sections =
 
         [xi.zone.EMPYREAL_PARADOX] =
         {
-            onZoneIn = function(player, prevZone)
-                -- TODO: Implement Metus battlefield. Auto-completing for now.
-                mission:complete(player)
-            end,
+            ['Metus'] =
+            {
+                onMobDeath = function(mob, player, optParams)
+                    mission:complete(player)
+                end,
+            },
         },
     },
 }

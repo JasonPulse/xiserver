@@ -4,7 +4,8 @@
 -----------------------------------
 -- !addmission 13 126
 -- Escha - Ru'Aun ??? (battle vs Balamor)
--- NOTE: Retail requires defeating Balamor. Stubbed to auto-complete on zone-in.
+-- Real onMobDeath wired against entity 17961637 (group 95, pool 5631);
+-- mission completes when Balamor is defeated rather than on zone-in.
 -----------------------------------
 
 local mission = Mission:new(xi.mission.log_id.ROV, xi.mission.id.rov.PRETENDER_TO_THE_THRONE)
@@ -23,10 +24,12 @@ mission.sections =
 
         [xi.zone.ESCHA_RUAUN] =
         {
-            onZoneIn = function(player, prevZone)
-                -- TODO: Implement Balamor battlefield. Auto-completing for now.
-                mission:complete(player)
-            end,
+            ['Balamor'] =
+            {
+                onMobDeath = function(mob, player, optParams)
+                    mission:complete(player)
+                end,
+            },
         },
     },
 }
