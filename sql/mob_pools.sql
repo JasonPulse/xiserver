@@ -7413,6 +7413,11 @@ INSERT INTO `mob_pools` VALUES (7314,'Bloodsucker_fished_Vunkerl_S','Bloodsucker
 -- Jug pet pools (skipped to allow keeping them sequential)
 INSERT INTO `mob_pools` VALUES (7500,'Pet_Sweet_Caroline','Pet_Sweet_Caroline',178,0x00008E0B00000000000000000000000000000000,2,2,1,480,100,0,0,0,0,8,0,32,605,129,0,0,0,0,0,766,178,0,12);
 
+-- ROV 2-39 Disjoined One — Empyreal Paradox final-tier ROV boss. Pool
+-- was missing (mob_groups (5,36,'Disjoined_One') had poolId=0); template
+-- copied from Sempurne (4914) since both are ROV humanoid bosses.
+INSERT INTO `mob_pools` VALUES (7501,'Disjoined_One','Disjoined_One',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+
 -- ------------------------------------------------------------
 -- Start of Ambuscade section
 -- NOTE: The mobs are changed every update in the DATs, so using out-of-date

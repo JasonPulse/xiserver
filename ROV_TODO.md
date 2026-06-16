@@ -27,11 +27,16 @@ Three of 5 ROV boss missions now have real `onMobDeath` handlers (Balamor / Semp
 - **Difficulty**: Medium
 
 ### ROV 2-39 — Both Paths Taken (Disjoined One)
+- **Status**: WIRED 2026-06-16 (SQL fix + onMobDeath)
 - **File**: `scripts/missions/rov/2_39_Both_Paths_Taken.lua`
 - **Zone**: Empyreal Paradox (zone 36)
-- **Boss**: Disjoined One
+- **Boss**: Disjoined One — entity 16924685 (group 5, pool **7501 — added in this fix**)
 - **Battlefield**: Listed in Empyreal Paradox event 32000 as "Both Paths Taken"
-- **Mob Data**: INCOMPLETE — mob_spawn_points entries (16924685/87/89) exist but `mob_groups` group ID 5 has `poolId = 0`, meaning no pool stats. SQL fix needed: add a `mob_pools` entry and link group 5 to it before the mob can be properly spawned. Auto-complete-on-zone-in retained until SQL ships.
+- **SQL fix**:
+  - `sql/mob_pools.sql` — added pool 7501 'Disjoined_One' (family 475, Sempurne-equivalent humanoid template)
+  - `sql/mob_groups.sql` — updated row for (groupid=5, zoneid=36, 'Disjoined_One') from `poolid=0, HP=0` → `poolid=7501, HP=20000`
+  - `tools/migrations/052_disjoined_one_mob_pool.py` — idempotent migration that ports the SQL changes to existing live DBs (INSERT... ON DUPLICATE + UPDATE).
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`. Mob now spawns with proper stats; mission progression requires the actual fight.
 - **Difficulty**: Medium-Hard
 
 ### ROV 3-17 — No Time Like the Future (Sempurne)
