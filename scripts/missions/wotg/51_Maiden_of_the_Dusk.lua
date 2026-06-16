@@ -78,6 +78,22 @@ mission.sections =
                 end,
             },
 
+            -- Direct Lilith_Ascendant kill handler. The retail flow expects
+            -- a Walk of Echoes BCNM battlefield to fire event 32001 (which
+            -- sets Status 4 below). The full battlefield instance script
+            -- isn't wired on this server, so we forward the Status-4 set
+            -- on the final-form mob death directly. Lady_Lilith (phase 1)
+            -- doesn't progress the mission — only Lilith_Ascendant kill
+            -- counts (same as retail).
+            ['Lilith_Ascendant'] =
+            {
+                onMobDeath = function(mob, player, optParams)
+                    if mission:getVar(player, 'Status') == 3 then
+                        mission:setVar(player, 'Status', 4)
+                    end
+                end,
+            },
+
             onZoneIn = function(player, prevZone)
                 local missionStatus = mission:getVar(player, 'Status')
 
