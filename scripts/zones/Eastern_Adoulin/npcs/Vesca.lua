@@ -54,6 +54,7 @@ local function tryPinnedPurchase(player)
         return true
     end
 
+    ---@diagnostic disable-next-line: param-type-mismatch
     if not npcUtil.giveItem(player, entry.itemId) then
         player:printToPlayer(string.format('Inventory full — %s not granted.', entry.name))
         return true

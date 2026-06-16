@@ -76,6 +76,7 @@ xi.relic.tryGrant = function(player)
         return true
     end
 
+    ---@diagnostic disable-next-line: param-type-mismatch
     if not npcUtil.giveItem(player, entry.itemId) then
         player:printToPlayer(string.format('Inventory full — %s not granted. Make space and retry.', entry.name))
         return true -- leave pin set so retry on next zone works

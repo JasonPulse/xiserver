@@ -85,6 +85,7 @@ xi.skirmish.grantStoneDrop = function(mob, player, families)
     local family   = families[math.random(#families)]
     local stoneId  = rollStone(family)
 
+    ---@diagnostic disable-next-line: param-type-mismatch
     npcUtil.giveItem(player, stoneId)
 end
 
