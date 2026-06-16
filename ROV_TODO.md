@@ -61,15 +61,14 @@ Three of 5 ROV boss missions now have real `onMobDeath` handlers (Balamor / Semp
 - **Difficulty**: Medium (likely multi-phase)
 
 ### ROV 3-34 — The Orb's Radiance (Cloud of Darkness)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/3_34_The_Orbs_Radiance.lua`
-- **Zone**: Reisenjima Sanctorium (zone 293)
-- **Boss**: Cloud of Darkness
-- **Battlefield**: Event 32000 in Reisenjima Sanctorium ("The Orb's Radiance")
-- **Event Data**: Reisenjima Sanctorium events 12-13 (Iroha/Selh'teus, Cloud of Darkness identified)
-- **Mob Data**: Pool ID 4819, Family 497, Level 130, HP 20000, 3 spawn points
+- **Zone**: Reisenjima Sanctorium (zone 293) — earlier stub fired in EMPYREAL_PARADOX (zone 36), same wrong-zone bug shape as Sempurne. Fixed.
+- **Boss**: Cloud of Darkness — entity 17977400 (group 1, pool 4819, family 497, lv130 / 20000 HP)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)` in the correct zone. Reward chain (Scintillating Rhapsody KI + Cipher: Iroha II + chain to A Rhapsody for the Ages) preserved.
+- **Battlefield**: Event 32000 in Reisenjima Sanctorium — not wired into the script (cinematic still needs !cs verification).
 - **Mob Resistances**: mob_resistances.sql line 512
-- **Cipher Reward**: Retail awards Cipher: Iroha II here — item not in DB
-- **Difficulty**: Hard (final boss, likely complex phases, ally NPCs)
+- **Difficulty**: Hard (final boss, likely complex phases, ally NPCs) — multi-phase mechanics are AI-side.
 
 ---
 
