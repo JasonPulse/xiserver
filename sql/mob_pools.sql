@@ -7418,6 +7418,20 @@ INSERT INTO `mob_pools` VALUES (7500,'Pet_Sweet_Caroline','Pet_Sweet_Caroline',1
 -- copied from Sempurne (4914) since both are ROV humanoid bosses.
 INSERT INTO `mob_pools` VALUES (7501,'Disjoined_One','Disjoined_One',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
 
+-- Omen Caturae (Reisenjima Henge zone 292) — 6 chess-piece bosses (Fu/
+-- Kyou/Kei/Gin/Kin/Ou) + 3 Glassy mid-bosses. mob_groups rows existed
+-- with poolId=0 + HP=0. Template copied from Sempurne (475) for the
+-- Caturae humanoid forms; Glassys use family 168 (humanoid-glass).
+INSERT INTO `mob_pools` VALUES (7502,'Fu','Fu',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7503,'Kyou','Kyou',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7504,'Kei','Kei',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7505,'Gin','Gin',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7506,'Kin','Kin',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7507,'Ou','Ou',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7508,'Glassy_Thinker','Glassy_Thinker',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
+INSERT INTO `mob_pools` VALUES (7509,'Glassy_Craver','Glassy_Craver',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
+INSERT INTO `mob_pools` VALUES (7510,'Glassy_Gorger','Glassy_Gorger',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
+
 -- ------------------------------------------------------------
 -- Start of Ambuscade section
 -- NOTE: The mobs are changed every update in the DATs, so using out-of-date
