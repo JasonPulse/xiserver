@@ -28956,6 +28956,61 @@ INSERT INTO `mob_droplist` VALUES (3411,1,5,@VCOMMON,18121,250); -- Valkyrie's F
 INSERT INTO `mob_droplist` VALUES (3411,1,5,@VCOMMON,16117,250); -- Valhalla Helm (Group 5, Very Common, 24% - 25%)
 INSERT INTO `mob_droplist` VALUES (3411,1,5,@VCOMMON,14577,250); -- Valhalla Breastplate (Group 5, Very Common, 24% - 25%)
 
+-- ============================================================================
+-- Sinister Reign + Lilith drops (authored 2026-06-17 from bg-wiki drop tables)
+-- ============================================================================
+-- DropId 3412: Lilith Ascendant (Walk of Echoes group 57)
+INSERT INTO `mob_droplist` VALUES (3412,0,0,1000,22040,@URARE);   -- Daybreak (URARE, 0.1%)
+INSERT INTO `mob_droplist` VALUES (3412,0,0,1000,21635,@VRARE);   -- Malignance Sword (VRARE, 1%)
+INSERT INTO `mob_droplist` VALUES (3412,0,0,1000,22087,@VRARE);   -- Malignance Pole (VRARE, 1%)
+INSERT INTO `mob_droplist` VALUES (3412,0,0,1000,23732,@RARE);    -- Malignance Chapeau (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3412,0,0,1000,23733,@RARE);    -- Malignance Tabard (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3412,0,0,1000,23734,@RARE);    -- Malignance Gloves (RARE, 5%)
+
+-- DropId 3413: August (Sinister Reign Wave 3 final boss, Rala Waterways U group 65)
+INSERT INTO `mob_droplist` VALUES (3413,0,0,1000,10175,@ALWAYS);  -- Cipher: August (ALWAYS, signature drop)
+INSERT INTO `mob_droplist` VALUES (3413,0,0,1000,27764,@COMMON);  -- Founder's Corona (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3413,0,0,1000,27910,@COMMON);  -- Founder's Breastplate (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3413,0,0,1000,28049,@COMMON);  -- Founder's Gauntlets (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3413,0,0,1000,28191,@COMMON);  -- Founder's Hose (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3413,0,0,1000,28330,@COMMON);  -- Founder's Greaves (COMMON, 15%)
+
+-- DropId 3414: Rosulatia (Sinister Reign Wave 2, group 56)
+INSERT INTO `mob_droplist` VALUES (3414,0,0,1000,10176,@ALWAYS);  -- Cipher: Rosulatia (ALWAYS, signature)
+INSERT INTO `mob_droplist` VALUES (3414,0,0,1000,21214,@RARE);    -- Nobility (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3414,0,0,1000,21148,@RARE);    -- Serenity (RARE, 5%)
+
+-- DropId 3415: Ingrid (Sinister Reign Wave 1, group 54)
+INSERT INTO `mob_droplist` VALUES (3415,0,0,1000,10174,@ALWAYS);  -- Cipher: Ingrid II (ALWAYS, signature)
+INSERT INTO `mob_droplist` VALUES (3415,0,0,1000,25630,@COMMON);  -- Dampening Tam (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3415,0,0,1000,20595,@RARE);    -- Malevolence (RARE, 5%)
+
+-- DropId 3416: Sajj'aka (Sinister Reign Wave 3, group 64)
+INSERT INTO `mob_droplist` VALUES (3416,0,0,1000,20705,@RARE);    -- Brilliance (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3416,0,0,1000,21088,@RARE);    -- Divinity (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3416,0,0,1000,25603,@COMMON);  -- Jumalik Helm (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3416,0,0,1000,26972,@COMMON);  -- Jumalik Mail (COMMON, 15%)
+
+-- DropId 3417: Morimar (Sinister Reign Wave 2, group 55)
+INSERT INTO `mob_droplist` VALUES (3417,0,0,1000,20891,@RARE);    -- Brutality (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3417,0,0,1000,20844,@RARE);    -- Ferocity (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3417,0,0,1000,25631,@COMMON);  -- Lilitu Headpiece (COMMON, 15%)
+
+-- DropId 3418: Teodor (Sinister Reign Wave 2, group 46)
+INSERT INTO `mob_droplist` VALUES (3418,0,0,1000,21089,@RARE);    -- Rubicundity (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3418,0,0,1000,26973,@COMMON);  -- Samnuha Coat (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3418,0,0,1000,27295,@COMMON);  -- Samnuha Tights (COMMON, 15%)
+
+-- DropId 3419: Arciela (Sinister Reign Wave 1 partner, group 26)
+INSERT INTO `mob_droplist` VALUES (3419,0,0,1000,27323,@COMMON);  -- Enticer's Pants (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3419,0,0,1000,20978,@RARE);    -- Ochu (RARE, 5%)
+INSERT INTO `mob_droplist` VALUES (3419,0,0,1000,25705,@RARE);    -- Witching Robe (RARE, 5%, Wave 3 reappear)
+INSERT INTO `mob_droplist` VALUES (3419,0,0,1000,20596,@RARE);    -- Taming Sari (RARE, 5%)
+
+-- DropId 3420: Darrcuiln (Sinister Reign Wave 1, group 53)
+INSERT INTO `mob_droplist` VALUES (3420,0,0,1000,27491,@COMMON);  -- Amm Greaves (COMMON, 15%)
+INSERT INTO `mob_droplist` VALUES (3420,0,0,1000,20517,@RARE);    -- Fleshcarvers (RARE, 5%)
+
 /*!40000 ALTER TABLE `mob_droplist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

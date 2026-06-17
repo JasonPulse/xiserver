@@ -12616,7 +12616,7 @@ INSERT INTO `mob_groups` VALUES (53,3189,182,'Portia',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (54,2378,182,'Larzos',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (55,1414,182,'Fourth_Spitewarden',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (56,2316,182,'Lady_Lilith',0,128,0,9800,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (57,2416,182,'Lilith_Ascendant',0,128,0,17000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (57,2416,182,'Lilith_Ascendant',0,128,3412,17000,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (58,1197,182,'Elemental_Gyves',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (59,609,182,'Cait_Sith_Ceithir',0,128,0,0,9999,0,NULL);
 INSERT INTO `mob_groups` VALUES (60,2415,182,'Lilisette',0,128,0,0,0,0,NULL);
@@ -14506,7 +14506,7 @@ INSERT INTO `mob_groups` VALUES (22,0,259,'Sludgeslither_Slime',0,128,0,0,0,0,NU
 INSERT INTO `mob_groups` VALUES (23,0,259,'Karst_Crab',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (24,5507,259,'Zurko-Bazurko',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (25,0,259,'Sverdhried_qm',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (26,5496,259,'Arciela',0,128,0,60000,0,1,NULL);
+INSERT INTO `mob_groups` VALUES (26,5496,259,'Arciela',0,128,3419,60000,0,1,NULL);
 INSERT INTO `mob_groups` VALUES (27,5513,259,'The_Keeper',0,128,0,24000,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (28,5514,259,'Mistdagger',0,128,0,9000,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (29,5515,259,'The_Briars_elv',0,128,0,17000,0,0,NULL);
@@ -14526,17 +14526,17 @@ INSERT INTO `mob_groups` VALUES (42,0,259,'Mistmaw_Tecciztecatl',0,128,0,0,0,0,N
 INSERT INTO `mob_groups` VALUES (43,5505,259,'Balamor',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (44,5503,259,'Balamors_Sycophant',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (45,5504,259,'Regicidal_Dullahan',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (46,5986,259,'Teodor',0,128,0,70000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (46,5986,259,'Teodor',0,128,3418,70000,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (47,0,259,'Pupadi_Dollmohr',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (48,0,259,'Celestin',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (49,0,259,'Fabioso',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (50,0,259,'Tuffle-Buffle',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (51,0,259,'Musto-Rusto',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (52,5998,259,'Ygnas',0,128,0,60000,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (53,5499,259,'Darrcuiln',0,128,0,60000,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (54,5512,259,'Ingrid',0,128,0,60000,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (55,5501,259,'Morimar',0,128,0,70000,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (56,5985,259,'Rosulatia',0,128,0,70000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (52,5998,259,'Ygnas',0,128,3419,60000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (53,5499,259,'Darrcuiln',0,128,3420,60000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (54,5512,259,'Ingrid',0,128,3415,60000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (55,5501,259,'Morimar',0,128,3417,70000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (56,5985,259,'Rosulatia',0,128,3414,70000,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (57,0,259,'Cirrus',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (58,4927,259,'Colkhab',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (59,4677,259,'Achuka',0,128,0,0,0,0,NULL);
@@ -14544,8 +14544,8 @@ INSERT INTO `mob_groups` VALUES (60,4925,259,'Tchakka',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (61,4678,259,'Hurkan',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (62,4926,259,'Yumcax',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (63,4799,259,'Kumhau',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (64,7511,259,'Sajjaka',0,128,0,80000,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (65,5984,259,'August',0,128,0,90000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (64,7511,259,'Sajjaka',0,128,3416,80000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (65,5984,259,'August',0,128,3413,90000,0,0,NULL);
 
 -- ------------------------------------------------------------
 -- Yahse_Hunting_Grounds (Zone 260)
