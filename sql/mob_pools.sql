@@ -7432,6 +7432,13 @@ INSERT INTO `mob_pools` VALUES (7508,'Glassy_Thinker','Glassy_Thinker',168,0x000
 INSERT INTO `mob_pools` VALUES (7509,'Glassy_Craver','Glassy_Craver',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
 INSERT INTO `mob_pools` VALUES (7510,'Glassy_Gorger','Glassy_Gorger',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
 
+-- Sinister Reign Sajj'aka — Wave 3 boss in Rala_Waterways_U (zone 259).
+-- mob_groups (64,0,259,'Sajjaka') had poolId=0 + HP=0. Other 8 SR bosses
+-- (Arciela / Darrcuiln / Ingrid / Teodor / Morimar / Rosulatia / August /
+-- Ygnas) use existing pools 5496/5499/5512/5986/5501/5985/5984/5998
+-- respectively. Template copied from Sempurne (475).
+INSERT INTO `mob_pools` VALUES (7511,'Sajjaka','Sajj\\\'aka',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+
 -- ------------------------------------------------------------
 -- Start of Ambuscade section
 -- NOTE: The mobs are changed every update in the DATs, so using out-of-date
