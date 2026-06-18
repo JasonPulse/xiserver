@@ -81,42 +81,50 @@ xi.mythic.tryGrant = function(player)
     end
 
     local entry = mythicWeapons[pinned]
-    if not entry then
-        player:printToPlayer(string.format('Mythic_Selection %d is not valid (1-%d). See mythic.lua.', pinned, #mythicWeapons))
-        player:setCharVar(mythicPinVar, 0)
-        return true
-    end
+    local cost  = xi.settings.main.MYTHIC_GRANT_COST or 50000
 
-    local cost = xi.settings.main.MYTHIC_GRANT_COST or 50000
-    local standing = player:getCurrency('imperial_standing')
-    if cost > 0 and standing < cost then
-        player:printToPlayer(string.format('%s grant costs %d Imperial Standing. You have %d.', entry.name, cost, standing))
-        player:setCharVar(mythicPinVar, 0)
-        return true
-    end
-
-    if player:hasItem(entry.itemId) then
-        player:printToPlayer(string.format('You already own %s.', entry.name))
-        player:setCharVar(mythicPinVar, 0)
-        return true
-    end
-
-    ---@diagnostic disable-next-line: param-type-mismatch
-    if not npcUtil.giveItem(player, entry.itemId) then
-        player:printToPlayer(string.format('Inventory full — %s not granted. Make space and retry.', entry.name))
-        return true -- leave pin set so retry on next zone works
-    end
-
-    if cost > 0 then
-        player:delCurrency('imperial_standing', cost)
-    end
-
+    -- Defer all client-visible side effects until after zone-in completes:
+    -- messageSpecial + printToPlayer + addItem fired during onGameIn race
+    -- the client's chat/inventory buffer init, so "Obtained:" lines never
+    -- render even though the item is added server-side. Clear the pin
+    -- synchronously to prevent double-grant on rapid zone-ins; restore it
+    -- only if the deferred giveItem fails (inventory full).
     player:setCharVar(mythicPinVar, 0)
-    if entry.hasMagianPath then
-        player:printToPlayer(string.format('%s (%s mythic, lv75) granted. Upgrade via Magian Moogles in Ru\'Lude Gardens.', entry.name, entry.job))
-    else
-        player:printToPlayer(string.format('%s granted (already at ilvl 119 — no further trial path needed).', entry.name))
-    end
+
+    player:timer(3000, function(p)
+        if not entry then
+            p:printToPlayer(string.format('Mythic_Selection %d is not valid (1-%d). See mythic.lua.', pinned, #mythicWeapons))
+            return
+        end
+
+        local standing = p:getCurrency('imperial_standing')
+        if cost > 0 and standing < cost then
+            p:printToPlayer(string.format('%s grant costs %d Imperial Standing. You have %d.', entry.name, cost, standing))
+            return
+        end
+
+        if p:hasItem(entry.itemId) then
+            p:printToPlayer(string.format('You already own %s.', entry.name))
+            return
+        end
+
+        ---@diagnostic disable-next-line: param-type-mismatch
+        if not npcUtil.giveItem(p, entry.itemId) then
+            p:printToPlayer(string.format('Inventory full — %s not granted. Make space and retry.', entry.name))
+            p:setCharVar(mythicPinVar, pinned) -- restore so retry on next zone works
+            return
+        end
+
+        if cost > 0 then
+            p:delCurrency('imperial_standing', cost)
+        end
+
+        if entry.hasMagianPath then
+            p:printToPlayer(string.format('%s (%s mythic, lv75) granted. Upgrade via Magian Moogles in Ru\'Lude Gardens.', entry.name, entry.job))
+        else
+            p:printToPlayer(string.format('%s granted (already at ilvl 119 — no further trial path needed).', entry.name))
+        end
+    end)
 
     return true
 end
