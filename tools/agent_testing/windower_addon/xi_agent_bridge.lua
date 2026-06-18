@@ -299,19 +299,26 @@ windower.register_event('outgoing chunk', function(id, data)
 end)
 
 -- Chat / dialog text capture. Fires for every line that lands in the chat
--- log — NPC say, system message, etc. We forward each line as JSON so the
--- agent can read event dialog directly without screenshots. Mode reference:
+-- log — NPC say, system message, printToPlayer output, etc. We forward
+-- every line as JSON so the agent can read event dialog directly without
+-- screenshots. Mode reference: 6 = system_1 (printToPlayer default),
 -- 144 = system, 150 = NPC say, 151 = NPC shout, etc.
+--
+-- IMPORTANT: we deliberately ignore the `blocked` flag — some Windower
+-- addons (autoexec, etc.) flag system messages as blocked but the message
+-- has still been generated and is meaningful to the agent. Dropping
+-- blocked messages hides printToPlayer output for tests like sky_access
+-- warps, Mog Garden tutorial, mythic grant flows.
 windower.register_event('incoming text', function(original, modified, original_mode, modified_mode, blocked)
-    if blocked then return end
     local text = original or modified
     if not text or text == '' then return end
-    -- Strip leading/trailing whitespace + auto-translate sentinels for cleaner agent input.
+    -- Strip auto-translate sentinels for cleaner agent input.
     text = text:gsub('\30.', ''):gsub('\31.', '')
     broadcast({
         js('type', 'chat'),
         jn('mode', original_mode or 0),
         js('text', text),
+        jn('blocked', blocked and 1 or 0),
     })
 end)
 
