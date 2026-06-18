@@ -405,9 +405,9 @@ auto CItem::getSoulPlateData() -> std::tuple<std::string, uint32, uint8, uint16,
                           (m_extra[16] << 16) |
                           (m_extra[17] << 8) |
                           m_extra[18];
-    uint8  zeni       = m_extra[19];
-    uint16 skillIndex = (m_extra[20] >> 7) + (m_extra[21] << 1) + ((m_extra[22] & 0x03) << 9);
-    uint8  fp         = (m_extra[22] >> 3) + ((m_extra[23] & 0x03) << 4);
+    uint8  zeni         = m_extra[19];
+    uint16 skillIndex   = (m_extra[20] >> 7) + (m_extra[21] << 1) + ((m_extra[22] & 0x03) << 9);
+    uint8  fp           = (m_extra[22] >> 3) + ((m_extra[23] & 0x03) << 4);
     return std::tuple(name, interestData, zeni, skillIndex, fp);
 }
 

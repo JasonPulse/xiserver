@@ -2025,11 +2025,11 @@ void WeaknessTrigger(CBaseEntity* PTarget, WeaknessType level)
         .actiontype = ActionCategory::MobSkillFinish,
         .targets    = {
             {
-                   .actorId = PTarget->id,
-                   .results = {
+                .actorId = PTarget->id,
+                .results = {
                     {
-                           .animation = animationID,
-                           .param     = 2582,
+                        .animation = animationID,
+                        .param     = 2582,
                     },
                 },
             },

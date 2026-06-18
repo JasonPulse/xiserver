@@ -73,11 +73,11 @@ CPetSkillState::CPetSkillState(CPetEntity* PEntity, uint16 targid, uint16 wsid)
             .actionid   = static_cast<uint32_t>(FourCC::SkillUse),
             .targets    = {
                 {
-                       .actorId = PTarget->id,
-                       .results = {
+                    .actorId = PTarget->id,
+                    .results = {
                         {
-                               .param     = m_PSkill->getMobSkillID() > 0 ? m_PSkill->getMobSkillID() : m_PSkill->getID(),
-                               .messageID = m_PSkill->getMobSkillID() > 0 ? MsgBasic::READIES_WS : MsgBasic::READIES_SKILL,
+                            .param     = m_PSkill->getMobSkillID() > 0 ? m_PSkill->getMobSkillID() : m_PSkill->getID(),
+                            .messageID = m_PSkill->getMobSkillID() > 0 ? MsgBasic::READIES_WS : MsgBasic::READIES_SKILL,
                         },
                     },
                 },
