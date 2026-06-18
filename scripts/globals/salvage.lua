@@ -617,8 +617,14 @@ xi.salvage.tryEnter = function(player)
         npcUtil.giveKeyItem(player, entry.map)
     end
 
+    -- Consume the pin + delay the warp: setPos silently returns early when
+    -- player.status == DISAPPEAR (the status during the zone-in callback
+    -- chain). Delay lets the engine flip status to NORMAL before we
+    -- initiate the cross-zone warp.
     player:setCharVar(salvagePinVar, 0)
     player:printToPlayer(string.format('Entering %s...', entry.name))
-    player:setPos(0, 0, 0, 0, entry.zone)
+    player:timer(3000, function(p)
+        p:setPos(0, 0, 0, 0, entry.zone)
+    end)
     return true
 end

@@ -47,8 +47,14 @@ xi.skyAccess.tryWarp = function(player)
         return true
     end
 
+    -- Consume the pin and delay the warp: setPos silently returns early
+    -- when player.status == DISAPPEAR (the status during the zone-in
+    -- callback chain). Delay 3s lets the engine flip status to NORMAL
+    -- before we initiate the cross-zone warp.
     player:setCharVar(skyPinVar, 0)
     player:printToPlayer(string.format('Warping to %s...', dest.name))
-    player:setPos(dest.x, dest.y, dest.z, dest.rot, dest.zone)
+    player:timer(3000, function(p)
+        p:setPos(dest.x, dest.y, dest.z, dest.rot, dest.zone)
+    end)
     return true
 end
