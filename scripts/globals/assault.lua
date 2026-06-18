@@ -198,3 +198,65 @@ xi.assault.adjustMobLevel = function(mob)
         end
     end
 end
+
+-----------------------------------
+-- Simplified assault dispatch (4-player private server).
+--
+-- Retail Assault requires Sorrowful Sage / Bhoy Yhupplo / etc. to dispatch
+-- you with orders, then Runic Portal to warp in. The dispatch event flow
+-- needs in-game CSID verification. This module bypasses the dispatch event
+-- entirely: pin which assault zone, the next onGameIn grants the matching
+-- Assault Orders KI. Once you have the KI, the existing Runic_Portal NPC
+-- in Aht Urhgan Whitegate (already wired) handles the warp.
+--
+-- Usage:
+--   !setvar Assault_Selection N    (1=Leujaoam, 2=Mamool Ja Training Grounds,
+--                                   3=Lebros, 4=Periqia, 5=Ilrusi, 6=Nyzul Isle)
+--   then zone / relog → trigger Runic Portal in Aht Urhgan Whitegate
+-----------------------------------
+local assaultPinVar = 'Assault_Selection'
+local assaultOrdersList =
+{
+    [1] = { name = 'Leujaoam Sanctum',           ki = xi.ki.LEUJAOAM_ASSAULT_ORDERS   },
+    [2] = { name = 'Mamool Ja Training Grounds', ki = xi.ki.MAMOOL_JA_ASSAULT_ORDERS  },
+    [3] = { name = 'Lebros Cavern',              ki = xi.ki.LEBROS_ASSAULT_ORDERS     },
+    [4] = { name = 'Periqia',                    ki = xi.ki.PERIQIA_ASSAULT_ORDERS    },
+    [5] = { name = 'Ilrusi Atoll',               ki = xi.ki.ILRUSI_ASSAULT_ORDERS     },
+    [6] = { name = 'Nyzul Isle',                 ki = xi.ki.NYZUL_ISLE_ASSAULT_ORDERS },
+}
+
+xi.assault.tryGrantOrders = function(player)
+    if not player then
+        return false
+    end
+
+    local pinned = player:getCharVar(assaultPinVar)
+    if pinned == 0 then
+        return false
+    end
+
+    local entry = assaultOrdersList[pinned]
+    if not entry then
+        player:printToPlayer(string.format('Assault_Selection %d is not valid (1-6). See assault.lua.', pinned))
+        player:setCharVar(assaultPinVar, 0)
+        return true
+    end
+
+    -- Clear any existing assault orders before granting (only one at a time).
+    for _, other in pairs(assaultOrdersList) do
+        if other.ki ~= entry.ki and player:hasKeyItem(other.ki) then
+            player:delKeyItem(other.ki)
+        end
+    end
+
+    if player:hasKeyItem(entry.ki) then
+        player:printToPlayer(string.format('You already hold %s Assault Orders. Trigger the Runic Portal to warp in.', entry.name))
+        player:setCharVar(assaultPinVar, 0)
+        return true
+    end
+
+    npcUtil.giveKeyItem(player, entry.ki)
+    player:setCharVar(assaultPinVar, 0)
+    player:printToPlayer(string.format('%s Assault Orders granted. Trigger the Runic Portal in Aht Urhgan Whitegate to warp in.', entry.name))
+    return true
+end

@@ -1,6 +1,14 @@
 require('scripts/globals/abyssea')
+require('scripts/globals/assault')
+require('scripts/globals/besieged')
+require('scripts/globals/daily_reset')
+require('scripts/globals/empyrean')
 require('scripts/globals/gear_sets')
+require('scripts/globals/mythic')
 require('scripts/globals/quests')
+require('scripts/globals/relic')
+require('scripts/globals/salvage')
+require('scripts/globals/sky_access')
 require('scripts/globals/teleports')
 require('scripts/events/login_campaign')
 -----------------------------------
@@ -228,6 +236,23 @@ xi.player.onGameIn = function(player, firstLogin, zoning)
     -- remember time player zoned in (e.g., to support zone-in delays)
     player:setLocalVar('ZoneInTime', GetSystemTime())
     player:setLocalVar('ZoningIn', 1)
+
+    -- Reset cumulative daily counters (domain_points_daily etc.) when a new
+    -- Vana'diel day has rolled over since the player was last seen. Self-
+    -- rotating "last-claimed-day" charvars don't need this.
+    if not zoning then
+        xi.dailyReset.check(player)
+    end
+
+    -- Simplified content access pins (Salvage / Assault / Sky / REMA /
+    -- Besieged). Each checks its own CharVar pin and no-ops if unset.
+    xi.salvage.tryEnter(player)
+    xi.assault.tryGrantOrders(player)
+    xi.skyAccess.tryWarp(player)
+    xi.mythic.tryGrant(player)
+    xi.relic.tryGrant(player)
+    xi.empyrean.tryGrant(player)
+    xi.besieged.tryStartSimplified(player)
 
     -- Slight delay to ensure player is fully logged in
     player:timer(2500, function(playerArg)

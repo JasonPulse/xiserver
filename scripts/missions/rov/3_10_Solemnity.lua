@@ -3,7 +3,9 @@
 -- Rhapsodies of Vana'diel Mission 3-10
 -----------------------------------
 -- !addmission 13 162
--- Eastern Adoulin
+-- Eastern Adoulin zone-in fires CSID 1551 (Fremilla's farcical eulogy
+-- for Melvien Castellucci at the council). Verified via puppet bridge
+-- 2026-06-18.
 -----------------------------------
 
 local mission = Mission:new(xi.mission.log_id.ROV, xi.mission.id.rov.SOLEMNITY)
@@ -23,9 +25,15 @@ mission.sections =
         [xi.zone.EASTERN_ADOULIN] =
         {
             onZoneIn = function(player, prevZone)
-                -- TODO: Verify event ID from packet captures
-                mission:complete(player)
+                return 1551
             end,
+
+            onEventFinish =
+            {
+                [1551] = function(player, csid, option, npc)
+                    mission:complete(player)
+                end,
+            },
         },
     },
 }

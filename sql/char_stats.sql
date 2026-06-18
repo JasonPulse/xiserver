@@ -29,5 +29,9 @@ CREATE TABLE IF NOT EXISTS `char_stats` (
   `pet_level` smallint(3) unsigned NOT NULL DEFAULT '0',
   `pet_hp` smallint(4) unsigned NOT NULL DEFAULT '0',
   `pet_mp` smallint(4) unsigned NOT NULL DEFAULT '0',
+  -- Master Level progression (post-99 once Job Points are capped). 0 = not yet
+  -- earning Exemplar Points. Capped server-side by settings.main.MAX_MASTER_LEVEL.
+  `master_level`    tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `exemplar_points` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`charid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

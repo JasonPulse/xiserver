@@ -51,11 +51,26 @@ local function hasWyvern(player)
     return getWyvern(player) and true or false
 end
 
--- Generic Function for damage-based Jumps
--- TODO: implement Fly High attack +5 job points
+-- Generic Function for damage-based Jumps.
+-- While Fly High is active, the FLY_HIGH_EFFECT JP grants +5 ATT per level
+-- to every jump (Jump/High Jump/Soul Jump/Spirit Jump). Applied as a
+-- transient mod around the weaponskill call so it only affects this jump.
 local function performWSJump(player, target, action, params, abilityID)
+    local flyHighJpBonus = 0
+    if player:hasStatusEffect(xi.effect.FLY_HIGH) then
+        flyHighJpBonus = player:getJobPointLevel(xi.jp.FLY_HIGH_EFFECT) * 5
+        if flyHighJpBonus > 0 then
+            player:addMod(xi.mod.ATT, flyHighJpBonus)
+        end
+    end
+
     local taChar = player:getTrickAttackChar(target)
     local damage, criticalHit, tpHits, extraHits = xi.weaponskills.doPhysicalWeaponskill(player, target, 0, params, 1000, action, true, taChar)
+
+    if flyHighJpBonus > 0 then
+        player:delMod(xi.mod.ATT, flyHighJpBonus)
+    end
+
     local totalHits  = tpHits + extraHits
 
     if totalHits > 0 then

@@ -6,6 +6,12 @@
 -- Bivouac #1       : !pos -40.5 0.367 296.367 263
 -- Bivouac #2       : !pos 122.132 0.146 -287.731 263
 -- Bivouac #3       : !pos -274.776 0.357 85.376 263
+--
+-- Also acts as a Wildskeeper Reive pop trigger via xi.popTrigger.tryPop.
+-- Holding (or Pop_Selection-pinning) a Resurrection Retardant Axe pops
+-- Yumcax (which also serves as the Domain Invasion rotation NM here).
+-----------------------------------
+require('scripts/globals/pop_trigger')
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
@@ -15,6 +21,10 @@ entity.onTrade = function(player, npc, trade)
 end
 
 entity.onTrigger = function(player, npc)
+    if xi.popTrigger.tryPop(player) then
+        return
+    end
+
     xi.waypoint.onTrigger(player, npc)
 end
 

@@ -279,3 +279,103 @@ xi.besieged.hasAssaultOrders = function(player)
 
     return event, keyitem
 end
+
+-----------------------------------
+-- Simplified "Besieged Now" boss spawn (4-player private server).
+--
+-- Retail Besieged is a server-wide siege scheduler with mass mob waves
+-- attacking Al Zahbi every few hours, NPC defenders, and the Astral
+-- Candescence steal mechanic. Reproducing the full wave scheduler is out
+-- of scope without puppet verification. This module gives a single
+-- player-triggered boss spawn instead: pin a faction, the next onGameIn
+-- inside Al Zahbi spawns one of that faction's boss mobs (existing
+-- spawn-points / mob scripts).
+--
+-- Usage:
+--   !setvar Besieged_Now N    (1=Mamool Ja Cataphract,
+--                              2=Lamia Commandress,
+--                              3=Trolls / Thunderclap Sareel Ja)
+--   then zone / relog inside Al Zahbi
+--
+-- Reward distribution on kill (Imperial Standing) is a separate ship —
+-- the existing mob scripts handle damage but not the IS grant. For now
+-- this just spawns the boss; the user gets the engagement, not the
+-- reward, until the mob death-handler is wired (next iteration).
+-----------------------------------
+local besiegedPinVar = 'Besieged_Now'
+local besiegedBosses =
+{
+    [1] = { name = 'Mamool Ja Cataphract',  mobId = 16973831 },
+    [2] = { name = 'Lamia Commandress',     mobId = 16974035 },
+    [3] = { name = 'Thunderclap Sareel Ja', mobId = 16973903 },
+}
+
+-- Reward distribution helper for the simplified-Besieged bosses. Called
+-- from each besieged-boss mob script's onMobDeath. Alliance-distribute
+-- Imperial Standing to everyone in range (100 yalms, matches WKR/GF
+-- range).
+xi.besieged.grantSimplifiedReward = function(mob, player, bossName)
+    local reward = xi.settings.main.BESIEGED_SIMPLIFIED_REWARD or 1000
+    if reward <= 0 then
+        return
+    end
+
+    local recipients = {}
+    local alliance = player:getAlliance()
+    if alliance and #alliance > 0 then
+        for _, m in pairs(alliance) do
+            if m and m:checkDistance(mob) <= 100 then
+                table.insert(recipients, m)
+            end
+        end
+    else
+        table.insert(recipients, player)
+    end
+
+    for _, m in pairs(recipients) do
+        m:addCurrency('imperial_standing', reward)
+        m:printToPlayer(string.format('Defeated %s. +%d Imperial Standing (total: %d).',
+            bossName, reward, m:getCurrency('imperial_standing')))
+    end
+end
+
+xi.besieged.tryStartSimplified = function(player)
+    if not player then
+        return false
+    end
+
+    local pinned = player:getCharVar(besiegedPinVar)
+    if pinned == 0 then
+        return false
+    end
+
+    local entry = besiegedBosses[pinned]
+    if not entry then
+        player:printToPlayer(string.format('Besieged_Now %d is not valid (1-3). See besieged.lua.', pinned))
+        player:setCharVar(besiegedPinVar, 0)
+        return true
+    end
+
+    if player:getZoneID() ~= xi.zone.AL_ZAHBI then
+        player:printToPlayer('You must be inside Al Zahbi to trigger a Besieged spawn. Travel there first.')
+        return true -- leave pin set so it fires on next zone-in to Al Zahbi
+    end
+
+    local mob = GetMobByID(entry.mobId)
+    if not mob then
+        player:printToPlayer(string.format('Besieged boss %s (mobId %d) not found in zone.', entry.name, entry.mobId))
+        player:setCharVar(besiegedPinVar, 0)
+        return true
+    end
+
+    if mob:isSpawned() and mob:isAlive() then
+        player:printToPlayer(string.format('%s is already engaged. Defeat the current spawn first.', entry.name))
+        player:setCharVar(besiegedPinVar, 0)
+        return true
+    end
+
+    SpawnMob(entry.mobId):updateClaim(player)
+    player:setCharVar(besiegedPinVar, 0)
+    player:printToPlayer(string.format('%s has spawned in Al Zahbi. Defend the city!', entry.name))
+    return true
+end

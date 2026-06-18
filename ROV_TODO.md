@@ -15,55 +15,60 @@
 
 ## Stubbed Boss Battles
 
-All boss fights currently auto-complete on zone-in. Mob data exists in SQL for all except Disjoined One.
+Three of 5 ROV boss missions now have real `onMobDeath` handlers (Balamor / Sempurne / Metus, all 2026-06-16). Disjoined One still SQL-blocked (mob_groups.poolId = 0); Cloud of Darkness is the ROV final boss with a more complex multi-phase requirement.
 
 ### ROV 2-36 — Pretender to the Throne (Balamor)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/2_36_Pretender_to_the_Throne.lua`
-- **Zone**: Escha - Ru'Aun
-- **Boss**: Balamor
-- **Event Data**: Escha Ru'Aun events 6 (Selh'teus/Balamor pre-fight) and 7 (post-fight)
-- **Mob Data**: Needs investigation
+- **Zone**: Escha - Ru'Aun (zone 289)
+- **Boss**: Balamor — entity 17961637 (group 95, pool 5631)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`. Mob spawning is still GM-required (no QM trigger yet), but mission progression now requires the actual fight.
+- **Event Data**: Escha Ru'Aun events 6 (Selh'teus/Balamor pre-fight) and 7 (post-fight) — not wired into the script; players still need GM to fire them for the full cinematic.
 - **Difficulty**: Medium
 
 ### ROV 2-39 — Both Paths Taken (Disjoined One)
+- **Status**: WIRED 2026-06-16 (SQL fix + onMobDeath)
 - **File**: `scripts/missions/rov/2_39_Both_Paths_Taken.lua`
 - **Zone**: Empyreal Paradox (zone 36)
-- **Boss**: Disjoined One
+- **Boss**: Disjoined One — entity 16924685 (group 5, pool **7501 — added in this fix**)
 - **Battlefield**: Listed in Empyreal Paradox event 32000 as "Both Paths Taken"
-- **Mob Data**: INCOMPLETE — mob_groups entry exists but NO mob_pools or mob_spawn_points entries
-- **SQL needed**: mob_pools entry (pool ID, family, stats) and mob_spawn_points
+- **SQL fix**:
+  - `sql/mob_pools.sql` — added pool 7501 'Disjoined_One' (family 475, Sempurne-equivalent humanoid template)
+  - `sql/mob_groups.sql` — updated row for (groupid=5, zoneid=36, 'Disjoined_One') from `poolid=0, HP=0` → `poolid=7501, HP=20000`
+  - `tools/migrations/052_disjoined_one_mob_pool.py` — idempotent migration that ports the SQL changes to existing live DBs (INSERT... ON DUPLICATE + UPDATE).
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`. Mob now spawns with proper stats; mission progression requires the actual fight.
 - **Difficulty**: Medium-Hard
 
 ### ROV 3-17 — No Time Like the Future (Sempurne)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/3_17_No_Time_Like_the_Future.lua`
 - **Zone**: Desuetia - Empyreal Paradox (zone 290) — NOT regular Empyreal Paradox
-- **Boss**: Sempurne
+- **Boss**: Sempurne — entity 17965057 (group 1, pool 4914, lv125 / 20000 HP)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`. Earlier stub fired in zone 36 (wrong zone); fixed to fire in zone 290.
 - **Battlefield**: Event 32000 in Desuetia-Empyreal Paradox
-- **Event Data**: Event 2 (Sempurne dialogue), Cait Sith events 1-8 (cutscene support)
-- **Mob Data**: Pool ID 4914, Family 475, Level 125, HP 20000, 3 spawn points
-- **Mob Resistances**: Not found — needs investigation
+- **Event Data**: Event 2 (Sempurne dialogue), Cait Sith events 1-8 (cutscene support) — not wired into the script.
 - **Difficulty**: Medium
 
 ### ROV 3-26 — The Winds of Time (Metus)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/3_26_The_Winds_of_Time.lua`
 - **Zone**: Empyreal Paradox (zone 36)
-- **Boss**: Metus
+- **Boss**: Metus — entity 16924721 (group 8, pool 4820, lv125 / 20000 HP)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)`.
 - **Battlefield**: Listed in Empyreal Paradox event 32000 as "The Winds of Time"
-- **Event Data**: Empyreal Paradox events 9-17 surround this fight
-- **Mob Data**: Pool ID 4820, Family 478 (Promathia-Metus), Level 125, HP 20000, 3 spawn points
+- **Event Data**: Empyreal Paradox events 9-17 surround this fight — not wired into the script.
 - **Mob Resistances**: mob_resistances.sql line 529
 - **Difficulty**: Medium (likely multi-phase)
 
 ### ROV 3-34 — The Orb's Radiance (Cloud of Darkness)
+- **Status**: WIRED 2026-06-16
 - **File**: `scripts/missions/rov/3_34_The_Orbs_Radiance.lua`
-- **Zone**: Reisenjima Sanctorium (zone 293)
-- **Boss**: Cloud of Darkness
-- **Battlefield**: Event 32000 in Reisenjima Sanctorium ("The Orb's Radiance")
-- **Event Data**: Reisenjima Sanctorium events 12-13 (Iroha/Selh'teus, Cloud of Darkness identified)
-- **Mob Data**: Pool ID 4819, Family 497, Level 130, HP 20000, 3 spawn points
+- **Zone**: Reisenjima Sanctorium (zone 293) — earlier stub fired in EMPYREAL_PARADOX (zone 36), same wrong-zone bug shape as Sempurne. Fixed.
+- **Boss**: Cloud of Darkness — entity 17977400 (group 1, pool 4819, family 497, lv130 / 20000 HP)
+- **Mission flow**: Replaced auto-complete-on-zone-in with `onMobDeath = mission:complete(player)` in the correct zone. Reward chain (Scintillating Rhapsody KI + Cipher: Iroha II + chain to A Rhapsody for the Ages) preserved.
+- **Battlefield**: Event 32000 in Reisenjima Sanctorium — not wired into the script (cinematic still needs !cs verification).
 - **Mob Resistances**: mob_resistances.sql line 512
-- **Cipher Reward**: Retail awards Cipher: Iroha II here — item not in DB
-- **Difficulty**: Hard (final boss, likely complex phases, ally NPCs)
+- **Difficulty**: Hard (final boss, likely complex phases, ally NPCs) — multi-phase mechanics are AI-side.
 
 ---
 
@@ -95,22 +100,21 @@ Event data extracted via xi-tinkerer from `FFXI_DATS_Decoded/raw_data/events/`. 
 
 ### Eastern Adoulin Missions (ROV events mixed into SoA event infrastructure)
 Events 1547-1552 are large ensemble cutscenes (15-20+ NPCs including Arciela, Melvien, Ploh Trishbahk). Zone-in trigger entities: 17830025, 17830026.
-- **3-5 Forward Thinking** — Eastern Adoulin zone-in — probable CSID: **1547, 1549, or 1551**
-- **3-7 What He Left Behind** — Eastern Adoulin zone-in — probable CSID: **1547, 1549, or 1551**
-- **3-10 Solemnity** — Eastern Adoulin zone-in — probable CSID: **1547, 1549, or 1551**
-- **TODO**: Test these 3 CSIDs in-game to determine which maps to which mission
+- **3-5 Forward Thinking** — Eastern Adoulin zone-in — **CSID 1547 ✅ VERIFIED 2026-06-18** (Arciela offers Adoulinian tomato juice with Ploh Trishbahk)
+- **3-7 What He Left Behind** — Eastern Adoulin zone-in — **CSID 1549 ✅ VERIFIED 2026-06-18** (Hildebert's apology to Arciela in the council chamber)
+- **3-10 Solemnity** — Eastern Adoulin zone-in — **CSID 1551 ✅ VERIFIED 2026-06-18** (Fremilla's farcical "legendary sleuth" eulogy for Melvien)
 
 ### Walk of Echoes Missions
 Zone-in trigger: 17523287. Cait Sith: 17523288. Lilisette: 17523300. Event 28 = ROV 3-14 (confirmed).
-- **3-15 What Remains of Hope** — Walk of Echoes — probable CSID: **29 or 30**
-- **3-18 Sin** — Walk of Echoes — probable CSID: **5 or 8**
-- **3-19 Penance** — Walk of Echoes (awards Rhapsody in Puce) — probable CSID: **9** (large cutscene on zone-in + Cait Sith + both Lilisettes)
-- **3-27 Calm After the Storm** — Walk of Echoes — probable CSID: **31** (entity 17523350)
+- **3-15 What Remains of Hope** — Walk of Echoes — **CSID 29 ✅ VERIFIED 2026-06-18** (Cait Sith chastises player; Lilisette rebukes him over the masked man's escape)
+- **3-18 Sin** — Walk of Echoes — **CSID 5 ✅ VERIFIED 2026-06-18** (Lady Lilith confronts Lilisette+Cait Sith — "Spitewardens", "Father and Mother to their knees")
+- **3-19 Penance** — Walk of Echoes (awards Rhapsody in Puce) — **CSID 9 ✅ VERIFIED 2026-06-18** (Lady Lilith's death + transfer of role to Lilisette)
+- **3-27 Calm After the Storm** — Walk of Echoes — **CSID 31 ✅ VERIFIED 2026-06-18** (Lilith's brief farewell — "Do not neglect to say your farewells")
 
 ### Reisenjima Missions
 Zone-in triggers: 17969923, 17969924. Iroha: 17969928. Known: event 2=3-1, 6=3-3, 7=3-20, 9=3-30.
-- **3-21 The Lifestream of Reisenjima** — probable CSID: **3** (on zone-in entity + Iroha, sequential between events 2 and 6)
-- **3-23 Good Things Come in Threes** — probable CSID: **8** (on Iroha + Tenzen + secondary trigger)
+- **3-21 The Lifestream of Reisenjima** — probable CSID: **3** — INCONCLUSIVE 2026-06-18 (CSID 3 fires "Iroha: Master! Wait!" then auto-closes after one line, both before and after a clean zone reset; need different candidate)
+- **3-23 Good Things Come in Threes** — **CSID 8 ✅ VERIFIED 2026-06-18** (Iroha's finale monologue: gentle breeze, the Reckoning, "Never give up", winding the ancient clock)
 
 ### Chapter 2 Missions (various zones)
 - **2-26 Where Divinities Collide** — Shattered Telepoint (3 Crags)

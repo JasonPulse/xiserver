@@ -24,4 +24,8 @@ entity.onMobMobskillChoose = function(mob, target)
     return tpMoves[math.random(1, #tpMoves)]
 end
 
+entity.onMobDeath = function(mob, player, optParams)
+    xi.abyssea.grantAtmaDrop(mob, player, xi.ki.ATMA_OF_THE_BEYOND)
+end
+
 return entity

@@ -7413,6 +7413,32 @@ INSERT INTO `mob_pools` VALUES (7314,'Bloodsucker_fished_Vunkerl_S','Bloodsucker
 -- Jug pet pools (skipped to allow keeping them sequential)
 INSERT INTO `mob_pools` VALUES (7500,'Pet_Sweet_Caroline','Pet_Sweet_Caroline',178,0x00008E0B00000000000000000000000000000000,2,2,1,480,100,0,0,0,0,8,0,32,605,129,0,0,0,0,0,766,178,0,12);
 
+-- ROV 2-39 Disjoined One — Empyreal Paradox final-tier ROV boss. Pool
+-- was missing (mob_groups (5,36,'Disjoined_One') had poolId=0); template
+-- copied from Sempurne (4914) since both are ROV humanoid bosses.
+INSERT INTO `mob_pools` VALUES (7501,'Disjoined_One','Disjoined_One',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+
+-- Omen Caturae (Reisenjima Henge zone 292) — 6 chess-piece bosses (Fu/
+-- Kyou/Kei/Gin/Kin/Ou) + 3 Glassy mid-bosses. mob_groups rows existed
+-- with poolId=0 + HP=0. Template copied from Sempurne (475) for the
+-- Caturae humanoid forms; Glassys use family 168 (humanoid-glass).
+INSERT INTO `mob_pools` VALUES (7502,'Fu','Fu',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7503,'Kyou','Kyou',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7504,'Kei','Kei',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7505,'Gin','Gin',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7506,'Kin','Kin',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7507,'Ou','Ou',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+INSERT INTO `mob_pools` VALUES (7508,'Glassy_Thinker','Glassy_Thinker',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
+INSERT INTO `mob_pools` VALUES (7509,'Glassy_Craver','Glassy_Craver',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
+INSERT INTO `mob_pools` VALUES (7510,'Glassy_Gorger','Glassy_Gorger',168,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,168,168,0,50);
+
+-- Sinister Reign Sajj'aka — Wave 3 boss in Rala_Waterways_U (zone 259).
+-- mob_groups (64,0,259,'Sajjaka') had poolId=0 + HP=0. Other 8 SR bosses
+-- (Arciela / Darrcuiln / Ingrid / Teodor / Morimar / Rosulatia / August /
+-- Ygnas) use existing pools 5496/5499/5512/5986/5501/5985/5984/5998
+-- respectively. Template copied from Sempurne (475).
+INSERT INTO `mob_pools` VALUES (7511,'Sajjaka','Sajj\\\'aka',475,0x00003F0900000000000000000000000000000000,1,4,12,240,100,0,1,1,0,2,0,0,3,153,5,0,0,0,0,475,475,0,75);
+
 -- ------------------------------------------------------------
 -- Start of Ambuscade section
 -- NOTE: The mobs are changed every update in the DATs, so using out-of-date

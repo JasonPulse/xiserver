@@ -287,8 +287,10 @@ void CalculateStats(CCharEntity* PChar)
         sJobStat = sJobStat / 2;
     }
 
-    uint16 MeritBonus   = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_HP, PChar);
-    PChar->health.maxhp = (int16)(raceStat + jobStat + bonusStat + sJobStat + MeritBonus);
+    uint16 MeritBonus = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_HP, PChar);
+    // Master Level grants +5 HP per level (retail rate). No effect at ML 0.
+    int16 MasterHPBonus = static_cast<int16>(PChar->GetMasterLevel()) * 5;
+    PChar->health.maxhp = (int16)(raceStat + jobStat + bonusStat + sJobStat + MeritBonus + MasterHPBonus);
 
     // The beginning of the MP
 
@@ -330,8 +332,10 @@ void CalculateStats(CCharEntity* PChar)
         sJobStat = (grade::GetMPScale(grade, 0) + grade::GetMPScale(grade, scaleTo60Column) * (slvl - 1)) / settings::get<float>("map.SJ_MP_DIVISOR");
     }
 
-    MeritBonus          = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_MP, PChar);
-    PChar->health.maxmp = (int16)(raceStat + jobStat + sJobStat + MeritBonus); // MP calculation result
+    MeritBonus = PChar->PMeritPoints->GetMeritValue(MERIT_MAX_MP, PChar);
+    // Master Level grants +5 MP per level (retail rate). No effect at ML 0.
+    int16 MasterMPBonus = static_cast<int16>(PChar->GetMasterLevel()) * 5;
+    PChar->health.maxmp = (int16)(raceStat + jobStat + sJobStat + MeritBonus + MasterMPBonus); // MP calculation result
 
     // Start calculating Stats
 
@@ -381,8 +385,11 @@ void CalculateStats(CCharEntity* PChar)
         // get each merit bonus stat, str,dex,vit and so on...
         MeritBonus = PChar->PMeritPoints->GetMeritValue(statMerit[StatIndex - 2], PChar);
 
+        // Master Level grants +1 to each base stat (STR/DEX/VIT/AGI/INT/MND/CHR) per ML.
+        uint16 masterBonus = PChar->GetMasterLevel();
+
         // Value output
-        ref<uint16>(&PChar->stats, counter) = (uint16)(raceStat + jobStat + sJobStat + MeritBonus);
+        ref<uint16>(&PChar->stats, counter) = (uint16)(raceStat + jobStat + sJobStat + MeritBonus + masterBonus);
         counter += 2;
     }
 }
@@ -749,7 +756,8 @@ auto LoadChar(const uint32 charId) -> std::unique_ptr<CCharEntity>
 
     // TODO: LoadFromCharStatsSQL
     fmtQuery = "SELECT mjob, sjob, hp, mp, mhflag, title, bazaar_message, zoning, "
-               "pet_id, pet_type, pet_hp, pet_mp, pet_level "
+               "pet_id, pet_type, pet_hp, pet_mp, pet_level, "
+               "master_level, exemplar_points "
                "FROM char_stats WHERE charid = ?";
 
     uint8 zoning = 0;
@@ -778,6 +786,12 @@ auto LoadChar(const uint32 charId) -> std::unique_ptr<CCharEntity>
         }
 
         zoning = rset->get<uint8>("zoning");
+
+        // Master Levels — capped server-side at MAX_MASTER_LEVEL so an older
+        // saved value above the cap is silently clamped on load.
+        const auto maxML = settings::get<uint8>("main.MAX_MASTER_LEVEL");
+        PChar->SetMasterLevel(std::min<uint8>(rset->get<uint8>("master_level"), maxML));
+        PChar->SetExemplarPoints(rset->get<uint32>("exemplar_points"));
 
         // Determine if the pet should be respawned.
         int16 petHP = rset->get<int16>("pet_hp");
@@ -6027,7 +6041,8 @@ void SaveCharStats(CCharEntity* PChar)
 
     db::preparedStmt("UPDATE char_stats "
                      "SET hp = ?, mp = ?, mhflag = ?, mjob = ?, sjob = ?, "
-                     "pet_id = ?, pet_type = ?, pet_hp = ?, pet_mp = ?, pet_level = ? "
+                     "pet_id = ?, pet_type = ?, pet_hp = ?, pet_mp = ?, pet_level = ?, "
+                     "master_level = ?, exemplar_points = ? "
                      "WHERE charid = ?",
                      PChar->health.hp,
                      PChar->health.mp,
@@ -6039,6 +6054,8 @@ void SaveCharStats(CCharEntity* PChar)
                      PChar->petZoningInfo.petHP,
                      PChar->petZoningInfo.petMP,
                      PChar->petZoningInfo.petLevel,
+                     PChar->GetMasterLevel(),
+                     PChar->GetExemplarPoints(),
                      PChar->id);
 
     // These two are jug only variables. We should probably move pet char stats into its own table, but in the meantime

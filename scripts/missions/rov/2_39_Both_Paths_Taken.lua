@@ -3,8 +3,11 @@
 -- Rhapsodies of Vana'diel Mission 2-39
 -----------------------------------
 -- !addmission 13 136
--- Transcendental Radiance in Empyreal Paradox
--- NOTE: Retail requires defeating the Disjoined One. Stubbed to auto-complete.
+-- Transcendental Radiance in Empyreal Paradox.
+-- Defeat the Disjoined One. Real onMobDeath wired against entity
+-- 16924685 (group 5, pool 7501 added in this same change — pool was
+-- missing before, mob_groups.poolId was 0). HP 20000 set on the
+-- mob_groups row to match other Empyreal Paradox ROV bosses.
 -----------------------------------
 
 local mission = Mission:new(xi.mission.log_id.ROV, xi.mission.id.rov.BOTH_PATHS_TAKEN)
@@ -23,10 +26,12 @@ mission.sections =
 
         [xi.zone.EMPYREAL_PARADOX] =
         {
-            onZoneIn = function(player, prevZone)
-                -- TODO: Implement Disjoined One battlefield. Auto-completing for now.
-                mission:complete(player)
-            end,
+            ['Disjoined_One'] =
+            {
+                onMobDeath = function(mob, player, optParams)
+                    mission:complete(player)
+                end,
+            },
         },
     },
 }

@@ -3,7 +3,8 @@
 -- Rhapsodies of Vana'diel Mission 3-5
 -----------------------------------
 -- !addmission 13 155
--- Eastern Adoulin
+-- Eastern Adoulin zone-in fires CSID 1547 (Arciela's Adoulinian-tomato-
+-- juice scene with Ploh Trishbahk). Verified via puppet bridge 2026-06-18.
 -----------------------------------
 
 local mission = Mission:new(xi.mission.log_id.ROV, xi.mission.id.rov.FORWARD_THINKING)
@@ -23,9 +24,15 @@ mission.sections =
         [xi.zone.EASTERN_ADOULIN] =
         {
             onZoneIn = function(player, prevZone)
-                -- TODO: Verify event ID from packet captures
-                mission:complete(player)
+                return 1547
             end,
+
+            onEventFinish =
+            {
+                [1547] = function(player, csid, option, npc)
+                    mission:complete(player)
+                end,
+            },
         },
     },
 }

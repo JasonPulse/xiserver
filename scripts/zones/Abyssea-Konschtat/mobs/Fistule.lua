@@ -57,6 +57,8 @@ entity.onMobDeath = function(mob, player, isKiller)
     if player ~= nil and not player:hasTitle(xi.title.FISTULE_DRAINER) then
         player:addTitle(xi.title.FISTULE_DRAINER)
     end
+
+    xi.abyssea.grantAtmaDrop(mob, player, xi.ki.ATMA_OF_VICISSITUDE)
 end
 
 return entity

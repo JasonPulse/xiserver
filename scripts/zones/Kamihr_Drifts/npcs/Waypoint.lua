@@ -7,6 +7,11 @@
 -- Bivouac #2       : !pos 8.24 43 -283.017 267
 -- Bivouac #3       : !pos 9.24 23 162.803 267
 -- Bivouac #4       : !pos -228.942 3.567 364.512 267
+--
+-- Also acts as a Wildskeeper Reive pop trigger via xi.popTrigger.tryPop.
+-- Holding (or Pop_Selection-pinning) an Anti-Glaciation Gear pops Kumhau.
+-----------------------------------
+require('scripts/globals/pop_trigger')
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
@@ -16,6 +21,10 @@ entity.onTrade = function(player, npc, trade)
 end
 
 entity.onTrigger = function(player, npc)
+    if xi.popTrigger.tryPop(player) then
+        return
+    end
+
     xi.waypoint.onTrigger(player, npc)
 end
 

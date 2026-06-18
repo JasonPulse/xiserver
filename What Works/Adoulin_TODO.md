@@ -35,7 +35,7 @@ Focus is **80% basic functionality**. Coalition rank, mission gates, and Bayld-t
 - [x] **`Iyvah_Halohm.lua`** — now reads via the new `xi.coalition` API instead of inline CharVar reads. Same data, but `!setvar Coalition_*_Rank N` (or `xi.coalition.setRank`) now propagates everywhere.
 - [x] **`Ujlei_Zelekko.lua`** — campaign gate removed. Shop now always opens.
 - [x] **`Sifa_Alani.lua`** — frontier-station bitmask hardcoded all-on is intentional (no colonization sim). Now documented in the script so a future agent doesn't try to "fix" it.
-- [ ] **`DefaultActions.lua:9`** — `Nhili_Uvolep = event 545`. Possibly stale copy from Western Adoulin (where 545 = Clautaire). Verify next time someone triggers Nhili_Uvolep — if dialog is wrong, replace event ID.
+- [x] **`DefaultActions.lua:9`** — `Nhili_Uvolep = event 545` **verified valid (2026-06-09, xidat)**. Nhili owns his own 47-byte CSID 545 (msg refs `0x59`/`0x5A`, opcode prefix `66`); Clautaire's 545 in WA is also 47 bytes but with **different opcode** (`5B`) and **different msg refs** (`0x01`/`0x02`) — they are distinct programs, not a copy-paste.
 
 ## Coalition rank API (built — see `project_coalition_api.md`)
 

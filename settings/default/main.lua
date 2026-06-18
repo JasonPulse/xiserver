@@ -129,6 +129,9 @@ xi.settings.main =
     -- Note: EXP rates are also influenced by conf setting
     EXP_RATE            = 1.000, -- Multiplies exp from script (except FoV/GoV).
     CAPACITY_RATE       = 1.000, -- Multiplies capacity points gained.
+    EXEMPLAR_RATE       = 1.000, -- Multiplies exemplar points (Master Level XP) gained from kills once JP is capped.
+    MAX_MASTER_LEVEL    = 50,    -- Cap on Master Level. Retail = 50. Set higher for our private server if desired.
+    EXEMPLAR_PER_LEVEL  = 30000, -- Exemplar points required per Master Level (mirrors retail JP threshold).
     BOOK_EXP_RATE       = 1.000, -- Multiplies exp from FoV/GoV book pages.
     TABS_RATE           = 1.000, -- Multiplies tabs earned from fov.
     ROE_EXP_RATE        = 1.000, -- Multiplies exp earned from records of eminence.

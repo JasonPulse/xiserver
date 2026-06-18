@@ -1087,6 +1087,44 @@ xi.abyssea.resetPlayerLights = function(player)
     player:setCharVar('abysseaLights2', 0)
 end
 
+-- Grant the NM's canonical atma KI to the killer (and party/alliance members
+-- who participated and don't already have it). Retail uses a red-proc-modified
+-- chance roll; on this private 4-player server we always grant — the simpler
+-- behaviour avoids per-NM proc-tracking bookkeeping nobody can verify.
+xi.abyssea.grantAtmaDrop = function(mob, player, atmaKi)
+    if
+        not atmaKi or
+        not xi.atma or
+        not xi.atma.atmaMods or
+        not xi.atma.atmaMods[atmaKi]
+    then
+        return
+    end
+
+    local function tryGrant(p)
+        if
+            p and
+            not p:hasKeyItem(atmaKi) and
+            p:hasStatusEffect(xi.effect.VISITANT)
+        then
+            npcUtil.giveKeyItem(p, atmaKi)
+        end
+    end
+
+    if not player then
+        return
+    end
+
+    local alliance = player:getAlliance()
+    if alliance and #alliance > 0 then
+        for _, member in pairs(alliance) do
+            tryGrant(member)
+        end
+    else
+        tryGrant(player)
+    end
+end
+
 xi.abyssea.setBonusLights = function(player)
     local lightTable = {}
 

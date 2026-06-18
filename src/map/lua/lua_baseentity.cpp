@@ -921,14 +921,14 @@ void CLuaBaseEntity::injectActionPacket(const uint32 inTargetID, uint16 inCatego
         .actionid   = inActionParam,
         .targets    = {
             {
-                   .actorId = inTargetID,
-                   .results = {
+                .actorId = inTargetID,
+                .results = {
                     {
-                           .resolution = reaction,
-                           .animation  = static_cast<ActionAnimation>(inAnimationID),
-                           .info       = info,
-                           .param      = inParam,
-                           .messageID  = static_cast<MsgBasic>(inMessage),
+                        .resolution = reaction,
+                        .animation  = static_cast<ActionAnimation>(inAnimationID),
+                        .info       = info,
+                        .param      = inParam,
+                        .messageID  = static_cast<MsgBasic>(inMessage),
                     },
                 },
             },
@@ -9027,6 +9027,80 @@ void CLuaBaseEntity::addCapacityPoints(uint32 capacity)
     auto* PChar = static_cast<CCharEntity*>(m_PBaseEntity);
 
     charutils::AddCapacityPoints(PChar, m_PBaseEntity, capacity);
+}
+
+/************************************************************************
+ *  Function: getMasterLevel()
+ *  Purpose : Returns the player's current Master Level (0 if pre-cap).
+ *  Example : if player:getMasterLevel() >= 10 then ...
+ ************************************************************************/
+
+uint8 CLuaBaseEntity::getMasterLevel()
+{
+    if (m_PBaseEntity->objtype != TYPE_PC)
+    {
+        return 0;
+    }
+
+    return static_cast<CCharEntity*>(m_PBaseEntity)->GetMasterLevel();
+}
+
+/************************************************************************
+ *  Function: setMasterLevel()
+ *  Purpose : Set the player's Master Level directly. Clamps to
+ *            settings.main.MAX_MASTER_LEVEL and triggers a stat recalc so
+ *            HP/MP/stats reflect the change immediately.
+ *  Example : player:setMasterLevel(20)
+ ************************************************************************/
+
+void CLuaBaseEntity::setMasterLevel(uint8 level)
+{
+    if (m_PBaseEntity->objtype != TYPE_PC)
+    {
+        return;
+    }
+
+    auto*       PChar = static_cast<CCharEntity*>(m_PBaseEntity);
+    const uint8 maxML = settings::get<uint8>("main.MAX_MASTER_LEVEL");
+    PChar->SetMasterLevel(std::min<uint8>(level, maxML));
+    PChar->SetExemplarPoints(0);
+    charutils::CalculateStats(PChar);
+    PChar->UpdateHealth();
+}
+
+/************************************************************************
+ *  Function: getExemplarPoints()
+ *  Purpose : Returns the player's current Exemplar Points (XP toward
+ *            the next Master Level).
+ *  Example : local ep = player:getExemplarPoints()
+ ************************************************************************/
+
+uint32 CLuaBaseEntity::getExemplarPoints()
+{
+    if (m_PBaseEntity->objtype != TYPE_PC)
+    {
+        return 0;
+    }
+
+    return static_cast<CCharEntity*>(m_PBaseEntity)->GetExemplarPoints();
+}
+
+/************************************************************************
+ *  Function: addExemplarPoints()
+ *  Purpose : Grant Exemplar Points; may roll over into ML if it crosses
+ *            settings.main.EXEMPLAR_PER_LEVEL.
+ *  Example : player:addExemplarPoints(5000)
+ ************************************************************************/
+
+void CLuaBaseEntity::addExemplarPoints(uint32 amount)
+{
+    if (m_PBaseEntity->objtype != TYPE_PC)
+    {
+        return;
+    }
+
+    auto* PChar = static_cast<CCharEntity*>(m_PBaseEntity);
+    PChar->PJobPoints->AddExemplarPoints(amount);
 }
 
 /************************************************************************
@@ -18625,12 +18699,12 @@ void CLuaBaseEntity::restoreFromChest(CLuaBaseEntity* PLuaBaseEntity, uint32 res
                 .actiontype = ActionCategory::MobSkillFinish,
                 .targets    = {
                     {
-                           .actorId = PChar->id,
-                           .results = {
+                        .actorId = PChar->id,
+                        .results = {
                             {
-                                   .animation = animationID,
-                                   .param     = messageParam,
-                                   .messageID = messageID,
+                                .animation = animationID,
+                                .param     = messageParam,
+                                .messageID = messageID,
                             },
                         },
                     },
@@ -19921,6 +19995,10 @@ void CLuaBaseEntity::Register()
     SOL_REGISTER("getJobPointLevel", CLuaBaseEntity::getJobPointLevel);
     SOL_REGISTER("addCapacityPoints", CLuaBaseEntity::addCapacityPoints);
     SOL_REGISTER("setCapacityPoints", CLuaBaseEntity::setCapacityPoints);
+    SOL_REGISTER("getMasterLevel", CLuaBaseEntity::getMasterLevel);
+    SOL_REGISTER("setMasterLevel", CLuaBaseEntity::setMasterLevel);
+    SOL_REGISTER("getExemplarPoints", CLuaBaseEntity::getExemplarPoints);
+    SOL_REGISTER("addExemplarPoints", CLuaBaseEntity::addExemplarPoints);
     SOL_REGISTER("setJobPoints", CLuaBaseEntity::setJobPoints);
     SOL_REGISTER("addJobPoints", CLuaBaseEntity::addJobPoints);
     SOL_REGISTER("delJobPoints", CLuaBaseEntity::delJobPoints);

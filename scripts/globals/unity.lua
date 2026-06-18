@@ -4,6 +4,31 @@
 xi = xi or {}
 xi.unity = xi.unity or {}
 
+-- Unity Accolade payout for endgame-NM kills. Retail's Wanted NM system
+-- rotates a target per Unity Leader weekly and pays a large lump on kill;
+-- replicating that needs CSID work on the Concord menu which we don't yet
+-- have. As a working substitute, we let the existing endgame helpers
+-- (Geas Fete, Wildskeeper Reives, Domain Invasion) award a flat accolade
+-- bonus on every kill so the currency is earnable in-game.
+--
+-- All grants respect CAP_CURRENCY_ACCOLADES and split across the killer's
+-- alliance within the calling helper's reward radius.
+xi.unity.grantWantedAccolades = function(player, amount)
+    if not player or not amount or amount <= 0 then
+        return
+    end
+
+    local cap = xi.settings.main.CAP_CURRENCY_ACCOLADES or 99999
+    local current = player:getCurrency('unity_accolades')
+    if current >= cap then
+        return
+    end
+
+    local award = math.min(amount, cap - current)
+    player:addCurrency('unity_accolades', award)
+    player:messageBasic(xi.msg.basic.ROE_RECEIVED_ACCOLADES, award, player:getCurrency('unity_accolades'))
+end
+
 -- Table Format: Needs 10 RoE Objectives, All for One not set, All for One set, Unity Joined, Zone Directory Name
 local zoneEventIds =
 {

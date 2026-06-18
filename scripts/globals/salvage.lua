@@ -1,6 +1,8 @@
 -----------------------------------
 -- Salvage Global Functions
 -----------------------------------
+require('scripts/globals/npc_util')
+-----------------------------------
 xi = xi or {}
 xi.salvage = xi.salvage or {}
 -----------------------------------
@@ -555,4 +557,75 @@ xi.salvage.tempBoxFinish = function(player, csid, option, npc)
             end)
         end
     end
+end
+
+-----------------------------------
+-- Simplified Salvage entry (4-player private server).
+--
+-- Retail requires MacChurchill at Aht Urhgan Whitegate, an Imperial Standing
+-- spend, and a 6-player party. This skips the menu / party gate entirely:
+-- player pins a remnant ID, the next onGameIn warps them in and grants the
+-- matching Map KI. Inside the remnants, all NPC/mob scripts are already
+-- wired (Armoury Crate / Slot / Socket / Dormant Rampart).
+--
+-- Usage:
+--   !setvar Salvage_Selection N        (1=Bhaflau, 2=Zhayolm, 3=Arrapago, 4=Silver Sea)
+--   then zone / relog
+--
+-- Costs Imperial Standing per entry. Default 1000; set settings
+-- main.SALVAGE_ENTRY_COST=0 if you want it free.
+-----------------------------------
+local salvagePinVar = 'Salvage_Selection'
+local salvageRemnants =
+{
+    [1] = { name = 'Bhaflau Remnants',    zone = xi.zone.BHAFLAU_REMNANTS,    map = xi.ki.MAP_OF_BHAFLAU_REMNANTS    },
+    [2] = { name = 'Zhayolm Remnants',    zone = xi.zone.ZHAYOLM_REMNANTS,    map = xi.ki.MAP_OF_ZHAYOLM_REMNANTS    },
+    [3] = { name = 'Arrapago Remnants',   zone = xi.zone.ARRAPAGO_REMNANTS,   map = xi.ki.MAP_OF_ARRAPAGO_REMNANTS   },
+    [4] = { name = 'Silver Sea Remnants', zone = xi.zone.SILVER_SEA_REMNANTS, map = xi.ki.MAP_OF_SILVER_SEA_REMNANTS },
+}
+
+xi.salvage.tryEnter = function(player)
+    if not player then
+        return false
+    end
+
+    local pinned = player:getCharVar(salvagePinVar)
+    if pinned == 0 then
+        return false
+    end
+
+    local entry = salvageRemnants[pinned]
+    if not entry then
+        player:printToPlayer(string.format('Salvage_Selection %d is not valid (1-4). See salvage.lua.', pinned))
+        player:setCharVar(salvagePinVar, 0)
+        return true
+    end
+
+    local cost = xi.settings.main.SALVAGE_ENTRY_COST or 1000
+    local standing = player:getCurrency('imperial_standing')
+    if cost > 0 and standing < cost then
+        player:printToPlayer(string.format('Salvage entry costs %d Imperial Standing. You have %d.', cost, standing))
+        player:setCharVar(salvagePinVar, 0)
+        return true
+    end
+
+    if cost > 0 then
+        player:delCurrency('imperial_standing', cost)
+    end
+
+    if not player:hasKeyItem(entry.map) then
+        npcUtil.giveKeyItem(player, entry.map)
+    end
+
+    -- Consume the pin + delay the warp: setPos silently returns early when
+    -- player.status == DISAPPEAR (the status during the zone-in callback
+    -- chain). Delay lets the engine flip status to NORMAL before we
+    -- initiate the cross-zone warp.
+    player:setCharVar(salvagePinVar, 0)
+    player:printToPlayer(string.format('Entering %s...', entry.name))
+    player:timer(3000, function(p)
+        p:setPos(0, 0, 0, 0, entry.zone)
+    end)
+
+    return true
 end

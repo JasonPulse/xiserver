@@ -19,6 +19,7 @@ entity.onMobFight = function(mob, target)
 end
 
 entity.onMobDeath = function(mob, player, optParams)
+    xi.abyssea.grantAtmaDrop(mob, player, xi.ki.ATMA_OF_STORMBREATH)
 end
 
 return entity

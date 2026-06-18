@@ -1,6 +1,8 @@
 -----------------------------------
 -- Zone: Dynamis-Qufim
 -----------------------------------
+require('scripts/globals/domain_invasion')
+-----------------------------------
 ---@type TZone
 local zoneObject = {}
 
@@ -13,6 +15,9 @@ zoneObject.onConquestUpdate = function(zone, updatetype, influence, owner, ranki
 end
 
 zoneObject.onZoneIn = function(player, prevZone)
+    -- Domain Invasion rotation check (rate-limited).
+    xi.domainInvasion.checkRotation()
+
     return xi.dynamis.zoneOnZoneIn(player, prevZone)
 end
 

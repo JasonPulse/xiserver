@@ -19,6 +19,7 @@ end
 
 entity.onMobDeath = function(mob, player, optParams)
     player:addTitle(xi.title.IRATHAM_CAPTURER)
+    xi.abyssea.grantAtmaDrop(mob, player, xi.ki.ATMA_OF_THE_COSMOS)
 end
 
 return entity

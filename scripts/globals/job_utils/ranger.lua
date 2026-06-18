@@ -74,11 +74,30 @@ xi.job_utils.ranger.checkUnlimitedShot = function(player, target, ability)
 end
 
 xi.job_utils.ranger.checkFlashyShot = function(player, target, ability)
-    return 0, 0 -- Not implemented yet
+    -- Same ranged-weapon prerequisite as the other Shots
+    if
+        (player:getWeaponSkillType(xi.slot.RANGED) == xi.skill.MARKSMANSHIP and
+        player:getWeaponSkillType(xi.slot.AMMO) == xi.skill.MARKSMANSHIP) or
+        (player:getWeaponSkillType(xi.slot.RANGED) == xi.skill.ARCHERY and
+        player:getWeaponSkillType(xi.slot.AMMO) == xi.skill.ARCHERY)
+    then
+        return 0, 0
+    end
+
+    return xi.msg.basic.NO_RANGED_WEAPON, 0
 end
 
 xi.job_utils.ranger.checkStealthShot = function(player, target, ability)
-    return 0, 0 -- Not implemented yet
+    if
+        (player:getWeaponSkillType(xi.slot.RANGED) == xi.skill.MARKSMANSHIP and
+        player:getWeaponSkillType(xi.slot.AMMO) == xi.skill.MARKSMANSHIP) or
+        (player:getWeaponSkillType(xi.slot.RANGED) == xi.skill.ARCHERY and
+        player:getWeaponSkillType(xi.slot.AMMO) == xi.skill.ARCHERY)
+    then
+        return 0, 0
+    end
+
+    return xi.msg.basic.NO_RANGED_WEAPON, 0
 end
 
 xi.job_utils.ranger.checkDoubleShot = function(player, target, ability)
@@ -107,7 +126,16 @@ xi.job_utils.ranger.checkDecoyShot = function(player, target, ability)
 end
 
 xi.job_utils.ranger.checkHoverShot = function(player, target, ability)
-    return 0, 0  -- Not implemented yet
+    if
+        (player:getWeaponSkillType(xi.slot.RANGED) == xi.skill.MARKSMANSHIP and
+        player:getWeaponSkillType(xi.slot.AMMO) == xi.skill.MARKSMANSHIP) or
+        (player:getWeaponSkillType(xi.slot.RANGED) == xi.skill.ARCHERY and
+        player:getWeaponSkillType(xi.slot.AMMO) == xi.skill.ARCHERY)
+    then
+        return 0, 0
+    end
+
+    return xi.msg.basic.NO_RANGED_WEAPON, 0
 end
 
 xi.job_utils.ranger.checkOverkill = function(player, target, ability)
@@ -261,12 +289,26 @@ xi.job_utils.ranger.useUnlimitedShot = function(player, target, ability, action)
     return xi.effect.UNLIMITED_SHOT
 end
 
+-- Flashy Shot (RNG merit, lv 75): "Your next attack will generate more enmity
+-- and both have increased accuracy and deal increased damage based on the
+-- level difference between you and the target." Duration: 60s OR until next
+-- ranged attack. The engine-side bonus (enmity/acc/dmg vs lower-level targets)
+-- requires C++ hooks in the ranged-attack path that aren't yet wired — for
+-- now we apply the status flag so the JA cycle is visible and consume-on-shot
+-- can be added engine-side later without changing the script.
 xi.job_utils.ranger.useFlashyShot = function(player, target, ability, action)
-    return 0, 0 -- Not implemented yet
+    player:addStatusEffect(xi.effect.FLASHY_SHOT, 1, 0, 60)
+    return xi.effect.FLASHY_SHOT
 end
 
+-- Stealth Shot (RNG merit, lv 75): "Your next attack will generate less
+-- enmity." Power scales -10 per merit level (max 5 merits). Duration: 60s
+-- OR until next ranged attack. Same engine-side caveat as Flashy Shot.
 xi.job_utils.ranger.useStealthShot = function(player, target, ability, action)
-    return 0, 0 -- Not implemented yet
+    local merits = player:getMerit(xi.merit.STEALTH_SHOT)
+    local power  = merits > 0 and merits or 10 -- fall back to merit-equiv if mod missing
+    player:addStatusEffect(xi.effect.STEALTH_SHOT, power, 0, 60)
+    return xi.effect.STEALTH_SHOT
 end
 
 xi.job_utils.ranger.useDoubleShot = function(player, target, ability, action)
@@ -351,8 +393,14 @@ xi.job_utils.ranger.useDecoyShot = function(player, target, ability, action)
     return xi.effect.DECOY_SHOT
 end
 
+-- Hover Shot (RNG, lv 96): position-stacking buff that grants ranged acc +4
+-- and damage +4%/stack per repositioning attack (cap +100 / +100%). Stacking
+-- requires per-shot position tracking in C++ that isn't yet wired — we apply
+-- the base status flag with the retail-correct 60min duration. Power = 0 for
+-- now; the C++ tracker will increment it as engine support lands.
 xi.job_utils.ranger.useHoverShot = function(player, target, ability, action)
-    return 0, 0 -- Not implemented yet
+    player:addStatusEffect(xi.effect.HOVER_SHOT, 0, 0, 3600)
+    return xi.effect.HOVER_SHOT
 end
 
 xi.job_utils.ranger.useOverkill = function(player, target, ability, action)

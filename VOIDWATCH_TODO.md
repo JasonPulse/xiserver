@@ -45,11 +45,11 @@
 |------|-----------|-------|--------|--------|
 | Southern San d'Oria | 17719635 | 977,978,979,981-985,963,993 | `Southern_San_dOria/npcs/Voidwatch_Officer.lua` | [x] |
 | Bastok Markets | 17739951 | 11,12,13,16-19,21,9,24 | `Bastok_Markets/npcs/Voidwatch_Officer.lua` | [x] |
-| Windurst Waters | 17752374 | 1035-1037,1039-1043,1024 | `Windurst_Waters/npcs/Voidwatch_Officer.lua` | [ ] |
-| Batallia Downs | 17207943 | 10-17,8 | `Batallia_Downs/npcs/Voidwatch_Officer.lua` | [ ] |
-| Rolanberry Fields | 17228397 | 9-16,7 | `Rolanberry_Fields/npcs/Voidwatch_Officer.lua` | [ ] |
-| Sauromugue Champaign | 17269282 | 10-17,8 | `Sauromugue_Champaign/npcs/Voidwatch_Officer.lua` | [ ] |
-| Qufim Island | 17293815 | 52-59,50 | `Qufim_Island/npcs/Voidwatch_Officer.lua` | [ ] |
+| Windurst Waters | 17752374 | 1035-1037,1039-1043,1024 | `Windurst_Waters/npcs/Voidwatch_Officer.lua` | [x] |
+| Batallia Downs | 17207943 | 10-17,8 | `Batallia_Downs/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
+| Rolanberry Fields | 17228397 | 9-16,7 | `Rolanberry_Fields/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
+| Sauromugue Champaign | 17269282 | 10-17,8 | `Sauromugue_Champaign/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
+| Qufim Island | 17293815 | 52-59,50 | `Qufim_Island/npcs/Voidwatch_Officer.lua` | [x] (2026-06-15) |
 
 ### 2B. Voidwatch Purveyor (13 locations with CSIDs)
 
@@ -58,16 +58,16 @@
 | Southern San d'Oria | 17719636 | 975,993 | `Southern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [x] |
 | Bastok Markets | 17739952 | 10,24 | `Bastok_Markets/npcs/Voidwatch_Purveyor.lua` | [x] |
 | Windurst Waters | 17752375 | 1034 | `Windurst_Waters/npcs/Voidwatch_Purveyor.lua` | [x] |
-| Lower Jeuno | 17780980 | 10109 | `Lower_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Upper Jeuno | 17776885 | 10213 | `Upper_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Port Jeuno | 17784986 | 351 | `Port_Jeuno/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Ru'Lude Gardens | 17772838 | 10187 | `RuLude_Gardens/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Port Windurst | 17760468 | 875 | `Port_Windurst/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Northern San d'Oria | 17723671 | 877 | `Northern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Bastok Mines | 17735871 | 288 | `Bastok_Mines/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Port Bastok | 17744058 | 32718-32720 | `Port_Bastok/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Windurst Woods | 17764602 | 836,848 | `Windurst_Woods/npcs/Voidwatch_Purveyor.lua` | [ ] |
-| Aht Urhgan Whitegate | 16982636 | 968 | `Aht_Urhgan_Whitegate/npcs/Voidwatch_Purveyor.lua` | [ ] |
+| Lower Jeuno | 17780980 | 10109 | `Lower_Jeuno/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Upper Jeuno | 17776885 | 10213 | `Upper_Jeuno/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Port Jeuno | 17784986 | 351 | `Port_Jeuno/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Ru'Lude Gardens | 17772838 | 10187 | `RuLude_Gardens/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Port Windurst | 17760468 | 875 | `Port_Windurst/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Northern San d'Oria | 17723671 | 877 | `Northern_San_dOria/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Bastok Mines | 17735871 | 288 | `Bastok_Mines/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Port Bastok | 17744058 | 32718-32720 | `Port_Bastok/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Windurst Woods | 17764602 | 836,848 | `Windurst_Woods/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
+| Aht Urhgan Whitegate | 16982636 | 968 | `Aht_Urhgan_Whitegate/npcs/Voidwatch_Purveyor.lua` | [x] (2026-06-15) |
 
 ### 2C. Atmacite Refiner (3 city locations with CSIDs)
 
@@ -81,7 +81,7 @@
 
 | Zone | Entity ID | CSIDs | Status |
 |------|-----------|-------|--------|
-| Jugner Forest | 17203945 | 61,62 | [ ] |
+| Jugner Forest | 17203945 | 61,62 | [x] (2026-06-15) |
 
 ---
 
@@ -89,17 +89,17 @@
 
 ### 3A. Planar Rift CSIDs (all zones use 6000/6001/6002 for rifts, 6003/6004/6005 for pyxis)
 
-| Zone | Rift Entity IDs | Pyxis Entity IDs |
-|------|----------------|-----------------|
-| East Ronfaure | 17191577-79 | 17191580-82 |
-| West Sarutabaruta | 17248914-16 | 17248917-19 |
-| North Gustaberg | 17212116-18 | 17212119-21 |
-| Jugner Forest | 17203939-41 | 17203942-44 |
-| Ordelle's Caves | 17568199-201 | 17568202-04 |
-| Gusgen Mines | 17580411-13 | 17580414-16 |
-| Pashhow Marshlands | 17224371-73 | 17224374-76 |
-| Maze of Shakhrami | 17588783-85 | 17588786-88 |
-| Meriphataud Mountains | 17265315-17 | 17265318-20 |
+| Zone | Rift Entity IDs | Pyxis Entity IDs | Status |
+|------|----------------|-----------------|---|
+| East Ronfaure | 17191577-79 | 17191580-82 | [x] (2026-06-15) |
+| West Sarutabaruta | 17248914-16 | 17248917-19 | [x] (2026-06-15) |
+| North Gustaberg | 17212116-18 | 17212119-21 | [x] (2026-06-15) |
+| Jugner Forest | 17203939-41 | 17203942-44 | [x] (2026-06-15) |
+| Ordelle's Caves | 17568199-201 | 17568202-04 | [x] (2026-06-15) |
+| Gusgen Mines | 17580411-13 | 17580414-16 | [x] (2026-06-15) |
+| Pashhow Marshlands | 17224371-73 | 17224374-76 | [x] (2026-06-15) |
+| Maze of Shakhrami | 17588783-85 | 17588786-88 | [x] (2026-06-15) |
+| Meriphataud Mountains | 17265315-17 | 17265318-20 | [x] (2026-06-15) |
 
 ### 3B. Battle Engine
 - [ ] **Voidwatcher status effect** — proximity check to rift (~50 foot leash)
