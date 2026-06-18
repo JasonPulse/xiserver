@@ -356,6 +356,7 @@ xi.besieged.tryStartSimplified = function(player)
         player:timer(3000, function(p)
             p:printToPlayer('You must be inside Al Zahbi to trigger a Besieged spawn. Travel there first.')
         end)
+
         return true
     end
 
