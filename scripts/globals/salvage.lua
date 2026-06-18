@@ -626,5 +626,6 @@ xi.salvage.tryEnter = function(player)
     player:timer(3000, function(p)
         p:setPos(0, 0, 0, 0, entry.zone)
     end)
+
     return true
 end

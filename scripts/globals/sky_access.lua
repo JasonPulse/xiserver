@@ -56,5 +56,6 @@ xi.skyAccess.tryWarp = function(player)
     player:timer(3000, function(p)
         p:setPos(dest.x, dest.y, dest.z, dest.rot, dest.zone)
     end)
+
     return true
 end
