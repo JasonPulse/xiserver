@@ -100,22 +100,21 @@ Event data extracted via xi-tinkerer from `FFXI_DATS_Decoded/raw_data/events/`. 
 
 ### Eastern Adoulin Missions (ROV events mixed into SoA event infrastructure)
 Events 1547-1552 are large ensemble cutscenes (15-20+ NPCs including Arciela, Melvien, Ploh Trishbahk). Zone-in trigger entities: 17830025, 17830026.
-- **3-5 Forward Thinking** — Eastern Adoulin zone-in — probable CSID: **1547, 1549, or 1551**
-- **3-7 What He Left Behind** — Eastern Adoulin zone-in — probable CSID: **1547, 1549, or 1551**
-- **3-10 Solemnity** — Eastern Adoulin zone-in — probable CSID: **1547, 1549, or 1551**
-- **TODO**: Test these 3 CSIDs in-game to determine which maps to which mission
+- **3-5 Forward Thinking** — Eastern Adoulin zone-in — **CSID 1547 ✅ VERIFIED 2026-06-18** (Arciela offers Adoulinian tomato juice with Ploh Trishbahk)
+- **3-7 What He Left Behind** — Eastern Adoulin zone-in — **CSID 1549 ✅ VERIFIED 2026-06-18** (Hildebert's apology to Arciela in the council chamber)
+- **3-10 Solemnity** — Eastern Adoulin zone-in — **CSID 1551 ✅ VERIFIED 2026-06-18** (Fremilla's farcical "legendary sleuth" eulogy for Melvien)
 
 ### Walk of Echoes Missions
 Zone-in trigger: 17523287. Cait Sith: 17523288. Lilisette: 17523300. Event 28 = ROV 3-14 (confirmed).
-- **3-15 What Remains of Hope** — Walk of Echoes — probable CSID: **29 or 30**
-- **3-18 Sin** — Walk of Echoes — probable CSID: **5 or 8**
-- **3-19 Penance** — Walk of Echoes (awards Rhapsody in Puce) — probable CSID: **9** (large cutscene on zone-in + Cait Sith + both Lilisettes)
-- **3-27 Calm After the Storm** — Walk of Echoes — probable CSID: **31** (entity 17523350)
+- **3-15 What Remains of Hope** — Walk of Echoes — **CSID 29 ✅ VERIFIED 2026-06-18** (Cait Sith chastises player; Lilisette rebukes him over the masked man's escape)
+- **3-18 Sin** — Walk of Echoes — **CSID 5 ✅ VERIFIED 2026-06-18** (Lady Lilith confronts Lilisette+Cait Sith — "Spitewardens", "Father and Mother to their knees")
+- **3-19 Penance** — Walk of Echoes (awards Rhapsody in Puce) — **CSID 9 ✅ VERIFIED 2026-06-18** (Lady Lilith's death + transfer of role to Lilisette)
+- **3-27 Calm After the Storm** — Walk of Echoes — **CSID 31 ✅ VERIFIED 2026-06-18** (Lilith's brief farewell — "Do not neglect to say your farewells")
 
 ### Reisenjima Missions
 Zone-in triggers: 17969923, 17969924. Iroha: 17969928. Known: event 2=3-1, 6=3-3, 7=3-20, 9=3-30.
-- **3-21 The Lifestream of Reisenjima** — probable CSID: **3** (on zone-in entity + Iroha, sequential between events 2 and 6)
-- **3-23 Good Things Come in Threes** — probable CSID: **8** (on Iroha + Tenzen + secondary trigger)
+- **3-21 The Lifestream of Reisenjima** — probable CSID: **3** — INCONCLUSIVE 2026-06-18 (CSID 3 fires "Iroha: Master! Wait!" then auto-closes after one line, both before and after a clean zone reset; need different candidate)
+- **3-23 Good Things Come in Threes** — **CSID 8 ✅ VERIFIED 2026-06-18** (Iroha's finale monologue: gentle breeze, the Reckoning, "Never give up", winding the ancient clock)
 
 ### Chapter 2 Missions (various zones)
 - **2-26 Where Divinities Collide** — Shattered Telepoint (3 Crags)

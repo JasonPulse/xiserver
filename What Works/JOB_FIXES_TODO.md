@@ -11,9 +11,20 @@
 - [x] PUP AF3: Puppetmaster Blues — quest, battlefield, Valkeng mob, Iruki-Waraki/Sajhra NPCs all implemented
 - [x] PUP Commission NPC (Dhima Polevhia) — Aht Urhgan Whitegate, crystal trade + Imperial Standing for body/hands/legs/feet (2026-04-20)
 
+## Completed
+
+### SCH AF3: Seeing Blood-red ✅ (2026-06-18)
+All 4 chain CSIDs verified via puppet bridge in Eldieme Necropolis [S]:
+- **CSID 29** (offer) — "track down Professor Schultz yet again"
+- **CSID 31** (mid 1) — letter examination, Ruhotz Silvermines hint
+- **CSID 32** (mid 2) — formula identification, port-stratagem
+- **CSID 34** (complete) — "graduating pupil of the Schultz School / Congratulations"
+
+`scripts/quests/crystalWar/SCH_AF3_Seeing_Blood_Red.lua` now chains all 4 events through a `Prog` CharVar. Players talk to Erlene 4 times to see every cutscene then receive Scholar's Mortarboard. Intermediate Pashhow / Ruhotz Silvermines steps collapsed into Erlene-only progression for the simplified server.
+
 ## In Progress
 
-### SCH AF3: Seeing Blood-red
+### SCH AF3: Seeing Blood-red — original audit notes (kept for reference)
 - **Research**: Complete (see Research/phase2/base_game/quests/sch_af3_research.md)
 - **Quest ID**: crystalWar quest 34
 - **Reward**: Scholar's Mortarboard (16140) — item + mods exist
