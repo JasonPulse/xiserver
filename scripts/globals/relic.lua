@@ -56,38 +56,44 @@ xi.relic.tryGrant = function(player)
     end
 
     local entry = relicWeapons[pinned]
-    if not entry then
-        player:printToPlayer(string.format('Relic_Selection %d is not valid (1-%d). See relic.lua.', pinned, #relicWeapons))
-        player:setCharVar(relicPinVar, 0)
-        return true
-    end
+    local cost  = xi.settings.main.RELIC_GRANT_COST or 50000
 
-    local cost = xi.settings.main.RELIC_GRANT_COST or 50000
-    local standing = player:getCurrency('imperial_standing')
-    if cost > 0 and standing < cost then
-        player:printToPlayer(string.format('%s grant costs %d Imperial Standing. You have %d.', entry.name, cost, standing))
-        player:setCharVar(relicPinVar, 0)
-        return true
-    end
-
-    if player:hasItem(entry.itemId) then
-        player:printToPlayer(string.format('You already own %s.', entry.name))
-        player:setCharVar(relicPinVar, 0)
-        return true
-    end
-
-    ---@diagnostic disable-next-line: param-type-mismatch
-    if not npcUtil.giveItem(player, entry.itemId) then
-        player:printToPlayer(string.format('Inventory full — %s not granted. Make space and retry.', entry.name))
-        return true -- leave pin set so retry on next zone works
-    end
-
-    if cost > 0 then
-        player:delCurrency('imperial_standing', cost)
-    end
-
+    -- Defer all client-visible side effects until after zone-in completes:
+    -- messageSpecial + printToPlayer + addItem fired during onGameIn race
+    -- the client's chat/inventory buffer init, so "Obtained:" lines never
+    -- render even though the item is added server-side.
     player:setCharVar(relicPinVar, 0)
-    player:printToPlayer(string.format('%s (%s relic, lv75) granted. Upgrade via Magian Moogles in Ru\'Lude Gardens.', entry.name, entry.job))
+
+    player:timer(3000, function(p)
+        if not entry then
+            p:printToPlayer(string.format('Relic_Selection %d is not valid (1-%d). See relic.lua.', pinned, #relicWeapons))
+            return
+        end
+
+        local standing = p:getCurrency('imperial_standing')
+        if cost > 0 and standing < cost then
+            p:printToPlayer(string.format('%s grant costs %d Imperial Standing. You have %d.', entry.name, cost, standing))
+            return
+        end
+
+        if p:hasItem(entry.itemId) then
+            p:printToPlayer(string.format('You already own %s.', entry.name))
+            return
+        end
+
+        ---@diagnostic disable-next-line: param-type-mismatch
+        if not npcUtil.giveItem(p, entry.itemId) then
+            p:printToPlayer(string.format('Inventory full — %s not granted. Make space and retry.', entry.name))
+            p:setCharVar(relicPinVar, pinned) -- restore so retry on next zone works
+            return
+        end
+
+        if cost > 0 then
+            p:delCurrency('imperial_standing', cost)
+        end
+
+        p:printToPlayer(string.format('%s (%s relic, lv75) granted. Upgrade via Magian Moogles in Ru\'Lude Gardens.', entry.name, entry.job))
+    end)
 
     return true
 end

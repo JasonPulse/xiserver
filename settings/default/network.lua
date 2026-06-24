@@ -46,6 +46,27 @@ xi.settings.network =
     -- of a few seconds is a genuine hang.
     MAP_HEALTHCHECK_STALE_THRESHOLD_MS = 10000,
 
+    -- ===========================
+    -- Bot API endpoints (POST /api/bot/...)
+    -- ===========================
+    -- Enables privileged actions over HTTP for non-GM bot accounts (e.g.
+    -- the RMT flavor bot granting gil after an in-game "purchase"). Bots
+    -- log into the game with normal player accounts (zero special perms)
+    -- and their out-of-game brain calls these endpoints when it needs to
+    -- run a privileged side effect.
+    --
+    -- All endpoints require an `X-Bot-Token` header matching MAP_BOT_API_TOKEN.
+    -- Constant-time comparison; do not log the token. Treat as a shared
+    -- secret between map server and your bot orchestrator service.
+    --
+    -- Requests are queued and run on the main loop tick, so the HTTP
+    -- handler returns 202 Accepted immediately and the side effect lands
+    -- within ~1 tick (~400ms). The target player must be online on this
+    -- map process — for sharded deployments, the caller is responsible
+    -- for hitting the right map host.
+    MAP_BOT_API_ENABLED                = false,
+    MAP_BOT_API_TOKEN                  = '',
+
     -- Central message server settings (ensure these are the same on both all map servers and the central (lobby) server
     ZMQ_IP   = '127.0.0.1',
     ZMQ_PORT = 54003,

@@ -119,16 +119,7 @@ local function runTutorialBypass(player)
     end
 end
 
-xi.mog_garden.onZoneIn = function(player, prevZone)
-    if not player or player:getZoneID() ~= xi.zone.MOG_GARDEN then
-        return
-    end
-
-    -- First-visit tutorial: drop the starter seed pack on the player. Run
-    -- this BEFORE the daily harvest so a tutorial-complete player still
-    -- gets their harvest on the same zone-in.
-    runTutorialBypass(player)
-
+local function runDailyHarvest(player)
     local today     = VanadielUniqueDay()
     local lastClaim = player:getCharVar(dailyHarvestVar)
     if lastClaim >= today then
@@ -144,6 +135,22 @@ xi.mog_garden.onZoneIn = function(player, prevZone)
         player:setCharVar(dailyHarvestVar, today)
         player:messageSpecial(ID.text.ITEM_OBTAINED, item)
     end
+end
+
+xi.mog_garden.onZoneIn = function(player, prevZone)
+    if not player or player:getZoneID() ~= xi.zone.MOG_GARDEN then
+        return
+    end
+
+    -- Defer tutorial + harvest until after zone-in completes. printToPlayer
+    -- and messageSpecial packets fired during onGameIn race the client's
+    -- chat/inventory buffer init, so welcome text + "Obtained:" lines never
+    -- render even though state advances server-side. 3s gives the engine
+    -- enough headroom to finish zone-in handshake before we push UI text.
+    player:timer(3000, function(p)
+        runTutorialBypass(p)
+        runDailyHarvest(p)
+    end)
 end
 
 -- Garden plots ─────────────────────────────────────────────────────────────

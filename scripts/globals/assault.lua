@@ -236,27 +236,34 @@ xi.assault.tryGrantOrders = function(player)
     end
 
     local entry = assaultOrdersList[pinned]
-    if not entry then
-        player:printToPlayer(string.format('Assault_Selection %d is not valid (1-6). See assault.lua.', pinned))
-        player:setCharVar(assaultPinVar, 0)
-        return true
-    end
 
-    -- Clear any existing assault orders before granting (only one at a time).
-    for _, other in pairs(assaultOrdersList) do
-        if other.ki ~= entry.ki and player:hasKeyItem(other.ki) then
-            player:delKeyItem(other.ki)
-        end
-    end
-
-    if player:hasKeyItem(entry.ki) then
-        player:printToPlayer(string.format('You already hold %s Assault Orders. Trigger the Runic Portal to warp in.', entry.name))
-        player:setCharVar(assaultPinVar, 0)
-        return true
-    end
-
-    npcUtil.giveKeyItem(player, entry.ki)
+    -- Defer client-visible side effects (KI grant message + printToPlayer)
+    -- past zone-in; messages fired during onGameIn race the chat/UI buffer
+    -- init and never render. Pin cleared synchronously to prevent double-
+    -- grant on rapid zone-ins.
     player:setCharVar(assaultPinVar, 0)
-    player:printToPlayer(string.format('%s Assault Orders granted. Trigger the Runic Portal in Aht Urhgan Whitegate to warp in.', entry.name))
+
+    player:timer(3000, function(p)
+        if not entry then
+            p:printToPlayer(string.format('Assault_Selection %d is not valid (1-6). See assault.lua.', pinned))
+            return
+        end
+
+        -- Clear any existing assault orders before granting (only one at a time).
+        for _, other in pairs(assaultOrdersList) do
+            if other.ki ~= entry.ki and p:hasKeyItem(other.ki) then
+                p:delKeyItem(other.ki)
+            end
+        end
+
+        if p:hasKeyItem(entry.ki) then
+            p:printToPlayer(string.format('You already hold %s Assault Orders. Trigger the Runic Portal to warp in.', entry.name))
+            return
+        end
+
+        npcUtil.giveKeyItem(p, entry.ki)
+        p:printToPlayer(string.format('%s Assault Orders granted. Trigger the Runic Portal in Aht Urhgan Whitegate to warp in.', entry.name))
+    end)
+
     return true
 end

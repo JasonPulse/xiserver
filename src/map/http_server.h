@@ -25,22 +25,33 @@
 #include "common/timer.h"
 
 #include <atomic>
+#include <functional>
+#include <mutex>
+#include <queue>
 
 #include <httplib.h>
 
-// HTTP liveness/readiness server for the map process. Always on.
+// HTTP liveness/readiness + bot API server for the map process. Always on.
 //
 // Endpoints:
 //
-//   GET /healthz   -> 200 if the main loop has ticked within the staleness
-//                     threshold, 503 otherwise. Use as a k8s livenessProbe.
-//   GET /readyz    -> 200 once initialization has completed and the main
-//                     loop has started ticking, 503 otherwise. Use as a
-//                     k8s readinessProbe / startupProbe.
-//   GET /api       -> Plain-text "alive" banner.
+//   GET  /healthz           -> 200 if the main loop has ticked within the
+//                              staleness threshold, 503 otherwise. Use as a
+//                              k8s livenessProbe.
+//   GET  /readyz            -> 200 once initialization has completed and
+//                              the main loop has started ticking, 503
+//                              otherwise. Use as a k8s readinessProbe /
+//                              startupProbe.
+//   GET  /api               -> Plain-text "alive" banner.
+//   POST /api/bot/grant_gil -> Bot-authenticated currency grant. Gated on
+//                              network.MAP_BOT_API_ENABLED + valid
+//                              X-Bot-Token header. Returns 202 on accept;
+//                              the actual grant runs on the next main-loop
+//                              tick via the pending-action queue.
 //
-// Intended for in-cluster probing only. Do not expose externally — there
-// is no authentication.
+// Liveness/readiness intended for in-cluster probing only — no auth on
+// those. The bot API requires the X-Bot-Token shared secret and should be
+// firewalled to the bot orchestrator's egress IPs in production.
 class MapHTTPServer
 {
 public:
@@ -58,8 +69,17 @@ public:
     // Called once initialization is complete and gameLoop() is running.
     void markReady();
 
+    // Drains the bot-API action queue on the main thread. HTTP handlers
+    // run on an Async worker and cannot touch CCharEntity safely, so they
+    // push closures here for the main loop to execute. Called every tick.
+    void processPendingActions();
+
 private:
     httplib::Server                m_httpServer;
     std::atomic<timer::time_point> m_lastTick;
     std::atomic<bool>              m_ready;
+
+    // Bot-API action queue. HTTP handlers enqueue; main loop drains.
+    std::mutex                        m_actionsMutex;
+    std::queue<std::function<void()>> m_pendingActions;
 };

@@ -350,32 +350,40 @@ xi.besieged.tryStartSimplified = function(player)
     end
 
     local entry = besiegedBosses[pinned]
-    if not entry then
-        player:printToPlayer(string.format('Besieged_Now %d is not valid (1-3). See besieged.lua.', pinned))
-        player:setCharVar(besiegedPinVar, 0)
-        return true
-    end
 
+    -- Wrong-zone path: leave pin set, defer the prompt so player sees it.
     if player:getZoneID() ~= xi.zone.AL_ZAHBI then
-        player:printToPlayer('You must be inside Al Zahbi to trigger a Besieged spawn. Travel there first.')
-        return true -- leave pin set so it fires on next zone-in to Al Zahbi
-    end
+        player:timer(3000, function(p)
+            p:printToPlayer('You must be inside Al Zahbi to trigger a Besieged spawn. Travel there first.')
+        end)
 
-    local mob = GetMobByID(entry.mobId)
-    if not mob then
-        player:printToPlayer(string.format('Besieged boss %s (mobId %d) not found in zone.', entry.name, entry.mobId))
-        player:setCharVar(besiegedPinVar, 0)
         return true
     end
 
-    if mob:isSpawned() and mob:isAlive() then
-        player:printToPlayer(string.format('%s is already engaged. Defeat the current spawn first.', entry.name))
-        player:setCharVar(besiegedPinVar, 0)
-        return true
-    end
-
-    SpawnMob(entry.mobId):updateClaim(player)
+    -- Clear pin synchronously; deferred body handles the actual spawn +
+    -- client-visible printToPlayer past the onGameIn buffer race.
     player:setCharVar(besiegedPinVar, 0)
-    player:printToPlayer(string.format('%s has spawned in Al Zahbi. Defend the city!', entry.name))
+
+    player:timer(3000, function(p)
+        if not entry then
+            p:printToPlayer(string.format('Besieged_Now %d is not valid (1-3). See besieged.lua.', pinned))
+            return
+        end
+
+        local mob = GetMobByID(entry.mobId)
+        if not mob then
+            p:printToPlayer(string.format('Besieged boss %s (mobId %d) not found in zone.', entry.name, entry.mobId))
+            return
+        end
+
+        if mob:isSpawned() and mob:isAlive() then
+            p:printToPlayer(string.format('%s is already engaged. Defeat the current spawn first.', entry.name))
+            return
+        end
+
+        SpawnMob(entry.mobId):updateClaim(p)
+        p:printToPlayer(string.format('%s has spawned in Al Zahbi. Defend the city!', entry.name))
+    end)
+
     return true
 end

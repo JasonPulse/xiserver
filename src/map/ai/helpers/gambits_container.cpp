@@ -1182,8 +1182,8 @@ bool CGambitsContainer::CheckTrigger(const CBattleEntity* triggerTarget, Predica
             {
                 auto* battleTarget = POwner->GetBattleTarget();
                 bool  result       = battleTarget &&
-                              (battleTarget->PAI->IsCurrentState<CWeaponSkillState>() ||
-                               battleTarget->PAI->IsCurrentState<CMobSkillState>());
+                                     (battleTarget->PAI->IsCurrentState<CWeaponSkillState>() ||
+                                      battleTarget->PAI->IsCurrentState<CMobSkillState>());
                 DebugTrusts("[Trust:%s] TARGET_READYING: %s = %s",
                             POwner->name.c_str(),
                             battleTarget ? battleTarget->name.c_str() : "null",

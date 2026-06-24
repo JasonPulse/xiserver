@@ -151,20 +151,29 @@ end
 -------------------------------------------------------------------------------
 
 -- inject a 0x05B (event end / update) reusing the active event's target ids.
--- Layout from LSB 0x05b_eventend.h:
---   u32 UniqueNo; u32 EndPara(option); u16 ActIndex; u16 Mode; u16 EventNum(csid); u16 EventPara
+-- LSB layout (src/map/packets/c2s/0x05b_eventend.h):
+--   u32 UniqueNo;    -- body offset 0
+--   u32 EndPara;     -- body offset 4 (option chosen)
+--   u16 ActIndex;    -- body offset 8
+--   u16 Mode;        -- body offset 10 (0=end, 1=update)
+--   u16 EventNum;    -- body offset 12 (the CSID — *** this must match ***)
+--   u16 EventPara;   -- body offset 14
+-- Windower's stock outgoing 0x05B field names: "Target" = UniqueNo,
+-- "Option Index" = EndPara, "Target Index" = ActIndex, "Automated Message"
+-- = Mode, "Zone" = EventNum (despite the misleading name), "Menu ID" =
+-- EventPara. The prior bridge had "Menu ID" mapped to CSID — wrong, that
+-- offset is EventPara. EventNum (CSID) lands in the "Zone" field.
 local function send_answer(option, mode)
     if not active_event then
         return false, 'no active event captured yet (trigger a !cs first)'
     end
     local p = packets.new('outgoing', 0x05B)
-    -- Field names here follow Windower's stock 0x05B definition; if your version
-    -- differs, check the logged event_out and adjust these keys.
-    p['Target'] = active_event.unique_no
-    p['Target Index'] = active_event.act_index
-    p['Menu ID'] = active_event.csid
-    p['Option Index'] = option
-    p['_unknown1'] = (mode == 'update') and 1 or 0
+    p['Target']        = active_event.unique_no
+    p['Option Index']  = option
+    p['Target Index']  = active_event.act_index
+    p['Automated Message'] = (mode == 'update') and 1 or 0
+    p['Zone']          = active_event.csid -- LSB's EventNum
+    p['Menu ID']       = 0                  -- LSB's EventPara
     packets.inject(p)
     return true
 end
@@ -174,9 +183,15 @@ local function handle_cmd(sock, msg)
     if cmd == 'ping' then
         sock:send('{"type":"pong"}\n')
     elseif cmd == 'send' then
-        local text = msg:match('"text"%s*:%s*"(.-)"')
+        -- Greedy capture up to the LAST `"` before the closing `}` so
+        -- chat commands with embedded `\"` (e.g. /ja "Vivacious Pulse"
+        -- <me>) survive. The lazy `(.-)"` would stop at the first inner
+        -- quote and truncate the command. We unescape JSON `\"` back to
+        -- raw `"` before forwarding to windower.send_command.
+        local text = msg:match('"text"%s*:%s*"(.*)"%s*}')
         if text then
-            windower.send_command('input ' .. text:gsub('\\"', '"'))
+            text = text:gsub('\\"', '"'):gsub('\\\\', '\\')
+            windower.send_command('input ' .. text)
             sock:send('{"type":"ack","cmd":"send"}\n')
         else
             sock:send('{"type":"error","msg":"send missing text"}\n')
@@ -184,6 +199,22 @@ local function handle_cmd(sock, msg)
     elseif cmd == 'answer' then
         local option = tonumber(msg:match('"option"%s*:%s*(-?%d+)'))
         local mode = msg:match('"mode"%s*:%s*"(%a+)"') or 'end'
+        -- Optional manual overrides for cases where active_event wasn't
+        -- captured (probe started after the 0x032 fired). Use the live
+        -- character's pos as the default Target/ActIndex.
+        local csidOverride = tonumber(msg:match('"csid"%s*:%s*(-?%d+)'))
+        if csidOverride and not active_event then
+            local pl = windower.ffxi.get_player()
+            if pl then
+                active_event = {
+                    unique_no = pl.id,
+                    act_index = pl.index,
+                    csid = csidOverride,
+                }
+            end
+        elseif csidOverride and active_event then
+            active_event.csid = csidOverride
+        end
         local ok, err = send_answer(option or 0, mode)
         if ok then sock:send('{"type":"ack","cmd":"answer"}\n')
         else sock:send('{"type":"error","msg":"' .. tostring(err) .. '"}\n') end
