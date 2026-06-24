@@ -25,6 +25,62 @@
 #include "common/logging.h"
 #include "common/settings.h"
 
+#include "entities/charentity.h"
+#include "utils/charutils.h"
+#include "utils/zoneutils.h"
+
+#include <nlohmann/json.hpp>
+
+namespace
+{
+// Constant-time string comparison so token check doesn't leak timing.
+bool constantTimeEquals(const std::string& a, const std::string& b)
+{
+    if (a.size() != b.size())
+    {
+        return false;
+    }
+
+    unsigned char accum = 0;
+    for (std::size_t i = 0; i < a.size(); ++i)
+    {
+        accum |= static_cast<unsigned char>(a[i] ^ b[i]);
+    }
+
+    return accum == 0;
+}
+
+bool botApiEnabledAndAuthed(const httplib::Request& req, httplib::Response& res)
+{
+    if (!settings::get<bool>("network.MAP_BOT_API_ENABLED"))
+    {
+        res.status = 404;
+        res.set_content("{\"error\":\"bot api disabled\"}", "application/json");
+        return false;
+    }
+
+    const auto configured = settings::get<std::string>("network.MAP_BOT_API_TOKEN");
+    if (configured.empty())
+    {
+        // Refuse rather than accept an unauthenticated call when the
+        // operator forgot to set a token. Fail closed.
+        res.status = 503;
+        res.set_content("{\"error\":\"bot api token not configured\"}", "application/json");
+        return false;
+    }
+
+    const auto provided = req.get_header_value("X-Bot-Token");
+    if (provided.empty() || !constantTimeEquals(provided, configured))
+    {
+        res.status = 401;
+        res.set_content("{\"error\":\"bad token\"}", "application/json");
+        return false;
+    }
+
+    return true;
+}
+} // namespace
+
 MapHTTPServer::MapHTTPServer()
 : m_lastTick(timer::now())
 , m_ready(false)
@@ -92,6 +148,102 @@ MapHTTPServer::MapHTTPServer()
                     }
                 });
 
+            // POST /api/bot/grant_gil
+            //   Headers: X-Bot-Token: <shared secret>
+            //   Body:    {"player":"<name>", "amount":<int32>, "reason":"..."}
+            //
+            // Validates token + payload, then enqueues an action onto the
+            // main-loop queue. Returns 202 Accepted with a body shape:
+            //   {"queued": true, "player":"<name>", "amount":N}
+            // The actual addGil happens on the next main-loop tick when
+            // processPendingActions() drains the queue. If the player is
+            // not online on this map process when the queued action runs,
+            // the action no-ops (no retry, no DB write) — the caller is
+            // responsible for verifying via /api/zones or session lookup
+            // that the player is here before calling.
+            m_httpServer.Post(
+                "/api/bot/grant_gil",
+                [this](const httplib::Request& req, httplib::Response& res)
+                {
+                    if (!botApiEnabledAndAuthed(req, res))
+                    {
+                        return;
+                    }
+
+                    nlohmann::json body;
+                    try
+                    {
+                        body = nlohmann::json::parse(req.body);
+                    }
+                    catch (const std::exception&)
+                    {
+                        res.status = 400;
+                        res.set_content("{\"error\":\"invalid json body\"}", "application/json");
+                        return;
+                    }
+
+                    if (!body.contains("player") || !body["player"].is_string())
+                    {
+                        res.status = 400;
+                        res.set_content("{\"error\":\"missing player\"}", "application/json");
+                        return;
+                    }
+
+                    if (!body.contains("amount") || !body["amount"].is_number_integer())
+                    {
+                        res.status = 400;
+                        res.set_content("{\"error\":\"missing amount (int32)\"}", "application/json");
+                        return;
+                    }
+
+                    const auto playerName = body["player"].get<std::string>();
+                    const auto amount     = body["amount"].get<int32_t>();
+
+                    if (amount <= 0 || amount > 999999999)
+                    {
+                        res.status = 400;
+                        res.set_content("{\"error\":\"amount out of range (1..999999999)\"}",
+                                        "application/json");
+                        return;
+                    }
+
+                    const auto reason = body.value("reason", std::string{ "unspecified" });
+
+                    {
+                        std::lock_guard<std::mutex> lk(m_actionsMutex);
+                        m_pendingActions.emplace(
+                            [playerName, amount, reason]()
+                            {
+                                auto* PChar = zoneutils::GetCharByName(playerName);
+                                if (!PChar)
+                                {
+                                    ShowDebugFmt(
+                                        "[BotAPI] grant_gil skipped: {} not online on this map "
+                                        "(amount={}, reason={})",
+                                        playerName,
+                                        amount,
+                                        reason);
+                                    return;
+                                }
+
+                                charutils::UpdateItem(PChar, LOC_INVENTORY, 0, amount);
+                                ShowInfoFmt(
+                                    "[BotAPI] grant_gil: {} +{} gil (reason={})",
+                                    playerName,
+                                    amount,
+                                    reason);
+                            });
+                    }
+
+                    nlohmann::json out{
+                        { "queued", true },
+                        { "player", playerName },
+                        { "amount", amount },
+                    };
+                    res.status = 202;
+                    res.set_content(out.dump(), "application/json");
+                });
+
             m_httpServer.set_error_handler(
                 [](const httplib::Request& /*req*/, httplib::Response& res)
                 {
@@ -118,4 +270,41 @@ void MapHTTPServer::recordTick()
 void MapHTTPServer::markReady()
 {
     m_ready.store(true, std::memory_order_release);
+}
+
+void MapHTTPServer::processPendingActions()
+{
+    // Drain the queue under lock into a local, then run actions outside
+    // the lock — actions may take time and must not block HTTP handler
+    // enqueue. Cap per-tick drain so a flood of requests can't stall the
+    // main loop; remainder runs next tick.
+    constexpr std::size_t kMaxPerTick = 32;
+
+    std::vector<std::function<void()>> batch;
+    {
+        std::lock_guard<std::mutex> lk(m_actionsMutex);
+        const std::size_t           take = std::min(kMaxPerTick, m_pendingActions.size());
+        batch.reserve(take);
+        for (std::size_t i = 0; i < take; ++i)
+        {
+            batch.emplace_back(std::move(m_pendingActions.front()));
+            m_pendingActions.pop();
+        }
+    }
+
+    for (auto& action : batch)
+    {
+        try
+        {
+            action();
+        }
+        catch (const std::exception& e)
+        {
+            ShowErrorFmt("[BotAPI] action threw: {}", e.what());
+        }
+        catch (...)
+        {
+            ShowError("[BotAPI] action threw unknown exception");
+        }
+    }
 }

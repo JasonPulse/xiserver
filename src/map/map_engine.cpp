@@ -199,6 +199,7 @@ void MapEngine::gameLoop()
     if (httpServer_)
     {
         httpServer_->recordTick();
+        httpServer_->processPendingActions();
     }
 
     if (tickDiffTime > 0ms)
