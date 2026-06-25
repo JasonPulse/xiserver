@@ -296,6 +296,7 @@ set(MAP_ONLY_EXTERNAL_LIBS
     RecastNavigation::Detour
     fast_obj
     httplib::httplib
+    nlohmann_json::nlohmann_json
 )
 
 set(SEARCH_ONLY_EXTERNAL_LIBS
