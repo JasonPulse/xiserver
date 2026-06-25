@@ -499,7 +499,7 @@ public:
         return resultSet_->isNull(key.c_str());
     }
 
-    auto query() const
+    auto query() const -> const std::string&
     {
         return query_;
     }
