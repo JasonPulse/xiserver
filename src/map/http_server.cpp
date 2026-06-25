@@ -29,6 +29,14 @@
 #include "utils/charutils.h"
 #include "utils/zoneutils.h"
 
+#include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <exception>
+#include <functional>
+#include <string>
+#include <vector>
+
 #include <nlohmann/json.hpp>
 
 namespace
@@ -182,22 +190,24 @@ MapHTTPServer::MapHTTPServer()
                         return;
                     }
 
-                    if (!body.contains("player") || !body["player"].is_string())
+                    auto playerIt = body.find("player");
+                    if (playerIt == body.end() || !playerIt->is_string())
                     {
                         res.status = 400;
                         res.set_content("{\"error\":\"missing player\"}", "application/json");
                         return;
                     }
 
-                    if (!body.contains("amount") || !body["amount"].is_number_integer())
+                    auto amountIt = body.find("amount");
+                    if (amountIt == body.end() || !amountIt->is_number_integer())
                     {
                         res.status = 400;
                         res.set_content("{\"error\":\"missing amount (int32)\"}", "application/json");
                         return;
                     }
 
-                    const auto playerName = body["player"].get<std::string>();
-                    const auto amount     = body["amount"].get<int32_t>();
+                    const std::string playerName = playerIt->get<std::string>();
+                    const int32       amount     = amountIt->get<int32>();
 
                     if (amount <= 0 || amount > 999999999)
                     {
@@ -207,7 +217,12 @@ MapHTTPServer::MapHTTPServer()
                         return;
                     }
 
-                    const auto reason = body.value("reason", std::string{ "unspecified" });
+                    std::string reason   = "unspecified";
+                    auto        reasonIt = body.find("reason");
+                    if (reasonIt != body.end() && reasonIt->is_string())
+                    {
+                        reason = reasonIt->get<std::string>();
+                    }
 
                     {
                         std::lock_guard<std::mutex> lk(m_actionsMutex);
@@ -235,12 +250,11 @@ MapHTTPServer::MapHTTPServer()
                             });
                     }
 
-                    nlohmann::json out{
-                        { "queued", true },
-                        { "player", playerName },
-                        { "amount", amount },
-                    };
-                    res.status = 202;
+                    nlohmann::json out;
+                    out["queued"] = true;
+                    out["player"] = playerName;
+                    out["amount"] = amount;
+                    res.status    = 202;
                     res.set_content(out.dump(), "application/json");
                 });
 
