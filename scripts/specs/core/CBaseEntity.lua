@@ -785,10 +785,6 @@ end
 function CBaseEntity:forceRezone()
 end
 
----@return nil
-function CBaseEntity:forceLogout()
-end
-
 ---@nodiscard
 ---@return table
 function CBaseEntity:getPos()
