@@ -25,6 +25,7 @@ commandObj.onTrigger = function(player, target, jobArg)
         error(player, 'You must provide a player name.')
         return
     end
+
     local targ = GetPlayerByName(target)
     if targ == nil then
         error(player, string.format('Player named "%s" not found (must be online).', target))
@@ -36,6 +37,7 @@ commandObj.onTrigger = function(player, target, jobArg)
         error(player, 'You must provide a job short-name (e.g. PLD) or its numeric id.')
         return
     end
+
     local jobId = tonumber(jobArg) or xi.job[string.upper(jobArg)]
     if jobId == nil or jobId <= 0 or jobId >= xi.MAX_JOB_TYPE then
         error(player, 'Invalid jobID. Use a job short-name (e.g. PLD) or its numeric id.')
@@ -49,6 +51,7 @@ commandObj.onTrigger = function(player, target, jobArg)
     for k, v in pairs(xi.job) do
         jobNameByNum[v] = k
     end
+
     local name = jobNameByNum[jobId] or tostring(jobId)
     targ:printToPlayer(string.format('Your %s job has been unlocked.', name))
     player:printToPlayer(string.format('Unlocked %s for %s.', name, targ:getName()))

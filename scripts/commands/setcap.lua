@@ -25,6 +25,7 @@ commandObj.onTrigger = function(player, target, cap)
         error(player, 'You must provide a player name.')
         return
     end
+
     local targ = GetPlayerByName(target)
     if targ == nil then
         error(player, string.format('Player named "%s" not found (must be online).', target))
