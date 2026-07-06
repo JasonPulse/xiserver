@@ -2000,12 +2000,12 @@ auto CZoneEntities::GetEffectCheckTime() const -> timer::time_point
     return m_EffectCheckTime;
 }
 
-EntityList_t CZoneEntities::GetCharList() const
+const EntityList_t& CZoneEntities::GetCharList() const
 {
     return m_charList;
 }
 
-EntityList_t CZoneEntities::GetMobList() const
+const EntityList_t& CZoneEntities::GetMobList() const
 {
     return m_mobList;
 }

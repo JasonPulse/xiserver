@@ -108,7 +108,7 @@ LosTreeNode::LosTreeNode(
         }
 
         float biggestAxisSize = 0;
-        splitAxis             = Axis::None;
+        splitAxis             = Axis::X;
         for (auto i = 0; i < 3; i++)
         {
             medians[i] /= indexCount;
@@ -120,7 +120,7 @@ LosTreeNode::LosTreeNode(
             }
         }
 
-        if (nodeBox.getAxisSize(splitAxis) < boxSizeThreshold)
+        if (biggestAxisSize < boxSizeThreshold)
         {
             SetElements(elements, elementNexts, elementIndices, indexStart, indexEnd);
             return;
