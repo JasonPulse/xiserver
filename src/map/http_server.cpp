@@ -241,11 +241,25 @@ MapHTTPServer::MapHTTPServer()
                                     return;
                                 }
 
-                                charutils::UpdateItem(PChar, LOC_INVENTORY, 0, amount);
+                                // Verify the credit actually applied (UpdateItem returns the item id, 0 on
+                                // failure) — an unconditional success log here hid failing grants while the
+                                // delivery box refused sends for insufficient gil. Mirror lua addGil's guard.
+                                if (charutils::UpdateItem(PChar, LOC_INVENTORY, 0, amount) == 0)
+                                {
+                                    ShowErrorFmt(
+                                        "[BotAPI] grant_gil FAILED to apply: {} +{} (reason={}) — gil item "
+                                        "missing/invalid in inventory slot 0",
+                                        playerName,
+                                        amount,
+                                        reason);
+                                    return;
+                                }
+
                                 ShowInfoFmt(
-                                    "[BotAPI] grant_gil: {} +{} gil (reason={})",
+                                    "[BotAPI] grant_gil: {} +{} gil applied, now {} (reason={})",
                                     playerName,
                                     amount,
+                                    PChar->getStorage(LOC_INVENTORY)->GetItem(0)->getQuantity(),
                                     reason);
                             });
                     }
