@@ -12,7 +12,7 @@ end
 
 entity.onTrigger = function(player, npc)
     if player:getEminenceProgress(1) then
-        player:startEvent(24)
+        player:startEvent(24, 0, player:getGil())
     elseif not player:hasKeyItem(xi.ki.MEMORANDOLL) then
         player:startEvent(25)
     else
