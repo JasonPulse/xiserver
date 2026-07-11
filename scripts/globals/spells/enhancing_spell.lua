@@ -191,6 +191,14 @@ local pTable =
     [xi.magic.spell.THUNDERSTORM ] = { 1, xi.effect.THUNDERSTORM,  46,    2,  180, true,  true, 0 },
     [xi.magic.spell.VOIDSTORM    ] = { 1, xi.effect.VOIDSTORM,     47,    2,  180, true,  true, 0 },
     [xi.magic.spell.WINDSTORM    ] = { 1, xi.effect.WINDSTORM,     43,    2,  180, true,  true, 0 },
+    [xi.magic.spell.AURORASTORM_II  ] = { 2, xi.effect.AURORASTORM,   65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.FIRESTORM_II    ] = { 2, xi.effect.FIRESTORM,     65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.HAILSTORM_II    ] = { 2, xi.effect.HAILSTORM,     65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.RAINSTORM_II    ] = { 2, xi.effect.RAINSTORM,     65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.SANDSTORM_II    ] = { 2, xi.effect.SANDSTORM,     65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.THUNDERSTORM_II ] = { 2, xi.effect.THUNDERSTORM,  65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.VOIDSTORM_II    ] = { 2, xi.effect.VOIDSTORM,     65,    4,  240, true,  true, 0 },
+    [xi.magic.spell.WINDSTORM_II    ] = { 2, xi.effect.WINDSTORM,     65,    4,  240, true,  true, 0 },
 
     -- Temper
     [xi.magic.spell.TEMPER       ] = { 1, xi.effect.MULTI_STRIKES, 95,    5,  180, true,  false, 0 },
