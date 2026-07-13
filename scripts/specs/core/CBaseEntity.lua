@@ -3858,6 +3858,11 @@ end
 function CBaseEntity:setUnkillable(unkillable)
 end
 
+---@nodiscard
+---@return boolean
+function CBaseEntity:getUnkillable()
+end
+
 ---@param untargetable boolean
 ---@return nil
 function CBaseEntity:setUntargetable(untargetable)
