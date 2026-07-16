@@ -3268,6 +3268,11 @@ void CCharEntity::setLocked(bool locked)
 
 auto CCharEntity::getCharVar(const std::string& varName) const -> int32
 {
+    if (varName.length() > 64)
+    {
+        ShowErrorFmt("CCharEntity::getCharVar: Charvar '{}' longer than 60 characters. Please shorten your variable name.", varName);
+    }
+
     if (auto charVar = charVarCache.find(varName); charVar != charVarCache.end())
     {
         std::pair cachedVarData = charVar->second;
@@ -3346,6 +3351,11 @@ auto CCharEntity::getCharVarsWithSuffix(const std::string& suffix) -> std::vecto
 
 void CCharEntity::setCharVar(const std::string& charVarName, int32 value, uint32 expiry /* = 0 */)
 {
+    if (charVarName.length() > 64)
+    {
+        ShowErrorFmt("CCharEntity::setCharVar: Charvar '{}' longer than 60 characters. Please shorten your variable name.", charVarName);
+    }
+
     charVarCache[charVarName] = { value, expiry };
     charutils::PersistCharVar(this->id, charVarName, value, expiry);
 }
