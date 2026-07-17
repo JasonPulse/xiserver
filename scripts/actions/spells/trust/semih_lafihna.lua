@@ -28,7 +28,7 @@ spellObject.onMobSpawn = function(mob)
     -- mob:addGambit(ai.t.SELF, { ai.c.HAS_TOP_ENMITY, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.STEALTH_SHOT })
 
     mob:addListener('WEAPONSKILL_USE', 'SEMIH_LAFIHNA_WEAPONSKILL_USE', function(mobArg, target, wsid, tp, action)
-        if wsid == 3490 then -- Stellar Arrow
+        if wsid == 3490 then -- Lux Arrow
             -- I'll show you no quarter!
             xi.trust.message(mobArg, xi.trust.messageOffset.SPECIAL_MOVE_1)
         end
