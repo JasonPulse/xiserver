@@ -21,7 +21,6 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.SELF, { ai.c.HAS_TOP_ENMITY, 0 },                 { ai.r.JA, ai.s.SPECIFIC, xi.ja.THIRD_EYE })
     mob:addGambit(ai.t.SELF, { ai.c.TP_LT, 1000 },                       { ai.r.JA, ai.s.SPECIFIC, xi.ja.MEDITATE })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.WARDING_CIRCLE }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.WARDING_CIRCLE })
-
 end
 
 spellObject.onMobDespawn = function(mob)
