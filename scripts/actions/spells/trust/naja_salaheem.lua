@@ -28,11 +28,13 @@ spellObject.onMobSpawn = function(mob)
         end
     end)
 
-    mob:addGambit(ai.t.SELF, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.FOCUS })
-
-    mob:addGambit(ai.t.SELF, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.DODGE })
-
-    mob:addGambit(ai.t.SELF, { ai.c.HAS_TOP_ENMITY, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.COUNTERSTANCE })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.FOCUS },            { ai.r.JA, ai.s.SPECIFIC, xi.ja.FOCUS })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.DODGE },            { ai.r.JA, ai.s.SPECIFIC, xi.ja.DODGE })
+    mob:addGambit(ai.t.SELF,   { ai.c.HAS_TOP_ENMITY, 0 },                      { ai.r.JA, ai.s.SPECIFIC, xi.ja.COUNTERSTANCE })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.BOOST },            { ai.r.JA, ai.s.SPECIFIC, xi.ja.BOOST })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.FORMLESS_STRIKES }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.FORMLESS_STRIKES })
+    mob:addGambit(ai.t.SELF,   { ai.c.HPP_LT, 50 },                             { ai.r.JA, ai.s.SPECIFIC, xi.ja.CHAKRA })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                              { ai.r.JA, ai.s.SPECIFIC, xi.ja.CHI_BLAST })
 end
 
 spellObject.onMobDespawn = function(mob)

@@ -17,24 +17,10 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
-    local mlvl = mob:getMainLvl()
-    local tick_amount
-    if mlvl == 99 then
-        tick_amount = 6
-    elseif mlvl < 99 then
-        tick_amount = 5
-    elseif mlvl <= 87 then
-        tick_amount = 4
-    elseif mlvl <= 73 then
-        tick_amount = 3
-    elseif mlvl <= 51 then
-        tick_amount = 2
-    else
-        tick_amount = 1
-    end
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.COPY_IMAGE }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.UTSUSEMI })
 
-    mob:addStatusEffectEx(xi.effect.COLURE_ACTIVE, xi.effect.COLURE_ACTIVE, 6, 3, 0, xi.effect.GEO_REGEN, tick_amount, xi.auraTarget.ALLIES, xi.effectFlag.AURA)
     mob:setAutoAttackEnabled(false)
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end
 
 spellObject.onMobDespawn = function(mob)

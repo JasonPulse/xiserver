@@ -41,6 +41,13 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.PARTY, { ai.c.STATUS_FLAG, xi.effectFlag.ERASABLE }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.ERASE })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.STONESKIN }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.STONESKIN })
 
+    -- Offensive / utility backstops so she doesn't stand idle when nobody
+    -- needs a heal or buff. Ordered lowest-priority (evaluated last).
+    mob:addGambit(ai.t.MASTER, { ai.c.NOT_STATUS, xi.effect.REGEN }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.REGEN })
+    mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.DIA },   { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.DIA })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                   { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.BANISH })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                   { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.HOLY })
+
     mob:setAutoAttackEnabled(false)
     mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end
