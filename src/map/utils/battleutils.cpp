@@ -2457,14 +2457,17 @@ uint8 GetHitRateEx(CBattleEntity* PAttacker, CBattleEntity* PDefender, uint8 att
 {
     int32 hitrate = 75;
 
-    bool hasSneakAttack      = PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK);
-    bool hasTrickAttack      = PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK);
-    bool isBehind            = behind(PAttacker->loc.p, PDefender->loc.p, 64);
-    bool hasAssassin         = PAttacker->hasTrait(TRAIT_ASSASSIN);
-    bool hasValidSneakAttack = hasSneakAttack && isBehind;
-    bool hasValidTrickAttack = hasTrickAttack && hasAssassin;
+    bool hasSneakAttack = PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK);
+    bool hasTrickAttack = PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK);
+    bool isBehind       = behind(PAttacker->loc.p, PDefender->loc.p, 64);
+    bool hasAssassin    = PAttacker->hasTrait(TRAIT_ASSASSIN);
 
-    if (hasValidSneakAttack || (hasValidTrickAttack && getAvailableTrickAttackChar(PAttacker, PDefender)))
+    // SATA: with Trick Attack lined up, Sneak Attack's behind requirement is waived
+    bool hasTAChar           = hasTrickAttack && getAvailableTrickAttackChar(PAttacker, PDefender);
+    bool hasValidSneakAttack = hasSneakAttack && (isBehind || hasTAChar);
+    bool hasValidTrickAttack = hasTAChar && hasAssassin;
+
+    if (hasValidSneakAttack || hasValidTrickAttack)
     {
         hitrate = 100; // Attack with SA active or TA/Assassin cannot miss
     }
@@ -2505,7 +2508,9 @@ uint8 GetCritHitRate(CBattleEntity* PAttacker, CBattleEntity* PDefender, bool ig
     }
     else if (PAttacker->objtype == TYPE_PC && (!ignoreSneakTrickAttack) && PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK))
     {
-        if (behind(PAttacker->loc.p, PDefender->loc.p, 64) || PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE))
+        // SATA: with Trick Attack lined up, Sneak Attack's behind requirement is waived
+        if (behind(PAttacker->loc.p, PDefender->loc.p, 64) || PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE) ||
+            (PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK) && battleutils::getAvailableTrickAttackChar(PAttacker, PDefender)))
         {
             critHitRate = 100;
         }
