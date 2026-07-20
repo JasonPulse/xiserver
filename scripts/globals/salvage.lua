@@ -562,26 +562,30 @@ end
 -----------------------------------
 -- Simplified Salvage entry (4-player private server).
 --
--- Retail requires MacChurchill at Aht Urhgan Whitegate, an Imperial Standing
--- spend, and a 6-player party. This skips the menu / party gate entirely:
--- player pins a remnant ID, the next onGameIn warps them in and grants the
--- matching Map KI. Inside the remnants, all NPC/mob scripts are already
--- wired (Armoury Crate / Slot / Socket / Dormant Rampart).
+-- Retail requires Zasshal's permit quest, an Assault-point spend, and a
+-- party. This pin skips the prerequisites: it charges Imperial Standing,
+-- grants the per-run Remnants Permit + the zone map, and warps the player
+-- to the matching Gilded Gateway in Alzadaal Undersea Ruins. Clicking the
+-- gateway creates the real instance (remnants zones are instanced — a raw
+-- setPos into them just gets you ejected, which is what the old version
+-- of this pin did). Inside, all NPC/mob scripts are already wired
+-- (Armoury Crate / Slot / Socket / Dormant Rampart).
 --
 -- Usage:
 --   !setvar Salvage_Selection N        (1=Bhaflau, 2=Zhayolm, 3=Arrapago, 4=Silver Sea)
---   then zone / relog
+--   then zone / relog, click the Gilded Gateway you land at
 --
--- Costs Imperial Standing per entry. Default 1000; set settings
--- main.SALVAGE_ENTRY_COST=0 if you want it free.
+-- Costs Imperial Standing per entry (the permit is consumed on instance
+-- registration). Default 1000; set settings main.SALVAGE_ENTRY_COST=0 if
+-- you want it free. Instance entry also requires level 65+.
 -----------------------------------
 local salvagePinVar = 'Salvage_Selection'
 local salvageRemnants =
 {
-    [1] = { name = 'Bhaflau Remnants',    zone = xi.zone.BHAFLAU_REMNANTS,    map = xi.ki.MAP_OF_BHAFLAU_REMNANTS    },
-    [2] = { name = 'Zhayolm Remnants',    zone = xi.zone.ZHAYOLM_REMNANTS,    map = xi.ki.MAP_OF_ZHAYOLM_REMNANTS    },
-    [3] = { name = 'Arrapago Remnants',   zone = xi.zone.ARRAPAGO_REMNANTS,   map = xi.ki.MAP_OF_ARRAPAGO_REMNANTS   },
-    [4] = { name = 'Silver Sea Remnants', zone = xi.zone.SILVER_SEA_REMNANTS, map = xi.ki.MAP_OF_SILVER_SEA_REMNANTS },
+    [1] = { name = 'Bhaflau Remnants',    map = xi.ki.MAP_OF_BHAFLAU_REMNANTS,    door = { x =  620.0, y = -2.0, z = -202.0, rot = 190 } },
+    [2] = { name = 'Zhayolm Remnants',    map = xi.ki.MAP_OF_ZHAYOLM_REMNANTS,    door = { x = -580.0, y =  0.0, z = -405.0, rot = 64  } },
+    [3] = { name = 'Arrapago Remnants',   map = xi.ki.MAP_OF_ARRAPAGO_REMNANTS,   door = { x = -580.0, y =  0.0, z = -159.0, rot = 64  } },
+    [4] = { name = 'Silver Sea Remnants', map = xi.ki.MAP_OF_SILVER_SEA_REMNANTS, door = { x =  580.0, y = -2.0, z =  442.0, rot = 190 } },
 }
 
 xi.salvage.tryEnter = function(player)
@@ -617,14 +621,18 @@ xi.salvage.tryEnter = function(player)
         npcUtil.giveKeyItem(player, entry.map)
     end
 
+    if not player:hasKeyItem(xi.ki.REMNANTS_PERMIT) then
+        npcUtil.giveKeyItem(player, xi.ki.REMNANTS_PERMIT)
+    end
+
     -- Consume the pin + delay the warp: setPos silently returns early when
     -- player.status == DISAPPEAR (the status during the zone-in callback
     -- chain). Delay lets the engine flip status to NORMAL before we
     -- initiate the cross-zone warp.
     player:setCharVar(salvagePinVar, 0)
-    player:printToPlayer(string.format('Entering %s...', entry.name))
+    player:printToPlayer(string.format('Permit granted. Click the Gilded Gateway to enter %s.', entry.name))
     player:timer(3000, function(p)
-        p:setPos(0, 0, 0, 0, entry.zone)
+        p:setPos(entry.door.x, entry.door.y, entry.door.z, entry.door.rot, xi.zone.ALZADAAL_UNDERSEA_RUINS)
     end)
 
     return true

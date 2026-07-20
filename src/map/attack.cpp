@@ -537,8 +537,8 @@ void CAttack::ProcessDamage()
 {
     if (settings::get<bool>("map.ENABLE_AUTO_ATTACK_LUA"))
     {
-        // Sneak attack. With Trick Attack also lined up (SATA), the behind-the-target
-        // requirement is waived — retail lets you SATA onto the tank from in front.
+        // Sneak attack. Custom SATA rule: with Trick Attack also lined up, the
+        // behind-the-target requirement is waived — SATA onto the tank from in front.
         if (m_attacker->GetMJob() == JOB_THF && m_isFirstSwing && m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK) &&
             (behind(m_attacker->loc.p, m_victim->loc.p, 64) || m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE) ||
              m_victim->StatusEffectContainer->HasStatusEffect(EFFECT_DOUBT) || m_attackRound->GetTAEntity() != nullptr))
@@ -597,8 +597,8 @@ void CAttack::ProcessDamage()
         return;
     }
 
-    // Sneak attack. With Trick Attack also lined up (SATA), the behind-the-target
-    // requirement is waived — retail lets you SATA onto the tank from in front.
+    // Sneak attack. Custom SATA rule: with Trick Attack also lined up, the
+    // behind-the-target requirement is waived — SATA onto the tank from in front.
     if (m_attacker->GetMJob() == JOB_THF && m_isFirstSwing && m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK) &&
         (behind(m_attacker->loc.p, m_victim->loc.p, 64) || m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE) ||
          m_victim->StatusEffectContainer->HasStatusEffect(EFFECT_DOUBT) || m_attackRound->GetTAEntity() != nullptr))

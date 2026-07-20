@@ -664,9 +664,10 @@ xi.weaponskills.doPhysicalWeaponskill = function(attacker, target, wsID, wsParam
     calcParams.accStat                 = attacker:getACC()
     calcParams.melee                   = true
     calcParams.mustMiss                = target:hasStatusEffect(xi.effect.PERFECT_DODGE) or (target:hasStatusEffect(xi.effect.ALL_MISS) and not wsParams.hitsHigh)
-    -- Retail SATA rule: with Trick Attack also active and a valid TA intermediary
-    -- found (taChar), Sneak Attack's behind-the-target requirement is waived —
-    -- the classic "SATA onto the tank" play from in front of the mob.
+    -- Custom SATA rule (small-server QoL): with Trick Attack also active and a
+    -- valid TA intermediary found (taChar), Sneak Attack's behind-the-target
+    -- requirement is waived — lets a solo THF SATA onto a tank trust from in
+    -- front of the mob.
     calcParams.taChar                  = taChar
     calcParams.trickApplicable         = calcParams.taChar ~= nil
     calcParams.sneakApplicable         = attacker:hasStatusEffect(xi.effect.SNEAK_ATTACK) and

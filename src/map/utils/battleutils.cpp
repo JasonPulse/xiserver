@@ -2462,7 +2462,7 @@ uint8 GetHitRateEx(CBattleEntity* PAttacker, CBattleEntity* PDefender, uint8 att
     bool isBehind       = behind(PAttacker->loc.p, PDefender->loc.p, 64);
     bool hasAssassin    = PAttacker->hasTrait(TRAIT_ASSASSIN);
 
-    // SATA: with Trick Attack lined up, Sneak Attack's behind requirement is waived
+    // Custom SATA rule: with Trick Attack lined up, Sneak Attack's behind requirement is waived
     bool hasTAChar           = hasTrickAttack && getAvailableTrickAttackChar(PAttacker, PDefender);
     bool hasValidSneakAttack = hasSneakAttack && (isBehind || hasTAChar);
     bool hasValidTrickAttack = hasTAChar && hasAssassin;
@@ -2508,7 +2508,7 @@ uint8 GetCritHitRate(CBattleEntity* PAttacker, CBattleEntity* PDefender, bool ig
     }
     else if (PAttacker->objtype == TYPE_PC && (!ignoreSneakTrickAttack) && PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK))
     {
-        // SATA: with Trick Attack lined up, Sneak Attack's behind requirement is waived
+        // Custom SATA rule: with Trick Attack lined up, Sneak Attack's behind requirement is waived
         if (behind(PAttacker->loc.p, PDefender->loc.p, 64) || PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE) ||
             (PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK) && battleutils::getAvailableTrickAttackChar(PAttacker, PDefender)))
         {

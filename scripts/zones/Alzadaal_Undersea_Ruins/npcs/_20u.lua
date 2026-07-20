@@ -9,9 +9,9 @@ local ID = zones[xi.zone.ALZADAAL_UNDERSEA_RUINS]
 local entity = {}
 
 entity.onTrigger = function(player, npc)
---    if not xi.instance.onTrigger(player, npc, xi.zone.ARRAPAGO_REMNANTS) then
+    if not xi.instance.onTrigger(player, npc, xi.zone.ARRAPAGO_REMNANTS) then
         player:messageSpecial(ID.text.NOTHING_HAPPENS)
---    end
+    end
 end
 
 entity.onEventUpdate = function(player, csid, option, npc)
