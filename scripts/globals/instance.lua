@@ -53,9 +53,9 @@ xi.instance.lookup =
 {
     [xi.zone.ILRUSI_ATOLL] =
     {
-        -- Assault: Golden Salvage
+        { 5500, { 219, 41, -4, 0, 60, 0, 1 }, { 219, 4 }, { 108, 0 } }, -- Assault: Golden Salvage
         -- Assault: Lamia No.13
-        -- Assault: Extermination
+        { 5502, { 219, 43, -4, 0, 70, 0, 1 }, { 219, 4 }, { 108, 0 } }, -- Assault: Extermination
         -- Assault: Demolition Duty
         -- Assault: Searat Salvation
         -- Assault: Apkallu Seizure
@@ -69,7 +69,7 @@ xi.instance.lookup =
     {
         { 5600, { 143, 79, -6, 0, 99, 3, 0 }, { 143, 4 }, { 147, 3 } }, -- Shades of Vengeance (TOAU31)
         { 5601, { 143, 31, -4, 0, 70, 0, 1 }, { 143, 4 }, { 147, 0 } }, -- Assault: Seagull Grounded
-        -- Assault: Requiem
+        { 5602, { 143, 32, -4, 0, 70, 0, 1 }, { 143, 4 }, { 147, 0 } }, -- Assault: Requiem
         -- Assault: Saving Private Ryaaf
         -- Assault: Shooting Down the Baron
         -- Assault: Stop the Bloodshed
@@ -93,12 +93,12 @@ xi.instance.lookup =
     [xi.zone.LEBROS_CAVERN] =
     {
         { 6300, { 203, 21, -4, 0, 50, 0, 1 }, { 203, 4 }, { 208, 0 } }, -- Assault: Excavation Duty
-        -- Assault: Lebros Supplies
-        -- Assault: Troll Fugitives
+        { 6301, { 203, 22, -4, 0, 60, 0, 1 }, { 203, 4 }, { 208, 0 } }, -- Assault: Lebros Supplies
+        { 6302, { 203, 23, -4, 0, 70, 0, 1 }, { 203, 4 }, { 208, 0 } }, -- Assault: Troll Fugitives
         -- Assault: Evade and Escape
         -- Assault: Siegemaster Assassination
         -- Assault: Apkallu Breeding
-        -- Assault: Wamoura Farm Raid
+        { 6306, { 203, 27, -4, 0, 70, 0, 1 }, { 203, 4 }, { 208, 0 } }, -- Assault: Wamoura Farm Raid
         -- Assault: Egg Conservation
         -- Assault: Operation: Black Pearl
         -- Assault: Better Than One
@@ -107,7 +107,7 @@ xi.instance.lookup =
     [xi.zone.MAMOOL_JA_TRAINING_GROUNDS] =
     {
         { 6600, { 505, 11, -4, 0, 60, 0, 1 }, { 505, 4 }, { 511, 0 } }, -- Assault: Imperial Agent Rescue
-        -- Assault: Preemptive Strike
+        { 6601, { 505, 12, -4, 0, 60, 0, 1 }, { 505, 4 }, { 511, 0 } }, -- Assault: Preemptive Strike
         -- Assault: Sagelord Elimination
         -- Assault: Breaking Morale
         -- Assault: The Double Agent

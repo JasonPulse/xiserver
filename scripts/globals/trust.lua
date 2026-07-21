@@ -17,6 +17,7 @@ xi.trust.movementType =
     --     :     mob:setMobMod(xi.mobMod.TRUST_DISTANCE, 20)
     --     : Will set the combat distance the trust tries to stick to to 20'
     -- NOTE: If a Trust doesn't immediately sprint to a certain distance at the start of battle, it's probably NO_MOVE or MELEE.
+    TA_ANCHOR     = -3, -- Stays on the line between master and mob so the master can always Trick Attack through this trust
     SONG_ROTATION = -2, -- BRD: alternates between melee range (March/Madrigal) and caster range (Ballad) every 30s
     NO_MOVE       = -1, -- Stand still where summoned. Only repositions if master gets too far for casting.
     MELEE         = 0,  -- Default: will continually reposition to stay within melee range of the target

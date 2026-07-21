@@ -364,8 +364,14 @@ void CGambitsContainer::Tick(timer::time_point tick)
 
         auto isValidMember = [this](CBattleEntity* PSettableTarget, CBattleEntity* PPartyTarget)
         {
+            // Party-target range: was hardcoded 15y, which is smaller than the
+            // Cure / Protect / Erase spell range (~20y). CASTER_CAMP trusts
+            // (Yoran-Oran UC, Apururu UC, etc.) sit ~15y from the mob; once
+            // Declump nudges them, master fell outside 15y and PARTY-targeted
+            // gambits silently dropped — trust just stood around while master
+            // took damage. 22y covers the max in-game spell range.
             return !PSettableTarget && PPartyTarget->isAlive() && POwner->loc.zone == PPartyTarget->loc.zone &&
-                   distance(POwner->loc.p, PPartyTarget->loc.p) <= 15.0f;
+                   distance(POwner->loc.p, PPartyTarget->loc.p) <= 22.0f;
         };
 
         G_TARGET targetType = gambit.target_selector;

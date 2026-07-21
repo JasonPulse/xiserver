@@ -19,6 +19,12 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.SWORDPLAY }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SWORDPLAY })
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.VALLATION }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.VALLATION })
+
+    -- Designated SATA tank: holds the line between master and mob, so a THF
+    -- master can Trick Attack through her from anywhere. Provoke keeps the
+    -- transferred hate where it belongs.
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.TA_ANCHOR)
 end
 
 spellObject.onMobDespawn = function(mob)

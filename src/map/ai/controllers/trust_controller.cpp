@@ -49,6 +49,7 @@ enum TRUST_MOVEMENT_TYPE : int8
     //     :     mob:setMobMod(xi.mobMod.TRUST_DISTANCE, 20)
     //     : Will set the combat distance the trust tries to stick to to 20'
     // NOTE: If a Trust doesn't immediately sprint to a certain distance at the start of battle, it's probably NO_MOVE or MELEE.
+    TA_ANCHOR     = -3, // Stays on the line between master and mob so the master can always Trick Attack through this trust
     SONG_ROTATION = -2, // BRD: alternates between melee range (for March/Madrigal) and caster range (for Ballad) every 30s
     NO_MOVE       = -1, // Don't move from where summoned. Repositions only if master gets too far for casting.
     CASTER_CAMP   = 15, // Caster camp: 15' from mob on master's side, all CASTER_CAMP trusts cluster at the same spot
@@ -194,10 +195,35 @@ void CTrustController::DoCombatTick(timer::time_point tick)
                 case TRUST_MOVEMENT_TYPE::NO_MOVE:
                 {
                     // Stand still near where summoned. Only reposition if outside casting
-                    // range from the master (so spells can still land on the party).
+                    // range from the master (so spells can still land on the master).
                     if (POwner->PMaster && distance(POwner->loc.p, POwner->PMaster->loc.p) > 18.0f)
                     {
                         PathOutToDistance(PTarget, 9.0f, true);
+                    }
+                    break;
+                }
+                case TRUST_MOVEMENT_TYPE::TA_ANCHOR:
+                {
+                    // Track a point on the master→mob line, closer to the mob than the
+                    // master, so getAvailableTrickAttackChar always finds this trust when
+                    // the master uses Trick Attack. 45% of the way out from the mob keeps
+                    // it past the .5y minimum TA distance while staying in its own melee
+                    // range on normal-size mobs. Declump is skipped for this type — any
+                    // nudge off the line breaks the ~11 degree areInLine window.
+                    if (PMaster)
+                    {
+                        position_t linePos = {
+                            PTarget->loc.p.x + (PMaster->loc.p.x - PTarget->loc.p.x) * 0.45f,
+                            PTarget->loc.p.y,
+                            PTarget->loc.p.z + (PMaster->loc.p.z - PTarget->loc.p.z) * 0.45f,
+                            0,
+                            0,
+                        };
+
+                        if (distance(POwner->loc.p, linePos) > 0.6f && POwner->GetSpeed() > 0)
+                        {
+                            POwner->PAI->PathFind->StepTo(linePos, true);
+                        }
                     }
                     break;
                 }
@@ -232,7 +258,7 @@ void CTrustController::DoCombatTick(timer::time_point tick)
                 }
             }
 
-            if (!POwner->PAI->PathFind->IsFollowingPath())
+            if (!POwner->PAI->PathFind->IsFollowingPath() && movementDistance != TRUST_MOVEMENT_TYPE::TA_ANCHOR)
             {
                 Declump(PMaster, PTarget);
             }

@@ -108,6 +108,8 @@ xi.geasFete.pops =
 
 local bayldReward      = 3000  -- per alliance member on kill
 local accoladeReward   = 25    -- Unity Wanted-NM bonus per kill
+local siltReward       = 1500  -- eschan silt per kill (Affi's shop currency)
+local beadReward       = 50    -- eschan beads per kill (Register of Deeds currency)
 local rewardRadius     = 100   -- yalms
 
 xi.geasFete.popBoss = function(player, kiId)
@@ -170,8 +172,10 @@ xi.geasFete.grantRewards = function(mob, player)
             member:checkDistance(mob) <= rewardRadius
         then
             member:addCurrency('bayld', bayldReward)
+            member:addCurrency('escha_silt', siltReward)
+            member:addCurrency('escha_beads', beadReward)
             member:setCharVar(defeatedVar, (member:getCharVar(defeatedVar) or 0) + 1)
-            member:printToPlayer(string.format('You earn %d bayld for defeating %s.', bayldReward, mobName))
+            member:printToPlayer(string.format('You earn %d bayld, %d escha silt and %d escha beads for defeating %s.', bayldReward, siltReward, beadReward, mobName))
             xi.unity.grantWantedAccolades(member, accoladeReward)
         end
     end

@@ -89,7 +89,7 @@ INSERT INTO `instance_list` VALUES (6302,'troll_fugitives',63,61,30,-459.912,-9.
 -- INSERT INTO `instance_list` VALUES (6303,'evade_and_escape',63,61,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6304,'siegemaster_assassination',63,61,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6305,'apkallu_breeding',63,61,15,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
--- INSERT INTO `instance_list` VALUES (6306,'wamoura_farm_raid',63,61,30,540.977,-39.976,220.919,128,NULL,NULL,NULL,NULL);
+INSERT INTO `instance_list` VALUES (6306,'wamoura_farm_raid',63,61,30,540.977,-39.976,220.919,128,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6307,'egg_conservation',63,61,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6308,'operation:black_pearl',63,61,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6309,'better_than_one',63,61,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
