@@ -130,7 +130,7 @@ def pick_row(br, csid, params, downs):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('mode', choices=['pick', 'chart-rows', 'sweep-single', 'cleanup',
-                                     'open', 'release', 'answer', 'sweep-params'])
+                                     'open', 'release', 'answer', 'sweep-params', 'sweep-csids'])
     ap.add_argument('--option', type=int, default=0)
     ap.add_argument('--mode-answer', default='update', choices=['update', 'end'])
     ap.add_argument('--param-sets', default='',
@@ -215,6 +215,20 @@ def main():
             br.send_text('!release')
             time.sleep(1.2)
             print(json.dumps({'set': pset, 'shot': shot}), flush=True)
+
+    elif args.mode == 'sweep-csids':
+        # Vary the CSID (fixed params), screenshot each, release between —
+        # to find which event renders a given menu (e.g. the vendor top menu).
+        import subprocess as sp
+        csids = [int(x) for x in args.param_sets.split(';') if x != '']
+        for cid in csids:
+            open_event(br, cid, params)
+            time.sleep(1.8)
+            shot = f'{args.shot_dir}/csid_{cid}.png'
+            sp.run(['screencapture', '-x', '-D', args.display, shot])
+            br.send_text('!release')
+            time.sleep(1.2)
+            print(json.dumps({'csid': cid, 'shot': shot}), flush=True)
 
     elif args.mode == 'answer':
         # Answer the currently-open event (server-side) and capture the reply

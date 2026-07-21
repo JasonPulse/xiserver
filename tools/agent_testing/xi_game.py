@@ -123,6 +123,15 @@ def cmd_send(args):
     _simple(args, {"cmd": "send", "text": args.text})
 
 
+def cmd_interact(args):
+    req = {"cmd": "interact"}
+    if args.index is not None:
+        req["index"] = args.index
+    else:
+        req["name"] = args.name
+    _simple(args, req, expect=("ack", "error"))
+
+
 def _capture_loop(b, deadline, want):
     for msg in b.lines(deadline):
         out(msg)
@@ -245,6 +254,11 @@ def build_parser():
     add("ping").set_defaults(func=cmd_ping)
 
     s = add("send"); s.add_argument("text"); s.set_defaults(func=cmd_send)
+
+    s = add("interact")
+    s.add_argument("name", nargs="?", help="NPC name (nearest match)")
+    s.add_argument("--index", type=int, help="target by mob index instead of name")
+    s.set_defaults(func=cmd_interact)
 
     s = add("trigger")
     s.add_argument("csid", type=int)
