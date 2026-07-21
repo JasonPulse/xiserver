@@ -3,6 +3,8 @@
 -----------------------------------
 require('scripts/globals/domain_invasion')
 -----------------------------------
+require('scripts/globals/eschan_hub')
+-----------------------------------
 ---@type TZone
 local zoneObject = {}
 
@@ -10,6 +12,8 @@ zoneObject.onInitialize = function(zone)
 end
 
 zoneObject.onZoneIn = function(player, prevZone)
+    xi.eschanHub.applyVorseals(player)
+
     local cs = -1
 
     if
