@@ -218,6 +218,44 @@ local function handle_cmd(sock, msg)
         local ok, err = send_answer(option or 0, mode)
         if ok then sock:send('{"type":"ack","cmd":"answer"}\n')
         else sock:send('{"type":"error","msg":"' .. tostring(err) .. '"}\n') end
+    elseif cmd == 'interact' then
+        -- Fire an NPC's onTrigger by sending the 0x01A "NPC interaction"
+        -- action packet (category 0 = trigger). Target by name (nearest
+        -- match) or by explicit index. This is what a real click/talk does,
+        -- so the server runs the NPC's onTrigger (unlike !cs, which fires a
+        -- raw event bypassing onTrigger).
+        local name = msg:match('"name"%s*:%s*"([^"]+)"')
+        local idx  = tonumber(msg:match('"index"%s*:%s*(%d+)'))
+        local target
+        if idx then
+            target = windower.ffxi.get_mob_by_index(idx)
+        elseif name then
+            local nearest, bestDist
+            local pl = windower.ffxi.get_mob_by_target('me')
+            for _, m in pairs(windower.ffxi.get_mob_array()) do
+                if m and m.name == name and m.valid_target ~= nil then
+                    local dx, dy = m.x - pl.x, m.y - pl.y
+                    local d = dx * dx + dy * dy
+                    if not bestDist or d < bestDist then
+                        bestDist, nearest = d, m
+                    end
+                end
+            end
+            target = nearest
+        end
+        if target then
+            local p = packets.new('outgoing', 0x01A, {
+                ['Target']       = target.id,
+                ['Target Index'] = target.index,
+                ['Category']     = 0,
+                ['Param']        = 0,
+            })
+            packets.inject(p)
+            sock:send('{"type":"ack","cmd":"interact","target":"' .. (target.name or '') ..
+                      '","index":' .. tostring(target.index) .. '}\n')
+        else
+            sock:send('{"type":"error","msg":"interact: no matching npc"}\n')
+        end
     elseif cmd == 'state' then
         local pl = windower.ffxi.get_player() or {}
         local mob = windower.ffxi.get_mob_by_target('t') or {}

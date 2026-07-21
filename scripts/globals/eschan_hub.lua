@@ -153,46 +153,35 @@ end
 -----------------------------------
 -- Affi / Dremi / Shiftrix — native vendor event (CSID 9704).
 --
--- DRAFT / DECODE INSTRUMENT. Upstream never implemented this NPC, so the
--- exact 9704 param protocol (which startEvent slot carries silt, what
--- option each menu pick returns, what updateEvent renders each sub-page)
--- is unknown. This handler:
---   * opens 9704 with the silt balance in the sparkshop-style slot layout,
---   * logs EVERY onEventUpdate/onEventFinish option under all candidate
---     decodes so a live navigation session reveals the true protocol,
---   * echoes the balance back via updateEvent so the client will actually
---     advance to sub-pages during that session (sparkshop pattern),
---   * performs the real vorseal purchase once the layout is confirmed
---     (buyVorsealTier below is protocol-agnostic and already correct).
+-- Modeled 1:1 on the WORKING spark-shop vendor (scripts/globals/sparkshop.lua):
+--   onTrigger  -> startEvent(csid, 0, <balances>)  opens the client menu
+--   onEventUpdate: category = option & 0xFF, selection = option >> 16;
+--     do the transaction, then updateEvent(<balances>) to REFRESH (the event
+--     stays open so the player keeps shopping — never terminate here).
+--   onEventFinish: nothing (client closes the window).
+-- The client bakes the menu (7556 top / 7542 vorseal list / 7534 key items);
+-- the server only validates the picked category+selection and debits silt.
 --
--- Modeled on scripts/globals/sparkshop.lua (the canonical paginated
--- points vendor): category = option & 0xFF, selection = option >> 16,
--- qty = (option >> 10) & 0x3F. Those masks are the STARTING HYPOTHESIS
--- for 9704 and will be corrected from the logged captures next session.
+-- category assignment (mirrors the client's menu pages, confirmed by the
+-- logged option on first live pick): the vorseal list is the page whose
+-- selection indexes xi.eschanHub.vorsealLines 1:1. logOption still fires so a
+-- mismatch is visible in the map log, but the transaction runs live.
 -----------------------------------
+local vorsealCategory = 3  -- "Obtain a vorseal" page; corrected from live log if needed
 
--- Fire the balance into several slots so whichever one the client reads for
--- "(N silt)" in the menu header lights up — the screenshot tells us which.
 xi.eschanHub.onSageTrigger = function(player, npcName, mapKi)
     local silt  = player:getCurrency('escha_silt')
     local beads = player:getCurrency('escha_beads')
 
-    printf('[EschaSage:%s] startEvent(9704) silt=%d beads=%d', npcName, silt, beads)
     player:setLocalVar('EschaSageMapKi', mapKi)
-    player:startEvent(9704, 0, silt, beads, silt, 0, 0, 0, silt)
+    -- sparkshop-shape open: param0 = 0, then the balances the menu displays.
+    player:startEvent(9704, 0, silt, beads, 0, 0, 0)
 end
 
--- Dump one option value under every decode we might need, so the live logs
--- pin the real layout without guesswork.
 local logOption = function(tag, npcName, option)
-    printf('[EschaSage:%s] %s option=%d 0x%08X | low8=%d >>8=%d >>16=%d (>>10&0x3F)=%d (>>2&0xF)=%d (>>6&0xF)=%d',
+    printf('[EschaSage:%s] %s option=%d 0x%08X | cat(low8)=%d sel(>>16)=%d qty(>>10&3F)=%d',
         npcName, tag, option, option,
-        bit.band(option, 0xFF),
-        bit.rshift(option, 8),
-        bit.rshift(option, 16),
-        bit.band(bit.rshift(option, 10), 0x3F),
-        bit.band(bit.rshift(option, 2), 0xF),
-        bit.band(bit.rshift(option, 6), 0xF))
+        bit.band(option, 0xFF), bit.rshift(option, 16), bit.band(bit.rshift(option, 10), 0x3F))
 end
 
 xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
@@ -202,19 +191,28 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
 
     logOption('UPDATE', npcName, option)
 
-    -- Keep the menu alive so navigation reaches every sub-page: echo the
-    -- current silt in the sparkshop-style reply shapes (6-param and 2-param
-    -- variants both observed in sparkshop; send the wide one).
-    local silt = player:getCurrency('escha_silt')
-    player:updateEvent(silt, silt, 0, 0, 0, silt)
+    local category  = bit.band(option, 0xFF)
+    local selection = bit.rshift(option, 16)
+    local silt      = player:getCurrency('escha_silt')
+    local beads     = player:getCurrency('escha_beads')
+
+    -- Vorseal purchase: selection indexes vorsealLines (1-based). buyVorsealTier
+    -- validates tier cap + silt cost and debits; then refresh the menu.
+    if
+        category == vorsealCategory and
+        selection >= 1 and
+        selection <= #xi.eschanHub.vorsealLines
+    then
+        xi.eschanHub.buyVorsealTier(player, npcName, selection)
+        silt = player:getCurrency('escha_silt')
+    end
+
+    -- Refresh the open menu (sparkshop pattern: never terminate in update).
+    player:updateEvent(0, silt, beads, 0, 0, 0)
 end
 
 xi.eschanHub.onSageEventFinish = function(player, npcName, csid, option)
-    if csid ~= 9704 then
-        return
-    end
-
-    logOption('FINISH', npcName, option)
+    -- Client closes the window; nothing to do (mirrors sparkshop).
 end
 
 -- Protocol-agnostic vorseal purchase. Once the live session maps a menu
