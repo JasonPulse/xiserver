@@ -1,10 +1,10 @@
 -----------------------------------
 -- Area: Escha - Zi'Tah
 --  NPC: Affi
--- Eschan hub vendor (grisly-trinket notes / key-item shop / vorseals) +
+-- Eschan hub vendor (grisly-trinket notes / key-item shop / vorseals).
 -- Geas Fete NM pops are at the daises, not here. Vendor menu is client
--- event 9704; the handler in eschan_hub.lua is a decode instrument this
--- session (logs the 9704 option protocol for the live-tune pass).
+-- event 9700 (top menu 7556); the full menu tree + row<<8 selection encoding
+-- are decoded from the client DAT (see eschan_hub.lua + xidat/eschavendor.py).
 -- !pos -357 0.119 -170 288
 -----------------------------------
 require('scripts/globals/eschan_hub')

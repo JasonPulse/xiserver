@@ -42,6 +42,7 @@ zones[xi.zone.NAVUKGO_EXECUTION_CHAMBER] =
     mob =
     {
         KHIMAIRA_13   = GetFirstID('Khimaira_13'),
+        SHAMARHAAN    = GetFirstID('Shamarhaan'),
         IMMORTAL_FLAN = GetFirstID('Immortal_Flan'),
     },
     npc =

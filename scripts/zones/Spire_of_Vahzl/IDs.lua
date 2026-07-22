@@ -18,7 +18,8 @@ zones[xi.zone.SPIRE_OF_VAHZL] =
         TIME_IN_THE_BATTLEFIELD_IS_UP = 7073, -- Your time in the battlefield is up! Now exiting...
         PARTY_MEMBERS_ARE_ENGAGED     = 7088, -- The battlefield where your party members are engaged in combat is locked. Access is denied.
         NO_BATTLEFIELD_ENTRY          = 7100, -- You can hear a faint scraping sound from within, but the way is barred by some strange membrane...
-        MEMBERS_OF_YOUR_PARTY         = 7379, -- Currently, # members of your party (including yourself) have clearance to enter the battlefield.
+        MEMBERS_OF_YOUR_PARTY         = 7379,
+        FADES_INTO_NOTHINGNESS        = 7433, -- The % fades into nothingness... (upstream 7434, our client -1) -- Currently, # members of your party (including yourself) have clearance to enter the battlefield.
         MEMBERS_OF_YOUR_ALLIANCE      = 7380, -- Currently, # members of your alliance (including yourself) have clearance to enter the battlefield.
         TIME_LIMIT_FOR_THIS_BATTLE_IS = 7382, -- The time limit for this battle is <number> minutes.
         ORB_IS_CRACKED                = 7383, -- There is a crack in the %. It no longer contains a monster.
@@ -29,6 +30,8 @@ zones[xi.zone.SPIRE_OF_VAHZL] =
     },
     mob =
     {
+        MEMORY_RECEPTACLE_RED    = GetFirstID('Memory_Receptacle_Red'),
+        MEMORY_RECEPTACLE_SHIELD = GetFirstID('Memory_Receptacle_Shield'),
         AGONIZER = GetFirstID('Agonizer'),
     },
     npc =

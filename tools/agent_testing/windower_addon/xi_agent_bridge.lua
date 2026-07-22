@@ -218,6 +218,36 @@ local function handle_cmd(sock, msg)
         local ok, err = send_answer(option or 0, mode)
         if ok then sock:send('{"type":"ack","cmd":"answer"}\n')
         else sock:send('{"type":"error","msg":"' .. tostring(err) .. '"}\n') end
+    elseif cmd == 'pending' then
+        -- Inject an INCOMING 0x05C (GP_SERV_COMMAND_PENDINGNUM) — the packet
+        -- the server sends to fill the active event's parameter slots (num[0..7],
+        -- what updateEvent produces). Answers the client's mid-event value
+        -- requests (the shop bitmask/gate) with no server deploy.
+        -- JSON: {"cmd":"pending","nums":[n0,..,n7]}
+        -- 0x05C body = int32 num[8] (32 bytes) right after the 4-byte header.
+        local arr = msg:match('"nums"%s*:%s*%[([^%]]*)%]') or ''
+        local nums = {}
+        for tok in arr:gmatch('(-?%d+)') do nums[#nums + 1] = tonumber(tok) end
+        while #nums < 8 do nums[#nums + 1] = 0 end
+        local ok, err = pcall(function()
+            -- 4-byte header word0 = id | (size<<9), sync = 0. size in dwords
+            -- (1 header + 8 nums = 9). word0 = 0x5C | (9<<9) = 0x125C.
+            local size  = 9
+            local word0 = 0x5C + size * 512
+            local hdr   = string.char(bit.band(word0, 0xFF), bit.band(bit.rshift(word0, 8), 0xFF), 0, 0)
+            local body  = ''
+            for i = 1, 8 do
+                local v = nums[i] % 0x100000000
+                body = body .. string.char(bit.band(v, 0xFF), bit.band(bit.rshift(v, 8), 0xFF),
+                                           bit.band(bit.rshift(v, 16), 0xFF), bit.band(bit.rshift(v, 24), 0xFF))
+            end
+            windower.packets.inject_incoming(0x5C, hdr .. body)
+        end)
+        if ok then
+            sock:send('{"type":"ack","cmd":"pending","nums":[' .. table.concat(nums, ',') .. ']}\n')
+        else
+            sock:send('{"type":"error","cmd":"pending","msg":"' .. tostring(err):gsub('"', "'") .. '"}\n')
+        end
     elseif cmd == 'interact' then
         -- Fire an NPC's onTrigger by sending the 0x01A "NPC interaction"
         -- action packet (category 0 = trigger). Target by name (nearest

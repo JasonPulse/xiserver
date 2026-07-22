@@ -23,6 +23,9 @@ zones[xi.zone.THRONE_ROOM_S] =
     },
     mob =
     {
+        AQUILA    = GetFirstID('Aquila'),
+        HAUDRALE  = GetFirstID('Haudrale'),
+        LILISETTE = GetFirstID('Lilisette'),
     },
     npc =
     {

@@ -1,13 +1,20 @@
 -----------------------------------
--- Area: The Eldieme Necropolis (195)
+-- Area: The Eldieme Necropolis
 --  NPC: Geomagnetic Fount
--- !pos 51.805 -2.495 6.825
+-- SoA mission attunement (The Geomagnetron) + proto-waypoint travel
+-- destination: click once on foot to attune, then travel here from any
+-- proto-waypoint (see scripts/globals/teleports/proto_waypoint.lua).
+-----------------------------------
+require('scripts/globals/teleports/proto_waypoint')
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    xi.geomagneticFount.checkFount(player, npc)
+    xi.protoWaypoint.fountOnTrigger(player, npc)
+end
+
+entity.onEventFinish = function(player, csid, option, npc)
 end
 
 return entity
