@@ -182,25 +182,34 @@ end
 --     so their csid is unknown until an in-zone !cs sweep pins it. Left
 --     unmapped so they cleanly report "not attuned" instead of firing the
 --     wrong event and mis-decoding a purchase.
--- LIVE-VERIFIED 2026-07-21: 9701 is the vendor event (9700 = greeting that
--- chains to it). The full "Obtain a vorseal" menu is gated behind the retail
--- "Hear various explanations" (10 silt) step, unlocked SERVER-SIDE within the
--- event — NOT by a param or key item (both ruled out live). onSageEventUpdate
--- must process the explanation pick to open the vendor; the unlocked-menu
--- option codes still need one post-deploy live capture. Dremi/Shiftrix use a
--- different entity/csid per zone (unmapped, pending in-zone sweep).
+-- Vendor event is 9701 (9700 = greeting that chains to it), confirmed live via
+-- the 0x034 packet. The full "What would you like to do?" menu (DAT MENU 7556
+-- @622, bitmask forced to 1022 = all options at @617) is reached ONLY when the
+-- client's unlock bitmask routes there. The client maps num[i] -> WkZone[i+2]
+-- (live-calibrated: num[1] renders as "current silt" via L9 <- Z3; the portal
+-- event 9100 bit-tests Z4 = num[2] against the Escha zone ids 288/289/291).
+-- The event bit-extracts Z4 = num[2]: bits 0-15 (L10) = which vorseal lines
+-- show, bits 24-31 (L13) route the top menu (@604: L13 == 1 -> full menu @617).
+-- The old handler put beads in num[2] (high byte 0 -> L13 = 0), so it never
+-- reached the full menu -> only "Nothing / Hear explanations" rendered.
+-- Dremi/Shiftrix use a different entity/csid per zone (unmapped, pending sweep).
 local vendorCsid =
 {
     Affi = 9701,
 }
 
-local topObtainVorseal = 3
-local topReturnVorseal = 4
+-- num[2] unlock value sent to the client. LIVE-VERIFIED 2026-07-22 via
+-- !cs (= startEvent with these params, no server changes):
+--   bits 24-31 = introduction stage. 0/1 -> locked 2-option menu, 2 ->
+--     3-option menu (+ key items / trinket notes), 3 -> FULL 6-option vendor
+--     menu (+ check vorseal effects / receive temporary items /
+--     explanations), 4+ -> falls back to the locked menu.
+--   bits 0-23 = line/stock bits (kept set; visibility of the six rows above
+--     proved insensitive to them, the remaining obtain/return rows are gated
+--     by the mid-event value queries answered in onSageEventUpdate).
+local vorsealUnlockMask = 0x03000000 + 0xFFFF
 
-local stageTop    = 0 -- at the top menu (7556)
-local stageObtain = 1 -- at the vorseal list (7542)
-local stageQty    = 2 -- at the quantity menu (7543)
-local stageReturn = 3 -- at the return list (7546)
+local stageTop = 0 -- at the top menu
 
 xi.eschanHub.onSageTrigger = function(player, npcName, mapKi)
     local csid = vendorCsid[npcName]
@@ -216,7 +225,10 @@ xi.eschanHub.onSageTrigger = function(player, npcName, mapKi)
     player:setLocalVar('EschaVendorCsid', csid)
     player:setLocalVar('EschaVendorStage', stageTop)
     player:setLocalVar('EschaVendorLine', 0)
-    player:startEvent(csid, 0, silt, beads, 0, 0, 0)
+
+    -- num[1] = silt (the "current silt" display), num[2] = unlock bitmask
+    -- (-> Z4), num[3] = beads.
+    player:startEvent(csid, 0, silt, vorsealUnlockMask, beads, 0, 0, 0)
 end
 
 xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
@@ -224,54 +236,20 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
         return
     end
 
-    local row   = bit.rshift(option, 8) -- selection encoding for this event blob
-    local stage = player:getLocalVar('EschaVendorStage')
+    -- The client walks a chain of mid-event value queries (observed live:
+    -- option 14 -> 8 during the greeting, 9 after the top menu, more per
+    -- submenu) and menu selections arrive through the same packet. Both hit
+    -- this handler; the query answers must go back synchronously via
+    -- updateEvent (PENDINGNUM) or the client mis-routes submenus (verified
+    -- live: unanswered queries send "Receive key items" into the topics
+    -- list). This build answers every request with the full-stock payload
+    -- and logs the codes so the purchase rows can be wired from a real
+    -- capture; no debits happen until then.
+    print(string.format('[eschanHub] %s csid %d option %d', player:getName(), csid, option))
+
     local silt  = player:getCurrency('escha_silt')
     local beads = player:getCurrency('escha_beads')
-
-    if stage == stageTop then
-        -- Route the top-menu pick; other rows (key items / trinket notes /
-        -- check / temp) are drawn by the client, nothing to debit here.
-        if row == topObtainVorseal then
-            player:setLocalVar('EschaVendorStage', stageObtain)
-        elseif row == topReturnVorseal then
-            player:setLocalVar('EschaVendorStage', stageReturn)
-        end
-    elseif stage == stageObtain then
-        if row >= 1 and row <= #xi.eschanHub.vorsealLines then
-            player:setLocalVar('EschaVendorLine', row)
-            player:setLocalVar('EschaVendorStage', stageQty)
-        else
-            player:setLocalVar('EschaVendorStage', stageTop) -- "No vorseals for now"
-        end
-    elseif stage == stageQty then
-        local line = player:getLocalVar('EschaVendorLine')
-        if row >= 1 and line >= 1 then
-            xi.eschanHub.buyVorsealTier(player, npcName, line, row)
-            silt = player:getCurrency('escha_silt')
-        end
-
-        player:setLocalVar('EschaVendorStage', stageObtain) -- client returns to the list
-    elseif stage == stageReturn then
-        if row >= 1 and row <= #xi.eschanHub.vorsealLines then
-            xi.eschanHub.returnVorseal(player, npcName, row)
-        end
-
-        player:setLocalVar('EschaVendorStage', stageTop)
-    end
-
-    -- Answer the client's mid-event value requests. The top menu (DAT @622)
-    -- draws MENU cursor=WkLocal[1] bitmask=WkLocal[0]; the event requests
-    -- WkLocal[0..2] via opcode 0x06, and the 0x05C PENDINGNUM num[i] fills
-    -- WkLocal[i] by index. So the shop bitmask MUST land in num[0]:
-    --   updateEvent(bitmask, cursor, ...) -> num[0]=bitmask, num[1]=cursor.
-    -- 1022 (0x3FE) = top-menu options 1-9 enabled (data[26] in the DAT). Put
-    -- the silt/bead balances in high slots so they can't collide with the
-    -- gate (WkLocal[2]); the exact balance-display slot is the only thing to
-    -- calibrate on the first live pass (cosmetic — options already show).
-    -- NOTE: updateEvent drops zero-valued args, preserving the slot index,
-    -- so leading zeros would shift everything — the bitmask goes FIRST.
-    player:updateEvent(1022, 0, 0, 0, 0, silt, beads, 0)
+    player:updateEvent(255, 255, 255, 255, 255, silt, beads, 0)
 end
 
 xi.eschanHub.onSageEventFinish = function(player, npcName, csid, option)
