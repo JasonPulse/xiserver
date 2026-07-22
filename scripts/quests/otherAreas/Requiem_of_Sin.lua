@@ -54,7 +54,7 @@ quest.sections =
                         return
                     end
 
-                    if battlefield:getID() == xi.battlefield.id.REQUIEM_OF_SIN then
+                    if battlefield:getID() == xi.battlefield.id.REQUIEM_OF_A_SIN then
                         quest:begin(player)
                     end
                 end,
@@ -96,7 +96,7 @@ quest.sections =
             onEventFinish =
             {
                 [32001] = function(player, csid, option, npc)
-                    if player:getLocalVar('battlefieldWin') == xi.battlefield.id.REQUIEM_OF_SIN then
+                    if player:getLocalVar('battlefieldWin') == xi.battlefield.id.REQUIEM_OF_A_SIN then
                         quest:complete(player)
                     end
                 end,
