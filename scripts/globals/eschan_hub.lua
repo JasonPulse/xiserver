@@ -275,7 +275,7 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
 end
 
 xi.eschanHub.onSageEventFinish = function(player, npcName, csid, option)
-    player:setLocalVar('EschaVendorStage', STAGE_TOP)
+    player:setLocalVar('EschaVendorStage', stageTop)
     player:setLocalVar('EschaVendorLine', 0)
 end
 
