@@ -19,8 +19,19 @@ zones[xi.zone.REISENJIMA] =
         MEMBERS_LEVELS_ARE_RESTRICTED = 7024, -- Your party is unable to participate because certain members' levels are restricted.
         YOU_HAVE_USED                 = 7617, -- You have used <item>.
     },
+    -- Geas Fete notorious monsters (pop entity ids from mob_spawn_points,
+    -- Reisenjima range). Resolved by xi.geasFete.popBoss via mobName.
     mob =
     {
+        Belphegor              = 17969661,
+        Crom_Dubh              = 17969637,
+        Kabandha               = 17969664,
+        Dazzling_Dolores       = 17969655,
+        Golden_Kist            = 17969640,
+        Selkit                 = 17969667,
+        Sang_Buaya             = 17969670,
+        Mauve_Wristed_Gomberry = 17969643, -- SQL mob name 'Mauve-wristed_Gomberry'
+        Taelmoth               = 17969658, -- SQL mob name 'Taelmoth_the_Diremaw'
     },
     npc =
     {

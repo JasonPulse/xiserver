@@ -60,9 +60,8 @@ mission.sections =
                 end,
 
                 [32001] = function(player, csid, option, npc)
-                    -- TODO: 'battlefieldWin' local var should be set on successful completion of
-                    -- the BCNM with its BCNM ID.  See other examples of this pattern implemented
-                    -- in various missions.
+                    -- battlefieldWin is set by the battlefield framework on win
+                    -- (scripts/battlefields/Throne_Room_[S]/darkness_descends.lua).
 
                     if
                         player:getLocalVar('battlefieldWin') == xi.battlefield.id.DARKNESS_DESCENDS and

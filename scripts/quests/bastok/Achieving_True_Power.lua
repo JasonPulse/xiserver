@@ -2,25 +2,15 @@
 -- Achieving True Power
 -----------------------------------
 -- Log ID: 1, Quest ID: 85
--- Shamarhaan : Bastok Markets (F-9), default event 433
--- Decorative Bronze Gate : Navukgo Execution Chamber
 -----------------------------------
--- Retail: PUP job-specific level-cap quest. 10-min BCNM vs Shamarhaan +
--- Automaton Valkeng (Maat-style, reduce to -20% HP). Requires Puppetmaster's
--- Testimony farmed from Trolls + TAU expansion + prior Puppetmaster Blues.
---
--- Simplified for 4-player server: trade Testimony to Shamarhaan, receive
--- title + cap flag. No BCNM yet — Navukgo Execution Chamber doesn't have
--- an instance for this fight on our server. Revisit when that BC is built.
--- CSIDs best-guess; verify with !cs in-game.
+local navukgoID = zones[xi.zone.NAVUKGO_EXECUTION_CHAMBER]
 -----------------------------------
+
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.ACHIEVING_TRUE_POWER)
 
 quest.reward =
 {
-    fame     = 50,
-    fameArea = xi.fameArea.BASTOK,
-    title    = xi.title.MASTER_OF_MANIPULATION,
+    title = xi.title.MASTER_OF_MANIPULATION,
 }
 
 quest.sections =
@@ -28,9 +18,34 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
+                player:hasCompletedQuest(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.PUPPETMASTER_BLUES) and
                 player:getMainJob() == xi.job.PUP and
-                player:getMainLvl() >= 66 and
-                player:hasCompletedQuest(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.PUPPETMASTER_BLUES)
+                player:getMainLvl() >= 66
+        end,
+
+        [xi.zone.BASTOK_MARKETS] =
+        {
+            ['Shamarhaan'] =
+            {
+                onTrigger = function(player, npc)
+                    return quest:progressEvent(441, xi.automaton.getModelId(player))
+                end,
+            },
+
+            onEventFinish =
+            {
+                [441] = function(player, csid, option, npc)
+                    return quest:begin(player)
+                end,
+            },
+        },
+    },
+
+    {
+        check = function(player, status, vars)
+            return status == xi.questStatus.QUEST_ACCEPTED and
+                player:getMainJob() == xi.job.PUP and
+                player:getMainLvl() >= 66
         end,
 
         [xi.zone.BASTOK_MARKETS] =
@@ -38,28 +53,56 @@ quest.sections =
             ['Shamarhaan'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.item.PUPPETMASTERS_TESTIMONY) then
-                        return quest:progressEvent(434)
+                    if trade:getItemQty(xi.item.PUPPETMASTERS_TESTIMONY) > 0 then
+                        return quest:progressEvent(443)
                     end
                 end,
 
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(435)
+                    return quest:event(442)
                 end,
             },
 
             onEventFinish =
             {
-                [434] = function(player, csid, option, npc)
-                    player:confirmTrade()
-                    quest:begin(player)
-                    quest:complete(player)
+                [443] = function(player, csid, option, npc)
+                    quest:setVar(player, 'Prog', 1)
+                    player:setPos(-659.106, -9.126, -194.577, 213, xi.zone.NAVUKGO_EXECUTION_CHAMBER)
                 end,
+            },
+        },
 
-                [435] = function(player, csid, option, npc)
-                    if option == 1 then
-                        quest:begin(player)
+        [xi.zone.NAVUKGO_EXECUTION_CHAMBER] =
+        {
+            onEventFinish =
+            {
+                [32001] = function(player, csid, option, npc)
+                    if player:getLocalVar('battlefieldWin') == xi.battlefield.id.ACHIEVING_TRUE_POWER then
+                        if player:getLevelCap() == 70 then
+                            player:setLevelCap(75)
+                            player:messageSpecial(navukgoID.text.YOUR_LEVEL_LIMIT_IS_NOW_75)
+                        end
+
+                        npcUtil.giveItem(player, { xi.item.SCROLL_OF_INSTANT_WARP })
+                        quest:complete(player)
                     end
+                end,
+            },
+        },
+
+    },
+
+    {
+        check = function(player, status, vars)
+            return status == xi.questStatus.QUEST_COMPLETED
+        end,
+
+        [xi.zone.BASTOK_MARKETS] =
+        {
+            ['Shamarhaan'] =
+            {
+                onTrigger = function(player, npc)
+                    return quest:event(444):replaceDefault()
                 end,
             },
         },

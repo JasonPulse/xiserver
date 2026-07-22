@@ -56,6 +56,8 @@ zones[xi.zone.BONEYARD_GULLY] =
         SHIKAREE_Y_HW  = GetFirstID('Shikaree_Y_HW'),
         SHIKAREE_X_HW  = GetFirstID('Shikaree_X_HW'),
         SHIKAREE_Z_ROS = GetFirstID('Shikaree_Z_ROS'),
+        SHIKAREE_X_ROS_TWT = GetFirstID('Shikaree_X_ROS_TWT'),
+        SHIKAREE_Y_ROS_TWT = GetFirstID('Shikaree_Y_ROS_TWT'),
         TUCHULCHA      = GetFirstID('Tuchulcha'),
     },
 

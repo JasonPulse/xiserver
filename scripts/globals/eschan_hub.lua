@@ -2,16 +2,22 @@
 -- Eschan hub NPC services (Affi / Dremi / Shiftrix + Register of Deeds).
 --
 -- Upstream LSB never implemented any of the Eschan service NPCs. The real
--- client menu is one multi-page event (Affi = 9704, a 10KB program) whose
--- full tree is decoded from the client DAT (see the reference-escha-hub-menu
--- memory + Escha-RuAun dialog 7532-7560). Top menu routes to: key-item shop,
--- grisly-trinket notes, obtain/return/check vorseal, temp items, explanations.
+-- client menu is one multi-menu event blob shared by entity 17957449; each
+-- csid is a JUMP entry point into it (decoded from the client DAT via
+-- xidat/eschavendor.py). The VENDOR top menu is csid 9700 (msg 7556, the
+-- 7532-family "What do you do?" list) with every option enabled by the
+-- event's own hard-coded bitmask (data[26]=1022). csid 9704 is only the leaf
+-- "Which do you choose?" picker (msg 7537) — correctly used by the Geas Fete
+-- pop menu below, but it is NOT the vendor (the all-day 9704 confusion).
+-- Top menu routes to: key-item shop (7534), grisly-trinket notes (7536),
+-- obtain vorseal (7542), return vorseal (7546), check blessings (7561), temp
+-- items. Selection encoding for this whole blob is option = selectedRow << 8
+-- (row 1 = 0x100), proven by the working pop-menu picker in the same blob.
 --
 -- Earn side: Geas Fete NM kills award escha_silt + escha_beads (see
 -- geas_fete.lua grantRewards).
 -----------------------------------
 require('scripts/globals/npc_util')
-require('scripts/globals/domain_invasion')
 require('scripts/globals/geas_fete')
 -----------------------------------
 xi = xi or {}
@@ -151,95 +157,177 @@ xi.eschanHub.applyVorseals = function(player)
 end
 
 -----------------------------------
--- Affi / Dremi / Shiftrix — native vendor event (CSID 9704).
+-- Affi / Dremi / Shiftrix — native vendor event (CSID 9700, the top menu).
 --
--- Modeled 1:1 on the WORKING spark-shop vendor (scripts/globals/sparkshop.lua):
---   onTrigger  -> startEvent(csid, 0, <balances>)  opens the client menu
---   onEventUpdate: category = option & 0xFF, selection = option >> 16;
---     do the transaction, then updateEvent(<balances>) to REFRESH (the event
---     stays open so the player keeps shopping — never terminate here).
---   onEventFinish: nothing (client closes the window).
--- The client bakes the menu (7556 top / 7542 vorseal list / 7534 key items);
--- the server only validates the picked category+selection and debits silt.
+-- The client owns the whole menu tree and drives navigation from its own
+-- bytecode; the server only unblocks each yield with updateEvent(<balances>)
+-- (which refreshes the silt count shown) and performs the silt transaction.
+-- The event stays open so the player keeps shopping — never terminate in
+-- update. onEventFinish just clears the per-player navigation stage.
 --
--- category assignment (mirrors the client's menu pages, confirmed by the
--- logged option on first live pick): the vorseal list is the page whose
--- selection indexes xi.eschanHub.vorsealLines 1:1. logOption still fires so a
--- mismatch is visible in the map log, but the transaction runs live.
+-- Menu tree + encoding are decoded from the client DAT (all row<<8):
+--   TOP (7556/7532)  row 0 Nothing | 1 key items | 2 trinket notes |
+--                    3 OBTAIN vorseal | 4 RETURN vorseal | 5 CHECK | 6 temp
+--   VORSEAL LIST (7542)  row 0 back | 1-16 = vorsealLines[menuIndex]
+--   QUANTITY (7543)      row 0 none | Q = buy Q seals (tiers) of the line
+-- Because each menu yields separately, the server tracks which menu the
+-- player is in with a localvar stage + the selected line.
 -----------------------------------
-local vorsealCategory = 3  -- "Obtain a vorseal" page; corrected from live log if needed
+-- Vendor top-menu csid PER NPC. The vorseal menus live in the Eschan
+-- conflux entity's event data[], and the csid differs by zone:
+--   Affi (Escha-ZiTah): 9700 — CONFIRMED (DAT: its event data[] carries the
+--     vorseal menus 7542/7556/7534, and the live !cs 9700 rendered it).
+--   Dremi (Escha-RuAun) / Shiftrix (Reisenjima): the same menus are served by
+--     a DIFFERENT entity there — that zone's 9700 event has NO vorseal data —
+--     so their csid is unknown until an in-zone !cs sweep pins it. Left
+--     unmapped so they cleanly report "not attuned" instead of firing the
+--     wrong event and mis-decoding a purchase.
+-- LIVE-VERIFIED 2026-07-21: 9701 is the vendor event (9700 = greeting that
+-- chains to it). The full "Obtain a vorseal" menu is gated behind the retail
+-- "Hear various explanations" (10 silt) step, unlocked SERVER-SIDE within the
+-- event — NOT by a param or key item (both ruled out live). onSageEventUpdate
+-- must process the explanation pick to open the vendor; the unlocked-menu
+-- option codes still need one post-deploy live capture. Dremi/Shiftrix use a
+-- different entity/csid per zone (unmapped, pending in-zone sweep).
+local vendorCsid =
+{
+    Affi = 9701,
+}
+
+local topObtainVorseal = 3
+local topReturnVorseal = 4
+
+local stageTop    = 0 -- at the top menu (7556)
+local stageObtain = 1 -- at the vorseal list (7542)
+local stageQty    = 2 -- at the quantity menu (7543)
+local stageReturn = 3 -- at the return list (7546)
 
 xi.eschanHub.onSageTrigger = function(player, npcName, mapKi)
+    local csid = vendorCsid[npcName]
+    if not csid then
+        player:printToPlayer(string.format('%s: This conflux is not yet attuned for vorseal trade. Visit Affi in Escha - Zi\'Tah.', npcName), xi.msg.channel.NS_SAY)
+        return
+    end
+
     local silt  = player:getCurrency('escha_silt')
     local beads = player:getCurrency('escha_beads')
 
     player:setLocalVar('EschaSageMapKi', mapKi)
-    -- sparkshop-shape open: param0 = 0, then the balances the menu displays.
-    player:startEvent(9704, 0, silt, beads, 0, 0, 0)
-end
-
-local logOption = function(tag, npcName, option)
-    printf('[EschaSage:%s] %s option=%d 0x%08X | cat(low8)=%d sel(>>16)=%d qty(>>10&3F)=%d',
-        npcName, tag, option, option,
-        bit.band(option, 0xFF), bit.rshift(option, 16), bit.band(bit.rshift(option, 10), 0x3F))
+    player:setLocalVar('EschaVendorCsid', csid)
+    player:setLocalVar('EschaVendorStage', stageTop)
+    player:setLocalVar('EschaVendorLine', 0)
+    player:startEvent(csid, 0, silt, beads, 0, 0, 0)
 end
 
 xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
-    if csid ~= 9704 then
+    if csid ~= vendorCsid[npcName] then
         return
     end
 
-    logOption('UPDATE', npcName, option)
+    local row   = bit.rshift(option, 8) -- selection encoding for this event blob
+    local stage = player:getLocalVar('EschaVendorStage')
+    local silt  = player:getCurrency('escha_silt')
+    local beads = player:getCurrency('escha_beads')
 
-    local category  = bit.band(option, 0xFF)
-    local selection = bit.rshift(option, 16)
-    local silt      = player:getCurrency('escha_silt')
-    local beads     = player:getCurrency('escha_beads')
+    if stage == stageTop then
+        -- Route the top-menu pick; other rows (key items / trinket notes /
+        -- check / temp) are drawn by the client, nothing to debit here.
+        if row == topObtainVorseal then
+            player:setLocalVar('EschaVendorStage', stageObtain)
+        elseif row == topReturnVorseal then
+            player:setLocalVar('EschaVendorStage', stageReturn)
+        end
+    elseif stage == stageObtain then
+        if row >= 1 and row <= #xi.eschanHub.vorsealLines then
+            player:setLocalVar('EschaVendorLine', row)
+            player:setLocalVar('EschaVendorStage', stageQty)
+        else
+            player:setLocalVar('EschaVendorStage', stageTop) -- "No vorseals for now"
+        end
+    elseif stage == stageQty then
+        local line = player:getLocalVar('EschaVendorLine')
+        if row >= 1 and line >= 1 then
+            xi.eschanHub.buyVorsealTier(player, npcName, line, row)
+            silt = player:getCurrency('escha_silt')
+        end
 
-    -- Vorseal purchase: selection indexes vorsealLines (1-based). buyVorsealTier
-    -- validates tier cap + silt cost and debits; then refresh the menu.
-    if
-        category == vorsealCategory and
-        selection >= 1 and
-        selection <= #xi.eschanHub.vorsealLines
-    then
-        xi.eschanHub.buyVorsealTier(player, npcName, selection)
-        silt = player:getCurrency('escha_silt')
+        player:setLocalVar('EschaVendorStage', stageObtain) -- client returns to the list
+    elseif stage == stageReturn then
+        if row >= 1 and row <= #xi.eschanHub.vorsealLines then
+            xi.eschanHub.returnVorseal(player, npcName, row)
+        end
+
+        player:setLocalVar('EschaVendorStage', stageTop)
     end
 
-    -- Refresh the open menu (sparkshop pattern: never terminate in update).
-    player:updateEvent(0, silt, beads, 0, 0, 0)
+    -- Answer the client's mid-event value requests. The top menu (DAT @622)
+    -- draws MENU cursor=WkLocal[1] bitmask=WkLocal[0]; the event requests
+    -- WkLocal[0..2] via opcode 0x06, and the 0x05C PENDINGNUM num[i] fills
+    -- WkLocal[i] by index. So the shop bitmask MUST land in num[0]:
+    --   updateEvent(bitmask, cursor, ...) -> num[0]=bitmask, num[1]=cursor.
+    -- 1022 (0x3FE) = top-menu options 1-9 enabled (data[26] in the DAT). Put
+    -- the silt/bead balances in high slots so they can't collide with the
+    -- gate (WkLocal[2]); the exact balance-display slot is the only thing to
+    -- calibrate on the first live pass (cosmetic — options already show).
+    -- NOTE: updateEvent drops zero-valued args, preserving the slot index,
+    -- so leading zeros would shift everything — the bitmask goes FIRST.
+    player:updateEvent(1022, 0, 0, 0, 0, silt, beads, 0)
 end
 
 xi.eschanHub.onSageEventFinish = function(player, npcName, csid, option)
-    -- Client closes the window; nothing to do (mirrors sparkshop).
+    player:setLocalVar('EschaVendorStage', STAGE_TOP)
+    player:setLocalVar('EschaVendorLine', 0)
 end
 
--- Protocol-agnostic vorseal purchase. Once the live session maps a menu
--- selection to a vorseal line index + tier, the finish/update handler calls
--- this. It is already correct regardless of how the option is decoded.
-xi.eschanHub.buyVorsealTier = function(player, npcName, lineIndex)
+-- Buy `count` tiers (seals) of a vorseal line in one confirm, retail-style
+-- (the 7543 "how many" menu). Stops at the line's tier cap and when silt runs
+-- out, debiting only for tiers actually granted.
+xi.eschanHub.buyVorsealTier = function(player, npcName, lineIndex, count)
     local line = xi.eschanHub.vorsealLines[lineIndex]
     if not line then
         return false
     end
 
+    count = count or 1
     local tier = xi.eschanHub.vorsealTier(player, line.key)
     if tier >= line.maxTier then
         player:printToPlayer(string.format('%s: Your %s vorseal is already at its zenith.', npcName, line.name), xi.msg.channel.NS_SAY)
         return false
     end
 
-    local silt = player:getCurrency('escha_silt')
-    if silt < line.price then
+    -- How many tiers can we actually afford / are allowed this confirm.
+    local silt    = player:getCurrency('escha_silt')
+    local wanted  = math.min(count, line.maxTier - tier)
+    local canPay  = math.floor(silt / line.price)
+    local buying  = math.min(wanted, canPay)
+    if buying <= 0 then
         return false
     end
 
-    -- Remove the aggregate buff BEFORE the tier changes so onEffectLose
+    -- Remove the aggregate buff BEFORE the tiers change so onEffectLose
     -- subtracts exactly what onEffectGain added, then re-apply.
     player:delStatusEffectSilent(xi.effect.VORSEAL)
-    player:setCharVar(vorsealVar(line.key), tier + 1)
-    player:delCurrency('escha_silt', line.price)
+    player:setCharVar(vorsealVar(line.key), tier + buying)
+    player:delCurrency('escha_silt', line.price * buying)
+    xi.eschanHub.applyVorseals(player)
+    return true
+end
+
+-- Return a vorseal line (7546): drop it one tier and refund nothing (retail
+-- return just frees the slot). Bounded to owned tiers.
+xi.eschanHub.returnVorseal = function(player, npcName, lineIndex)
+    local line = xi.eschanHub.vorsealLines[lineIndex]
+    if not line then
+        return false
+    end
+
+    local tier = xi.eschanHub.vorsealTier(player, line.key)
+    if tier <= 0 then
+        return false
+    end
+
+    player:delStatusEffectSilent(xi.effect.VORSEAL)
+    player:setCharVar(vorsealVar(line.key), tier - 1)
     xi.eschanHub.applyVorseals(player)
     return true
 end
@@ -250,81 +338,86 @@ end
 -- prints that page's items as absolute catalog numbers (page * 100 + n).
 -- Trade an absolute number: buys the item.
 -----------------------------------
-local flattenPage = function(page)
-    local flat = {}
-    for _, subpage in ipairs(page) do
-        for _, entry in ipairs(subpage) do
-            table.insert(flat, entry)
+-- Register of Deeds — RETAIL is a kill-records book, not a shop (the old
+-- gil-as-page-number DP browser was a custom hack, removed at user request;
+-- DP rewards stay on Zurim's catalog). Native client event 9708 (decoded from
+-- the DAT): top menu 7678 "What will you verify?" routes to the defeated-NM
+-- star pages 7679/7680 (choice bit N = NM defeated, drawn as a star) and the
+-- victory tallies 7681. The menus pull their gate/cursor/bitmask and the star
+-- bits from server updateEvent replies (event VM 0x06 requests), so the
+-- handler answers every update with the player's actual kill records.
+--
+-- Star bit order = the client's fixed choice indexes in each zone's star
+-- pages (Zi'Tah 7679/7680; Ru'Aun 7798/7799 and Reisenjima 7825/7826 pending
+-- dialog decode — their books render with zero stars until filled).
+local registerBookStars =
+{
+    [xi.zone.ESCHA_ZITAH] =
+    {
+        [0]  = 'Wepwawet',
+        [1]  = 'Lustful_Lydia',
+        [2]  = 'Aglaophotis',
+        [3]  = 'Tangata_Manu',
+        [4]  = 'Vidala',
+        [5]  = 'Gestalt',
+        [6]  = 'Angrboda',
+        [7]  = 'Cunnast',
+        [8]  = 'Revetaur',
+        [9]  = 'Ferrodon',
+        [10] = 'Gulltop',
+        [11] = 'Vyala',
+        [12] = 'Blazewing',
+        [13] = 'Alpluachra', -- Bucca/Puca/Alpluachra share one line
+        [16] = 'Pazuzu',
+        [17] = 'Wrathare',
+        [18] = 'Ionos',
+        [19] = 'Sensual_Sandy',
+        [20] = 'Nosoi',
+        [21] = 'Brittlis',
+        [22] = 'Kamohoalii',
+        [23] = 'Umdhlebi',
+        [24] = 'Fleetstalker',
+        [25] = 'Shockmaw',
+        [26] = 'Urmahlullu',
+    },
+}
+
+local registerBookCsid = 9708
+
+local registerRecords = function(player)
+    local stars = 0
+    local nmCount = 0
+    local zoneStars = registerBookStars[player:getZoneID()]
+    if zoneStars then
+        for bitIndex, mobName in pairs(zoneStars) do
+            if player:getCharVar(string.format('GeasFete_%s_Defeated', mobName)) > 0 then
+                stars = bit.bor(stars, bit.lshift(1, bitIndex))
+                nmCount = nmCount + 1
+            end
         end
     end
 
-    return flat
-end
-
--- Reverse lookup id -> enum name for catalog display. Built once on load.
-local itemNames = {}
-for name, id in pairs(xi.item) do
-    if type(id) == 'number' and not itemNames[id] then
-        itemNames[id] = string.lower(string.gsub(name, '_', ' '))
-    end
+    return stars, nmCount
 end
 
 xi.eschanHub.onRegisterTrigger = function(player)
-    local points = player:getCurrency('domain_points')
-    player:printToPlayer(string.format('Register of Deeds: You hold %d domain points. Trade gil equal to a page number to browse.', points), xi.msg.channel.NS_SAY)
+    local stars, nmCount = registerRecords(player)
+    player:startEvent(registerBookCsid, 0, stars, nmCount, 0, 0, 0)
+end
 
-    for pageNum, label in ipairs(xi.domainInvasion.rewardStockPages) do
-        player:printToPlayer(string.format('[%2d] %s', pageNum, label), xi.msg.channel.NS_SAY)
+xi.eschanHub.onRegisterEventUpdate = function(player, csid, option)
+    if csid ~= registerBookCsid then
+        return
     end
+
+    -- Answer the client's value requests: gate 0 (show), cursor 0, full menu
+    -- bitmask, then the record values. Positional hypothesis (requests fill
+    -- in order) — calibrate on the first live pass after deploy.
+    local stars, nmCount = registerRecords(player)
+    player:updateEvent(0, 0, 0xFFFF, stars, nmCount, 0)
 end
 
 xi.eschanHub.onRegisterTrade = function(player, trade)
-    local selection = trade:getGil()
-
-    if selection == 0 or trade:getItemCount() ~= 0 then
-        return false
-    end
-
-    -- Page browse (1-10)
-    if selection <= #xi.domainInvasion.rewardStock then
-        local flat = flattenPage(xi.domainInvasion.rewardStock[selection])
-        player:printToPlayer(string.format('-- %s --', xi.domainInvasion.rewardStockPages[selection]), xi.msg.channel.NS_SAY)
-
-        for i, entry in ipairs(flat) do
-            player:printToPlayer(string.format('[%3d] %s — %d DP', selection * 100 + i, itemNames[entry.item] or tostring(entry.item), entry.cost), xi.msg.channel.NS_SAY)
-        end
-
-        return false -- browsing keeps the gil in the trade window
-    end
-
-    -- Purchase (absolute catalog number)
-    local pageNum = math.floor(selection / 100)
-    local index   = selection % 100
-    local page    = xi.domainInvasion.rewardStock[pageNum]
-
-    if not page then
-        player:printToPlayer('Register of Deeds: That is not a catalog number. Click me for the page list.', xi.msg.channel.NS_SAY)
-        return false
-    end
-
-    local entry = flattenPage(page)[index]
-    if not entry then
-        player:printToPlayer('Register of Deeds: That is not a catalog number on that page.', xi.msg.channel.NS_SAY)
-        return false
-    end
-
-    local points = player:getCurrency('domain_points')
-    if points < entry.cost then
-        player:printToPlayer(string.format('Register of Deeds: That costs %d domain points — you hold %d.', entry.cost, points), xi.msg.channel.NS_SAY)
-        return false
-    end
-
-    if not npcUtil.giveItem(player, entry.item) then
-        return false
-    end
-
-    player:delCurrency('domain_points', entry.cost)
-    player:confirmTrade()
-    player:printToPlayer(string.format('Register of Deeds: Recorded. %d domain points remaining.', points - entry.cost), xi.msg.channel.NS_SAY)
-    return true
+    -- Records book takes no trades.
+    return false
 end

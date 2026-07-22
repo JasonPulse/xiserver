@@ -1,13 +1,20 @@
 -----------------------------------
--- Area: King Ranperres Tomb (190)
+-- Area: King Ranperres Tomb
 --  NPC: Geomagnetic Fount
--- !pos 223.311 -0.261 175.141
+-- SoA mission attunement (The Geomagnetron) + proto-waypoint travel
+-- destination: click once on foot to attune, then travel here from any
+-- proto-waypoint (see scripts/globals/teleports/proto_waypoint.lua).
+-----------------------------------
+require('scripts/globals/teleports/proto_waypoint')
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    xi.geomagneticFount.checkFount(player, npc)
+    xi.protoWaypoint.fountOnTrigger(player, npc)
+end
+
+entity.onEventFinish = function(player, csid, option, npc)
 end
 
 return entity
