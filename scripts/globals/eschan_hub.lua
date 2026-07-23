@@ -138,6 +138,17 @@ xi.eschanHub.vorsealTier = function(player, key)
     return player:getCharVar(vorsealVar(key))
 end
 
+-- Retail progressive vorseal cap (per line: min(cap, line.maxTier)).
+-- Ladder: 1-2 RoV progression, 3-5 all tier-1/2/3 Zi'Tah Geas Fete NMs,
+-- 6-8 Ru'Aun tiers, 9 Domain Invasion dragons, 10 zone bosses,
+-- 11 Reisenjima HELM NMs. Standing in Escha already implies the RoV
+-- baseline, so the floor is 2; kill milestones bump the Vorseal_Cap
+-- CharVar (tier rosters pend BG-wiki verification before the bump hooks
+-- go into geas_fete.lua/domain_invasion.lua — do not guess rosters).
+xi.eschanHub.vorsealCap = function(player)
+    return math.max(2, player:getCharVar('Vorseal_Cap'))
+end
+
 -- Reapply the aggregate buff. Order matters: the effect script reads the
 -- CharVars on gain AND on lose, so the old effect must be removed BEFORE
 -- a tier changes (see onSageTrade purchase flow).
@@ -227,8 +238,17 @@ xi.eschanHub.onSageTrigger = function(player, npcName, mapKi)
     player:setLocalVar('EschaVendorLine', 0)
 
     -- num[1] = silt (the "current silt" display), num[2] = unlock bitmask
-    -- (-> Z4), num[3] = beads.
-    player:startEvent(csid, 0, silt, vorsealUnlockMask, beads, 0, 0, 0)
+    -- (-> Z4), num[3] = beads, num[4-6] = owned tier nibbles (4 bits per
+    -- vorseal line in list order, 8 lines per slot — the buy list's
+    -- "owned/max" counts; every PENDINGNUM slot was ruled out live).
+    local tiers = { 0, 0, 0 }
+    for i, line in ipairs(xi.eschanHub.vorsealLines) do
+        local slot  = math.floor((i - 1) / 8) + 1
+        local shift = ((i - 1) % 8) * 4
+        tiers[slot] = tiers[slot] + bit.lshift(xi.eschanHub.vorsealTier(player, line.key), shift)
+    end
+
+    player:startEvent(csid, 0, silt, vorsealUnlockMask, beads, tiers[1], tiers[2], tiers[3])
 end
 
 xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
@@ -236,20 +256,62 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
         return
     end
 
-    -- The client walks a chain of mid-event value queries (observed live:
-    -- option 14 -> 8 during the greeting, 9 after the top menu, more per
-    -- submenu) and menu selections arrive through the same packet. Both hit
-    -- this handler; the query answers must go back synchronously via
-    -- updateEvent (PENDINGNUM) or the client mis-routes submenus (verified
-    -- live: unanswered queries send "Receive key items" into the topics
-    -- list). This build answers every request with the full-stock payload
-    -- and logs the codes so the purchase rows can be wired from a real
-    -- capture; no debits happen until then.
     print(string.format('[eschanHub] %s csid %d option %d', player:getName(), csid, option))
 
-    local silt  = player:getCurrency('escha_silt')
-    local beads = player:getCurrency('escha_beads')
-    player:updateEvent(255, 255, 255, 255, 255, silt, beads, 0)
+    -- Purchase (live-decoded): picking a line in the 7542 buy list sends
+    -- option = (qty << 8+8) | (clientLineId << 8) | 5, where clientLineId =
+    -- vorsealLines menuIndex - 1 (Acc bought live as 0x010105 -> line byte 1,
+    -- qty 1). buyVorsealTier guards funds and tier caps, so a mis-decode can
+    -- browse but never mis-debit.
+    local action = bit.band(option, 0xFF)
+    if action == 5 and option > 0xFF then
+        local lineId = bit.band(bit.rshift(option, 8), 0xFF)
+        local qty    = bit.band(bit.rshift(option, 16), 0xFF)
+        xi.eschanHub.buyVorsealTier(player, npcName, lineId + 1, qty)
+    end
+
+    -- Answer the client's value queries. Mode 1 (CharVar EschaCalMode, set
+    -- via !setplayervar) feeds EschaCal0..7 verbatim for live slot probing;
+    -- mode 2 answers option*100+slot so displays identify their source.
+    -- Default: the payload the full flow renders under (status + action
+    -- menu + buy/return lists all verified live with these values).
+    local calMode = player:getCharVar('EschaCalMode')
+    if calMode == 1 then
+        -- Per-query overrides first (EschaCalQ<option>_<slot>), falling
+        -- back to the shared EschaCal<slot>: the client assembles some
+        -- display variables from bit-ranges of DIFFERENT query replies,
+        -- so uniform answers cannot isolate them.
+        local vals = {}
+        for slot = 0, 7 do
+            local v = player:getCharVar(string.format('EschaCalQ%d_%d', option, slot))
+            if v == 0 then
+                v = player:getCharVar('EschaCal' .. slot)
+            end
+
+            vals[slot + 1] = v
+        end
+
+        player:updateEvent(vals[1], vals[2], vals[3], vals[4], vals[5], vals[6], vals[7], vals[8])
+    elseif calMode == 2 then
+        local base = option * 100
+        player:updateEvent(base + 1, base + 2, base + 3, base + 4, base + 5, base + 6, base + 7, base + 8)
+    else
+        -- Full live mirror of the startEvent layout (slot 1 = silt, 2 =
+        -- unlock mask, 3 = beads, 4-6 = owned tier nibbles) recomputed on
+        -- every answer, so the client's session-cached display variables
+        -- pick up fresh values whenever their write passage runs. Slot 0
+        -- keeps the route-proven 255.
+        local silt  = player:getCurrency('escha_silt')
+        local beads = player:getCurrency('escha_beads')
+        local tiers = { 0, 0, 0 }
+        for i, line in ipairs(xi.eschanHub.vorsealLines) do
+            local slot  = math.floor((i - 1) / 8) + 1
+            local shift = ((i - 1) % 8) * 4
+            tiers[slot] = tiers[slot] + bit.lshift(xi.eschanHub.vorsealTier(player, line.key), shift)
+        end
+
+        player:updateEvent(255, silt, vorsealUnlockMask, beads, tiers[1], tiers[2], tiers[3], 0)
+    end
 end
 
 xi.eschanHub.onSageEventFinish = function(player, npcName, csid, option)
@@ -267,15 +329,16 @@ xi.eschanHub.buyVorsealTier = function(player, npcName, lineIndex, count)
     end
 
     count = count or 1
-    local tier = xi.eschanHub.vorsealTier(player, line.key)
-    if tier >= line.maxTier then
+    local tier    = xi.eschanHub.vorsealTier(player, line.key)
+    local lineCap = math.min(xi.eschanHub.vorsealCap(player), line.maxTier)
+    if tier >= lineCap then
         player:printToPlayer(string.format('%s: Your %s vorseal is already at its zenith.', npcName, line.name), xi.msg.channel.NS_SAY)
         return false
     end
 
     -- How many tiers can we actually afford / are allowed this confirm.
     local silt    = player:getCurrency('escha_silt')
-    local wanted  = math.min(count, line.maxTier - tier)
+    local wanted  = math.min(count, lineCap - tier)
     local canPay  = math.floor(silt / line.price)
     local buying  = math.min(wanted, canPay)
     if buying <= 0 then
