@@ -149,6 +149,24 @@ xi.eschanHub.vorsealCap = function(player)
     return math.max(2, player:getCharVar('Vorseal_Cap'))
 end
 
+-- Cap for one line as the client should DISPLAY it (the Y in X/Y) — also
+-- what buyVorsealTier enforces. Advanced lines (advKey) report 0 until their
+-- Domain Invasion unlock exists: 0 hides the row client-side, so the three
+-- advanced rows stay retail-hidden instead of rendering an unbuyable line.
+xi.eschanHub.vorsealLineCap = function(player, key)
+    for _, line in ipairs(xi.eschanHub.vorsealLines) do
+        if line.key == key then
+            return math.min(xi.eschanHub.vorsealCap(player), line.maxTier)
+        end
+
+        if line.advKey == key then
+            return 0
+        end
+    end
+
+    return 0
+end
+
 -- Reapply the aggregate buff. Order matters: the effect script reads the
 -- CharVars on gain AND on lose, so the old effect must be removed BEFORE
 -- a tier changes (see onSageTrade purchase flow).
@@ -300,7 +318,13 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
         -- unlock mask, 3 = beads, 4-6 = owned tier nibbles) recomputed on
         -- every answer, so the client's session-cached display variables
         -- pick up fresh values whenever their write passage runs. Slot 0
-        -- keeps the route-proven 255.
+        -- keeps the route-proven 255. The buy list's ROW VISIBILITY mask
+        -- derives from these values too: sparse payloads hide rows (proven
+        -- live — a caps-only payload masked HP/Def/Spoils/Rare), so the
+        -- dense mirror stays until the cap-digit formula is decoded from
+        -- the event bytecode (probe data + findings in session memory).
+        -- Until then the cap digits render as harmless junk; the server
+        -- clamp in buyVorsealTier is what actually enforces caps.
         local silt  = player:getCurrency('escha_silt')
         local beads = player:getCurrency('escha_beads')
         local tiers = { 0, 0, 0 }
