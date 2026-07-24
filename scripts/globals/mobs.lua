@@ -8,8 +8,23 @@ require('scripts/globals/quests')
 xi = xi or {}
 xi.mob = xi.mob or {}
 
--- onMobDeathEx is called from the core
+-- onMobDeathEx is called from the core for every mob death, once per
+-- alliance member in the zone.
 xi.mob.onMobDeathEx = function(mob, player, isKiller, isWeaponSkillKill)
+    -- Escha vorseal cap progression: kills in the Eschan zones count
+    -- toward the retail unlock milestones, NMs on their own counter
+    -- (read by xi.eschanHub.vorsealLineCap).
+    local zoneId = mob:getZoneID()
+    if
+        zoneId == xi.zone.ESCHA_ZITAH or
+        zoneId == xi.zone.ESCHA_RUAUN or
+        zoneId == xi.zone.REISENJIMA
+    then
+        player:incrementCharVar('EschaKills', 1)
+        if mob:isNM() then
+            player:incrementCharVar('EschaNMKills', 1)
+        end
+    end
 end
 
 -----------------------------------
