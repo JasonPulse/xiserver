@@ -101,29 +101,30 @@ end
 -- scripts/effects/vorseal.lua and the three Zone.lua onZoneIn hooks).
 -- The 16 retail vorseal lines in exact client-menu order (DAT msg 7542).
 -- `menuIndex` = the line's slot in that menu (1-16), so the decoded event
--- selection maps straight to the line. Prices per tier are retail (bg-wiki
--- Vorseal page). Lines 1-3 have a Domain-Invasion-unlocked advanced form
--- (advKey/advMods) — Regen+ / Refresh+ / Acc.++; the advanced tier is only
--- purchasable once its DI dragon-kill gate is met. Per-tier magnitudes are
--- unpublished on the wiki; the mod steps below are our tuning.
+-- selection maps straight to the line. Prices and per-tier mod steps are
+-- retail (bg-wiki Vorseal page: HP/MP +20 flat, Acc/RAcc/Eva +2, DEF and
+-- Atk/RAtk +1%, magic lines +2, attributes +3, Occ/Killer/DT 1%,
+-- Regen/Refresh +1, Acc.++ +5). Lines 1-3 have a Domain-Invasion-unlocked
+-- advanced form (advKey/advMods) — Regen+ / Refresh+ / Acc.++; the
+-- advanced tier is only purchasable once its DI dragon-kill gate is met.
 xi.eschanHub.vorsealLines =
 {
-    { menuIndex =  1, key = 'HPMP',   name = 'HP+, MP+',              price = 1200,  maxTier = 11, mods = { { xi.mod.HPP, 2 }, { xi.mod.MPP, 2 } }, advKey = 'REGEN',   advName = 'Regen+',   advMods = { { xi.mod.REGEN, 3 } } },
-    { menuIndex =  2, key = 'ACCEVA', name = 'Acc.+, Eva.+',          price = 600,   maxTier = 11, mods = { { xi.mod.ACC, 6 }, { xi.mod.EVA, 6 } }, advKey = 'REFRESH', advName = 'Refresh+', advMods = { { xi.mod.REFRESH, 1 } } },
-    { menuIndex =  3, key = 'DEF',    name = 'DEF+',                  price = 600,   maxTier = 11, mods = { { xi.mod.DEF, 10 } }, advKey = 'ACC2', advName = 'Acc.++', advMods = { { xi.mod.ACC, 10 } } },
-    { menuIndex =  4, key = 'ATK',    name = 'Atk.+, Rng. Atk.+',     price = 600,   maxTier = 11, mods = { { xi.mod.ATT, 6 }, { xi.mod.RATT, 6 } } },
-    { menuIndex =  5, key = 'MACC',   name = 'Mag. Acc.+, Mag. Eva.+', price = 600,  maxTier = 11, mods = { { xi.mod.MACC, 6 }, { xi.mod.MEVA, 6 } } },
-    { menuIndex =  6, key = 'MDEF',   name = 'Mag. Def.+',            price = 600,   maxTier = 11, mods = { { xi.mod.MDEF, 3 } } },
-    { menuIndex =  7, key = 'MATT',   name = 'Mag. Atk.+',            price = 600,   maxTier = 11, mods = { { xi.mod.MATT, 3 } } },
-    { menuIndex =  8, key = 'DEXAGI', name = 'DEX+, AGI+',            price = 800,   maxTier = 11, mods = { { xi.mod.DEX, 4 }, { xi.mod.AGI, 4 } } },
-    { menuIndex =  9, key = 'STRVIT', name = 'STR+, VIT+',            price = 800,   maxTier = 11, mods = { { xi.mod.STR, 4 }, { xi.mod.VIT, 4 } } },
-    { menuIndex = 10, key = 'INTMND', name = 'INT+, MND+, CHR+',      price = 800,   maxTier = 11, mods = { { xi.mod.INT, 4 }, { xi.mod.MND, 4 }, { xi.mod.CHR, 4 } } },
+    { menuIndex =  1, key = 'HPMP',   name = 'HP+, MP+',              price = 1200,  maxTier = 11, mods = { { xi.mod.HP, 20 }, { xi.mod.MP, 20 } }, advKey = 'REGEN',   advName = 'Regen+',   advMods = { { xi.mod.REGEN, 1 } } },
+    { menuIndex =  2, key = 'ACCEVA', name = 'Acc.+, Eva.+',          price = 600,   maxTier = 11, mods = { { xi.mod.ACC, 2 }, { xi.mod.RACC, 2 }, { xi.mod.EVA, 2 } }, advKey = 'REFRESH', advName = 'Refresh+', advMods = { { xi.mod.REFRESH, 1 } } },
+    { menuIndex =  3, key = 'DEF',    name = 'DEF+',                  price = 600,   maxTier = 11, mods = { { xi.mod.DEFP, 1 } }, advKey = 'ACC2', advName = 'Acc.++', advMods = { { xi.mod.ACC, 5 } } },
+    { menuIndex =  4, key = 'ATK',    name = 'Atk.+, Rng. Atk.+',     price = 600,   maxTier = 11, mods = { { xi.mod.ATTP, 1 }, { xi.mod.RATTP, 1 } } },
+    { menuIndex =  5, key = 'MACC',   name = 'Mag. Acc.+, Mag. Eva.+', price = 600,  maxTier = 11, mods = { { xi.mod.MACC, 2 }, { xi.mod.MEVA, 2 } } },
+    { menuIndex =  6, key = 'MDEF',   name = 'Mag. Def.+',            price = 600,   maxTier = 11, mods = { { xi.mod.MDEF, 2 } } },
+    { menuIndex =  7, key = 'MATT',   name = 'Mag. Atk.+',            price = 600,   maxTier = 11, mods = { { xi.mod.MATT, 2 } } },
+    { menuIndex =  8, key = 'DEXAGI', name = 'DEX+, AGI+',            price = 800,   maxTier = 11, mods = { { xi.mod.DEX, 3 }, { xi.mod.AGI, 3 } } },
+    { menuIndex =  9, key = 'STRVIT', name = 'STR+, VIT+',            price = 800,   maxTier = 11, mods = { { xi.mod.STR, 3 }, { xi.mod.VIT, 3 } } },
+    { menuIndex = 10, key = 'INTMND', name = 'INT+, MND+, CHR+',      price = 800,   maxTier = 11, mods = { { xi.mod.INT, 3 }, { xi.mod.MND, 3 }, { xi.mod.CHR, 3 } } },
     { menuIndex = 11, key = 'OCCNULL', name = 'Occ. ignore damage',   price = 10000, maxTier = 3,  mods = { { xi.mod.NULL_DAMAGE, 1 } } },
     { menuIndex = 12, key = 'KILLER', name = 'Killer+',               price = 10000, maxTier = 3,  mods = {
-        { xi.mod.VERMIN_KILLER, 3 }, { xi.mod.BIRD_KILLER, 3 }, { xi.mod.AMORPH_KILLER, 3 }, { xi.mod.LIZARD_KILLER, 3 },
-        { xi.mod.AQUAN_KILLER, 3 }, { xi.mod.PLANTOID_KILLER, 3 }, { xi.mod.BEAST_KILLER, 3 }, { xi.mod.UNDEAD_KILLER, 3 },
-        { xi.mod.ARCANA_KILLER, 3 }, { xi.mod.DRAGON_KILLER, 3 }, { xi.mod.DEMON_KILLER, 3 }, { xi.mod.EMPTY_KILLER, 3 },
-        { xi.mod.HUMANOID_KILLER, 3 }, { xi.mod.LUMINIAN_KILLER, 3 }, { xi.mod.LUMINION_KILLER, 3 } } },
+        { xi.mod.VERMIN_KILLER, 1 }, { xi.mod.BIRD_KILLER, 1 }, { xi.mod.AMORPH_KILLER, 1 }, { xi.mod.LIZARD_KILLER, 1 },
+        { xi.mod.AQUAN_KILLER, 1 }, { xi.mod.PLANTOID_KILLER, 1 }, { xi.mod.BEAST_KILLER, 1 }, { xi.mod.UNDEAD_KILLER, 1 },
+        { xi.mod.ARCANA_KILLER, 1 }, { xi.mod.DRAGON_KILLER, 1 }, { xi.mod.DEMON_KILLER, 1 }, { xi.mod.EMPTY_KILLER, 1 },
+        { xi.mod.HUMANOID_KILLER, 1 }, { xi.mod.LUMINIAN_KILLER, 1 }, { xi.mod.LUMINION_KILLER, 1 } } },
     { menuIndex = 13, key = 'DT',     name = 'Dmg. Taken-',           price = 10000, maxTier = 3,  mods = { { xi.mod.DMG, -100 } } }, -- -1%/tier (DMG /10000)
     { menuIndex = 14, key = 'SPOILS', name = 'Spoils+',               price = 50000, maxTier = 11, mods = {} }, -- drop-rate handled at loot time, no combat mod
     { menuIndex = 15, key = 'RAREENEMY', name = 'Rare Enemy+',        price = 1000,  maxTier = 11, mods = {} }, -- lottery-rate hook, no combat mod
@@ -136,6 +137,77 @@ end
 
 xi.eschanHub.vorsealTier = function(player, key)
     return player:getCharVar(vorsealVar(key))
+end
+
+-- Retail progressive vorseal cap (per line: min(cap, line.maxTier)).
+-- Ladder: 1-2 RoV progression, 3-5 all tier-1/2/3 Zi'Tah Geas Fete NMs,
+-- 6-8 Ru'Aun tiers, 9 Domain Invasion dragons, 10 zone bosses,
+-- 11 Reisenjima HELM NMs. Standing in Escha already implies the RoV
+-- baseline, so the floor is 2; kill milestones bump the Vorseal_Cap
+-- CharVar (tier rosters pend BG-wiki verification before the bump hooks
+-- go into geas_fete.lua/domain_invasion.lua — do not guess rosters).
+xi.eschanHub.vorsealCap = function(player)
+    return math.max(2, player:getCharVar('Vorseal_Cap'))
+end
+
+-- Retail cap milestones (bg-wiki Vorseal): tiers unlock per line as the
+-- character's Eschan kill counters grow (counted in mobs.lua
+-- onMobDeathEx). The ten primary lines share the all-monsters counter;
+-- Occ/Killer/DT and Spoils use the NM counter (the former max at tier 3).
+-- Rare Enemy+ and Luck+ unlock via quest lines on retail (unmapped here)
+-- and hold at the floor.
+local killMilestones = { 10, 50, 100, 500, 1000, 5000, 10000, 25000, 50000, 75000, 110000 }
+local nmMilestones   = { 10, 25, 50, 100, 200, 350, 550, 800, 1100, 1500, 2000 }
+
+local lineCounters =
+{
+    OCCNULL   = 'nm',
+    KILLER    = 'nm',
+    DT        = 'nm',
+    SPOILS    = 'nm',
+    RAREENEMY = 'quest',
+    LUCK      = 'quest',
+}
+
+local milestoneTier = function(count, milestones)
+    local tier = 0
+    for _, needed in ipairs(milestones) do
+        if count < needed then
+            break
+        end
+
+        tier = tier + 1
+    end
+
+    return tier
+end
+
+-- Cap for one line as the client should DISPLAY it (the Y in X/Y) — also
+-- what buyVorsealTier enforces. vorsealCap (the RoV-baseline floor of 2,
+-- raisable via the Vorseal_Cap CharVar) backstops the milestone tiers.
+-- Advanced lines (advKey) report 0 until their Domain Invasion unlock
+-- exists: 0 hides the row client-side, so the three advanced rows stay
+-- retail-hidden instead of rendering an unbuyable line.
+xi.eschanHub.vorsealLineCap = function(player, key)
+    for _, line in ipairs(xi.eschanHub.vorsealLines) do
+        if line.key == key then
+            local tier    = 0
+            local counter = lineCounters[key]
+            if counter == 'nm' then
+                tier = milestoneTier(player:getCharVar('EschaNMKills'), nmMilestones)
+            elseif counter ~= 'quest' then
+                tier = milestoneTier(player:getCharVar('EschaKills'), killMilestones)
+            end
+
+            return math.min(math.max(tier, xi.eschanHub.vorsealCap(player)), line.maxTier)
+        end
+
+        if line.advKey == key then
+            return 0
+        end
+    end
+
+    return 0
 end
 
 -- Reapply the aggregate buff. Order matters: the effect script reads the
@@ -227,8 +299,17 @@ xi.eschanHub.onSageTrigger = function(player, npcName, mapKi)
     player:setLocalVar('EschaVendorLine', 0)
 
     -- num[1] = silt (the "current silt" display), num[2] = unlock bitmask
-    -- (-> Z4), num[3] = beads.
-    player:startEvent(csid, 0, silt, vorsealUnlockMask, beads, 0, 0, 0)
+    -- (-> Z4), num[3] = beads, num[4-6] = owned tier nibbles (4 bits per
+    -- vorseal line in list order, 8 lines per slot — the buy list's
+    -- "owned/max" counts; every PENDINGNUM slot was ruled out live).
+    local tiers = { 0, 0, 0 }
+    for i, line in ipairs(xi.eschanHub.vorsealLines) do
+        local slot  = math.floor((i - 1) / 8) + 1
+        local shift = ((i - 1) % 8) * 4
+        tiers[slot] = tiers[slot] + bit.lshift(xi.eschanHub.vorsealTier(player, line.key), shift)
+    end
+
+    player:startEvent(csid, 0, silt, vorsealUnlockMask, beads, tiers[1], tiers[2], tiers[3])
 end
 
 xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
@@ -236,20 +317,75 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
         return
     end
 
-    -- The client walks a chain of mid-event value queries (observed live:
-    -- option 14 -> 8 during the greeting, 9 after the top menu, more per
-    -- submenu) and menu selections arrive through the same packet. Both hit
-    -- this handler; the query answers must go back synchronously via
-    -- updateEvent (PENDINGNUM) or the client mis-routes submenus (verified
-    -- live: unanswered queries send "Receive key items" into the topics
-    -- list). This build answers every request with the full-stock payload
-    -- and logs the codes so the purchase rows can be wired from a real
-    -- capture; no debits happen until then.
     print(string.format('[eschanHub] %s csid %d option %d', player:getName(), csid, option))
 
-    local silt  = player:getCurrency('escha_silt')
-    local beads = player:getCurrency('escha_beads')
-    player:updateEvent(255, 255, 255, 255, 255, silt, beads, 0)
+    -- Purchase (live-decoded): picking a line in the 7542 buy list sends
+    -- option = (qty << 8+8) | (clientLineId << 8) | 5, where clientLineId =
+    -- vorsealLines menuIndex - 1 (Acc bought live as 0x010105 -> line byte 1,
+    -- qty 1). buyVorsealTier guards funds and tier caps, so a mis-decode can
+    -- browse but never mis-debit.
+    local action = bit.band(option, 0xFF)
+    if action == 5 and option > 0xFF then
+        local lineId = bit.band(bit.rshift(option, 8), 0xFF)
+        local qty    = bit.band(bit.rshift(option, 16), 0xFF)
+        xi.eschanHub.buyVorsealTier(player, npcName, lineId + 1, qty)
+    end
+
+    -- Answer the client's value queries. Mode 1 (CharVar EschaCalMode, set
+    -- via !setplayervar) feeds EschaCal0..7 verbatim for live slot probing;
+    -- mode 2 answers option*100+slot so displays identify their source.
+    -- Default: the payload the full flow renders under (status + action
+    -- menu + buy/return lists all verified live with these values).
+    local calMode = player:getCharVar('EschaCalMode')
+    if calMode == 1 then
+        -- Per-query overrides first (EschaCalQ<option>_<slot>), falling
+        -- back to the shared EschaCal<slot>: the client assembles some
+        -- display variables from bit-ranges of DIFFERENT query replies,
+        -- so uniform answers cannot isolate them.
+        local vals = {}
+        for slot = 0, 7 do
+            local v = player:getCharVar(string.format('EschaCalQ%d_%d', option, slot))
+            if v == 0 then
+                v = player:getCharVar('EschaCal' .. slot)
+            end
+
+            vals[slot + 1] = v
+        end
+
+        player:updateEvent(vals[1], vals[2], vals[3], vals[4], vals[5], vals[6], vals[7], vals[8])
+    elseif calMode == 2 then
+        local base = option * 100
+        player:updateEvent(base + 1, base + 2, base + 3, base + 4, base + 5, base + 6, base + 7, base + 8)
+    elseif option == 14 or option == 8 or option == 9 then
+        -- The three greeting/menu value queries. The buy list's ROW
+        -- VISIBILITY mask derives from these replies, and any zero nibble
+        -- can hide rows (proven live: the mirror payload hid HP and
+        -- others; every all-nonzero probe payload showed all 19 rows), so
+        -- answer with a dense filler. Fresh-open silt/owned displays come
+        -- from startEvent, not from these replies (proven live), so the
+        -- filler does not disturb them. The cap digits render as junk
+        -- (1-7) until the display formula is decoded from the event
+        -- bytecode (probe data + findings in session memory); the server
+        -- clamp in buyVorsealTier is what actually enforces caps.
+        local dense = 0x07654321
+        player:updateEvent(dense, dense, dense, dense, dense, dense, dense, dense)
+    else
+        -- Purchase and any other mid-event option: full live mirror of
+        -- the startEvent layout (slot 1 = silt, 2 = unlock mask, 3 =
+        -- beads, 4-6 = owned tier nibbles), recomputed on every answer —
+        -- the post-purchase reply is what refreshes the client's
+        -- session-cached silt/owned displays (proven live).
+        local silt  = player:getCurrency('escha_silt')
+        local beads = player:getCurrency('escha_beads')
+        local tiers = { 0, 0, 0 }
+        for i, line in ipairs(xi.eschanHub.vorsealLines) do
+            local slot  = math.floor((i - 1) / 8) + 1
+            local shift = ((i - 1) % 8) * 4
+            tiers[slot] = tiers[slot] + bit.lshift(xi.eschanHub.vorsealTier(player, line.key), shift)
+        end
+
+        player:updateEvent(255, silt, vorsealUnlockMask, beads, tiers[1], tiers[2], tiers[3], 0)
+    end
 end
 
 xi.eschanHub.onSageEventFinish = function(player, npcName, csid, option)
@@ -267,15 +403,16 @@ xi.eschanHub.buyVorsealTier = function(player, npcName, lineIndex, count)
     end
 
     count = count or 1
-    local tier = xi.eschanHub.vorsealTier(player, line.key)
-    if tier >= line.maxTier then
+    local tier    = xi.eschanHub.vorsealTier(player, line.key)
+    local lineCap = xi.eschanHub.vorsealLineCap(player, line.key)
+    if tier >= lineCap then
         player:printToPlayer(string.format('%s: Your %s vorseal is already at its zenith.', npcName, line.name), xi.msg.channel.NS_SAY)
         return false
     end
 
     -- How many tiers can we actually afford / are allowed this confirm.
     local silt    = player:getCurrency('escha_silt')
-    local wanted  = math.min(count, line.maxTier - tier)
+    local wanted  = math.min(count, lineCap - tier)
     local canPay  = math.floor(silt / line.price)
     local buying  = math.min(wanted, canPay)
     if buying <= 0 then
