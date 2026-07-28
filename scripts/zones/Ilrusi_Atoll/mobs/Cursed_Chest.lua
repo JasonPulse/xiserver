@@ -6,7 +6,6 @@
 -----------------------------------
 local ID = zones[xi.zone.ILRUSI_ATOLL]
 -----------------------------------
----@type TMobEntity
 local entity = {}
 
 entity.onTrigger = function(player, mob)
