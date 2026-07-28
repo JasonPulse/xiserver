@@ -33,6 +33,12 @@ instanceObject.afterInstanceRegister = function(player)
     local instance = player:getInstance()
 
     xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_REEF_FIREFLIES)
+
+    -- Spawn the cursed chests (mimics disguised as coffers); they render and become clickable
+    for _, v in pairs(ID.mob.CURSED_CHESTS) do
+        SpawnMob(v, instance)
+    end
+
     GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(420, -15, 72, 148)
     GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(415, -15, 75, 148)
     GetNPCByID(ID.npc._1jp, instance):setAnimation(8)

@@ -96,17 +96,24 @@ xi.assault.afterInstanceRegister = function(player, fireFlies)
 end
 
 xi.assault.onInstanceFailure = function(instance)
-    local chars = instance:getChars()
-    local mobs = instance:getMobs()
+    local chars    = instance:getChars()
+    local mobs     = instance:getMobs()
+    local exitZone = instance:getEntranceZoneID()
 
     for _, entity in pairs(mobs) do
         local mobID = entity:getID()
         DespawnMob(mobID, instance)
     end
 
+    -- Warp players straight to the entrance zone on failure. The old code fired
+    -- startEvent(102) with no NPC target, so its onEventFinish was never routed to
+    -- a warp (the exit handler lives on Rune_of_Release, only reached on success).
+    -- Players were left in the failing instance and fell back to the core teardown
+    -- path, which resets position to 0,0,0 -> black screen. setPos(0,0,0,0, zone)
+    -- is the same warp the success path uses; the entrance zone's onZoneIn repositions.
     for _, entity in pairs(chars) do
         entity:messageSpecial(zones[instance:getZone():getID()].text.MISSION_FAILED, 10, 10)
-        entity:startEvent(102)
+        entity:setPos(0, 0, 0, 0, exitZone)
     end
 end
 

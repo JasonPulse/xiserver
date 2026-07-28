@@ -1,9 +1,32 @@
 -----------------------------------
 -- Area: Ilrusi Atoll
 --  Mob: Cursed Chest
+-- Note: Golden Salvage assault. The coffers are mimics that look like
+--       chests until examined; the wrong ones attack, the figurehead wins.
+-----------------------------------
+local ID = zones[xi.zone.ILRUSI_ATOLL]
 -----------------------------------
 ---@type TMobEntity
 local entity = {}
+
+entity.onTrigger = function(player, mob)
+    player:messageSpecial(ID.text.CHEST)
+
+    local instance = mob:getInstance()
+    if not instance then
+        return
+    end
+
+    if mob:getID() == instance:getProgress() then
+        player:messageSpecial(ID.text.GOLDEN)
+        instance:complete()
+        for _, v in pairs(ID.mob.CURSED_CHESTS) do
+            DespawnMob(v, instance)
+        end
+    else
+        mob:updateClaim(player)
+    end
+end
 
 local function CheckForDrawnIn(centerX, centerY, centerZ, playerX, playerY, playerZ, rayon, maxRayon)
     local difX = playerX-centerX
