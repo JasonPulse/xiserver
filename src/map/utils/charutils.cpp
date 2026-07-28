@@ -1555,6 +1555,20 @@ void SendUnityPackets(CCharEntity* PChar)
         }
     }
 
+    // The retail client hides higher-tier Unity Warp destinations for lower-ranked
+    // Unities. On this server every destination should be reachable, so force the
+    // viewing player's own Unity to first place in both weekly result sets. A member
+    // count of 1 with a dominant point total yields the highest evaluation under
+    // either raw-points or points-per-member ranking, guaranteeing first place.
+    // Only the packet view is altered; unity_system and the stat-bonus ranking in
+    // roe.cpp are untouched.
+    const int32 ownUnity = PChar->profile.unity_leader - 1;
+    if (ownUnity >= 0 && ownUnity < 11)
+    {
+        unity_current[ownUnity]  = { 1, 9999999.0 };
+        unity_previous[ownUnity] = { 1, 9999999.0 };
+    }
+
     // Previous week (full results)
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::BASE>(UNITY_RESULTSET::PreviousWeek, UNITY_DATATYPE::Base);
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::MEMBERS>(UNITY_RESULTSET::PreviousWeek, unity_previous);
@@ -1584,8 +1598,9 @@ void SendUnityPackets(CCharEntity* PChar)
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::DATA>(UNITY_RESULTSET::CurrentWeek, 0x11, 0x2CC2);
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::DATA>(UNITY_RESULTSET::CurrentWeek, 0x12, 0x6867); // ASCII 'gh'
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::DATA>(UNITY_RESULTSET::CurrentWeek, 0x13, 0x6E6F); // ASCII 'on'
-    // Type 0x14: Personal ranking points (TODO: calculate from player's Unity contributions)
-    PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::PERSONAL>(UNITY_RESULTSET::CurrentWeek, 0);
+    // Type 0x14: Personal ranking points. Retail ties personal evaluation to some
+    // Warp/reward access, so max it out to keep every destination available.
+    PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::PERSONAL>(UNITY_RESULTSET::CurrentWeek, 0xFFFF);
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::DATA>(UNITY_RESULTSET::CurrentWeek, 0x15, 0x3605);
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::DATA>(UNITY_RESULTSET::CurrentWeek, 0x16, 0x2007);
     PChar->pushPacket<GP_SERV_COMMAND_MISCDATA::UNITY::DATA>(UNITY_RESULTSET::CurrentWeek, 0x17, 0x6C6C); // ASCII 'll'

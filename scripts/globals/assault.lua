@@ -32,6 +32,57 @@ xi.assault.hasOrders = function(player)
     return false
 end
 
+-- Assaults with a working, completable instance on this server. Any assault not
+-- listed here (the ~40 that are SQL-only, plus any implemented-but-unwinnable one)
+-- is auto-credited at the entrance door by xi.assault.tryUnavailableCredit, so a
+-- player is never stuck in a black screen or wasting 30 minutes on a dead assault.
+xi.assault.supported =
+{
+    [xi.assault.mission.LEUJAOAM_CLEANSING]       = true,
+    [xi.assault.mission.IMPERIAL_AGENT_RESCUE]    = true,
+    [xi.assault.mission.PREEMPTIVE_STRIKE]        = true,
+    [xi.assault.mission.SAGELORD_ELIMINATION]     = true,
+    [xi.assault.mission.EXCAVATION_DUTY]          = true,
+    [xi.assault.mission.TROLL_FUGITIVES]          = true,
+    [xi.assault.mission.WAMOURA_FARM_RAID]        = true,
+    [xi.assault.mission.SEAGULL_GROUNDED]         = true,
+    [xi.assault.mission.REQUIEM]                  = true,
+    [xi.assault.mission.GOLDEN_SALVAGE]           = true,
+    [xi.assault.mission.EXTERMINATION]            = true,
+    [xi.assault.mission.NYZUL_ISLE_INVESTIGATION] = true,
+}
+
+-- Called by each assault entrance door before instance registration. If the
+-- player's current assault has no working instance, award full completion points
+-- (first clear = x1.5 + 5 promotion, same as a real clear) and clear the assault
+-- instead of letting them enter a broken or absent instance. Returns true if it
+-- handled the assault (the door should then do nothing further).
+xi.assault.tryUnavailableCredit = function(player)
+    local assaultID = player:getCurrentAssault()
+
+    if assaultID == 0 or xi.assault.supported[assaultID] then
+        return false
+    end
+
+    local info       = xi.assault.missionInfo[assaultID]
+    local basePoints = (info and info.minimumPoints) or 0
+    local firstClear = not player:hasCompletedAssault(assaultID)
+    local points     = firstClear and math.floor(basePoints * 1.5) or math.floor(basePoints)
+    local pointsArea = xi.assault.getAssaultArea(player)
+
+    if points > 0 then
+        player:addAssaultPoint(pointsArea, points)
+    end
+
+    player:setCharVar('AssaultPromotion', player:getCharVar('AssaultPromotion') + (firstClear and 5 or 1))
+    player:completeAssault(assaultID)
+    player:setCharVar('assaultEntered', 0)
+
+    player:printToPlayer(string.format('This assault is not available on this server. Full points awarded (%d).', points))
+
+    return true
+end
+
 xi.assault.onAssaultUpdate = function(player, csid, option, npc)
     local ID = zones[player:getZoneID()]
 

@@ -66,6 +66,7 @@ INSERT INTO `instance_entities` VALUES (5500,17002731);
 INSERT INTO `instance_entities` VALUES (5500,17002732);
 INSERT INTO `instance_entities` VALUES (5500,17002752);
 INSERT INTO `instance_entities` VALUES (5500,17002753);
+INSERT INTO `instance_entities` VALUES (5500,17002754);
 
 -- Lamia No. 13
 -- mobs
@@ -431,6 +432,23 @@ INSERT INTO `instance_entities` VALUES (6601,17047870);
 INSERT INTO `instance_entities` VALUES (6601,17047871);
 INSERT INTO `instance_entities` VALUES (6601,17047875);
 INSERT INTO `instance_entities` VALUES (6601,17047876);
+INSERT INTO `instance_entities` VALUES (6602,17047590);
+INSERT INTO `instance_entities` VALUES (6602,17047591);
+INSERT INTO `instance_entities` VALUES (6602,17047592);
+INSERT INTO `instance_entities` VALUES (6602,17047594);
+INSERT INTO `instance_entities` VALUES (6602,17047595);
+INSERT INTO `instance_entities` VALUES (6602,17047597);
+INSERT INTO `instance_entities` VALUES (6602,17047598);
+INSERT INTO `instance_entities` VALUES (6602,17047599);
+INSERT INTO `instance_entities` VALUES (6602,17047600);
+INSERT INTO `instance_entities` VALUES (6602,17047601);
+INSERT INTO `instance_entities` VALUES (6602,17047602);
+INSERT INTO `instance_entities` VALUES (6602,17047603);
+INSERT INTO `instance_entities` VALUES (6602,17047605);
+INSERT INTO `instance_entities` VALUES (6602,17047606);
+INSERT INTO `instance_entities` VALUES (6602,17047608);
+INSERT INTO `instance_entities` VALUES (6602,17047808);
+INSERT INTO `instance_entities` VALUES (6602,17047809);
 
 -- ------------------------------------------------------------
 -- Leujaoam Sanctum (Zone 69)

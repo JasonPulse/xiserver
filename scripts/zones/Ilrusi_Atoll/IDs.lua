@@ -15,6 +15,7 @@ zones[xi.zone.ILRUSI_ATOLL] =
         LOGIN_CAMPAIGN_UNDERWAY       = 7003, -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!
         LOGIN_NUMBER                  = 7004, -- In celebration of your most recent login (login no. <number>), we have provided you with <number> points! You currently have a total of <number> points.
         MEMBERS_LEVELS_ARE_RESTRICTED = 7024, -- Your party is unable to participate because certain members' levels are restricted.
+        ASSAULT_START_OFFSET          = 7431, -- ASSAULT_START_OFFSET + assaultID = ASSAULT_<41-50>_START; used by xi.assault.afterInstanceRegister
         ASSAULT_41_START              = 7472, -- Commencing <assault>! Objective: Rescue the agent
         ASSAULT_42_START              = 7473, -- Commencing <assault>! Objective: Destroy the assassins
         ASSAULT_43_START              = 7474, -- Commencing <assault>! Objective: Defeat Sagelord Molaal Ja
