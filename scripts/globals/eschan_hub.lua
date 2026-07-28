@@ -210,6 +210,63 @@ xi.eschanHub.vorsealLineCap = function(player, key)
     return 0
 end
 
+-- Buy-list cap DISPLAY (the Y in X/Y). Decoded from the client event VM
+-- (Escha-ZiTah entity 17957449): the buy-list build loop counts, for each
+-- set bit in a 185-bit mask, +1 into the row's cap. So the rendered cap of
+-- each row = the number of set mask bits assigned to it, and a row with 0
+-- shows/hides accordingly (retail: a line is hidden until its first
+-- milestone). The mask is num[1..6] (six 32-bit words, bits 0..184) of the
+-- reply to value query OPTION 8; capBitRow[i] gives the 0-based display row
+-- that bit-slot i (word = i//32, bit = i%32) belongs to. Display row order:
+-- 0-15 = vorsealLines[1..16], 16/17/18 = the advanced Regen/Refresh/Acc.++.
+-- (num[i] -> client WkZone[i+2]; word0 = num[1]. Silt/owned come from
+-- startEvent and are unaffected, so only query 8 carries this mask.)
+local capBitRow =
+{
+    1, 2, 3, 4, 5, 6, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 1, 2, 3, 4, 5, 6,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 7, 8, 9, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5,
+    6, 1, 2, 3, 4, 5, 6, 7, 8, 9, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 1, 2,
+    3, 4, 5, 6, 15, 15, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 13, 13, 13,
+    13, 13, 13, 13, 13, 13, 13, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17,
+    17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 7, 8, 9, 15, 14, 7, 8, 9, 15, 15,
+    14, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 1, 2, 3, 4, 5, 6, 1, 2, 3,
+    4, 5, 6, 7, 8, 9, 7, 8, 9, 10, 11, 12, 7, 8, 9, 15, 15, 15, 15, 1, 2, 3, 4,
+    5, 6, 14, 14, 14, 14, 14,
+}
+
+-- Advanced-line display rows (16-18) map to lines 1-3's advKey.
+local advDisplayKey = { [16] = 'REGEN', [17] = 'REFRESH', [18] = 'ACC2' }
+
+-- Build the six 32-bit mask words that make query 8's reply render each
+-- row's real cap: set the first capOf(row) of that row's bit-slots.
+xi.eschanHub.buildVorsealCapMask = function(player)
+    local capOf = {}
+    for d = 0, 18 do
+        local key
+        if d <= 15 then
+            key = xi.eschanHub.vorsealLines[d + 1].key
+        else
+            key = advDisplayKey[d]
+        end
+
+        capOf[d] = xi.eschanHub.vorsealLineCap(player, key)
+    end
+
+    local words = { 0, 0, 0, 0, 0, 0 }
+    local used  = {}
+    for i = 0, #capBitRow - 1 do
+        local d = capBitRow[i + 1]
+        used[d] = used[d] or 0
+        if used[d] < (capOf[d] or 0) then
+            local w = math.floor(i / 32) + 1
+            words[w] = bit.bor(words[w], bit.lshift(1, i % 32))
+            used[d] = used[d] + 1
+        end
+    end
+
+    return words
+end
+
 -- Reapply the aggregate buff. Order matters: the effect script reads the
 -- CharVars on gain AND on lose, so the old effect must be removed BEFORE
 -- a tier changes (see onSageTrade purchase flow).
@@ -356,17 +413,18 @@ xi.eschanHub.onSageEventUpdate = function(player, npcName, csid, option)
     elseif calMode == 2 then
         local base = option * 100
         player:updateEvent(base + 1, base + 2, base + 3, base + 4, base + 5, base + 6, base + 7, base + 8)
-    elseif option == 14 or option == 8 or option == 9 then
-        -- The three greeting/menu value queries. The buy list's ROW
-        -- VISIBILITY mask derives from these replies, and any zero nibble
-        -- can hide rows (proven live: the mirror payload hid HP and
-        -- others; every all-nonzero probe payload showed all 19 rows), so
-        -- answer with a dense filler. Fresh-open silt/owned displays come
-        -- from startEvent, not from these replies (proven live), so the
-        -- filler does not disturb them. The cap digits render as junk
-        -- (1-7) until the display formula is decoded from the event
-        -- bytecode (probe data + findings in session memory); the server
-        -- clamp in buyVorsealTier is what actually enforces caps.
+    elseif option == 8 then
+        -- Query 8 carries the cap-DISPLAY mask: num[1..6] are the six 32-bit
+        -- words whose set bits the client counts into each row's cap (see
+        -- buildVorsealCapMask). num[0]/num[7] stay route-safe. Rows whose cap
+        -- is 0 (locked / advanced lines) hide, which is retail-correct.
+        local w = xi.eschanHub.buildVorsealCapMask(player)
+        player:updateEvent(255, w[1], w[2], w[3], w[4], w[5], w[6], 0)
+    elseif option == 14 or option == 9 then
+        -- The other greeting/menu value queries. They do not feed the cap
+        -- digits (proven live: caps track query 8 only), but a sparse reply
+        -- can hide rows, so answer with a dense filler. Fresh-open silt/
+        -- owned displays come from startEvent, not these replies.
         local dense = 0x07654321
         player:updateEvent(dense, dense, dense, dense, dense, dense, dense, dense)
     else
