@@ -1,4 +1,8 @@
 -----------------------------------
+-- Ported from Mishffera/lsb-server (https://github.com/Mishffera/lsb-server)
+-- Source of Silver Sea Remnants + Lebros Assault content; adapted to this fork.
+-----------------------------------
+-----------------------------------
 -- Area: Arrapago Remnants
 --  Mob: Vile Wahzil
 -----------------------------------
@@ -17,12 +21,8 @@ entity.onMobSpawn = function(mob)
 end
 
 entity.onMobDeath = function(mob, player, optParams)
-    local cellType = mob:getLocalVar('Cell')
-    local numCells = mob:getLocalVar('Qnt') * 2
-
-    while numCells > 0 do
-        player:addTreasure(cellType)
-        numCells = numCells -1
+    if optParams.isKiller then
+        xi.salvage.handleSocketCells(mob, player)
     end
 end
 

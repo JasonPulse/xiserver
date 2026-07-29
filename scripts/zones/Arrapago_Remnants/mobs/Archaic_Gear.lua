@@ -1,4 +1,8 @@
 -----------------------------------
+-- Ported from Mishffera/lsb-server (https://github.com/Mishffera/lsb-server)
+-- Source of Silver Sea Remnants + Lebros Assault content; adapted to this fork.
+-----------------------------------
+-----------------------------------
 -- Area: Arrapago Remnants
 --  Mob: Archaic Gear
 -----------------------------------
@@ -9,14 +13,17 @@ local entity = {}
 
 entity.onMobDeath = function(mob, player, optParams)
     local instance = mob:getInstance()
-    if
-        instance and
-        instance:getStage() == 6 and
-        instance:getProgress() >= 1
-    then
-        if optParams.isKiller then
+
+    if optParams.isKiller then
+        if
+            instance and
+            instance:getStage() == 6 and
+            instance:getProgress() >= 1
+        then
             instance:setProgress(instance:getProgress() + 1)
         end
+
+        xi.salvage.spawnTempChest(mob, {})
     end
 end
 
