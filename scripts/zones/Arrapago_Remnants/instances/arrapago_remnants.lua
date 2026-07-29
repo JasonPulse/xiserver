@@ -1,22 +1,24 @@
 -----------------------------------
+-- Ported from Mishffera/lsb-server (https://github.com/Mishffera/lsb-server)
+-- Source of Silver Sea Remnants + Lebros Assault content; adapted to this fork.
+-----------------------------------
+-----------------------------------
 -- Salvage: Arrapago Remnants
 -----------------------------------
 local ID = zones[xi.zone.ARRAPAGO_REMNANTS]
 -----------------------------------
 local instanceObject = {}
 
+instanceObject.registryRequirements = function(player)
+    return xi.salvage.registryRequirements(player)
+end
+
+instanceObject.entryRequirements = function(player)
+    return xi.salvage.entryRequirements(player)
+end
+
 instanceObject.afterInstanceRegister = function(player)
-    local instance = player:getInstance()
-    player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit())
-    player:messageSpecial(ID.text.SALVAGE_START, 1)
-    player:addStatusEffectEx(xi.effect.ENCUMBRANCE_I, xi.effect.ENCUMBRANCE_I, 0xFFFF, 0, 6000)
-    player:addStatusEffectEx(xi.effect.OBLIVISCENCE, xi.effect.OBLIVISCENCE, 0, 0, 6000)
-    player:addStatusEffectEx(xi.effect.OMERTA, xi.effect.OMERTA, 0x3F, 0, 6000)
-    player:addStatusEffectEx(xi.effect.IMPAIRMENT, xi.effect.IMPAIRMENT, 3, 0, 6000)
-    player:addStatusEffectEx(xi.effect.DEBILITATION, xi.effect.DEBILITATION, 0x1FF, 0, 6000)
-    for i = 0, 15 do
-        player:unequipItem(i)
-    end
+    xi.salvage.afterInstanceRegister(player, xi.item.CAGE_OF_A_REMNANTS_FIREFLIES)
 end
 
 instanceObject.onInstanceCreated = function(instance)
@@ -90,68 +92,96 @@ instanceObject.onEventUpdate = function(player, csid, option, npc)
 end
 
 instanceObject.onEventFinish = function(player, csid, option, npc)
-    local instance = player:getInstance()
+    if option ~= 1 then
+        return
+    end
 
-    if csid >= 200 and csid <= 203 and option == 1 then
-        for id = ID.mob[2][csid - 199].mobs_start, ID.mob[2][csid - 199].mobs_end do
+    local instance = player:getInstance()
+    local csidAr   = xi.salvage.csid.AR
+
+    if csid >= csidAr.FLOOR_1_TO_2_START and csid <= csidAr.FLOOR_1_TO_2_END then
+        local offset = csid - (csidAr.FLOOR_1_TO_2_START - 1)
+
+        for id = ID.mob[2][offset].mobs_start, ID.mob[2][offset].mobs_end do
             SpawnMob(id, instance)
         end
 
-        instance:setProgress(csid - 199)
+        instance:setProgress(offset)
         for id = ID.mob[1][2].rampart, ID.mob[1][2].mobs_end do
             DespawnMob(id, instance)
         end
-    elseif csid == 204 and option == 1 then
+
+    elseif csid == csidAr.FLOOR_2_TO_3 then
         for i = 1, 2 do
             for id = ID.mob[3][i].mobs_start, ID.mob[3][i].mobs_end do
                 SpawnMob(id, instance)
             end
         end
 
-        instance:setProgress(csid - 203)
-            for id = ID.mob[2][4].mobs_start, ID.mob[2][0].astrologer do
-                DespawnMob(id, instance)
-            end
-        DespawnMob(ID.mob[2][2].princess, instance)
-        DespawnMob(ID.mob[2][3].wahzil, instance)
-    elseif csid == 205 or csid == 206 and option == 1 then
-        for id = ID.mob[4][csid - 204].mobs_start, ID.mob[4][csid - 204].mobs_end do
-            SpawnMob(id, instance)
-            SpawnMob(ID.mob[4][csid - 204].rampart2, instance)
+        instance:setProgress(csid - (csidAr.FLOOR_2_TO_3 - 1))
+        for id = ID.mob[2][4].mobs_start, ID.mob[2][0].astrologer do
+            DespawnMob(id, instance)
         end
 
-        instance:setProgress(csid - 204)
+        DespawnMob(ID.mob[2][2].princess, instance)
+        DespawnMob(ID.mob[2][3].wahzil, instance)
+
+    elseif csid == csidAr.FLOOR_3_TO_4_S or csid == csidAr.FLOOR_3_TO_4_N then
+        local offset = csid - (csidAr.FLOOR_3_TO_4_S - 1)
+
+        for id = ID.mob[4][offset].mobs_start, ID.mob[4][offset].mobs_end do
+            SpawnMob(id, instance)
+        end
+
+        SpawnMob(ID.mob[4][offset].rampart2, instance)
+
+        instance:setProgress(offset)
         for id = ID.mob[3][1].mobs_start, ID.mob[3].qiqirn_mine_2 do
             DespawnMob(id, instance)
         end
-    elseif csid == 207 or csid == 208 and option == 1 then
+
+    elseif csid == csidAr.FLOOR_4_TO_5_S or csid == csidAr.FLOOR_4_TO_5_N then
+        local offset = csid - (csidAr.FLOOR_4_TO_5_S - 1)
+
         for i = 1, 3 do
-            for id = ID.mob[5][csid - 206][i].mobs_start, ID.mob[5][csid - 206][i].mobs_end do
+            for id = ID.mob[5][offset][i].mobs_start, ID.mob[5][offset][i].mobs_end do
                 SpawnMob(id, instance)
             end
         end
 
-        SpawnMob(ID.mob[5][csid - 206].rampart1, instance)
-        SpawnMob(ID.mob[5][csid - 206].rampart2, instance)
-        SpawnMob(ID.mob[5][csid - 206].rampart3, instance)
-        instance:setProgress(csid - 206)
+        local mobGroups = ID.mob[5][offset]
+        if mobGroups.rampart1 then
+            SpawnMob(mobGroups.rampart1, instance)
+        end
+
+        if mobGroups.rampart2 then
+            SpawnMob(mobGroups.rampart2, instance)
+        end
+
+        if mobGroups.rampart3 then
+            SpawnMob(mobGroups.rampart3, instance)
+        end
+
+        instance:setProgress(offset)
         for id = ID.mob[4][1].mobs_start, ID.mob[4].qiqirn_mine_1 do
             DespawnMob(id, instance)
         end
-    elseif csid == 209 and option == 1 then
+
+    elseif csid == csidAr.FLOOR_5_TO_6 then
         for id = ID.mob[6][1].mobs_start, ID.mob[6][1].mobs_end do
             SpawnMob(id, instance)
         end
 
         SpawnMob(ID.mob[6].rampart1, instance)
         SpawnMob(ID.mob[6].rampart2, instance)
-        instance:setProgress(csid - 208)
+        instance:setProgress(csid - (csidAr.FLOOR_5_TO_6 - 1))
         for id = ID.mob[5][1][1].mobs_start, ID.mob[5][2].chariot do
             DespawnMob(id, instance)
         end
-    elseif csid == 210 and option == 1 then
+
+    elseif csid == csidAr.FLOOR_6_TO_BOSS then
         SpawnMob(ID.mob[7][1].chariot, instance)
-        instance:setProgress(csid - 209)
+        instance:setProgress(csid - (csidAr.FLOOR_6_TO_BOSS - 1))
         for id = ID.mob[6].rampart1, ID.mob[6].rampart4 do
             DespawnMob(id, instance)
         end

@@ -30,6 +30,19 @@ zones[xi.zone.LEBROS_CAVERN] =
         TIME_REMAINING_MINUTES        = 7427, -- ime remaining: <number> [minute/minutes] (Earth time).
         TIME_REMAINING_SECONDS        = 7428, -- ime remaining: <number> [second/seconds] (Earth time).
         PARTY_FALLEN                  = 7430, -- ll party members have fallen in battle. Mission failure in <number> [minute/minutes].
+        STILL_HUNGRY_FED              = 7439, -- Thank Zahak you're here. I was about to start eating my boots!
+        FULL_FED                      = 7440, -- You brought more supplies? Well, you can never have too much...
+        STILL_HUNGRY_TRIGGER          = 7441, -- The provisions... Have you brought the provisions?
+        FULL_HUNGRY                   = 7442, -- There's nothing like a full belly to put the power back in your sword swing. I pity the next monster that crosses my path!
+        HAVE_RATIONS                  = 7443, -- Why don't you deliver the rations I already gave you?
+        DEPENDING_ON                  = 7444, -- The advance unit is depending on these provisions. Don't let them down!
+        STEWPOT_TALK                  = 7445, -- This should keep a whole unit filled up for a while.
+        RATIONS                       = 7446, -- There are still brave soldiers starving out there! Quickly, those rations must be delivered!
+        SWITCH_LIGHTS_UP              = 7451, -- A switch lights up on the device... It is flickering faintly...
+        SWITCH_WARNING                = 7452, -- The switch looks like it may cut out at any moment...
+        SWITCHES_NOTHING              = 7453, -- Nothing happens... The other switches appear to have shut down as well...
+        SWITCHES_GLOWING              = 7454, -- The switch on the device is glowing brightly. You don't think it will fade any time soon.
+        BORGERLUR_LOST                = 7455, -- Uggghhh... H-how did you know...? Borgerlur, lost in own clever plan...
     },
 
     mob =
@@ -60,6 +73,20 @@ zones[xi.zone.LEBROS_CAVERN] =
                 17035318, 17035319, 17035320, 17035321, 17035322, 17035323, 17035324,
             },
         },
+        [xi.assault.mission.EVADE_AND_ESCAPE] =
+        {
+            MOBS_START =
+            {
+                17035325, 17035326, 17035327,
+            },
+        },
+        [xi.assault.mission.SIEGEMASTER_ASSASSINATION] =
+        {
+            MOBS_START =
+            {
+                17035328, 17035329, 17035330, 17035331, 17035332, 17035333, 17035334, 17035335,
+            },
+        },
         [xi.assault.mission.WAMOURA_FARM_RAID] =
         {
             MOBS_START =
@@ -79,6 +106,17 @@ zones[xi.zone.LEBROS_CAVERN] =
         _1rz            = GetFirstID('_1rz'),
         _jr0            = GetFirstID('_jr0'),
         _jr1            = GetFirstID('_jr1'),
+        IMPERIAL_STORMER =
+        {
+            17035292, 17035293, 17035294, 17035295, 17035296, 17035297, 17035298, 17035299,
+            17035300, 17035301, 17035302, 17035303,
+        },
+        SWITCHES =
+        {
+            SWITCH1     = 17035481,
+            SWITCH2     = 17035482,
+            SWITCH3     = 17035483,
+        },
     }
 }
 

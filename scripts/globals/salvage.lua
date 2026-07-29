@@ -69,6 +69,79 @@ xi.salvage.instanceRegister = function(player, fireFlies)
     player:delKeyItem(xi.ki.REMNANTS_PERMIT)
 end
 
+-- The following salvage functions (registryRequirements / entryRequirements /
+-- afterInstanceRegister / csid) were ported from Mishffera/lsb-server
+-- (https://github.com/Mishffera/lsb-server) and adapted to this fork's conventions.
+-- Requirements for the first player registering the instance.
+xi.salvage.registryRequirements = function(player)
+    if #player:getAlliance() < xi.settings.main.SALVAGE_MINIMUM_MEMBER_REQ then
+        return false
+    end
+
+    return player:getMainLvl() >= 65 and player:hasKeyItem(xi.ki.REMNANTS_PERMIT)
+end
+
+-- Requirements for further players entering an already-registered instance.
+xi.salvage.entryRequirements = function(player)
+    if #player:getAlliance() < xi.settings.main.SALVAGE_MINIMUM_MEMBER_REQ then
+        return false
+    end
+
+    return player:getMainLvl() >= 65 and player:hasKeyItem(xi.ki.REMNANTS_PERMIT)
+end
+
+-- Same status-effect setup as instanceRegister, plus the retail entry messages.
+xi.salvage.afterInstanceRegister = function(player, fireFlies)
+    local ID       = zones[player:getZoneID()]
+    local instance = player:getInstance()
+
+    for i = xi.slot.MAIN, xi.slot.BACK do
+        player:unequipItem(i)
+    end
+
+    player:messageSpecial(ID.text.TIME_TO_COMPLETE, instance:getTimeLimit())
+    player:messageSpecial(ID.text.SALVAGE_START, 1)
+    player:addStatusEffectEx(xi.effect.ENCUMBRANCE_I, xi.effect.ENCUMBRANCE_I, 65535, 0, 6000)
+    player:addStatusEffectEx(xi.effect.OBLIVISCENCE, xi.effect.OBLIVISCENCE, 1, 0, 6000)
+    player:addStatusEffectEx(xi.effect.OMERTA, xi.effect.OMERTA, 63, 0, 6000)
+    player:addStatusEffectEx(xi.effect.IMPAIRMENT, xi.effect.IMPAIRMENT, 3, 0, 6000)
+    player:addStatusEffectEx(xi.effect.DEBILITATION, xi.effect.DEBILITATION, 511, 0, 6000)
+    player:addTempItem(fireFlies)
+    player:delKeyItem(xi.ki.REMNANTS_PERMIT)
+    player:messageSpecial(ID.text.TEMP_ITEM, fireFlies)
+end
+
+xi.salvage.csid =
+{
+    AR =
+    {
+        FLOOR_1_TO_2_START = 200,
+        FLOOR_1_TO_2_END   = 203,
+        FLOOR_2_TO_3       = 204,
+        FLOOR_3_TO_4_S     = 205,
+        FLOOR_3_TO_4_N     = 206,
+        FLOOR_4_TO_5_S     = 207,
+        FLOOR_4_TO_5_N     = 208,
+        FLOOR_5_TO_6       = 209,
+        FLOOR_6_TO_BOSS    = 210,
+    },
+
+    SSR =
+    {
+        FLOOR_1_TO_2_START = 200,
+    },
+
+    BR =
+    {
+
+    },
+
+    ZR =
+    {
+
+    }
+}
+
 xi.salvage.onFailure = function(instance)
     local chars = instance:getChars()
     local mobs  = instance:getMobs()

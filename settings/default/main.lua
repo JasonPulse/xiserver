@@ -245,6 +245,7 @@ xi.settings.main =
     OLDSCHOOL_G2    = false, -- Set true to require the NMs for 'Atop the Highest Mountains' be dead to get KI like before SE changed it.
     FRIGICITE_TIME  = 30,    -- When OLDSCHOOL_G2 is enabled, this is the time (in seconds) you have from killing Boreal NMs to click the '???' target.
     ASSAULT_MINIMUM = 1,     -- Minimum amount of people needed to start an assault mission. TOAU era is 3, Default is 1.
+    SALVAGE_MINIMUM_MEMBER_REQ = 1, -- Minimum alliance members needed to register/enter a Salvage instance. Retail allows solo; default 1.
 
     -- SPELL SPECIFIC SETTINGS
     STONESKIN_CAP                   = 350,   -- Soft cap for hp absorbed by stoneskin
