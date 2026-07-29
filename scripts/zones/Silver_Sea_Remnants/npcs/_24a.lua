@@ -14,8 +14,13 @@ end
 
 entity.onEventFinish = function(player, csid, option, door)
     if csid == 300 and option == 1 then
-        door:setAnimation(xi.animation.OPEN_DOOR)
         local instance = door:getInstance()
+
+        if instance == nil then
+            return
+        end
+
+        door:setAnimation(xi.animation.OPEN_DOOR)
         door:setUntargetable(true)
         instance:setStage(2)
         instance:setProgress(0)

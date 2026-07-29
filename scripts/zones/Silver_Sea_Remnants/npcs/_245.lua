@@ -12,7 +12,7 @@ local entity = {}
 
 entity.onTrigger = function(player, npc)
     local instance = npc:getInstance()
-    if instance:getProgress() == 9 then
+    if instance ~= nil and instance:getProgress() == 9 then
         player:startEvent(300)
     else
         player:messageSpecial(ID.text.DOOR_IS_SEALED)

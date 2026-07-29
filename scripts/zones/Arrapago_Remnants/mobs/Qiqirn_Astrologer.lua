@@ -92,7 +92,7 @@ end
 
 entity.onMobDeath = function(mob, player, optParams)
     if optParams.isKiller then
-        xi.salvage.spawnTempChest(mob, {}, true)
+        xi.salvage.spawnTempChest(mob, {})
     end
 end
 

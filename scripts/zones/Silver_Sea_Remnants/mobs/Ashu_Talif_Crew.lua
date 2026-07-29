@@ -79,6 +79,11 @@ entity.onMobDeath = function(mob, player, optParams)
 
     local mobID      = mob:getID()
     local instance   = mob:getInstance()
+
+    if instance == nil then
+        return
+    end
+
     local prog       = instance:getProgress()
     local hammerblow = ID.mob[1][2].hammerblow
     local cells      = ID.drops[3].CELLS
