@@ -1,22 +1,22 @@
 -----------------------------------
--- Assault: Golden Salvage
--- TODO: random the chest locations
+-- Assault: Sagelord Elimination
+-- Objective: Defeat Sagelord Molaal Ja
 -----------------------------------
-local ID = zones[xi.zone.ILRUSI_ATOLL]
+local ID = zones[xi.zone.MAMOOL_JA_TRAINING_GROUNDS]
 -----------------------------------
 local instanceObject = {}
 
 instanceObject.registryRequirements = function(player)
-    return player:hasKeyItem(xi.ki.ILRUSI_ASSAULT_ORDERS) and
-        player:getCurrentAssault() == xi.assault.mission.GOLDEN_SALVAGE and
+    return player:hasKeyItem(xi.ki.MAMOOL_JA_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.SAGELORD_ELIMINATION and
         player:getCharVar('assaultEntered') == 0 and
         player:hasKeyItem(xi.ki.ASSAULT_ARMBAND) and
         player:getMainLvl() > 50
 end
 
 instanceObject.entryRequirements = function(player)
-    return player:hasKeyItem(xi.ki.ILRUSI_ASSAULT_ORDERS) and
-        player:getCurrentAssault() == xi.assault.mission.GOLDEN_SALVAGE and
+    return player:hasKeyItem(xi.ki.MAMOOL_JA_ASSAULT_ORDERS) and
+        player:getCurrentAssault() == xi.assault.mission.SAGELORD_ELIMINATION and
         player:getCharVar('assaultEntered') == 0 and
         player:getMainLvl() > 50
 end
@@ -32,24 +32,9 @@ end
 instanceObject.afterInstanceRegister = function(player)
     local instance = player:getInstance()
 
-    xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_REEF_FIREFLIES)
-
-    -- Spawn the cursed chests (mimics disguised as coffers); they render and become clickable
-    for _, v in pairs(ID.mob.CURSED_CHESTS) do
-        SpawnMob(v, instance)
-    end
-
-    GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(420, -15, 72, 148)
-    GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(415, -15, 75, 148)
-    GetNPCByID(ID.npc._1jp, instance):setAnimation(8)
-    GetNPCByID(ID.npc._jja, instance):setAnimation(8)
-    GetNPCByID(ID.npc._jjb, instance):setAnimation(8)
-
-    -- Progress stores the random figurehead chest NPC ID; Cursed_Chest.lua reads it on trigger
-    if instance:getProgress() == 0 then
-        local figureheadChest = math.random(ID.npc.ILRUSI_CURSED_CHEST_OFFSET, ID.npc.ILRUSI_CURSED_CHEST_OFFSET + 11)
-        instance:setProgress(figureheadChest)
-    end
+    xi.assault.afterInstanceRegister(player, xi.item.CAGE_OF_BHAFLAU_FIREFLIES)
+    GetNPCByID(ID.npc.RUNE_OF_RELEASE, instance):setPos(-424, -3, 322, 49)
+    GetNPCByID(ID.npc.ANCIENT_LOCKBOX, instance):setPos(-424, -3, 325, 49)
 end
 
 instanceObject.onInstanceTimeUpdate = function(instance, elapsed)
@@ -61,6 +46,10 @@ instanceObject.onInstanceFailure = function(instance)
 end
 
 instanceObject.onInstanceProgressUpdate = function(instance, progress)
+    -- Objective is Sagelord Molaal Ja; his death bumps progress to 1.
+    if progress >= 1 then
+        instance:complete()
+    end
 end
 
 instanceObject.onInstanceComplete = function(instance)

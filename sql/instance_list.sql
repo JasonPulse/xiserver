@@ -97,7 +97,7 @@ INSERT INTO `instance_list` VALUES (6306,'wamoura_farm_raid',63,61,30,540.977,-3
 -- MAMOOL_JA_TRAINING_GROUNDS (zoneID: 66, starting id: 6600)
 INSERT INTO `instance_list` VALUES (6600,'imperial_agent_rescue',66,52,30,-20.000,2.276,-405.000,63,NULL,NULL,NULL,NULL);
 INSERT INTO `instance_list` VALUES (6601,'preemptive_strike',66,52,30,-60.350,-5.000,27.670,46,NULL,NULL,NULL,NULL);
--- INSERT INTO `instance_list` VALUES (6602,'sagelord_elimination',66,52,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
+INSERT INTO `instance_list` VALUES (6602,'sagelord_elimination',66,52,30,-300.000,-3.299,115.000,64,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6603,'breaking_morale',66,52,15,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6604,'the_double_agent',66,52,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6605,'imperial_treasure_retrieval',66,52,15,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);

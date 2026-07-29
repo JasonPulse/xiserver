@@ -50,6 +50,11 @@ instanceObject.onInstanceFailure = function(instance)
 end
 
 instanceObject.onInstanceProgressUpdate = function(instance, progress)
+    -- Excaliace reaching the escort goal sets progress to 1 (see onMobRoam);
+    -- complete the assault so the Rune of Release unlocks.
+    if progress >= 1 then
+        instance:complete()
+    end
 end
 
 instanceObject.onInstanceComplete = function(instance)
