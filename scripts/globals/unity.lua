@@ -207,7 +207,12 @@ xi.unity.onTrigger = function(player, npc)
     elseif not allForOneCompleted then
         player:startEvent(zoneEventIds[zoneId][3])
     else
-        player:startEvent(zoneEventIds[zoneId][4], 0, player:getUnityLeader(), accolades, remainingLimit, 0, 0, 0, 0)
+        -- The trailing params are warp-destination unlock bitmasks, read client-side
+        -- to decide which entries render in the Unity Warp list (same pattern as the
+        -- Survival Guide, where -1 enables every zone in a group). Retail populates
+        -- these from the Unity's ranking tier; on this server we set them all to -1 so
+        -- every destination is available to every member regardless of ranking.
+        player:startEvent(zoneEventIds[zoneId][4], 0, player:getUnityLeader(), accolades, remainingLimit, -1, -1, -1, -1)
     end
 end
 
