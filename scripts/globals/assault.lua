@@ -230,4 +230,3 @@ xi.assault.adjustMobLevel = function(mob)
         end
     end
 end
-
