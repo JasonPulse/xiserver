@@ -32,6 +32,7 @@ spellObject.onMobSpawn = function(mob)
         mobArg:setMod(xi.mod.DEF, withNashmeira and 100 or 0)
         mobArg:setMod(xi.mod.ENMITY, withNashmeira and 130 or 100) -- base 100 + 30 with Nashmeira
     end)
+
     -- NOTE(registry): Flashbulb + Disruptor automaton mobskills; skill_list has generic sword WS,
     -- not his automaton WS (Chimera Ripper/Slapstick/String Clipper/Shield Subverter).
 end

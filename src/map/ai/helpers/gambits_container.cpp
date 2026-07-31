@@ -915,7 +915,9 @@ void CGambitsContainer::Tick(timer::time_point tick)
                         }
 
                         DebugTrusts("[Trust:%s] -> JA QD_WEAKNESS: shot=%u on %s",
-                                    POwner->name.c_str(), bestShot, battleTarget->name.c_str());
+                                    POwner->name.c_str(),
+                                    bestShot,
+                                    battleTarget->name.c_str());
                         controller->Ability(battleTarget->targid, bestShot);
                     }
                 }
