@@ -3634,9 +3634,7 @@ INSERT INTO `mob_skill_lists` VALUES ('TRUST_AATT',1110,3720); -- Amon Drive
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AATT',1110,3721); -- Guillotine
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3722); -- Tachi: Yukikaze
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3723); -- Tachi: Gekko
-INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3724); -- Dragonfall
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3725); -- Tachi: Kasha
-INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3726); -- Tachi: Fudo
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Iroha',1112,148); -- Tachi: Jinpu
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Iroha',1112,150); -- Tachi: Yukikaze
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Iroha',1112,152); -- Tachi: Kasha

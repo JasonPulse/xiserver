@@ -38,6 +38,9 @@ mission.sections =
                             mission:setVar(player, 'Option', 0)
                         end
 
+                        -- Veto the cutscene's end-position update so it can not deposit the player at the ferry dock.
+                        player:setLocalVar('noPosUpdate', 1)
+
                         return mission:event(3098, xi.besieged.getMercenaryRank(player), 1, 0, 0, 0, 0, 0, dialog, 0)
                     end
                 end,

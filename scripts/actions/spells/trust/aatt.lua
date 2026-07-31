@@ -17,6 +17,7 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.ELEMENTAL_SEAL },    { ai.r.JA, ai.s.SPECIFIC, xi.ja.ELEMENTAL_SEAL }, 180)
     mob:addGambit(ai.t.SELF,   { ai.c.MPP_LT, 30 },                              { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.ASPIR })
     mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.BIO },               { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.BIO_II }, 90)
     mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.POISON },            { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.POISON_II }, 90)

@@ -31,6 +31,8 @@ mission.sections =
                             -- TODO: Maybe it's used?
                             return mission:progressEvent(3020, { text_table = 0 }) -- Enter Not-Trion.
                         else
+                            -- Veto the cutscene's end-position update so it can not deposit the player at the ferry dock.
+                            player:setLocalVar('noPosUpdate', 1)
                             return mission:event(3003, { [0] = xi.besieged.getMercenaryRank(player), text_table = 0 }) -- Default Dialog.
                         end
                     else

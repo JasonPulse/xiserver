@@ -247,7 +247,6 @@ xi.player.onGameIn = function(player, firstLogin, zoning)
     -- Simplified content access pins (Salvage / Assault / Sky / REMA /
     -- Besieged). Each checks its own CharVar pin and no-ops if unset.
     xi.salvage.tryEnter(player)
-    xi.assault.tryGrantOrders(player)
     xi.skyAccess.tryWarp(player)
     xi.mythic.tryGrant(player)
     xi.relic.tryGrant(player)
