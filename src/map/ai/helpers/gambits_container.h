@@ -136,6 +136,7 @@ enum class G_SELECT : uint16
     // Custom selectors
     MP_SCALED      = 16, // Pick spell tier scaled to current MP% (smart resource management)
     SECOND_HIGHEST = 17, // Second-highest tier in family (pair with HIGHEST for stacking, e.g. Ballad II + III)
+    QD_WEAKNESS    = 18, // Corsair Quick Draw: fire the elemental shot the target is weakest to (Fire..Water)
 };
 
 enum class G_TP_TRIGGER : uint16

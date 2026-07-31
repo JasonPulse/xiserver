@@ -23,6 +23,11 @@ spellObject.onMobSpawn = function(mob)
     -- DPS as levels scale.
     mob:addMod(xi.mod.ENMITY, 100)
 
+    -- High Cure Potency (~+50%) job trait per FFXIclopedia.
+    mob:addMod(xi.mod.CURE_POTENCY, 50)
+
+    xi.trust.arkAngelSynergy(mob) -- +MDEF while all five Ark Angels are present
+
     -- PLD/WHM tank: weapon skills at 1000 TP
     -- (Arrogance Incarnate / Vorpal Blade / Dominion Slash / Chant du Cygne).
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)

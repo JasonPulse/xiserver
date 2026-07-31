@@ -3536,7 +3536,9 @@ INSERT INTO `mob_skill_lists` VALUES ('TRUST_Semih_Lafihna',1055,3488); -- Archi
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Semih_Lafihna',1055,3490); -- Lux Arrow
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Elivira',1056,0);
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Noillurie',1057,0);
--- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Lhu_Mhakaracca',1058,0);
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_Lhu_Mhakaracca',1058,940);  -- Rampage
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_Lhu_Mhakaracca',1058,1192); -- Onslaught
+-- TODO(build): Spinning Axe + Decimation mob_skills don't exist yet (needed for her full retail 4-WS set).
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Ferreous_Coffin',1059,170); -- Randgrith
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Lilisette',1060,25); -- Evisceration
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Lilisette',1060,30); -- Aeolian Edge
@@ -3598,7 +3600,8 @@ INSERT INTO `mob_skill_lists` VALUES ('TRUST_Maximilian',1090,30); -- Aeolian Ed
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Kayeel-Payeel',1091,0);
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Robel-Akbel',1092,0);
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Kupofried',1093,0);
--- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Selh_teus',1094,0);
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_Selh_teus',1094,3623); -- Revelation
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_Selh_teus',1094,3621); -- Luminous Lance
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Yoran-Oran_UC',1095,0);
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Sylvie_UC',1096,0);
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Abquhbah',1097,1); -- Combo
@@ -3616,7 +3619,7 @@ INSERT INTO `mob_skill_lists` VALUES ('TRUST_August',1099,42); -- Savage Blade
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Ullegore',1102,0);
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Makki-Chebukki',1103,0);
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_King_of_Hearts',1104,0);
--- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Morimar',1105,0);
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_Morimar',1105,3680); -- 12 Blades of Remorse
 -- INSERT INTO `mob_skill_lists` VALUES ('TRUST_Darrcuiln',1106,0);
 -- TODO: Verify these
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAHM',1107,3706); -- Cross Reaver
@@ -3634,7 +3637,9 @@ INSERT INTO `mob_skill_lists` VALUES ('TRUST_AATT',1110,3720); -- Amon Drive
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AATT',1110,3721); -- Guillotine
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3722); -- Tachi: Yukikaze
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3723); -- Tachi: Gekko
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3724); -- Dragonfall
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3725); -- Tachi: Kasha
+INSERT INTO `mob_skill_lists` VALUES ('TRUST_AAGK',1111,3726); -- Tachi: Fudo
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Iroha',1112,148); -- Tachi: Jinpu
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Iroha',1112,150); -- Tachi: Yukikaze
 INSERT INTO `mob_skill_lists` VALUES ('TRUST_Iroha',1112,152); -- Tachi: Kasha

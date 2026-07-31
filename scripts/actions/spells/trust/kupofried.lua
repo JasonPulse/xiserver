@@ -15,7 +15,13 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
-    mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
+    -- Passive alter ego (per FFXIclopedia): performs no actions. Provides a full-time
+    -- experience/capacity-point bonus aura to the party (the Dedication effect; the XP bonus
+    -- itself is applied in charutils while a player has the effect).
+    xi.trust.applyAura(mob, xi.effect.DEDICATION, 20)
+
+    mob:setAutoAttackEnabled(false)
+    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end
 
 spellObject.onMobDespawn = function(mob)

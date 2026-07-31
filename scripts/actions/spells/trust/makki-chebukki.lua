@@ -18,6 +18,8 @@ spellObject.onMobSpawn = function(mob)
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.SHARPSHOT }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SHARPSHOT })
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.BARRAGE },   { ai.r.JA, ai.s.SPECIFIC, xi.ja.BARRAGE })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.FLASHY_SHOT })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.RATTACK, 0, 0 })
 end
 

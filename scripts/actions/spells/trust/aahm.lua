@@ -19,6 +19,11 @@ spellObject.onMobSpawn = function(mob)
     -- party TP, with random weapon skill selection (Cross Reaver / Swift Blade / Chant du Cygne).
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.RANDOM)
 
+    -- Casts ninjutsu very fast (per FFXIclopedia): ~80% cast-time reduction via uncapped Fast Cast.
+    mob:addMod(xi.mod.UFASTCAST, 80)
+
+    xi.trust.arkAngelSynergy(mob) -- +MDEF while all five Ark Angels are present
+
     -- Keep shadows up (Utsusemi represented by xi.effect.COPY_IMAGE) and Migawari for survival.
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.COPY_IMAGE }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.UTSUSEMI })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.MIGAWARI },   { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.MIGAWARI_ICHI })

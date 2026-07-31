@@ -17,9 +17,12 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
-    mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 50 }, { ai.r.JA, ai.s.HIGHEST_WALTZ, xi.ja.CURING_WALTZ })
-    mob:addGambit(ai.t.SELF, { ai.c.NO_SAMBA, 0 }, { ai.r.JA, ai.s.BEST_SAMBA, xi.ja.DRAIN_SAMBA })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.QUICKSTEP })
+    -- Offensive DNC (per FFXIclopedia): Saber Dance, Drain/Haste Samba, Climactic Flourish,
+    -- Feather Step. Does NOT use Curing Waltz.
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.SABER_DANCE },       { ai.r.JA, ai.s.SPECIFIC, xi.ja.SABER_DANCE })
+    mob:addGambit(ai.t.SELF,   { ai.c.NO_SAMBA, 0 },                             { ai.r.JA, ai.s.BEST_SAMBA, xi.ja.DRAIN_SAMBA })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.JA, ai.s.SPECIFIC, xi.ja.FEATHER_STEP })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.CLIMACTIC_FLOURISH }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.CLIMACTIC_FLOURISH })
 end
 
 spellObject.onMobDespawn = function(mob)

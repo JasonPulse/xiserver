@@ -32,15 +32,21 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
-    mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 40 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.CURE })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.DIVINE_EMBLEM }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.DIVINE_EMBLEM })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.FLASH })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SHIELD_BASH })
-    mob:addGambit(ai.t.SELF, { ai.c.HPP_LT, 50 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SENTINEL })
-    mob:addGambit(ai.t.SELF, { ai.c.HPP_LT, 60 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.DEFENDER })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.PALISADE }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.PALISADE })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.WARCRY }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.WARCRY })
+    -- Retail kit (FFXIclopedia): JAs Provoke / Sentinel / Divine Emblem;
+    -- spells Cure, Flash, Reprisal, Holy II. (The former Shield Bash / Defender /
+    -- Palisade / Warcry were a non-retail crutch for weak tanking — the ENMITY mod
+    -- above is the real fix, so they're removed.)
+    mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 50 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.CURE })
+
+    mob:addGambit(ai.t.SELF, { ai.c.HPP_LT, 50 },                   { ai.r.JA, ai.s.SPECIFIC, xi.ja.SENTINEL })
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.REPRISAL }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.REPRISAL })
+
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                          { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.DIVINE_EMBLEM }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.DIVINE_EMBLEM })
+    mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.FLASH },         { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.FLASH })
+
+    -- Holy II as damage/enmity filler (won't break a forming skillchain).
+    mob:addGambit(ai.t.TARGET, { ai.c.NOT_SC_AVAILABLE, 0 }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.HOLY_II })
 end
 
 spellObject.onMobDespawn = function(mob)

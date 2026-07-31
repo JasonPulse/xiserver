@@ -225,6 +225,8 @@ const char* SelectToString(G_SELECT s)
             return "MP_SCALED";
         case G_SELECT::SECOND_HIGHEST:
             return "SECOND_HIGHEST";
+        case G_SELECT::QD_WEAKNESS:
+            return "QD_WEAKNESS";
         default:
             return "UNKNOWN";
     }
@@ -889,6 +891,33 @@ void CGambitsContainer::Tick(timer::time_point tick)
                                 PAbility->getName().c_str(),
                                 target ? target->name.c_str() : "null");
                     controller->Ability(target->targid, PAbility->getID());
+                }
+
+                if (action.select == G_SELECT::QD_WEAKNESS)
+                {
+                    // Corsair Quick Draw: fire the damaging elemental shot (Fire..Water) that the
+                    // battle target has the least resistance to. Res-rank mods and shot ability IDs
+                    // are both stored consecutively (Fire..Water), so a single offset maps between them.
+                    CBattleEntity* battleTarget = POwner->GetBattleTarget();
+                    if (battleTarget != nullptr)
+                    {
+                        uint16 bestShot     = ABILITY_FIRE_SHOT;
+                        int16  lowestResist = battleTarget->getMod(Mod::FIRE_RES_RANK);
+
+                        for (uint8 offset = 1; offset <= 5; ++offset)
+                        {
+                            int16 resist = battleTarget->getMod(static_cast<Mod>(static_cast<uint16>(Mod::FIRE_RES_RANK) + offset));
+                            if (resist < lowestResist)
+                            {
+                                lowestResist = resist;
+                                bestShot     = ABILITY_FIRE_SHOT + offset;
+                            }
+                        }
+
+                        DebugTrusts("[Trust:%s] -> JA QD_WEAKNESS: shot=%u on %s",
+                                    POwner->name.c_str(), bestShot, battleTarget->name.c_str());
+                        controller->Ability(battleTarget->targid, bestShot);
+                    }
                 }
 
                 if (action.select == G_SELECT::BEST_SAMBA)

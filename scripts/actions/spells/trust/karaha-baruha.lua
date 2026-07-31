@@ -19,6 +19,14 @@ spellObject.onMobSpawn = function(mob)
         [xi.magic.spell.ROBEL_AKBEL] = xi.trust.messageOffset.TEAMWORK_2,
     })
 
+    mob:addMod(xi.mod.REFRESH, 1) -- Auto Refresh I (per FFXIclopedia)
+
+    -- Synergy: gains an additional 2 MP/tick Auto Refresh in combat while Star Sibyl is present.
+    mob:addListener('COMBAT_TICK', 'KARAHA_STARSIBYL_SYNERGY', function(mobArg)
+        local withSibyl = xi.trust.partyHasAnyTrust(mobArg, { xi.magic.spell.STAR_SIBYL })
+        mobArg:setMod(xi.mod.REFRESH, withSibyl and 3 or 1) -- base 1 + 2 with Star Sibyl
+    end)
+
     mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 55 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.CURE })
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.PROTECT }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.PROTECTRA })
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.SHELL }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.SHELLRA })

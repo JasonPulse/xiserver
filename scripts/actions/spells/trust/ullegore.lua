@@ -25,9 +25,8 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.EN_MOB_WEAKNESS, xi.magic.spellFamily.THUNDER })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.THUNDER })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.FIRE })
-
-    mob:setAutoAttackEnabled(false)
-    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
+    -- Page: auto-attacks with his staff while keeping a short (<10y) distance.
+    -- TODO(registry): unique JAs Bored to Tears / Envoutement / Memento Mori / Silence Seal.
 end
 
 spellObject.onMobDespawn = function(mob)

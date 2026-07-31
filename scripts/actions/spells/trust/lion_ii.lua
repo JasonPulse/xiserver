@@ -29,11 +29,9 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addMod(xi.mod.TREASURE_HUNTER, 3)
 
+    -- THF/NIN: page lists NO job abilities (TA/TH traits auto); keeps shadows up with
+    -- Utsusemi and fights with her unique WS only.
     mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.COPY_IMAGE }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.UTSUSEMI })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                        { ai.r.JA, ai.s.SPECIFIC, xi.ja.SNEAK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                        { ai.r.JA, ai.s.SPECIFIC, xi.ja.TRICK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                        { ai.r.JA, ai.s.SPECIFIC, xi.ja.FEINT })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                        { ai.r.JA, ai.s.SPECIFIC, xi.ja.STEAL })
 
     mob:setTrustTPSkillSettings(ai.tp.CLOSER_UNTIL_TP, ai.s.RANDOM, 3000)
 end

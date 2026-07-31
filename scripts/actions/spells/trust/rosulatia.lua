@@ -15,6 +15,10 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
+    -- Dryad's Kiss: she keeps the effect of Haste (per FFXIclopedia) — modeled as a permanent
+    -- Haste mod since the ability has no gambit/ja support.
+    mob:addMod(xi.mod.HASTE_GEAR, 1500)
+
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
     mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.ELEMENTAL_SEAL },    { ai.r.JA, ai.s.SPECIFIC, xi.ja.ELEMENTAL_SEAL }, 180)

@@ -17,9 +17,11 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.FOCUS }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.FOCUS })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.DODGE }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.DODGE })
-    mob:addGambit(ai.t.SELF, { ai.c.HPP_LT, 50 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.CHAKRA })
+    -- Page JAs: Dodge, Provoke, Chakra, Impetus (no Focus).
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.DODGE },   { ai.r.JA, ai.s.SPECIFIC, xi.ja.DODGE })
+    mob:addGambit(ai.t.SELF,   { ai.c.HPP_LT, 50 },                    { ai.r.JA, ai.s.SPECIFIC, xi.ja.CHAKRA })
+    mob:addGambit(ai.t.SELF,   { ai.c.ALWAYS, 0 },                     { ai.r.JA, ai.s.SPECIFIC, xi.ja.IMPETUS })
+    mob:addGambit(ai.t.TARGET, { ai.c.NOT_HAS_TOP_ENMITY, 0 },         { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
 end
 
 spellObject.onMobDespawn = function(mob)

@@ -17,7 +17,10 @@ spellObject.onMobSpawn = function(mob)
 
     -- BST/THF damage dealer: weapon skills at 1000 TP
     -- (Rampage / Calamity / Havoc Spiral / Cloudsplitter).
+    mob:addMod(xi.mod.BEAST_KILLER, 5) -- Beast Killer job trait (per FFXIclopedia)
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
+
+    xi.trust.arkAngelSynergy(mob) -- +MDEF while all five Ark Angels are present
 
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SNEAK_ATTACK })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.TRICK_ATTACK })

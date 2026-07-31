@@ -129,6 +129,7 @@ ai.select =
     HELIX_MOB_WEAKNESS  = 15,
     MP_SCALED           = 16,
     SECOND_HIGHEST      = 17,
+    QD_WEAKNESS         = 18, -- Corsair Quick Draw: elemental shot vs the target's weakness
 }
 ai.s = ai.select
 

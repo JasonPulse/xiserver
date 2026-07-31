@@ -35,6 +35,7 @@ spellObject.onMobSpawn = function(mob)
     mob:addMod(xi.mod.CURE_POTENCY_RCVD, 30)
     mob:addMod(xi.mod.DMG, -500)
     mob:addMod(xi.mod.TRIPLE_ATTACK, 3)
+    mob:addMod(xi.mod.ENMITY, 100) -- enmity-geared tank: 2x hate to hold aggro at scale
     -- TODO: Add en-fire effect from Algol
 
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.SENTINEL }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SENTINEL })

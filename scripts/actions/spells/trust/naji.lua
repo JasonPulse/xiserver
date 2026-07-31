@@ -27,6 +27,10 @@ spellObject.onMobSpawn = function(mob)
         [xi.magic.spell.AYAME] = xi.trust.messageOffset.TEAMWORK_1,
     })
 
+    -- WAR/WAR: had no TP-skill settings, so it never weaponskilled.
+    mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
+
+    -- Page lists only Provoke as a job ability.
     mob:addGambit(ai.t.SELF, { ai.c.NOT_HAS_TOP_ENMITY, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
 end
 

@@ -23,9 +23,9 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                            { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.FIRE })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                            { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.BLIZZARD })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                            { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.WATER })
-
-    mob:setAutoAttackEnabled(false)
-    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
+    -- Page: "Fights in melee range if possible" (has WS Shadow of Death / Guillotine /
+    -- Cross Reaper / Salvation Scythe), so she melees rather than camping.
+    -- TODO: "if she has enough threat to be a melee target, she will NOT cast" (enmity gate).
 end
 
 spellObject.onMobDespawn = function(mob)

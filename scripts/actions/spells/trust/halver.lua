@@ -18,6 +18,9 @@ spellObject.onMobSpawn = function(mob)
     -- Base melee damage boost for tank trusts (1.5x)
     mob:addMod(xi.mod.ATT, math.floor(mob:getMainLvl() * 1.5))
 
+    -- Enmity-geared tank: +100 Enmity (engine cap) = 2x hate generation to hold aggro at scale.
+    mob:addMod(xi.mod.ENMITY, 100)
+
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
     mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 40 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.CURE })

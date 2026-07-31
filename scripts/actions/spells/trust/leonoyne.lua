@@ -15,6 +15,8 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
+    mob:addMod(xi.mod.REFRESH, 1) -- Auto Refresh job trait (per FFXIclopedia)
+
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
     mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.ICE_SPIKES },        { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.ICE_SPIKES }, 240)
