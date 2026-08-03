@@ -17,6 +17,9 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.CORSAIRS_ROLL }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.CORSAIRS_ROLL })
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.CHAOS_ROLL }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.CHAOS_ROLL })
+    mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.FIGHTERS_ROLL }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.FIGHTERS_ROLL })
+    mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.HUNTERS_ROLL }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.HUNTERS_ROLL })
+    mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.EVOKERS_ROLL }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.EVOKERS_ROLL })
 
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.RATTACK, 0, 0 }, 10)
 

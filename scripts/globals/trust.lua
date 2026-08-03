@@ -466,3 +466,120 @@ xi.trust.dumpMessagePages = function(mob)
         xi.trust.message(mob, i)
     end
 end
+
+-----------------------------------
+-- Party-synergy helpers
+-- Trusts buff themselves/each other or aura the party while specific trusts are present.
+-- Model: register a COMBAT_TICK listener that re-evaluates each tick so bonuses come and
+-- go as trusts are summoned/die (see uka_totlihn / mumor for the original pattern).
+-----------------------------------
+
+-- Set of trust IDs (spell IDs) currently in the master's party, including the mob itself.
+xi.trust.getPartyTrustIds = function(mob)
+    local ids    = {}
+    local master = mob:getMaster()
+
+    if master == nil then
+        return ids
+    end
+
+    for _, member in pairs(master:getPartyWithTrusts()) do
+        if member:getObjType() == xi.objType.TRUST then
+            ids[member:getTrustID()] = true
+        end
+    end
+
+    return ids
+end
+
+-- True only if EVERY trust ID in trustIds is present in the party.
+xi.trust.partyHasAllTrusts = function(mob, trustIds)
+    local present = xi.trust.getPartyTrustIds(mob)
+
+    for _, id in ipairs(trustIds) do
+        if not present[id] then
+            return false
+        end
+    end
+
+    return true
+end
+
+-- True if ANY of the given trust IDs is present in the party.
+xi.trust.partyHasAnyTrust = function(mob, trustIds)
+    local present = xi.trust.getPartyTrustIds(mob)
+
+    for _, id in ipairs(trustIds) do
+        if present[id] then
+            return true
+        end
+    end
+
+    return false
+end
+
+xi.trust.arkAngelIds =
+{
+    xi.magic.spell.AAHM,
+    xi.magic.spell.AAEV,
+    xi.magic.spell.AAGK,
+    xi.magic.spell.AAMR,
+    xi.magic.spell.AATT,
+}
+
+-- Ark Angel 5-set synergy: while all five Ark Angel trusts are present, each gains a
+-- bonus to Magic Defense. Re-evaluated each combat tick so it drops if one dies.
+xi.trust.arkAngelSynergy = function(mob)
+    mob:addListener('COMBAT_TICK', 'ARK_ANGEL_SYNERGY', function(mobArg)
+        local bonus = xi.trust.partyHasAllTrusts(mobArg, xi.trust.arkAngelIds) and 25 or 0
+        mobArg:setMod(xi.mod.MDEF, bonus)
+    end)
+end
+
+-----------------------------------
+-- Passive party auras
+-- A trust radiates a GEO-style aura effect to the master's party while summoned (the
+-- engine propagates AURA effects to allies in range automatically). Modeled on Avatar's
+-- Favor (avatars_favor.lua). effectId is a GEO_* effect whose handler grants the real mod
+-- (e.g. GEO_REFRESH -> REFRESH mod = power). Duration 0 = permanent while summoned.
+-----------------------------------
+xi.trust.applyAura = function(mob, effectId, power)
+    if mob:hasStatusEffect(effectId) then
+        mob:delStatusEffect(effectId)
+    end
+
+    mob:addStatusEffectEx(effectId, effectId, power, 3, 0, effectId, power, xi.auraTarget.ALLIES,
+        bit.bor(xi.effectFlag.NO_LOSS_MESSAGE, xi.effectFlag.AURA))
+end
+
+xi.trust.removeAura = function(mob, effectId)
+    if mob:hasStatusEffect(effectId) then
+        mob:delStatusEffect(effectId)
+    end
+end
+
+-----------------------------------
+-- Undead / dark auto-attacks
+-- Approximates the "auto-attacks deal dark magic damage" behavior of the undead trusts
+-- (balamor, teodor) with a permanent dark enspell (adds dark damage to each swing).
+-- NOTE: true undead classification (Cure heals as damage; healable only by Healing Breath)
+-- needs a `setEcosystem` C++ binding that doesn't exist yet — see the systems todo file.
+-----------------------------------
+xi.trust.darkAutoAttacks = function(mob)
+    mob:addMod(xi.mod.ENSPELL, xi.element.DARK)
+    mob:addMod(xi.mod.ENSPELL_DMG, math.floor(mob:getMainLvl()))
+end
+
+-- Toggle an aura on/off each combat tick based on whether any gating trust is present.
+xi.trust.conditionalAura = function(mob, effectId, power, gatingTrustIds, listenerName)
+    mob:addListener('COMBAT_TICK', listenerName, function(mobArg)
+        local wanted = xi.trust.partyHasAnyTrust(mobArg, gatingTrustIds)
+        local hasIt  = mobArg:hasStatusEffect(effectId)
+
+        if wanted and not hasIt then
+            xi.trust.applyAura(mobArg, effectId, power)
+        elseif not wanted and hasIt then
+            mobArg:delStatusEffect(effectId)
+        end
+    end)
+end

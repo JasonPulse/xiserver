@@ -19,9 +19,9 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addMod(xi.mod.TREASURE_HUNTER, 1)
 
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SNEAK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.TRICK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.STEAL })
+    -- Special (THF): does NOT use SATA/Steal. Occasionally uses ranged attacks; his
+    -- unique moves (Pocket Sand / Tripe Gripe / Sharp Eye) are TP mobskills from his skill list.
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.RATTACK, 0, 0 }, 15)
 end
 
 spellObject.onMobDespawn = function(mob)

@@ -18,12 +18,10 @@ spellObject.onMobSpawn = function(mob)
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
     mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.BLAZE_SPIKES },      { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.BLAZE_SPIKES }, 240)
-    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.ELEMENTAL_SEAL },    { ai.r.JA, ai.s.SPECIFIC, xi.ja.ELEMENTAL_SEAL }, 180)
     mob:addGambit(ai.t.TARGET, { ai.c.MB_AVAILABLE, 0 },                         { ai.r.MA, ai.s.MB_ELEMENT, xi.magic.spellFamily.FIRAGA })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.FIRAGA })
-
-    mob:setAutoAttackEnabled(false)
-    mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
+    -- Page: runs into melee range to use his scythe (Spinning/Vorpal Scythe, Spiral Hell,
+    -- Salamander Flame), so he melees rather than camping like other BLM trusts.
 end
 
 spellObject.onMobDespawn = function(mob)

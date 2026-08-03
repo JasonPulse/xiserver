@@ -9,10 +9,6 @@ local ID = zones[xi.zone.MOUNT_ZHAYOLM]
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    if xi.assault.tryUnavailableCredit(player) then
-        return
-    end
-
     if not xi.instance.onTrigger(player, npc, xi.zone.LEBROS_CAVERN) then
         player:messageSpecial(ID.text.NOTHING_HAPPENS)
     end

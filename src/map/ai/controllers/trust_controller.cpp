@@ -253,7 +253,14 @@ void CTrustController::DoCombatTick(timer::time_point tick)
                     [[fallthrough]];
                 default: // Using the positive-non-zero movementDistance mobMod value
                 {
-                    PathOutToDistance(PTarget, static_cast<float>(movementDistance), true);
+                    // Don't reposition to camp distance while the mob is actually chasing us —
+                    // running away just kites the mob around and stops the tank from re-grabbing
+                    // it. Hold position while we're the mob's target; only path back out to camp
+                    // distance once hate is off us (the tank has taken aggro back).
+                    if (PTarget->GetBattleTarget() != POwner)
+                    {
+                        PathOutToDistance(PTarget, static_cast<float>(movementDistance), true);
+                    }
                     break;
                 }
             }

@@ -19,12 +19,8 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addMod(xi.mod.TREASURE_HUNTER, 2)
 
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SNEAK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.TRICK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.STEAL })
+    -- Page JA = Despoil only (Gilfinder I + Treasure Hunter I are automatic traits).
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.DESPOIL })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.MUG })
-    mob:addGambit(ai.t.SELF,   { ai.c.HAS_TOP_ENMITY, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.FLEE })
 
     mob:setTrustTPSkillSettings(ai.tp.OPENER, ai.s.HIGHEST)
 end

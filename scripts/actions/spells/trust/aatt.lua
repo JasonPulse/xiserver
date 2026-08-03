@@ -17,6 +17,9 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.ELEMENTAL_SEAL },    { ai.r.JA, ai.s.SPECIFIC, xi.ja.ELEMENTAL_SEAL }, 180)
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.LAST_RESORT },       { ai.r.JA, ai.s.SPECIFIC, xi.ja.LAST_RESORT })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.SOULEATER },         { ai.r.JA, ai.s.SPECIFIC, xi.ja.SOULEATER })
     mob:addGambit(ai.t.SELF,   { ai.c.MPP_LT, 30 },                              { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.ASPIR })
     mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.BIO },               { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.BIO_II }, 90)
     mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.POISON },            { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.POISON_II }, 90)
@@ -25,6 +28,8 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.EN_MOB_WEAKNESS, xi.magic.spellFamily.THUNDER })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.THUNDER })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.FIRE })
+
+    xi.trust.arkAngelSynergy(mob) -- +MDEF while all five Ark Angels are present
 
     mob:setAutoAttackEnabled(false)
     mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)

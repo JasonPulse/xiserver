@@ -15,7 +15,7 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.AGGRESSOR }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.AGGRESSOR })
+    -- Page JAs: Berserk + Blood Rage only (Aggressor removed — not on his page).
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.BERSERK }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.BERSERK })
     mob:addGambit(ai.t.PARTY, { ai.l.OR(
                         { ai.c.NOT_STATUS, xi.effect.WARCRY },

@@ -1181,6 +1181,12 @@ void CZone::CharZoneOut(CCharEntity* PChar)
     }
 
     charutils::WriteHistory(PChar);
+
+    // Local vars must not survive zoning. Cross-process transfers destroy the
+    // entity (clearing them implicitly), but same-process transfers reuse it,
+    // so script gates like the interaction framework's "mustZone" would never
+    // clear on a server hosting every zone in one map process.
+    PChar->ResetLocalVars();
 }
 
 bool CZone::IsZoneActive() const

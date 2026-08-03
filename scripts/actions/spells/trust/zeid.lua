@@ -19,12 +19,14 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.LAST_RESORT }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.LAST_RESORT })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.SOULEATER }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SOULEATER })
-    mob:addGambit(ai.t.TARGET, { ai.c.TARGET_CASTING, 0 }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.STUN })
-    mob:addGambit(ai.t.TARGET, { ai.c.TARGET_READYING, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.WEAPON_BASH })
+    -- Stun to interrupt weaponskills (and casting) whenever able.
+    mob:addGambit(ai.t.TARGET, { ai.c.TARGET_READYING, 0 }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.STUN })
+    mob:addGambit(ai.t.TARGET, { ai.c.TARGET_CASTING, 0 },  { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.STUN })
     mob:addGambit(ai.t.SELF, { ai.c.HPP_LT, 50 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.DRAIN })
     mob:addGambit(ai.t.SELF, { ai.c.MPP_LT, 40 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.ASPIR })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.ABSORB })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.BIO })
+    -- Page: Last Resort/Souleater + Drain II/Aspir II/Absorbs/Stun + Endark. (Removed off-page
+    -- Weapon Bash + Bio. TODO: Endark enspell once confirmed in his spell list.)
 end
 
 spellObject.onMobDespawn = function(mob)

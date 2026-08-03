@@ -17,8 +17,12 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
-    mob:addGambit(ai.t.SELF, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.JUMP })
-    mob:addGambit(ai.t.SELF, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.HIGH_JUMP })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.BERSERK }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.BERSERK })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                    { ai.r.JA, ai.s.SPECIFIC, xi.ja.ANGON })
+    mob:addGambit(ai.t.SELF,   { ai.c.ALWAYS, 0 },                    { ai.r.JA, ai.s.SPECIFIC, xi.ja.JUMP })
+    mob:addGambit(ai.t.SELF,   { ai.c.ALWAYS, 0 },                    { ai.r.JA, ai.s.SPECIFIC, xi.ja.HIGH_JUMP })
+    -- Sheds hate with Super Jump if she pulls the enemy off the tank.
+    mob:addGambit(ai.t.SELF,   { ai.c.HAS_TOP_ENMITY, 0 },            { ai.r.JA, ai.s.SPECIFIC, xi.ja.SUPER_JUMP })
 end
 
 spellObject.onMobDespawn = function(mob)

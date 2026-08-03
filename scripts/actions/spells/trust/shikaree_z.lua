@@ -26,6 +26,7 @@ spellObject.onMobSpawn = function(mob)
     -- MPP mod migrated to sql/mob_pool_mods to apply at spawn
     mob:addMod(xi.mod.STORETP, 174)
     mob:addMod(xi.mod.JUMP_TP_BONUS, 164)
+    mob:addMod(xi.mod.REGEN, 12) -- Auto Regen trait (per FFXIclopedia)
 
     mob:addGambit(ai.t.SELF, { ai.c.STATUS, xi.effect.SLOW }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.ERASE })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.HASTE }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.HASTE })

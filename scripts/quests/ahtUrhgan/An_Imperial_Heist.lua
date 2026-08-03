@@ -4,9 +4,15 @@
 -- Log ID: 6, Quest ID: 70
 -- Naja_Salaheem : Aht Urhgan Whitegate (I-10)
 -----------------------------------
--- Mythic chain #1. Retail: ToAU M48 done + Runic Key KI + beastman
--- king gauntlet + Odin fight. Simplified for 4-player server: accept
--- from Naja → complete. Unlocks Duties, Tasks, and Deeds.
+-- Mythic chain #1. Unlocks Duties, Tasks, and Deeds.
+--
+-- Retail prerequisites (bg-wiki): Captain Wildcat badge KI (top mercenary
+-- rank) + Runic key KI (Nyzul Isle) + ToAU Mission 48 complete. The offer
+-- is gated on all three so it cannot pre-empt the ToAU mission line.
+--
+-- The offer uses printToPlayer rather than an event: the real offer CSID
+-- has not been decoded, and event 200 in this zone is the Mhaura ferry
+-- departure cutscene, which Zone.lua warps on.
 -----------------------------------
 local quest = Quest:new(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.AN_IMPERIAL_HEIST)
 
@@ -20,7 +26,10 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                player:hasKeyItem(xi.ki.CAPTAIN_WILDCAT_BADGE) and
+                player:hasKeyItem(xi.ki.RUNIC_KEY) and
+                player:hasCompletedMission(xi.mission.log_id.TOAU, xi.mission.id.toau.ETERNAL_MERCENARY)
         end,
 
         [xi.zone.AHT_URHGAN_WHITEGATE] =
@@ -28,17 +37,9 @@ quest.sections =
             ['Naja_Salaheem'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(200)
-                end,
-            },
-
-            onEventFinish =
-            {
-                [200] = function(player, csid, option, npc)
-                    if option == 1 then
-                        quest:begin(player)
-                        quest:complete(player)
-                    end
+                    player:printToPlayer('Naja Salaheem: Those ancient weapons lifted from the Imperial Treasury are in the depths of Nyzul Isle. Go get \'em, and the bounty is ours!', xi.msg.channel.NS_SAY)
+                    quest:begin(player)
+                    quest:complete(player)
                 end,
             },
         },

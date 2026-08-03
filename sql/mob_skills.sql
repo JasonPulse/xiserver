@@ -3646,7 +3646,7 @@ INSERT INTO `mob_skills` VALUES (3618,2349,'regurgitated_swarm',0,0.0,7.0,2000,1
 INSERT INTO `mob_skills` VALUES (3619,2350,'setting_the_stage',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);  -- Capture shows 302. Adding 2048 for it to work properly.
 INSERT INTO `mob_skills` VALUES (3620,2351,'last_laugh',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);         -- Capture shows 303. Adding 2048 for it to work properly.
 INSERT INTO `mob_skills` VALUES (3621,2531,'luminous_lance',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);     -- Capture shows 483. Adding 2048 for it to work properly.
-INSERT INTO `mob_skills` VALUES (3622,2529,'rejuvenation',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);       -- Capture shows 481. Adding 2048 for it to work properly.
+INSERT INTO `mob_skills` VALUES (3622,2529,'rejuvenation',1,0.0,7.0,2000,1500,1,0,0,0,0,0,0);       -- Trust Selh'teus: self/AoE party HP/MP/TP restore. Capture shows 481; +2048 to work.
 INSERT INTO `mob_skills` VALUES (3623,2530,'revelation',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);         -- Capture shows 482. Adding 2048 for it to work properly.
 INSERT INTO `mob_skills` VALUES (3624,900,'memento_mori',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3625,901,'silence_seal',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
@@ -3701,11 +3701,11 @@ INSERT INTO `mob_skills` VALUES (3666,395,'matriarchal_fiat',0,0.0,7.0,2000,1500
 INSERT INTO `mob_skills` VALUES (3673,284,'',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3674,285,'',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3675,286,'',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (3676,287,'vehement_resolution',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
+INSERT INTO `mob_skills` VALUES (3676,287,'vehement_resolution',0,0.0,7.0,2000,1500,1,0,0,0,0,0,0);   -- Trust Morimar: self heal + debuff wipe + Regen aura
 INSERT INTO `mob_skills` VALUES (3677,288,'camaraderie_of_the_crevasse',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3678,289,'into_the_light',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3679,290,'arduous_decision',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (3680,291,'12_blades_of_remorse',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
+INSERT INTO `mob_skills` VALUES (3680,291,'12_blades_of_remorse',1,0.0,7.0,2000,1500,4,0,0,0,13,0,0);   -- Trust Morimar: AoE physical, Light skillchain
 INSERT INTO `mob_skills` VALUES (3681,272,'',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3682,273,'',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3683,274,'',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);

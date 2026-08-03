@@ -15,11 +15,28 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
-    mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
+    -- NIN/WAR tank: gains TP quickly and weapon skills at 1000 TP regardless of
+    -- party TP, with random weapon skill selection (Cross Reaver / Swift Blade / Chant du Cygne).
+    mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.RANDOM)
 
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.BERSERK }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.BERSERK })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.AGGRESSOR }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.AGGRESSOR })
+    -- Casts ninjutsu very fast (per FFXIclopedia): ~80% cast-time reduction via uncapped Fast Cast.
+    mob:addMod(xi.mod.UFASTCAST, 80)
+
+    xi.trust.arkAngelSynergy(mob) -- +MDEF while all five Ark Angels are present
+
+    -- Keep shadows up (Utsusemi represented by xi.effect.COPY_IMAGE) and Migawari for survival.
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.COPY_IMAGE }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.UTSUSEMI })
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.MIGAWARI },   { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.MIGAWARI_ICHI })
+
+    -- Enfeebling ninjutsu on the target.
+    mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.BLINDNESS }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.KURAYAMI }, 60)
+    mob:addGambit(ai.t.TARGET, { ai.c.NOT_STATUS, xi.effect.SLOW },      { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.HOJO }, 60)
+
+    -- Tank job abilities.
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.YONIN },  { ai.r.JA, ai.s.SPECIFIC, xi.ja.YONIN })
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.WARCRY }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.WARCRY })
+
+    mob:addGambit(ai.t.SELF, { ai.c.NOT_HAS_TOP_ENMITY, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
 end
 
 spellObject.onMobDespawn = function(mob)

@@ -26,6 +26,13 @@ spellObject.onMobSpawn = function(mob)
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.THUNDER })
     mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                               { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.FIRE })
 
+    -- Synergy: his Meteor damage is boosted when both siblings (Makki-Chebukki + Cherukiki)
+    -- are present (the "Meeeeee! / Tee! / Ooor!" chant).
+    mob:addListener('COMBAT_TICK', 'KUKKI_METEOR_SYNERGY', function(mobArg)
+        local withSiblings = xi.trust.partyHasAllTrusts(mobArg, { xi.magic.spell.MAKKI_CHEBUKKI, xi.magic.spell.CHERUKIKI })
+        mobArg:setMod(xi.mod.MAGIC_DAMAGE, withSiblings and 200 or 0)
+    end)
+
     mob:setAutoAttackEnabled(false)
     mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)
 end

@@ -32,59 +32,6 @@ xi.assault.hasOrders = function(player)
     return false
 end
 
--- Assaults with a working, completable instance on this server. Any assault not
--- listed here (the ~40 that are SQL-only, plus any implemented-but-unwinnable one)
--- is auto-credited at the entrance door by xi.assault.tryUnavailableCredit, so a
--- player is never stuck in a black screen or wasting 30 minutes on a dead assault.
-xi.assault.supported =
-{
-    [xi.assault.mission.LEUJAOAM_CLEANSING]       = true,
-    [xi.assault.mission.IMPERIAL_AGENT_RESCUE]    = true,
-    [xi.assault.mission.PREEMPTIVE_STRIKE]        = true,
-    [xi.assault.mission.SAGELORD_ELIMINATION]     = true,
-    [xi.assault.mission.EXCAVATION_DUTY]          = true,
-    [xi.assault.mission.TROLL_FUGITIVES]          = true,
-    [xi.assault.mission.EVADE_AND_ESCAPE]         = true,
-    [xi.assault.mission.SIEGEMASTER_ASSASSINATION] = true,
-    [xi.assault.mission.WAMOURA_FARM_RAID]        = true,
-    [xi.assault.mission.SEAGULL_GROUNDED]         = true,
-    [xi.assault.mission.REQUIEM]                  = true,
-    [xi.assault.mission.GOLDEN_SALVAGE]           = true,
-    [xi.assault.mission.EXTERMINATION]            = true,
-    [xi.assault.mission.NYZUL_ISLE_INVESTIGATION] = true,
-}
-
--- Called by each assault entrance door before instance registration. If the
--- player's current assault has no working instance, award full completion points
--- (first clear = x1.5 + 5 promotion, same as a real clear) and clear the assault
--- instead of letting them enter a broken or absent instance. Returns true if it
--- handled the assault (the door should then do nothing further).
-xi.assault.tryUnavailableCredit = function(player)
-    local assaultID = player:getCurrentAssault()
-
-    if assaultID == 0 or xi.assault.supported[assaultID] then
-        return false
-    end
-
-    local info       = xi.assault.missionInfo[assaultID]
-    local basePoints = (info and info.minimumPoints) or 0
-    local firstClear = not player:hasCompletedAssault(assaultID)
-    local points     = firstClear and math.floor(basePoints * 1.5) or math.floor(basePoints)
-    local pointsArea = xi.assault.getAssaultArea(player)
-
-    if points > 0 then
-        player:addAssaultPoint(pointsArea, points)
-    end
-
-    player:setCharVar('AssaultPromotion', player:getCharVar('AssaultPromotion') + (firstClear and 5 or 1))
-    player:completeAssault(assaultID)
-    player:setCharVar('assaultEntered', 0)
-
-    player:printToPlayer(string.format('This assault is not available on this server. Full points awarded (%d).', points))
-
-    return true
-end
-
 xi.assault.onAssaultUpdate = function(player, csid, option, npc)
     local ID = zones[player:getZoneID()]
 
@@ -158,14 +105,39 @@ xi.assault.onInstanceFailure = function(instance)
         DespawnMob(mobID, instance)
     end
 
-    -- Warp players straight to the entrance zone on failure. The old code fired
-    -- startEvent(102) with no NPC target, so its onEventFinish was never routed to
-    -- a warp (the exit handler lives on Rune_of_Release, only reached on success).
-    -- Players were left in the failing instance and fell back to the core teardown
-    -- path, which resets position to 0,0,0 -> black screen. setPos(0,0,0,0, zone)
-    -- is the same warp the success path uses; the entrance zone's onZoneIn repositions.
+    -- Process the failure right here rather than deferring to a Rytaal check-in.
+    -- A failed run is over: award the consolation, clear the assault assignment and
+    -- entry flags, and consume the spent registration (orders + map). This is the
+    -- same processing Rytaal did on return -- doing it at failure time means a loss
+    -- never strands the player holding a "current assault" they can't run or reset.
+    --
+    -- Warp is setPos(0,0,0,0, exitZone) -- the same mechanism the success path uses;
+    -- the entrance zone's onZoneIn repositions, so no 0,0,0 black screen.
     for _, entity in pairs(chars) do
         entity:messageSpecial(zones[instance:getZone():getID()].text.MISSION_FAILED, 10, 10)
+
+        local assaultID = entity:getCurrentAssault()
+        if assaultID ~= 0 then
+            entity:addAssaultPoint(xi.assault.getAssaultArea(entity), 100)
+            entity:delAssault(assaultID)
+        end
+
+        entity:setCharVar('assaultEntered', 0)
+        entity:setCharVar('Assault_Armband', 0)
+        entity:setCharVar('AssaultComplete', 0)
+
+        for _, orders in pairs(xi.assault.assaultOrders) do
+            if entity:hasKeyItem(orders) then
+                entity:delKeyItem(orders)
+            end
+        end
+
+        for maps = xi.ki.MAP_OF_LEUJAOAM_SANCTUM, xi.ki.MAP_OF_NYZUL_ISLE do
+            if entity:hasKeyItem(maps) then
+                entity:delKeyItem(maps)
+            end
+        end
+
         entity:setPos(0, 0, 0, 0, exitZone)
     end
 end
@@ -257,73 +229,4 @@ xi.assault.adjustMobLevel = function(mob)
             entity:setMobLevel(entity:getMainLvl() - reducedLevel)
         end
     end
-end
-
------------------------------------
--- Simplified assault dispatch (4-player private server).
---
--- Retail Assault requires Sorrowful Sage / Bhoy Yhupplo / etc. to dispatch
--- you with orders, then Runic Portal to warp in. The dispatch event flow
--- needs in-game CSID verification. This module bypasses the dispatch event
--- entirely: pin which assault zone, the next onGameIn grants the matching
--- Assault Orders KI. Once you have the KI, the existing Runic_Portal NPC
--- in Aht Urhgan Whitegate (already wired) handles the warp.
---
--- Usage:
---   !setvar Assault_Selection N    (1=Leujaoam, 2=Mamool Ja Training Grounds,
---                                   3=Lebros, 4=Periqia, 5=Ilrusi, 6=Nyzul Isle)
---   then zone / relog → trigger Runic Portal in Aht Urhgan Whitegate
------------------------------------
-local assaultPinVar = 'Assault_Selection'
-local assaultOrdersList =
-{
-    [1] = { name = 'Leujaoam Sanctum',           ki = xi.ki.LEUJAOAM_ASSAULT_ORDERS   },
-    [2] = { name = 'Mamool Ja Training Grounds', ki = xi.ki.MAMOOL_JA_ASSAULT_ORDERS  },
-    [3] = { name = 'Lebros Cavern',              ki = xi.ki.LEBROS_ASSAULT_ORDERS     },
-    [4] = { name = 'Periqia',                    ki = xi.ki.PERIQIA_ASSAULT_ORDERS    },
-    [5] = { name = 'Ilrusi Atoll',               ki = xi.ki.ILRUSI_ASSAULT_ORDERS     },
-    [6] = { name = 'Nyzul Isle',                 ki = xi.ki.NYZUL_ISLE_ASSAULT_ORDERS },
-}
-
-xi.assault.tryGrantOrders = function(player)
-    if not player then
-        return false
-    end
-
-    local pinned = player:getCharVar(assaultPinVar)
-    if pinned == 0 then
-        return false
-    end
-
-    local entry = assaultOrdersList[pinned]
-
-    -- Defer client-visible side effects (KI grant message + printToPlayer)
-    -- past zone-in; messages fired during onGameIn race the chat/UI buffer
-    -- init and never render. Pin cleared synchronously to prevent double-
-    -- grant on rapid zone-ins.
-    player:setCharVar(assaultPinVar, 0)
-
-    player:timer(3000, function(p)
-        if not entry then
-            p:printToPlayer(string.format('Assault_Selection %d is not valid (1-6). See assault.lua.', pinned))
-            return
-        end
-
-        -- Clear any existing assault orders before granting (only one at a time).
-        for _, other in pairs(assaultOrdersList) do
-            if other.ki ~= entry.ki and p:hasKeyItem(other.ki) then
-                p:delKeyItem(other.ki)
-            end
-        end
-
-        if p:hasKeyItem(entry.ki) then
-            p:printToPlayer(string.format('You already hold %s Assault Orders. Trigger the Runic Portal to warp in.', entry.name))
-            return
-        end
-
-        npcUtil.giveKeyItem(p, entry.ki)
-        p:printToPlayer(string.format('%s Assault Orders granted. Trigger the Runic Portal in Aht Urhgan Whitegate to warp in.', entry.name))
-    end)
-
-    return true
 end

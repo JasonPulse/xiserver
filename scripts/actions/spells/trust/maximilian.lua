@@ -15,10 +15,9 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
+    -- THF/WAR: page lists no job abilities (Triple Attack + Treasure Hunter I are
+    -- automatic traits). Weapon-skill DD only (Fast Blade / Swift Blade / Vorpal Blade).
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
-
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SNEAK_ATTACK })
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.TRICK_ATTACK })
 end
 
 spellObject.onMobDespawn = function(mob)

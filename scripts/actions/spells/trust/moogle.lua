@@ -15,10 +15,9 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
-    mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
-
-    mob:addGambit(ai.t.MASTER, { ai.c.NOT_STATUS, xi.effect.REFRESH }, { ai.r.MA, ai.s.SPECIFIC, xi.magic.spell.REFRESH }, 120)
-    mob:addGambit(ai.t.PARTY,  { ai.c.HPP_LT, 60 },                    { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.CURE })
+    -- Passive alter ego (per FFXIclopedia): performs no actions. Provides a full-time
+    -- Indi-Refresh aura (2 MP/tick) to the party that stacks with all other Refresh.
+    xi.trust.applyAura(mob, xi.effect.GEO_REFRESH, 2)
 
     mob:setAutoAttackEnabled(false)
     mob:setMobMod(xi.mobMod.TRUST_DISTANCE, xi.trust.movementType.CASTER_CAMP)

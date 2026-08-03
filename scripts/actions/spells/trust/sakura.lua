@@ -15,6 +15,10 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
+    -- Passive/no-enmity trust (per FFXIclopedia: monsters rarely target her). -50 is the
+    -- engine floor on the enmity multiplier, minimizing the hate she generates.
+    mob:addMod(xi.mod.ENMITY, -50)
+
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
     mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.COPY_IMAGE }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.UTSUSEMI })

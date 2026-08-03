@@ -15,7 +15,10 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
+    mob:addMod(xi.mod.UFASTCAST, 80) -- "very high Fast Cast" (per FFXIclopedia)
+
     mob:setTrustTPSkillSettings(ai.tp.CLOSER_UNTIL_TP, ai.s.HIGHEST, 2500)
+    -- TODO(registry): Ascension (enhancing) / Descension (enfeebling) casting-mode switch.
 
     mob:addGambit(ai.t.SELF, { ai.c.MPP_LT, 30 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.CONVERT })
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.HASTE }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.HASTE })

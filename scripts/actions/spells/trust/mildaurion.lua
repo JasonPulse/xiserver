@@ -36,11 +36,10 @@ spellObject.onMobSpawn = function(mob)
 
     mob:addMod(xi.mod.MPP, 100)
 
-    mob:setTrustTPSkillSettings(ai.tp.OPENER, ai.s.RANDOM)
-
-    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
-    mob:addGambit(ai.t.SELF, { ai.c.HPP_LT, 50 }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.SENTINEL })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.RAMPART }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.RAMPART })
+    -- Per FFXIclopedia: uses no job abilities and casts no spells despite high MP.
+    -- Pure ranged weaponskiller (Stellar Burst / Great Wheel / Light Blade) that holds
+    -- TP to close skillchains but will still weapon skill once past 1000 TP.
+    mob:setTrustTPSkillSettings(ai.tp.CLOSER_UNTIL_TP, ai.s.HIGHEST, 3000)
 end
 
 spellObject.onMobDespawn = function(mob)

@@ -17,9 +17,14 @@ spellObject.onMobSpawn = function(mob)
 
     mob:setTrustTPSkillSettings(ai.tp.ASAP, ai.s.HIGHEST, 1000)
 
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.BERSERK }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.BERSERK })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.AGGRESSOR }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.AGGRESSOR })
-    mob:addGambit(ai.t.SELF, { ai.c.NOT_STATUS, xi.effect.WARCRY }, { ai.r.JA, ai.s.SPECIFIC, xi.ja.WARCRY })
+    -- WAR/MNK: page JAs are Provoke, Warcry, Retaliation, Tomahawk, Restraint, Blood Rage
+    -- (NOT Berserk/Aggressor). WS: Raging Rush / Steel Cyclone / Soturi's Fury.
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_HAS_TOP_ENMITY, 0 },              { ai.r.JA, ai.s.SPECIFIC, xi.ja.PROVOKE })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.WARCRY },       { ai.r.JA, ai.s.SPECIFIC, xi.ja.WARCRY })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.RETALIATION },  { ai.r.JA, ai.s.SPECIFIC, xi.ja.RETALIATION })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.RESTRAINT },    { ai.r.JA, ai.s.SPECIFIC, xi.ja.RESTRAINT })
+    mob:addGambit(ai.t.SELF,   { ai.c.NOT_STATUS, xi.effect.BLOOD_RAGE },   { ai.r.JA, ai.s.SPECIFIC, xi.ja.BLOOD_RAGE })
+    mob:addGambit(ai.t.TARGET, { ai.c.ALWAYS, 0 },                          { ai.r.JA, ai.s.SPECIFIC, xi.ja.TOMAHAWK })
 end
 
 spellObject.onMobDespawn = function(mob)

@@ -15,6 +15,14 @@ end
 spellObject.onMobSpawn = function(mob)
     xi.trust.message(mob, xi.trust.messageOffset.SPAWN)
 
+    mob:addMod(xi.mod.REFRESH, 1)  -- Auto Refresh trait (per FFXIclopedia)
+    mob:addMod(xi.mod.REGAIN, 100) -- has Regain to fuel his unique WS/TP moves
+
+    -- Synergy: full-time Indi-Refresh aura (2 MP/tick) to the party while Arciela or
+    -- Arciela II is present.
+    xi.trust.conditionalAura(mob, xi.effect.GEO_REFRESH, 2,
+        { xi.magic.spell.ARCIELA, xi.magic.spell.ARCIELA_II }, 'YGNAS_ARCIELA_AURA')
+
     mob:addGambit(ai.t.PARTY, { ai.c.HPP_LT, 40 }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.CURE })
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.PROTECT }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.PROTECTRA })
     mob:addGambit(ai.t.PARTY, { ai.c.NOT_STATUS, xi.effect.SHELL }, { ai.r.MA, ai.s.HIGHEST, xi.magic.spellFamily.SHELLRA })
