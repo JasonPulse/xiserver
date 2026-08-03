@@ -11,6 +11,9 @@ xi.mob = xi.mob or {}
 -- onMobDeathEx is called from the core for every mob death, once per
 -- alliance member in the zone.
 xi.mob.onMobDeathEx = function(mob, player, isKiller, isWeaponSkillKill)
+    -- Adventurer Appreciation Campaign census counter
+    player:incrementCharVar('[AAC]KILLS', 1)
+
     -- Escha vorseal cap progression: kills in the Eschan zones count
     -- toward the retail unlock milestones, NMs on their own counter
     -- (read by xi.eschanHub.vorsealLineCap).

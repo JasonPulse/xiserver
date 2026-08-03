@@ -3153,7 +3153,6 @@ INSERT INTO `mob_spell_lists` VALUES ('TRUST_Ajido-Marujido',316,170,30,255); --
 INSERT INTO `mob_spell_lists` VALUES ('TRUST_Ajido-Marujido',316,171,55,255); -- water_iii (55~255)
 INSERT INTO `mob_spell_lists` VALUES ('TRUST_Ajido-Marujido',316,172,70,255); -- water_iv (70~255)
 INSERT INTO `mob_spell_lists` VALUES ('TRUST_Ajido-Marujido',316,173,80,255); -- water_v (80~255)
-INSERT INTO `mob_spell_lists` VALUES ('TRUST_Ajido-Marujido',316,260,64,255); -- dispel (64~255)
 
 -- TRUST_Trion (317)
 INSERT INTO `mob_spell_lists` VALUES ('TRUST_Trion',317,1,5,255);    -- cure (5~255)

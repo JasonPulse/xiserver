@@ -22,29 +22,28 @@ local localSettings =
     BONANZA_ID = 0x5C,
 
     -- ALL TIMES JST
-    BUYING_PERIOD_START     = { year = 2023, month = 5, day = 17, hour = 1 },
-    BUYING_PERIOD_END       = { year = 2023, month = 6, day = 15, hour = 8 },
-    COLLECTION_PERIOD_START = { year = 2023, month = 7, day = 11, hour = 1 },
-    COLLECTION_PERIOD_END   = { year = 2023, month = 7, day = 31, hour = 8 },
+    BUYING_PERIOD_START     = { year = 2026, month = 8, day = 3, hour = 1 },
+    BUYING_PERIOD_END       = { year = 2026, month = 9, day = 2, hour = 8 },
+    COLLECTION_PERIOD_START = { year = 2026, month = 9, day = 9, hour = 1 },
+    COLLECTION_PERIOD_END   = { year = 2026, month = 9, day = 30, hour = 8 },
 
     COLLECTION_SERVER_MESSAGE =
-        'Announcing the winning numbers for the 21st Vana\'versary Nomad Mog Bonanza!\n' ..
+        'Announcing the winning numbers for the Nomad Mog Bonanza!\n' ..
         '\n' ..
-        'Rank 3 prize: \'7\' (last digit)-- 13,298 winners.\n' ..
-        'Rank 2 prize: \'71\' (last two digits)-- 1,299 winners.\n' ..
-        'Rank 1 prize: \'800\' (all three digits)-- 62 winners.\n' ..
-        '*The number of winners for each prize is a combined total from all worlds.\n' ..
+        'Rank 3 prize: \'4\' (last digit).\n' ..
+        'Rank 2 prize: \'34\' (last two digits).\n' ..
+        'Rank 1 prize: \'534\' (all three digits).\n' ..
         '\n' ..
-        'Collection period: On July 11, 2023 at 1:00 (PDT) / 8:00 (GMT) to July 31, at 7:59 (PDT) / 14:59 (GMT)\n' ..
+        'Collection period: September 9, 2026 through September 30, 2026.\n' ..
         'Details on the prize can be confirmed by speaking to a Bonanza Moogle at one of the following locations:\n' ..
         'Port San d\'Oria (I-9) / Port Bastok (L-8) / Port Windurst (F-6) / Chocobo Circuit (H-8)\n',
 
     -- Winning Numbers are three independent values for each rank prize:
     WINNING_NUMBERS =
     {
-        [1] = 800,
-        [2] = 71,
-        [3] = 7,
+        [1] = 534,
+        [2] = 34,
+        [3] = 4,
     },
 }
 
