@@ -92,12 +92,23 @@ event:setEnableCheck(xi.events.newYears.enabledCheck)
 
 local item =
 {
-    LINKPEARL        = 515,
-    NEW_YEARS_GIFTS  = { 4176, 4177, 4178, 4179, 4180, 4230, 4231, 4232, 4233 },
-    GALETTE_DES_ROIS = 5875,
-    BATTLEDORE       = 18846,
-    FIREWORKS        = { 5725, 4215, 4167 }, -- Goshikitenge, Popstar, Cracker
-    AKE_OME_SPIRIT   = 8736,
+    LINKPEARL        = xi.item.LINKPEARL,
+    NEW_YEARS_GIFTS  =
+    {
+        xi.item.NEW_YEARS_GIFT_1,
+        xi.item.NEW_YEARS_GIFT_2,
+        xi.item.NEW_YEARS_GIFT_3,
+        xi.item.NEW_YEARS_GIFT_4,
+        xi.item.NEW_YEARS_GIFT_5,
+        xi.item.NEW_YEARS_GIFT_6,
+        xi.item.NEW_YEARS_GIFT_7,
+        xi.item.NEW_YEARS_GIFT_8,
+        xi.item.NEW_YEARS_GIFT_9,
+    },
+    GALETTE_DES_ROIS = xi.item.GALETTE_DES_ROIS,
+    BATTLEDORE       = xi.item.BATTLEDORE,
+    FIREWORKS        = { xi.item.GOSHIKITENGE, xi.item.POPSTAR, xi.item.CRACKER },
+    AKE_OME_SPIRIT   = xi.item.AKE_OME_SPIRIT,
 }
 
 local mandragoraCostume = 301 -- Mandragora model, same ID as harvest_festivals costume list

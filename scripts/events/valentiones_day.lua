@@ -202,7 +202,13 @@ xi.events.valentione.singles =
 local leftPieces      = { 2017, 2018, 2019, 2020 } -- amour/romance/desire/attraction chocolate left piece
 local rightPiecesMale = { 2021, 2023, 2025, 2027 } -- right pieces handed out by male singles
 local rightPiecesFem  = { 2022, 2024, 2026, 2028 } -- right pieces handed out by female singles
-local wholeChocolates = { 2029, 2030, 2031, 2032 } -- amour/romance/desire/attraction chocolate
+local wholeChocolates =
+{
+    xi.item.AMOUR_CHOCOLATE,
+    xi.item.ROMANCE_CHOCOLATE,
+    xi.item.DESIRE_CHOCOLATE,
+    xi.item.ATTRACTION_CHOCOLATE,
+}
 
 local rewardItems =
 {
