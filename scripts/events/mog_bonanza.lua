@@ -426,7 +426,7 @@ event:setEndFunction(function()
     -- TODO: Show/Hide Bonanza Moogles
 end)
 
-event:setServerMessage(function()
+event.serverMessage = function()
     if isInPurchasingPeriod() then
         return 'Nomad Mog Bonanza pearls are on sale! Speak to a Bonanza Moogle in ' ..
             'Port San d\'Oria (I-9), Port Bastok (L-8), Port Windurst (F-6), or the Chocobo Circuit (H-8).'
@@ -435,6 +435,6 @@ event:setServerMessage(function()
     end
 
     return 'Nomad Mog Bonanza pearl sales have closed. The winning numbers will be announced soon, kupo!'
-end)
+end
 
 return event

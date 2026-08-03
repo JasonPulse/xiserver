@@ -309,7 +309,7 @@ event:setEndFunction(function()
     xi.events.starlightCelebration.showEntities(false)
 end)
 
-event:setServerMessage(
-    'The Starlight Celebration has come to the nation cities, and Jeuno is dressed for the season!')
+event.serverMessage =
+    'The Starlight Celebration has come to the nation cities, and Jeuno is dressed for the season!'
 
 return event
