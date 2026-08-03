@@ -266,6 +266,8 @@ xi.player.onGameIn = function(player, firstLogin, zoning)
 end
 
 xi.player.onPlayerDeath = function(player)
+    -- Adventurer Appreciation Campaign census counter
+    player:incrementCharVar('[AAC]DEATHS', 1)
 end
 
 xi.player.onPlayerLevelUp = function(player)

@@ -291,6 +291,34 @@ xi.settings.main =
         },
     },
 
+    -- Sunbreeze Festival (summer): goldfish scooping, item stalls, teleport moogles
+    SUNBREEZE =
+    {
+        START  = { DAY = 25, MONTH = 7 },
+        FINISH = { DAY = 31, MONTH = 8 },
+    },
+
+    -- Valentione's Day: chocolate matchmaking in the six nation cities
+    VALENTIONE =
+    {
+        START  = { DAY = 1,  MONTH = 2 },
+        FINISH = { DAY = 15, MONTH = 2 },
+    },
+
+    -- New Year's celebration: Lucky Beast herds, Battledore, Ake & Ome, vendor moogles
+    NEW_YEAR =
+    {
+        START  = { DAY = 31, MONTH = 12 },
+        FINISH = { DAY = 14, MONTH = 1 },
+    },
+
+    -- Adventurer Appreciation Campaign (May): census moogles, rings, daily presents
+    ADV_APPRECIATION =
+    {
+        START  = { DAY = 11, MONTH = 5 },
+        FINISH = { DAY = 31, MONTH = 5 },
+    },
+
     -- Login Campaign (Set to 0 if you don't want to run a Login Campaign)
     -- Please visit scripts/globals/events/login_campaign.lua for assigning the correct campaign dates.
     ENABLE_LOGIN_CAMPAIGN = 1,
