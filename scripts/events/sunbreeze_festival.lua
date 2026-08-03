@@ -898,11 +898,11 @@ end
 -- Scooping state (player local vars):
 -- sunbreezeScoopState: 0 = idle, 1 = waiting for a goldfish, 2 = catch window running
 -- sunbreezeScoopFish : 1 = tiny, 2 = black, 3 = juicy
--- sunbreezeScoopTime : os.time() timestamps
+-- sunbreezeScoopTime : GetSystemTime() timestamps
 
 local beginScoopAttempt = function(player, data)
     player:setLocalVar('sunbreezeScoopState', 1)
-    player:setLocalVar('sunbreezeScoopTime', os.time())
+    player:setLocalVar('sunbreezeScoopTime', GetSystemTime())
 
     local zoneId = player:getZoneID()
 
@@ -951,14 +951,14 @@ local beginScoopAttempt = function(player, data)
             end
 
             playerArg2:messageSpecial(data.actionMsg.hurry)
-            playerArg2:setLocalVar('sunbreezeScoopTime', os.time())
+            playerArg2:setLocalVar('sunbreezeScoopTime', GetSystemTime())
             playerArg2:setLocalVar('sunbreezeScoopState', 2)
         end)
     end)
 end
 
 local resolveScoop = function(player, data)
-    local elapsed = os.time() - player:getLocalVar('sunbreezeScoopTime')
+    local elapsed = GetSystemTime() - player:getLocalVar('sunbreezeScoopTime')
     player:setLocalVar('sunbreezeScoopState', 0)
 
     -- Stale attempt (walked away mid-minigame): quietly start over
