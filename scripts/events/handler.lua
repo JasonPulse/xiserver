@@ -41,6 +41,14 @@ function SeasonalEvent:setEndFunction(func)
     return self
 end
 
+-- Login server message shown while the event is active.
+-- Accepts a string, or a function returning a string for
+-- events whose announcement changes over their run.
+function SeasonalEvent:setServerMessage(message)
+    self.serverMessage = message
+    return self
+end
+
 function SeasonalEvent:checkStarting()
     local isEnabled = self.enableCheck()
     if isEnabled then
@@ -73,6 +81,32 @@ xi.events.registeredEvents =
     require('scripts/events/new_years'),
     require('scripts/events/adventurer_appreciation'),
 }
+
+xi.events.handler.getActiveEventMessages = function()
+    local messages = ''
+
+    for _, event in pairs(xi.events.registeredEvents) do
+        if
+            event.serverMessage and
+            event.enableCheck()
+        then
+            local message = event.serverMessage
+
+            if type(message) == 'function' then
+                message = message()
+            end
+
+            if
+                message and
+                message ~= ''
+            then
+                messages = messages .. '\n' .. message .. '\n'
+            end
+        end
+    end
+
+    return messages
+end
 
 xi.events.handler.checkSeasonalEvents = function()
     print('Checking Seasonal Events')

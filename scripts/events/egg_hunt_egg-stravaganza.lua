@@ -1002,4 +1002,8 @@ event:setEndFunction(function()
     xi.events.eggHunt.showEntities(false)
 end)
 
+event:setServerMessage(
+    'The Egg Hunt Egg-stravaganza is on! Trade initial eggs with the Egg Hunt Moogles ' ..
+    'in the six nation cities, kupo!')
+
 return event

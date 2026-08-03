@@ -504,4 +504,8 @@ event:setEndFunction(function()
     xi.events.advAppreciation.showEntities(false)
 end)
 
+event:setServerMessage(
+    'The Adventurer Appreciation Campaign is underway! Visit the Records and Statistics Moogles ' ..
+    'in the six nation cities for your Vana\'versary gifts and a daily present, kupo!')
+
 return event

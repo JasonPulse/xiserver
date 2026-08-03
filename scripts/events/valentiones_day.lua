@@ -928,4 +928,8 @@ event:setEndFunction(function()
     xi.events.valentione.showEntities(false)
 end)
 
+event:setServerMessage(
+    'Valentione\'s Day is here! Speak to the Event Moogles in the six nation cities ' ..
+    'to play matchmaker for the Valentione Singles, kupo!')
+
 return event

@@ -1406,4 +1406,10 @@ event:setEndFunction(function()
     xi.events.sunbreeze.showPondNpcs(false)
 end)
 
+event:setServerMessage(
+    'Vana\'diel is celebrating the Sunbreeze Festival! ' ..
+    'Speak to the Festival Moogles in the six nation cities, kupo!\n' ..
+    'Goldfish scooping: Saradorial at Knightswell (W. Ronfaure), Fish Eyes at the Fumaroles (S. Gustaberg),\n' ..
+    'Kesha Shopehllok at the Nompipi River (E. Sarutabaruta), and Mei at the spring in Rabao.')
+
 return event

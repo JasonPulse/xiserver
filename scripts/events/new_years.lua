@@ -656,4 +656,9 @@ event:setEndFunction(function()
     xi.events.newYears.showPermanentNpcs(false)
 end)
 
+event:setServerMessage(
+    'Happy New Year! Lucky Beast herds are roaming the fields of Vana\'diel -- trade them anything for a blessing.\n' ..
+    'Bring a New Year\'s Gift to Jeanparmand (N. San d\'Oria), Bunta (Bastok Markets), or Pyru-Copyru (Port Windurst),\n' ..
+    'and say hello to Ake and Ome beside the Odyssean Passages.')
+
 return event

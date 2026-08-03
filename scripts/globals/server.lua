@@ -30,6 +30,8 @@ xi.server.getServerMessage = function(language)
         if xi.settings.main.ENABLE_TRUST_ALTER_EGO_EXPO_ANNOUNCE == 1 then
             serverMessage = serverMessage .. xi.settings.main.TRUST_ALTER_EGO_EXPO_MESSAGE
         end
+
+        serverMessage = serverMessage .. xi.events.handler.getActiveEventMessages()
     end
 
     return serverMessage
