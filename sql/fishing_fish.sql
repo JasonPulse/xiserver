@@ -179,6 +179,10 @@ INSERT INTO `fishing_fish` VALUES (5130,'Tavnazian Goby',75,30,7,8,1,1,10,0,0,25
 INSERT INTO `fishing_fish` VALUES (4478,'Three-Eyed Fish',79,22,10,10,50,120,25,1,0,255,255,0,0,3,4,8,0,0,0,1,500,0,'',0,0,1,0);
 INSERT INTO `fishing_fish` VALUES (4483,'Tiger Cod',29,23,9,9,1,1,10,0,0,255,255,0,0,3,1,8,0,0,0,1,1000,0,'',0,0,0,0);
 INSERT INTO `fishing_fish` VALUES (4310,'Tiny Goldfish',20,22,0,14,1,1,5,0,0,255,255,0,0,5,1,7,0,0,0,3,1000,0,'',0,0,0,0);
+INSERT INTO `fishing_fish` VALUES (4311,'Black Bubble-Eye',22,24,0,14,1,1,5,0,0,255,255,0,0,5,1,7,0,0,0,3,800,0,'',0,0,0,0);
+INSERT INTO `fishing_fish` VALUES (4312,'Lionhead',26,30,0,14,1,1,6,0,0,255,255,0,0,5,1,7,0,0,0,1,700,0,'',0,0,0,0);
+INSERT INTO `fishing_fish` VALUES (5714,'Pearlscale',26,30,0,14,1,1,6,0,0,255,255,0,0,5,1,7,0,0,0,1,400,0,'',0,0,0,0);
+INSERT INTO `fishing_fish` VALUES (5715,'Calico Comet',26,30,0,14,1,1,6,0,0,255,255,0,0,5,1,7,0,0,0,1,400,0,'',0,0,0,0);
 INSERT INTO `fishing_fish` VALUES (5120,'Titanic Sawfish',125,39,6,13,75,210,29,1,1,255,255,0,0,0,1,9,1,0,0,1,400,0,'',0,0,1,0);
 INSERT INTO `fishing_fish` VALUES (4476,'Titanictus',101,28,3,12,75,210,28,1,1,255,255,0,0,3,5,8,1,0,0,1,350,0,'',0,0,1,0);
 INSERT INTO `fishing_fish` VALUES (4426,'Tricolored Carp',27,19,12,12,1,1,13,0,0,255,255,0,0,3,1,8,0,0,0,1,1000,0,'',0,0,0,0);

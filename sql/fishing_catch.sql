@@ -201,6 +201,10 @@ INSERT INTO `fishing_catch` VALUES (248,1,25);    -- Selbina, Whole Zone
 INSERT INTO `fishing_catch` VALUES (249,1,71);    -- Mhaura, Whole Zone
 INSERT INTO `fishing_catch` VALUES (250,1,94);    -- Kazham, Whole Zone
 INSERT INTO `fishing_catch` VALUES (252,1,95);    -- Norg, Whole Zone
+INSERT INTO `fishing_catch` VALUES (100,1,140);   -- West Ronfaure, Knightwell (Sunbreeze goldfish)
+INSERT INTO `fishing_catch` VALUES (107,1,140);   -- South Gustaberg, Hot Springs (Sunbreeze goldfish)
+INSERT INTO `fishing_catch` VALUES (116,4,140);   -- East Sarutabaruta, Nompipi River (Sunbreeze goldfish)
+INSERT INTO `fishing_catch` VALUES (247,1,140);   -- Rabao, Whole Zone (Sunbreeze goldfish)
 /*!40000 ALTER TABLE `fishing_catch` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

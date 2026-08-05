@@ -81,22 +81,30 @@ xi.events.handler.getActiveEventMessages = function()
     local messages = ''
 
     for _, event in pairs(xi.events.registeredEvents) do
-        if
-            event.serverMessage and
-            event.enableCheck()
-        then
-            local message = event.serverMessage
-
-            if type(message) == 'function' then
-                message = message()
-            end
-
+        -- A broken event must never blank the whole login message
+        local ok, message = pcall(function()
             if
-                message and
-                message ~= ''
+                event.serverMessage and
+                event.enableCheck()
             then
-                messages = messages .. '\n' .. message .. '\n'
+                local eventMessage = event.serverMessage
+
+                if type(eventMessage) == 'function' then
+                    eventMessage = eventMessage()
+                end
+
+                return eventMessage
             end
+        end)
+
+        if
+            ok and
+            message and
+            message ~= ''
+        then
+            messages = messages .. '\n' .. message .. '\n'
+        elseif not ok then
+            print(string.format('[Events] server message failed for %s: %s', tostring(event.id), tostring(message)))
         end
     end
 

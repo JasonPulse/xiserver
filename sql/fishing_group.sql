@@ -1517,6 +1517,11 @@ INSERT INTO `fishing_group` VALUES (139,4469,900,190,6);   -- Giant Catfish
 INSERT INTO `fishing_group` VALUES (139,4472,1000,500,15); -- Crayfish
 INSERT INTO `fishing_group` VALUES (139,5125,1000,500,15); -- Phanauet Newt
 INSERT INTO `fishing_group` VALUES (139,5126,1000,500,15); -- Muddy Siredont
+INSERT INTO `fishing_group` VALUES (140,4310,1000,999,30); -- Sunbreeze goldfish scooping, Tiny Goldfish
+INSERT INTO `fishing_group` VALUES (140,4311,800,999,30);  -- Sunbreeze goldfish scooping, Black Bubble-Eye
+INSERT INTO `fishing_group` VALUES (140,4312,500,999,30);  -- Sunbreeze goldfish scooping, Lionhead
+INSERT INTO `fishing_group` VALUES (140,5714,250,999,30);  -- Sunbreeze goldfish scooping, Pearlscale
+INSERT INTO `fishing_group` VALUES (140,5715,250,999,30);  -- Sunbreeze goldfish scooping, Calico Comet
 
 /*!40000 ALTER TABLE `fishing_group` ENABLE KEYS */;
 UNLOCK TABLES;

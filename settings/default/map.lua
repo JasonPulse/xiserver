@@ -74,6 +74,11 @@ xi.settings.map =
     -- Capacity Point Settings
     CAPACITY_RATE = 1.0,
 
+    -- Fraction of experience earned in the Eschan zones / Reisenjima that is
+    -- granted as Escha silt (rounded down). Retail is 0.01 (1%); raise it to
+    -- make silt less of a grind (e.g. 0.10 = 10%). Falls back to 0.01 if unset.
+    ESCHA_SILT_RATE = 0.01,
+
     -- Determines Vana'diel time epoch (886/1/1 Firesday)
     -- current timestamp - vanadiel_time_epoch = vana'diel time
     -- 0 defaults to SE epoch 1009810800 (JP midnight 1/1/2002)

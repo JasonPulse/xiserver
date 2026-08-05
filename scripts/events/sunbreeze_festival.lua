@@ -455,7 +455,7 @@ local stallData =
 {
     [xi.zone.NORTHERN_SAN_DORIA] = { pos = { 0, -245.000, 8.000, 44.000 } },
     [xi.zone.BASTOK_MINES]       = { pos = { 127, 80.500, 0.000, -72.000 } },
-    [xi.zone.WINDURST_WATERS]    = { pos = { 63, -44.000, -4.900, 226.200 } },
+    [xi.zone.WINDURST_WATERS]    = { pos = { 192, 164.500, -0.250, -30.000 } },
 }
 
 -- Teleportation moogles
@@ -477,7 +477,7 @@ local teleporterData =
 {
     [xi.zone.SOUTHERN_SAN_DORIA] =
     {
-        pos          = { 194, 53.0, 1.999, -22.0 },
+        pos          = { 160, 99.882, 1.000, -57.257 },
         accept1      = 13517, -- Looks like you've really gotten into the spirit of the Sunbreeze Festival, kupo!
         accept2      = 13518, -- As a show of appreciation, I'll teleport you to one of the other nations!...
         sendoff      = 13515, -- Enjoy your trip, kupo!
@@ -487,7 +487,7 @@ local teleporterData =
 
     [xi.zone.PORT_BASTOK] =
     {
-        pos          = { 64, -90.0, -2.0, 5.0 },
+        pos          = { 64, -97.815, -2.100, -13.741 },
         accept1      = 12855, -- Looks like you've really gotten into the spirit of the Sunbreeze Festival, kupo!
         accept2      = 12856, -- As a show of appreciation, I'll teleport you to one of the other nations!...
         sendoff      = 12853, -- Enjoy your trip, kupo!
@@ -497,7 +497,7 @@ local teleporterData =
 
     [xi.zone.WINDURST_WOODS] =
     {
-        pos          = { 161, 101.0, -5.0, -52.5 },
+        pos          = { 128, 107.630, -5.000, -33.200 },
         accept1      = 13334, -- Looks like you've really gotten into the spirit of the Sunbreeze Festival, kupo!
         accept2      = 13335, -- As a show of appreciation, I'll teleport you to one of the other nations!...
         sendoff      = 13332, -- Enjoy your trip, kupo!
@@ -632,10 +632,17 @@ local bowlMenu = function(player, data)
 
     -- First basket is free
     if player:getCharVar(settings.VAR.HAS_BASKET) == 0 then
+        if player:getFreeSlotsCount() == 0 then
+            player:printToPlayer('Make some room in your inventory first!', xi.msg.channel.NS_SAY)
+            return
+        end
+
         player:messageSpecial(msg.firstBasket, items.GOLDFISH_BASKET)
 
         if npcUtil.giveItem(player, items.GOLDFISH_BASKET) then
             player:setCharVar(settings.VAR.HAS_BASKET, 1)
+        else
+            print(string.format('[Sunbreeze] giveItem goldfish basket failed for %s', player:getName()))
         end
 
         return
@@ -892,166 +899,6 @@ xi.events.sunbreeze.onPondTrade = function(player, npc, trade)
 end
 
 -----------------------------------
--- Scooping spot (timing minigame)
------------------------------------
-
--- Scooping state (player local vars):
--- sunbreezeScoopState: 0 = idle, 1 = waiting for a goldfish, 2 = catch window running
--- sunbreezeScoopFish : 1 = tiny, 2 = black, 3 = juicy
--- sunbreezeScoopTime : GetSystemTime() timestamps
-
-local beginScoopAttempt = function(player, data)
-    player:setLocalVar('sunbreezeScoopState', 1)
-    player:setLocalVar('sunbreezeScoopTime', GetSystemTime())
-
-    local zoneId = player:getZoneID()
-
-    player:timer(math.random(2000, 8000), function(playerArg)
-        if
-            playerArg:getLocalVar('sunbreezeScoopState') ~= 1 or
-            playerArg:getZoneID() ~= zoneId
-        then
-            return
-        end
-
-        -- Weighted approach roll, shifted by a Lord's/Lady's Yukata
-        local body = playerArg:getEquipID(xi.slot.BODY)
-        local weights = { 45, 25, 15 } -- tiny, black, juicy (remainder: none)
-
-        if
-            body == 13821 or -- Lord's Yukata
-            body == 13822    -- Lady's Yukata
-        then
-            weights = { 30, 30, 25 }
-        end
-
-        local roll = math.random(1, 100)
-
-        if roll <= weights[1] then
-            playerArg:messageSpecial(data.actionMsg.tiny)
-            playerArg:setLocalVar('sunbreezeScoopFish', 1)
-        elseif roll <= weights[1] + weights[2] then
-            playerArg:messageSpecial(data.actionMsg.black)
-            playerArg:setLocalVar('sunbreezeScoopFish', 2)
-        elseif roll <= weights[1] + weights[2] + weights[3] then
-            playerArg:messageSpecial(data.actionMsg.juicy)
-            playerArg:setLocalVar('sunbreezeScoopFish', 3)
-        else
-            playerArg:messageSpecial(data.actionMsg.none)
-            playerArg:setLocalVar('sunbreezeScoopState', 0)
-            return
-        end
-
-        playerArg:timer(2000, function(playerArg2)
-            if
-                playerArg2:getLocalVar('sunbreezeScoopState') ~= 1 or
-                playerArg2:getZoneID() ~= zoneId
-            then
-                return
-            end
-
-            playerArg2:messageSpecial(data.actionMsg.hurry)
-            playerArg2:setLocalVar('sunbreezeScoopTime', GetSystemTime())
-            playerArg2:setLocalVar('sunbreezeScoopState', 2)
-        end)
-    end)
-end
-
-local resolveScoop = function(player, data)
-    local elapsed = GetSystemTime() - player:getLocalVar('sunbreezeScoopTime')
-    player:setLocalVar('sunbreezeScoopState', 0)
-
-    -- Stale attempt (walked away mid-minigame): quietly start over
-    if elapsed > 30 then
-        beginScoopAttempt(player, data)
-        return
-    end
-
-    -- Too early: the goldfish gets away, scoop survives
-    if elapsed < 1 then
-        player:messageSpecial(data.actionMsg.slipped)
-        return
-    end
-
-    -- Too late: the paper rips
-    if elapsed > 4 then
-        player:messageSpecial(data.actionMsg.ripped, items.SUPER_SCOOP)
-        player:delItem(items.SUPER_SCOOP, 1)
-        return
-    end
-
-    -- Caught one!
-    local fishType = player:getLocalVar('sunbreezeScoopFish')
-    local body = player:getEquipID(xi.slot.BODY)
-    local reward = nil
-
-    if
-        fishType == 1 or
-        fishType == 2
-    then
-        local qty = 1
-
-        if
-            body == 11318 or -- Otokoeshi Yukata
-            body == 11319    -- Ominaeshi Yukata
-        then
-            qty = math.random(1, 3)
-        end
-
-        if fishType == 1 then
-            reward = { { items.TINY_GOLDFISH, qty } }
-        else
-            reward = { { items.BLACK_BUBBLE_EYE, qty } }
-        end
-    else
-        local roll = math.random(1, 100)
-
-        if roll <= 60 then
-            reward = { { items.LIONHEAD, 1 } }
-        elseif roll <= 80 then
-            reward = { { items.PEARLSCALE, 1 } }
-        else
-            reward = { { items.CALICO_COMET, 1 } }
-        end
-    end
-
-    if npcUtil.giveItem(player, reward) then
-        player:delItem(items.SUPER_SCOOP, 1)
-    end
-end
-
-xi.events.sunbreeze.onSpotTrigger = function(player, npc)
-    if not xi.events.sunbreeze.enabledCheck() then
-        return
-    end
-
-    local data = pondData[player:getZoneID()]
-    if not data then
-        return
-    end
-
-    if player:getEquipID(xi.slot.RANGED) ~= items.GOLDFISH_BASKET then
-        player:printToPlayer('You need a goldfish basket equipped in your range slot to go scooping.', xi.msg.channel.NS_SAY)
-        return
-    end
-
-    if not player:hasItem(items.SUPER_SCOOP) then
-        player:printToPlayer('You do not have any super scoops.', xi.msg.channel.NS_SAY)
-        return
-    end
-
-    local state = player:getLocalVar('sunbreezeScoopState')
-
-    if state == 0 then
-        beginScoopAttempt(player, data)
-    elseif state == 2 then
-        resolveScoop(player, data)
-    end
-
-    -- state 1: a goldfish is still on its way, wait quietly
-end
-
------------------------------------
 -- Festival greeter moogles
 -----------------------------------
 
@@ -1070,7 +917,7 @@ xi.events.sunbreeze.onGreeterTrigger = function(player, npc)
     end
 
     npc:facePlayer(player, true)
-    player:messageText(npc, data.greet)
+    player:printToPlayer('Kupopo! The Sunbreeze Festival is in full swing, kupo!', xi.msg.channel.NS_SAY, 'Festival Moogle')
     player:printToPlayer(greeterHint, xi.msg.channel.NS_SAY, 'Festival Moogle')
 
     -- Daily festival firework handout
@@ -1230,17 +1077,12 @@ xi.events.sunbreeze.onTeleporterTrigger = function(player, npc)
     npc:facePlayer(player, true)
 
     if not isWearing(player, festivalBodies) then
-        if data.decline then
-            player:messageText(npc, data.decline)
-        else
-            player:printToPlayer('You\'re not wearing your yukata! Put it on and show me how it looks, kupo!', xi.msg.channel.NS_SAY, 'Festival Moogle')
-        end
-
+        player:printToPlayer('You\'re not wearing your yukata! Put it on and show me how it looks, kupo!', xi.msg.channel.NS_SAY, 'Festival Moogle')
         return
     end
 
-    player:messageText(npc, data.accept1)
-    player:messageText(npc, data.accept2)
+    player:printToPlayer('Looks like you\'ve really gotten into the spirit of the Sunbreeze Festival, kupo!', xi.msg.channel.NS_SAY, 'Festival Moogle')
+    player:printToPlayer('As a show of appreciation, I\'ll teleport you to one of the other nations! Tell me where you\'d like to go, kupo.', xi.msg.channel.NS_SAY, 'Festival Moogle')
 
     local options = {}
 
@@ -1250,7 +1092,7 @@ xi.events.sunbreeze.onTeleporterTrigger = function(player, npc)
             nationLabels[destination],
             function(playerArg)
                 local arrival = teleportArrivals[destination]
-                playerArg:messageText(npc, data.sendoff)
+                playerArg:printToPlayer('Enjoy your trip, kupo!', xi.msg.channel.NS_SAY, 'Festival Moogle')
                 playerArg:timer(500, function(playerArg2)
                     playerArg2:setPos(arrival.x, arrival.y, arrival.z, arrival.rot, arrival.zone)
                 end)
@@ -1289,41 +1131,16 @@ local function insertMoogle(zone, pos, triggerFunc)
         releaseIdOnDisappear = true,
     })
 
+    if not npc then
+        print(string.format('[Sunbreeze] Failed to spawn moogle in zone %s', zone:getName()))
+        return
+    end
+
     table.insert(xi.events.sunbreeze.entities, npc:getID())
 end
 
 local function insertGreeterMoogle(zone, pos)
-    local npc = zone:insertDynamicEntity({
-        objtype              = xi.objType.NPC,
-        name                 = 'Sunbreeze_Moogle',
-        packetName           = 'Festival Moogle',
-        look                 = 82,
-        x                    = pos[2],
-        y                    = pos[3],
-        z                    = pos[4],
-        rotation             = pos[1],
-        onTrigger            = xi.events.sunbreeze.onGreeterTrigger,
-        releaseIdOnDisappear = true,
-    })
-
-    table.insert(xi.events.sunbreeze.entities, npc:getID())
-end
-
-local function insertScoopingSpot(zone, pos)
-    local npc = zone:insertDynamicEntity({
-        objtype              = xi.objType.NPC,
-        name                 = 'Scooping_Spot',
-        packetName           = 'Scooping Spot',
-        look                 = '0x00006B0500000000000000000000000000000000',
-        x                    = pos[2],
-        y                    = pos[3],
-        z                    = pos[4],
-        rotation             = pos[1],
-        onTrigger            = xi.events.sunbreeze.onSpotTrigger,
-        releaseIdOnDisappear = true,
-    })
-
-    table.insert(xi.events.sunbreeze.entities, npc:getID())
+    insertMoogle(zone, pos, xi.events.sunbreeze.onGreeterTrigger)
 end
 
 xi.events.sunbreeze.generateEntities = function()
@@ -1345,13 +1162,6 @@ xi.events.sunbreeze.generateEntities = function()
         local zone = GetZone(zoneId)
         if zone then
             insertMoogle(zone, data.pos, xi.events.sunbreeze.onTeleporterTrigger)
-        end
-    end
-
-    for zoneId, data in pairs(pondData) do
-        local zone = GetZone(zoneId)
-        if zone then
-            insertScoopingSpot(zone, data.spot)
         end
     end
 end

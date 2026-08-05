@@ -5149,15 +5149,23 @@ void DistributeExperiencePoints(CCharEntity* PChar, CMobEntity* PMob)
 
                     exp = charutils::AddExpBonus(PMember, exp);
 
-                    // Escha silt accrues at 1% of experience earned (rounded
-                    // down), even for characters whose exp/limit gain is
-                    // capped, so it is granted from the computed award here
-                    // rather than inside AddExperiencePoints. Holding cap
-                    // grows with the Eschan storage key items.
+                    // Escha silt accrues as a fraction of experience earned
+                    // (rounded down), even for characters whose exp/limit gain
+                    // is capped, so it is granted from the computed award here
+                    // rather than inside AddExperiencePoints. The rate is the
+                    // map.ESCHA_SILT_RATE setting (retail 0.01 = 1%); an unset
+                    // or non-positive value falls back to the 1% default.
+                    // Holding cap grows with the Eschan storage key items.
                     ZONEID zoneId = PMember->loc.zone->GetID();
                     if (zoneId == ZONE_ESCHA_ZITAH || zoneId == ZONE_ESCHA_RUAUN || zoneId == ZONE_REISENJIMA)
                     {
-                        int32 silt = (int32)(exp / 100.0f);
+                        float siltRate = settings::get<float>("map.ESCHA_SILT_RATE");
+                        if (siltRate <= 0.0f)
+                        {
+                            siltRate = 0.01f;
+                        }
+
+                        int32 silt = (int32)(exp * siltRate);
                         if (silt > 0)
                         {
                             int32 siltCap = 100000;

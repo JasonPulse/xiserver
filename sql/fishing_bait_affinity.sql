@@ -653,6 +653,11 @@ INSERT INTO `fishing_bait_affinity` VALUES (17404,4403,3); -- Worm Lure,        
 INSERT INTO `fishing_bait_affinity` VALUES (17404,5458,2); -- Worm Lure,              Yilanbaligi,      Power : 2
 INSERT INTO `fishing_bait_affinity` VALUES (17404,4385,3); -- Worm Lure,              Zafmlug Bass,     Power : 3
 INSERT INTO `fishing_bait_affinity` VALUES (17007,5129,2); -- Dwarf Pugil,            Lik,              Power : 2
+INSERT INTO `fishing_bait_affinity` VALUES (17003,4310,3); -- Super Scoop,            Tiny Goldfish,    Power : 3
+INSERT INTO `fishing_bait_affinity` VALUES (17003,4311,3); -- Super Scoop,            Black Bubble-Eye, Power : 3
+INSERT INTO `fishing_bait_affinity` VALUES (17003,4312,3); -- Super Scoop,            Lionhead,         Power : 3
+INSERT INTO `fishing_bait_affinity` VALUES (17003,5714,3); -- Super Scoop,            Pearlscale,       Power : 3
+INSERT INTO `fishing_bait_affinity` VALUES (17003,5715,3); -- Super Scoop,            Calico Comet,     Power : 3
 /*!40000 ALTER TABLE `fishing_bait_affinity` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
