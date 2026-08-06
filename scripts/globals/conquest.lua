@@ -1388,7 +1388,6 @@ xi.conquest.overseerOnEventFinish = function(player, csid, option, guardNation, 
         player:delKeyItem(sOutpost.ki)
         player:addCP(sOutpost.cp)
         player:messageSpecial(mOffset) -- 'You've earned conquest points!'
-        player:setCharVar('supplyQuest_started', 0)
         player:setCharVar('supplyQuest_region', 0)
         player:setCharVar('supplyQuest_fresh', 0)
 
