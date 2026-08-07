@@ -570,6 +570,16 @@ xi.trust.darkAutoAttacks = function(mob)
     mob:addMod(xi.mod.ENSPELL_DMG, math.floor(mob:getMainLvl()))
 end
 
+-----------------------------------
+-- Melee accuracy boost
+-- Flat accuracy so melee DD/tank trusts land hits reliably against high-evasion content
+-- (the accuracy analogue of the enmity mod that keeps tanks holding hate at scale).
+-- ~2 ACC per level (about +198 at level 99).
+-----------------------------------
+xi.trust.meleeAccuracyBoost = function(mob)
+    mob:addMod(xi.mod.ACC, math.floor(mob:getMainLvl() * 2))
+end
+
 -- Toggle an aura on/off each combat tick based on whether any gating trust is present.
 xi.trust.conditionalAura = function(mob, effectId, power, gatingTrustIds, listenerName)
     mob:addListener('COMBAT_TICK', listenerName, function(mobArg)

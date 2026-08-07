@@ -1,12 +1,10 @@
 -----------------------------------
--- Cloudsplitter
--- Description: Heavy single-hit great-axe strike. Damage varies with TP.
+-- Zantetsuken
+-- Description: Odin's signature strike. Heavy AoE slashing damage delivered
+--              from a single sweep of Zantetsuken.
 -- Type: Physical
 -- Utsusemi/Blink absorb: 1 shadow
--- Range: Melee
--- NOTE: implemented as PHYSICAL. The player weaponskill is magical lightning, but AAMR
--- (BST/THF) has no magic accuracy, so a magical version resists to nothing — physical
--- lands with the trust's (boosted) melee accuracy.
+-- Range: 10.0 radial (mob_skills 2126)
 -----------------------------------
 ---@type TMobSkill
 local mobskillObject = {}
@@ -18,7 +16,7 @@ end
 mobskillObject.onMobWeaponSkill = function(target, mob, skill)
     local numhits = 1
     local accmod  = 1
-    local ftp     = 4
+    local ftp     = 6
     local info    = xi.mobskills.mobPhysicalMove(mob, target, skill, numhits, accmod, ftp, xi.mobskills.physicalTpBonus.NO_EFFECT, 0, 0, 0)
     local dmg     = xi.mobskills.mobFinalAdjustments(info.dmg, mob, skill, target, xi.attackType.PHYSICAL, xi.damageType.SLASHING, info.hitslanded)
 

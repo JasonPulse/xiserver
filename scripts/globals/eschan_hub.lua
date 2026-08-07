@@ -99,19 +99,18 @@ end
 -- the unlock is PERMANENT (CharVar per line). All owned tiers aggregate
 -- into one VORSEAL status effect applied on Escha zone entry (see
 -- scripts/effects/vorseal.lua and the three Zone.lua onZoneIn hooks).
--- The 16 retail vorseal lines in exact client-menu order (DAT msg 7542).
--- `menuIndex` = the line's slot in that menu (1-16), so the decoded event
--- selection maps straight to the line. Prices and per-tier mod steps are
--- retail (bg-wiki Vorseal page: HP/MP +20 flat, Acc/RAcc/Eva +2, DEF and
--- Atk/RAtk +1%, magic lines +2, attributes +3, Occ/Killer/DT 1%,
--- Regen/Refresh +1, Acc.++ +5). Lines 1-3 have a Domain-Invasion-unlocked
--- advanced form (advKey/advMods) — Regen+ / Refresh+ / Acc.++; the
--- advanced tier is only purchasable once its DI dragon-kill gate is met.
+-- The 19 vorseal lines in exact client-menu order (DAT msg 7542): the 16
+-- base lines plus the last-page trio Regen+/Refresh+/Acc.++. `menuIndex` =
+-- the line's slot in that menu (1-19), so the decoded event selection maps
+-- straight to the line (display row d = vorsealLines[d + 1]). Prices and
+-- per-tier mod steps are retail (bg-wiki Vorseal page: HP/MP +20 flat,
+-- Acc/RAcc/Eva +2, DEF and Atk/RAtk +1%, magic lines +2, attributes +3,
+-- Occ/Killer/DT 1%, Regen/Refresh +1, Acc.++ +5).
 xi.eschanHub.vorsealLines =
 {
-    { menuIndex =  1, key = 'HPMP',   name = 'HP+, MP+',              price = 1200,  maxTier = 11, mods = { { xi.mod.HP, 20 }, { xi.mod.MP, 20 } }, advKey = 'REGEN',   advName = 'Regen+',   advMods = { { xi.mod.REGEN, 1 } } },
-    { menuIndex =  2, key = 'ACCEVA', name = 'Acc.+, Eva.+',          price = 600,   maxTier = 11, mods = { { xi.mod.ACC, 2 }, { xi.mod.RACC, 2 }, { xi.mod.EVA, 2 } }, advKey = 'REFRESH', advName = 'Refresh+', advMods = { { xi.mod.REFRESH, 1 } } },
-    { menuIndex =  3, key = 'DEF',    name = 'DEF+',                  price = 600,   maxTier = 11, mods = { { xi.mod.DEFP, 1 } }, advKey = 'ACC2', advName = 'Acc.++', advMods = { { xi.mod.ACC, 5 } } },
+    { menuIndex =  1, key = 'HPMP',   name = 'HP+, MP+',              price = 1200,  maxTier = 11, mods = { { xi.mod.HP, 20 }, { xi.mod.MP, 20 } } },
+    { menuIndex =  2, key = 'ACCEVA', name = 'Acc.+, Eva.+',          price = 600,   maxTier = 11, mods = { { xi.mod.ACC, 2 }, { xi.mod.RACC, 2 }, { xi.mod.EVA, 2 } } },
+    { menuIndex =  3, key = 'DEF',    name = 'DEF+',                  price = 600,   maxTier = 11, mods = { { xi.mod.DEFP, 1 } } },
     { menuIndex =  4, key = 'ATK',    name = 'Atk.+, Rng. Atk.+',     price = 600,   maxTier = 11, mods = { { xi.mod.ATTP, 1 }, { xi.mod.RATTP, 1 } } },
     { menuIndex =  5, key = 'MACC',   name = 'Mag. Acc.+, Mag. Eva.+', price = 600,  maxTier = 11, mods = { { xi.mod.MACC, 2 }, { xi.mod.MEVA, 2 } } },
     { menuIndex =  6, key = 'MDEF',   name = 'Mag. Def.+',            price = 600,   maxTier = 11, mods = { { xi.mod.MDEF, 2 } } },
@@ -129,6 +128,13 @@ xi.eschanHub.vorsealLines =
     { menuIndex = 14, key = 'SPOILS', name = 'Spoils+',               price = 50000, maxTier = 11, mods = {} }, -- drop-rate handled at loot time, no combat mod
     { menuIndex = 15, key = 'RAREENEMY', name = 'Rare Enemy+',        price = 1000,  maxTier = 11, mods = {} }, -- lottery-rate hook, no combat mod
     { menuIndex = 16, key = 'LUCK',   name = 'Luck+',                 price = 1000,  maxTier = 11, mods = {} }, -- reduces portal silt cost, no combat mod
+    -- The three "advanced" lines occupy the buy list's last page (display
+    -- rows 16-18). On retail they unlock via Domain Invasion; here they are
+    -- first-class buyable lines like the rest (caps follow the same kill
+    -- milestones), so all vorseals are available.
+    { menuIndex = 17, key = 'REGEN',   name = 'Regen+',               price = 1500,  maxTier = 11, mods = { { xi.mod.REGEN, 1 } } },
+    { menuIndex = 18, key = 'REFRESH', name = 'Refresh+',             price = 1500,  maxTier = 11, mods = { { xi.mod.REFRESH, 1 } } },
+    { menuIndex = 19, key = 'ACC2',    name = 'Acc.++',               price = 1500,  maxTier = 11, mods = { { xi.mod.ACC, 5 } } },
 }
 
 local vorsealVar = function(key)
@@ -185,9 +191,6 @@ end
 -- Cap for one line as the client should DISPLAY it (the Y in X/Y) — also
 -- what buyVorsealTier enforces. vorsealCap (the RoV-baseline floor of 2,
 -- raisable via the Vorseal_Cap CharVar) backstops the milestone tiers.
--- Advanced lines (advKey) report 0 until their Domain Invasion unlock
--- exists: 0 hides the row client-side, so the three advanced rows stay
--- retail-hidden instead of rendering an unbuyable line.
 xi.eschanHub.vorsealLineCap = function(player, key)
     for _, line in ipairs(xi.eschanHub.vorsealLines) do
         if line.key == key then
@@ -200,10 +203,6 @@ xi.eschanHub.vorsealLineCap = function(player, key)
             end
 
             return math.min(math.max(tier, xi.eschanHub.vorsealCap(player)), line.maxTier)
-        end
-
-        if line.advKey == key then
-            return 0
         end
     end
 
@@ -234,22 +233,13 @@ local capBitRow =
     5, 6, 14, 14, 14, 14, 14,
 }
 
--- Advanced-line display rows (16-18) map to lines 1-3's advKey.
-local advDisplayKey = { [16] = 'REGEN', [17] = 'REFRESH', [18] = 'ACC2' }
-
 -- Build the six 32-bit mask words that make query 8's reply render each
--- row's real cap: set the first capOf(row) of that row's bit-slots.
+-- row's real cap: set the first capOf(row) of that row's bit-slots. Display
+-- row d maps directly to vorsealLines[d + 1] (all 19 lines, in order).
 xi.eschanHub.buildVorsealCapMask = function(player)
     local capOf = {}
     for d = 0, 18 do
-        local key
-        if d <= 15 then
-            key = xi.eschanHub.vorsealLines[d + 1].key
-        else
-            key = advDisplayKey[d]
-        end
-
-        capOf[d] = xi.eschanHub.vorsealLineCap(player, key)
+        capOf[d] = xi.eschanHub.vorsealLineCap(player, xi.eschanHub.vorsealLines[d + 1].key)
     end
 
     local words = { 0, 0, 0, 0, 0, 0 }

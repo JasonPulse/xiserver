@@ -136,7 +136,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Avatar_Leviathan_Misc',40,862);
 INSERT INTO `mob_skill_lists` VALUES ('Avatar_Leviathan_Misc',40,863);
 INSERT INTO `mob_skill_lists` VALUES ('Avatar_Leviathan_Misc',40,864);
 INSERT INTO `mob_skill_lists` VALUES ('Avatar_Leviathan_Misc',40,865);
--- INSERT INTO `mob_skill_lists` VALUES ('Avatar-Odin',41,2126);
+INSERT INTO `mob_skill_lists` VALUES ('Avatar-Odin',41,2126);
 -- INSERT INTO `mob_skill_lists` VALUES ('Avatar-Odin',41,2556);
 -- INSERT INTO `mob_skill_lists` VALUES ('Avatar-Odin',41,2557);
 -- INSERT INTO `mob_skill_lists` VALUES ('Avatar-Odin',41,2558);

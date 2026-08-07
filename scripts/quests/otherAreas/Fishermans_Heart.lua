@@ -2,9 +2,25 @@
 -- Fisherman's Heart
 -----------------------------------
 -- Log ID: 4, Quest ID: 11
--- Katsunaga : Mhaura pier (verified in npc_list.sql)
--- Retail: trade Gugru Tuna for fishing history readout. Simplified for
--- private server: accept + trade Gugru Tuna → immediate complete.
+-- Katsunaga : Mhaura (H-9)
+--
+-- Retail (bg-wiki "Fisherman's Heart"): requires Fishing skill 20. Speak to
+-- Katsunaga, then trade him a Gugru Tuna and he reports your fishing history.
+-- Repeatable.
+--
+-- CSIDs decoded offline with xidat/csidmsg.py (blob + data[] resolution, see
+-- that file's header for the three fixes that make it work). Each id was
+-- confirmed by reading the messages it emits against `xi-dat dialog 249`:
+--   190 -> 7078  'I have nothing to say to one who has never held a fishing
+--                 rod'                       => Fishing skill 0
+--   191 -> 7079,7080  'you have dabbled...but you still have a long way to go'
+--                                            => has skill, below the gate
+--   192 -> 7081-7085  the offer; 7082 is the Yes/No selection and 7085 is
+--                     'I only ask you to bring me ${item}'
+--   193 -> 7086-7089  turn-in; 7087 casts/catches, 7088 longest/heaviest
+--   194 -> 7090  'If you want me to tell you about your past catches, bring
+--                 me ${item}'                => reminder while accepted
+-- The previous stub fired csid 100, which Katsunaga does not own.
 -----------------------------------
 local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.FISHERMANS_HEART)
 
@@ -13,6 +29,26 @@ quest.reward =
     fame     = 10,
     fameArea = xi.fameArea.WINDURST,
 }
+
+local fishingGate = 20
+
+local function tradedGugruTuna(trade)
+    return npcUtil.tradeHasExactly(trade, xi.item.GUGRU_TUNA_1) or
+        npcUtil.tradeHasExactly(trade, xi.item.GUGRU_TUNA_2)
+end
+
+-- Katsunaga sizes the player up by Fishing skill before he will talk shop.
+local function greetingEvent(player)
+    local fishing = player:getSkillLevel(xi.skill.FISHING)
+
+    if fishing == 0 then
+        return 190
+    elseif fishing < fishingGate * 10 then
+        return 191
+    end
+
+    return nil
+end
 
 quest.sections =
 {
@@ -25,22 +61,52 @@ quest.sections =
         {
             ['Katsunaga'] =
             {
+                onTrigger = function(player, npc)
+                    local turnAway = greetingEvent(player)
+                    if turnAway then
+                        return quest:progressEvent(turnAway)
+                    end
+
+                    return quest:progressEvent(192)
+                end,
+            },
+
+            onEventFinish =
+            {
+                [192] = function(player, csid, option, npc)
+                    if option == 0 then
+                        quest:begin(player)
+                    end
+                end,
+            },
+        },
+    },
+
+    {
+        check = function(player, status, vars)
+            return status == xi.questStatus.QUEST_ACCEPTED or
+                status == xi.questStatus.QUEST_COMPLETED
+        end,
+
+        [xi.zone.MHAURA] =
+        {
+            ['Katsunaga'] =
+            {
+                onTrigger = function(player, npc)
+                    return quest:progressEvent(194)
+                end,
+
                 onTrade = function(player, npc, trade)
-                    -- GUGRU_TUNA_1 (4480) or GUGRU_TUNA_2 (5805)
-                    if
-                        npcUtil.tradeHasExactly(trade, xi.item.GUGRU_TUNA_1) or
-                        npcUtil.tradeHasExactly(trade, xi.item.GUGRU_TUNA_2)
-                    then
-                        return quest:progressEvent(100)
+                    if tradedGugruTuna(trade) then
+                        return quest:progressEvent(193)
                     end
                 end,
             },
 
             onEventFinish =
             {
-                [100] = function(player, csid, option, npc)
+                [193] = function(player, csid, option, npc)
                     player:confirmTrade()
-                    quest:begin(player)
                     quest:complete(player)
                 end,
             },

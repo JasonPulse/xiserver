@@ -22,6 +22,9 @@ spellObject.onMobSpawn = function(mob)
     -- Casts ninjutsu very fast (per FFXIclopedia): ~80% cast-time reduction via uncapped Fast Cast.
     mob:addMod(xi.mod.UFASTCAST, 80)
 
+    -- Lands hits reliably at content level (also feeds enmity via damage as a tank).
+    xi.trust.meleeAccuracyBoost(mob)
+
     xi.trust.arkAngelSynergy(mob) -- +MDEF while all five Ark Angels are present
 
     -- Keep shadows up (Utsusemi represented by xi.effect.COPY_IMAGE) and Migawari for survival.

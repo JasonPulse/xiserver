@@ -168,6 +168,10 @@ zones[xi.zone.HAZHALM_TESTING_GROUNDS] =
         MUNINN     = GetTableOfIDs('Muninn'),
         HEITHRUN   = GetTableOfIDs('Heithrun'),
         SAEHRIMNIR = GetTableOfIDs('Saehrimnir'),
+
+        -- The Rider Cometh: Odin Prime and his three images
+        ODIN_PRIME = GetFirstID('Odin_Prime'),
+        ODIN_IMAGE = GetTableOfIDs('Odin_Image'),
     },
     npc =
     {

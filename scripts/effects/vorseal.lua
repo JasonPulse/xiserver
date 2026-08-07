@@ -26,6 +26,13 @@ local eachOwnedMod = function(target, fn)
 end
 
 effectObject.onEffectGain = function(target, effect)
+    -- Vorseals are a zone aura: their bonuses only apply inside the Eschan
+    -- zones / Reisenjima, where applyVorseals re-adds this on zone-in. Flag
+    -- it ON_ZONE so the core strips it the moment the player zones out (it
+    -- re-applies on the next Eschan zone-in). This replaces the effect's
+    -- default DB flag so it does NOT also drop on death/KO.
+    effect:setEffectFlags(xi.effectFlag.ON_ZONE)
+
     eachOwnedMod(target, function(mod, value)
         target:addMod(mod, value)
     end)

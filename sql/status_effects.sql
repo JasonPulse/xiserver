@@ -621,7 +621,7 @@ INSERT INTO `status_effects` VALUES (598,'cascade',4194336,0,0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (599,'consume_mana',33,0,0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (600,'runeists_roll',131368,0,0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (601,'crooked_cards',4194336,0,0,0,0,0,0,0,0);
-INSERT INTO `status_effects` VALUES (602,'vorseal',32,0,0,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (602,'vorseal',256,0,0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (603,'elvorseal',32,0,0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (604,'mighty_guard',4194336,0,0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (605,'gale_spikes',41,34,0,0,0,0,3,0,800);
