@@ -2253,15 +2253,6 @@ void UnequipItem(CCharEntity* PChar, uint8 equipSlotID, bool update)
                     }
                 }
 
-                if (PChar->PAI->IsEngaged())
-                {
-                    auto* state = dynamic_cast<CAttackState*>(PChar->PAI->GetCurrentState());
-                    if (state)
-                    {
-                        state->ResetAttackTimer();
-                    }
-                }
-
                 // If main hand is empty, figure out which UnarmedItem to give the player.
                 if (!PChar->getEquip(SLOT_MAIN) || !PChar->getEquip(SLOT_MAIN)->isType(ITEM_EQUIPMENT))
                 {
@@ -2432,14 +2423,6 @@ bool EquipArmor(CCharEntity* PChar, uint8 slotID, uint8 equipSlotID, uint8 conta
                             }
                         }
                         break;
-                    }
-                    if (PChar->PAI->IsEngaged())
-                    {
-                        auto* state = dynamic_cast<CAttackState*>(PChar->PAI->GetCurrentState());
-                        if (state)
-                        {
-                            state->ResetAttackTimer();
-                        }
                     }
                     PChar->m_Weapons[SLOT_MAIN] = PItem;
                 }
