@@ -56,7 +56,13 @@ quest.sections =
                         player:getMainLvl() >= 10 and
                         player:getFameLevel(xi.fameArea.JEUNO) >= 3
                     then
-                        return quest:progressEvent(10016)
+                        -- Guttrix's cutscene takes the current RSE location and race
+                        -- as event parameters -- that is how he tells the player
+                        -- which race's week it is and where to search. Without them
+                        -- the cutscene renders with parameter 0 and reports the
+                        -- wrong race and zone every Vana'diel week, which is the one
+                        -- thing this quest exists to convey.
+                        return quest:progressEvent(10016, VanadielRSELocation(), VanadielRSERace())
                     else
                         return quest:event(10020)
                     end

@@ -37,8 +37,13 @@ quest.sections =
     },
 
     {
+        -- bg-wiki "A Flash in the Pan": Repeatable = "yes, limited" (15 earth
+        -- minutes, server-wide -- enforced by the tradeCooldown localVar below).
+        -- Gating this section on QUEST_ACCEPTED alone made it a one-shot: after
+        -- the first completion the status is QUEST_COMPLETED and no section
+        -- matched, so Aquillina stopped accepting Flint Stones forever.
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_ACCEPTED
+            return status ~= xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.BASTOK_MARKETS] =

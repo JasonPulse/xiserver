@@ -1,0 +1,1010 @@
+[
+ {
+  "retail_title": "\"Always more,\" Quoth the Ravenous",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Always_More_Quoth_the_Ravenous.lua",
+   "scripts/quests/adoulin/The_Starving.lua"
+  ]
+ },
+ {
+  "retail_title": "A Barrel of Laughs",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Certain Substitute Patrolman",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/A_Certain_Substitute_Patrolman.lua"
+  ]
+ },
+ {
+  "retail_title": "A Geothermal Expedition",
+  "categories": [
+   "Adoulin Quests",
+   "Morimar Basalt Fields Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Good Pair of Crocs",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/A_Good_Pair_of_Crocs.lua",
+   "scripts/quests/adoulin/A_Shot_in_the_Dark.lua",
+   "scripts/quests/adoulin/It_Sets_My_Heart_Aflutter.lua"
+  ]
+ },
+ {
+  "retail_title": "A Pioneer's Best (Imaginary) Friend",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/A_Pioneers_Best_Imaginary_Friend.lua"
+  ]
+ },
+ {
+  "retail_title": "A Shot in the Dark",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/A_Good_Pair_of_Crocs.lua",
+   "scripts/quests/adoulin/A_Shot_in_the_Dark.lua",
+   "scripts/quests/adoulin/It_Sets_My_Heart_Aflutter.lua"
+  ]
+ },
+ {
+  "retail_title": "A Stone's Throw Away",
+  "categories": [
+   "Adoulin Quests",
+   "Morimar Basalt Fields Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/A_Stones_Throw_Away.lua"
+  ]
+ },
+ {
+  "retail_title": "A Thirst Before Time",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Thirst for Eternity",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Thirst for the Ages",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Thirst for the Eons",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "All the Way to the Bank",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Boiling Over",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Yahse Hunting Grounds Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Breaking the Ice",
+  "categories": [
+   "Adoulin Quests",
+   "Kamihr Drifts Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Breaking_the_Ice.lua"
+  ]
+ },
+ {
+  "retail_title": "Cafe...teria",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Children of the Rune",
+  "categories": [
+   "Additional Job Quests",
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Endeavoring_to_Awaken.lua"
+  ]
+ },
+ {
+  "retail_title": "Dances with Luopans",
+  "categories": [
+   "Additional Job Quests",
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Dances_with_Luopans.lua",
+   "scripts/quests/adoulin/Elementary_My_Dear_Sylvie.lua"
+  ]
+ },
+ {
+  "retail_title": "Destiny's Device",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Rune Fencer Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Destinys_Device.lua"
+  ]
+ },
+ {
+  "retail_title": "Did You Feel That?",
+  "categories": [
+   "Adoulin Quests",
+   "Marjami Ravine Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Dirt Cheap",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Yorcia Weald Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Do Not Go Into the Light",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Don't Clam Up on Me Now",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Yahse Hunting Grounds Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Don't Ever Leaf Me",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Elementary, My Dear Sylvie",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Elementary_My_Dear_Sylvie.lua",
+   "scripts/quests/adoulin/For_Whom_the_Bell_Tolls.lua"
+  ]
+ },
+ {
+  "retail_title": "Empty Nest",
+  "categories": [
+   "Adoulin Quests",
+   "Ceizak Battlegrounds Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Endeavoring to Awaken",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Limit Break Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Endeavoring_to_Awaken.lua",
+   "scripts/quests/adoulin/Forging_New_Bonds.lua"
+  ]
+ },
+ {
+  "retail_title": "Epiphany",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Exotic Delicacies",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Exotic_Delicacies.lua"
+  ]
+ },
+ {
+  "retail_title": "Eye of the Beholder",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "F.A.I.L.ure Is Not an Option",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Fertile Ground",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Rala Waterways Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Flavors of Our Lives",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Flavors_of_Our_Lives.lua"
+  ]
+ },
+ {
+  "retail_title": "Flower Power",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Yorcia Weald Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Flowers for Svenja",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "For Whom the Bell Tolls",
+  "categories": [
+   "Adoulin Quests",
+   "Geomancer Artifact Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/For_Whom_the_Bell_Tolls.lua",
+   "scripts/quests/adoulin/The_Bloodline_of_Zacariah.lua"
+  ]
+ },
+ {
+  "retail_title": "Forging New Bonds",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Rune Fencer Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Forging_New_Bonds.lua",
+   "scripts/quests/adoulin/Legacies_Lost_and_Found.lua"
+  ]
+ },
+ {
+  "retail_title": "Geomancer Relic Armor",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Geomancerrific",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Granddaddy Dearest",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Grind to Sawdust",
+  "categories": [
+   "Adoulin Quests",
+   "Ceizak Battlegrounds Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Hide and Go Peak",
+  "categories": [
+   "Adoulin Quests",
+   "Marjami Ravine Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Hide_and_Go_Peak.lua"
+  ]
+ },
+ {
+  "retail_title": "Hop to It",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Yahse Hunting Grounds Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Hunger Strikes",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Hunger_Strikes.lua"
+  ]
+ },
+ {
+  "retail_title": "Hypocritical Oath",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "I'm on a Boat",
+  "categories": [
+   "Adoulin Quests",
+   "Foret de Hennetiel Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Im_on_a_Boat.lua"
+  ]
+ },
+ {
+  "retail_title": "In the Land of the Blind",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "It Never Goes Out of Style",
+  "categories": [
+   "Adoulin Quests",
+   "Marjami Ravine Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "It Sets My Heart Aflutter",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Rala Waterways Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/A_Good_Pair_of_Crocs.lua",
+   "scripts/quests/adoulin/A_Shot_in_the_Dark.lua",
+   "scripts/quests/adoulin/It_Sets_My_Heart_Aflutter.lua"
+  ]
+ },
+ {
+  "retail_title": "Keep Your Bloomers On, Erisa",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Legacies Lost and Found",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Rune Fencer Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Destinys_Device.lua",
+   "scripts/quests/adoulin/Legacies_Lost_and_Found.lua"
+  ]
+ },
+ {
+  "retail_title": "Lerene's Lament",
+  "categories": [
+   "Adoulin Quests",
+   "Outer Ra'Kaznar Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Lerenes_Lament.lua"
+  ]
+ },
+ {
+  "retail_title": "Meg-alomaniac",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Mistress of Ceremonies",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "No Laughing Matter",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "No Love Lost",
+  "categories": [
+   "Adoulin Quests",
+   "Kamihr Drifts Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "No Mercy for the Wicked",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "No Rime Like the Present",
+  "categories": [
+   "Adoulin Quests",
+   "Morimar Basalt Fields Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Not-So-Clean Bill",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "One Good Turn...",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Open the Floodgates",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Order Up",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Orobon Appetit",
+  "categories": [
+   "Adoulin Quests",
+   "Foret de Hennetiel Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Poisoning the Well",
+  "categories": [
+   "Adoulin Quests",
+   "Foret de Hennetiel Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Quiescence",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Rala Waterways Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Raptor Rapture",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Rune Fencer Relic Armor",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Rune Fencing the Night Away",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Saved by the Bell",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Scaredy-Cats",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Sick and Tired",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Talk About Wrinkly Skin",
+  "categories": [
+   "Adoulin Quests",
+   "Morimar Basalt Fields Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Arciela Directive",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Bloodline of Zacariah",
+  "categories": [
+   "Adoulin Quests",
+   "Geomancer Artifact Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/The_Bloodline_of_Zacariah.lua",
+   "scripts/quests/adoulin/The_Communion.lua"
+  ]
+ },
+ {
+  "retail_title": "The Communion",
+  "categories": [
+   "Adoulin Quests",
+   "Geomancer Artifact Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/The_Communion.lua"
+  ]
+ },
+ {
+  "retail_title": "The Curious Case of Melvien",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Good, the Bad, the Clement",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Longest Way Round...",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/The_Longest_Way_Round.lua"
+  ]
+ },
+ {
+  "retail_title": "The Old Man and the Harpoon",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/The_Old_Man_and_the_Harpoon.lua"
+  ]
+ },
+ {
+  "retail_title": "The Secret to Success",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Silent Forest",
+  "categories": [
+   "Adoulin Quests",
+   "Avatar Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Starving",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Hunger_Strikes.lua",
+   "scripts/quests/adoulin/The_Starving.lua"
+  ]
+ },
+ {
+  "retail_title": "The Weatherspoon Inquisition",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Weatherspoon War",
+  "categories": [
+   "Adoulin Quests",
+   "Marjami Ravine Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Whole Place Is Abuzz",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Yahse Hunting Grounds Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Ygnas Directive",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Thorn in the Side",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "To Catch a Predator",
+  "categories": [
+   "Adoulin Quests",
+   "Ceizak Battlegrounds Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "To Laugh Is to Love",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Transporting",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/adoulin/Transporting.lua"
+  ]
+ },
+ {
+  "retail_title": "Treasures of the Earth",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Twitherym Dust",
+  "categories": [
+   "Adoulin Quests",
+   "Ceizak Battlegrounds Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unsullied Lands",
+  "categories": [
+   "Adoulin Quests",
+   "Foret de Hennetiel Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Vegetable Vegetable Crisis",
+  "categories": [
+   "Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Vegetable Vegetable Evolution",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Vegetable Vegetable Frustration",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Vegetable Vegetable Revolution",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Velkkovert Operations",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Water, Water, Everywhere",
+  "categories": [
+   "Adoulin Quests",
+   "Marjami Ravine Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Wayward Waypoints",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Wes...Eastern Waypoints, Ho!",
+  "categories": [
+   "Adoulin Quests",
+   "Eastern Adoulin Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Western Waypoints, Ho!",
+  "categories": [
+   "Adoulin Quests",
+   "Quests",
+   "Western Adoulin Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Winds of Eternity",
+  "categories": [
+   "Adoulin Quests",
+   "Avatar Quests",
+   "Eastern Adoulin Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ }
+]

@@ -8,10 +8,15 @@
 
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.THE_CLOCKMASTER)
 
+-- bg-wiki "The Clockmaster" header: |Reward= *[[Time Hammer]] *1,200 [[Gil]].
+-- The gil was simply absent -- giveReward does honour a `gil` key
+-- (npc_util.lua:592, addGil * GIL_RATE plus the GIL_OBTAINED message), so this
+-- was a dropped reward rather than an unsupported one.
 quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.JEUNO,
+    gil      = 1200,
     item     = xi.item.TIME_HAMMER,
     title    = xi.title.TIMEKEEPER,
 }

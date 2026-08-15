@@ -13,7 +13,11 @@ quest.reward =
 {
     fame = 50,
     fameArea = xi.fameArea.JEUNO,
-    title = xi.title.BUSHIN_ASPIRANT,
+    -- bg-wiki "Beyond Infinity" header: |Title=Bushin-Ryu Inheritor. This awarded
+    -- BUSHIN_ASPIRANT (738) instead, while the NEXT quest, Martial Mastery, was
+    -- awarding BUSHIN_RYU_INHERITOR (739) even though its own |Title= is empty --
+    -- the two were shifted one quest down the chain.
+    title = xi.title.BUSHIN_RYU_INHERITOR,
 }
 
 local atoriBattlefieldIds =

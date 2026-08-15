@@ -2,47 +2,54 @@
 -- An Imperial Heist
 -----------------------------------
 -- Log ID: 6, Quest ID: 70
--- Naja_Salaheem : Aht Urhgan Whitegate (I-10)
+-- Naja Salaheem : Aht Urhgan Whitegate (I-10)
 -----------------------------------
--- Mythic chain #1. Unlocks Duties, Tasks, and Deeds.
+-- !! NOT IMPLEMENTED -- DELIBERATELY INERT !!
 --
--- Retail prerequisites (bg-wiki): Captain Wildcat badge KI (top mercenary
--- rank) + Runic key KI (Nyzul Isle) + ToAU Mission 48 complete. The offer
--- is gated on all three so it cannot pre-empt the ToAU mission line.
+-- This file intentionally registers nothing. `questAvailable` below is false, so
+-- no section ever matches and no NPC is claimed at Action.Priority.Progress.
+-- Full requirements for the whole arc are in ODIN_MYTHIC_ARC_TODO.md at repo root.
 --
--- The offer uses printToPlayer rather than an event: the real offer CSID
--- has not been decoded, and event 200 in this zone is the Mhaura ferry
--- departure cutscene, which Zone.lua warps on.
+-- Mythic chain #1. Unlocks Duties, Tasks, and Deeds -- which is itself inert, so
+-- nothing downstream of this quest works either.
+--
+-- WHY IT IS NOT BUILT:
+--   The offer csid has never been decoded. The previous author correctly noticed
+--   that csid 200 in this zone is the MHAURA FERRY DEPARTURE cutscene, which
+--   Aht_Urhgan_Whitegate/Zone.lua warps on -- that is the original ferry bug --
+--   and so used printToPlayer instead of an event. Avoiding the bad csid was
+--   right, but a quest cannot be driven by a chat line.
+--   Beyond the csid, everything this quest gates is unbuildable: see the three
+--   Mythic files and ODIN_MYTHIC_ARC_TODO.md.
+--
+-- WHAT THE STUB DID, AND WHY IT HAD TO GO:
+--   Its onTrigger printed a line and then ran `quest:begin(player)` followed
+--   immediately by `quest:complete(player)` -- so merely CLICKING Naja Salaheem
+--   while eligible completed the quest, with no event, no prompt and no way to
+--   decline. It was dormant only because {KI} Captain Wildcat badge was
+--   unobtainable; rebuilding Promotion_Captain.lua made that badge obtainable
+--   and so made this handler live. That is why it is being switched off now
+--   rather than later.
+--   Note it did NOT block Naja: returning no action lets the framework fall
+--   through to her own script, so Assault registration still worked. The fault
+--   was the silent auto-completion, not a hijack.
+--
+-- RETAIL REQUIREMENTS (bg-wiki), for whoever builds it:
+--   {KI} Captain Wildcat badge (top mercenary rank), {KI} Runic key (Nyzul Isle),
+--   and ToAU Mission 48 Eternal Mercenary complete. All three gates were already
+--   correct in the stub and are worth keeping when it is rebuilt.
 -----------------------------------
 local quest = Quest:new(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.AN_IMPERIAL_HEIST)
 
-quest.reward =
-{
-    fame     = 60,
-    fameArea = xi.fameArea.WINDURST,
-}
+-- Flip to true ONLY together with real, decoded csids and the content below.
+local questAvailable = false
 
 quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasKeyItem(xi.ki.CAPTAIN_WILDCAT_BADGE) and
-                player:hasKeyItem(xi.ki.RUNIC_KEY) and
-                player:hasCompletedMission(xi.mission.log_id.TOAU, xi.mission.id.toau.ETERNAL_MERCENARY)
+            return questAvailable
         end,
-
-        [xi.zone.AHT_URHGAN_WHITEGATE] =
-        {
-            ['Naja_Salaheem'] =
-            {
-                onTrigger = function(player, npc)
-                    player:printToPlayer('Naja Salaheem: Those ancient weapons lifted from the Imperial Treasury are in the depths of Nyzul Isle. Go get \'em, and the bounty is ours!', xi.msg.channel.NS_SAY)
-                    quest:begin(player)
-                    quest:complete(player)
-                end,
-            },
-        },
     },
 }
 

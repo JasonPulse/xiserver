@@ -154,7 +154,9 @@ local jobQuestsTable =
     },
     [xi.job.PUP] =
     {
-        [1] = { xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.THE_WAYWARD_AUTOMATION },
+        -- Fixed: the enum is THE_WAYWARD_AUTOMATON (quests.lua:651), not
+        -- ...AUTOMATION, so this entry resolved to nil and broke the PUP AF lookup.
+        [1] = { xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.THE_WAYWARD_AUTOMATON },
         [2] = { xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.OPERATION_TEATIME      },
         [3] = { xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.PUPPETMASTER_BLUES     },
     },

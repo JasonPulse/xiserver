@@ -1,0 +1,938 @@
+[
+ {
+  "retail_title": "A Boy's Dream",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Paladin Artifact Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Stalwart_Hands.lua",
+   "scripts/quests/sandoria/Sharpening_the_Sword.lua"
+  ]
+ },
+ {
+  "retail_title": "A Chocobo Riding Game (San d'Oria)",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Craftsman's Work",
+  "categories": [
+   "Dragoon Artifact Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Discerning Eye (San d'Oria)",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Discerning_Eye.lua",
+   "scripts/quests/outlands/A_Discerning_Eye.lua",
+   "scripts/quests/sandoria/A_Discerning_Eye.lua",
+   "scripts/quests/windurst/A_Discerning_Eye.lua"
+  ]
+ },
+ {
+  "retail_title": "A Job for the Consortium",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Job_for_the_Consortium.lua"
+  ]
+ },
+ {
+  "retail_title": "A Knight's Test",
+  "categories": [
+   "Additional Job Quests",
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Knights_Test.lua"
+  ]
+ },
+ {
+  "retail_title": "A Purchase of Arms",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Purchase_of_Arms.lua"
+  ]
+ },
+ {
+  "retail_title": "A Sentry's Peril",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Sentrys_Peril.lua"
+  ]
+ },
+ {
+  "retail_title": "A Squire's Test",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Squires_Test.lua",
+   "scripts/quests/sandoria/A_Squires_Test_II.lua"
+  ]
+ },
+ {
+  "retail_title": "A Squire's Test II",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Knights_Test.lua",
+   "scripts/quests/sandoria/A_Squires_Test_II.lua"
+  ]
+ },
+ {
+  "retail_title": "A Taste for Meat",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Taste_for_Meat.lua",
+   "scripts/quests/sandoria/Over_the_Hills_and_Far_Away.lua",
+   "scripts/quests/sandoria/The_Dismayed_Customer.lua"
+  ]
+ },
+ {
+  "retail_title": "A Timely Visit",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/A_Timely_Visit.lua"
+  ]
+ },
+ {
+  "retail_title": "Advanced Teamwork",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Advanced_Teamwork.lua"
+  ]
+ },
+ {
+  "retail_title": "Atelloune's Lament",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Atellounes_Lament.lua"
+  ]
+ },
+ {
+  "retail_title": "Black Tiger Skins",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Black_Tiger_Skins.lua"
+  ]
+ },
+ {
+  "retail_title": "Blackmail",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Blackmail.lua",
+   "scripts/quests/sandoria/The_Setting_Sun.lua"
+  ]
+ },
+ {
+  "retail_title": "Chasing Quotas",
+  "categories": [
+   "Dragoon Artifact Quests",
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Dragon_Hands.lua"
+  ]
+ },
+ {
+  "retail_title": "Distant Loyalties",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Distant_Loyalties.lua"
+  ]
+ },
+ {
+  "retail_title": "Eco-Warrior (San d'Oria)",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Eco_Warrior.lua",
+   "scripts/quests/sandoria/Eco_Warrior.lua",
+   "scripts/quests/windurst/Eco_Warrior.lua"
+  ]
+ },
+ {
+  "retail_title": "Enveloped in Darkness",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "Red Mage Artifact Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Vermillion_Hands.lua",
+   "scripts/quests/sandoria/RDM_AF2_Enveloped_in_Darkness.lua"
+  ]
+ },
+ {
+  "retail_title": "Escort for Hire (San d'Oria)",
+  "categories": [
+   "Escort Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Escort_for_Hire.lua",
+   "scripts/quests/sandoria/Escort_for_Hire.lua",
+   "scripts/quests/windurst/Escort_for_Hire.lua"
+  ]
+ },
+ {
+  "retail_title": "Exit the Gambler",
+  "categories": [
+   "Map Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Exit_the_Gambler.lua"
+  ]
+ },
+ {
+  "retail_title": "Father and Son",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/crystalWar/Son_and_Father.lua",
+   "scripts/quests/sandoria/A_Purchase_of_Arms.lua",
+   "scripts/quests/sandoria/Father_and_Son.lua"
+  ]
+ },
+ {
+  "retail_title": "Fear of the Dark",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Fear_of_the_Dark.lua"
+  ]
+ },
+ {
+  "retail_title": "Fit for a Prince",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Fit_for_a_Prince.lua"
+  ]
+ },
+ {
+  "retail_title": "Flyers for Regine",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/flyers_for_regine.lua"
+  ]
+ },
+ {
+  "retail_title": "Forest for the Trees",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Forest_for_the_Trees.lua"
+  ]
+ },
+ {
+  "retail_title": "Gates to Paradise",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Grave Concerns",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Grave_Concerns.lua"
+  ]
+ },
+ {
+  "retail_title": "Grimy Signposts",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Grimy_Signposts.lua"
+  ]
+ },
+ {
+  "retail_title": "Growing Flowers",
+  "categories": [
+   "Mog House Exit Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Growing_Flowers.lua"
+  ]
+ },
+ {
+  "retail_title": "Healing the Land",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Healing_the_Land.lua",
+   "scripts/quests/sandoria/Sorcery_of_the_North.lua"
+  ]
+ },
+ {
+  "retail_title": "Her Majesty's Garden",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Map Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Her_Majestys_Garden.lua"
+  ]
+ },
+ {
+  "retail_title": "Intermediate Teamwork",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Advanced_Teamwork.lua",
+   "scripts/quests/sandoria/Intermediate_Teamwork.lua"
+  ]
+ },
+ {
+  "retail_title": "Introduction to Teamwork",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Intermediate_Teamwork.lua",
+   "scripts/quests/sandoria/Introduction_to_Teamwork.lua"
+  ]
+ },
+ {
+  "retail_title": "Knight Stalker",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Dragoon Artifact Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Lizard Skins",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Black_Tiger_Skins.lua",
+   "scripts/quests/sandoria/Lizard_Skins.lua"
+  ]
+ },
+ {
+  "retail_title": "Lufet's Lake Salt",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Lufets_Lake_Salt.lua"
+  ]
+ },
+ {
+  "retail_title": "Lure of the Wildcat (San d'Oria)",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Lure_of_the_Wildcat_Bastok.lua",
+   "scripts/quests/jeuno/Lure_of_the_Wildcat_Jeuno.lua",
+   "scripts/quests/sandoria/Lure_of_the_Wildcat_Sandoria.lua",
+   "scripts/quests/windurst/Lure_of_the_Wildcat_Windurst.lua"
+  ]
+ },
+ {
+  "retail_title": "Messenger from Beyond",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests",
+   "White Mage Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Messenger_From_Beyond.lua",
+   "scripts/quests/sandoria/Prelude_of_Black_and_White.lua"
+  ]
+ },
+ {
+  "retail_title": "Methods Create Madness",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Methods_Create_Madness.lua"
+  ]
+ },
+ {
+  "retail_title": "Old Wounds",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Old_Wounds.lua"
+  ]
+ },
+ {
+  "retail_title": "Over the Hills and Far Away",
+  "categories": [
+   "Map Quests",
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Over_the_Hills_and_Far_Away.lua"
+  ]
+ },
+ {
+  "retail_title": "Peace for the Spirit",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "Red Mage Artifact Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Pieuje's Decision",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "San d'Oria Quests",
+   "White Mage Artifact Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Prelude of Black and White",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "San d'Oria Quests",
+   "White Mage Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Healing_Hands.lua",
+   "scripts/quests/sandoria/Prelude_of_Black_and_White.lua"
+  ]
+ },
+ {
+  "retail_title": "Rosel the Armorer",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Rosel_the_Armorer.lua"
+  ]
+ },
+ {
+  "retail_title": "Sharpening the Sword",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Paladin Artifact Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Father_and_Son.lua",
+   "scripts/quests/sandoria/Sharpening_the_Sword.lua"
+  ]
+ },
+ {
+  "retail_title": "Signed in Blood",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Signed_in_Blood.lua",
+   "scripts/quests/sandoria/Tea_with_a_Tonberry.lua"
+  ]
+ },
+ {
+  "retail_title": "Sleepless Nights",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Sleepless_Nights.lua"
+  ]
+ },
+ {
+  "retail_title": "Sorcery of the North",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Sorcery_of_the_North.lua"
+  ]
+ },
+ {
+  "retail_title": "Souls in Shadow",
+  "categories": [
+   "Bostaunieux Oubliette Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Souls_in_Shadow.lua"
+  ]
+ },
+ {
+  "retail_title": "Spice Gals",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Secrets_of_Ovens_Lost.lua",
+   "scripts/quests/sandoria/Spice_Gals.lua"
+  ]
+ },
+ {
+  "retail_title": "Starting a Flame",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Starting_a_Flame.lua"
+  ]
+ },
+ {
+  "retail_title": "Tea with a Tonberry?",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Tea_with_a_Tonberry.lua"
+  ]
+ },
+ {
+  "retail_title": "The Brugaire Consortium",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Brugaire_Consortium.lua"
+  ]
+ },
+ {
+  "retail_title": "The Crimson Trial",
+  "categories": [
+   "Quests",
+   "Red Mage Artifact Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/RDM_AF1_The_Crimson_Trial.lua",
+   "scripts/quests/sandoria/RDM_AF2_Enveloped_in_Darkness.lua"
+  ]
+ },
+ {
+  "retail_title": "The Dismayed Customer",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Dismayed_Customer.lua"
+  ]
+ },
+ {
+  "retail_title": "The General's Secret",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Generals_Secret.lua"
+  ]
+ },
+ {
+  "retail_title": "The Holy Crest",
+  "categories": [
+   "Additional Job Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Medicine Woman",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Over_the_Hills_and_Far_Away.lua",
+   "scripts/quests/sandoria/The_Medicine_Woman.lua"
+  ]
+ },
+ {
+  "retail_title": "The Merchant's Bidding",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Merchants_Bidding.lua"
+  ]
+ },
+ {
+  "retail_title": "The Pickpocket",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Pickpocket.lua"
+  ]
+ },
+ {
+  "retail_title": "The Rivalry/The Competition",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Seamstress",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Lizard_Skins.lua",
+   "scripts/quests/sandoria/The_Seamstress.lua"
+  ]
+ },
+ {
+  "retail_title": "The Setting Sun",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Setting_Sun.lua"
+  ]
+ },
+ {
+  "retail_title": "The Sweetest Things",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Sweetest_Things.lua"
+  ]
+ },
+ {
+  "retail_title": "The Trader in the Forest",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Medicine_Woman.lua",
+   "scripts/quests/sandoria/The_Trader_in_the_Forest.lua"
+  ]
+ },
+ {
+  "retail_title": "The Vicasque's Sermon",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Vicasques_Sermon.lua"
+  ]
+ },
+ {
+  "retail_title": "Thick Shells",
+  "categories": [
+   "Port San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Thick_Shells.lua"
+  ]
+ },
+ {
+  "retail_title": "Tiger's Teeth",
+  "categories": [
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Tigers_Teeth.lua"
+  ]
+ },
+ {
+  "retail_title": "To Cure a Cough",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Trial by Ice",
+  "categories": [
+   "Avatar Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Trial-Size Trial by Ice",
+  "categories": [
+   "Avatar Quests",
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Trial_Size_Trial_by_Ice.lua"
+  ]
+ },
+ {
+  "retail_title": "Trouble at the Sluice",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Trouble_at_the_Sluice.lua"
+  ]
+ },
+ {
+  "retail_title": "Trust: San d'Oria",
+  "categories": [
+   "Quests",
+   "San d'Oria Quests",
+   "Southern San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Under Oath",
+  "categories": [
+   "Chateau d'Oraguille Quests",
+   "Paladin Artifact Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Undying Flames",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Undying_Flames.lua"
+  ]
+ },
+ {
+  "retail_title": "Unexpected Treasure",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Unexpected_Treasure.lua"
+  ]
+ },
+ {
+  "retail_title": "Warding Vampires",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "Repeatable Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/Warding_Vampires.lua"
+  ]
+ },
+ {
+  "retail_title": "Waters of the Cheval",
+  "categories": [
+   "Northern San d'Oria Quests",
+   "Quests",
+   "San d'Oria Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/sandoria/The_Vicasques_Sermon.lua",
+   "scripts/quests/sandoria/Waters_of_the_Cheval.lua"
+  ]
+ }
+]

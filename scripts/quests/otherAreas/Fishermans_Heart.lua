@@ -24,11 +24,12 @@
 -----------------------------------
 local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.FISHERMANS_HEART)
 
-quest.reward =
-{
-    fame     = 10,
-    fameArea = xi.fameArea.WINDURST,
-}
+-- bg-wiki lists the reward as the fishing-history readout itself (delivered by
+-- the csid 193 cutscene) plus the Accuracy/Evasion Vorseal unlock -- no gil, no
+-- item, no fame. Mhaura is Selbina/Rabao fame territory in any case, not
+-- Windurst, and since the quest is repeatable a fame payout here would have been
+-- an unbounded fame farm.
+quest.reward = {}
 
 local fishingGate = 20
 
@@ -38,12 +39,20 @@ local function tradedGugruTuna(trade)
 end
 
 -- Katsunaga sizes the player up by Fishing skill before he will talk shop.
+--
+-- Must use getCharSkillLevel, not getSkillLevel. Fishing is skill index 48, and
+-- for indices 48-57 charutils.cpp:3861 packs WorkingSkills as
+-- (RealSkills.skill / 10) * 0x20 + RealSkills.rank -- so getSkillLevel returns
+-- a packed value, and comparing it against a linear threshold silently moves
+-- the gate (200 would have been reached at real fishing skill ~7, not 20).
+-- getCharSkillLevel returns RealSkills.skill directly, which is skill * 10;
+-- this is the convention every other skill-gated quest here uses.
 local function greetingEvent(player)
-    local fishing = player:getSkillLevel(xi.skill.FISHING)
+    local fishing = player:getCharSkillLevel(xi.skill.FISHING) / 10
 
     if fishing == 0 then
         return 190
-    elseif fishing < fishingGate * 10 then
+    elseif fishing < fishingGate then
         return 191
     end
 

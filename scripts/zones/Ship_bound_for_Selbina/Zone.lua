@@ -29,8 +29,10 @@ zoneObject.onZoneIn = function(player, prevZone)
         enagakure and
         not enagakure:isSpawned() and
         VanadielUniqueDay() > enagakure:getLocalVar('despawnDay') and
-        hour < 4 and
-        hour >= 20 and
+        -- Fixed: was `hour < 4 and hour >= 20`, which no hour can satisfy, so
+        -- Enagakure never spawned. Upstream reads `(hour >= 20 or hour < 4)`.
+        -- This blocked I'll Take the Big Box, and True Will behind it.
+        (hour >= 20 or hour < 4) and
         player:hasKeyItem(xi.ki.SEANCE_STAFF) and
         player:getCharVar('Enagakure_Killed') == 0
     then
@@ -68,7 +70,7 @@ zoneObject.onGameHour = function(zone)
             end
         else
             if
-                hour < 4 and hour >= 20 and                               -- Night-time.
+                (hour >= 20 or hour < 4) and                              -- Night-time (was an impossible `and`).
                 VanadielUniqueDay() > enagakure:getLocalVar('despawnDay') -- Can spawn today.
             then
                 for _, player in pairs(zone:getPlayers()) do

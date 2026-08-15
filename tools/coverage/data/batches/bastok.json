@@ -1,0 +1,1134 @@
+[
+ {
+  "retail_title": "A Chocobo Riding Game (Bastok)",
+  "categories": [
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Discerning Eye (Bastok)",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Discerning_Eye.lua",
+   "scripts/quests/outlands/A_Discerning_Eye.lua",
+   "scripts/quests/sandoria/A_Discerning_Eye.lua",
+   "scripts/quests/windurst/A_Discerning_Eye.lua"
+  ]
+ },
+ {
+  "retail_title": "A Flash in the Pan",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Flash_in_the_Pan.lua"
+  ]
+ },
+ {
+  "retail_title": "A Foreman's Best Friend",
+  "categories": [
+   "Bastok Quests",
+   "Map Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Foremans_Best_Friend.lua"
+  ]
+ },
+ {
+  "retail_title": "A Lady's Heart",
+  "categories": [
+   "Bastok Quests",
+   "Mog House Exit Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Ladys_Heart.lua"
+  ]
+ },
+ {
+  "retail_title": "A Proper Burial",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Proper_Burial.lua"
+  ]
+ },
+ {
+  "retail_title": "A Question of Faith",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Question_of_Faith.lua",
+   "scripts/quests/bastok/Return_to_the_Depths.lua"
+  ]
+ },
+ {
+  "retail_title": "A Test of True Love",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Test_of_True_Love.lua",
+   "scripts/quests/bastok/Love_and_Ice.lua",
+   "scripts/quests/bastok/Lovers_in_the_Dusk.lua"
+  ]
+ },
+ {
+  "retail_title": "Achieving True Power",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Limit Break Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Achieving_True_Power.lua"
+  ]
+ },
+ {
+  "retail_title": "All by Myself",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Escort Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/All_by_Myself.lua"
+  ]
+ },
+ {
+  "retail_title": "Altana's Sorrow",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Altanas_Sorrow.lua"
+  ]
+ },
+ {
+  "retail_title": "Ayame and Kaede",
+  "categories": [
+   "Additional Job Quests",
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Ayame_and_Kaede.lua",
+   "scripts/quests/bastok/Trust_Bastok.lua",
+   "scripts/quests/hiddenQuests/Trust_Shantotto.lua"
+  ]
+ },
+ {
+  "retail_title": "Bait and Switch",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Bait_and_Switch.lua"
+  ]
+ },
+ {
+  "retail_title": "Beadeaux Smog",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Beadeaux_Smog.lua"
+  ]
+ },
+ {
+  "retail_title": "Beauty and the Galka",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Beauty_and_the_Galka.lua",
+   "scripts/quests/bastok/Shady_Business.lua"
+  ]
+ },
+ {
+  "retail_title": "Bite the Dust",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Bite_the_Dust.lua"
+  ]
+ },
+ {
+  "retail_title": "Blade of Darkness",
+  "categories": [
+   "Additional Job Quests",
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Blade_of_Darkness.lua",
+   "scripts/quests/bastok/Blade_of_Death.lua"
+  ]
+ },
+ {
+  "retail_title": "Blade of Death",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Blade_of_Death.lua"
+  ]
+ },
+ {
+  "retail_title": "Blade of Evil",
+  "categories": [
+   "Bastok Quests",
+   "Dark Knight Artifact Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/DRK_AF3_Blade_of_Evil.lua"
+  ]
+ },
+ {
+  "retail_title": "Breaking Stones",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Breaking_Stones.lua"
+  ]
+ },
+ {
+  "retail_title": "Brygid the Stylist",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Brygid_the_Stylist.lua",
+   "scripts/quests/bastok/Brygid_the_Stylist_Returns.lua"
+  ]
+ },
+ {
+  "retail_title": "Brygid the Stylist Returns",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Brygid_the_Stylist_Returns.lua"
+  ]
+ },
+ {
+  "retail_title": "Buckets of Gold",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Buckets_of_Gold.lua"
+  ]
+ },
+ {
+  "retail_title": "Chips",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Chips.lua"
+  ]
+ },
+ {
+  "retail_title": "Cid's Secret",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Cids_Secret.lua",
+   "scripts/quests/bastok/The_Usual.lua"
+  ]
+ },
+ {
+  "retail_title": "Dark Legacy",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/DRK_AF1_Dark_Legacy.lua",
+   "scripts/quests/bastok/DRK_AF2_Dark_Puppet.lua"
+  ]
+ },
+ {
+  "retail_title": "Dark Puppet",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/DRK_AF2_Dark_Puppet.lua",
+   "scripts/quests/bastok/DRK_AF3_Blade_of_Evil.lua",
+   "scripts/quests/jeuno/Borghertzs_Shadowy_Hands.lua"
+  ]
+ },
+ {
+  "retail_title": "Drachenfall",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Drachenfall.lua"
+  ]
+ },
+ {
+  "retail_title": "Eco-Warrior (Bastok)",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Eco_Warrior.lua",
+   "scripts/quests/sandoria/Eco_Warrior.lua",
+   "scripts/quests/windurst/Eco_Warrior.lua"
+  ]
+ },
+ {
+  "retail_title": "Escort for Hire (Bastok)",
+  "categories": [
+   "Bastok Quests",
+   "Escort Quests",
+   "Port Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Escort_for_Hire.lua",
+   "scripts/quests/sandoria/Escort_for_Hire.lua",
+   "scripts/quests/windurst/Escort_for_Hire.lua"
+  ]
+ },
+ {
+  "retail_title": "Faded Promises",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Norg Quests",
+   "Outlands Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Faded_Promises.lua"
+  ]
+ },
+ {
+  "retail_title": "Fallen Comrades",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Fallen_Comrades.lua"
+  ]
+ },
+ {
+  "retail_title": "Father Figure",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Father_Figure.lua",
+   "scripts/quests/bastok/The_Return_of_the_Adventurer.lua"
+  ]
+ },
+ {
+  "retail_title": "Fear of Flying",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Fear_of_Flying.lua"
+  ]
+ },
+ {
+  "retail_title": "Forever to Hold",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Forever_to_Hold.lua",
+   "scripts/quests/bastok/Till_Death_Do_Us_Part.lua"
+  ]
+ },
+ {
+  "retail_title": "Fully Mental Alchemist",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Fully_Mental_Alchemist.lua"
+  ]
+ },
+ {
+  "retail_title": "Ghosts of the Past",
+  "categories": [
+   "Bastok Quests",
+   "Monk Artifact Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/MNK_AF1_Ghosts_of_the_Past.lua",
+   "scripts/quests/bastok/MNK_AF2_The_First_Meeting.lua"
+  ]
+ },
+ {
+  "retail_title": "Gourmet",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Gourmet.lua"
+  ]
+ },
+ {
+  "retail_title": "Groceries",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Groceries.lua"
+  ]
+ },
+ {
+  "retail_title": "Guest of Hauteur",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Guest_of_Hauteur.lua"
+  ]
+ },
+ {
+  "retail_title": "Hearts of Mythril",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Hearts_of_Mythril.lua",
+   "scripts/quests/bastok/The_Elevenths_Hour.lua"
+  ]
+ },
+ {
+  "retail_title": "Hyper Active",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Hyper_Active.lua",
+   "scripts/quests/bastok/Teak_Me_to_the_Stars.lua",
+   "scripts/quests/bastok/The_Naming_Game.lua"
+  ]
+ },
+ {
+  "retail_title": "Inheritance",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Inheritance.lua"
+  ]
+ },
+ {
+  "retail_title": "Love and Ice",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Test_of_True_Love.lua",
+   "scripts/quests/bastok/Love_and_Ice.lua"
+  ]
+ },
+ {
+  "retail_title": "Lovers in the Dusk",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Test_of_True_Love.lua",
+   "scripts/quests/bastok/Lovers_in_the_Dusk.lua"
+  ]
+ },
+ {
+  "retail_title": "Lure of the Wildcat (Bastok)",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Lure_of_the_Wildcat_Bastok.lua",
+   "scripts/quests/jeuno/Lure_of_the_Wildcat_Jeuno.lua",
+   "scripts/quests/sandoria/Lure_of_the_Wildcat_Sandoria.lua",
+   "scripts/quests/windurst/Lure_of_the_Wildcat_Windurst.lua"
+  ]
+ },
+ {
+  "retail_title": "Mean Machine",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Mean_Machine.lua"
+  ]
+ },
+ {
+  "retail_title": "Minesweeper",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Minesweeper.lua"
+  ]
+ },
+ {
+  "retail_title": "Mom, the Adventurer?",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Mom_the_Adventurer.lua",
+   "scripts/quests/bastok/The_Signpost_Marks_the_Spot.lua"
+  ]
+ },
+ {
+  "retail_title": "Out of One's Shell",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Out_of_Ones_Shell.lua",
+   "scripts/quests/bastok/The_Quadavs_Curse.lua"
+  ]
+ },
+ {
+  "retail_title": "Out of the Depths",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/A_Question_of_Faith.lua",
+   "scripts/quests/bastok/Out_of_the_Depths.lua"
+  ]
+ },
+ {
+  "retail_title": "Past Perfect",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Past_Perfect.lua"
+  ]
+ },
+ {
+  "retail_title": "Return to the Depths",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Return_to_the_Depths.lua"
+  ]
+ },
+ {
+  "retail_title": "Rivals",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Rivals.lua"
+  ]
+ },
+ {
+  "retail_title": "Shady Business",
+  "categories": [
+   "Bastok Quests",
+   "Norg Quests",
+   "Outlands Quests",
+   "Port Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Shady_Business.lua"
+  ]
+ },
+ {
+  "retail_title": "Shoot First, Ask Questions Later",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Shoot_First_Ask_Questions_Later.lua"
+  ]
+ },
+ {
+  "retail_title": "Silence of the Rams",
+  "categories": [
+   "Bastok Quests",
+   "Norg Quests",
+   "Outlands Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Silence_of_the_Rams.lua",
+   "scripts/quests/jeuno/Fistful_of_Fury.lua"
+  ]
+ },
+ {
+  "retail_title": "Smoke on the Mountain",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Smoke_on_the_Mountain.lua"
+  ]
+ },
+ {
+  "retail_title": "Stamp Hunt",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Stamp_Hunt.lua"
+  ]
+ },
+ {
+  "retail_title": "Stardust",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Stardust.lua"
+  ]
+ },
+ {
+  "retail_title": "Synergistic Pursuits",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Synergistic_Pursuits.lua"
+  ]
+ },
+ {
+  "retail_title": "Synergistic Support",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Synergistic_Support.lua"
+  ]
+ },
+ {
+  "retail_title": "Teak Me to the Stars",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Hyper_Active.lua",
+   "scripts/quests/bastok/Teak_Me_to_the_Stars.lua"
+  ]
+ },
+ {
+  "retail_title": "The Bare Bones",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Map Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Bare_Bones.lua"
+  ]
+ },
+ {
+  "retail_title": "The Cold Light of Day",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Cold_Light_of_Day.lua"
+  ]
+ },
+ {
+  "retail_title": "The Curse Collector",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Curse_Collector.lua"
+  ]
+ },
+ {
+  "retail_title": "The Darksmith",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Darksmith.lua"
+  ]
+ },
+ {
+  "retail_title": "The Doorman",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Warrior Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Trust_Bastok.lua",
+   "scripts/quests/bastok/WAR_AF1_The_Doorman.lua",
+   "scripts/quests/bastok/WAR_AF2_The_Talekeepers_Truth.lua"
+  ]
+ },
+ {
+  "retail_title": "The Eleventh's Hour",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Hearts_of_Mythril.lua",
+   "scripts/quests/bastok/The_Elevenths_Hour.lua"
+  ]
+ },
+ {
+  "retail_title": "The Elvaan Goldsmith",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Father_Figure.lua",
+   "scripts/quests/bastok/The_Elvaan_Goldsmith.lua"
+  ]
+ },
+ {
+  "retail_title": "The First Meeting",
+  "categories": [
+   "Bastok Quests",
+   "Monk Artifact Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/MNK_AF1_Ghosts_of_the_Past.lua",
+   "scripts/quests/bastok/MNK_AF2_The_First_Meeting.lua",
+   "scripts/quests/bastok/MNK_AF3_True_Strength.lua",
+   "scripts/quests/jeuno/Borghertzs_Striking_Hands.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gustaberg Tour",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Gustaberg_Tour.lua",
+   "scripts/quests/outlands/The_Kuftal_Tour.lua"
+  ]
+ },
+ {
+  "retail_title": "The Naming Game",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Naming_Game.lua"
+  ]
+ },
+ {
+  "retail_title": "The Quadav's Curse",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Out_of_Ones_Shell.lua",
+   "scripts/quests/bastok/The_Quadavs_Curse.lua"
+  ]
+ },
+ {
+  "retail_title": "The Return of the Adventurer",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Return_of_the_Adventurer.lua"
+  ]
+ },
+ {
+  "retail_title": "The Signpost Marks the Spot",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Signpost_Marks_the_Spot.lua"
+  ]
+ },
+ {
+  "retail_title": "The Siren's Tear",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Love_and_Ice.lua",
+   "scripts/quests/bastok/The_Sirens_Tear.lua"
+  ]
+ },
+ {
+  "retail_title": "The Stars of Ifrit",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Stars_of_Ifrit.lua"
+  ]
+ },
+ {
+  "retail_title": "The Talekeeper's Gift",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Warrior Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/WAR_AF2_The_Talekeepers_Truth.lua",
+   "scripts/quests/bastok/WAR_AF3_The_Talekeepers_Gift.lua"
+  ]
+ },
+ {
+  "retail_title": "The Talekeeper's Truth",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Warrior Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/WAR_AF2_The_Talekeepers_Truth.lua",
+   "scripts/quests/bastok/WAR_AF3_The_Talekeepers_Gift.lua",
+   "scripts/quests/jeuno/Borghertzs_Warring_Hands.lua"
+  ]
+ },
+ {
+  "retail_title": "The Usual",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Usual.lua"
+  ]
+ },
+ {
+  "retail_title": "The Walls of Your Mind",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Walls_of_Your_Mind.lua"
+  ]
+ },
+ {
+  "retail_title": "The Weight of Your Limits",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Weight_of_Your_Limits.lua"
+  ]
+ },
+ {
+  "retail_title": "The Wisdom of Elders",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Wisdom_of_Elders.lua"
+  ]
+ },
+ {
+  "retail_title": "The Wondrous Whatchamacallit",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/The_Wondrous_Whatchamacallit.lua"
+  ]
+ },
+ {
+  "retail_title": "Till Death Do Us Part",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Till_Death_Do_Us_Part.lua"
+  ]
+ },
+ {
+  "retail_title": "Too Many Chefs",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Trial by Earth",
+  "categories": [
+   "Avatar Quests",
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Trial_by_Earth.lua",
+   "scripts/quests/windurst/SMN_AF1_The_Puppet_Master.lua"
+  ]
+ },
+ {
+  "retail_title": "Trial-Size Trial by Earth",
+  "categories": [
+   "Avatar Quests",
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Trial_Size_Trial_by_Earth.lua"
+  ]
+ },
+ {
+  "retail_title": "True Strength",
+  "categories": [
+   "Bastok Quests",
+   "Metalworks Quests",
+   "Monk Artifact Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/MNK_AF3_True_Strength.lua",
+   "scripts/quests/bastok/Trust_Bastok.lua",
+   "scripts/quests/hiddenQuests/Trust_Shantotto.lua"
+  ]
+ },
+ {
+  "retail_title": "Trust: Bastok",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Trust_Bastok.lua",
+   "scripts/quests/sandoria/Trust_Sandoria.lua",
+   "scripts/quests/windurst/Trust_Windurst.lua"
+  ]
+ },
+ {
+  "retail_title": "Vengeful Wrath",
+  "categories": [
+   "Bastok Mines Quests",
+   "Bastok Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Vengeful_Wrath.lua"
+  ]
+ },
+ {
+  "retail_title": "Welcome to Bastok",
+  "categories": [
+   "Bastok Quests",
+   "Port Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Guest_of_Hauteur.lua",
+   "scripts/quests/bastok/Welcome_to_Bastok.lua"
+  ]
+ },
+ {
+  "retail_title": "Wish Upon a Star",
+  "categories": [
+   "Bastok Markets Quests",
+   "Bastok Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Wish_Upon_a_Star.lua"
+  ]
+ }
+]

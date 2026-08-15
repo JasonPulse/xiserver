@@ -22,7 +22,13 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-            player:hasCompletedQuest(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.ODE_TO_THE_SERPENTS)
+                -- Fixed: this required Ode to the Serpents COMPLETED, but
+                -- Ode_to_the_Serpents.lua only advances once When the Bow
+                -- Breaks AND Fist of the People are both complete -- a
+                -- circular gate that deadlocked the whole chain, and
+                -- Soothing Waters / Embers of His Past behind it. Ode is the
+                -- parent and only needs to be ACTIVE for its sub-quests.
+                player:getQuestStatus(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.ODE_TO_THE_SERPENTS) ~= xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.AL_ZAHBI] =

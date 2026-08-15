@@ -68,7 +68,14 @@ quest.sections =
 
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_ACCEPTED
+            -- Repeatable: bg-wiki "Mandragora-Mad" lists Repeatable=Yes, and it is
+            -- one of the standard Windurst fame grinds. Without QUEST_COMPLETED
+            -- here no section matches once the quest is done and Yoran-Oran falls
+            -- back to default dialogue forever. Every sibling repeatable quest in
+            -- this directory (Something_Fishy, Creepy_Crawlies, Catch_It_If_You_Can,
+            -- Reap_What_You_Sow, Paying_Lip_Service) already does this.
+            return status == xi.questStatus.QUEST_ACCEPTED or
+                status == xi.questStatus.QUEST_COMPLETED
         end,
 
         [xi.zone.WINDURST_WALLS] =

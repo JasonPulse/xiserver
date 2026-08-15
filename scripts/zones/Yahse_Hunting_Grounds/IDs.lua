@@ -35,6 +35,7 @@ zones[xi.zone.YAHSE_HUNTING_GROUNDS] =
     },
     npc =
     {
+        CASTOFF_POINT_OFFSET   = GetFirstID('Castoff_Point'),
         REIVE_COLLISION_OFFSET = GetFirstID('_780'),
     },
 }

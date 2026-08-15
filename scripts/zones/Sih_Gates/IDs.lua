@@ -22,6 +22,8 @@ zones[xi.zone.SIH_GATES] =
     },
     npc =
     {
+        CASTOFF_POINT_OFFSET   = GetFirstID('Castoff_Point'),
+        SCALABLE_AREA_OFFSET   = GetFirstID('Scalable_Area'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7g0'),
     },
 }

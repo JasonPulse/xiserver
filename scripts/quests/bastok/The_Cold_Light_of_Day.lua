@@ -12,6 +12,8 @@ quest.reward =
     fame     = 30,
     fameArea = xi.fameArea.BASTOK,
     gil      = 500,
+    -- Added: wiki |Title=Crab Crusher. The reward table had no title key.
+    title    = xi.title.CRAB_CRUSHER,
 }
 
 quest.sections =

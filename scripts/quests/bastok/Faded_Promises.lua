@@ -7,13 +7,21 @@
 -- Kagetora : !pos -96 -2 29 236
 -- Alois    : !pos 96 -20 14 237
 -----------------------------------
+-- bg-wiki "Faded Promises" header: |Fame=Norg |FLevel=4 |Level=20
+-- |Quest Reqs=Ninja Job 20+ |Previous=[[Ayame and Kaede]].
+-- This is a Bastok-LOG quest but a NORG-FAME one -- it is Tenshodo work, run
+-- through Kagetora, and the log area is not the fame area. Both the gate and the
+-- reward tested and paid BASTOK fame, so the FLevel 4 requirement was being read
+-- off the wrong region and the payout was inflating Bastok fame instead of Norg.
+-- The Ayame and Kaede prerequisite was also missing entirely.
+-----------------------------------
 
 local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.FADED_PROMISES)
 
 quest.reward =
 {
     fame     = 10,
-    fameArea = xi.fameArea.BASTOK,
+    fameArea = xi.fameArea.NORG,
     item     = xi.item.FUKURO,
     title    = xi.title.ASSASSIN_REJECT,
 }
@@ -25,7 +33,8 @@ quest.sections =
             return status == xi.questStatus.QUEST_AVAILABLE and
                 player:getMainJob() == xi.job.NIN and
                 player:getMainLvl() >= 20 and
-                player:getFameLevel(xi.fameArea.BASTOK) >= 4
+                player:hasCompletedQuest(xi.questLog.BASTOK, xi.quest.id.bastok.AYAME_AND_KAEDE) and
+                player:getFameLevel(xi.fameArea.NORG) >= 4
         end,
 
         [xi.zone.METALWORKS] =

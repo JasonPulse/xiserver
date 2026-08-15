@@ -5,12 +5,16 @@
 -- Koru-Moru : Windurst Walls (E-7)
 -- Prereq: Blast from the Past (enforced via xi.quest.setMustZone in that quest)
 -----------------------------------
--- Retail: Koru-Moru alchemy side quest — quiz at Acolyte Hostels,
--- trade Cold Bone + Warm Egg, wait to JP midnight for Vile Elixir.
--- Simplified for 4-player server: trade Cold Bone + Warm Egg directly,
--- receive reward immediately. Quiz portion dropped — it's 6 RNG questions
--- that only gate the bonus Vile Elixir anyway.
--- CSIDs best-guess; verify with !cs in-game.
+-- Retail (bg-wiki "Nothing Matters"): Windurst fame 8, after Blast from the Past.
+-- Koru-Moru -> Fuepepe (Windurst Waters North L-6) -> the Acolyte Hostel (K-6),
+-- where you interact with each of the six ground-floor doors to play Quiz de
+-- Vana'diel and need 4-6 correct answers.
+--
+-- STILL SIMPLIFIED: the Fuepepe step and the six-door quiz are not implemented.
+--
+-- FABRICATED REWARD REMOVED: bg-wiki's Reward field is "10,000 Gil" and the Title
+-- is Seeker of Truth -- there is no Vile Elixir. This file was handing one out
+-- unconditionally with no quiz at all.
 -----------------------------------
 local quest = Quest:new(xi.questLog.WINDURST, xi.quest.id.windurst.NOTHING_MATTERS)
 
@@ -19,7 +23,6 @@ quest.reward =
     fame     = 40,
     fameArea = xi.fameArea.WINDURST,
     gil      = 10000,
-    item     = xi.item.VILE_ELIXIR,
     title    = xi.title.SEEKER_OF_TRUTH,
 }
 

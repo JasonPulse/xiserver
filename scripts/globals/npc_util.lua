@@ -547,7 +547,11 @@ end
 ---@field item xi.item|itemQuantityEntry|multipleItemList?
 ---@field itemParams { silent: boolean?, fromTrade: boolean?, multiple: boolean? }?
 ---@field keyItem xi.keyItem|{ [integer]: xi.keyItem }?
----@field ki xi.keyItem|{ [integer]: xi.keyItem }?
+-- NOTE: there is deliberately no `ki` field. giveReward below reads only
+-- params['keyItem']; a `ki = ...` entry in a reward table is silently ignored and
+-- the key item is never handed over. This annotation used to advertise `ki`,
+-- which made that failure look like valid usage. Removing it lets the language
+-- server flag `ki =` in a rewardParam table as an unknown field instead.
 ---@field fame integer?
 ---@field fameArea xi.fameArea?
 ---@field bayld integer?

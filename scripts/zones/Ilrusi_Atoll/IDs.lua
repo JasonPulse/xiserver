@@ -98,6 +98,19 @@ zones[xi.zone.ILRUSI_ATOLL] =
                 UNDEAD_TOAD     = 17002544,
             },
         },
+
+        -- Single-target assault: the only objective is Lamia No.13 herself.
+        -- 17002517 -> (17002517-16777216) = 225301, 225301//4096 = 55 rem 21,
+        -- i.e. Ilrusi Atoll. mob_pools 2340, mob_groups (3, 2340, 55,
+        -- 'Lamia_No13', respawn 0 = pop-only), spawn point at
+        -- (24.381, -4.094, -209.261) rot 42, level 77-78.
+        [xi.assault.mission.LAMIA_NO_13] =
+        {
+            MOBS_START =
+            {
+                LAMIA_NO_13 = 17002517,
+            },
+        },
     },
     npc =
     {

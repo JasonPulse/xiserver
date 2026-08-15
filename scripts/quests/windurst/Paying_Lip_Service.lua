@@ -5,6 +5,9 @@
 -- Tapoh Lihzeh !pos 51.011 -3.749 54.402 241
 -----------------------------------
 
+-- bg-wiki "Paying Lip Service": Windurst fame 1, trade 3 Beehive Chips (150 gil)
+-- or 2 Remi Shells (200 gil). Repeatable. Title Kisser Make-Upper.
+-- Explicitly: "Will not start quest if Chocobilious is active."
 local quest = Quest:new(xi.questLog.WINDURST, xi.quest.id.windurst.PAYING_LIP_SERVICE)
 
 quest.reward =
@@ -17,11 +20,11 @@ quest.reward =
 local beehiveGil = 150
 local remiGil    = 200
 
-local function rewardBeehive(player)
+local function rewardBeehive()
     return xi.settings.main.GIL_RATE * beehiveGil
 end
 
-local function rewardRemi(player)
+local function rewardRemi()
     return xi.settings.main.GIL_RATE * remiGil
 end
 
@@ -29,7 +32,11 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            -- bg-wiki: will not start while Chocobilious is active. That quest is
+            -- implemented here (windurst/Chocobilious.lua), so the conflict is
+            -- reachable.
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                player:getQuestStatus(xi.questLog.WINDURST, xi.quest.id.windurst.CHOCOBILIOUS) ~= xi.questStatus.QUEST_ACCEPTED
         end,
 
         [xi.zone.WINDURST_WOODS] =
@@ -37,7 +44,7 @@ quest.sections =
             ['Tapoh_Lihzeh'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(477, 0, xi.item.BEEHIVE_CHIP, xi.item.REMI_SHELL, rewardBeehive(player), rewardRemi(player))
+                    return quest:progressEvent(477, 0, xi.item.BEEHIVE_CHIP, xi.item.REMI_SHELL, rewardBeehive(), rewardRemi())
                 end,
             },
 
@@ -63,7 +70,7 @@ quest.sections =
             ['Tapoh_Lihzeh'] =
             {
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(478, 0, xi.item.BEEHIVE_CHIP, xi.item.REMI_SHELL, rewardBeehive(player), rewardRemi(player))
+                    return quest:progressEvent(478, 0, xi.item.BEEHIVE_CHIP, xi.item.REMI_SHELL, rewardBeehive(), rewardRemi())
                 end,
 
                 onTrade = function(player, npc, trade)

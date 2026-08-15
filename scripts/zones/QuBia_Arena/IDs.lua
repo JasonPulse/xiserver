@@ -68,6 +68,8 @@ zones[xi.zone.QUBIA_ARENA] =
         GHUL_I_BEABAN            = GetFirstID('Ghul-I-Beaban_DRK'),
         GLADIATORIAL_WEAPON      = GetFirstID('Gladiatorial_Weapon'),
         MAAT                     = GetFirstID('Maat'),
+        LAILA                    = GetFirstID('Laila'), -- A Furious Finale (DNC limit break), 3 arenas
+
         NEPHIYL_RAMPARTBREACHER  = GetFirstID('Nephiyl_Rampartbreacher'),
         SEED_ORC                 = GetFirstID('Seed_Orc'),
         VAICOLIAUX_B_DAURPHE     = GetFirstID('Vaicoliaux_B_DAurphe'),

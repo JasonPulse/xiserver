@@ -1,0 +1,1799 @@
+[
+ {
+  "retail_title": "A Candlelight Vigil",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Candlelight_Vigil.lua",
+   "scripts/quests/jeuno/Candle_Making.lua"
+  ]
+ },
+ {
+  "retail_title": "A Chocobo's Tale",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/hiddenQuests/Trust_Prishe.lua",
+   "scripts/quests/jeuno/A_Chocobos_Tale.lua"
+  ]
+ },
+ {
+  "retail_title": "A Clock Most Delicate",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Clock_Most_Delicate.lua",
+   "scripts/quests/jeuno/Deal_with_Tenshodo.lua",
+   "scripts/quests/jeuno/Save_the_Clock_Tower.lua"
+  ]
+ },
+ {
+  "retail_title": "A Furious Finale",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Furious_Finale.lua"
+  ]
+ },
+ {
+  "retail_title": "A Minstrel in Despair",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Minstrel_In_Despair.lua",
+   "scripts/quests/jeuno/Path_of_the_Bard.lua"
+  ]
+ },
+ {
+  "retail_title": "A New Dawn",
+  "categories": [
+   "Beastmaster Artifact Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Quaternary Trial in Tandem",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Quaternary_Trial_in_Tandem.lua",
+   "scripts/quests/jeuno/A_Trial_in_Tandem_Revisited.lua"
+  ]
+ },
+ {
+  "retail_title": "A Reputation in Ruins",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Reputation_in_Ruins.lua"
+  ]
+ },
+ {
+  "retail_title": "A Thousand Cuts",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Trial in Tandem",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Trial_in_Tandem.lua",
+   "scripts/quests/jeuno/A_Trial_in_Tandem_Redux.lua"
+  ]
+ },
+ {
+  "retail_title": "A Trial in Tandem Revisited",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Trial_in_Tandem_Revisited.lua"
+  ]
+ },
+ {
+  "retail_title": "A Trial in Tandem, Redux",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Trial_in_Tandem_Redux.lua",
+   "scripts/quests/jeuno/Yet_Another_Trial_in_Tandem.lua"
+  ]
+ },
+ {
+  "retail_title": "All in the Cards",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/All_in_the_Cards.lua"
+  ]
+ },
+ {
+  "retail_title": "Apocalypse Nigh",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/hiddenQuests/Trust_Prishe.lua",
+   "scripts/quests/hiddenQuests/Trust_Ulmia.lua",
+   "scripts/quests/jeuno/Apocalypse_Nigh.lua",
+   "scripts/quests/jeuno/Shadows_of_the_Departed.lua",
+   "scripts/quests/otherAreas/Survival_of_the_Wisest.lua"
+  ]
+ },
+ {
+  "retail_title": "Atop the Highest Mountains",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB02_Atop_the_Highest_Mountains.lua"
+  ]
+ },
+ {
+  "retail_title": "Axe the Competition",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Axe_the_Competition.lua"
+  ]
+ },
+ {
+  "retail_title": "Beam Me Up...No, Not There!",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Beat Around the Bushin",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB09_1_Dormant_Powers_Dislodged.lua"
+  ]
+ },
+ {
+  "retail_title": "Beyond Infinity",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB09_2_Prelude_to_Puissance.lua",
+   "scripts/quests/jeuno/LB10_Beyond_Infinity.lua"
+  ]
+ },
+ {
+  "retail_title": "Beyond the Stars",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB08_Beyond_the_Stars.lua",
+   "scripts/quests/jeuno/LB09_1_Dormant_Powers_Dislodged.lua"
+  ]
+ },
+ {
+  "retail_title": "Beyond the Sun",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB05_2_Beyond_the_Sun.lua"
+  ]
+ },
+ {
+  "retail_title": "Blessed Radiance",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Blessed_Radiance.lua",
+   "scripts/quests/jeuno/Mirror_Images.lua"
+  ]
+ },
+ {
+  "retail_title": "Blighted Gloom",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Blessed_Radiance.lua",
+   "scripts/quests/jeuno/Blighted_Gloom.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Calling Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Summoner Artifact Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Calling_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Chasing Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ranger Artifact Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Chasing_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Dragon Hands",
+  "categories": [
+   "Dragoon Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Dragon_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Harmonious Hands",
+  "categories": [
+   "Bard Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Harmonious_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Healing Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests",
+   "White Mage Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Healing_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Loyal Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Samurai Artifact Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Loyal_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Lurking Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Ninja Artifact Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Lurking_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Shadowy Hands",
+  "categories": [
+   "Dark Knight Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Shadowy_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Sneaky Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Thief Artifact Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Sneaky_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Sorcerous Hands",
+  "categories": [
+   "Black Mage Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Sorcerous_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Stalwart Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Paladin Artifact Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Stalwart_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Striking Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Monk Artifact Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Striking_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Vermillion Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Red Mage Artifact Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Vermillion_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Warring Hands",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests",
+   "Warrior Artifact Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Warring_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Borghertz's Wild Hands",
+  "categories": [
+   "Beastmaster Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Wild_Hands.lua",
+   "scripts/quests/jeuno/helpers.lua"
+  ]
+ },
+ {
+  "retail_title": "Candle-making",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Candle_Making.lua"
+  ]
+ },
+ {
+  "retail_title": "Chameleon Capers",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Bait_and_Switch.lua",
+   "scripts/quests/jeuno/Chameleon_Capers.lua"
+  ]
+ },
+ {
+  "retail_title": "Child's Play",
+  "categories": [
+   "Jeuno Quests",
+   "Port Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Childs_Play.lua"
+  ]
+ },
+ {
+  "retail_title": "Chocobo on the Loose!",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Chocobo_on_the_Loose.lua",
+   "scripts/quests/jeuno/Chocobos_Wounds.lua"
+  ]
+ },
+ {
+  "retail_title": "Chocobo's Wounds",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Chocobos_Wounds.lua",
+   "scripts/quests/jeuno/Save_My_Son.lua"
+  ]
+ },
+ {
+  "retail_title": "Clash of the Comrades",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Trial_in_Tandem.lua",
+   "scripts/quests/jeuno/Clash_of_the_Comrades.lua"
+  ]
+ },
+ {
+  "retail_title": "Collect Tarut Cards",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/All_in_the_Cards.lua",
+   "scripts/quests/jeuno/Collect_Tarut_Cards.lua",
+   "scripts/quests/jeuno/Rubbish_Day.lua"
+  ]
+ },
+ {
+  "retail_title": "Comeback Queen",
+  "categories": [
+   "Dancer Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/DNC_AF2_The_Road_to_Divadom.lua",
+   "scripts/quests/jeuno/DNC_AF3_Comeback_Queen.lua"
+  ]
+ },
+ {
+  "retail_title": "Community Service",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Community_Service.lua"
+  ]
+ },
+ {
+  "retail_title": "Cook's Pride",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/windurst/Hoist_the_Jelly_Roger.lua"
+  ]
+ },
+ {
+  "retail_title": "Crest of Davoi (Quest)",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Crest_of_Davoi.lua",
+   "scripts/quests/jeuno/Save_My_Sister.lua"
+  ]
+ },
+ {
+  "retail_title": "Deal with Tenshodo",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Deal_with_Tenshodo.lua"
+  ]
+ },
+ {
+  "retail_title": "Disappointment Valley",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Dormant Powers Dislodged",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB09_1_Dormant_Powers_Dislodged.lua",
+   "scripts/quests/jeuno/LB09_2_Prelude_to_Puissance.lua"
+  ]
+ },
+ {
+  "retail_title": "Ducal Hospitality",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Ducal_Hospitality.lua"
+  ]
+ },
+ {
+  "retail_title": "Empty Memories",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Empty_Memories.lua"
+  ]
+ },
+ {
+  "retail_title": "Expanding Horizons",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB07_Expanding_Horizons.lua",
+   "scripts/quests/jeuno/LB08_Beyond_the_Stars.lua"
+  ]
+ },
+ {
+  "retail_title": "Fistful of Fury",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Fistful_of_Fury.lua"
+  ]
+ },
+ {
+  "retail_title": "Full Speed Ahead!",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/full_speed_ahead.lua"
+  ]
+ },
+ {
+  "retail_title": "Further Founts",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Girl in the Looking Glass",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Girl_in_the_Looking_Glass.lua",
+   "scripts/quests/jeuno/Past_Reflections.lua"
+  ]
+ },
+ {
+  "retail_title": "Go With the Flow",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Golden Rule",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Hook, Line, and Sinker",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/hiddenQuests/Trust_Prishe.lua",
+   "scripts/quests/jeuno/Hook_Line_and_Sinker.lua"
+  ]
+ },
+ {
+  "retail_title": "Impermanence",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "In Defiant Challenge",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB01_In_Defiant_Challenge.lua"
+  ]
+ },
+ {
+  "retail_title": "In the Mood for Love",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/hiddenQuests/Trust_Prishe.lua",
+   "scripts/quests/jeuno/In_the_Mood_for_Love.lua"
+  ]
+ },
+ {
+  "retail_title": "Leonine Excruciation",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Lure of the Wildcat (Jeuno)",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Lure_of_the_Wildcat_Bastok.lua",
+   "scripts/quests/jeuno/Lure_of_the_Wildcat_Jeuno.lua",
+   "scripts/quests/sandoria/Lure_of_the_Wildcat_Sandoria.lua",
+   "scripts/quests/windurst/Lure_of_the_Wildcat_Windurst.lua"
+  ]
+ },
+ {
+  "retail_title": "Martial Mastery",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Martial_Mastery.lua"
+  ]
+ },
+ {
+  "retail_title": "Middle Lands Investigation",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Minnow Wrangler",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Mirror Images",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Mirror_Images.lua"
+  ]
+ },
+ {
+  "retail_title": "Mirror, Mirror",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Mixed Signals",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Clash_of_the_Comrades.lua",
+   "scripts/quests/jeuno/Mixed_Signals.lua"
+  ]
+ },
+ {
+  "retail_title": "Mysteries of Beadeaux I",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Mysteries_of_Beadeaux_I.lua"
+  ]
+ },
+ {
+  "retail_title": "Mysteries of Beadeaux II",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Mysteries_of_Beadeaux_I.lua",
+   "scripts/quests/jeuno/Mysteries_of_Beadeaux_II.lua"
+  ]
+ },
+ {
+  "retail_title": "Never to Return",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Never_to_Return.lua"
+  ]
+ },
+ {
+  "retail_title": "New Worlds Await",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB06_New_Worlds_Await.lua",
+   "scripts/quests/jeuno/LB07_Expanding_Horizons.lua"
+  ]
+ },
+ {
+  "retail_title": "Northward",
+  "categories": [
+   "Jeuno Quests",
+   "Map Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Northward.lua"
+  ]
+ },
+ {
+  "retail_title": "Now Recording...",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Over Ninety-Thousand",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Painful Memory",
+  "categories": [
+   "Bard Artifact Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Painful_Memory.lua",
+   "scripts/quests/jeuno/Path_of_the_Bard.lua",
+   "scripts/quests/jeuno/The_Requiem.lua"
+  ]
+ },
+ {
+  "retail_title": "Panta Rhei",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Past Reflections",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Blighted_Gloom.lua",
+   "scripts/quests/jeuno/Past_Reflections.lua"
+  ]
+ },
+ {
+  "retail_title": "Path of the Bard",
+  "categories": [
+   "Additional Job Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Painful_Memory.lua",
+   "scripts/quests/jeuno/Path_of_the_Bard.lua"
+  ]
+ },
+ {
+  "retail_title": "Path of the Beastmaster",
+  "categories": [
+   "Additional Job Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Path_of_the_Beastmaster.lua",
+   "scripts/quests/jeuno/Save_My_Son.lua",
+   "scripts/quests/jeuno/Wings_of_Gold.lua"
+  ]
+ },
+ {
+  "retail_title": "Petals of Recollection",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Prelude to Puissance",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB09_2_Prelude_to_Puissance.lua",
+   "scripts/quests/jeuno/LB10_Beyond_Infinity.lua"
+  ]
+ },
+ {
+  "retail_title": "Pretty Little Things",
+  "categories": [
+   "Jeuno Quests",
+   "Mog House Exit Quests",
+   "Port Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Pretty_Little_Things.lua"
+  ]
+ },
+ {
+  "retail_title": "Regaining Trust",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Mixed_Signals.lua",
+   "scripts/quests/jeuno/Regaining_Trust.lua"
+  ]
+ },
+ {
+  "retail_title": "Remembrance of Flowers Past",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Researchers from the West",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Riding on the Clouds",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB04_Riding_on_the_clouds.lua"
+  ]
+ },
+ {
+  "retail_title": "Rubbish Day",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Rubbish_Day.lua"
+  ]
+ },
+ {
+  "retail_title": "Save My Sister",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Crest_of_Davoi.lua",
+   "scripts/quests/jeuno/Save_My_Sister.lua"
+  ]
+ },
+ {
+  "retail_title": "Save My Son",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Chocobos_Wounds.lua",
+   "scripts/quests/jeuno/Path_of_the_Beastmaster.lua",
+   "scripts/quests/jeuno/Save_My_Son.lua"
+  ]
+ },
+ {
+  "retail_title": "Save the Clock Tower",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Save_the_Clock_Tower.lua",
+   "scripts/quests/jeuno/The_Clockmaster.lua"
+  ]
+ },
+ {
+  "retail_title": "Scattered Into Shadow",
+  "categories": [
+   "Beastmaster Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Wild_Hands.lua",
+   "scripts/quests/jeuno/Scattered_into_Shadow.lua",
+   "scripts/quests/jeuno/Wings_of_Gold.lua"
+  ]
+ },
+ {
+  "retail_title": "Searching for the Right Words",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Shadows of the Departed",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Apocalypse_Nigh.lua",
+   "scripts/quests/jeuno/Shadows_of_the_Departed.lua",
+   "scripts/quests/jeuno/Storms_of_Fate.lua"
+  ]
+ },
+ {
+  "retail_title": "Shattering Stars",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB05_1_Shattering_Stars.lua",
+   "scripts/quests/jeuno/LB05_2_Beyond_the_Sun.lua"
+  ]
+ },
+ {
+  "retail_title": "Shifty Shades of Prey",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Shiver Me Timbers",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Storms of Fate",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Shadows_of_the_Departed.lua",
+   "scripts/quests/jeuno/Storms_of_Fate.lua"
+  ]
+ },
+ {
+  "retail_title": "Teleports by Twilight",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Tenshodo Membership",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Tenshodo_Membership.lua"
+  ]
+ },
+ {
+  "retail_title": "The Antique Collector",
+  "categories": [
+   "Jeuno Quests",
+   "Map Quests",
+   "Port Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Antique_Collector.lua"
+  ]
+ },
+ {
+  "retail_title": "The Circle of Time",
+  "categories": [
+   "Bard Artifact Quests",
+   "Jeuno Quests",
+   "Port Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Circle_of_Time.lua"
+  ]
+ },
+ {
+  "retail_title": "The Clockmaster",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Clockmaster.lua"
+  ]
+ },
+ {
+  "retail_title": "The Flying Machine of Eld",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Gobbiebag Part I",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_I.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_II.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part II",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_II.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_III.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part III",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_III.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_IV.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part IV",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_IV.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_V.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part IX",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_IX.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_X.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part V",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_V.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_VI.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part VI",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_VI.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_VII.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part VII",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_VII.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_VIII.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part VIII",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_IX.lua",
+   "scripts/quests/jeuno/The_Gobbiebag_Part_VIII.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gobbiebag Part X",
+  "categories": [
+   "Gobbiebag Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Gobbiebag_Part_X.lua"
+  ]
+ },
+ {
+  "retail_title": "The Goblin Tailor",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Goblin_Tailor.lua"
+  ]
+ },
+ {
+  "retail_title": "The Kind Cardian",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Lost Cardian",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "The Miraculous Dale",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Miraculous_Dale.lua"
+  ]
+ },
+ {
+  "retail_title": "The Old Monument",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Minstrel_In_Despair.lua",
+   "scripts/quests/jeuno/The_Old_Monument.lua"
+  ]
+ },
+ {
+  "retail_title": "The Requiem",
+  "categories": [
+   "Bard Artifact Quests",
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Borghertzs_Harmonious_Hands.lua",
+   "scripts/quests/jeuno/The_Circle_of_Time.lua",
+   "scripts/quests/jeuno/The_Requiem.lua"
+  ]
+ },
+ {
+  "retail_title": "The Road to Aht Urhgan",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/The_Road_to_Aht_Urhgan.lua"
+  ]
+ },
+ {
+  "retail_title": "The Road to Divadom",
+  "categories": [
+   "Dancer Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/hiddenQuests/Crafted_Dancer_Artifact.lua",
+   "scripts/quests/jeuno/DNC_AF1_The_Unfinished_Waltz.lua",
+   "scripts/quests/jeuno/DNC_AF2_The_Road_to_Divadom.lua",
+   "scripts/quests/jeuno/DNC_AF3_Comeback_Queen.lua"
+  ]
+ },
+ {
+  "retail_title": "The Unfinished Waltz",
+  "categories": [
+   "Dancer Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/DNC_AF1_The_Unfinished_Waltz.lua",
+   "scripts/quests/jeuno/DNC_AF2_The_Road_to_Divadom.lua",
+   "scripts/quests/jeuno/Lakeside_Minuet.lua"
+  ]
+ },
+ {
+  "retail_title": "The Wonder Magic Set",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Childs_Play.lua"
+  ]
+ },
+ {
+  "retail_title": "To Kill Mocking Birds",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlisted Qualities",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Girl_in_the_Looking_Glass.lua",
+   "scripts/quests/jeuno/Unlisted_Qualities.lua"
+  ]
+ },
+ {
+  "retail_title": "Unlocking a Myth",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Bard)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Beastmaster)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Black Mage)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Blue Mage)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Corsair)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Dancer)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Dark Knight)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Dragoon)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Monk)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Ninja)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Paladin)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Puppetmaster)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Ranger)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Red Mage)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Samurai)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Scholar)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Summoner)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Thief)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (Warrior)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Unlocking a Myth (White Mage)",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "VW Op. 115: Valkurm Duster",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests",
+   "Voidwatch Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/VW_OP_115_Valkurm_Duster.lua"
+  ]
+ },
+ {
+  "retail_title": "VW Op. 118: Buburimu Squall",
+  "categories": [
+   "Jeuno Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests",
+   "Voidwatch Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/VW_OP_118_Buburimu_Squall.lua"
+  ]
+ },
+ {
+  "retail_title": "Whence Blows the Wind",
+  "categories": [
+   "Jeuno Quests",
+   "Limit Break Quests",
+   "Quests",
+   "Ru'Lude Gardens Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/LB03_Whence_Blows_the_wind.lua"
+  ]
+ },
+ {
+  "retail_title": "Wings of Gold",
+  "categories": [
+   "Beastmaster Artifact Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Scattered_into_Shadow.lua",
+   "scripts/quests/jeuno/Wings_of_Gold.lua"
+  ]
+ },
+ {
+  "retail_title": "Yet Another Trial in Tandem",
+  "categories": [
+   "Fellowship Quests",
+   "Jeuno Quests",
+   "Quests",
+   "Upper Jeuno Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/A_Quaternary_Trial_in_Tandem.lua",
+   "scripts/quests/jeuno/Yet_Another_Trial_in_Tandem.lua"
+  ]
+ },
+ {
+  "retail_title": "Your Crystal Ball",
+  "categories": [
+   "Jeuno Quests",
+   "Lower Jeuno Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Never_to_Return.lua",
+   "scripts/quests/jeuno/Your_Crystal_Ball.lua"
+  ]
+ }
+]

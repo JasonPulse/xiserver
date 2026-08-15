@@ -5,12 +5,18 @@
 -- !pos 101.329 -6.999 -29.042 50
 -----------------------------------
 ---@type TNpcEntity
+-- Fixed: this file wrote 'OperationTeaTimeProgress' (capital T in Time) while
+-- Nashmau/npcs/Dnegan.lua and Caedarva_Mire/npcs/qm10.lua both read
+-- 'OperationTeatimeProgress'. The progress written here was never seen, so
+-- Dnegan's tea cutscene could not fire and Operation Teatime was dead. qm10's
+-- completeQuest also clears `var = 'OperationTeatimeProgress'`, so the readers'
+-- spelling is the canonical one.
 local entity = {}
 
 entity.onTrade = function(player, npc, trade)
     if
         npcUtil.tradeHas(trade, { xi.item.FLASK_OF_SLEEPING_POTION, xi.item.CUP_OF_CHAI }) and
-        player:getCharVar('OperationTeaTimeProgress') == 1
+        player:getCharVar('OperationTeatimeProgress') == 1
     then
         -- Chai, Sleeping Potion
         player:startEvent(780)
@@ -22,7 +28,7 @@ entity.onTrigger = function(player, npc)
     local theWaywardAutomaton = player:getQuestStatus(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.THE_WAYWARD_AUTOMATON)
     local theWaywardAutomatonProgress = player:getCharVar('TheWaywardAutomatonProgress')
     local operationTeaTime = player:getQuestStatus(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.OPERATION_TEATIME)
-    local operationTeaTimeProgress = player:getCharVar('OperationTeaTimeProgress')
+    local operationTeaTimeProgress = player:getCharVar('OperationTeatimeProgress')
     local playerLvl = player:getMainLvl()
     local playerJob = player:getMainJob()
 
@@ -95,10 +101,10 @@ entity.onEventFinish = function(player, csid, option, npc)
     elseif csid == 776 then
         npcUtil.completeQuest(player, xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.THE_WAYWARD_AUTOMATON, { item = xi.item.TURBO_ANIMATOR, var = 'TheWaywardAutomatonProgress' })
     elseif csid == 778 then
-        player:setCharVar('OperationTeaTimeProgress', 1)
+        player:setCharVar('OperationTeatimeProgress', 1)
         player:addQuest(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.OPERATION_TEATIME)
     elseif csid == 780 then
-        player:setCharVar('OperationTeaTimeProgress', 2)
+        player:setCharVar('OperationTeatimeProgress', 2)
         player:confirmTrade()
     end
 end

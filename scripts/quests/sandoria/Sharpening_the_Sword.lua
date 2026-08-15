@@ -129,7 +129,10 @@ quest.sections =
     {
         check = function(player, status)
             return status == xi.questStatus.QUEST_COMPLETED and
-                player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.A_BOY_S_DREAM) == xi.quest.status.AVAILABLE
+                -- Two nils fixed here: the enum is A_BOYS_DREAM (quests.lua:93),
+                -- not A_BOY_S_DREAM, and there is no `xi.quest.status` table at
+                -- all -- the rest of this file correctly uses xi.questStatus.
+                player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.A_BOYS_DREAM) == xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.NORTHERN_SAN_DORIA] =

@@ -22,7 +22,9 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getFameLevel(xi.fameArea.JEUNO) >= 2
+                -- bg-wiki header: |Fame=Jeuno |FLevel=5. Was 2, i.e. flaggable
+                -- three fame levels early.
+                player:getFameLevel(xi.fameArea.JEUNO) >= 5
         end,
 
         [xi.zone.UPPER_JEUNO] =

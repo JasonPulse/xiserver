@@ -17,7 +17,9 @@ quest.reward =
     fame     = 80,
     fameArea = xi.fameArea.BASTOK,
     gil      = 1200,
-    title    = xi.title.TAVNAZIAN_SQUIRE,
+    -- Fixed: wiki |Title=Trash Collector. TAVNAZIAN_SQUIRE (339) is the reward
+    -- for A Hard Day's Knight, not this quest.
+    title    = xi.title.TRASH_COLLECTOR,
 }
 
 local kiCheck = function(player)

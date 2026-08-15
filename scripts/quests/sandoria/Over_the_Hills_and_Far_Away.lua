@@ -5,6 +5,16 @@
 -- Antreneau         : !pos -71 -5 -39 232
 -- qm_moblin_hotrok  : !pos -299 -62 -18 116
 -----------------------------------
+-- bg-wiki "Over the Hills and Far Away" header:
+--   |Previous=[[A Squire's Test II]] [[The Medicine Woman]]  |Fame=San d'Oria
+--   |FLevel=8  |Item Reqs=[[Moblin Hotrok]]
+-- The check tested A_TASTE_FOR_MEAT, which bg-wiki does not list as a
+-- prerequisite at all; A Squire's Test II is the one it names, and it is also the
+-- quest Diary.lua reads alongside The Medicine Woman.
+-- The DiaryPage >= 4 requirement below was unreachable until the page 2 -> page 3
+-- deadlock in scripts/zones/Southern_San_dOria/npcs/Diary.lua was removed; see
+-- the note there.
+-----------------------------------
 local uleguerandID = zones[xi.zone.ULEGUERAND_RANGE]
 -----------------------------------
 
@@ -24,7 +34,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.A_TASTE_FOR_MEAT) == xi.questStatus.QUEST_COMPLETED and
+                player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.A_SQUIRES_TEST_II) == xi.questStatus.QUEST_COMPLETED and
                 player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.THE_MEDICINE_WOMAN) == xi.questStatus.QUEST_COMPLETED and
                 player:getCharVar('Quest[0][100]Option') == 0 and
                 player:getCharVar('DiaryPage') >= 4 and

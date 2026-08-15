@@ -21,9 +21,11 @@ quest.sections =
             ['Chamama'] =
             {
                 onTrigger = function(player, npc)
-                    if math.random(1, 2) == 1 then
-                        return quest:progressEvent(654, 0, xi.item.RARAB_TAIL)
-                    end
+                    -- No random gate on the offer: bg-wiki "In a Pickle" randomises
+                    -- Chamama's *rejection of the traded stone*, which onTrade
+                    -- already does. Gating the offer itself made the quest
+                    -- intermittently un-startable.
+                    return quest:progressEvent(654, 0, xi.item.RARAB_TAIL)
                 end,
             },
 
@@ -104,7 +106,9 @@ quest.sections =
                         return quest:progressEvent(660)
                     elseif quest:getVar(player, 'Repeat') == 1 then
                         return quest:progressEvent(655, 0, xi.item.RARAB_TAIL)
-                    elseif math.random(1, 2) == 1 then
+                    else
+                        -- 661 is the repeat offer; its finish handler sets Repeat=1.
+                        -- Same reasoning as the initial offer above: no random gate.
                         return quest:progressEvent(661)
                     end
                 end,

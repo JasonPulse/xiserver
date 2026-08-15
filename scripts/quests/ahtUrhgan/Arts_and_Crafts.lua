@@ -12,9 +12,11 @@
 
 local quest = Quest:new(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.ARTS_AND_CRAFTS)
 
+-- bg-wiki "Arts and Crafts": the reward is a Sutlac, or an Imperial *Bronze*
+-- Piece if you trade the Sutlac back to Hadahda. Not Silver.
 quest.reward =
 {
-    item = xi.item.IMPERIAL_SILVER_PIECE,
+    item = xi.item.IMPERIAL_BRONZE_PIECE,
 }
 
 quest.sections =

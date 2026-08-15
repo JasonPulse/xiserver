@@ -63,9 +63,16 @@ quest.sections =
                 -- The client drives the whole massage sequence inside 5086 and
                 -- allows retries in-event (14218/14219), so the event only
                 -- reaches its finish handler once the player has succeeded.
+                -- Promotion_First_Lieutenant completes its final event the same
+                -- way, and likewise clears the previous rank's badge and resets
+                -- the assault counter.
                 [5086] = function(player, csid, option, npc)
                     quest:begin(player)
-                    quest:complete(player)
+
+                    if quest:complete(player) then
+                        player:delKeyItem(xi.ki.FL_WILDCAT_BADGE)
+                        player:setCharVar('AssaultPromotion', 0)
+                    end
                 end,
             },
         },

@@ -77,7 +77,13 @@ quest.sections =
                 end,
 
                 [126] = function(player, csid, option, npc)
-                    quest:complete(player)
+                    if quest:complete(player) then
+                        -- Till Death Do Us Part requires a zone-out after this:
+                        -- bg-wiki "You must have zoned once after finishing
+                        -- Forever to Hold to receive this quest." mustZone is a
+                        -- localVar, so it clears on the next zone change.
+                        quest:setMustZone(player)
+                    end
                 end,
             },
         },

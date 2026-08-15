@@ -79,7 +79,13 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        if GetSystemTime() >= quest:getVar(player, 'Wait') + 60 then -- 1 minute wait time
+                        -- 'Wait' is already stamped as GetSystemTime() + 60 by the
+                        -- Ahriman Lens trade below, so the deadline is the stored
+                        -- value itself. Adding another 60 here made the real wait
+                        -- 120 seconds, against bg-wiki's "Wait one minute (Earth
+                        -- Time), then you'll be able to check the Rockwell" -- and
+                        -- against this line's own comment.
+                        if GetSystemTime() >= quest:getVar(player, 'Wait') then
                             return quest:progressEvent(52)
                         else
                             return quest:messageSpecial(mazeID.text.WAIT_A_BIT_LONGER, 0, xi.item.DIVINATION_SPHERE)

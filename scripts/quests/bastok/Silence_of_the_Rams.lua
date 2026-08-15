@@ -12,7 +12,10 @@ local quest = Quest:new(xi.questLog.BASTOK, xi.quest.id.bastok.SILENCE_OF_THE_RA
 quest.reward =
 {
     fame     = 125,
-    fameArea = xi.fameArea.BASTOK,
+    -- Fixed: wiki |Fame=Norg, and this quest already gates on
+    -- getFameLevel(NORG) >= 2. Paying BASTOK fame meant clearing it made no
+    -- progress toward its own Next quest (Fistful of Fury, Norg FLevel 3).
+    fameArea = xi.fameArea.NORG,
     item     = xi.item.PURPLE_BELT,
     title    = xi.title.PURPLE_BELT,
 }

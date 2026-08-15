@@ -101,10 +101,11 @@ quest.sections =
                             player:messageSpecial(tremorsID.text.TITAN_UNLOCKED, 0, 0, 1)
                         end
 
-                        if not player:hasItem(xi.item.SCROLL_OF_INSTANT_WARP) then
-                            npcUtil.giveItem(player, xi.item.SCROLL_OF_INSTANT_WARP)
-                        end
-
+                        -- Fixed: the scroll was granted here AND listed in
+                        -- quest.reward.item, and npcUtil.completeQuest grants
+                        -- params['item'] unconditionally (npc_util.lua:661-665),
+                        -- so a player received TWO. The wiki lists one. The
+                        -- reward table is now the single source.
                         quest:complete(player)
                     end
                 end,

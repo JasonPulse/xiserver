@@ -108,7 +108,18 @@ INSERT INTO `instance_list` VALUES (6602,'sagelord_elimination',66,52,30,-300.00
 
 -- LEUJAOAM_SANCTUM (zoneID: 69, starting id: 6900)
 INSERT INTO `instance_list` VALUES (6900,'leujaoam_cleansing',69,79,30,280.000,-7.500,35.000,195,NULL,NULL,NULL,NULL);
-INSERT INTO `instance_list` VALUES (6901,'orichalcum_survey',69,79,30,-432.000,-27.627,169.000,131,NULL,NULL,NULL,NULL);
+-- Commented out 2026-08-11: this row was ACTIVE but no instance script exists at
+-- scripts/zones/Leujaoam_Sanctum/instances/orichalcum_survey.lua, and
+-- luautils.cpp:2047 resolves an instance through that path -- so a player could
+-- register Orichalcum Survey at the staging point (xi.assault.mission
+-- .ORICHALCUM_SURVEY = 2 exists) and then be unable to enter. Left commented like
+-- the other 34 unimplemented Assault rows rather than deleted, so the researched
+-- start coordinates below are preserved.
+-- Blocked on mob data, not on the script: bg-wiki's objective is "Discover
+-- Orichalcum Ore" with Mineral Worms as the enemies, and `Mineral_Worm` appears in
+-- NONE of mob_pools, mob_groups or mob_spawn_points. The ten Mining_Point NPCs
+-- (17060016-17060025) that would serve as the ore veins DO already exist in zone 69.
+-- INSERT INTO `instance_list` VALUES (6901,'orichalcum_survey',69,79,30,-432.000,-27.627,169.000,131,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6902,'escort_professor_chanoix',69,79,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6903,'shanarha_grass_conservation',69,79,30,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);
 -- INSERT INTO `instance_list` VALUES (6904,'counting_sheep',69,79,15,0.000,0.000,0.000,0,NULL,NULL,NULL,NULL);

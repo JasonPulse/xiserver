@@ -91,6 +91,15 @@ end
 local function giveQuestReward(player, eventOption)
     local wasRewarded = true
 
+    -- Lower bound matters: if the player cancels the reward menu the option is 0,
+    -- which would index rewardItems[-1] = nil. npcUtil.giveItem(player, nil) does
+    -- not error -- it builds an empty item list and returns true -- so without
+    -- this guard the quest would complete and consume the Talisman key while
+    -- handing over nothing. (Waking_the_Colossus has the same unguarded shape.)
+    if eventOption < 1 or eventOption > 5 then
+        return false
+    end
+
     if eventOption <= 3 then
         wasRewarded = npcUtil.giveItem(player, rewardItems[eventOption - 1])
     elseif eventOption == 4 then
@@ -144,11 +153,23 @@ quest.sections =
     },
 
     -- Yoyoroon in Nashmau explains the talisman and asks for a treat.
+    --
+    -- Progress is tracked with an explicit Prog var rather than by testing which
+    -- key items the player currently holds. That matters because the battlefield
+    -- declares requiredKeyItems = { TALISMAN_KEY }, and battlefield.lua:408
+    -- documents those as "removed upon entry unless 'keep = true'". Once entry
+    -- consumes the key the player holds none of this quest's key items, so a
+    -- has/hasn't-key-item ladder would fall back into this section and hand out a
+    -- second Message from Yoyoroon.
+    --   Prog 0 = accepted, needs the first Yoyoroon talk
+    --   Prog 1 = has Message from Yoyoroon, owes the talisman + food trade
+    --   Prog 2 = appraisal done, holds Talisman of the rebel gods
+    --   Prog 3 = holds Talisman key, may enter Hazhalm
+    --   Prog 4 = Odin defeated, owed the reward
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_ACCEPTED and
-                not player:hasKeyItem(xi.ki.MESSAGE_FROM_YOYOROON) and
-                not player:hasKeyItem(xi.ki.TALISMAN_OF_THE_REBEL_GODS)
+                vars.Prog == 0
         end,
 
         [xi.zone.NASHMAU] =
@@ -168,7 +189,9 @@ quest.sections =
             onEventFinish =
             {
                 [318] = function(player, csid, option, npc)
-                    npcUtil.giveKeyItem(player, xi.ki.MESSAGE_FROM_YOYOROON)
+                    if npcUtil.giveKeyItem(player, xi.ki.MESSAGE_FROM_YOYOROON) then
+                        quest:setVar(player, 'Prog', 1)
+                    end
                 end,
             },
         },
@@ -179,8 +202,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_ACCEPTED and
-                player:hasKeyItem(xi.ki.MESSAGE_FROM_YOYOROON) and
-                not player:hasKeyItem(xi.ki.TALISMAN_OF_THE_REBEL_GODS)
+                vars.Prog == 1
         end,
 
         [xi.zone.NASHMAU] =
@@ -202,7 +224,10 @@ quest.sections =
                 end,
 
                 onTrigger = function(player, npc)
-                    if quest:getVar(player, 'Appraised') == 1 then
+                    if
+                        quest:getVar(player, 'Appraised') == 1 and
+                        not quest:getMustZone(player)
+                    then
                         return quest:progressEvent(320)
                     end
                 end,
@@ -216,12 +241,22 @@ quest.sections =
                     -- bg-wiki: the appraisal can fail, and trading both foods
                     -- alongside the talisman gives the highest chance of
                     -- success. A failure consumes everything traded.
-                    local successRate = quest:getVar(player, 'BothFoods') == 1 and 100 or 50
+                    --
+                    -- The exact retail percentages are not documented, so these
+                    -- are house numbers, not decoded values -- flagged rather
+                    -- than presented as retail-accurate. Both-foods is
+                    -- deliberately not 100%, because bg-wiki says "highest
+                    -- chance", not "guaranteed".
+                    local successRate = quest:getVar(player, 'BothFoods') == 1 and 85 or 50
 
                     quest:setVar(player, 'BothFoods', 0)
 
                     if math.random(100) <= successRate then
                         quest:setVar(player, 'Appraised', 1)
+
+                        -- bg-wiki: "you will have to zone and talk to Yoyoroon
+                        -- again to receive the Talisman of the rebel gods."
+                        quest:setMustZone(player)
                     end
                 end,
 
@@ -229,6 +264,7 @@ quest.sections =
                     if npcUtil.giveKeyItem(player, xi.ki.TALISMAN_OF_THE_REBEL_GODS) then
                         player:delKeyItem(xi.ki.MESSAGE_FROM_YOYOROON)
                         quest:setVar(player, 'Appraised', 0)
+                        quest:setVar(player, 'Prog', 2)
                     end
                 end,
             },
@@ -239,8 +275,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_ACCEPTED and
-                player:hasKeyItem(xi.ki.TALISMAN_OF_THE_REBEL_GODS) and
-                not player:hasKeyItem(xi.ki.TALISMAN_KEY)
+                vars.Prog == 2
         end,
 
         [xi.zone.AHT_URHGAN_WHITEGATE] =
@@ -257,6 +292,7 @@ quest.sections =
                 [882] = function(player, csid, option, npc)
                     if npcUtil.giveKeyItem(player, xi.ki.TALISMAN_KEY) then
                         player:delKeyItem(xi.ki.TALISMAN_OF_THE_REBEL_GODS)
+                        quest:setVar(player, 'Prog', 3)
                     end
                 end,
             },
@@ -267,18 +303,36 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_ACCEPTED and
-                player:hasKeyItem(xi.ki.TALISMAN_KEY)
+                vars.Prog >= 3
         end,
+
+        [xi.zone.HAZHALM_TESTING_GROUNDS] =
+        {
+            onEventFinish =
+            {
+                -- 32001 is the battlefield win event. BattlefieldQuest's
+                -- onBattlefieldWin sets the 'battlefieldWin' LOCAL var
+                -- (battlefield.lua:1513), and a local var does not survive the
+                -- zone change from Hazhalm back to Whitegate -- so it has to be
+                -- converted to a persistent quest var here, in the battlefield's
+                -- own zone, before the player leaves. This is exactly what
+                -- Moment_of_Truth.lua:162-166 does (localVar -> Prog = 5 inside
+                -- the Jade Sepulcher section). Reading the local var at Naja
+                -- instead would make the reward permanently unreachable.
+                [32001] = function(player, csid, option, npc)
+                    if player:getLocalVar('battlefieldWin') == xi.battlefield.id.RIDER_COMETH then
+                        quest:setVar(player, 'Prog', 4)
+                    end
+                end,
+            },
+        },
 
         [xi.zone.AHT_URHGAN_WHITEGATE] =
         {
             ['Naja_Salaheem'] =
             {
                 onTrigger = function(player, npc)
-                    -- BattlefieldQuest:onBattlefieldWin sets this localVar on a
-                    -- win while the quest is accepted (battlefield.lua:1513),
-                    -- the same handshake Moment_of_Truth.lua uses.
-                    if player:getLocalVar('battlefieldWin') == xi.battlefield.id.RIDER_COMETH then
+                    if quest:getVar(player, 'Prog') == 4 then
                         return quest:progressEvent(959, { [0] = xi.besieged.getMercenaryRank(player), [7] = getRewardMask(player) })
                     end
                 end,
@@ -288,8 +342,9 @@ quest.sections =
             {
                 [959] = function(player, csid, option, npc)
                     if giveQuestReward(player, option) then
-                        player:delKeyItem(xi.ki.TALISMAN_KEY)
-                        player:setLocalVar('battlefieldWin', 0)
+                        -- No delKeyItem here: battlefield entry already consumed
+                        -- the Talisman key (battlefield.lua:408). quest:complete
+                        -- clears the quest vars, resetting Prog.
                         quest:complete(player)
                     end
                 end,

@@ -20,7 +20,11 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.BASTOK, xi.quest.id.bastok.FOREVER_TO_HOLD)
+                player:hasCompletedQuest(xi.questLog.BASTOK, xi.quest.id.bastok.FOREVER_TO_HOLD) and
+                -- bg-wiki: "You must have zoned once after finishing Forever to
+                -- Hold to receive this quest." Forever_to_Hold.lua now sets the
+                -- flag on completion; it clears on the next zone change.
+                not xi.quest.getMustZone(player, xi.questLog.BASTOK, xi.quest.id.bastok.FOREVER_TO_HOLD)
         end,
 
         [xi.zone.PORT_BASTOK] =

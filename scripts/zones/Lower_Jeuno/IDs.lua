@@ -14,6 +14,7 @@ zones[xi.zone.LOWER_JEUNO] =
         KEYITEM_OBTAINED              = 6394,  -- Obtained key item: <keyitem>.
         KEYITEM_LOST                  = 6395,  -- Lost key item: <keyitem>.
         NOT_HAVE_ENOUGH_GIL           = 6396,  -- You do not have enough gil.
+        NOTHING_OUT_OF_ORDINARY       = 6405,  -- There is nothing out of the ordinary here.
         YOU_MUST_WAIT_ANOTHER_N_DAYS  = 6427,  -- You must wait another <number> [day/days] to perform that action.
         CARRIED_OVER_POINTS           = 6430,  -- You have carried over <number> login point[/s].
         LOGIN_CAMPAIGN_UNDERWAY       = 6431,  -- The [/January/February/March/April/May/June/July/August/September/October/November/December] <number> Login Campaign is currently underway!

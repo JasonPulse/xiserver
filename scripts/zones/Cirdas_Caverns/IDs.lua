@@ -23,6 +23,8 @@ zones[xi.zone.CIRDAS_CAVERNS] =
     },
     npc =
     {
+        CASTOFF_POINT_OFFSET   = GetFirstID('Castoff_Point'),
+        SCALABLE_AREA_OFFSET   = GetFirstID('Scalable_Area'),
         REIVE_COLLISION_OFFSET = GetFirstID('_pim'),
     },
 }

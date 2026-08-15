@@ -49,6 +49,8 @@ zones[xi.zone.METALWORKS] =
         DETONATOR_LEARNED             = 9060,  -- You have learned the weapon skill Detonator!
         TAKIYAH_CLOSED_DIALOG         = 10001, -- Maybe someday I'll be able to sell goods from Qufim Island... Someday...
         TAKIYAH_OPEN_DIALOG           = 10002, -- Hey, it's your lucky day! I've got a fresh batch of goods straight from the island of Qufim!
+        SWITCH_DEACTIVATED_OFFSET     = 10632, -- The first switch has been deactivated. (10632-10640 = first through ninth)
+        NOISE_FROM_TEMPLE             = 10641, -- You hear a noise from the direction of the Temple of the Goddess.
         CELEBRATORY_GOODS             = 10849, -- An assortment of celebratory goods is available for purchase.
         HOMEPOINT_SET                 = 11037, -- Home point set!
     },

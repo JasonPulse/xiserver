@@ -38,6 +38,8 @@ zones[xi.zone.MORIMAR_BASALT_FIELDS] =
     },
     npc =
     {
+        CASTOFF_POINT_OFFSET   = GetFirstID('Castoff_Point'),
+        SCALABLE_AREA_OFFSET   = GetFirstID('Scalable_Area'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7d0'),
     },
 }

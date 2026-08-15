@@ -4,127 +4,53 @@
 -- Log ID: 5, Quest ID: 14
 -- Swift : Kazham (H-7)
 -----------------------------------
--- Retail airship RNG; simplified for 4-player server: accept → zone into
--- Kazham-Jeuno airship → return to Swift for 500 gil. Same pattern as
--- the 3 nation variants — clears count toward retail titles.
+-- All four A Discerning Eye variants are the same quest on a different airship
+-- route, so the whole implementation -- the decoded csids, the proof that option 0
+-- accepts, the picture, the eight Passengers and the one-guess-only payout -- lives
+-- in scripts/globals/discerning_eye.lua. Read that file's header for the full
+-- decode and for what still needs an in-game probe.
+--
+-- This variant's specifics, each verified against sql/npc_list.sql:
+--   giver     Swift = 17801340 -> (17801340-16777216) = 1024124, 1024124//4096 = 250 rem 124
+--   csid      10018, the ONLY event that entity owns
+--   airship   zone 226, Passengers 17702916-17702923 owning csids 101-108 / 111-118
+--
+-- CRITICAL BUG REMOVED: the stub handled csids 200 and 201, which in Kazham belong
+-- to The Opo-opo and I -- 200 is fired by scripts/zones/Kazham/npcs/Roropp.lua and
+-- 201 by scripts/zones/Kazham/npcs/Popopp.lua. Because onEventFinish dispatches
+-- zone-wide keyed only on csid, running that quest drove this one: Roropp granted
+-- the Dropped item and Popopp completed the quest, paying 500 gil and counting a
+-- title clear. This quest is repeatable, so it was an unbounded gil and title
+-- faucet driven entirely by an unrelated quest. Swift's real csid is 10018.
+--
+-- bg-wiki gives `|Fame=k` and an empty FLevel for this variant; Kazham fame is
+-- xi.fameArea.WINDURST (fame_area.lua:10 comments it "Mhaura, Kazham"). No fame is
+-- granted, because the Reward field is `*500 gil` only.
+-----------------------------------
+require('scripts/globals/discerning_eye')
 -----------------------------------
 local quest = Quest:new(xi.questLog.OUTLANDS, xi.quest.id.outlands.A_DISCERNING_EYE)
 
-quest.reward =
+quest.sections = xi.discerningEye.sections(quest,
 {
-    fame     = 5,
-    fameArea = xi.fameArea.WINDURST,
-    gil      = 500,
-}
-
-local function updateTitle(player)
-    local clears = player:getCharVar('DiscerningEyeKazhamClears')
-    if clears >= 100 then
-        player:setTitle(xi.title.EXTREMELY_DISCERNING_INDIVIDUAL)
-    elseif clears >= 20 then
-        player:setTitle(xi.title.VERY_DISCERNING_INDIVIDUAL)
-    elseif clears >= 5 then
-        player:setTitle(xi.title.DISCERNING_INDIVIDUAL)
-    end
-end
-
-quest.sections =
-{
+    logId       = xi.questLog.OUTLANDS,
+    questId     = xi.quest.id.outlands.A_DISCERNING_EYE,
+    giverZone   = xi.zone.KAZHAM,
+    giverName   = 'Swift',
+    giverCsid   = 10018,
+    airshipZone = xi.zone.KAZHAM_JEUNO_AIRSHIP,
+    clearsVar   = 'DiscerningEyeKazhamClears',
+    passengers  =
     {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
-        end,
-
-        [xi.zone.KAZHAM] =
-        {
-            ['Swift'] =
-            {
-                onTrigger = function(player, npc)
-                    return quest:progressEvent(200)
-                end,
-            },
-
-            onEventFinish =
-            {
-                [200] = function(player, csid, option, npc)
-                    if option == 1 then
-                        quest:begin(player)
-                        npcUtil.giveKeyItem(player, xi.ki.DROPPED_ITEM)
-                    end
-                end,
-            },
-        },
+        17702916,
+        17702917,
+        17702918,
+        17702919,
+        17702920,
+        17702921,
+        17702922,
+        17702923,
     },
-
-    {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_ACCEPTED
-        end,
-
-        [xi.zone.KAZHAM_JEUNO_AIRSHIP] =
-        {
-            onZoneIn = function(player, prevZone)
-                if quest:getVar(player, 'Delivered') == 0 then
-                    quest:setVar(player, 'Delivered', 1)
-                end
-
-                return -1
-            end,
-        },
-
-        [xi.zone.KAZHAM] =
-        {
-            ['Swift'] =
-            {
-                onTrigger = function(player, npc)
-                    if quest:getVar(player, 'Delivered') == 1 then
-                        return quest:progressEvent(201)
-                    end
-                end,
-            },
-
-            onEventFinish =
-            {
-                [201] = function(player, csid, option, npc)
-                    if quest:complete(player) then
-                        player:delKeyItem(xi.ki.DROPPED_ITEM)
-                        player:setCharVar('DiscerningEyeKazhamClears', player:getCharVar('DiscerningEyeKazhamClears') + 1)
-                        updateTitle(player)
-                        quest:setVar(player, 'Delivered', 0)
-                    end
-                end,
-            },
-        },
-    },
-
-    {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_COMPLETED
-        end,
-
-        [xi.zone.KAZHAM] =
-        {
-            ['Swift'] =
-            {
-                onTrigger = function(player, npc)
-                    if not player:hasKeyItem(xi.ki.DROPPED_ITEM) then
-                        return quest:progressEvent(200)
-                    end
-                end,
-            },
-
-            onEventFinish =
-            {
-                [200] = function(player, csid, option, npc)
-                    if option == 1 then
-                        player:addQuest(xi.questLog.OUTLANDS, xi.quest.id.outlands.A_DISCERNING_EYE)
-                        npcUtil.giveKeyItem(player, xi.ki.DROPPED_ITEM)
-                        quest:setVar(player, 'Delivered', 0)
-                    end
-                end,
-            },
-        },
-    },
-}
+})
 
 return quest

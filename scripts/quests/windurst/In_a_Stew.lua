@@ -21,7 +21,7 @@ quest.sections =
             return vars.Prog == 0 and
             vars.Wait < NextConquestTally() and
             player:hasCompletedQuest(xi.questLog.WINDURST, xi.quest.id.windurst.CHOCOBILIOUS) and
-            player:getFameLevel(xi.fameArea.WINDURST) >= 2 and
+            player:getFameLevel(xi.fameArea.WINDURST) >= 3 and
             not xi.quest.getMustZone(player, xi.questLog.WINDURST, xi.quest.id.windurst.CHOCOBILIOUS)
         end,
 

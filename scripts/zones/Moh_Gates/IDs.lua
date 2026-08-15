@@ -23,6 +23,7 @@ zones[xi.zone.MOH_GATES] =
     },
     npc =
     {
+        SCALABLE_AREA_OFFSET   = GetFirstID('Scalable_Area'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7h0'),
     },
 }

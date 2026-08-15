@@ -1,0 +1,1221 @@
+[
+ {
+  "retail_title": "A Bitter Past",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/A_Bitter_Past.lua"
+  ]
+ },
+ {
+  "retail_title": "A Chocobo Riding Game (Kazham)",
+  "categories": [
+   "Kazham Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Generous General?",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/A_Generous_General.lua"
+  ]
+ },
+ {
+  "retail_title": "A Hard Day's Knight",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/A_Hard_Days_Knight.lua"
+  ]
+ },
+ {
+  "retail_title": "A Moral Manifest?",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "A Potter's Preference",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/A_Potters_Preference.lua"
+  ]
+ },
+ {
+  "retail_title": "Altepa Gate",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "An Affable Adamantking?",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/An_Affable_Adamantking.lua"
+  ]
+ },
+ {
+  "retail_title": "An Explorer's Footsteps",
+  "categories": [
+   "Map Quests",
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/An_Explorers_Footsteps.lua"
+  ]
+ },
+ {
+  "retail_title": "An Understanding Overlord?",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/An_Understanding_Overlord.lua"
+  ]
+ },
+ {
+  "retail_title": "Behind the Smile",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Behind_the_Smile.lua"
+  ]
+ },
+ {
+  "retail_title": "Better the Demon You Know",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Better_The_Demon_You_Know.lua"
+  ]
+ },
+ {
+  "retail_title": "Bombs Away!",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Uleguerand Range Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Bombs_Away.lua"
+  ]
+ },
+ {
+  "retail_title": "Brigand's Chart (Quest)",
+  "categories": [
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Cargo",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Cargo.lua"
+  ]
+ },
+ {
+  "retail_title": "Chacharoon's Cheer",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Coastal Chaos",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Confessions of a Bellmaker",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Riverne - Site A01 Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Confessions_of_a_Bellmaker.lua"
+  ]
+ },
+ {
+  "retail_title": "Courtesy Crustacean",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Cry Not, Caretaker",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Dhima Polevhia",
+  "categories": [
+   "Puppetmaster Artifact Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Doctor Chacharoon",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Donate to Recycling",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Donate_to_Recycling.lua"
+  ]
+ },
+ {
+  "retail_title": "Eco-Warrior",
+  "categories": [
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Eco_Warrior.lua",
+   "scripts/quests/sandoria/Eco_Warrior.lua",
+   "scripts/quests/windurst/Eco_Warrior.lua"
+  ]
+ },
+ {
+  "retail_title": "Elder Memories",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Elder_Memories.lua",
+   "scripts/quests/otherAreas/The_Old_Lady.lua"
+  ]
+ },
+ {
+  "retail_title": "Elderly Pursuits",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Elderly_Pursuits.lua"
+  ]
+ },
+ {
+  "retail_title": "Escort for Hire",
+  "categories": [
+   "Escort Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/bastok/Escort_for_Hire.lua",
+   "scripts/quests/sandoria/Escort_for_Hire.lua",
+   "scripts/quests/windurst/Escort_for_Hire.lua"
+  ]
+ },
+ {
+  "retail_title": "Expertise",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ5_Expertise.lua",
+   "scripts/quests/otherAreas/RQ6_The_Clue.lua"
+  ]
+ },
+ {
+  "retail_title": "Fame",
+  "categories": [
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Feeding Frenzy",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Fisherman's Heart",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Fishermans_Heart.lua"
+  ]
+ },
+ {
+  "retail_title": "Flotsam Finding",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Fly High",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Fly_High.lua"
+  ]
+ },
+ {
+  "retail_title": "Full Fields",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Give a Moogle a Break",
+  "categories": [
+   "Mog House Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Give_a_Moogle_a_Break.lua",
+   "scripts/quests/otherAreas/The_Moogles_Picnic.lua"
+  ]
+ },
+ {
+  "retail_title": "Glittering Gals",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Go! Go! Gobmuffin!",
+  "categories": [
+   "Map Quests",
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Go_Go_Gobmuffin.lua"
+  ]
+ },
+ {
+  "retail_title": "Goblin Stew 880",
+  "categories": [
+   "Gobbiebag Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Green Groves",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "His Name Is Valgeir",
+  "categories": [
+   "Map Quests",
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ4_His_Name_is_Valgeir.lua",
+   "scripts/quests/otherAreas/RQ5_Expertise.lua"
+  ]
+ },
+ {
+  "retail_title": "Hypnotic Hospitality",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "In Search of the Truth",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/In_Search_of_the_Truth.lua"
+  ]
+ },
+ {
+  "retail_title": "In the Name of Science",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Inside the Belly",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Inside_the_Belly.lua"
+  ]
+ },
+ {
+  "retail_title": "Investigation of the Emptiness",
+  "categories": [
+   "Fellowship Quests",
+   "Mini-Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "It's Raining Mannequins",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Behind_the_Smile.lua",
+   "scripts/quests/otherAreas/Its_Raining_Mannequins.lua"
+  ]
+ },
+ {
+  "retail_title": "Knocking on Forbidden Doors",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Knocking_on_Forbidden_Doors.lua"
+  ]
+ },
+ {
+  "retail_title": "Kupofried's Archery Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Axe Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Club Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Dagger Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Great Axe Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Great Katana Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Great Sword Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's H2H Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Katana Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Marksmanship Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Polearm Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Scythe Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Staff Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Kupofried's Sword Moogle Magic",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Lathuya",
+  "categories": [
+   "Blue Mage Artifact Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Leleroon",
+  "categories": [
+   "Corsair Artifact Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Lost Chocobo Chick Mini-Quest",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Loussaire",
+  "categories": [
+   "Scholar Artifact Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Luck Rune",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Matthias",
+  "categories": [
+   "Dancer Artifact Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Mining Missive",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Missionary Moblin",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/For_The_Birds.lua",
+   "scripts/quests/otherAreas/Missionary_Moblin.lua"
+  ]
+ },
+ {
+  "retail_title": "Mithran Delicacies",
+  "categories": [
+   "Carpenters' Landing Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Mithran_Delicacies.lua"
+  ]
+ },
+ {
+  "retail_title": "Monstrosity (Quest)",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Monstrosity.lua"
+  ]
+ },
+ {
+  "retail_title": "Moogles in the Wild",
+  "categories": [
+   "Mog House Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Moogles_in_the_Wild.lua"
+  ]
+ },
+ {
+  "retail_title": "Only the Best",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Only_the_Best.lua"
+  ]
+ },
+ {
+  "retail_title": "Orlando's Antiques",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Orlandos_Antiques.lua"
+  ]
+ },
+ {
+  "retail_title": "Paradise, Salvation, and Maps",
+  "categories": [
+   "Map Quests",
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Paradise_Salvation_and_Maps.lua"
+  ]
+ },
+ {
+  "retail_title": "Peddlestox's Treasure Box: Elshimo Lowlands",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Peddlestox's Treasure Box: Elshimo Uplands",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Peddlestox's Treasure Box: Kuzotz",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Petals for Parelbriaux",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Petals_for_Parelbriaux.lua"
+  ]
+ },
+ {
+  "retail_title": "Picture Perfect",
+  "categories": [
+   "Fellowship Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/jeuno/Regaining_Trust.lua",
+   "scripts/quests/otherAreas/Picture_Perfect.lua"
+  ]
+ },
+ {
+  "retail_title": "Pirate's Chart (Quest)",
+  "categories": [
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Pond Probing",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Records of Eminence (Quest)",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Recycling Rods",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Recycling_Rods.lua"
+  ]
+ },
+ {
+  "retail_title": "Release the Fleece",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Requiem of Sin",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Requiem_of_Sin.lua"
+  ]
+ },
+ {
+  "retail_title": "Rowing Together",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Rycharde the Chef",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ1_Rycharde_the_Chef.lua",
+   "scripts/quests/otherAreas/RQ2_Way_of_the_Cook.lua"
+  ]
+ },
+ {
+  "retail_title": "Sahagin Key",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Sally Forth!",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Secrets of Ovens Lost",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Elderly_Pursuits.lua",
+   "scripts/quests/otherAreas/Secrets_of_Ovens_Lost.lua"
+  ]
+ },
+ {
+  "retail_title": "Seed Sowing",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Strange Apparatus",
+  "categories": [
+   "Mini-Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Survival of the Wisest",
+  "categories": [
+   "Limit Break Quests",
+   "Other Quests",
+   "Quests",
+   "Xarcabard Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Survival_of_the_Wisest.lua"
+  ]
+ },
+ {
+  "retail_title": "Tango with a Tracker",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Requiem_of_Sin.lua",
+   "scripts/quests/otherAreas/Tango_with_a_Tracker.lua"
+  ]
+ },
+ {
+  "retail_title": "Test My Mettle",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Test_My_Mettle.lua"
+  ]
+ },
+ {
+  "retail_title": "The Basics",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ7_The_Basics.lua"
+  ]
+ },
+ {
+  "retail_title": "The Big One (Quest)",
+  "categories": [
+   "Escort Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Big_One.lua"
+  ]
+ },
+ {
+  "retail_title": "The Call of the Sea",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Call_of_the_Sea.lua"
+  ]
+ },
+ {
+  "retail_title": "The Clue",
+  "categories": [
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ6_The_Clue.lua",
+   "scripts/quests/otherAreas/RQ7_The_Basics.lua"
+  ]
+ },
+ {
+  "retail_title": "The Gift",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Gift.lua"
+  ]
+ },
+ {
+  "retail_title": "The Moogle's Picnic!",
+  "categories": [
+   "Mog House Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Moogles_Picnic.lua"
+  ]
+ },
+ {
+  "retail_title": "The Old Lady",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Elder_Memories.lua",
+   "scripts/quests/otherAreas/The_Old_Lady.lua"
+  ]
+ },
+ {
+  "retail_title": "The Real Gift",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Inside_the_Belly.lua",
+   "scripts/quests/otherAreas/The_Gift.lua",
+   "scripts/quests/otherAreas/The_Real_Gift.lua"
+  ]
+ },
+ {
+  "retail_title": "The Rescue",
+  "categories": [
+   "Map Quests",
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Rescue.lua"
+  ]
+ },
+ {
+  "retail_title": "The Sand Charm",
+  "categories": [
+   "Map Quests",
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Gift.lua",
+   "scripts/quests/otherAreas/The_Real_Gift.lua",
+   "scripts/quests/otherAreas/The_Sand_Charm.lua",
+   "scripts/quests/otherAreas/Under_the_Sea.lua"
+  ]
+ },
+ {
+  "retail_title": "Titillating Tomes",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Trial by Lightning",
+  "categories": [
+   "Avatar Quests",
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Trial_by_Lightning.lua"
+  ]
+ },
+ {
+  "retail_title": "Trial of the Chacharoon",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Trial-Size Trial by Lightning",
+  "categories": [
+   "Avatar Quests",
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Trial_Size_Trial_by_Lightning.lua"
+  ]
+ },
+ {
+  "retail_title": "Trinket for the Tyrant",
+  "categories": [
+   "Mog Garden Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Under the Sea",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Selbina Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/The_Gift.lua",
+   "scripts/quests/otherAreas/The_Real_Gift.lua",
+   "scripts/quests/otherAreas/Under_the_Sea.lua"
+  ]
+ },
+ {
+  "retail_title": "Unending Chase",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ3_Unending_Chase.lua",
+   "scripts/quests/otherAreas/RQ4_His_Name_is_Valgeir.lua"
+  ]
+ },
+ {
+  "retail_title": "Unforgiven",
+  "categories": [
+   "Map Quests",
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Unforgiven.lua"
+  ]
+ },
+ {
+  "retail_title": "Uninvited Guests",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Uninvited_Guests.lua"
+  ]
+ },
+ {
+  "retail_title": "User:Metalsmith",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "User:Niamor/Sandbox",
+  "categories": [
+   "Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "VW Op. 004: Bibiki Bombardment",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests",
+   "Voidwatch Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "VW Op. 026: Tavnazian Terrors",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests",
+   "Voidwatch Quests"
+  ],
+  "repo_candidates": []
+ },
+ {
+  "retail_title": "Waking the Beast",
+  "categories": [
+   "La Theine Plateau Quests",
+   "Other Quests",
+   "Quests",
+   "Repeatable Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/Waking_the_Beast.lua"
+  ]
+ },
+ {
+  "retail_title": "Way of the Cook",
+  "categories": [
+   "Mhaura Quests",
+   "Other Quests",
+   "Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/RQ2_Way_of_the_Cook.lua",
+   "scripts/quests/otherAreas/RQ3_Unending_Chase.lua"
+  ]
+ },
+ {
+  "retail_title": "X Marks the Spot",
+  "categories": [
+   "Other Quests",
+   "Quests",
+   "Tavnazian Safehold Quests"
+  ],
+  "repo_candidates": [
+   "scripts/quests/otherAreas/X_Marks_The_Spot.lua"
+  ]
+ }
+]

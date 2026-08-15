@@ -3,8 +3,14 @@
 -----------------------------------
 -- Log ID: 1, Quest ID: 82
 -----------------------------------
--- CoP 6-4        : !addmission 6 638
+-- CoP 6-3        : !addmission 6 628
 -- CoP 7-1        : !addmission 6 648
+-----------------------------------
+-- bg-wiki "Chips": |Quest Reqs=[[Promathia Mission 6-3]], and
+-- `Promathia Mission 6-3` is |Mission Name=More Questions than Answers, which is
+-- xi.mission.id.cop.MORE_QUESTIONS_THAN_ANSWERS = 628. The gate below used
+-- ONE_TO_BE_FEARED = 638, i.e. CoP 6-4 -- one mission too strict, so the quest
+-- could not be flagged during the whole of 6-3.
 -- Ghebi Damomohe : !pos 15.535 -0.111 -7.603
 -- Cid            : !pos -12 -12 1 237
 -----------------------------------
@@ -32,9 +38,9 @@ quest.sections =
                 onTrigger = function(player, npc)
                     if
                         not quest:getMustZone(player) and
-                        (player:hasCompletedMission(xi.mission.log_id.COP, xi.mission.id.cop.ONE_TO_BE_FEARED) or
-                        (player:getCurrentMission(xi.mission.log_id.COP) == xi.mission.id.cop.ONE_TO_BE_FEARED and
-                        xi.mission.getVar(player, xi.mission.log_id.COP, xi.mission.id.cop.ONE_TO_BE_FEARED, 'Status') >= 1))
+                        (player:hasCompletedMission(xi.mission.log_id.COP, xi.mission.id.cop.MORE_QUESTIONS_THAN_ANSWERS) or
+                        (player:getCurrentMission(xi.mission.log_id.COP) == xi.mission.id.cop.MORE_QUESTIONS_THAN_ANSWERS and
+                        xi.mission.getVar(player, xi.mission.log_id.COP, xi.mission.id.cop.MORE_QUESTIONS_THAN_ANSWERS, 'Status') >= 1))
                     then
                         return quest:progressEvent(169)
                     end

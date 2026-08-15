@@ -29,7 +29,7 @@ quest.sections =
                 onTrigger = function(player, npc)
                     if
                         player:getMainLvl() >= 5 and
-                        player:getFameLevel(xi.fameArea.WINDURST) >= 5 and
+                        player:getFameLevel(xi.fameArea.WINDURST) >= 6 and
                         not quest:getMustZone(player)
                     then
                         return quest:progressEvent(780) -- Quest starting event.
@@ -69,7 +69,17 @@ quest.sections =
             },
         },
 
-        [xi.zone.CASTLE_ZVAHL_BAILEYS] =
+        -- Fixed: this override was registered under CASTLE_ZVAHL_BAILEYS (zone 161),
+        -- an unrelated end-game dungeon, so the Joker card could never be obtained
+        -- and the quest was unfinishable by the retail route. bg-wiki: "Head to
+        -- Toraimarai Canal and open a Coffer there to obtain the Joker card."
+        -- TORAIMARAI_CANAL is zone 169, and
+        -- scripts/zones/Toraimarai_Canal/npcs/Treasure_Coffer.lua is even commented
+        -- "Involved In Quest: Wild Card" -- but it calls
+        -- xi.treasure.onTrade(player, npc, trade, 0, 0) with no key-item override,
+        -- and that zone's loot table in scripts/globals/treasure.lua holds only gil
+        -- and gems. So the override has to come from here.
+        [xi.zone.TORAIMARAI_CANAL] =
         {
             ['Treasure_Coffer'] =
             {

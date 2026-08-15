@@ -50,7 +50,15 @@ quest.sections =
 
         [xi.zone.MORIMAR_BASALT_FIELDS] =
         {
-            ['Primordial_Convergence'] =
+            -- QM CORRECTED: this was bound to 'Primordial_Convergence', which is
+            -- the PREVIOUS quest's QM (Elementary, My Dear Sylvie). Coordinates
+            -- settle it -- Burgeoning Flames spawns at (484.657, -17.086, 270.256)
+            -- and (429.885, -16.964, 323.899), matching the two Primordial
+            -- Convergence rows (npc_list.sql:34863/34864) pairwise; Deranged
+            -- Ameretat spawns at (318.539, -0.542, 395.143), matching Ergon_Locus
+            -- 17863432 (z 389.647), while the Convergences are 100+ units away.
+            -- The printToPlayer line below already said "Ergon Locus".
+            ['Ergon_Locus'] =
             {
                 onTrigger = function(player, npc)
                     if player:hasKeyItem(xi.ki.SILVER_LUOPAN) then

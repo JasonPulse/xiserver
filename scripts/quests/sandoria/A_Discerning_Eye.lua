@@ -2,139 +2,51 @@
 -- A Discerning Eye (San d'Oria)
 -----------------------------------
 -- Log ID: 0, Quest ID: 104
--- Eddy : Port San d'Oria (H-6) near airship terminal
+-- Eddy : Port San d'Oria (H-6)
 -----------------------------------
--- Retail: Eddy shows a random passenger description. Player boards the
--- San d'Oria-Jeuno airship, finds the matching random-appearance NPC,
--- and returns the Dropped item. Only one of several lookalikes is correct.
+-- All four A Discerning Eye variants are the same quest on a different airship
+-- route, so the whole implementation -- the decoded csids, the proof that option 0
+-- accepts, the picture, the eight Passengers and the one-guess-only payout -- lives
+-- in scripts/globals/discerning_eye.lua. Read that file's header for the full
+-- decode and for what still needs an in-game probe.
 --
--- On this 4-player private server, the airship passenger RNG isn't
--- implemented, so the flow is simplified: accept from Eddy → zone into
--- the San d'Oria-Jeuno airship (sets 'Delivered') → return to Eddy for
--- 500 gil. Clears track toward the three retail titles.
--- CSIDs are best-guess; verify with !cs in-game.
+-- This variant's specifics, each verified against sql/npc_list.sql:
+--   giver     Eddy = 17727617 -> (17727617-16777216) = 950401, 950401//4096 = 232 rem 129
+--   csid      723, the ONLY event that entity owns
+--   airship   zone 223, Passengers 17690629-17690636 owning csids 101-108 / 111-118
+--
+-- The stub fired csid 585, which Eddy does not own. bg-wiki's FLevel field is
+-- empty for this variant, so no fame requirement is imposed, and its Reward field is
+-- `*500 gil` only -- the stub's `fame = 5` was invented.
+--
+-- The stub also used charvar 'DiscerningEyeClears', unprefixed, which would have
+-- shared its clear count with any other variant that picked the same name. Each
+-- variant now has its own.
+-----------------------------------
+require('scripts/globals/discerning_eye')
 -----------------------------------
 local quest = Quest:new(xi.questLog.SANDORIA, xi.quest.id.sandoria.A_DISCERNING_EYE)
 
-quest.reward =
+quest.sections = xi.discerningEye.sections(quest,
 {
-    fame     = 5,
-    fameArea = xi.fameArea.SANDORIA,
-    gil      = 500,
-}
-
-local function updateTitle(player)
-    local clears = player:getCharVar('DiscerningEyeClears')
-    if clears >= 100 then
-        player:setTitle(xi.title.EXTREMELY_DISCERNING_INDIVIDUAL)
-    elseif clears >= 20 then
-        player:setTitle(xi.title.VERY_DISCERNING_INDIVIDUAL)
-    elseif clears >= 5 then
-        player:setTitle(xi.title.DISCERNING_INDIVIDUAL)
-    end
-end
-
-quest.sections =
-{
+    logId       = xi.questLog.SANDORIA,
+    questId     = xi.quest.id.sandoria.A_DISCERNING_EYE,
+    giverZone   = xi.zone.PORT_SAN_DORIA,
+    giverName   = 'Eddy',
+    giverCsid   = 723,
+    airshipZone = xi.zone.SAN_DORIA_JEUNO_AIRSHIP,
+    clearsVar   = 'DiscerningEyeSandoriaClears',
+    passengers  =
     {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
-        end,
-
-        [xi.zone.PORT_SAN_DORIA] =
-        {
-            ['Eddy'] =
-            {
-                onTrigger = function(player, npc)
-                    return quest:progressEvent(585)
-                end,
-            },
-
-            onEventFinish =
-            {
-                [585] = function(player, csid, option, npc)
-                    if option == 1 then
-                        quest:begin(player)
-                        npcUtil.giveKeyItem(player, xi.ki.DROPPED_ITEM)
-                    end
-                end,
-            },
-        },
+        17690629,
+        17690630,
+        17690631,
+        17690632,
+        17690633,
+        17690634,
+        17690635,
+        17690636,
     },
-
-    {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_ACCEPTED
-        end,
-
-        [xi.zone.SAN_DORIA_JEUNO_AIRSHIP] =
-        {
-            onZoneIn = function(player, prevZone)
-                if quest:getVar(player, 'Delivered') == 0 then
-                    quest:setVar(player, 'Delivered', 1)
-                end
-
-                return -1
-            end,
-        },
-
-        [xi.zone.PORT_SAN_DORIA] =
-        {
-            ['Eddy'] =
-            {
-                onTrigger = function(player, npc)
-                    if quest:getVar(player, 'Delivered') == 1 then
-                        return quest:progressEvent(586)
-                    else
-                        return quest:event(584)
-                    end
-                end,
-            },
-
-            onEventFinish =
-            {
-                [586] = function(player, csid, option, npc)
-                    if quest:complete(player) then
-                        player:delKeyItem(xi.ki.DROPPED_ITEM)
-                        player:setCharVar('DiscerningEyeClears', player:getCharVar('DiscerningEyeClears') + 1)
-                        updateTitle(player)
-                        quest:setVar(player, 'Delivered', 0)
-                    end
-                end,
-            },
-        },
-    },
-
-    {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_COMPLETED
-        end,
-
-        -- Repeatable — restart from Eddy
-        [xi.zone.PORT_SAN_DORIA] =
-        {
-            ['Eddy'] =
-            {
-                onTrigger = function(player, npc)
-                    if not player:hasKeyItem(xi.ki.DROPPED_ITEM) then
-                        return quest:progressEvent(585)
-                    end
-                end,
-            },
-
-            onEventFinish =
-            {
-                [585] = function(player, csid, option, npc)
-                    if option == 1 then
-                        -- Reopen quest for another run
-                        player:addQuest(xi.questLog.SANDORIA, xi.quest.id.sandoria.A_DISCERNING_EYE)
-                        npcUtil.giveKeyItem(player, xi.ki.DROPPED_ITEM)
-                        quest:setVar(player, 'Delivered', 0)
-                    end
-                end,
-            },
-        },
-    },
-}
+})
 
 return quest

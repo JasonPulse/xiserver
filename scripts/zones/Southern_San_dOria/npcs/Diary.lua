@@ -18,18 +18,26 @@ entity.onTrigger = function(player, npc)
     elseif diaryPage == 1 then
         player:startEvent(640)          -- reads page 2
     elseif diaryPage == 2 then
+        -- DEADLOCK REMOVED. This used to require toCureaCough == QUEST_ACCEPTED to
+        -- advance past page 2, but the quest does not reach ACCEPTED until Amaura
+        -- fires 645, and Amaura.lua only offers 645 when `DiaryPage >= 3 or
+        -- toCureaCough == QUEST_ACCEPTED`. Neither side could ever go first, so
+        -- the diary stopped at page 2, Amaura never asked for the thyme moss, and
+        -- To Cure a Cough was unfinishable -- which in turn left Over the Hills
+        -- and Far Away permanently unstartable, since its check needs DiaryPage>=4.
+        -- bg-wiki "To Cure a Cough" puts the diary BEFORE Amaura and attaches no
+        -- condition to it: "Once you have heard Nenne's story, go into the first
+        -- house on Watchdog Alley (G-7) ... Finish reading the diary entirely
+        -- (continue paging through) to continue to the next portion." Nenne's 538
+        -- is what "heard Nenne's story" means, and it sets charvar toCureaCough=1.
+        -- COMPLETED is accepted too so the last pages stay readable afterwards;
+        -- Over the Hills is flagged from the diary long after this quest is done.
         if
-            medicineWoman == xi.questStatus.QUEST_COMPLETED and
-            aSquiresTestII == xi.questStatus.QUEST_COMPLETED
-        then
-            if toCureaCough == xi.questStatus.QUEST_ACCEPTED then
-                player:startEvent(641)  -- reads page 3
-            else
-                player:startEvent(640)  -- reads page 2
-            end
-        elseif
-            medicineWoman == xi.questStatus.QUEST_AVAILABLE and
-            aSquiresTestII == xi.questStatus.QUEST_AVAILABLE
+            player:getCharVar('toCureaCough') == 1 or
+            toCureaCough == xi.questStatus.QUEST_ACCEPTED or
+            toCureaCough == xi.questStatus.QUEST_COMPLETED or
+            (medicineWoman == xi.questStatus.QUEST_AVAILABLE and
+            aSquiresTestII == xi.questStatus.QUEST_AVAILABLE)
         then
             player:startEvent(641)      -- reads page 3
         else

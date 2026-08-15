@@ -13,7 +13,12 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                -- bg-wiki: "if your Windurst fame is level 4 or higher, you will be
+                -- assigned Let Sleeping Dogs Lie instead, and cannot start this
+                -- quest until after you complete that one."
+                (player:getFameLevel(xi.fameArea.WINDURST) < 4 or
+                    player:hasCompletedQuest(xi.questLog.WINDURST, xi.quest.id.windurst.LET_SLEEPING_DOGS_LIE))
         end,
 
         [xi.zone.WINDURST_WATERS] =

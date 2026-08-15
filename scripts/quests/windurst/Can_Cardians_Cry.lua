@@ -19,7 +19,7 @@ quest.sections =
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
                 player:getQuestStatus(xi.questLog.WINDURST, xi.quest.id.windurst.THE_ALL_NEW_C_3000) == xi.questStatus.QUEST_COMPLETED and
-                player:getFameLevel(xi.fameArea.WINDURST) >= 5
+                player:getFameLevel(xi.fameArea.WINDURST) >= 6
         end,
 
         [xi.zone.WINDURST_WOODS] =

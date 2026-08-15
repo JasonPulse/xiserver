@@ -7,10 +7,15 @@
 
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.ALL_IN_THE_CARDS)
 
+-- bg-wiki header: |Fame=Jeuno |Title=Card Collector. fameArea was missing, and
+-- giveReward only calls addFame when params['fameArea'] is set (npc_util.lua),
+-- so this quest paid no fame at all despite the header naming Jeuno. The amount
+-- comes from giveReward's own default of 30, matching sibling Collect Tarut Cards.
 quest.reward =
 {
-    gil   = 600,
-    title = xi.title.CARD_COLLECTOR,
+    fameArea = xi.fameArea.JEUNO,
+    gil      = 600,
+    title    = xi.title.CARD_COLLECTOR,
 }
 
 local function randomCard()
@@ -32,7 +37,8 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getFameLevel(xi.fameArea.JEUNO) >= 4 and
+                -- bg-wiki header: |Fame=Jeuno |FLevel=5. Was 4.
+                player:getFameLevel(xi.fameArea.JEUNO) >= 5 and
                 player:getQuestStatus(xi.questLog.JEUNO, xi.quest.id.jeuno.COLLECT_TARUT_CARDS) == xi.questStatus.QUEST_COMPLETED
         end,
 

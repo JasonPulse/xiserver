@@ -22,9 +22,17 @@ quest.reward =
 quest.sections =
 {
     {
+        -- bg-wiki "Path of the Bard" header: |Level=30. ADVANCED_JOB_LEVEL is 30
+        -- (settings/default/main.lua:122), and the Song Runes handler below calls
+        -- player:unlockJob(xi.job.BRD) unconditionally, so without this test a
+        -- character of any level who had finished A Minstrel in Despair could
+        -- unlock Bard. Every other advanced-job unlock quest in the tree already
+        -- gates on ADVANCED_JOB_LEVEL -- BLU, COR, PUP, NIN, DRK, SCH, DNC, BST,
+        -- SAM, PLD, SMN, RNG -- this was the only one that did not.
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-            player:getQuestStatus(xi.questLog.JEUNO, xi.quest.id.jeuno.A_MINSTREL_IN_DESPAIR) == xi.questStatus.QUEST_COMPLETED
+                player:getQuestStatus(xi.questLog.JEUNO, xi.quest.id.jeuno.A_MINSTREL_IN_DESPAIR) == xi.questStatus.QUEST_COMPLETED and
+                player:getMainLvl() >= xi.settings.main.ADVANCED_JOB_LEVEL
         end,
 
         -- It was found that all of the dialogue is optional and the player can go straight to the song runes in Valkrum Dunes upon finishing A Minstrel in Despair

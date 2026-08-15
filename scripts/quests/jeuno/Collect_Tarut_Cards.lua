@@ -9,10 +9,13 @@ local lowerJeunoID = zones[xi.zone.LOWER_JEUNO]
 
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.COLLECT_TARUT_CARDS)
 
+-- bg-wiki header for THIS quest: |Fame=Jeuno |FLevel=2 |Title= (empty).
+-- Card Collector belongs to the FOLLOW-UP, All in the Cards, whose header reads
+-- |Title=Card Collector -- and that file already grants it. Awarding it here too
+-- handed the title out one quest early and duplicated it.
 quest.reward =
 {
     fameArea = xi.fameArea.JEUNO,
-    title    = xi.title.CARD_COLLECTOR,
     fame     = 30,
 }
 
@@ -35,7 +38,10 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getFameLevel(xi.fameArea.JEUNO) >= 3
+                -- bg-wiki |FLevel=2. Was 3, i.e. gated one level too strictly --
+                -- and this quest is the entry point for All in the Cards and
+                -- Rubbish Day, so the whole Chululu line started late.
+                player:getFameLevel(xi.fameArea.JEUNO) >= 2
         end,
 
         [xi.zone.LOWER_JEUNO] =

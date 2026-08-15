@@ -53,9 +53,16 @@ quest.sections =
             ['qm4'] =
             {
                 onTrigger = function(player, npc)
-                    if VanadielTOTD() == xi.time.DUSK then
-                        return quest:progressEvent(204)
+                    -- bg-wiki: "bury it there at dusk". xi.time.DUSK is a single
+                    -- Vana'diel hour, so most visits land outside it; without a
+                    -- line here the spring simply did not respond and there was
+                    -- nothing to tell the player they had the right place at the
+                    -- wrong time.
+                    if VanadielTOTD() ~= xi.time.DUSK then
+                        return player:printToPlayer('The spring is still. Perhaps at dusk it would be different...', xi.msg.channel.NS_SAY)
                     end
+
+                    return quest:progressEvent(204)
                 end,
             },
 
