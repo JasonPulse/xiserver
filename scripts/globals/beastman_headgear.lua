@@ -99,6 +99,11 @@ xi.beastmanHeadgear = xi.beastmanHeadgear or {}
 --   questId          the otherAreas quest id
 --   startZone        the beastman stronghold zone
 --   startCsid        its zone-in cutscene
+--   startPrevZone    the only zone you may arrive from for that cutscene to
+--                    fire. bg-wiki names one specific entrance per quest, and
+--                    without this the cutscene fires on EVERY entry to the
+--                    stronghold, hijacking anyone passing through on other
+--                    content and burning their Conquest Tally.
 --   craftsmanZone    where the craftsman stands
 --   craftsmanName    npc_list name of the craftsman
 --   baseCsid         first of the craftsman's block of six
@@ -132,6 +137,13 @@ xi.beastmanHeadgear.sections = function(quest, config)
             [config.startZone] =
             {
                 onZoneIn = function(player, prevZone)
+                    -- Only from the entrance bg-wiki names. Firing on any entry
+                    -- put this cutscene in front of every player walking into
+                    -- the stronghold for unrelated content.
+                    if prevZone ~= config.startPrevZone then
+                        return
+                    end
+
                     return config.startCsid
                 end,
 

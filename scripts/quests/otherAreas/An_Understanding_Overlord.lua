@@ -27,6 +27,7 @@ quest.sections = xi.beastmanHeadgear.sections(quest,
 {
     questId       = xi.quest.id.otherAreas.AN_UNDERSTANDING_OVERLORD,
     startZone     = xi.zone.MONASTIC_CAVERN,
+    startPrevZone = xi.zone.DAVOI,
     startCsid     = 5,
     craftsmanZone = xi.zone.SOUTHERN_SAN_DORIA,
     craftsmanName = 'Faulpie',

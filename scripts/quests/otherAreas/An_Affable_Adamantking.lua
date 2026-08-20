@@ -28,6 +28,7 @@ quest.sections = xi.beastmanHeadgear.sections(quest,
 {
     questId       = xi.quest.id.otherAreas.AN_AFFABLE_ADAMANTKING,
     startZone     = xi.zone.QULUN_DOME,
+    startPrevZone = xi.zone.BEADEAUX,
     startCsid     = 60,
     craftsmanZone = xi.zone.WINDURST_WOODS,
     craftsmanName = 'Peshi_Yohnts',

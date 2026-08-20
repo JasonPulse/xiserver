@@ -28,6 +28,7 @@ quest.sections = xi.beastmanHeadgear.sections(quest,
 {
     questId       = xi.quest.id.otherAreas.A_GENEROUS_GENERAL,
     startZone     = xi.zone.OLDTON_MOVALPOLOS,
+    startPrevZone = xi.zone.NORTH_GUSTABERG,
     startCsid     = 60,
     craftsmanZone = xi.zone.SOUTHERN_SAN_DORIA,
     craftsmanName = 'Faulpie',
