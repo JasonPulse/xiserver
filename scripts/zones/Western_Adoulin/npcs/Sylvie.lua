@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Western Adoulin (256)
 --  NPC: Sylvie
--- Starts Dances with Luopans
+-- Starts Quest: Dances with Luopans
 -- !pos 78.094 32.000 135.725
 -----------------------------------
 local ID = zones[xi.zone.WESTERN_ADOULIN]

@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Windurst Woods
 --  NPC: Perih Vashai
--- Starts and Finishes Quest: The Fanged One, From Saplings Grow
+-- Starts and Finishes Quest: The Fanged One, From Saplings Grow, Sin Hunting, Unbridled Passion
 -- !pos 117 -3 92 241
 -----------------------------------
 ---@type TNpcEntity

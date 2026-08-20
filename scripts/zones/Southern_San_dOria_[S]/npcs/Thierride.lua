@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Southern SandOria [S]
 --  NPC: Thierride
+-- Starts and Finishes Quest: Beans Ahoy!
 -- !pos -124 -2 14 80
 -----------------------------------
 local ID = zones[xi.zone.SOUTHERN_SAN_DORIA_S]

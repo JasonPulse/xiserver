@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Windurst Walls
 --  NPC: Ambrosius
+-- Starts and Finishes Quest: The Postman Always K.O.'s Twice
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}

@@ -27,10 +27,12 @@ line can be spot-checked against the source of truth directly.
 
 Output: tools/coverage/data/ledger.tsv, ledger_summary.txt
 """
+
 import json, re, glob, os, sys, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CACHE = '/tmp/wq/cache'
+CACHE = "/tmp/wq/cache"
+
 
 def enforce_no_quest_enum():
     """Fail loudly if this script ever reaches for the quest enum again.
@@ -38,37 +40,44 @@ def enforce_no_quest_enum():
     Scans executable code only -- docstrings and comments are stripped first, and
     the needles are assembled at runtime so this check cannot match itself.
     """
-    src = open(os.path.abspath(__file__), encoding='utf-8').read()
-    code = re.sub(r'"""(?:.|\n)*?"""', '', src)     # drop all docstrings
-    code = re.sub(r'#[^\n]*', '', code)             # drop comments
-    needles = ['quests' + '.lua', 'quest' + '.id', 'quest' + 'Log', 'xi.' + 'quest']
+    src = open(os.path.abspath(__file__), encoding="utf-8").read()
+    code = re.sub(r'"""(?:.|\n)*?"""', "", src)  # drop all docstrings
+    code = re.sub(r"#[^\n]*", "", code)  # drop comments
+    needles = ["quests" + ".lua", "quest" + ".id", "quest" + "Log", "xi." + "quest"]
     for bad in needles:
         if bad in code:
-            sys.exit(f'REFUSED: ledger must not reference {bad}. See the module docstring.')
+            sys.exit(
+                f"REFUSED: ledger must not reference {bad}. See the module docstring."
+            )
+
 
 def core(s):
-    s = re.sub(r'\([^)]*\)', '', s)         # "(San d'Oria)", "(WOTG ... Bastok 1)"
-    s = s.split('/')[0]                      # "The Rivalry/The Competition"
-    s = s.replace('_', ' ')                  # filenames use underscores, so the
+    s = re.sub(r"\([^)]*\)", "", s)  # "(San d'Oria)", "(WOTG ... Bastok 1)"
+    s = s.split("/")[0]  # "The Rivalry/The Competition"
+    s = s.replace("_", " ")  # filenames use underscores, so the
     # article strip below must run against spaces or A_Beaked_Blusterer keeps its 'a'
     # bg-wiki keeps articles that LSB filenames drop, and not only leading ones:
     # "A Chocobo Riding Game (Bastok)" -> chocobo_riding_game.lua, and "Like a
     # Shining Subligar" -> Like_Shining_Subligar.lua, where the dropped article is
     # mid-string. Strip them wherever they appear as whole words.
-    s = re.sub(r'\b(a|an|the)\b', ' ', s, flags=re.I)
-    return re.sub(r'[^a-z0-9]', '', s.lower())
+    s = re.sub(r"\b(a|an|the)\b", " ", s, flags=re.I)
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
 
 def wiki_page(title):
-    p = os.path.join(CACHE, re.sub(r'[^A-Za-z0-9]', '_', title) + '.json')
+    p = os.path.join(CACHE, re.sub(r"[^A-Za-z0-9]", "_", title) + ".json")
     if not os.path.exists(p):
         return None
     try:
-        return json.load(open(p))['parse']['wikitext']['*']
+        return json.load(open(p))["parse"]["wikitext"]["*"]
     except Exception:
         return None
 
-PREFIX = (r'^(RQ\d+_|SOB\d+_|LB\d+_\d*_?|WOTG_[A-Z]+_\d+_|[A-Z]{3}_AF\d_|[A-Z]{3}_I_'
-          r'|VW_OP_\d+_|[A-Z]{3}_)')
+
+PREFIX = (
+    r"^(RQ\d+_|SOB\d+_|LB\d+_\d*_?|WOTG_[A-Z]+_\d+_|[A-Z]{3}_AF\d_|[A-Z]{3}_I_"
+    r"|VW_OP_\d+_|[A-Z]{3}_)"
+)
 
 # Older zone-NPC implementations declare their quest with a DESCRIPTOR PREFIX:
 #   scripts/zones/Port_Windurst/npcs/Sigismund.lua
@@ -83,7 +92,9 @@ PREFIX = (r'^(RQ\d+_|SOB\d+_|LB\d+_\d*_?|WOTG_[A-Z]+_\d+_|[A-Z]{3}_AF\d_|[A-Z]{3
 # safe: "Endings and Beginnings" needs Ends?\b (it has no word break after "End")
 # and has no colon at all.
 DESCRIPTOR = re.compile(
-    r'^(?:Starts?|Finishes?|Ends?|Involved|Requires?|Part|Quests?)\b[^:]*:\s*', re.I)
+    r"^(?:Starts?|Finishes?|Ends?|Involved|Requires?|Part|Quests?)\b[^:]*:\s*", re.I
+)
+
 
 def build_impl_index():
     """What each FILE says it implements. Header comment first, filename as
@@ -104,23 +115,33 @@ def build_impl_index():
     # scripts/globals/*.lua does NOT reach scripts/globals/abyssea/, and quest
     # systems do live in those subdirectories -- resistance_sapper.lua implements
     # eighteen bg-wiki rows and was invisible until this became recursive.
-    globs = ['scripts/quests/**/*.lua', 'scripts/zones/**/npcs/*.lua',
-             'scripts/globals/**/*.lua', 'scripts/battlefields/**/*.lua',
-             'scripts/missions/**/*.lua', 'scripts/zones/**/instances/*.lua']
+    globs = [
+        "scripts/quests/**/*.lua",
+        "scripts/zones/**/npcs/*.lua",
+        "scripts/globals/**/*.lua",
+        "scripts/battlefields/**/*.lua",
+        "scripts/missions/**/*.lua",
+        "scripts/zones/**/instances/*.lua",
+    ]
     for g in globs:
         for p in glob.glob(os.path.join(ROOT, g), recursive=True):
             rel = os.path.relpath(p, ROOT)
             try:
-                head = open(p, encoding='utf-8', errors='replace').read(4000).split('\n')[:8]
+                head = (
+                    open(p, encoding="utf-8", errors="replace")
+                    .read(4000)
+                    .split("\n")[:8]
+                )
             except Exception:
                 continue
             for line in head:
                 m = re.match(r'^--\s*([A-Z0-9"\'].*?)\s*$', line)
-                if m and not m.group(1).startswith(('Area:', 'NPC:', 'Zone:', 'Log ID',
-                                                    '!pos', 'Variable', 'Mob:')):
+                if m and not m.group(1).startswith(
+                    ("Area:", "NPC:", "Zone:", "Log ID", "!pos", "Variable", "Mob:")
+                ):
                     decl = m.group(1)
                     idx.setdefault(core(decl), rel)
-                    bare = DESCRIPTOR.sub('', decl)
+                    bare = DESCRIPTOR.sub("", decl)
                     if bare and bare != decl:
                         idx.setdefault(core(bare), rel)
                         # A descriptor line is often a LIST of quests, and the whole
@@ -133,14 +154,15 @@ def build_impl_index():
                         # are declarative lists by construction -- an arbitrary header
                         # is never split, so a comma inside a real title (e.g. "The
                         # Good, the Bad, the Clement") is untouched.
-                        for part in re.split(r',|\band\b', bare):
+                        for part in re.split(r",|\band\b", bare):
                             part = part.strip()
                             if len(part) > 3:
                                 idx.setdefault(core(part), rel)
             b = os.path.basename(p)[:-4]
-            for cand in (b, re.sub(PREFIX, '', b), re.sub(r'^[A-Z][a-z]+_', '', b)):
+            for cand in (b, re.sub(PREFIX, "", b), re.sub(r"^[A-Z][a-z]+_", "", b)):
                 idx.setdefault(core(cand), rel)
     return idx
+
 
 def start_npc_file(page):
     """For a row with no impl match, does the bg-wiki START NPC have a script?
@@ -157,93 +179,126 @@ def start_npc_file(page):
     something unrelated -- it is a "READ THIS BEFORE BUILDING" marker.
     """
     if not page:
-        return ''
-    m = re.search(r'\|Start\s*=\s*(.*)', page)
+        return ""
+    m = re.search(r"\|Start\s*=\s*(.*)", page)
     if not m:
-        return ''
+        return ""
     raw = m.group(1)
-    npc = re.sub(r'\[\[|\]\]', '', raw.split(',')[0]).split('|')[-1].strip()
-    npc = re.sub(r'\s*\([^)]*\)\s*$', '', npc).strip().replace(' ', '_')
+    npc = re.sub(r"\[\[|\]\]", "", raw.split(",")[0]).split("|")[-1].strip()
+    npc = re.sub(r"\s*\([^)]*\)\s*$", "", npc).strip().replace(" ", "_")
     if not npc or len(npc) < 3:
-        return ''
-    hits = sorted(glob.glob(os.path.join(ROOT, 'scripts/zones/*/npcs/', npc + '.lua')))
+        return ""
+    hits = sorted(glob.glob(os.path.join(ROOT, "scripts/zones/*/npcs/", npc + ".lua")))
     if not hits:
-        return ''
+        return ""
     # NPC names repeat across zones and the wrong file is worse than none: it sends
     # you to read Bastok Mines' alchemy Sieglinde for an Abyssea-Misareaux quest, or
     # a generic Moogle for an Abyssea one. bg-wiki states the zone right after the
     # NPC, so require the directory to match it before reporting a hit.
-    zone_txt = re.sub(r'\[\[|\]\]', ' ', raw)
-    zkey = re.sub(r'[^a-z0-9]', '', zone_txt.lower())
+    zone_txt = re.sub(r"\[\[|\]\]", " ", raw)
+    zkey = re.sub(r"[^a-z0-9]", "", zone_txt.lower())
     for h in hits:
         d = os.path.basename(os.path.dirname(os.path.dirname(h)))
-        if re.sub(r'[^a-z0-9]', '', d.lower()) in zkey:
+        if re.sub(r"[^a-z0-9]", "", d.lower()) in zkey:
             return os.path.relpath(h, ROOT)
-    return ''
+    return ""
+
 
 def main():
     enforce_no_quest_enum()
-    master = dict(json.load(open(os.path.join(ROOT, 'tools/coverage/data/retail_quests_master.json'))))
+    master = dict(
+        json.load(
+            open(os.path.join(ROOT, "tools/coverage/data/retail_quests_master.json"))
+        )
+    )
     impl = build_impl_index()
 
     zone_csids, zmap = {}, {}
-    if os.path.exists('/tmp/zone_csids.json'):
-        zone_csids = {int(k): set(v) for k, v in json.load(open('/tmp/zone_csids.json')).items()}
-    for m in re.finditer(r'^\s+([A-Z_0-9]+)\s*=\s*(\d+),',
-                         open(os.path.join(ROOT, 'scripts/enum/zone.lua')).read(), re.M):
+    if os.path.exists("/tmp/zone_csids.json"):
+        zone_csids = {
+            int(k): set(v) for k, v in json.load(open("/tmp/zone_csids.json")).items()
+        }
+    for m in re.finditer(
+        r"^\s+([A-Z_0-9]+)\s*=\s*(\d+),",
+        open(os.path.join(ROOT, "scripts/enum/zone.lua")).read(),
+        re.M,
+    ):
         zmap[m.group(1)] = int(m.group(2))
 
     rows = []
     for title in sorted(master):
-        cats = [c for c in master[title] if c != 'Quests']
-        f = impl.get(core(title), '')
+        cats = [c for c in master[title] if c != "Quests"]
+        f = impl.get(core(title), "")
         page = wiki_page(title)
         # only meaningful for rows we could not match
-        npc_file = '' if f else start_npc_file(page)
-        csid_state = ''
+        npc_file = "" if f else start_npc_file(page)
+        csid_state = ""
         if f:
-            src = re.sub(r'--[^\n]*', '', open(os.path.join(ROOT, f), encoding='utf-8',
-                                               errors='replace').read())
+            src = re.sub(
+                r"--[^\n]*",
+                "",
+                open(os.path.join(ROOT, f), encoding="utf-8", errors="replace").read(),
+            )
             cur, bad, tot = None, [], 0
-            for line in src.split('\n'):
-                zm = re.search(r'\[xi\.zone\.([A-Z_0-9]+)\]\s*=', line)
+            for line in src.split("\n"):
+                zm = re.search(r"\[xi\.zone\.([A-Z_0-9]+)\]\s*=", line)
                 if zm:
-                    cur = zmap.get(zm.group(1)); continue
-                if cur is None: continue
-                cs = [int(x) for x in re.findall(r'progressEvent\((\d+)', line)]
-                cs += [int(x) for x in re.findall(r'(?<!progress)\bevent\((\d+)', line)]
+                    cur = zmap.get(zm.group(1))
+                    continue
+                if cur is None:
+                    continue
+                cs = [int(x) for x in re.findall(r"progressEvent\((\d+)", line)]
+                cs += [int(x) for x in re.findall(r"(?<!progress)\bevent\((\d+)", line)]
                 for c in cs:
-                    if c >= 8000 or cur not in zone_csids: continue
+                    if c >= 8000 or cur not in zone_csids:
+                        continue
                     tot += 1
-                    if c not in zone_csids[cur]: bad.append(f'{cur}:{c}')
+                    if c not in zone_csids[cur]:
+                        bad.append(f"{cur}:{c}")
             if tot:
-                csid_state = ('CSID_MISSING(' + ','.join(sorted(set(bad))) + ')') if bad else 'csids_ok'
-        rows.append([
-            title, cats[0] if cats else '',
-            'MISSING' if not f else 'implemented', f,
-            'no_wiki_page_cached' if page is None else '',
-            csid_state,
-            npc_file,
-            'https://www.bg-wiki.com/ffxi/' + urllib.parse.quote(title.replace(' ', '_')),
-        ])
+                csid_state = (
+                    ("CSID_MISSING(" + ",".join(sorted(set(bad))) + ")")
+                    if bad
+                    else "csids_ok"
+                )
+        rows.append(
+            [
+                title,
+                cats[0] if cats else "",
+                "MISSING" if not f else "implemented",
+                f,
+                "no_wiki_page_cached" if page is None else "",
+                csid_state,
+                npc_file,
+                "https://www.bg-wiki.com/ffxi/"
+                + urllib.parse.quote(title.replace(" ", "_")),
+            ]
+        )
 
-    out = os.path.join(ROOT, 'tools/coverage/data/ledger.tsv')
-    with open(out, 'w') as fh:
-        fh.write('bgwiki_title\tcategory\tstate\timpl_file\twiki_fetch\tcsid_check\t'
-                 'start_npc_file\twiki_url\n')
+    out = os.path.join(ROOT, "tools/coverage/data/ledger.tsv")
+    with open(out, "w") as fh:
+        fh.write(
+            "bgwiki_title\tcategory\tstate\timpl_file\twiki_fetch\tcsid_check\t"
+            "start_npc_file\twiki_url\n"
+        )
         for r in rows:
-            fh.write('\t'.join(r) + '\n')
+            fh.write("\t".join(r) + "\n")
 
-    miss = [r for r in rows if r[2] == 'MISSING']
-    s = [f'bg-wiki quests (denominator): {len(rows)}',
-         f'  implemented                 : {len(rows)-len(miss)}',
-         f'  NO IMPLEMENTATION           : {len(miss)}',
-         f'  implemented but csid absent : {len([r for r in rows if r[5].startswith("CSID_MISSING")])}',
-         f'  wiki page not cached        : {len([r for r in rows if r[4]])}',
-         f'  MISSING w/ start-NPC script : {len([r for r in rows if r[2] == "MISSING" and r[6]])}'
-         f'   <- READ THESE FIRST, may already be implemented']
-    open(os.path.join(ROOT, 'tools/coverage/data/ledger_summary.txt'), 'w').write('\n'.join(s) + '\n')
-    print('\n'.join(s))
+    miss = [r for r in rows if r[2] == "MISSING"]
+    s = [
+        f"bg-wiki quests (denominator): {len(rows)}",
+        f"  implemented                 : {len(rows)-len(miss)}",
+        f"  NO IMPLEMENTATION           : {len(miss)}",
+        f'  implemented but csid absent : {len([r for r in rows if r[5].startswith("CSID_MISSING")])}',
+        f"  wiki page not cached        : {len([r for r in rows if r[4]])}",
+        f'  MISSING w/ start-NPC script : {len([r for r in rows if r[2] == "MISSING" and r[6]])}'
+        f"   <- READ THESE FIRST, may already be implemented",
+    ]
+    open(os.path.join(ROOT, "tools/coverage/data/ledger_summary.txt"), "w").write(
+        "\n".join(s) + "\n"
+    )
+    print("\n".join(s))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

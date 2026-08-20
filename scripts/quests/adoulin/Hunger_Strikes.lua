@@ -60,7 +60,13 @@ quest.sections =
                         trade:getItemCount() == 1 and
                         trade:getGil() == 0
                     then
+                        -- getItem can return nil even after the count check, so
+                        -- the category read has to be guarded rather than assumed.
                         local itemObj = trade:getItem(0)
+                        if itemObj == nil then
+                            return
+                        end
+
                         local auctionCategory = itemObj:getAHCat()
 
                         if

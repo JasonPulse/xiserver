@@ -28,8 +28,11 @@ mobskillObject.onMobSkillCheck = function(target, mob, skill)
 end
 
 mobskillObject.onMobWeaponSkill = function(target, mob, skill)
-    local damage = xi.mobskills.mobPhysicalMove(mob, target, skill, 1, 1, 1, xi.mobskills.physicalTpBonus.NO_EFFECT, 1, 1, 1)
-    damage = xi.mobskills.mobFinalAdjustments(damage, mob, skill, target, xi.attackType.PHYSICAL, xi.damageType.SLASHING, xi.mobskills.shadowBehavior.NUMSHADOWS_1)
+    -- mobPhysicalMove returns a physicalMobSkillRetVal table, not a number.
+    -- Passing the table straight into mobFinalAdjustments made it do arithmetic
+    -- on a table, which throws the moment this skill is used.
+    local info   = xi.mobskills.mobPhysicalMove(mob, target, skill, 1, 1, 1, xi.mobskills.physicalTpBonus.NO_EFFECT, 1, 1, 1)
+    local damage = xi.mobskills.mobFinalAdjustments(info.dmg, mob, skill, target, xi.attackType.PHYSICAL, xi.damageType.SLASHING, xi.mobskills.shadowBehavior.NUMSHADOWS_1, info.hitslanded)
 
     target:takeDamage(damage, mob, xi.attackType.PHYSICAL, xi.damageType.SLASHING)
     xi.mobskills.mobStatusEffectMove(mob, target, xi.effect.STUN, 1, 0, 5)

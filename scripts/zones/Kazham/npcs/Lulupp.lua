@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Kazham
 --  NPC: Lulupp
+-- Starts Quest: The Opo-opo and I
 -- !pos -26.567 -3.5 -3.544 250
 -----------------------------------
 ---@type TNpcEntity

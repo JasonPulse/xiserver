@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Windurst Waters (S)
 --  NPC: Hampu-Kampu
+-- Starts and Finishes Quest: Say It with a Handbag
 -- !pos  -115.597, -1.000, -158.703 94
 -----------------------------------
 ---@type TNpcEntity

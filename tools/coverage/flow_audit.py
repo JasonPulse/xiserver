@@ -55,6 +55,7 @@ Do not conclude it from this tool. Search the enum block in
 `SYNERGUSTIC_PURSUITS`), then search by the numeric quest id, then by filename.
 Only then is MISSING defensible.
 """
+
 import glob
 import io
 import json
@@ -62,34 +63,44 @@ import os
 import re
 import sys
 
-HEADER_FIELDS = ['Start', 'Quest Reqs', 'Fame', 'FLevel', 'Item Reqs',
-                 'Repeatable', 'Previous', 'Next', 'Title', 'Reward']
+HEADER_FIELDS = [
+    "Start",
+    "Quest Reqs",
+    "Fame",
+    "FLevel",
+    "Item Reqs",
+    "Repeatable",
+    "Previous",
+    "Next",
+    "Title",
+    "Reward",
+]
 
 # Lines that actually describe control flow / rewards. Everything else is noise.
 FLOW = re.compile(
-    r'check = function|return status|hasCompletedQuest|hasCompletedMission|getFameLevel|'
-    r'getMainLvl|getMainJob|hasKeyItem|progressEvent|quest:event\(|onTrade|onTrigger|'
-    r'onEventFinish|onZoneIn|onMobDeath|\[\d+\] = function|addItem|giveItem|giveKeyItem|'
-    r'delKeyItem|addGil|addFame|addExp|setTitle|addTitle|complete\(player\)|begin\(player\)|'
-    r'confirmTrade|tradeComplete|setVar|getVar|\[xi\.zone\.|startEvent'
+    r"check = function|return status|hasCompletedQuest|hasCompletedMission|getFameLevel|"
+    r"getMainLvl|getMainJob|hasKeyItem|progressEvent|quest:event\(|onTrade|onTrigger|"
+    r"onEventFinish|onZoneIn|onMobDeath|\[\d+\] = function|addItem|giveItem|giveKeyItem|"
+    r"delKeyItem|addGil|addFame|addExp|setTitle|addTitle|complete\(player\)|begin\(player\)|"
+    r"confirmTrade|tradeComplete|setVar|getVar|\[xi\.zone\.|startEvent"
 )
 
 
 def norm(title):
-    t = re.sub(r'\s*\(.*?\)\s*$', '', title)
-    t = t.replace('&', ' and ').replace("'", '').replace('’', '')
-    t = re.sub(r'[-:/,\.\?!–]', ' ', t)
-    t = re.sub(r'[^A-Za-z0-9 ]', ' ', t)
-    return re.sub(r'\s+', '_', t.strip()).upper()
+    t = re.sub(r"\s*\(.*?\)\s*$", "", title)
+    t = t.replace("&", " and ").replace("'", "").replace("’", "")
+    t = re.sub(r"[-:/,\.\?!–]", " ", t)
+    t = re.sub(r"[^A-Za-z0-9 ]", " ", t)
+    return re.sub(r"\s+", "_", t.strip()).upper()
 
 
 def cache_key(name):
-    return re.sub(r'[^a-z0-9]', '', os.path.splitext(name)[0].lower())
+    return re.sub(r"[^a-z0-9]", "", os.path.splitext(name)[0].lower())
 
 
 def find_wiki(title, cache):
-    for k in (cache_key(title), cache_key(re.sub(r'\s*\(.*?\)\s*$', '', title))):
-        for suffix in ('', 'quest'):
+    for k in (cache_key(title), cache_key(re.sub(r"\s*\(.*?\)\s*$", "", title))):
+        for suffix in ("", "quest"):
             hit = cache.get(k + suffix)
             if hit:
                 return hit
@@ -97,22 +108,24 @@ def find_wiki(title, cache):
 
 
 def wikitext(path):
-    s = io.open(path, encoding='utf-8', errors='replace').read()
-    if path.endswith('.json'):
+    s = io.open(path, encoding="utf-8", errors="replace").read()
+    if path.endswith(".json"):
         try:
-            s = json.loads(s)['parse']['wikitext']['*']
+            s = json.loads(s)["parse"]["wikitext"]["*"]
         except Exception:
             pass
-    if s.strip().lower().startswith('#redirect'):
-        return s + '\n[NOTE: this page is a REDIRECT -- follow it, do not treat as absent]'
+    if s.strip().lower().startswith("#redirect"):
+        return (
+            s + "\n[NOTE: this page is a REDIRECT -- follow it, do not treat as absent]"
+        )
     return s
 
 
 def declaring_files(area, enum):
     out = []
-    for f in glob.glob('scripts/**/*.lua', recursive=True):
-        s = io.open(f, encoding='utf-8', errors='replace').read()
-        if re.search(r'xi\.quest\.id\.' + area + r'\.' + enum + r'\b', s):
+    for f in glob.glob("scripts/**/*.lua", recursive=True):
+        s = io.open(f, encoding="utf-8", errors="replace").read()
+        if re.search(r"xi\.quest\.id\." + area + r"\." + enum + r"\b", s):
             out.append(f)
     return sorted(out)
 
@@ -122,47 +135,54 @@ def main():
     start = int(sys.argv[2]) if len(sys.argv) > 2 else 0
     count = int(sys.argv[3]) if len(sys.argv) > 3 else 5
 
-    rows = json.load(io.open(f'tools/coverage/data/batches/{area}.json', encoding='utf-8'))
-    cache = {cache_key(os.path.basename(p)): p for p in glob.glob('/tmp/bgwiki/*')}
+    rows = json.load(
+        io.open(f"tools/coverage/data/batches/{area}.json", encoding="utf-8")
+    )
+    cache = {cache_key(os.path.basename(p)): p for p in glob.glob("/tmp/bgwiki/*")}
 
-    for row in rows[start:start + count]:
-        title = row['retail_title']
+    for row in rows[start : start + count]:
+        title = row["retail_title"]
         enum = norm(title)
-        print('=' * 78)
-        print(f'QUEST: {title}   [enum guess: {enum}]')
+        print("=" * 78)
+        print(f"QUEST: {title}   [enum guess: {enum}]")
 
         wpath = find_wiki(title, cache)
         if not wpath:
-            print('  !! no cached wiki page -- FETCH IT before judging this quest')
+            print("  !! no cached wiki page -- FETCH IT before judging this quest")
         else:
             w = wikitext(wpath)
-            head = re.search(r'\{\{Quest Header(.*?)\n\}\}', w, re.S)
+            head = re.search(r"\{\{Quest Header(.*?)\n\}\}", w, re.S)
             if head:
                 for f in HEADER_FIELDS:
-                    m = re.search(r'\|' + re.escape(f) + r'=(.*?)(?=\n\s*\|[A-Za-z]|\Z)',
-                                  head.group(1), re.S)
-                    v = re.sub(r'\s+', ' ', m.group(1)).strip() if m else ''
+                    m = re.search(
+                        r"\|" + re.escape(f) + r"=(.*?)(?=\n\s*\|[A-Za-z]|\Z)",
+                        head.group(1),
+                        re.S,
+                    )
+                    v = re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
                     if v:
-                        print(f'  {f:<11}: {v[:150]}')
-            walk = re.search(r'==\s*Walkthrough\s*==(.*?)(\n==|\Z)', w, re.S)
+                        print(f"  {f:<11}: {v[:150]}")
+            walk = re.search(r"==\s*Walkthrough\s*==(.*?)(\n==|\Z)", w, re.S)
             if walk:
-                print('  WIKI STEPS:')
+                print("  WIKI STEPS:")
                 for line in walk.group(1).splitlines():
-                    t = re.sub(r'\s+', ' ', line).strip()
-                    if t.startswith('*'):
-                        print('    ' + t[:170])
+                    t = re.sub(r"\s+", " ", line).strip()
+                    if t.startswith("*"):
+                        print("    " + t[:170])
 
         files = declaring_files(area, enum)
         if not files:
-            print('  !! no file DECLARES this enum -- see "WHEN A QUEST LOOKS ABSENT" in the docstring')
+            print(
+                '  !! no file DECLARES this enum -- see "WHEN A QUEST LOOKS ABSENT" in the docstring'
+            )
         for f in files:
-            src = io.open(f, encoding='utf-8', errors='replace').read().splitlines()
-            print(f'  --- REPO {f} ({len(src)}L)')
+            src = io.open(f, encoding="utf-8", errors="replace").read().splitlines()
+            print(f"  --- REPO {f} ({len(src)}L)")
             for i, line in enumerate(src, 1):
                 t = line.strip()
-                if t and not t.startswith('--') and FLOW.search(t):
-                    print(f'   {i:>4}| {t[:140]}')
+                if t and not t.startswith("--") and FLOW.search(t):
+                    print(f"   {i:>4}| {t[:140]}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

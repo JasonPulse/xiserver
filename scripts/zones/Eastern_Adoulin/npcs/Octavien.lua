@@ -2,7 +2,7 @@
 -- Area: Eastern Adoulin (257)
 --  NPC: Octavien
 -- Type: Palace Guard
--- Starts Children of the Rune
+-- Starts Quest: Children of the Rune
 -- !pos 100.580 -40.150 -63.830
 -----------------------------------
 local ID = zones[xi.zone.EASTERN_ADOULIN]

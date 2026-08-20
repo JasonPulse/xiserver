@@ -129,7 +129,7 @@ Bait and Switch	Bastok Quests	implemented	scripts/quests/bastok/Bait_and_Switch.
 Battle on a New Front	Crystal War Quests	MISSING					https://www.bg-wiki.com/ffxi/Battle_on_a_New_Front
 Beadeaux Smog	Bastok Quests	implemented	scripts/quests/bastok/Beadeaux_Smog.lua		csids_ok		https://www.bg-wiki.com/ffxi/Beadeaux_Smog
 Beam Me Up...No, Not There!	Jeuno Quests	MISSING					https://www.bg-wiki.com/ffxi/Beam_Me_Up...No%2C_Not_There%21
-Beans Ahoy!	Crystal War Quests	MISSING				scripts/zones/Southern_San_dOria_[S]/npcs/Thierride.lua	https://www.bg-wiki.com/ffxi/Beans_Ahoy%21
+Beans Ahoy!	Crystal War Quests	implemented	scripts/zones/Southern_San_dOria_[S]/npcs/Thierride.lua				https://www.bg-wiki.com/ffxi/Beans_Ahoy%21
 Beast from the East	Crystal War Quests	implemented	scripts/quests/crystalWar/Beast_from_the_East.lua		csids_ok		https://www.bg-wiki.com/ffxi/Beast_from_the_East
 Beat Around the Bushin	Jeuno Quests	implemented	scripts/zones/Lower_Jeuno/npcs/Vola.lua				https://www.bg-wiki.com/ffxi/Beat_Around_the_Bushin
 Beauty and the Galka	Bastok Mines Quests	implemented	scripts/quests/bastok/Beauty_and_the_Galka.lua		csids_ok		https://www.bg-wiki.com/ffxi/Beauty_and_the_Galka
@@ -208,7 +208,7 @@ Chasing Quotas	Dragoon Artifact Quests	implemented	scripts/zones/Bastok_Markets/
 Chasing Shadows	Crystal War Quests	implemented	scripts/quests/crystalWar/Chasing_Shadows.lua		csids_ok		https://www.bg-wiki.com/ffxi/Chasing_Shadows
 Chasing Tales	Windurst Quests	implemented	scripts/quests/windurst/Chasing_Tales.lua		csids_ok		https://www.bg-wiki.com/ffxi/Chasing_Tales
 Child's Play	Jeuno Quests	implemented	scripts/quests/jeuno/Childs_Play.lua		csids_ok		https://www.bg-wiki.com/ffxi/Child%27s_Play
-Children of the Rune	Additional Job Quests	MISSING				scripts/zones/Eastern_Adoulin/npcs/Octavien.lua	https://www.bg-wiki.com/ffxi/Children_of_the_Rune
+Children of the Rune	Additional Job Quests	implemented	scripts/zones/Eastern_Adoulin/npcs/Octavien.lua				https://www.bg-wiki.com/ffxi/Children_of_the_Rune
 Chips	Bastok Quests	implemented	scripts/quests/bastok/Chips.lua		csids_ok		https://www.bg-wiki.com/ffxi/Chips
 Chocobilious	Windurst Quests	implemented	scripts/quests/windurst/Chocobilious.lua		csids_ok		https://www.bg-wiki.com/ffxi/Chocobilious
 Chocobo Panic	Abyssea - Grauberg Quests	implemented	scripts/quests/abyssea/Chocobo_Panic.lua		csids_ok		https://www.bg-wiki.com/ffxi/Chocobo_Panic
@@ -245,7 +245,7 @@ Crystal Guardian	Crystal War Quests	MISSING					https://www.bg-wiki.com/ffxi/Cry
 Curses, Foiled A-Golem!?	Windurst Quests	implemented	scripts/quests/windurst/Curses_Foiled_A_Golem.lua		csids_ok		https://www.bg-wiki.com/ffxi/Curses%2C_Foiled_A-Golem%21%3F
 Curses, Foiled Again!	Windurst Quests	implemented	scripts/quests/windurst/Curses_Foiled_Again_1.lua		csids_ok		https://www.bg-wiki.com/ffxi/Curses%2C_Foiled_Again%21
 Curses, Foiled...Again!?	Windurst Quests	implemented	scripts/quests/windurst/Curses_Foiled_Again_1.lua		csids_ok		https://www.bg-wiki.com/ffxi/Curses%2C_Foiled...Again%21%3F
-Dances with Luopans	Additional Job Quests	MISSING				scripts/zones/Western_Adoulin/npcs/Sylvie.lua	https://www.bg-wiki.com/ffxi/Dances_with_Luopans
+Dances with Luopans	Additional Job Quests	implemented	scripts/zones/Western_Adoulin/npcs/Sylvie.lua				https://www.bg-wiki.com/ffxi/Dances_with_Luopans
 Dark Legacy	Bastok Quests	implemented	scripts/quests/bastok/DRK_AF1_Dark_Legacy.lua		csids_ok		https://www.bg-wiki.com/ffxi/Dark_Legacy
 Dark Puppet	Bastok Quests	implemented	scripts/quests/bastok/DRK_AF2_Dark_Puppet.lua		csids_ok		https://www.bg-wiki.com/ffxi/Dark_Puppet
 Dawn of Death	Abyssea Quests	implemented	scripts/quests/abyssea/Dawn_of_Death.lua		csids_ok		https://www.bg-wiki.com/ffxi/Dawn_of_Death
@@ -708,7 +708,7 @@ Save the Clock Tower	Jeuno Quests	implemented	scripts/quests/jeuno/Save_the_Cloc
 Saved by the Bell	Adoulin Quests	MISSING					https://www.bg-wiki.com/ffxi/Saved_by_the_Bell
 Savory Salvation	Abyssea - Tahrongi Quests	implemented	scripts/quests/abyssea/Savory_Salvation.lua		csids_ok		https://www.bg-wiki.com/ffxi/Savory_Salvation
 Say It with Flowers	Repeatable Quests	implemented	scripts/quests/windurst/Say_It_With_Flowers.lua		csids_ok		https://www.bg-wiki.com/ffxi/Say_It_with_Flowers
-Say It with a Handbag	Crystal War Quests	MISSING				scripts/zones/Windurst_Waters_[S]/npcs/Hampu-Kampu.lua	https://www.bg-wiki.com/ffxi/Say_It_with_a_Handbag
+Say It with a Handbag	Crystal War Quests	implemented	scripts/zones/Windurst_Waters_[S]/npcs/Hampu-Kampu.lua				https://www.bg-wiki.com/ffxi/Say_It_with_a_Handbag
 Scaredy-Cats	Adoulin Quests	implemented	scripts/zones/Western_Adoulin/npcs/Eamonn.lua				https://www.bg-wiki.com/ffxi/Scaredy-Cats
 Scars of Abyssea (Quest)	Abyssea Quests	implemented	scripts/quests/abyssea/Scars_of_Abyssea.lua		csids_ok		https://www.bg-wiki.com/ffxi/Scars_of_Abyssea_%28Quest%29
 Scattered Into Shadow	Beastmaster Artifact Quests	implemented	scripts/quests/jeuno/Scattered_into_Shadow.lua		csids_ok		https://www.bg-wiki.com/ffxi/Scattered_Into_Shadow
@@ -734,10 +734,10 @@ Shoot First, Ask Questions Later	Bastok Quests	implemented	scripts/quests/bastok
 Sick and Tired	Adoulin Quests	MISSING					https://www.bg-wiki.com/ffxi/Sick_and_Tired
 Signed in Blood	San d'Oria Quests	implemented	scripts/quests/sandoria/Signed_in_Blood.lua		csids_ok		https://www.bg-wiki.com/ffxi/Signed_in_Blood
 Silence of the Rams	Bastok Quests	implemented	scripts/quests/bastok/Silence_of_the_Rams.lua		csids_ok		https://www.bg-wiki.com/ffxi/Silence_of_the_Rams
-Sin Hunting	Ranger Artifact Quests	MISSING				scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua	https://www.bg-wiki.com/ffxi/Sin_Hunting
+Sin Hunting	Ranger Artifact Quests	implemented	scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua				https://www.bg-wiki.com/ffxi/Sin_Hunting
 Sins of the Mothers	Crystal War Quests	implemented	scripts/quests/crystalWar/Sins_of_the_Mothers.lua		CSID_MISSING(94:1130)		https://www.bg-wiki.com/ffxi/Sins_of_the_Mothers
 Sisters in Crime	Abyssea - Tahrongi Quests	MISSING					https://www.bg-wiki.com/ffxi/Sisters_in_Crime
-Skyward Ho, Voidwatcher!	Norg Quests	MISSING					https://www.bg-wiki.com/ffxi/Skyward_Ho%2C_Voidwatcher%21
+Skyward Ho, Voidwatcher!	Norg Quests	implemented	scripts/quests/outlands/Skyward_Ho_Voidwatcher.lua				https://www.bg-wiki.com/ffxi/Skyward_Ho%2C_Voidwatcher%21
 Slacking Subordinates	Abyssea - Altepa Quests	MISSING					https://www.bg-wiki.com/ffxi/Slacking_Subordinates
 Sleepless Nights	San d'Oria Quests	implemented	scripts/quests/sandoria/Sleepless_Nights.lua		csids_ok		https://www.bg-wiki.com/ffxi/Sleepless_Nights
 Slip Slidin' Away	Abyssea - Uleguerand Quests	MISSING					https://www.bg-wiki.com/ffxi/Slip_Slidin%27_Away
@@ -816,7 +816,7 @@ The Eleventh's Hour	Bastok Mines Quests	implemented	scripts/quests/bastok/The_El
 The Elvaan Goldsmith	Bastok Markets Quests	implemented	scripts/quests/bastok/The_Elvaan_Goldsmith.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Elvaan_Goldsmith
 The Fanged One	Additional Job Quests	implemented	scripts/quests/windurst/The_Fanged_One.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Fanged_One
 The Fighting Fourth	Bastok Markets (S) Quests	implemented	scripts/quests/crystalWar/WOTG_BAS_0_The_Fighting_Fourth.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Fighting_Fourth
-The Firebloom Tree	Kazham Quests	MISSING					https://www.bg-wiki.com/ffxi/The_Firebloom_Tree
+The Firebloom Tree	Kazham Quests	implemented	scripts/quests/outlands/The_Firebloom_Tree.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Firebloom_Tree
 The First Meeting	Bastok Quests	implemented	scripts/quests/bastok/MNK_AF2_The_First_Meeting.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_First_Meeting
 The Flipside of Things	Crystal War Quests	implemented	scripts/quests/crystalWar/The_Flipside_of_Things.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Flipside_of_Things
 The Flying Machine of Eld	Jeuno Quests	MISSING					https://www.bg-wiki.com/ffxi/The_Flying_Machine_of_Eld
@@ -857,10 +857,10 @@ The Naming Game	Bastok Quests	implemented	scripts/quests/bastok/The_Naming_Game.
 The Old Lady	Mhaura Quests	implemented	scripts/quests/otherAreas/The_Old_Lady.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Old_Lady
 The Old Man and the Harpoon	Adoulin Quests	implemented	scripts/quests/adoulin/The_Old_Man_and_the_Harpoon.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Old_Man_and_the_Harpoon
 The Old Monument	Jeuno Quests	implemented	scripts/quests/jeuno/The_Old_Monument.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Old_Monument
-The Opo-opo and I	Kazham Quests	MISSING				scripts/zones/Kazham/npcs/Lulupp.lua	https://www.bg-wiki.com/ffxi/The_Opo-opo_and_I
+The Opo-opo and I	Kazham Quests	implemented	scripts/zones/Kazham/npcs/Lulupp.lua				https://www.bg-wiki.com/ffxi/The_Opo-opo_and_I
 The Perils of Kororo	Abyssea - Grauberg Quests	implemented	scripts/quests/abyssea/The_Perils_of_Kororo.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Perils_of_Kororo
 The Pickpocket	Port San d'Oria Quests	implemented	scripts/quests/sandoria/The_Pickpocket.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Pickpocket
-The Postman Always K.O.'s Twice	Repeatable Quests	MISSING				scripts/zones/Windurst_Walls/npcs/Ambrosius.lua	https://www.bg-wiki.com/ffxi/The_Postman_Always_K.O.%27s_Twice
+The Postman Always K.O.'s Twice	Repeatable Quests	implemented	scripts/zones/Windurst_Walls/npcs/Ambrosius.lua				https://www.bg-wiki.com/ffxi/The_Postman_Always_K.O.%27s_Twice
 The Potential Within	Norg Quests	implemented	scripts/quests/outlands/The_Potential_Within.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Potential_Within
 The Prankster	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/The_Prankster.lua		CSID_MISSING(52:17)		https://www.bg-wiki.com/ffxi/The_Prankster
 The Price of Valor	Crystal War Quests	implemented	scripts/quests/crystalWar/The_Price_of_Valor.lua		csids_ok		https://www.bg-wiki.com/ffxi/The_Price_of_Valor
@@ -971,7 +971,7 @@ Twinstone Bonding	Repeatable Quests	implemented	scripts/quests/windurst/Twinston
 Twitherym Dust	Adoulin Quests	implemented	scripts/quests/adoulin/Twitherym_Dust.lua		csids_ok		https://www.bg-wiki.com/ffxi/Twitherym_Dust
 Two Horn the Savage	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Two_Horn_the_Savage.lua		csids_ok		https://www.bg-wiki.com/ffxi/Two_Horn_the_Savage
 Unbreak His Heart	Abyssea - La Theine Quests	MISSING					https://www.bg-wiki.com/ffxi/Unbreak_His_Heart
-Unbridled Passion	Ranger Artifact Quests	MISSING				scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua	https://www.bg-wiki.com/ffxi/Unbridled_Passion
+Unbridled Passion	Ranger Artifact Quests	implemented	scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua				https://www.bg-wiki.com/ffxi/Unbridled_Passion
 Under Oath	Chateau d'Oraguille Quests	implemented	scripts/zones/Chateau_dOraguille/npcs/_6h0.lua				https://www.bg-wiki.com/ffxi/Under_Oath
 Under the Sea	Other Quests	implemented	scripts/quests/otherAreas/Under_the_Sea.lua		csids_ok		https://www.bg-wiki.com/ffxi/Under_the_Sea
 Undying Flames	Northern San d'Oria Quests	implemented	scripts/quests/sandoria/Undying_Flames.lua		csids_ok		https://www.bg-wiki.com/ffxi/Undying_Flames
@@ -1006,13 +1006,13 @@ Unsullied Lands	Adoulin Quests	implemented	scripts/quests/adoulin/Unsullied_Land
 Unwavering Resolve	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Unwavering_Resolve.lua				https://www.bg-wiki.com/ffxi/Unwavering_Resolve
 User:Metalsmith	Other Quests	MISSING					https://www.bg-wiki.com/ffxi/User%3AMetalsmith
 User:Niamor/Sandbox		MISSING					https://www.bg-wiki.com/ffxi/User%3ANiamor/Sandbox
-VW Op. 004: Bibiki Bombardment	Other Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._004%3A_Bibiki_Bombardment
-VW Op. 026: Tavnazian Terrors	Other Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._026%3A_Tavnazian_Terrors
-VW Op. 050: Aht Urhgan Assault	Aht Urhgan Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._050%3A_Aht_Urhgan_Assault
-VW Op. 054: Elshimo List	Kazham Quests	implemented	scripts/quests/outlands/VW_OP_054_Elshimo_List.lua		csids_ok		https://www.bg-wiki.com/ffxi/VW_Op._054%3A_Elshimo_List
-VW Op. 068: Subterranean Skirmish	Aht Urhgan Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._068%3A_Subterranean_Skirmish
-VW Op. 101: Detour to Zepwell	Outlands Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._101%3A_Detour_to_Zepwell
-VW Op. 115: Li'Telor Variant	Norg Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._115%3A_Li%27Telor_Variant
+VW Op. 004: Bibiki Bombardment	Other Quests	implemented	scripts/quests/otherAreas/VW_Op_004_Bibiki_Bombardment.lua				https://www.bg-wiki.com/ffxi/VW_Op._004%3A_Bibiki_Bombardment
+VW Op. 026: Tavnazian Terrors	Other Quests	implemented	scripts/quests/otherAreas/VW_Op_026_Tavnazian_Terrors.lua				https://www.bg-wiki.com/ffxi/VW_Op._026%3A_Tavnazian_Terrors
+VW Op. 050: Aht Urhgan Assault	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/VW_Op_050_Aht_Urhgan_Assault.lua				https://www.bg-wiki.com/ffxi/VW_Op._050%3A_Aht_Urhgan_Assault
+VW Op. 054: Elshimo List	Kazham Quests	implemented	scripts/quests/outlands/VW_OP_054_Elshimo_List.lua				https://www.bg-wiki.com/ffxi/VW_Op._054%3A_Elshimo_List
+VW Op. 068: Subterranean Skirmish	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/VW_Op_068_Subterranean_Skirmish.lua				https://www.bg-wiki.com/ffxi/VW_Op._068%3A_Subterranean_Skirmish
+VW Op. 101: Detour to Zepwell	Outlands Quests	implemented	scripts/quests/outlands/VW_Op_101_Detour_to_Zepwell.lua				https://www.bg-wiki.com/ffxi/VW_Op._101%3A_Detour_to_Zepwell
+VW Op. 115: Li'Telor Variant	Norg Quests	implemented	scripts/quests/outlands/VW_Op_115_Li_Telor_Variant.lua				https://www.bg-wiki.com/ffxi/VW_Op._115%3A_Li%27Telor_Variant
 VW Op. 115: Valkurm Duster	Jeuno Quests	implemented	scripts/quests/jeuno/VW_OP_115_Valkurm_Duster.lua				https://www.bg-wiki.com/ffxi/VW_Op._115%3A_Valkurm_Duster
 VW Op. 118: Buburimu Squall	Jeuno Quests	implemented	scripts/quests/jeuno/VW_OP_118_Buburimu_Squall.lua				https://www.bg-wiki.com/ffxi/VW_Op._118%3A_Buburimu_Squall
 VW Op. 126: Qufim Incursion	Crystal War Quests	MISSING					https://www.bg-wiki.com/ffxi/VW_Op._126%3A_Qufim_Incursion
@@ -1024,7 +1024,7 @@ Vegetable Vegetable Revolution	Adoulin Quests	MISSING					https://www.bg-wiki.co
 Velkkovert Operations	Adoulin Quests	MISSING					https://www.bg-wiki.com/ffxi/Velkkovert_Operations
 Vengeful Wrath	Bastok Mines Quests	implemented	scripts/quests/bastok/Vengeful_Wrath.lua		csids_ok		https://www.bg-wiki.com/ffxi/Vengeful_Wrath
 Voices from Beyond	Abyssea - Grauberg Quests	implemented	scripts/quests/abyssea/Voices_from_Beyond.lua		csids_ok		https://www.bg-wiki.com/ffxi/Voices_from_Beyond
-Voidwatch Ops: Border Crossing	Norg Quests	MISSING					https://www.bg-wiki.com/ffxi/Voidwatch_Ops%3A_Border_Crossing
+Voidwatch Ops: Border Crossing	Norg Quests	implemented	scripts/quests/outlands/Voidwatch_Ops_Border_Crossing.lua		csids_ok		https://www.bg-wiki.com/ffxi/Voidwatch_Ops%3A_Border_Crossing
 Waking Dreams	Avatar Quests	implemented	scripts/quests/windurst/Waking_Dreams.lua		csids_ok		https://www.bg-wiki.com/ffxi/Waking_Dreams
 Waking the Beast	La Theine Plateau Quests	implemented	scripts/quests/otherAreas/Waking_the_Beast.lua		csids_ok		https://www.bg-wiki.com/ffxi/Waking_the_Beast
 Waking the Colossus	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Waking_the_Colossus.lua		CSID_MISSING(50:925,50:926,50:927,50:928,50:929)		https://www.bg-wiki.com/ffxi/Waking_the_Colossus
