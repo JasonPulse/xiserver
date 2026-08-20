@@ -58,6 +58,7 @@ inline std::string hex32ToString(std::uint32_t hex)
 #define TracyFrameMark            FrameMark
 #define TracyZoneScoped           ZoneScoped
 #define TracyZoneScopedN(n)       ZoneScopedN(n)
+#define TracyZoneScopedS(depth)   ZoneScopedS(depth)
 #define TracyZoneNamed(var, name) ZoneNamedN(var, name, true)
 #define TracyZoneText(n, l)       ZoneText(n, l)
 #define TracyZoneScopedC(c)       ZoneScopedC(c)
@@ -97,6 +98,7 @@ inline std::string hex32ToString(std::uint32_t hex)
 #define TracyFrameMark                     std::ignore = 0
 #define TracyZoneScoped                    std::ignore = 0
 #define TracyZoneScopedN(n)                std::ignore = n
+#define TracyZoneScopedS(depth)            std::ignore = depth
 #define TracyZoneNamed(var, name)          std::ignore = #var; std::ignore = name
 #define TracyZoneText(n, l)                std::ignore = n; std::ignore = l
 #define TracyZoneScopedC(c)                std::ignore = c

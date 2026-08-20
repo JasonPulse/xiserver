@@ -1,7 +1,7 @@
-﻿/*
+/*
 ===========================================================================
 
-  Copyright (c) 2024 LandSandBoat Dev Teams
+  Copyright (c) 2026 LandSandBoat Dev Teams
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -19,74 +19,21 @@
 ===========================================================================
 */
 
-#include "database.h"
+#include <common/database/database.h>
 
-#include "application.h"
-#include "logging.h"
-#include "macros.h"
-#include "settings.h"
-#include "task_manager.h"
-#include "timer.h"
-#include "utils.h"
+#include <common/database/query_validation.h>
+
+#include <common/logging.h>
+#include <common/macros.h>
+#include <common/utils.h>
+#include <common/xi.h>
+
+#include <common/types/hash_map.h>
 
 #include <chrono>
+#include <functional>
+#include <thread>
 using namespace std::chrono_literals;
-
-namespace
-{
-
-// TODO: Manual checkout and pooling of state
-// Each thread gets its own connection, so we don't need to worry about thread safety.
-thread_local Synchronized<db::detail::State> state;
-
-const std::vector<std::string> connectionIssues = {
-    "Lost connection",
-    "Server has gone away",
-    "Connection refused",
-    "Can't connect to server",
-};
-
-bool timersEnabled = false;
-
-} // namespace
-
-auto db::getConnection() -> std::unique_ptr<sql::Connection>
-{
-    try
-    {
-        const auto login  = settings::get<std::string>("network.SQL_LOGIN");
-        const auto passwd = settings::get<std::string>("network.SQL_PASSWORD");
-        const auto host   = settings::get<std::string>("network.SQL_HOST");
-        const auto port   = settings::get<uint16>("network.SQL_PORT");
-        const auto schema = settings::get<std::string>("network.SQL_DATABASE");
-        const auto url    = fmt::format("tcp://{}:{}/{}", host, port, schema);
-
-        return std::unique_ptr<sql::Connection>(sql::mariadb::get_driver_instance()->connect(url.c_str(), login.c_str(), passwd.c_str()));
-    }
-    catch (const std::exception& e)
-    {
-        // If we can't establish a connection to the database we can't do anything.
-        // Time to die!
-        ShowCritical("!!! Failed to connect to database, terminating server !!!");
-        ShowCritical(e.what());
-        std::this_thread::sleep_for(1s);
-        std::terminate();
-    }
-}
-
-auto db::detail::isConnectionIssue(const std::exception& e) -> bool
-{
-    const auto str = fmt::format("{}", e.what());
-    for (const auto& issue : connectionIssues)
-    {
-        if (str.find(issue) != std::string::npos)
-        {
-            return true;
-        }
-    }
-
-    return false;
-}
 
 auto db::detail::validateQueryLeadingKeyword(const std::string& query) -> ResultSetType
 {
@@ -187,59 +134,9 @@ auto db::detail::validateQueryContent(const std::string& query) -> bool
     return true;
 }
 
-Synchronized<db::detail::State>& db::detail::getState()
-{
-    TracyZoneScoped;
-
-    // NOTE: mariadb-connector-cpp doesn't seem to make any guarantees about whether or not isValid()
-    //     : is const. So we're going to have to wrap calls to it as though they aren't.
-
-    if (state.read(
-            [&](auto& state)
-            {
-                return state.connection != nullptr;
-            }))
-    {
-        return state;
-    }
-
-    // Otherwise, create a new connection. Writing it to the state.connection unique_ptr will release any previous connection
-    // that might be there.
-
-    state.write(
-        [&](auto& state)
-        {
-            state.reset();
-        });
-
-    return state;
-}
-
-auto db::detail::timer(const std::string& query) -> xi::final_action<std::function<void()>>
-{
-    const auto start = timer::now();
-    return xi::finally<std::function<void()>>(
-        [query, start]() -> void
-        {
-            const auto end      = timer::now();
-            const auto duration = timer::count_milliseconds(end - start);
-            if (timersEnabled && settings::get<bool>("logging.SQL_SLOW_QUERY_LOG_ENABLE"))
-            {
-                if (duration > settings::get<uint32>("logging.SQL_SLOW_QUERY_ERROR_TIME"))
-                {
-                    ShowError(fmt::format("SQL query took {}ms: {}", duration, query));
-                }
-                else if (duration > settings::get<uint32>("logging.SQL_SLOW_QUERY_WARNING_TIME"))
-                {
-                    ShowWarning(fmt::format("SQL query took {}ms: {}", duration, query));
-                }
-            }
-        });
-}
-
 auto db::escapeString(std::string_view str) -> std::string
 {
-    static const std::unordered_map<char, std::string> replacements = {
+    static const HashMap<char, std::string> replacements = {
         // Replacement map similar to str_replace in PHP
         { '\\', "\\\\" },
         { '\0', "\\0" },
@@ -306,38 +203,24 @@ auto db::getDatabaseSchema() -> std::string
 {
     TracyZoneScoped;
 
-    return detail::getState().write(
-        [&](detail::State& state) -> std::string
-        {
-            return state.connection->getSchema().c_str();
-        });
+    return db::getDatabase().getSchema();
 }
 
 auto db::getDatabaseVersion() -> std::string
 {
     TracyZoneScoped;
 
-    return detail::getState().write(
-        [&](detail::State& state) -> std::string
-        {
-            const std::unique_ptr<sql::DatabaseMetaData> metadata(state.connection->getMetaData());
-            return fmt::format("{} {}", metadata->getDatabaseProductName().c_str(), metadata->getDatabaseProductVersion().c_str());
-        });
+    return db::getDatabase().getVersion();
 }
 
 auto db::getDriverVersion() -> std::string
 {
     TracyZoneScoped;
 
-    return detail::getState().write(
-        [&](detail::State& state) -> std::string
-        {
-            const std::unique_ptr<sql::DatabaseMetaData> metadata(state.connection->getMetaData());
-            return fmt::format("{} {}", metadata->getDriverName().c_str(), metadata->getDriverVersion().c_str());
-        });
+    return db::getDatabase().getDriverVersion();
 }
 
-void db::checkCharset()
+auto db::checkCharset() -> void
 {
     TracyZoneScoped;
 
@@ -370,7 +253,7 @@ void db::checkCharset()
     }
 }
 
-void db::checkTriggers()
+auto db::checkTriggers() -> void
 {
     const auto triggerQuery = "SHOW TRIGGERS WHERE `Trigger` LIKE ?";
 
@@ -406,7 +289,7 @@ void db::checkTriggers()
     }
 }
 
-bool db::setAutoCommit(bool value)
+auto db::setAutoCommit(bool value) -> bool
 {
     TracyZoneScoped;
 
@@ -419,7 +302,7 @@ bool db::setAutoCommit(bool value)
     return true;
 }
 
-bool db::getAutoCommit()
+auto db::getAutoCommit() -> bool
 {
     TracyZoneScoped;
 
@@ -434,7 +317,7 @@ bool db::getAutoCommit()
     return false;
 }
 
-bool db::transactionStart()
+auto db::transactionStart() -> bool
 {
     TracyZoneScoped;
 
@@ -447,7 +330,7 @@ bool db::transactionStart()
     return true;
 }
 
-bool db::transactionCommit()
+auto db::transactionCommit() -> bool
 {
     TracyZoneScoped;
 
@@ -460,7 +343,7 @@ bool db::transactionCommit()
     return true;
 }
 
-bool db::transactionRollback()
+auto db::transactionRollback() -> bool
 {
     TracyZoneScoped;
 
@@ -473,41 +356,44 @@ bool db::transactionRollback()
     return true;
 }
 
-void db::enableTimers()
-{
-    timersEnabled = true;
-}
-
-bool db::transaction(const std::function<void()>& transactionFn)
+auto db::transaction(const std::function<void()>& transactionFn) -> bool
 {
     TracyZoneScoped;
 
-    const bool wasAutoCommitOn = db::getAutoCommit();
-
-    if (db::setAutoCommit(false) && db::transactionStart())
+    if (!db::transactionStart())
     {
-        try
-        {
-            transactionFn();
-            db::transactionCommit();
-        }
-        catch (const std::exception& e)
-        {
-            ShowCritical("Transaction failed: Rolling back!");
-            ShowCritical("Transaction failed: %s", e.what());
-
-            db::transactionRollback();
-            db::setAutoCommit(wasAutoCommitOn);
-            return false;
-        }
-    }
-    else
-    {
-        db::setAutoCommit(wasAutoCommitOn);
         return false;
     }
 
-    db::setAutoCommit(wasAutoCommitOn);
+    // covers COMMIT/ROLLBACK too
+    db::getDatabase().setInTransaction(true);
+    const auto transactionScope = xi::finally<std::function<void()>>(
+        []() -> void
+        {
+            db::getDatabase().setInTransaction(false);
+        });
+
+    try
+    {
+        transactionFn();
+    }
+    catch (const std::exception& e)
+    {
+        ShowCritical("Transaction failed: Rolling back!");
+        ShowCritical("Transaction failed: %s", e.what());
+
+        db::transactionRollback();
+        return false;
+    }
+
+    if (!db::transactionCommit())
+    {
+        ShowCritical("Transaction failed: COMMIT failed, rolling back!");
+
+        db::transactionRollback();
+        return false;
+    }
+
     return true;
 }
 
