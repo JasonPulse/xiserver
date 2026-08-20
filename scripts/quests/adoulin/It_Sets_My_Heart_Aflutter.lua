@@ -21,6 +21,7 @@ quest.reward =
     fameArea = xi.fameArea.ADOULIN,
     bayld    = 200,
     exp      = 500,
+    title    = xi.title.ULBUKAN_STALWART,
 }
 
 quest.sections =

@@ -724,7 +724,7 @@ INSERT INTO `mob_spawn_points` VALUES (16793923,0,'Locus_Ghost_Crab','Locus Ghos
 INSERT INTO `mob_spawn_points` VALUES (16793924,0,'Locus_Ghost_Crab','Locus Ghost Crab',56,137,139,261.881,-1.029,176.625,51);
 -- INSERT INTO `mob_spawn_points` VALUES (16793925,'Locus_Fiddler_Crab','Locus Fiddler Crab',57,267.235,-1.405,173.523,37); -- Needs further research
 -- INSERT INTO `mob_spawn_points` VALUES (16793926,'Locus_Fiddler_Crab','Locus Fiddler Crab',57,274.459,-2.717,169.846,129); -- Needs further research
-INSERT INTO `mob_spawn_points` VALUES (16793927,0,'Rohemolipaud','Rohemolipaud',46,55,56,0.000,0.000,0.000,0);
+INSERT INTO `mob_spawn_points` VALUES (16793927,0,'Rohemolipaud','Rohemolipaud',46,55,56,-616.000,-2.203,-695.000,192); -- The Search for Goldmane ambush; beside Weathered_Boat (F-9)
 INSERT INTO `mob_spawn_points` VALUES (16793928,0,'Dalham','Dalham',47,65,65,95.041,-45.015,936.651,243);
 INSERT INTO `mob_spawn_points` VALUES (16793929,0,'Shen','Shen',48,84,86,-111.000,0.001,-729.000,159);
 INSERT INTO `mob_spawn_points` VALUES (16793930,0,'Shens_Filtrate','Shen\'s Filtrate',49,74,76,-111.300,0.001,-729.000,159);
@@ -82775,19 +82775,19 @@ INSERT INTO `mob_spawn_points` VALUES (17911815,0,'Hades','Hades',1,0,0,0.000,0.
 INSERT INTO `mob_spawn_points` VALUES (17911816,0,'Arciela','Arciela',2,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911817,0,'Hades','Hades',1,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911818,0,'Arciela','Arciela',2,0,0,0.000,0.000,0.000,0);
-INSERT INTO `mob_spawn_points` VALUES (17911819,0,'Hades','Hades',1,0,0,720.000,-406.000,480.000,0);
+INSERT INTO `mob_spawn_points` VALUES (17911819,0,'Hades','Hades',9,0,0,720.000,-406.000,480.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911820,0,'Arciela','Arciela',2,0,0,748.000,-406.500,478.000,128);
 INSERT INTO `mob_spawn_points` VALUES (17911821,0,'Teodor','Teodor',3,0,0,748.000,-406.500,482.000,128);
-INSERT INTO `mob_spawn_points` VALUES (17911822,0,'Hades','Hades',1,0,0,0.000,0.000,0.000,0);
+INSERT INTO `mob_spawn_points` VALUES (17911822,0,'Hades','Hades',9,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911823,0,'Arciela','Arciela',2,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911824,0,'Teodor','Teodor',3,0,0,0.000,0.000,0.000,0);
-INSERT INTO `mob_spawn_points` VALUES (17911825,0,'Hades','Hades',1,0,0,0.000,0.000,0.000,0);
+INSERT INTO `mob_spawn_points` VALUES (17911825,0,'Hades','Hades',9,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911826,0,'Arciela','Arciela',2,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911827,0,'Teodor','Teodor',3,0,0,0.000,0.000,0.000,0);
-INSERT INTO `mob_spawn_points` VALUES (17911828,0,'Hades','Hades',1,0,0,0.000,0.000,0.000,0);
+INSERT INTO `mob_spawn_points` VALUES (17911828,0,'Hades','Hades',9,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911829,0,'Arciela','Arciela',2,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911830,0,'Teodor','Teodor',3,0,0,0.000,0.000,0.000,0);
-INSERT INTO `mob_spawn_points` VALUES (17911831,0,'Hades','Hades',1,0,0,0.000,0.000,0.000,0);
+INSERT INTO `mob_spawn_points` VALUES (17911831,0,'Hades','Hades',9,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911832,0,'Arciela','Arciela',2,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911833,0,'Teodor','Teodor',3,0,0,0.000,0.000,0.000,0);
 INSERT INTO `mob_spawn_points` VALUES (17911834,0,'Putraxia','Putraxia',4,0,0,0.000,0.000,0.000,0);

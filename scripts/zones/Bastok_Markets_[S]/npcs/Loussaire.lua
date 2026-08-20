@@ -57,7 +57,9 @@ entity.onTrigger = function(player, npc)
         elseif
             downwardHelix == xi.questStatus.QUEST_COMPLETED and
             mJob == xi.job.SCH and
-            mLvl >= xi.settings.main.AF2_QUEST_LEVEL
+            mLvl >= xi.settings.main.AF2_QUEST_LEVEL and
+            player:getCharVar('AF_SCH_NextDay') <= VanadielUniqueDay() and
+            not player:needToZone()
         then
             -- If a player has completed any of the paths, it will be a different cutscene.
             local counter = 0
@@ -220,6 +222,13 @@ entity.onEventFinish = function(player, csid, option, npc)
 
             else
                 player:setCharVar('AF_Loussaire', afProgress + 1) -- They got an item. Add it!
+
+                -- bg-wiki: "You will receive your armor immediately, but must zone
+                -- and wait for the game day to change to start the next piece."
+                -- Neither gate existed, so all three pieces could be commissioned
+                -- back to back in one conversation.
+                player:setCharVar('AF_SCH_NextDay', VanadielUniqueDay() + 1)
+                player:needToZone(true)
             end
 
             player:delKeyItem(firstKI)

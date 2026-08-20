@@ -82,7 +82,24 @@ quest.sections =
                 end,
 
                 [204] = function(player, csid, option, npc)
+                    -- bg-wiki reward block:
+                    --   *{{KI}} Map of Tavnazia (If you do not already own it)
+                    --   *2,000 Experience Points
+                    --   *2,000 Gil (If you already own the map)
+                    -- quest.reward covers the exp and the map, but the gil branch
+                    -- did not exist, so anyone who already had the map was paid
+                    -- nothing in its place. Checked before quest:complete, since
+                    -- completing grants the key item.
+                    local hadMap = player:hasKeyItem(xi.ki.MAP_OF_TAVNAZIA)
+
                     if quest:complete(player) then
+                        if hadMap then
+                            local gil = xi.settings.main.GIL_RATE * 2000
+
+                            player:addGil(gil)
+                            player:messageSpecial(zones[player:getZoneID()].text.GIL_OBTAINED, gil)
+                        end
+
                         quest:setVar(player, 'Post', 1)
                     end
                 end,

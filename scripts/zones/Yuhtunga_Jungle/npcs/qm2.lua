@@ -60,10 +60,15 @@ entity.onTrigger = function(player, npc)
     end
 end
 
-entity.onEventFinish = function(player, csid)
+-- `npc` was missing from this signature while spawnNMs(player, npc) dereferences
+-- it (npc:setLocalVar at the top of this file), so the first ??? click played
+-- csid 28, set progress 4, then threw a nil-index error and spawned nothing --
+-- the player had to click a second time to actually pop the Nasus.
+-- bg-wiki: "This cutscene will spawn 5 Nasus that you must defeat."
+entity.onEventFinish = function(player, csid, option, npc)
     if csid == 28 then -- initiate fight
         player:setCharVar('TuningOut_Progress', 4)
-        spawnNMs(player)
+        spawnNMs(player, npc)
 
     elseif csid == 29 then -- after fight
         player:setCharVar('TuningOut_Progress', 5)

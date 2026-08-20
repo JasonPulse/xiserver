@@ -47,7 +47,16 @@ zones[xi.zone.ABYSSEA_KONSCHTAT] =
         KEYITEM_DISAPPEARED           = 7511, -- That key item had already disappeared.
         ITEM_DISAPPEARED              = 7512, -- That item had already disappeared.
         CHEST_DESPAWNED               = 7513, -- The treasure chest had already disappeared.
-        CRUOR_OBTAINED                = 7514, -- <name> obtained <number> cruor.
+        CRUOR_OBTAINED                = 7514,
+        -- The Walking Wounded: one reply per Resistance Fighter, in the order
+        -- their positions are listed in xi.abyssea.walkingWounded. These carry
+        -- no ${prompt} in the dialog table, so they are plain messages rather
+        -- than events -- which is why the fighters own no csids.
+        FIGHTER_THANKS_1              = 7950, -- Urrrg...ahhh! Boy, did that ever hit the spot!
+        FIGHTER_THANKS_2              = 7951, -- This should keep me on my feet for a while.
+        FIGHTER_THANKS_3              = 7952, -- Hah! Only a weakling would need...<hurk>...
+        FIGHTER_THANKS_4              = 7953, -- Bwahahaha! My strength is back!
+        FIGHTER_THANKS_5              = 7954, -- I wasn't really hurt. I just told Captain Rashid that I was. -- <name> obtained <number> cruor.
         OBTAINS_SEVERAL_TEMPS         = 7515, -- <name> obtains several temporary items!
         BODY_EMITS_OFFSET             = 7516, -- <name>'s body emits [a faint/a mild/a strong] pearlescent light!
         CANNOT_OPEN_CHEST             = 7523, -- You cannot open that treasure chest.

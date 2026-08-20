@@ -48,11 +48,26 @@ quest.reward =
 
 -- One bit per pool, stored in the quest var 'Steeped'. Each pool consumes its
 -- matching thread key item.
+-- POOL CSIDS CORRECTED. 194/195/196 were a fabricated run of consecutive ids;
+-- `xi-dat csid <zone> <n>` reports each of them as "not found" in its own zone,
+-- so all three steeping steps did nothing and the quest dead-ended after the
+-- thread hand-out. They are in fact Ponono's own "you haven't enchanted them all
+-- yet" reminders back in Windurst Waters [S] (msgs 7733-7736), which is what the
+-- old header note mistook for "the three per-pool variants".
+-- The real ids are one 64-byte program per pool entity, each confirmed by its
+-- dialog naming both the pool and the colour it dyes the thread:
+--   Knightwell        zone 100 West Ronfaure      0x010642BB (17187515) csid 141
+--     -> 8058 "dipped the ${keyitem} in the crisp, cool waters of the Knightwell"
+--        8059 "now shimmers a brilliant shade of red!"
+--   Fay Spring        zone  89 Grauberg [S]       0x010592BC (17142460) csid  23
+--     -> 7801 "...the tranquil waters of the Fay Spring"  7802 "...blue!"
+--   Lake Tepokalipuka zone 116 East Sarutabaruta  0x010742CF (17253071) csid  72
+--     -> 7467 "...the curious waters of Lake Tepokalipuka"  7468 "...green!"
 local pools =
 {
-    [xi.zone.WEST_RONFAURE]     = { npc = 'Knightwell',         bit = 0, ki = xi.ki.DELICATE_WOOL_THREAD,   csid = 194 },
-    [xi.zone.GRAUBERG_S]        = { npc = 'Fay_Spring',         bit = 1, ki = xi.ki.DELICATE_LINEN_THREAD,  csid = 195 },
-    [xi.zone.EAST_SARUTABARUTA] = { npc = 'Lake_Tepokalipuka',  bit = 2, ki = xi.ki.DELICATE_COTTON_THREAD, csid = 196 },
+    [xi.zone.WEST_RONFAURE]     = { npc = 'Knightwell',         bit = 0, ki = xi.ki.DELICATE_WOOL_THREAD,   csid = 141 },
+    [xi.zone.GRAUBERG_S]        = { npc = 'Fay_Spring',         bit = 1, ki = xi.ki.DELICATE_LINEN_THREAD,  csid =  23 },
+    [xi.zone.EAST_SARUTABARUTA] = { npc = 'Lake_Tepokalipuka',  bit = 2, ki = xi.ki.DELICATE_COTTON_THREAD, csid =  72 },
 }
 
 local allSteeped = 7 -- bits 0-2

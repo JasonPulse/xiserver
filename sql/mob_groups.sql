@@ -14450,7 +14450,16 @@ INSERT INTO `mob_groups` VALUES (51,913,254,'Dark_Elemental',0,128,0,0,0,0,NULL)
 -- Abyssea-Empyreal_Paradox (Zone 255)
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_groups` VALUES (1,3604,255,'Shinryu',0,128,2238,0,0,0,NULL);
+-- Abyssea - Empyreal Paradox (255): Shinryu, the Abyssea storyline's final boss
+-- (quest "The Wyrm God"). poolid 3604 and dropid 2238 were already correct; only
+-- HP was 0. bg-wiki's Adversary Row leaves HP blank, so this is benchmarked, not
+-- invented: the strongest Abyssea NM costed in this repo is Briareus at 59700
+-- (zone 132), with Hadhayosh 58000 and Ovni 56250 behind it. Shinryu is fought
+-- after all nine zone chains, so he sits above them at 75000 (+26% on Briareus).
+-- Kept deliberately BELOW the Hades first form's 80000 (zone 277) so expansion
+-- ordering holds -- Abyssea predates Seekers of Adoulin. The Voidwatch-era Locus
+-- mobs at 300k+ are a later content generation and are not a comparable yardstick.
+INSERT INTO `mob_groups` VALUES (1,3604,255,'Shinryu',0,128,2238,75000,0,0,NULL);
 
 -- ------------------------------------------------------------
 -- Rala_Waterways (Zone 258)
@@ -15595,9 +15604,40 @@ INSERT INTO `mob_groups` VALUES (52,4842,276,'Indomitable_Spurned',0,128,0,0,0,0
 -- RaKaznar_Turris (Zone 277)
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_groups` VALUES (1,0,277,'Hades',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (2,0,277,'Arciela',0,128,0,0,0,0,NULL);
-INSERT INTO `mob_groups` VALUES (3,0,277,'Teodor',0,128,0,0,0,0,NULL);
+-- Ra'Kaznar Turris (277): SoA Mission 5-4 Reckoning and 5-4-1 Abomination.
+-- These three shipped with poolid 0. zoneutils.cpp LoadMobs uses an INNER JOIN on
+-- mob_groups.poolid = mob_pools.poolid and there is no poolid-0 pool, so every one
+-- of them was silently dropped at load and never existed in game. The pools were
+-- already present and unused: 5495 'Hadesv1', 5496 'Arciela', 5497 'hadesV2',
+-- 5498 'Theodor' -- a contiguous block that is clearly this fight's set.
+--
+-- Hades needs TWO groups because bg-wiki gives it two distinct forms with two
+-- separate skill lists (Hadesv1 = 485, Hadesv2 = 487) and the spawn points come in
+-- two layouts: Hades+Arciela x5 for Reckoning (17911809-818) and
+-- Hades+Arciela+Teodor x5 for Abomination (17911819-833). Group 9 below is the
+-- second form; the Abomination Hades spawn points are repointed to it in
+-- mob_spawn_points.sql.
+--
+-- HP IS NOT ON bg-wiki -- the Hades (Second Form) page states outright "HP bar is
+-- hidden." The values below are benchmarked against the SoA-era boss encounters
+-- already costed in Rala Waterways (U) (zone 259) rather than invented:
+--     Darrcuiln  60000   Ingrid 60000   Arciela 60000   Morimar 70000  Teodor 70000
+-- Those rows are genuine enemy encounters, not the friendly story NPCs of the same
+-- names -- they carry MOB allegiance and real dropids (3415-3420) -- so they are a
+-- valid boss-HP yardstick. Hades is the final boss of the arc they belong to, so
+-- he sits above the strongest of them (70000):
+--     Hades first form  80000  (+14% over Morimar, one step up the arc)
+--     Hades second form 100000 (+25% over the first form; he "reawakened as a
+--                               higher power"). For scale the repo's top
+--                               storyline boss is Odin at 110000, so this sits in
+--                               that tier without exceeding it.
+-- Arciela and Teodor reuse zone 259's exact figures and Arciela's allegiance 1
+-- (PLAYER), since bg-wiki says both fight alongside you and the mission fails if
+-- either dies. Teodor is allegiance 1 here for the same reason.
+INSERT INTO `mob_groups` VALUES (1,5495,277,'Hades',0,128,0,80000,0,0,NULL);
+INSERT INTO `mob_groups` VALUES (2,5496,277,'Arciela',0,128,0,60000,0,1,NULL);
+INSERT INTO `mob_groups` VALUES (3,5498,277,'Teodor',0,128,0,70000,0,1,NULL);
+INSERT INTO `mob_groups` VALUES (9,5497,277,'Hades',0,128,0,100000,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (4,0,277,'Putraxia',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (5,0,277,'Rancibus',0,128,0,0,0,0,NULL);
 INSERT INTO `mob_groups` VALUES (6,0,277,'Palloritus',0,128,0,0,0,0,NULL);

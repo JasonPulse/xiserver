@@ -17,6 +17,8 @@ quest.reward =
     fameArea = xi.fameArea.ADOULIN,
     bayld    = 3000,
     fame     = 30,
+    -- bg-wiki |Title=Trialed-and-True Runeist -- nothing granted it.
+    title = xi.title.TRIALED_AND_TRUE_RUNEIST,
 }
 
 quest.sections =

@@ -133,8 +133,14 @@ quest.sections =
 
         [xi.zone.UPPER_JEUNO] =
         {
+            -- Osker was firing csid 55, which he does not own: `xi-dat csid 244 55`
+            -- has a single owner, 0x010F400A = 17776650, the Chocobo -- the line
+            -- directly above. Osker is 17776653 and owns 45, whose dialog 7208 is
+            -- "Aw, man! I wanna be a beastmaster someday, too!" -- precisely the
+            -- right line for this section, which is gated on Path of the
+            -- Beastmaster NOT yet being complete.
             ['Chocobo'] = quest:event(55),
-            ['Osker']   = quest:event(55),
+            ['Osker']   = quest:event(45),
         },
     },
 }

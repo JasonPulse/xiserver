@@ -117,6 +117,18 @@ quest.sections =
                 -- sent once the battlefield has been cleared.  This needs to be verified upon
                 -- implementation of the instance.
                 [10000] = function(player, csid, option, npc)
+                    -- csid 10000 is the SHARED "instance cleared" event for this zone, and
+                    -- onEventFinish dispatches zone-wide on csid alone. doomvoid -- which
+                    -- IS implemented here and fires startEvent(10000) on clear -- was
+                    -- therefore driving this handler for free. Scoped to this
+                    -- battlefield's own instance by name; its instance_list row does not
+                    -- exist yet, so this is correctly inert until that is built.
+                    local instance = player:getInstance()
+
+                    if not instance or instance:getName() ~= 'in_a_haze_of_glory' then
+                        return
+                    end
+
                     quest:setVar(player, 'Prog', 2)
                     player:setPos(2.436, 6.235, -99.966, 127, xi.zone.GARLAIGE_CITADEL_S)
                 end,

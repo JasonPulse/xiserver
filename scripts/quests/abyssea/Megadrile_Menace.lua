@@ -19,7 +19,19 @@ quest.sections =
                 player:getQuestStatus(xi.questLog.ABYSSEA, xi.quest.id.abyssea.DAWN_OF_DEATH) >= xi.questStatus.QUEST_ACCEPTED
         end,
 
-        [xi.zone.LA_THEINE_PLATEAU] =
+        -- WRONG ZONE, fixed (both sections). bg-wiki: "Examine the Cavernous Maw
+        -- in TAHRONGI CANYON at (H-12)" / "Exit Abyssea - Tahrongi for a cutscene
+        -- that finishes the quest." `xi-dat csid 102 38` reports "not found in
+        -- zone 102" -- csids 38/39 exist only in zone 117 on 0x01075275
+        -- (17257077, Tahrongi Canyon). The file's own line 6 already declares
+        -- `local tahrongiID` and line 36 messages through it, so the data always
+        -- said Tahrongi.
+        -- Two live consequences of the misfile: the stray ['Cavernous_Maw'] binding
+        -- competed with A_Goldstruck_Gigas on LA THEINE's maw under an identical
+        -- check, and performNextAction alternates between equal-priority actions --
+        -- so every other click there fired nonexistent event 38. And completion was
+        -- unreachable, since the onZoneIn(39) reward section sat in the wrong zone.
+        [xi.zone.TAHRONGI_CANYON] =
         {
             ['Cavernous_Maw'] =
             {
@@ -44,7 +56,7 @@ quest.sections =
             return status == xi.questStatus.QUEST_ACCEPTED and player:hasTitle(xi.title.GLAVOID_STAMPEDER)
         end,
 
-        [xi.zone.LA_THEINE_PLATEAU] =
+        [xi.zone.TAHRONGI_CANYON] =
         {
             onZoneIn = function(player, prevZone)
                 return 39

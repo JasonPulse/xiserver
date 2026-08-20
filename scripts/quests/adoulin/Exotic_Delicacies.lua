@@ -45,9 +45,14 @@ quest.sections =
     },
 
     {
+        -- DEADLOCK removed. Section 1's csid 2860 handler sets
+        -- 'Flapano_Odd_Even' to 1, and this section also demanded == 0, so once
+        -- the quest was accepted the trade path was unreachable and the only
+        -- reset to 0 lived inside the completion handler this gate blocked.
+        -- QUEST_ACCEPTED is the whole condition; the odd/even charvar is section
+        -- 1's own accept latch and has no business gating the turn-in.
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_ACCEPTED and
-                player:getCharVar('Flapano_Odd_Even') == 0
+            return status == xi.questStatus.QUEST_ACCEPTED
         end,
 
         [xi.zone.WESTERN_ADOULIN] =

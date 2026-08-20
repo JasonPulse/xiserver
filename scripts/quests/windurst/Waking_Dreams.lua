@@ -39,7 +39,8 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedMission(xi.mission.log_id.COP, xi.mission.id.cop.DARKNESS_NAMED)
+                player:hasCompletedMission(xi.mission.log_id.COP, xi.mission.id.cop.DARKNESS_NAMED) and
+                player:getFameLevel(xi.fameArea.WINDURST) >= 3
         end,
 
         [xi.zone.WINDURST_WATERS] =

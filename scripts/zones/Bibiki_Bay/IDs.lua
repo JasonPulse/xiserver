@@ -51,10 +51,11 @@ zones[xi.zone.BIBIKI_BAY] =
     },
     mob =
     {
-        INTULO     = GetFirstID('Intulo'),
-        PEERIFOOL  = GetFirstID('Peerifool'),
-        SERRA      = GetFirstID('Serra'),
-        SPLACKNUCK = GetFirstID('Splacknuck'),
+        INTULO       = GetFirstID('Intulo'),
+        PEERIFOOL    = GetFirstID('Peerifool'),
+        ROHEMOLIPAUD = GetFirstID('Rohemolipaud'),
+        SERRA        = GetFirstID('Serra'),
+        SPLACKNUCK   = GetFirstID('Splacknuck'),
     },
     npc =
     {

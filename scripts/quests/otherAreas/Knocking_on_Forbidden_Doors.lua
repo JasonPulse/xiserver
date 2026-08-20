@@ -17,11 +17,19 @@ quest.sections =
 {
     -- START: Talk to Enaremand (J-7) on the upper level in Tavnazian Safehold
     -- QUEST AVAILABLE
-    -- Retail prereq was "Behind the Smile" (quest 77), but that quest has no script
-    -- in this repo — gating on it would make Forbidden Doors permanently unreachable.
+    -- PREREQUISITE RESTORED. The comment here used to read "Behind the Smile
+    -- (quest 77) ... has no script in this repo -- gating on it would make
+    -- Forbidden Doors permanently unreachable." That is no longer true, and may
+    -- never have been: scripts/quests/otherAreas/Behind_the_Smile.lua is a full
+    -- implementation (Enaremand -> Fyi Chalmwoh -> Carpenters' Landing
+    -- qm_behind_the_smile -> Bullheaded Grosvez -> Red oil -> Mannequin Pumps).
+    -- bg-wiki: |Previous=[[Behind the Smile]]. Without the gate this quest was
+    -- startable out of chain order, so the mannequin-posing unlock could be had
+    -- without ever doing It's Raining Mannequins -> Behind the Smile.
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                player:hasCompletedQuest(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.BEHIND_THE_SMILE)
         end,
 
         [xi.zone.TAVNAZIAN_SAFEHOLD] =

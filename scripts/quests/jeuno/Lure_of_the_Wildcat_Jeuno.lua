@@ -14,6 +14,8 @@ quest.reward =
     fame     = 150,
     fameArea = xi.fameArea.JEUNO,
     keyItem  = xi.ki.WHITE_INVITATION_CARD,
+    -- bg-wiki |Title=Wildcat Publicist -- nothing granted it.
+    title = xi.title.WILDCAT_PUBLICIST,
 }
 
 local wildcatNpcData =

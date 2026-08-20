@@ -96,9 +96,6 @@ quest.reward =
     gil = 3000,
 }
 
--- The (I-6) basement door, NOT the named Cermet_Door up-warp.
-local questDoor = 17531159
-
 local orna         = 17531122
 local fomorianSpear = { 17531123, 17531124 }
 

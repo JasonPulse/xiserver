@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=Star in the Azure Sky -- nothing granted it.
+    title = xi.title.STAR_IN_THE_AZURE_SKY,
 }
 
 quest.sections =

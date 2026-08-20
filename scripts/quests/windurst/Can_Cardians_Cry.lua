@@ -11,6 +11,8 @@ quest.reward =
 {
     fameArea = xi.fameArea.WINDURST,
     gil      = 5000,
+    -- bg-wiki |Title=Deliverer of Tearful News -- nothing granted it.
+    title = xi.title.DELIVERER_OF_TEARFUL_NEWS,
 }
 
 quest.sections =

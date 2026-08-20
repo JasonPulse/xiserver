@@ -91,7 +91,14 @@ quest.sections =
                 [102] = function(player, csid, option, npc)
                     player:tradeComplete()
                     player:addFame(xi.fameArea.WINDURST, 10)
-                    npcUtil.giveCurrency(player, 'gil', xi.settings.main.GIL_RATE * quest:getVar(player, 'Payout'))
+                    -- No GIL_RATE here: npcUtil.giveCurrency already applies the
+                    -- rate itself (`amount = amount * currencyType[2]`,
+                    -- npc_util.lua), so multiplying it in first squared it. This is
+                    -- the only double-applying call site in the tree. It is
+                    -- invisible today only because GIL_RATE defaults to 1.000
+                    -- (settings/default/main.lua:127) -- raise the rate and this
+                    -- one quest pays the square of everything else.
+                    npcUtil.giveCurrency(player, 'gil', quest:getVar(player, 'Payout'))
                     quest:setVar(player, 'Payout', 0)
 
                     if player:getQuestStatus(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.ORLANDOS_ANTIQUES) == xi.questStatus.QUEST_ACCEPTED then

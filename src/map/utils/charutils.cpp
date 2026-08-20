@@ -6596,18 +6596,33 @@ float AddExpBonus(CCharEntity* PChar, float exp)
 {
     TracyZoneScoped;
 
-    int32 bonus = 0;
-    if (PChar->StatusEffectContainer->GetStatusEffect(EFFECT_DEDICATION) && PChar->loc.zone->GetRegionID() != REGION_TYPE::ABYSSEA)
+    int32          bonus      = 0;
+    CStatusEffect* dedication = PChar->StatusEffectContainer->GetStatusEffect(EFFECT_DEDICATION);
+    if (dedication != nullptr)
     {
-        CStatusEffect* dedication = PChar->StatusEffectContainer->GetStatusEffect(EFFECT_DEDICATION);
-        int16          percentage = dedication->GetPower();
-        int16          cap        = dedication->GetSubPower();
-        bonus += std::clamp<int32>((int32)((exp * percentage) / 100), 0, cap);
-        dedication->SetSubPower(cap -= bonus);
+        const uint16 percentage = dedication->GetPower();
+        const uint16 cap        = dedication->GetSubPower();
 
-        if (cap <= 0)
+        if (cap == 0)
         {
-            PChar->StatusEffectContainer->DelStatusEffect(EFFECT_DEDICATION);
+            // A Dedication effect carrying no cap is the permanent server-wide bonus
+            // (map.PERMANENT_EXP_BONUS, applied by xi.player.onGameIn). It is never
+            // spent and, unlike the item-granted version, is not suppressed in Abyssea
+            // so that the buff icon never claims to be doing something it isn't.
+            bonus += (int32)((exp * percentage) / 100);
+        }
+        else if (PChar->loc.zone->GetRegionID() != REGION_TYPE::ABYSSEA)
+        {
+            const int32 spent     = std::clamp<int32>((int32)((exp * percentage) / 100), 0, (int32)cap);
+            const int32 remaining = (int32)cap - spent;
+
+            bonus += spent;
+            dedication->SetSubPower((uint16)remaining);
+
+            if (remaining <= 0)
+            {
+                PChar->StatusEffectContainer->DelStatusEffect(EFFECT_DEDICATION);
+            }
         }
     }
 

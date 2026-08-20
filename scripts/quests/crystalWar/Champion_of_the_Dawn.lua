@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=Light of Dawn -- nothing granted it.
+    title = xi.title.LIGHT_OF_DAWN,
 }
 
 quest.sections =

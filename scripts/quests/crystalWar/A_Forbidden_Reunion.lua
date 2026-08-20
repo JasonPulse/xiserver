@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=Heir of Eternity -- nothing granted it.
+    title = xi.title.HEIR_OF_ETERNITY,
 }
 
 quest.sections =

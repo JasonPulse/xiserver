@@ -76,7 +76,9 @@ entity.onEventFinish = function(player, csid, option, npc)
             player:addItem(xi.item.BLACK_BELT)
             player:messageSpecial(ID.text.ITEM_OBTAINED, xi.item.BLACK_BELT)
             player:setCharVar('BeatAroundTheBushin', 0)
-            player:addFame(xi.fameArea.NORG, 125)
+            -- bg-wiki "Beat Around the Bushin" header is |Fame=Jeuno; this paid
+            -- Norg fame, inflating an unrelated region's gates.
+            player:addFame(xi.fameArea.JEUNO, 125)
             player:tradeComplete()
             player:completeQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.BEAT_AROUND_THE_BUSHIN)
         end

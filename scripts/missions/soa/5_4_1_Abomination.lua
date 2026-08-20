@@ -36,8 +36,15 @@ mission.sections =
                 end,
 
                 [32001] = function(player, csid, option, npc)
-                    -- TODO: In the BCNM script, check that the appropriate Battlefield ID
-                    -- is set as a condition for the below two lines.
+                    -- Same shared-event problem as 5_4_0_Reckoning; see the note
+                    -- there. This mission's own entry key item is the Awakened
+                    -- crystallized psyche -- bg-wiki, Notes: "Should you lose the
+                    -- battle, re-zone into Ra'Kaznar Inner Court for another
+                    -- {KI} Awakened crystallized psyche."
+                    if not player:hasKeyItem(xi.ki.AWAKENED_CRYSTALLIZED_PSYCHE) then
+                        return
+                    end
+
                     mission:setVar(player, 'Status', 1)
                     player:setPos(132.2, 39.75, 20, 0, xi.zone.RAKAZNAR_TURRIS)
                 end,

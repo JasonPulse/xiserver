@@ -39,7 +39,7 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
-            return (status == xi.questStatus.QUEST_AVAILABLE and player:getFameLevel(xi.fameArea.SELBINA_RABAO) >= 5) or
+            return (status == xi.questStatus.QUEST_AVAILABLE and player:getFameLevel(xi.fameArea.SELBINA_RABAO) >= 6) or
                 (status == xi.questStatus.QUEST_COMPLETED and GetSystemTime() > player:getCharVar('TrialByWind_date'))
         end,
 

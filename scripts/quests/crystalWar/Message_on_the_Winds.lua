@@ -19,9 +19,10 @@ quest.sections =
 {
     -- Section: Talk to Romualdo at the Cannonry in the Metalworks (second floor, K-9).
     {
+        -- The `getMainLvl() >= 20` test that used to be here is not on bg-wiki --
+        -- the header's |Level= field is blank.
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getMainLvl() >= 20
+            return status == xi.questStatus.QUEST_AVAILABLE
         end,
 
         [xi.zone.METALWORKS] =

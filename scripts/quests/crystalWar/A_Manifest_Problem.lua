@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=Friend of Lehko Habhoka -- nothing granted it.
+    title = xi.title.FRIEND_OF_LEHKO_HABHOKA,
 }
 
 quest.sections =

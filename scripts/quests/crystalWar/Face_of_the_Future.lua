@@ -115,6 +115,18 @@ quest.sections =
             onEventFinish =
             {
                 [10000] = function(player, csid, option, npc)
+                    -- csid 10000 is the SHARED "instance cleared" event for this zone, and
+                    -- onEventFinish dispatches zone-wide on csid alone. doomvoid -- which
+                    -- IS implemented here and fires startEvent(10000) on clear -- was
+                    -- therefore driving this handler for free. Scoped to this
+                    -- battlefield's own instance by name; its instance_list row does not
+                    -- exist yet, so this is correctly inert until that is built.
+                    local instance = player:getInstance()
+
+                    if not instance or instance:getName() ~= 'face_of_the_future' then
+                        return
+                    end
+
                     quest:setVar(player, 'Prog', 5)
                     player:setPos(-184.678, -0.266, -112.093, 101, xi.zone.YUGHOTT_GROTTO)
                 end,

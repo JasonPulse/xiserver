@@ -329,7 +329,10 @@ end
 
 entity.onTrigger = function(player, npc)
     -- IN THE NAME OF SCIENCE
-    if player:hasCompletedMission(xi.mission.log_id.COP, xi.mission.id.cop.THE_WARRIORS_PATH) then
+    -- bg-wiki "In the Name of Science": |Quest Reqs=Promathia Mission 8-1, and
+    -- `Promathia Mission 8-1` is |Mission Name=Garden of Antiquity. This gated on
+    -- THE_WARRIORS_PATH (CoP 7-x), letting the quest start a whole chapter early.
+    if player:hasCompletedMission(xi.mission.log_id.COP, xi.mission.id.cop.GARDEN_OF_ANTIQUITY) then
         local nameOfScience  = player:getQuestStatus(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.IN_THE_NAME_OF_SCIENCE)
         local itemInProgress = player:getCharVar('NAME_OF_SCIENCE_target')
 

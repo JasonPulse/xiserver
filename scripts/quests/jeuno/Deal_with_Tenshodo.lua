@@ -27,12 +27,12 @@ quest.sections =
         {
             ['Garnev'] =
             {
+                -- The extra `getFameLevel(NORG) >= 2` gate that used to wrap this
+                -- is not on bg-wiki: the header is |Fame=Jeuno with |FLevel= blank.
+                -- It locked the quest behind Norg fame retail never asks for, and
+                -- sent everyone below it to the brush-off event 168 instead.
                 onTrigger = function(player, npc)
-                    if player:getFameLevel(xi.fameArea.NORG) >= 2 then
-                        return quest:progressEvent(167)
-                    else
-                        return quest:event(168)
-                    end
+                    return quest:progressEvent(167)
                 end,
             },
 

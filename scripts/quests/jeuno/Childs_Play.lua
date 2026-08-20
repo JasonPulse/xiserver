@@ -19,7 +19,9 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
+            -- bg-wiki |FLevel=4 was not enforced.
             return status == xi.questStatus.QUEST_AVAILABLE and
+                player:getFameLevel(xi.fameArea.JEUNO) >= 4 and
                 player:getQuestStatus(xi.questLog.JEUNO, xi.quest.id.jeuno.THE_WONDER_MAGIC_SET) == xi.questStatus.QUEST_ACCEPTED
         end,
 

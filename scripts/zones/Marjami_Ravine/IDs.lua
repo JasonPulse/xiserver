@@ -11,6 +11,7 @@ zones[xi.zone.MARJAMI_RAVINE] =
         ITEM_OBTAINED                 = 6391, -- Obtained: <item>.
         GIL_OBTAINED                  = 6392, -- Obtained <number> gil.
         KEYITEM_OBTAINED              = 6394, -- Obtained key item: <keyitem>.
+        SCOOPED_UP_WATER              = 7843, -- You scooped up some water with your <keyitem>.
         KEYITEM_LOST                  = 6395, -- Lost key item: <keyitem>.
         NOTHING_OUT_OF_ORDINARY       = 6405, -- There is nothing out of the ordinary here.
         CARRIED_OVER_POINTS           = 7002, -- You have carried over <number> login point[/s].

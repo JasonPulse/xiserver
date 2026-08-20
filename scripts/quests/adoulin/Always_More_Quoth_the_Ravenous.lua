@@ -9,14 +9,33 @@ local westernAdoulinID = zones[xi.zone.WESTERN_ADOULIN]
 
 local quest = Quest:new(xi.questLog.ADOULIN, xi.quest.id.adoulin.ALWAYS_MORE_QUOTH_THE_RAVENOUS)
 
+-- bg-wiki header: |Title=Friend to Gluttons. Never granted before.
+quest.reward =
+{
+    title = xi.title.FRIEND_TO_GLUTTONS,
+}
+
 quest.sections =
 {
     {
+        -- THREE BROKEN GATES, fixed. bg-wiki: "|Previous=[[The Starving]]" and
+        -- "you must zone and wait until the following game day after completing
+        -- the previous quest."
+        --   * The Starving prerequisite was absent entirely.
+        --   * The day gate read charvar 'Westerly_Breeze_Wait', but The Starving
+        --     writes THIS quest's own quest var 'Timer' (The_Starving.lua's 3007
+        --     handler). Two different keys, so the charvar was always 0 and the
+        --     gate always passed.
+        --   * `not player:needToZone()` reads loc.zoning, a transient in-zoning
+        --     flag, not the Quest[9][88]mustZone localVar that The Starving sets
+        --     via xi.quest.setMustZone -- so that gate was inert too. quest:getMustZone
+        --     is the matching reader.
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
                 player:getFameLevel(xi.fameArea.ADOULIN) >= 3 and
-                not player:needToZone() and
-                VanadielUniqueDay() > player:getCharVar('Westerly_Breeze_Wait')
+                player:hasCompletedQuest(xi.questLog.ADOULIN, xi.quest.id.adoulin.THE_STARVING) and
+                quest:getMustZone(player) and
+                VanadielUniqueDay() >= vars.Timer
         end,
 
         [xi.zone.WESTERN_ADOULIN] =

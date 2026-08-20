@@ -16,6 +16,8 @@ quest.reward =
 {
     fame     = 20,
     fameArea = xi.fameArea.JEUNO,
+    -- bg-wiki |Title=Ig-Alima Inhumer -- nothing granted it.
+    title = xi.title.IG_ALIMA_INHUMER,
 }
 
 quest.sections =

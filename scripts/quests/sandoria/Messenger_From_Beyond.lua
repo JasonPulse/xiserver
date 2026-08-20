@@ -14,6 +14,7 @@ quest.reward =
 {
     item = xi.item.BLESSED_HAMMER,
     fame = 20,
+    fameArea = xi.fameArea.SANDORIA,
 }
 
 quest.sections =

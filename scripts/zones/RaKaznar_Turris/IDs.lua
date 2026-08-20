@@ -20,6 +20,17 @@ zones[xi.zone.RAKAZNAR_TURRIS] =
     },
     mob =
     {
+        -- SoA 5-4 Reckoning: Hades first form + Arciela, five instances
+        -- (17911809-17911818). mob_groups 1 (pool 5495 Hadesv1) and 2 (pool 5496).
+        HADES_FIRST_FORM  = 17911809,
+        ARCIELA_RECKONING = 17911810,
+
+        -- SoA 5-4-1 Abomination: Hades second form + Arciela + Teodor, five
+        -- instances (17911819-17911833). The second-form Hades spawns were split
+        -- onto mob_groups 9 (pool 5497 hadesV2); Teodor is group 3 (pool 5498).
+        HADES_SECOND_FORM   = 17911819,
+        ARCIELA_ABOMINATION = 17911820,
+        TEODOR_ABOMINATION  = 17911821,
     },
     npc =
     {

@@ -105,7 +105,12 @@ entity.onEventFinish = function(player, csid, option, npc)
         player:setCharVar('unbridledPassion', 1)
     elseif
         csid == 546 and
-        npcUtil.completeQuest(player, xi.questLog.WINDURST, xi.quest.id.windurst.UNBRIDLED_PASSION, { item = 14099, var = 'unbridledPassion' })
+        -- bg-wiki |Title=Paragon of Ranger Excellence. No `title` key was passed,
+        -- and npcUtil.giveReward only calls addTitle when params['title'] is set,
+        -- so it was never granted -- the enum appears nowhere else except the
+        -- title-swap menu, which can only re-select titles you already own. The
+        -- sibling AF3s (Koru-Moru, Chumimi) pass theirs correctly.
+        npcUtil.completeQuest(player, xi.questLog.WINDURST, xi.quest.id.windurst.UNBRIDLED_PASSION, { item = 14099, title = xi.title.PARAGON_OF_RANGER_EXCELLENCE, var = 'unbridledPassion' })
     then
         -- complete quest RNG AF3
         player:delKeyItem(xi.ki.KOHS_LETTER)

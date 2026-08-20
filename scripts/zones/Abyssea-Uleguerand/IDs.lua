@@ -47,6 +47,7 @@ zones[xi.zone.ABYSSEA_ULEGUERAND] =
         ITEM_DISAPPEARED              = 7412,  -- That item had already disappeared.
         CHEST_DESPAWNED               = 7413,  -- The treasure chest had already disappeared.
         CRUOR_OBTAINED                = 7414,  -- <name> obtained <number> cruor.
+        STREWN_CARRION                = 8047, -- The snowbank is littered with half-gnawed animal carcasses.
         OBTAINS_SEVERAL_TEMPS         = 7415,  -- <name> obtains several temporary items!
         BODY_EMITS_OFFSET             = 7416,  -- <name>'s body emits [a faint/a mild/a strong] pearlescent light!
         CANNOT_OPEN_CHEST             = 7423,  -- You cannot open that treasure chest.

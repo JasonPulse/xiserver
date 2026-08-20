@@ -24,7 +24,8 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.SANDORIA, xi.quest.id.sandoria.WATERS_OF_THE_CHEVAL)
+                player:hasCompletedQuest(xi.questLog.SANDORIA, xi.quest.id.sandoria.WATERS_OF_THE_CHEVAL) and
+                player:getFameLevel(xi.fameArea.SANDORIA) >= 2
         end,
 
         [xi.zone.NORTHERN_SAN_DORIA] =

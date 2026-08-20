@@ -160,6 +160,32 @@ xi.full_speed_ahead.onCheer = function(player)
 end
 
 xi.full_speed_ahead.completeGame = function(player)
+    -- TITLE: Raptor Wrangler. bg-wiki, Notes:
+    --   "By completing the training in under 4 minutes (more than 6 minutes
+    --    remaining on the timer) after your first completion, you can earn the
+    --    title Raptor Wrangler."
+    --   "If you happen to take less than 4 minutes for the first completion to
+    --    obtain your mount, it does not award the title. The quest must be
+    --    attempted a second time for the title."
+    --   "Lowering the difficulty will not grant the title. It must be completed
+    --    on the original difficulty in under 4 minutes."
+    -- All three conditions are enforced: the quest must already be COMPLETED (so
+    -- this is a retry, not the first clear), the run must be Normal Mode, and more
+    -- than 6 minutes must remain of the 10-minute (xi.full_speed_ahead.duration)
+    -- timer. Nothing awarded this title before -- xi.title.RAPTOR_WRANGLER existed
+    -- only in the enum.
+    local timeLeft = player:getLocalVar('FSA_Time') - GetSystemTime()
+    local effect   = player:getStatusEffect(xi.effect.FULL_SPEED_AHEAD)
+    local isNormal = effect ~= nil and effect:getPower() == 0
+
+    if
+        isNormal and
+        timeLeft > 360 and
+        player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.FULL_SPEED_AHEAD)
+    then
+        player:addTitle(xi.title.RAPTOR_WRANGLER)
+    end
+
     player:setCharVar('[QUEST]FullSpeedAhead', 4)
     player:delStatusEffectSilent(xi.effect.FULL_SPEED_AHEAD)
     player:setPos(-104.5, 0, 187.4, 64, 244)

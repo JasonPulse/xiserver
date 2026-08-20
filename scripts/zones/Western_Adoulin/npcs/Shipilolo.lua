@@ -3,7 +3,6 @@
 --  NPC: Shipilolo
 --  Involved with Quests: 'A Certain Substitute Patrolman'
 --                        'Fertile Ground'
---                        'The Old Man and the Harpoon'
 --                        'Wayward Waypoints'
 -- !pos 84 0 -60 256
 -----------------------------------
@@ -11,16 +10,17 @@
 local entity = {}
 
 entity.onTrigger = function(player, npc)
-    local fertileGround    = player:getQuestStatus(xi.questLog.ADOULIN, xi.quest.id.adoulin.FERTILE_GROUND)
+    local fertileGround = player:getQuestStatus(xi.questLog.ADOULIN, xi.quest.id.adoulin.FERTILE_GROUND)
 
     if player:getCurrentMission(xi.mission.log_id.SOA) >= xi.mission.id.soa.LIFE_ON_THE_FRONTIER then
+        -- The Old Man and the Harpoon's csid 2543 branch was removed from this
+        -- file: scripts/quests/adoulin/The_Old_Man_and_the_Harpoon.lua owns 2540
+        -- through 2543, and onEventFinish runs BOTH the framework handler and this
+        -- fallback (interaction_lookup.lua:412 excludes only onSteal/onTrigger/
+        -- onTrade), so the Broken -> Extravagant harpoon swap fired twice. The rest
+        -- of this file -- Fertile Ground and Wayward Waypoints -- has no framework
+        -- counterpart and is kept.
         if
-            player:getQuestStatus(xi.questLog.ADOULIN, xi.quest.id.adoulin.THE_OLD_MAN_AND_THE_HARPOON) == xi.questStatus.QUEST_ACCEPTED and
-            player:hasKeyItem(xi.ki.BROKEN_HARPOON)
-        then
-            -- Progresses Quest: 'The Old Man and the Harpoon'
-            player:startEvent(2543)
-        elseif
             fertileGround == xi.questStatus.QUEST_ACCEPTED and
             not player:hasKeyItem(xi.ki.BOTTLE_OF_FERTILIZER_X)
         then
@@ -38,11 +38,7 @@ entity.onTrigger = function(player, npc)
 end
 
 entity.onEventFinish = function(player, csid, option, npc)
-    if csid == 2543 then
-        -- Progresses Quest: 'The Old Man and the Harpoon'
-        player:delKeyItem(xi.ki.BROKEN_HARPOON)
-        npcUtil.giveKeyItem(player, xi.ki.EXTRAVAGANT_HARPOON)
-    elseif csid == 2850 then
+    if csid == 2850 then
         -- Progresses Quest: 'Fertile Ground' TODO: Should this also give the player a message?
         player:addKeyItem(xi.ki.BOTTLE_OF_FERTILIZER_X)
     elseif csid == 79 then

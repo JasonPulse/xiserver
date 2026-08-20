@@ -117,7 +117,12 @@ quest.sections =
                         questProgress == 3 and
                         not player:hasKeyItem(xi.ki.FEY_STONE)
                     then
-                        if quest:getVar(player, 'Timer') <= VanadielUniqueDay() then
+                        -- bg-wiki: "Zone out and wait a game day." Only the day
+                        -- was enforced; the zone-out was not.
+                        if
+                            quest:getVar(player, 'Timer') <= VanadielUniqueDay() and
+                            not quest:getMustZone(player)
+                        then
                             return quest:progressEvent(32, 89, 6, 0, 56, 0, 6029328, 0, 0)
                         else
                             return quest:event(31, 89, 23, 2964, 56, 0, 6029313, 0, 0)
@@ -133,6 +138,7 @@ quest.sections =
 
                     quest:setVar(player, 'Prog', 3)
                     quest:setVar(player, 'Timer', VanadielUniqueDay() + 1)
+                    quest:setMustZone(player)
                 end,
 
                 [32] = function(player, csid, option, npc)

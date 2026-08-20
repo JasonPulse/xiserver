@@ -26,8 +26,10 @@ quest.sections =
 {
     -- Section: Begin quest (First time)
     {
+        -- bg-wiki: |Previous=[[A Good Pair of Crocs]]. Was enterable out of order.
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                player:hasCompletedQuest(xi.questLog.ADOULIN, xi.quest.id.adoulin.A_GOOD_PAIR_OF_CROCS)
         end,
 
         [xi.zone.EASTERN_ADOULIN] =

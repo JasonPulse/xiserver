@@ -72,9 +72,16 @@ quest.sections =
             ['qm2'] =
             {
                 onTrigger = function(player, npc)
+                    -- Container:keyItem only CONSTRUCTS a KeyItemAction; the grant
+                    -- happens in KeyItemAction:perform, which runs only if the
+                    -- action is returned. This built it, threw it away, and
+                    -- returned NoAction instead, so the Ornate Package was never
+                    -- given and the quest could not be finished. NoAction also
+                    -- carries Action.Priority.Progress (1000), which outranks the
+                    -- legacy qm2.lua fallback, so nothing else could grant it
+                    -- either. bg-wiki: "click it to obtain the {KI} Ornate package".
                     if not player:hasKeyItem(xi.ki.ORNATE_PACKAGE) then
-                        quest:keyItem(xi.ki.ORNATE_PACKAGE)
-                        return quest:noAction()
+                        return quest:keyItem(xi.ki.ORNATE_PACKAGE)
                     end
                 end,
             },

@@ -2,47 +2,41 @@
 -- A Generous General?
 -----------------------------------
 -- Log ID: 4, Quest ID: 109
--- Faulpie : Tanners' Guild, Southern San d'Oria
+-- Gu'Zho Thunderblade : Oldton Movalpolos (zone-in from North Gustaberg, K-6)
+-- Faulpie             : Tanners' Guild, Southern San d'Oria (E-8)
 -----------------------------------
--- Retail: Leathercraft-gated Goblin disguise chain. Simplified for
--- 4-player server: accept + immediate complete. Craft + disguise
--- mechanics skipped.
+-- bg-wiki "A Generous General?": |Start=Gu'Zho Thunderblade, Oldton Movalpolos
+-- |Item Reqs=Goblin Coif |Reward=Choplix's Coif |Title=Moblin Kinsman
+-- |Repeatable=Yes, Once per Conquest Tally
+-- Materials: Buffalo Hide, Sheep Leather, 10,000 gil -> Goblin Coif Cutting.
+--
+-- Faulpie's block for THIS quest is 770-775, identified by csid 774's bytecode
+-- referencing item 1868 (goblin_coif_cutting) and 770/771 referencing item 850
+-- (square_of_sheep_leather) -- matching bg-wiki's Sheep Leather. His other block,
+-- 760-765, is An Understanding Overlord?. Full derivation and the shared flow are
+-- in scripts/globals/beastman_headgear.lua.
 -----------------------------------
 local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.A_GENEROUS_GENERAL)
 
 quest.reward =
 {
-    fame     = 30,
-    fameArea = xi.fameArea.SANDORIA,
+    item  = xi.item.CHOPLIXS_COIF,
+    title = xi.title.MOBLIN_KINSMAN,
 }
 
-quest.sections =
+quest.sections = xi.beastmanHeadgear.sections(quest,
 {
-    {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
-        end,
-
-        [xi.zone.SOUTHERN_SAN_DORIA] =
-        {
-            ['Faulpie'] =
-            {
-                onTrigger = function(player, npc)
-                    return quest:progressEvent(720)
-                end,
-            },
-
-            onEventFinish =
-            {
-                [720] = function(player, csid, option, npc)
-                    if option == 1 then
-                        quest:begin(player)
-                        quest:complete(player)
-                    end
-                end,
-            },
-        },
-    },
-}
+    questId       = xi.quest.id.otherAreas.A_GENEROUS_GENERAL,
+    startZone     = xi.zone.OLDTON_MOVALPOLOS,
+    startCsid     = 60,
+    craftsmanZone = xi.zone.SOUTHERN_SAN_DORIA,
+    craftsmanName = 'Faulpie',
+    baseCsid      = 770,
+    materials     = { xi.item.BUFFALO_HIDE, xi.item.SQUARE_OF_SHEEP_LEATHER },
+    cutting       = xi.item.GOBLIN_COIF_CUTTING,
+    headgear      = xi.item.GOBLIN_COIF,
+    reward        = xi.item.CHOPLIXS_COIF,
+    tallyVar      = 'GenerousGeneralTally',
+})
 
 return quest

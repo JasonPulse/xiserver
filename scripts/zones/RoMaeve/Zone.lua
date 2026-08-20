@@ -7,7 +7,13 @@ local ID = zones[xi.zone.ROMAEVE]
 local zoneObject = {}
 
 local function handleFullMoon()
-    local shouldDoorsOpen = (getVanadielMoonCycle() == xi.moonCycle.FULL_MOON and VanadielHour() >= 18 and VanadielHour() < 6)
+    -- bg-wiki Ro'Maeve: "The moongates open on full moon nights between
+    -- 18:00-6:00." The hour test was `>= 18 and < 6`, which no hour satisfies, so
+    -- shouldDoorsOpen was permanently false and the moongates never opened on a
+    -- full moon at all -- leaving the Moongate pass as the only way through.
+    -- The night window has to be an OR because it wraps midnight.
+    local isNight         = VanadielHour() >= 18 or VanadielHour() < 6
+    local shouldDoorsOpen = getVanadielMoonCycle() == xi.moonCycle.FULL_MOON and isNight
 
     -- Set targetable status.
     local moongate1 = GetNPCByID(ID.npc.MOONGATE_OFFSET)

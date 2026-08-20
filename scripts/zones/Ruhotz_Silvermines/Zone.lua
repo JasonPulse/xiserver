@@ -27,8 +27,16 @@ zoneObject.onEventUpdate = function(player, csid, option, npc)
 end
 
 zoneObject.onEventFinish = function(player, csid, option, npc)
+    -- csid 10000 is the generic "instance cleared" event and is reused by every
+    -- instance in this zone, but this exit is light_in_the_darkness's specifically
+    -- (instance_list 9300 -> exit zone 90; fire_in_the_hole 9301 exits to 88).
+    -- Unguarded it dumped anyone clearing any Ruhotz instance into Pashhow.
     if csid == 10000 then
-        player:setPos(-385.602, 21.970, 456.359, 0, 90)
+        local instance = player:getInstance()
+
+        if instance and instance:getName() == 'light_in_the_darkness' then
+            player:setPos(-385.602, 21.970, 456.359, 0, 90)
+        end
     end
 end
 

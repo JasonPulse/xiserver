@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Windurst Waters
 --  NPC: Churano-Shurano
+-- Starts and Finishes Quest: Magicked astrolable
 -- !pos -60.8 -11.2 98.9 238
 -----------------------------------
 ---@type TNpcEntity

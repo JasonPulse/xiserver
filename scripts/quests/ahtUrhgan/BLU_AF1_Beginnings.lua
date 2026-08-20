@@ -17,6 +17,8 @@ local quest = Quest:new(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.BEGINNINGS
 quest.reward =
 {
     item = xi.item.IMMORTALS_SCIMITAR,
+    -- bg-wiki |Title=Branded by the Five Serpents -- nothing granted it.
+    title = xi.title.BRANDED_BY_THE_FIVE_SERPENTS,
 }
 
 local brandKeyItems =

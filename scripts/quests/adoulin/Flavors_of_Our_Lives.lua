@@ -12,11 +12,14 @@
 
 local quest = Quest:new(xi.questLog.ADOULIN, xi.quest.id.adoulin.FLAVORS_OF_OUR_LIVES)
 
+-- fameArea added: bg-wiki header is |Fame=Adoulin, but giveReward only calls
+-- addFame when params['fameArea'] is set, so this paid no fame at all.
 quest.reward =
 {
-    bayld = 300,
-    exp   = 500,
-    title = xi.title.POTATION_PATHFINDER,
+    bayld    = 300,
+    exp      = 500,
+    fameArea = xi.fameArea.ADOULIN,
+    title    = xi.title.POTATION_PATHFINDER,
 }
 
 quest.sections =

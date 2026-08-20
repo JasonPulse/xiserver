@@ -53,7 +53,10 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.A_CLOCK_MOST_DELICATE) and
+                -- bg-wiki |Previous=[[Deal with Tenshodo]]. This gated on
+                -- A Clock Most Delicate, which bg-wiki does not list as the
+                -- prerequisite for this quest.
+                player:hasCompletedQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.DEAL_WITH_TENSHODO) and
                 player:getFameLevel(xi.fameArea.JEUNO) >= 5
         end,
 

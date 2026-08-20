@@ -66,6 +66,14 @@ xi.settings.map =
     EXP_LOSS_RATE           = 1.0,
     EXP_PARTY_GAP_PENALTIES = true,
 
+    -- Permanent experience point bonus, as a percentage, granted to every character
+    -- as a Dedication buff that never expires and has no exp cap. 50 is the
+    -- equivalent of always wearing an Emperor Band. Set to 0 to disable.
+    -- Applies to kill experience only (quest rewards use main.EXP_RATE), and stacks
+    -- additively with the RoV key item bonuses. Item-granted Dedication (rings and
+    -- bands) still takes precedence for as long as it lasts.
+    PERMANENT_EXP_BONUS = 50,
+
     -- A party member's experience points are nullified if the level difference with the highest-level party member exceeds this value.
     -- When set to 0, there is no nullification of EXP regardless of how wide the gap is between party members.
     -- When set to 10, if you are level 65 or below in a party with a level 75, you will receive no EXP.

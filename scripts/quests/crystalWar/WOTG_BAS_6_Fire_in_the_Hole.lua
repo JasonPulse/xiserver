@@ -118,7 +118,20 @@ quest.sections =
             onEventFinish =
             {
                 [10000] = function(player, csid, option, npc)
-                    if quest:getVar(player, 'Prog') == 2 then
+                    -- 10000 is the shared "instance cleared" event for this zone,
+                    -- so it must be scoped to THIS quest's instance (instance_list
+                    -- 9301 'fire_in_the_hole'). Without that, clearing Light in the
+                    -- Darkness -- the only Ruhotz instance actually implemented --
+                    -- advanced this quest for free.
+                    -- Matched by name rather than id, for consistency with the
+                    -- other 10000 handlers and so it survives an id change.
+                    local instance = player:getInstance()
+
+                    if
+                        instance and
+                        instance:getName() == 'fire_in_the_hole' and
+                        quest:getVar(player, 'Prog') == 2
+                    then
                         quest:setVar(player, 'Prog', 3)
                     end
                 end,

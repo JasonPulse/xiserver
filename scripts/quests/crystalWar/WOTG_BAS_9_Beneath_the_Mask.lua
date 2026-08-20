@@ -19,9 +19,14 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
+            -- bg-wiki notice: "Wait one game day and re-zone after completing
+            -- Honor Under Fire before starting this quest." Neither half was
+            -- enforced; both are armed by Honor Under Fire's own completion.
             return status == xi.questStatus.QUEST_AVAILABLE and
                 player:hasCompletedQuest(xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.HONOR_UNDER_FIRE) and
-                player:getCurrentMission(xi.mission.log_id.WOTG) >= xi.mission.id.wotg.FATE_IN_HAZE
+                player:getCurrentMission(xi.mission.log_id.WOTG) >= xi.mission.id.wotg.FATE_IN_HAZE and
+                vars.Timer <= VanadielUniqueDay() and
+                not quest:getMustZone(player)
         end,
 
         [xi.zone.BASTOK_MARKETS_S] =

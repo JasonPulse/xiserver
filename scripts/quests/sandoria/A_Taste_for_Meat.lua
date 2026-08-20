@@ -12,7 +12,7 @@ quest.reward =
 {
     fame = 30,
     fameArea = xi.fameArea.SANDORIA,
-    gil = 150,
+    gil = 120,
     title = xi.title.RABBITER,
 }
 

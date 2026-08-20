@@ -13,6 +13,8 @@ local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.BETTER_T
 quest.reward =
 {
     item = xi.item.GOBLIN_GRENADE,
+    -- bg-wiki |Title=Apostate for Hire -- nothing granted it.
+    title = xi.title.APOSTATE_FOR_HIRE,
 }
 
 quest.sections =

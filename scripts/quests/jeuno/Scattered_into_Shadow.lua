@@ -147,7 +147,9 @@ quest.sections =
                         player:tradeComplete()
                         quest:setVar(player, 'Prog', 5)
                         npc:setStatus(xi.status.DISAPPEAR)
-                        npc:updateNPCHideTime(900) -- Tebhi disappears for 15min
+                        -- bg-wiki: "Tebhi will dissapear for 3 minutes after
+                        -- accepting the Beast Collar." This was 900 (15 min).
+                        npc:updateNPCHideTime(180)
                         return quest:messageSpecial(castleOzID.text.TEBHI_ACCEPTS, xi.item.BEAST_COLLAR)
                     end
                 end,

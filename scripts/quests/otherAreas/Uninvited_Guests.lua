@@ -138,6 +138,17 @@ quest.sections =
             onEventFinish =
             {
                 [32001] = function(player, csid, option, npc)
+                    -- Monarch Linn hosts FIVE battlefields (ancient_vows,
+                    -- beloved_of_the_atlantes, fire_in_the_sky, savage and this
+                    -- one), and 32001 is the shared battlefield-win event
+                    -- dispatched zone-wide on csid alone. Unguarded, clearing any
+                    -- of the other four advanced this quest for free. Every other
+                    -- battlefield-backed quest in the tree gates on battlefieldWin
+                    -- the same way.
+                    if player:getLocalVar('battlefieldWin') ~= xi.battlefield.id.UNINVITED_GUESTS then
+                        return
+                    end
+
                     quest:setVar(player, var.PROGRESS, phase.RETURNING_IN_VICTORY)
                 end,
             },

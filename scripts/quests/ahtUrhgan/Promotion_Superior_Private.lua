@@ -9,6 +9,8 @@ local quest = Quest:new(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.PROMOTION_
 quest.reward =
 {
     keyItem = xi.ki.SP_WILDCAT_BADGE,
+    -- bg-wiki |Title=Superior Private -- nothing granted it.
+    title = xi.title.SUPERIOR_PRIVATE,
 }
 
 quest.sections =

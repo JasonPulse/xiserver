@@ -105,7 +105,6 @@
 -- means a mob_droplist row, which is a data change outside this file, so the key
 -- is not granted here -- the door checks for it and says so if you lack it.
 -----------------------------------
-local watersID    = zones[xi.zone.WINDURST_WATERS]
 local shakhramiID = zones[xi.zone.MAZE_OF_SHAKHRAMI]
 
 local quest = Quest:new(xi.questLog.WINDURST, xi.quest.id.windurst.HEAVEN_CENT)
@@ -140,53 +139,48 @@ local chests =
 }
 
 local function chestSection()
-    local section =
+    -- The Maze of Shakhrami table is built as its own local before it goes into
+    -- the section literal. Assigning the chest entries onto
+    -- `section[MAZE_OF_SHAKHRAMI]` after the fact made the language server unify
+    -- the value type of every integer-keyed zone table, and because
+    -- WINDURST_WATERS holds `['Ropunono'] = quest:event(...)` it settled on
+    -- TEvent -- so each `{ onTrigger = ... }` chest handler was reported as a
+    -- TEvent "missing required fields id, options". Building this table
+    -- separately keeps its shape inferred from its own literal, which already
+    -- contains a handler table.
+    local shakhrami =
     {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_ACCEPTED and
-                vars.Lens == 1 and
-                not player:hasItem(xi.item.SHELLING_PIECE)
-        end,
-
-        [xi.zone.WINDURST_WATERS] =
+        -- 41 while shut, 42 once the Rusty Key has opened it.
+        ['_5i0'] =
         {
-            ['Ropunono'] = quest:event(289, { [1] = xi.item.AHRIMAN_LENS, [2] = xi.item.SHELLING_PIECE }),
+            onTrigger = function(player, npc)
+                if quest:getVar(player, 'Door') == 1 then
+                    return quest:event(42)
+                end
+
+                return quest:event(41)
+            end,
+
+            onTrade = function(player, npc, trade)
+                if npcUtil.tradeHasExactly(trade, xi.item.RUSTY_KEY) then
+                    return quest:progressEvent(42)
+                end
+            end,
         },
 
-        [xi.zone.MAZE_OF_SHAKHRAMI] =
+        onEventFinish =
         {
-            -- 41 while shut, 42 once the Rusty Key has opened it.
-            ['_5i0'] =
-            {
-                onTrigger = function(player, npc)
-                    if quest:getVar(player, 'Door') == 1 then
-                        return quest:event(42)
-                    end
-
-                    return quest:event(41)
-                end,
-
-                onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, xi.item.RUSTY_KEY) then
-                        return quest:progressEvent(42)
-                    end
-                end,
-            },
-
-            onEventFinish =
-            {
-                [42] = function(player, csid, option, npc)
-                    if quest:getVar(player, 'Door') ~= 1 then
-                        player:confirmTrade()
-                        quest:setVar(player, 'Door', 1)
-                    end
-                end,
-            },
+            [42] = function(player, csid, option, npc)
+                if quest:getVar(player, 'Door') ~= 1 then
+                    player:confirmTrade()
+                    quest:setVar(player, 'Door', 1)
+                end
+            end,
         },
     }
 
     for name, ids in pairs(chests) do
-        section[xi.zone.MAZE_OF_SHAKHRAMI][name] =
+        shakhrami[name] =
         {
             onTrigger = function(player, npc)
                 if quest:getVar(player, 'Door') ~= 1 then
@@ -197,7 +191,7 @@ local function chestSection()
             end,
         }
 
-        section[xi.zone.MAZE_OF_SHAKHRAMI].onEventFinish[ids.take] = function(player, csid, option, npc)
+        shakhrami.onEventFinish[ids.take] = function(player, csid, option, npc)
             -- 7083 "Take this coin? / Yes. / No."
             if option ~= 0 or quest:getVar(player, 'Door') ~= 1 then
                 return
@@ -214,7 +208,20 @@ local function chestSection()
         end
     end
 
-    return section
+    return {
+        check = function(player, status, vars)
+            return status == xi.questStatus.QUEST_ACCEPTED and
+                vars.Lens == 1 and
+                not player:hasItem(xi.item.SHELLING_PIECE)
+        end,
+
+        [xi.zone.WINDURST_WATERS] =
+        {
+            ['Ropunono'] = quest:event(289, { [1] = xi.item.AHRIMAN_LENS, [2] = xi.item.SHELLING_PIECE }),
+        },
+
+        [xi.zone.MAZE_OF_SHAKHRAMI] = shakhrami,
+    }
 end
 
 quest.sections =

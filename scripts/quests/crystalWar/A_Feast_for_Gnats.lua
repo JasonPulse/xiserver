@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=Jewel of the Cobra Unit -- nothing granted it.
+    title = xi.title.JEWEL_OF_THE_COBRA_UNIT,
 }
 
 quest.sections =

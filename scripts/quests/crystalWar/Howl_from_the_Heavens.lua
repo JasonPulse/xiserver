@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=The Moon's Companion -- nothing granted it.
+    title = xi.title.THE_MOONS_COMPANION,
 }
 
 quest.sections =

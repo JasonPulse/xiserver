@@ -25,7 +25,8 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-            player:getMainLvl() >= xi.settings.main.ADVANCED_JOB_LEVEL
+            player:getMainLvl() >= xi.settings.main.ADVANCED_JOB_LEVEL and
+            player:getFameLevel(xi.fameArea.WINDURST) >= 4
         end,
 
         [xi.zone.WINDURST_WOODS] =

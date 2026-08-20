@@ -36,8 +36,23 @@ mission.sections =
                 end,
 
                 [32001] = function(player, csid, option, npc)
-                    -- TODO: In the BCNM script, check that the appropriate Battlefield ID
-                    -- is set as a condition for the below two lines.
+                    -- 32001 is the shared battlefield-win event, dispatched
+                    -- zone-wide on csid alone, and this had no discriminator at
+                    -- all -- the removed TODO asked for a battlefield-ID check.
+                    -- Ra'Kaznar Turris has no battlefield defined yet (no
+                    -- bcnm_records row for zone 277, no xi.battlefield.id entry,
+                    -- no script), so there is no id to match on and inventing one
+                    -- would be fabricating data.
+                    -- What IS real and sourced is this mission's entry key item.
+                    -- bg-wiki, Notes: "Should you lose the battle, re-zone into
+                    -- Ra'Kaznar Inner Court for another {KI} Crystallized psyche."
+                    -- Gating on it means the handler cannot be driven by some
+                    -- future unrelated battlefield in this zone, and it stays
+                    -- correct once the Hades fight is built.
+                    if not player:hasKeyItem(xi.ki.CRYSTALLIZED_PSYCHE) then
+                        return
+                    end
+
                     mission:setVar(player, 'Status', 1)
                     player:setPos(132.2, 39.75, 20, 0, xi.zone.RAKAZNAR_TURRIS)
                 end,

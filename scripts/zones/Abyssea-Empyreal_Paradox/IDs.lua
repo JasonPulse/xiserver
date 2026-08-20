@@ -22,6 +22,9 @@ zones[xi.zone.ABYSSEA_EMPYREAL_PARADOX] =
     },
     mob =
     {
+        -- Shinryu, quest "The Wyrm God". mob_groups 1 -> pool 3604, skill list 475.
+        -- Three spawn points, one per battlefield instance (17821697-17821699).
+        SHINRYU = 17821697,
     },
     npc =
     {

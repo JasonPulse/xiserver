@@ -1,5 +1,5 @@
 -----------------------------------
--- Boy and the Beast
+-- Wrath of the Griffon
 -----------------------------------
 -- !addquest 7 25
 -- Rholont : !pos -168 -2 56 80
@@ -13,6 +13,8 @@ local quest = Quest:new(xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.WRATH_OF
 quest.reward =
 {
     keyItem = xi.ki.MILITARY_SCRIP,
+    -- bg-wiki |Title=Fine Young Griffon -- nothing granted it.
+    title = xi.title.FINE_YOUNG_GRIFFON,
 }
 
 quest.sections =

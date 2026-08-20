@@ -33,9 +33,15 @@ quest.sections =
     },
 
     {
+        -- bg-wiki: "Speak to Curilla (A) at (E-3) while in possession of the
+        -- Vial of lambent potion (Obtained from the previous quest)", with
+        -- |FLevel=5 against |Fame=alth (Abyssea - La Theine). Neither the key
+        -- item nor the fame level was checked.
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-            player:getQuestStatus(xi.questLog.ABYSSEA, xi.quest.id.abyssea.LOST_MEMORIES) == xi.questStatus.QUEST_COMPLETED
+            player:getQuestStatus(xi.questLog.ABYSSEA, xi.quest.id.abyssea.LOST_MEMORIES) == xi.questStatus.QUEST_COMPLETED and
+            player:hasKeyItem(xi.ki.VIAL_OF_LAMBENT_POTION) and
+            player:getFameLevel(xi.fameArea.ABYSSEA_LATHEINE) >= 5
         end,
 
         [xi.zone.ABYSSEA_LA_THEINE] =
@@ -43,7 +49,6 @@ quest.sections =
             ['Curilla'] =
             {
                 onTrigger = function(player, npc)
-                    player:delKeyItem(xi.ki.VIAL_OF_LAMBENT_POTION)
                     return quest:event(190)
                 end,
             },
@@ -51,6 +56,11 @@ quest.sections =
             onEventFinish =
             {
                 [190] = function(player, csid, option, npc)
+                    -- The potion was deleted in onTrigger, i.e. before the
+                    -- cutscene resolved, while quest:begin only runs here --
+                    -- so cancelling the cutscene consumed the key item and
+                    -- left the quest unstartable. Both now happen together.
+                    player:delKeyItem(xi.ki.VIAL_OF_LAMBENT_POTION)
                     quest:begin(player)
                 end,
             },

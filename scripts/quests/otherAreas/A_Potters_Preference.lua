@@ -12,7 +12,7 @@ quest.sections =
     {
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
-                player:getFameLevel(xi.fameArea.WINDURST) >= 6
+                player:getFameLevel(xi.fameArea.WINDURST) >= 5
         end,
 
         [xi.zone.MHAURA] =

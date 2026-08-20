@@ -32,13 +32,12 @@ entity.onTrigger = function(player, npc)
         player:getCharVar('SahaginKeyItems') == 0 and
         not player:hasItem(xi.item.SAHAGIN_KEY)
     then
-        if math.random(1, 100) <= 50 then
-            player:startEvent(105) -- Requires 3 Mythril Beastcoins and a Norg Shell
-            player:setCharVar('SahaginKeyItems', 1)
-        else
-            player:startEvent(106) -- Requires Gold Beastcoin and a Norg Shell
-            player:setCharVar('SahaginKeyItems', 2)
-        end
+        -- bg-wiki "Sahagin Key", Additional Keys: "Gold Beastcoin x1" -- the
+        -- repeat price is always one Gold Beastcoin plus a Norg Shell. This used to
+        -- coin-flip 50/50 against a 3x Mythril Beastcoin variant that retail does
+        -- not offer on repeats.
+        player:startEvent(106) -- Requires Gold Beastcoin and a Norg Shell
+        player:setCharVar('SahaginKeyItems', 2)
     elseif
         player:getCharVar('SahaginKeyProgress') == 3 and
         player:getCharVar('SahaginKeyItems') == 1

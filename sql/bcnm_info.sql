@@ -240,6 +240,14 @@ INSERT INTO `bcnm_records` VALUES (963,31,'bad_seed','nobody',0,1800);
 INSERT INTO `bcnm_records` VALUES (964,31,'bugard_in_the_clouds','nobody',0,900);
 INSERT INTO `bcnm_records` VALUES (965,31,'beloved_of_the_atlantes','nobody',0,1800);
 INSERT INTO `bcnm_records` VALUES (966,31,'uninvited_guests','nobody',0,1800);
+-- Ra'Kaznar Turris (277). 1800s = the 30 minute Earth-time limit both Hades
+-- fights use, the same figure every other 30-minute battlefield here carries.
+INSERT INTO `bcnm_records` VALUES (2722,277,'reckoning','nobody',0,1800);
+INSERT INTO `bcnm_records` VALUES (2723,277,'abomination','nobody',0,1800);
+-- Abyssea - Empyreal Paradox (255). 1800s = 30 minutes, matching the structural
+-- analogue apocalypse_nigh (bcnmId 262, zone 179 'ode_of_life_bestowing' era rows
+-- are 1800 for the boss fights); bg-wiki gives no time limit for this battlefield.
+INSERT INTO `bcnm_records` VALUES (2724,255,'the_wyrm_god','nobody',0,1800);
 INSERT INTO `bcnm_records` VALUES (967,31,'nest_of_nightmares','nobody',0,900);
 INSERT INTO `bcnm_records` VALUES (992,32,'one_to_be_feared','nobody',0,2700);
 INSERT INTO `bcnm_records` VALUES (993,32,'warriors_path','nobody',0,1800);

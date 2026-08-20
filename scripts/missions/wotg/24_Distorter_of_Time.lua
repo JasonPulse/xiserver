@@ -60,9 +60,27 @@ mission.sections =
             onEventFinish =
             {
                 [10000] = function(player, csid, option, npc)
-                    -- TODO: The assumption for this mission script is to catch Event 10000 which is
-                    -- sent once the battlefield has been cleared.  This needs to be verified upon
-                    -- implementation of the instance.
+                    -- LIVE EXPLOIT FIXED. csid 10000 is the shared "instance
+                    -- cleared" event for Ruhotz Silvermines, and this handler had
+                    -- no guard beyond `currentMission == DISTORTER_OF_TIME`.
+                    -- scripts/zones/Ruhotz_Silvermines/instances/light_in_the_darkness.lua
+                    -- fires startEvent(10000) on clear, and onEventFinish is
+                    -- dispatched zone-wide on csid alone -- so any player on this
+                    -- mission who cleared Light in the Darkness had Status set to
+                    -- 1 and was teleported to Beaucedine Glacier [S], where the
+                    -- onZoneIn above then fires event 19 and completes the mission.
+                    -- The entire Distorter of Time battlefield was skippable.
+                    --
+                    -- Scoped by instance NAME rather than by blacklisting ids:
+                    -- an id blacklist missed doomvoid (9302), which also lives in
+                    -- this zone and also fires 10000. Distorter of Time has no
+                    -- instance_list row yet, so this is correctly inert until that
+                    -- is built, and will start working the moment it is.
+                    local instance = player:getInstance()
+
+                    if not instance or instance:getName() ~= 'distorter_of_time' then
+                        return
+                    end
 
                     mission:setVar(player, 'Status', 1)
                     player:setPos(51.641, -41.230, 98.680, 0, xi.zone.BEAUCEDINE_GLACIER_S)

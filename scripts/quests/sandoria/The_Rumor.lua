@@ -8,9 +8,12 @@
 
 local quest = Quest:new(xi.questLog.SANDORIA, xi.quest.id.sandoria.THE_RUMOR)
 
+-- fameArea added: bg-wiki |Fame=S, but giveReward only calls addFame when
+-- fameArea is set, so this paid no fame at all.
 quest.reward =
 {
-    item = xi.item.SCROLL_OF_DRAIN,
+    fameArea = xi.fameArea.SANDORIA,
+    item     = xi.item.SCROLL_OF_DRAIN,
 }
 
 quest.sections =

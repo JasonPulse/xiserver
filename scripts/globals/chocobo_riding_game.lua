@@ -13,25 +13,33 @@ local kazhamID   = zones[xi.zone.KAZHAM]
 xi = xi or {}
 xi.chocoboGame = xi.chocoboGame or {}
 
+-- The three "glyph" destinations shipped raceTimes as a bare NUMBER while every
+-- other row is a two-entry table, and rewardCheck indexes raceTimes[1]/[2].
+-- Indexing a number raises in LuaJIT, so finishing any of those three races threw
+-- out of onEventFinish: no reward was paid AND the MOUNTED effect was never
+-- removed. They are now tables. bg-wiki gives these destinations a single cutoff
+-- ("Woods Glyph 14:00-15:29 | Gysahl Greens 15:30+"), so the second entry is an
+-- open upper bound rather than an invented second tier.
+
 local raceData =
 {
     [xi.zone.WINDURST_WOODS] =
     {
-        [xi.zone.SAUROMUGUE_CHAMPAIGN] = { gameDay = 0, reward = xi.item.WINDURST_WOODS_GLYPH, raceTimes = 930,            npc = windurstID.npc.ORLAINE, eventParam = 3, finishEvent = 901 },
+        [xi.zone.SAUROMUGUE_CHAMPAIGN] = { gameDay = 0, reward = xi.item.WINDURST_WOODS_GLYPH, raceTimes = { 930, 999999 }, npc = windurstID.npc.ORLAINE, eventParam = 3, finishEvent = 901 },
         [xi.zone.WEST_RONFAURE]        = { gameDay = 1, reward = xi.item.MIRATETES_MEMOIRS,    raceTimes = { 1717, 1800 }, npc = windurstID.npc.SARIALE, eventParam = 0, finishEvent = 55  },
         [xi.zone.SOUTH_GUSTABERG]      = { gameDay = 2, reward = xi.item.MIRATETES_MEMOIRS,    raceTimes = { 1950, 2084 }, npc = windurstID.npc.AMIMI,   eventParam = 1, finishEvent = 907 },
     },
     [xi.zone.BASTOK_MINES] =
     {
         [xi.zone.EAST_SARUTABARUTA] = { gameDay = 0, reward = xi.item.MIRATETES_MEMOIRS,  raceTimes = { 1950, 2040 }, npc = bastokID.npc.AZETTE,  eventParam = 2, finishEvent = 901 },
-        [xi.zone.ROLANBERRY_FIELDS] = { gameDay = 1, reward = xi.item.BASTOK_MINES_GLYPH, raceTimes = 1130,           npc = bastokID.npc.EULAPHE, eventParam = 3, finishEvent = 901 },
+        [xi.zone.ROLANBERRY_FIELDS] = { gameDay = 1, reward = xi.item.BASTOK_MINES_GLYPH, raceTimes = { 1130, 999999 }, npc = bastokID.npc.EULAPHE, eventParam = 3, finishEvent = 901 },
         [xi.zone.WEST_RONFAURE]     = { gameDay = 2, reward = xi.item.DRAGON_CHRONICLES,  raceTimes = { 1214, 1260 }, npc = bastokID.npc.QUELLE,  eventParam = 0, finishEvent = 55  },
     },
     [xi.zone.SOUTHERN_SAN_DORIA] =
     {
         [xi.zone.SOUTH_GUSTABERG]   = { gameDay = 0, reward = xi.item.DRAGON_CHRONICLES,   raceTimes = { 1200, 1248 }, npc = sandoriaID.npc.CAMEREINE, eventParam = 1, finishEvent = 907 },
         [xi.zone.EAST_SARUTABARUTA] = { gameDay = 1, reward = xi.item.MIRATETES_MEMOIRS,   raceTimes = { 1699, 1800 }, npc = sandoriaID.npc.EMOUSSINE, eventParam = 2, finishEvent = 901 },
-        [xi.zone.BATALLIA_DOWNS]    = { gameDay = 2, reward = xi.item.EAST_SANDORIA_GLYPH, raceTimes = 795,            npc = sandoriaID.npc.MEUNEILLE, eventParam = 3, finishEvent = 906 },
+        [xi.zone.BATALLIA_DOWNS]    = { gameDay = 2, reward = xi.item.EAST_SANDORIA_GLYPH, raceTimes = { 795, 999999 }, npc = sandoriaID.npc.MEUNEILLE, eventParam = 3, finishEvent = 906 },
     },
     [xi.zone.KAZHAM] =
     {
@@ -147,7 +155,11 @@ xi.chocoboGame.onTriggerAreaEnter = function(player)
         end
 
         -- Race complete event if a record for this path exists
-        if recordName then
+        -- `recordName` is initialised to '' above, and '' is TRUTHY in Lua, so this
+        -- was always taken and the no-record branch was dead. Testing for a
+        -- non-empty string is what was meant. (GetPlayerByID also returns nil for
+        -- an offline record holder, which is why the assignment above is guarded.)
+        if recordName ~= '' then
             player:startEvent(raceData[startingCity][destCity].finishEvent, clearTime, 0, recordTime)
             player:updateEventString(recordName)
         -- Race complete event with no record for this path

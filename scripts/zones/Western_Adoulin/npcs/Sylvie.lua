@@ -95,6 +95,8 @@ entity.onEventFinish = function(player, csid, option, npc)
             player:messageSpecial(ID.text.YOU_CAN_NOW_BECOME, 0)  -- You can now become a geomancer!
             npcUtil.giveKeyItem(player, xi.ki.JOB_GESTURE_GEOMANCER)
             player:setCharVar('GEO_DWL_Luopan', 0)
+            -- bg-wiki lists this title and nothing granted it.
+            player:addTitle(xi.title.GEODANCER)
             player:completeQuest(xi.questLog.ADOULIN, xi.quest.id.adoulin.DANCES_WITH_LUOPANS)
         end
     end

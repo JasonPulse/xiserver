@@ -15,6 +15,8 @@ quest.reward =
     fameArea = xi.fameArea.ADOULIN,
     item     = xi.item.RUNEIST_COAT,
     fame     = 30,
+    -- bg-wiki lists this title and nothing granted it.
+    title    = xi.title.ULTIMATE_RUNEIST,
 }
 
 quest.sections =

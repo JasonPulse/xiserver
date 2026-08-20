@@ -17,6 +17,8 @@ quest.reward =
     fameArea = xi.fameArea.ADOULIN,
     item     = xi.item.GEOMANCY_PANTS,
     fame     = 30,
+    -- bg-wiki lists this title and nothing granted it.
+    title    = xi.title.STORIED_GEOMANCER,
 }
 
 quest.sections =

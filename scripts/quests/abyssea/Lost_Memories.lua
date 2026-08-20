@@ -9,15 +9,28 @@ local ID = zones[xi.zone.ABYSSEA_LA_THEINE]
 
 local quest = Quest:new(xi.questLog.ABYSSEA, xi.quest.id.abyssea.LOST_MEMORIES)
 
+-- fameArea added: without it npcUtil.completeQuest never calls addFame
+-- (npc_util.lua), so this quest granted ZERO fame -- despite bg-wiki describing it
+-- as the fame source: "Completing this quest 8 more times gives enough fame to
+-- open up Rank 6 fame quest with Glenne (A)." The area matches the gate the file
+-- already uses below, xi.fameArea.ABYSSEA_LATHEINE.
 quest.reward = {
-    keyItem     = xi.ki.VIAL_OF_LAMBENT_POTION,
+    fameArea = xi.fameArea.ABYSSEA_LATHEINE,
+    keyItem  = xi.ki.VIAL_OF_LAMBENT_POTION,
 }
 
 quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
+            -- bg-wiki |Repeatable=Yes and "Zoning is not required to repeat this
+            -- quest." Both offer sections tested QUEST_AVAILABLE, but
+            -- getQuestStatus returns COMPLETED (2) permanently after the first
+            -- clear, so Halver went inert and the quest could be done exactly
+            -- once -- on a quest whose stated purpose is repeating it 8+ times for
+            -- fame. Fear_of_the_Dark_III.lua:45 in this same directory uses the
+            -- correct `~= QUEST_AVAILABLE` shape for its repeat path.
+            return status ~= xi.questStatus.QUEST_ACCEPTED and
             player:getFameLevel(xi.fameArea.ABYSSEA_LATHEINE) < 5
         end,
 
@@ -34,7 +47,8 @@ quest.sections =
 
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE and
+            -- Repeatable, as above.
+            return status ~= xi.questStatus.QUEST_ACCEPTED and
             player:getFameLevel(xi.fameArea.ABYSSEA_LATHEINE) >= 5
         end,
 

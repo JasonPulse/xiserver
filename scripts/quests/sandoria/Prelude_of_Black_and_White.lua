@@ -13,6 +13,7 @@ quest.reward =
 {
     item = xi.item.HEALERS_DUCKBILLS,
     fame = 40,
+    fameArea = xi.fameArea.SANDORIA,
 }
 
 quest.sections =

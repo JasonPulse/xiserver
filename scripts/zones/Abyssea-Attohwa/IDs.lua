@@ -47,6 +47,11 @@ zones[xi.zone.ABYSSEA_ATTOHWA] =
         ITEM_DISAPPEARED              = 7412, -- That item had already disappeared.
         CHEST_DESPAWNED               = 7413, -- The treasure chest had already disappeared.
         CRUOR_OBTAINED                = 7414, -- <name> obtained <number> cruor.
+        -- Something in the Air: examining a Gasponia. Neither message carries a
+        -- ${prompt} and the Gasponia entities own no csids, so these are plain
+        -- messages rather than events.
+        GASPONIA_BLOOMS               = 8171, -- Before you blooms a large flower, its vivid markings identifying it as clearly poisonous.
+        GASPONIA_DROPS                = 8172, -- Something falls to the ground beside your feet...
         OBTAINS_SEVERAL_TEMPS         = 7415, -- <name> obtains several temporary items!
         BODY_EMITS_OFFSET             = 7416, -- <name>'s body emits [a faint/a mild/a strong] pearlescent light!
         CANNOT_OPEN_CHEST             = 7423, -- You cannot open that treasure chest.

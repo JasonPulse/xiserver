@@ -238,7 +238,16 @@ quest.sections =
             onEventFinish =
             {
                 [27] = function(player, csid, option, npc)
-                    quest:complete(player)
+                    if quest:complete(player) then
+                        -- Arms the next quest's gate. WOTG_BAS_4_Burden_of_Suspicion.lua
+                        -- tests `not getMustZone` and `Timer <= VanadielUniqueDay()`
+                        -- on ITS OWN quest, and nothing was setting either, so both
+                        -- were trivially true and bg-wiki's "Wait one game day and
+                        -- re-zone" never applied. Restoring the two setters upstream
+                        -- had here.
+                        xi.quest.setMustZone(player, xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.BURDEN_OF_SUSPICION)
+                        xi.quest.setVar(player, xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.BURDEN_OF_SUSPICION, 'Timer', VanadielUniqueDay() + 1)
+                    end
                 end,
             },
         },

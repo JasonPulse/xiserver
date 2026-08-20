@@ -155,6 +155,39 @@ xi.player.charCreate = function(player)
     player:setNewPlayer(true)                           -- apply new player flag
 end
 
+-- Grants the always-on experience bonus (map.PERMANENT_EXP_BONUS) as a Dedication
+-- buff.  A subpower of zero is what marks it as the permanent bonus in
+-- charutils::AddExpBonus: it is never spent and, with a duration of zero, never
+-- expires, so it survives zoning, death and logout.
+xi.player.applyPermanentExpBonus = function(player, isLogin)
+    local bonus = xi.settings.map.PERMANENT_EXP_BONUS or 0
+
+    if bonus <= 0 then
+        return
+    end
+
+    local dedication = player:getStatusEffect(xi.effect.DEDICATION)
+
+    -- An item-granted Dedication carries an exp cap in its subpower and takes
+    -- precedence for as long as it lasts; the permanent bonus returns on the next
+    -- zone or login.  Otherwise apply it, or replace it if the setting has changed.
+    if not dedication then
+        player:addStatusEffect(xi.effect.DEDICATION, bonus, 0, 0, 0, 0)
+    elseif dedication:getSubPower() == 0 and dedication:getPower() ~= bonus then
+        player:delStatusEffectSilent(xi.effect.DEDICATION)
+        player:addStatusEffect(xi.effect.DEDICATION, bonus, 0, 0, 0, 0)
+    end
+
+    -- The buff icon on its own is easy to miss, so state the bonus on login as well.
+    if isLogin then
+        local active = player:getStatusEffect(xi.effect.DEDICATION)
+
+        if active then
+            player:printToPlayer(string.format('Experience point bonus active: +%d%% (Dedication).', active:getPower()), xi.msg.channel.SYSTEM_3)
+        end
+    end
+end
+
 -- called by core after a player logs into the server or zones
 xi.player.onGameIn = function(player, firstLogin, zoning)
     if not zoning then
@@ -258,6 +291,8 @@ xi.player.onGameIn = function(player, firstLogin, zoning)
         player:setLocalVar('ZoningIn', 0)
         -- Login Campaign rewards points once daily
         xi.events.loginCampaign.onGameIn(playerArg)
+        -- Always-on experience bonus (deferred: the buff and its message are packets)
+        xi.player.applyPermanentExpBonus(playerArg, not zoning)
     end)
 
     -- Enforce that gameLogin is always set to 0 once this method exits

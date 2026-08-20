@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Windurst Waters
 --  NPC: Lumomo
+-- Starts and Finishes Quest: Eco-Warrior
 -- !pos -55.770 -5.499 18.914 238
 -----------------------------------
 ---@type TNpcEntity

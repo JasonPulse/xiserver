@@ -11,7 +11,8 @@ local quest = Quest:new(xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.WHAT_PRI
 
 quest.reward =
 {
-    item = xi.item.FOURTH_STAFF,
+    item  = xi.item.FOURTH_STAFF,
+    title = xi.title.PRESIDENTIAL_PROTECTOR,
 }
 
 quest.sections =
@@ -169,6 +170,18 @@ quest.sections =
             {
                 -- What Price Loyalty instance is not implemented currently.
                 [10000] = function(player, csid, option, npc)
+                    -- csid 10000 is the SHARED "instance cleared" event for this zone, and
+                    -- onEventFinish dispatches zone-wide on csid alone. doomvoid -- which
+                    -- IS implemented here and fires startEvent(10000) on clear -- was
+                    -- therefore driving this handler for free. Scoped to this
+                    -- battlefield's own instance by name; its instance_list row does not
+                    -- exist yet, so this is correctly inert until that is built.
+                    local instance = player:getInstance()
+
+                    if not instance or instance:getName() ~= 'what_price_loyalty' then
+                        return
+                    end
+
                     quest:setVar(player, 'Prog', 5)
                     player:setPos(320.000, -10.835, 158.699, 0, xi.zone.XARCABARD_S)
                 end,

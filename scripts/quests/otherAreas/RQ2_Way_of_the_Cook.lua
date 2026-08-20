@@ -28,11 +28,14 @@ quest.sections =
         {
             ['Rycharde'] =
             {
+                -- A `getFameLevel(WINDURST) >= 3` clause used to sit alongside the
+                -- day check. It is not on bg-wiki -- the header is |Fame=Other with
+                -- |FLevel= blank -- and retail gates this purely on the wait after
+                -- Rycharde the Chef ("You need to wait 8 real life hours after
+                -- completing Rycharde the Chef before this quest is offered"), which
+                -- the DayCompleted + 8 test already covers.
                 onTrigger = function(player, npc)
-                    if
-                        player:getCharVar('Quest[4][0]DayCompleted') + 8 <= VanadielUniqueDay() and
-                        player:getFameLevel(xi.fameArea.WINDURST) >= 3
-                    then
+                    if player:getCharVar('Quest[4][0]DayCompleted') + 8 <= VanadielUniqueDay() then
                         return quest:progressEvent(76, xi.item.BEEHIVE_CHIP, xi.item.SLICE_OF_DHALMEL_MEAT) -- Way of the Cook starting event.
                     else
                         return quest:event(75) -- Default dialog after completing previous quest.

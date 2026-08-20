@@ -143,6 +143,18 @@ quest.sections =
             onEventFinish =
             {
                 [12] = function(player, csid, option, npc)
+                    -- The Sprinter's Shoes hand-out used to sit AFTER quest:complete
+                    -- with its return value ignored, so a player with a full
+                    -- inventory was allied and completed but silently lost the
+                    -- shoes with no way to get them back. The sibling quest
+                    -- WOTG_WIN_0_Snake_on_the_Plains.lua:165 bails out first;
+                    -- this now matches it. (The allegiance gate itself was already
+                    -- correct -- csid 12 is only reached when getCampaignAllegiance()
+                    -- is 0; the 624 branch handles the already-pledged case.)
+                    if not npcUtil.giveItem(player, xi.item.SPRINTERS_SHOES) then
+                        return
+                    end
+
                     if quest:complete(player) then
                         player:setCampaignAllegiance(1)
                         npcUtil.giveKeyItem(player, xi.ki.BRONZE_RIBBON_OF_SERVICE)
@@ -150,8 +162,6 @@ quest.sections =
                         player:delKeyItem(xi.ki.CHARRED_PROPELLER)
                         player:delKeyItem(xi.ki.OXIDIZED_PLATE)
                         player:delKeyItem(xi.ki.PIECE_OF_SHATTERED_LUMBER)
-
-                        npcUtil.giveItem(player, xi.item.SPRINTERS_SHOES)
 
                         player:messageSpecial(southernSandoriaSID.text.NOW_ALLIED_WITH, 1)
                     end

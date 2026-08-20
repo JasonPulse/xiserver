@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Western Adoulin
 --  NPC: Eamonn
+-- Starts Quest: Scaredy-Cats
 -- !pos -91 3 2 256
 -----------------------------------
 ---@type TNpcEntity

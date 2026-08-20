@@ -9,6 +9,8 @@ local quest = Quest:new(xi.questLog.AHT_URHGAN, xi.quest.id.ahtUrhgan.PROMOTION_
 quest.reward =
 {
     keyItem = xi.ki.PFC_WILDCAT_BADGE,
+    -- bg-wiki |Title=Private First Class -- nothing granted it.
+    title = xi.title.PRIVATE_FIRST_CLASS,
 }
 
 quest.sections =

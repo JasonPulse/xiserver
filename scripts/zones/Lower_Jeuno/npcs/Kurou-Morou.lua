@@ -28,11 +28,17 @@ entity.onTrigger = function(player, npc)
         player:startEvent(37)
 
     -- searching for right words prereq gate
+    -- bg-wiki header: |Fame=Jeuno |FLevel=6. The three previous quests were
+    -- checked but the fame level was not, so the quest could be flagged well
+    -- below the required standing. (A sibling file claims the fame is
+    -- "implicitly stored" by the prerequisites -- it is not; nothing in that
+    -- chain enforces level 6.)
     elseif
         player:getQuestStatus(xi.questLog.JEUNO, xi.quest.id.jeuno.A_CANDLELIGHT_VIGIL) == xi.questStatus.QUEST_COMPLETED and
         rubbishDay == xi.questStatus.QUEST_COMPLETED and
         neverToReturn == xi.questStatus.QUEST_COMPLETED and
-        searchingForTheRightWords == xi.questStatus.QUEST_AVAILABLE
+        searchingForTheRightWords == xi.questStatus.QUEST_AVAILABLE and
+        player:getFameLevel(xi.fameArea.JEUNO) >= 6
     then
         player:startEvent(17)
     else

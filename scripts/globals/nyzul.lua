@@ -30,6 +30,22 @@ xi.nyzul.baseWeapons =
     [xi.job.SCH] = xi.item.ELDER_STAFF,
 }
 
+-- True when itemId is any job's Nyzul base weapon. Used by Zalsuhm (Unlocking a
+-- Myth) to tell whether the player is carrying a mythic candidate at all.
+xi.nyzul.isBaseWeapon = function(itemId)
+    if itemId == nil or itemId == 0 then
+        return false
+    end
+
+    for _, weaponId in pairs(xi.nyzul.baseWeapons) do
+        if weaponId == itemId then
+            return true
+        end
+    end
+
+    return false
+end
+
 xi.nyzul.objective =
 {
     ELIMINATE_ENEMY_LEADER      = 1,

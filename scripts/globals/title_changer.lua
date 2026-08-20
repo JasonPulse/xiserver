@@ -44,7 +44,20 @@ xi.titleChanger.onEventFinish = function(player, csid, option, eventId, titleInf
         local group = titleInfo[bit.rshift(option, 8) + 1]
         if group then
             local title = group.title[option % 256]
-            if title and player:delGil(group.cost) then
+
+            -- OWNERSHIP MUST BE RE-CHECKED SERVER-SIDE. titleMask above already
+            -- computes exactly this -- it flags every title the player does NOT
+            -- have so the client greys it out -- but that is only a UI hint, and
+            -- this handler trusted the returned option outright.
+            -- CLuaBaseEntity::setTitle is documented "Updates the player's current
+            -- title AND ADDS TO THEIR PROFILE" (it calls charutils::setTitle), so
+            -- selecting a title you do not own GRANTED it for the group's gil cost.
+            -- These tables include quest-gated titles -- Tuh_Almobankha's list
+            -- carries BENNU_DEPLUMER, RANI_DECROWNER and the other Abyssea NM
+            -- titles, which the Cavernous Maw quests test with hasTitle() as their
+            -- completion gate. That made this a gil-priced bypass of those quests.
+            -- A title changer should only ever re-display titles already earned.
+            if title and player:hasTitle(title) and player:delGil(group.cost) then
                 player:setTitle(title)
             end
         end

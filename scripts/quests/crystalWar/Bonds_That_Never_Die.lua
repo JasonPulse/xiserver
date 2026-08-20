@@ -9,7 +9,8 @@ local quest = Quest:new(xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.BONDS_TH
 
 quest.reward =
 {
-    item = xi.item.BEHEMOTH_HORN,
+    item  = xi.item.BEHEMOTH_HORN,
+    title = xi.title.HONORARY_KNIGHT_OF_THE_CARDINAL_STAG,
 }
 
 quest.sections =
@@ -127,6 +128,18 @@ quest.sections =
             onEventFinish =
             {
                 [10000] = function(player, csid, option, npc)
+                    -- csid 10000 is the SHARED "instance cleared" event for this zone, and
+                    -- onEventFinish dispatches zone-wide on csid alone. doomvoid -- which
+                    -- IS implemented here and fires startEvent(10000) on clear -- was
+                    -- therefore driving this handler for free. Scoped to this
+                    -- battlefield's own instance by name; its instance_list row does not
+                    -- exist yet, so this is correctly inert until that is built.
+                    local instance = player:getInstance()
+
+                    if not instance or instance:getName() ~= 'bonds_that_never_die' then
+                        return
+                    end
+
                     quest:setVar(player, 'Prog', 4)
                     player:setPos(-285.717, 0.5, 88.107, 98, xi.zone.JUGNER_FOREST_S)
                 end,

@@ -289,6 +289,10 @@ quest.sections =
             ['Gilgamesh'] = quest:event(233):replaceDefault(),
         },
     },
+
+-- bg-wiki |Title=Breaker of the Chains -- nothing granted it.
+
+title = xi.title.BREAKER_OF_THE_CHAINS,
 }
 
 return quest

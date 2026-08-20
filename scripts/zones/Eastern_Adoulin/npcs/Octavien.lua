@@ -138,6 +138,8 @@ entity.onEventFinish = function(player, csid, option, npc)
             npcUtil.giveKeyItem(player, xi.ki.JOB_GESTURE_RUNE_FENCER)
             player:setCharVar('RUN_COTR', 0)
             player:delKeyItem(xi.ki.YAHSE_WILDFLOWER_PETAL)
+            -- bg-wiki lists this title and nothing granted it.
+            player:addTitle(xi.title.RUNIC_ENGRAVER)
             player:completeQuest(xi.questLog.ADOULIN, xi.quest.id.adoulin.CHILDREN_OF_THE_RUNE)
         end
     end

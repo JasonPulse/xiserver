@@ -16,6 +16,8 @@ quest.reward =
     fameArea = xi.fameArea.ADOULIN,
     bayld    = 3000,
     fame     = 30,
+    -- bg-wiki lists this title and nothing granted it.
+    title    = xi.title.GEOMANCIPATOR,
 }
 
 quest.sections =

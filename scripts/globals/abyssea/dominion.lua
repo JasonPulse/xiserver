@@ -27,6 +27,20 @@ local opZone =
     [xi.zone.ABYSSEA_GRAUBERG  ] = 2,
 }
 
+-- Inverse of opZone: which Abyssea zone an opID belongs to. opIDs are allocated
+-- as 559 + opZone[zone] * 14 + selectedOp with selectedOp in 1..14, so ops
+-- 560-573 are Altepa, 574-587 Uleguerand, 588-601 Grauberg.
+local opZoneByIndex =
+{
+    [0] = xi.zone.ABYSSEA_ALTEPA,
+    [1] = xi.zone.ABYSSEA_ULEGUERAND,
+    [2] = xi.zone.ABYSSEA_GRAUBERG,
+}
+
+local function opZoneID(opID)
+    return opZoneByIndex[math.floor((opID - 560) / 14)]
+end
+
 -- Dominion Op XP Range is listed as 600~4950, which is up to an 8x even multiplier
 -- Set bonus to (float)basexp * (1 + (influencePct/12.5)) ? TODO: Research amounts vs influence
 -- Low chance of valid seals, seals by zone or quest?
@@ -120,7 +134,15 @@ local function getOpInfluenceList(zoneID)
                 break
             end
 
-            influenceTable[opNumber] = bit.band(bit.rshift(packedData, 8 * (opNumber - 1)), 0xFF)
+            -- Byte index WITHIN this server variable. The old form shifted by
+            -- 8 * (opNumber - 1) using the global 1..14 index, which happens to
+            -- give the same answer only because LuaJIT masks shift counts to the
+            -- low 5 bits, making it 8 * ((opNumber - 1) % 4) by accident. Spelled
+            -- out so it does not silently break on a bit library without that
+            -- masking, and so it visibly mirrors savePackedInfluenceList above.
+            local bitOffset = ((opNumber - 1) % 4) * 8
+
+            influenceTable[opNumber] = bit.band(bit.rshift(packedData, bitOffset), 0xFF)
         end
     end
 
@@ -178,7 +200,14 @@ xi.abyssea.sergeantOnTrigger = function(player, npc)
         local opProgress = player:getCharVar(getProgressVar(activeOp))
         local opStatus   = 1
 
-        if player:getZoneID() ~= sergeantInfo[1] then
+        -- opStatus 3 is "your active op is in a different area". This used to
+        -- compare the player's zone against sergeantInfo[1], but sergeantInfo is
+        -- looked up by npc:getName() so sergeantInfo[1] IS the zone this sergeant
+        -- stands in -- the two were equal by construction and the branch could
+        -- never fire. The comparison has to be against the ACTIVE OP's zone,
+        -- recovered from the opID with the inverse of the
+        -- `559 + opZone[zone] * 14 + selectedOp` formula used below.
+        if opZoneID(activeOp) ~= player:getZoneID() then
             opStatus = 3
         elseif opProgress >= dominionOpQuests[activeOp][2] then
             opStatus = 2

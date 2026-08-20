@@ -88,11 +88,22 @@ local function giveAugmentedItem(player, itemID, augmentList, maxAugments)
         end
     end
 
+    -- MISSING RETURN, fixed. The caller below is
+    --   if giveAugmentedItem(...) then player:delCurrency('dominion_note', cost) end
+    -- and this function fell off the end returning nil, so the branch never ran:
+    -- the augmented Yataghan / Doom Tabar / Yukitsugu were handed over and the
+    -- 2,500 Dominion Notes were never deducted -- free, and repeatable. The two
+    -- sibling branches (ITEM / TEMP) use npcUtil helpers that do return a boolean,
+    -- which is why only the AUGMENTED path leaked.
     if player:addItem(unpack(itemParams)) then
         player:messageSpecial(ID.text.ITEM_OBTAINED, itemID)
-    else
-        player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, itemID)
+
+        return true
     end
+
+    player:messageSpecial(ID.text.ITEM_CANNOT_BE_OBTAINED, itemID)
+
+    return false
 end
 
 entity.onTrigger = function(player, npc)

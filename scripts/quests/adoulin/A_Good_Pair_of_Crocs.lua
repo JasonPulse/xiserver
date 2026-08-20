@@ -27,8 +27,12 @@ quest.sections =
 {
     -- Section: Begin quest (First time)
     {
+        -- bg-wiki: |Previous=[[It Sets My Heart Aflutter]] and
+        -- "Questline : It Sets My Heart Aflutter -> A Good Pair of Crocs ->
+        -- A Shot in the Dark". The chain was enterable out of order.
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                player:hasCompletedQuest(xi.questLog.ADOULIN, xi.quest.id.adoulin.IT_SETS_MY_HEART_AFLUTTER)
         end,
 
         [xi.zone.EASTERN_ADOULIN] =

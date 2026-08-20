@@ -196,9 +196,14 @@ quest.sections =
                     local playerString    = decodeFromVars(zone)
 
                     -- Offers the quest
+                    -- bg-wiki: "Speak to Zauko in Lower Jeuno at (I-6) between
+                    -- 18:03 and 21:00." The offer window was 18:00-23:00; 21:00 is
+                    -- the close. (The separate 01:00 deadline for lighting all the
+                    -- lamps is handled by the Timer checks further up and is
+                    -- already correct.)
                     if
                         hour >= 18 and
-                        hour < 23 and
+                        hour < 21 and
                         questStarted == 0 -- Only 1 person per night can flag the quest
                     then
                         return quest:progressEvent(116, doneCommService)

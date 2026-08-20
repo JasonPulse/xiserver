@@ -95,16 +95,26 @@ quest.sections =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 1 then
-                        return quest:progressEvent(159)
+                        return quest:progressEvent(163)
                     end
 
                     return quest:event(158)
                 end,
             },
 
+            -- COMPLETION CSID CORRECTED 159 -> 163. Both are real programs on
+            -- Exoroche (0x010501AA = 17105322, zone 80), but 159 is 644 bytes and
+            -- is bg-wiki's step 3 -- the father arriving, scolding, and handing
+            -- over the sword. 163 is 1087 bytes and is the only one of Exoroche's
+            -- block whose bytecode carries the `qstc` quest-complete opcode
+            -- (`...455C80F8FFFF7FF8FFFF7F71737463` -- 71 73 74 63 = "qstc"); its
+            -- messages 7611-7613 are the reward scene: "Father...", "She's a
+            -- beauty, is she not? My hard-won catch of the day!", "And I believe
+            -- this is yours as well." Completing on 159 fired the reward at the
+            -- wrong point in the scene.
             onEventFinish =
             {
-                [159] = function(player, csid, option, npc)
+                [163] = function(player, csid, option, npc)
                     if quest:complete(player) then
                         quest:setVar(player, 'Prog', 0)
                     end
@@ -114,18 +124,25 @@ quest.sections =
 
         [xi.zone.JUGNER_FOREST_S] =
         {
+            -- LANDERIC CSID CORRECTED 161 -> 222. `xi-dat csid 82 161` reports
+            -- "not found in zone 82" -- 161 does not exist in Jugner Forest [S] at
+            -- all; the 156-164 run belongs to Exoroche in zone 80, so this step
+            -- was simply dead. Landeric's real event is 222: a 1213-byte program
+            -- on the holder 0x01052317 (17113879) with the usual stub on the NPC,
+            -- and its dialog 8013 is exactly bg-wiki's option list --
+            -- "Ask for fishing advice. / Ask about Exoroche."
             ['Landeric'] =
             {
                 onTrigger = function(player, npc)
                     if quest:getVar(player, 'Prog') == 0 then
-                        return quest:progressEvent(161)
+                        return quest:progressEvent(222)
                     end
                 end,
             },
 
             onEventFinish =
             {
-                [161] = function(player, csid, option, npc)
+                [222] = function(player, csid, option, npc)
                     quest:setVar(player, 'Prog', 1)
                 end,
             },

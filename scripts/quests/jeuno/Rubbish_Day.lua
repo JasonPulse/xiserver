@@ -8,10 +8,12 @@
 
 local quest = Quest:new(xi.questLog.JEUNO, xi.quest.id.jeuno.RUBBISH_DAY)
 
+-- bg-wiki |Title=Street Sweeper (xi.title.STREET_SWEEPER = 156) was never granted.
 quest.reward =
 {
-    gil  = 6000,
-    item = xi.item.CHAIN_CHOKER,
+    gil   = 6000,
+    item  = xi.item.CHAIN_CHOKER,
+    title = xi.title.STREET_SWEEPER,
 }
 
 quest.sections =
@@ -20,7 +22,8 @@ quest.sections =
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
                 player:getQuestStatus(xi.questLog.JEUNO, xi.quest.id.jeuno.COLLECT_TARUT_CARDS) == xi.questStatus.QUEST_COMPLETED and
-                player:getCharVar('RubbishDay_day') ~= VanadielUniqueDay()
+                player:getCharVar('RubbishDay_day') ~= VanadielUniqueDay() and
+                player:getFameLevel(xi.fameArea.JEUNO) >= 4
         end,
 
         [xi.zone.LOWER_JEUNO] =

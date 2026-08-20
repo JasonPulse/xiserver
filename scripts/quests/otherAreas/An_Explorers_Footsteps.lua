@@ -54,10 +54,29 @@ local function abelardCorrectTrade(player, csid, option)
     player:confirmTrade()
     npcUtil.giveCurrency(player, 'gil', monumentTable[quest:getVar(player, '[EF]TabletZoneId')][2])
 
+    -- bg-wiki: "After turning in 15 of the 17 tablets, you receive the following
+    -- as a bonus: 2,000 Experience Points / 2,000 Gil". Only the all-17 bonus
+    -- (csid 47) was implemented, so the 15-tablet milestone paid nothing.
+    -- Scoped to the two tablet-traded events (41 = the suggested monument, 46 = a
+    -- different one) because this function is also called for the accept/abort
+    -- options, and latched with a one-shot charvar so it cannot re-pay on a later
+    -- visit while the count still reads 15. MonumentCount is already incremented
+    -- by the onTrade handler before this runs.
+    if
+        (csid == 41 or csid == 46) and
+        player:getCharVar('[EF]MonumentCount') >= 15 and
+        player:getCharVar('[EF]FifteenBonus') == 0
+    then
+        player:setCharVar('[EF]FifteenBonus', 1)
+        player:addExp(2000 * xi.settings.main.EXP_RATE)
+        npcUtil.giveCurrency(player, 'gil', 2000)
+    end
+
     -- Complete quest.
     if csid == 47 then
         player:setCharVar('[EF]MonumentBitmask', 0)
         player:setCharVar('[EF]MonumentCount', 0)
+        player:setCharVar('[EF]FifteenBonus', 0)
         npcUtil.giveKeyItem(player, xi.ki.MAP_OF_THE_CRAWLERS_NEST)
         quest:complete(player)
 
@@ -89,7 +108,8 @@ quest.sections =
 {
     {
         check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
+            return status == xi.questStatus.QUEST_AVAILABLE and
+                player:getFameLevel(xi.fameArea.SELBINA_RABAO) >= 4
         end,
 
         [xi.zone.SELBINA] =

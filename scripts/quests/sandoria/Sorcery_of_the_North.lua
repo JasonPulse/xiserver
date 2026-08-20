@@ -21,7 +21,8 @@ quest.sections =
         check = function(player, status, vars)
             return status == xi.questStatus.QUEST_AVAILABLE and
                 player:getQuestStatus(xi.questLog.SANDORIA, xi.quest.id.sandoria.HEALING_THE_LAND) == xi.questStatus.QUEST_COMPLETED and
-                not player:needToZone()
+                not player:needToZone() and
+                player:getFameLevel(xi.fameArea.SANDORIA) >= 4
         end,
 
         [xi.zone.NORTHERN_SAN_DORIA] =

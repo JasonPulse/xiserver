@@ -2690,7 +2690,7 @@ INSERT INTO `mob_skills` VALUES (2662,1878,'shinryu_attack_tail_2',0,0.0,7.0,300
 INSERT INTO `mob_skills` VALUES (2663,1879,'shinryu_attack_tail_stun',0,0.0,7.0,3000,2000,1,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (2664,1868,'cosmic_breath',4,0.0,15.0,4000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (2665,1869,'cataclysmic_vortex',1,0.0,15.0,4000,5000,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (2666,1882,'gyre_charge',1,0.0,15.0,4000,2000,4,0,0,0,0,0,0);
+INSERT INTO `mob_skills` VALUES (2666,1882,'gyre_charge',1,0.0,15.0,4000,2000,4,0,0,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (2667,1870,'mighty_guard',0,0.0,7.0,3000,2000,1,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (2668,1871,'atomic_ray',1,0.0,20.0,4000,1500,4,0,0,0,0,0,0); -- 66% and below
 INSERT INTO `mob_skills` VALUES (2669,1883,'darkmatter',1,0.0,20.0,4000,1500,4,0,0,0,0,0,0); -- 66% and below
@@ -3413,7 +3413,7 @@ INSERT INTO `mob_skills` VALUES (3385,347,'hemocladis',1,0.0,18.0,2000,1000,4,0,
 -- INSERT INTO `mob_skills` VALUES (3386,3130,'.',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3387,3131,'.',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3388,3132,'.',0,0.0,7.0,2000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (3389,2399,'fulminous_smash',1,0.0,18.0,2000,1000,4,0,0,0,0,0,0);
+INSERT INTO `mob_skills` VALUES (3389,2399,'fulminous_smash',1,0.0,18.0,2000,1000,4,0,0,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (3390,2400,'flaming_kick',1,0.0,18.0,2000,1000,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3391,2401,'icy_grasp',1,0.0,18.0,2000,1000,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (3392,2402,'flash_flood',1,0.0,18.0,2000,1000,4,0,0,0,0,0,0);

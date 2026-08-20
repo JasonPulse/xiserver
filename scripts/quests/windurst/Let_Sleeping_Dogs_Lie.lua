@@ -13,6 +13,8 @@ local quest = Quest:new(xi.questLog.WINDURST, xi.quest.id.windurst.LET_SLEEPING_
 quest.reward =
 {
     item = xi.item.HYPNO_STAFF,
+    -- bg-wiki |Title=Spoilsport -- nothing granted it.
+    title = xi.title.SPOILSPORT,
 }
 
 quest.sections =

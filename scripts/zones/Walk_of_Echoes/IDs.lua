@@ -28,6 +28,11 @@ zones[xi.zone.WALK_OF_ECHOES] =
     },
     npc =
     {
+        -- Kupofried's Weapon Skill Moogle Magic ???. Zone 182 has seven
+        -- entities named 'qm', so GetFirstID is not usable here; this is
+        -- index 656, which shares its 118-122 event block with Kupofried
+        -- (17523343) -- that shared ownership is what identifies it.
+        MOOGLE_MAGIC_QM = 17523344,
     },
 }
 

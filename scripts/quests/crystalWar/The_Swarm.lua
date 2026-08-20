@@ -14,6 +14,8 @@ quest.reward =
 {
     fame     = 30,
     fameArea = xi.fameArea.SANDORIA,
+    -- bg-wiki |Title=Swarminator -- nothing granted it.
+    title = xi.title.SWARMINATOR,
 }
 
 quest.sections =

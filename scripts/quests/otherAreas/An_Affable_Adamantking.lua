@@ -2,47 +2,41 @@
 -- An Affable Adamantking?
 -----------------------------------
 -- Log ID: 4, Quest ID: 107
--- Faulpie : Tanners' Guild, Southern San d'Oria
+-- Raptorlegs Gedwad : Qulun Dome (zone-in from Beadeaux, H-7)
+-- Peshi Yohnts      : Windurst Woods (H-13)
 -----------------------------------
--- Retail: Leathercraft-gated Quadav disguise chain. Simplified for
--- 4-player server: accept + immediate complete. Craft + disguise
--- mechanics skipped.
+-- bg-wiki "An Affable Adamantking?": |Start=Raptorlegs Gedwad, Qulun Dome
+-- |Item Reqs=Quadav Barbut |Reward=Da'Vhu's Barbut |Title=Bronze Quadav
+-- |Repeatable=Yes
+-- Materials: Bugard Leather, Turtle Shell, 10,000 gil -> Quadav Parts.
+--
+-- The craftsman here is PESHI YOHNTS in Windurst Woods, not Faulpie -- the old
+-- stub bound Faulpie for all three. Peshi is entity 17764402; his block is
+-- 710-715, identified by csid 714's bytecode referencing item 1866
+-- (set_of_quadav_barbut_parts) and 710/711 referencing 1637 (bugard leather) and
+-- 885 (turtle_shell). Full derivation in scripts/globals/beastman_headgear.lua.
 -----------------------------------
 local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.AN_AFFABLE_ADAMANTKING)
 
 quest.reward =
 {
-    fame     = 30,
-    fameArea = xi.fameArea.SANDORIA,
+    item  = xi.item.DAVHUS_BARBUT,
+    title = xi.title.BRONZE_QUADAV,
 }
 
-quest.sections =
+quest.sections = xi.beastmanHeadgear.sections(quest,
 {
-    {
-        check = function(player, status, vars)
-            return status == xi.questStatus.QUEST_AVAILABLE
-        end,
-
-        [xi.zone.SOUTHERN_SAN_DORIA] =
-        {
-            ['Faulpie'] =
-            {
-                onTrigger = function(player, npc)
-                    return quest:progressEvent(710)
-                end,
-            },
-
-            onEventFinish =
-            {
-                [710] = function(player, csid, option, npc)
-                    if option == 1 then
-                        quest:begin(player)
-                        quest:complete(player)
-                    end
-                end,
-            },
-        },
-    },
-}
+    questId       = xi.quest.id.otherAreas.AN_AFFABLE_ADAMANTKING,
+    startZone     = xi.zone.QULUN_DOME,
+    startCsid     = 60,
+    craftsmanZone = xi.zone.WINDURST_WOODS,
+    craftsmanName = 'Peshi_Yohnts',
+    baseCsid      = 710,
+    materials     = { xi.item.SQUARE_OF_BUGARD_LEATHER, xi.item.TURTLE_SHELL },
+    cutting       = xi.item.SET_OF_QUADAV_BARBUT_PARTS,
+    headgear      = xi.item.QUADAV_BARBUT,
+    reward        = xi.item.DAVHUS_BARBUT,
+    tallyVar      = 'AffableAdamantkingTally',
+})
 
 return quest

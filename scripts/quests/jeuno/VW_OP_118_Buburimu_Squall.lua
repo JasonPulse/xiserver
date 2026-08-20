@@ -13,6 +13,8 @@ quest.reward =
 {
     fame     = 20,
     fameArea = xi.fameArea.JEUNO,
+    -- bg-wiki |Title=Botulus Rex Engorger -- nothing granted it.
+    title = xi.title.BOTULUS_REX_ENGORGER,
 }
 
 quest.sections =

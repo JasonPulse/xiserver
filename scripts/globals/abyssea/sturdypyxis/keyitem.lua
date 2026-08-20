@@ -80,10 +80,51 @@ local drops =
         xi.ki.GLOSSY_SEA_MONK_SUCKER,
     },
 
-    -- TODO: Populate KI Values for these Zones
-    [xi.zone.ABYSSEA_ALTEPA]     = { 0, 0, 0 },
-    [xi.zone.ABYSSEA_ULEGUERAND] = { 0, 0, 0 },
-    [xi.zone.ABYSSEA_GRAUBERG]   = { 0, 0, 0 },
+    -- These three were { 0, 0, 0 } placeholders. setKeyItems below picks a random
+    -- entry and hands it to giveKeyItem, so a pyxis in Altepa, Uleguerand or
+    -- Grauberg always tried to grant key item 0 and reported KEYITEM_DISAPPEARED --
+    -- the pop-item economy for all three of the Vol.3 zones was dead.
+    --
+    -- The real pools were recoverable without guesswork. key_item.lua carries three
+    -- CONTIGUOUS blocks of exactly five, in the same order these three zones are
+    -- declared in: Altepa 1518-1522, Uleguerand 1523-1527, Grauberg 1528-1532.
+    -- Altepa's and Grauberg's are independently confirmed by the zones' own NM
+    -- poppers (scripts/zones/Abyssea-Altepa/npcs/qm*.lua and
+    -- Abyssea-Grauberg/npcs/qm*.lua reference exactly these five each).
+    --
+    -- Uleguerand has no qm* scripts at all, so its five are confirmed against the
+    -- zone's NM roster in mob_groups (zone 253, spawntype 128) instead: it contains
+    -- Ironclad_Triturator, Impervious_Chariot, Dhorme_Khimaira and Isgebind, which
+    -- match WARPED_IRON_GIANT_NAIL, DENTED_CHARIOT_SHIELD, TORN_KHIMAIRA_WING and
+    -- BEGRIMED_DRAGON_HIDE respectively. The fifth, DECAYING_DIREMITE_FANG, rests
+    -- on the block position alone -- no diremite NM appears in that roster -- so it
+    -- is the one entry here that is inferred rather than corroborated twice.
+    [xi.zone.ABYSSEA_ALTEPA] =
+    {
+        xi.ki.BROKEN_IRON_GIANT_SPIKE,
+        xi.ki.RUSTED_CHARIOT_GEAR,
+        xi.ki.STEAMING_CERBERUS_TONGUE,
+        xi.ki.BLOODIED_DRAGON_EAR,
+        xi.ki.RESPLENDENT_ROC_QUILL,
+    },
+
+    [xi.zone.ABYSSEA_ULEGUERAND] =
+    {
+        xi.ki.WARPED_IRON_GIANT_NAIL,
+        xi.ki.DENTED_CHARIOT_SHIELD,
+        xi.ki.TORN_KHIMAIRA_WING,
+        xi.ki.BEGRIMED_DRAGON_HIDE,
+        xi.ki.DECAYING_DIREMITE_FANG,
+    },
+
+    [xi.zone.ABYSSEA_GRAUBERG] =
+    {
+        xi.ki.SHATTERED_IRON_GIANT_CHAIN,
+        xi.ki.WARPED_CHARIOT_PLATE,
+        xi.ki.VENOMOUS_HYDRA_FANG,
+        xi.ki.VACANT_BUGARD_EYE,
+        xi.ki.VARIEGATED_URAGNITE_SHELL,
+    },
 }
 
 xi.pyxis.ki.setKeyItems = function(npc)

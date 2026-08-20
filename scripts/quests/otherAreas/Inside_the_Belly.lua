@@ -648,8 +648,14 @@ quest.sections =
 
     {
         check = function(player, status, vars)
+            -- No fishing-skill re-check here. bg-wiki: "Once you've flagged the
+            -- quest by talking to Zaldon with adequate fishing skill and The Real
+            -- Gift completed, you will be able to complete the quest for the first
+            -- time even if" your skill drops -- and "After completing the quest for
+            -- the first time, you no longer need to meet the fishing level
+            -- requirement to repeat the quest." The 30-skill gate belongs only to
+            -- the flagging section above, which still has it.
             return status == xi.questStatus.QUEST_ACCEPTED and
-                xi.crafting.getTotalSkill(player, xi.skill.FISHING) >= 30 and
                 xi.settings.map.FISHING_ENABLE == true
         end,
 

@@ -62,9 +62,14 @@ zoneObject.onEventFinish = function(player, csid, option, npc)
         player:setCharVar('moral', 5)
     elseif csid == 51 then
         player:setCharVar('moralrebuy', 1)
+        -- bg-wiki "A Moral Manifest?" header: |Title=Yagudo Initiate. The title was
+        -- never passed, so it was unobtainable. 748 is spelled as its enum here for
+        -- the same reason -- it is xi.item.GOLD_BEASTCOIN (enum/item.lua:353), which
+        -- matches the wiki's reward.
         npcUtil.completeQuest(player, xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.A_MORAL_MANIFEST, {
-            item = 748,
-            var = 'moral'
+            item  = xi.item.GOLD_BEASTCOIN,
+            title = xi.title.YAGUDO_INITIATE,
+            var   = 'moral'
         })
     end
 end

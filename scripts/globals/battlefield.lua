@@ -353,6 +353,22 @@ xi.battlefield.id =
     CENTRAL_TEMENOS_3RD_FLOOR                  = 1305, -- Converted
     CENTRAL_TEMENOS_4TH_FLOOR                  = 1306, -- Converted
     CENTRAL_TEMENOS_4TH_FLOOR_II               = 1307, -- Converted
+
+    -- Ra'Kaznar Turris, SoA Missions 5-4 Reckoning and 5-4-1 Abomination.
+    -- No retail bcnmId is known for these: neither this repo nor upstream has ever
+    -- had a bcnm_records row for zone 277, and the id never reaches the client
+    -- (CBattlefield::GetID is used only to dispatch Lua battlefield events and to
+    -- key the records table -- the client is driven by the menu `index`). They are
+    -- therefore allocated above the highest id in use rather than guessed at a
+    -- retail value.
+    RECKONING                                  = 2722,
+    ABOMINATION                                = 2723,
+
+    -- Abyssea - Empyreal Paradox, quest "The Wyrm God" (Shinryu). Same situation
+    -- as the two above: no retail bcnmId is known, none has ever existed here or
+    -- upstream for zone 255, and GetID never reaches the client. Allocated
+    -- alongside them.
+    THE_WYRM_GOD                               = 2724,
     PURPLE_THE_NEW_BLACK                       = 2721, -- Converted
 }
 

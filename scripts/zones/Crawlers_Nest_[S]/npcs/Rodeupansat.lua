@@ -13,8 +13,11 @@ entity.onTrigger = function(player, npc)
     -- Change to BRASS_RIBBON_OF_SERVICE later when Campaign has been added.
     if
         evilAtTheInlet == xi.questStatus.QUEST_AVAILABLE and
-        player:hasKeyItem(xi.ki.BRONZE_RIBBON_OF_SERVICE) and
-        player:getMainLvl() >= 30
+        -- bg-wiki |Level= is blank for this quest; the `getMainLvl() >= 30` test
+        -- that used to be here is not a retail requirement. The ribbon stays BRONZE
+        -- deliberately -- bg-wiki asks for the Brass Ribbon of Service, which comes
+        -- from Campaign, and Campaign is not implemented here (see the note above).
+        player:hasKeyItem(xi.ki.BRONZE_RIBBON_OF_SERVICE)
     then
         player:startEvent(107) -- Start quest "Evil at the Inlet"
     elseif evilAtTheInlet == xi.questStatus.QUEST_ACCEPTED then

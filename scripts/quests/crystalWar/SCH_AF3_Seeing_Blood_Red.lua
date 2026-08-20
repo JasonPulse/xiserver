@@ -31,8 +31,12 @@ local quest = Quest:new(xi.questLog.CRYSTAL_WAR, xi.quest.id.crystalWar.SEEING_B
 
 quest.reward =
 {
-    fame     = 40,
-    fameArea = xi.fameArea.SANDORIA,
+    -- The invented `fame = 40, fameArea = SANDORIA` is gone: bg-wiki's header is
+    -- |Fame=Crystal War, which has no mapped fame area (fame_area.lua mirrors
+    -- addFame() and has no such region), and this is an Eldieme (S) quest -- paying
+    -- San d'Oria fame was wrong on both counts. |Title=Summa Cum Laude was never
+    -- granted.
+    title    = xi.title.SUMMA_CUM_LAUDE,
     item     = xi.item.SCHOLARS_MORTARBOARD,
 }
 

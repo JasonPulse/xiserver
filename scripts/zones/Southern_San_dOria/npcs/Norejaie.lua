@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Southern San d'Oria
 --  NPC: Norejaie
+-- Starts and Finishes Quest: Eco-Warrior
 -- !pos 83.924 1 110.54 230
 -----------------------------------
 ---@type TNpcEntity

@@ -84,7 +84,7 @@ quest.sections =
             {
                 onTrade = function(player, npc, trade)
                     if
-                        npcUtil.tradeHasExactly(trade, { xi.item.BAKED_POPOTO }) and
+                        npcUtil.tradeHasExactly(trade, { xi.item.POPOTO }) and
                         quest:getVar(player, 'Prog') == 1
                     then
                         return quest:progressEvent(96) -- Quest completed.
@@ -125,7 +125,12 @@ quest.sections =
             onEventFinish =
             {
                 [106] = function(player, csid, option, npc)
-                    npcUtil.giveItem(player, xi.item.BAKED_POPOTO)
+                    -- POPOTO (619), not BAKED_POPOTO (4436). bg-wiki: "He will give
+                    -- you a Popoto to deliver back to Rycharde", and the header's
+                    -- |Item Reqs= is a plain Popoto. The pair was self-consistent
+                    -- -- handed out baked and accepted baked -- so the quest still
+                    -- worked, but a player carrying a real Popoto was rejected.
+                    npcUtil.giveItem(player, xi.item.POPOTO)
                     player:delKeyItem(xi.ki.MHAURAN_COUSCOUS)
                     player:messageSpecial(selbinaID.text.KEYITEM_OBTAINED + 1, xi.ki.MHAURAN_COUSCOUS)
                     quest:setVar(player, 'Prog', 1)

@@ -5,8 +5,17 @@ For each stub: the NPC it binds, the csid it *currently fires*, and the csids th
 NPC **actually owns**, with the dialog each one emits. Match the dialog against
 bg-wiki and the correct event is unambiguous.
 
-Before shipping any id, run the two ship checks from `STUB_REMOVAL_MANIFEST.md`:
-zone `onEventFinish` collision and NPC hijack.
+Before shipping any id, run the two ship checks:
+
+1. **Zone `onEventFinish` collision** — `onEventFinish` is dispatched zone-wide on
+   csid alone, so confirm no other quest, mission or zone script already registers
+   that csid in that zone.
+2. **NPC hijack** — confirm the NPC actually owns the csid (`xi-dat csid <zone> <n>`
+   lists every owner). A `progressEvent` carries Action.Priority.Progress (1000),
+   which outranks `mission:event` (100) and will take over that NPC for anyone whose
+   `check` passes.
+
+Live status and the outstanding work list live in `QUEST_BACKLOG.md`.
 
 `WRONG` = the id the stub fires is not owned by that NPC. This is true for 103 of
 117 bindings.
@@ -2103,3 +2112,165 @@ Meriphataud Mountains [S] (I-8), enter Castle Oztroja [S] for a cutscene, farm
 Prelates, then progress inside Oztroja. Prev: Howl from the Heavens.
 Next: At Journey's End. Reward: Hi-Reraiser. This is a multi-zone chain with a key
 farm, so it is materially bigger than Beast from the East.
+
+## The Search for Goldmane (outlands 200) — fully decoded, rebuilt
+
+Replaced a "Simplified for 4-player" stub whose two csids (Rabao 400/401) are
+both absent from zone 247. Every id below was resolved with `xi-dat
+events/csid/dialog` + `csidmsg.py` and identified by the dialog it emits.
+
+| Step | Zone | NPC / holder | csid | Pinning evidence |
+|---|---|---|---|---|
+| Offer | Rabao 247 | Zoriboh 17788995 | **123** | msg 10530 `"What do you say? / I'll do it. / I don't have time for babysitting."` → **option 0 accepts**; 10532-3 = Care Package |
+| Reminder | Rabao | Zoriboh | **124** | 10527/10528 "Sanctia hasn't come back from Tavnazia" |
+| Tavnazia | Tav. Safehold 26 | Quelveuiat 16883765 | **397** | 11152 "The fiery young damsel is on a quest to find the famous Goldmane!" |
+| Island | Riverne A01 30 | Sanctia 16900396 | **40** | 7665-7675; 7673 "If you find something around here that belonged to Goldmane" |
+| Trunk | Riverne A01 | Trunk 16900395 | **41** | 7677 "You open the trunk with the key!" → 7682 Bastokan navy. No-key line = 7676 |
+| Metalworks | Metalworks 237 | DIRECTOR 17748131 | **887** | 10038-10045; 1-byte stubs on Vladinek + Sanctia 17748133 + Novice_Moogle |
+| Ambush | Bibiki Bay 4 | Weathered_Boat 16794009 | **40** | 7520/7521 "You suddenly find yourself fighting for your life!" → Rohemolipaud |
+| Payout | Bibiki Bay | Weathered_Boat | **37** | 7539/40/41/44/7583; 4249-byte program; grants Deluxe Carbine |
+| Completion | Rabao | qm3 holder 17788994 | **128** | 10536-10547; stubs on Zoriboh **and Chelvadurai 17788997** — the two speakers |
+| Post-clear | Rabao | Zoriboh | **129** | 10548 |
+
+Zoriboh's block splits cleanly because **121 is Chasing Dreams' completion**
+(`Chasing_Dreams.lua`), so 119/121 are the predecessor and 123+ are this quest.
+
+Supporting data already existed: Copper Key = item **1665**, already dropped by
+`Riverne_Vulture` via droplist 2100; Rohemolipaud = `mob_groups` 46 / pool 3384,
+zone 4, spawntype 128; Care Package = ki **631**. Only the two item enum *names*
+were missing (`COPPER_KEY` 1665, `DELUXE_CARBINE` 17274 — both ids verified
+unused), plus `ROHEMOLIPAUD` in `Bibiki_Bay/IDs.lua` and the 7676 text id.
+
+### Nine Crystal War stubs — csids proven fabricated
+
+`xi-dat csid 94 <n>` reports **not found** for every one of 1040, 1050, 1080,
+1090, 1130, 1140, 1200, 1210 in Windurst Waters (S). The real event lists are:
+
+- Lehko_Habhoka 17162806 (zone 94): 21,22,23,25,158,165,168,178,179,182,184,185,186,187,232,233,234,235
+- Dhea_Prandoleh 17162751 (zone 94): 20,26,31,32,34-37,42,43,103,106,128,129,131-136,139,151,158-160,164,166,167,168,231,232,236,530
+- Rotih_Moalghett 17171150 (zone 96): 101,104,105,106,107,108,109,112,113,114,232
+
+These nine are **not** one-line fixes: they are multi-zone retail rebuilds
+(BCNMs, multi-zone key-item collection, a Fenrir fight), and several bind the
+wrong start NPC/zone outright — At Journey's End starts at Lehko Habhoka in
+**Castle Oztroja (S)**, not Windurst Waters (S), and three others start at
+**Robel-Akbel**.
+
+### Correction to a standing note
+
+`mob_groups` HP of 0 is **normal, not a defect** — 10,914 rows have it and the
+server derives HP. The "Shinryu HP is 0" blocker recorded for The Wyrm God is
+therefore not a blocker.
+
+## Repo-wide csid existence audit (method + results)
+
+Built a per-zone set of every csid any entity owns, straight from the DATs
+(`xi-dat events <zone>` for 294 zones = 32,512 csid slots), then extracted every
+`(zone, csid)` pair the quest scripts reference and checked membership. **5,753
+references across 698 quest files; 5,703 resolve.** Reusable: the dump lives at
+`/tmp/zone_csids.json` and takes ~2 min to rebuild.
+
+The 50 failures split cleanly on **two independent signals** — whether the file
+self-declares as a "Simplified for 4-player" stub, and whether the csid has any
+neighbouring csid within ±4 in that zone:
+
+### 21 CONFIRMED FABRICATED (self-declared stub AND zero neighbours)
+
+| Zone | csid | File |
+|---|---|---|
+| 53 | 130 | Totoroons_Treasure_Hunt |
+| 53 | 500 | Scouting_the_Ashu_Talif |
+| 53 | 510 | Royal_Painter_Escort |
+| 53 | 520 | Targeting_the_Captain |
+| 87 | 1310 | Her_Memories_Verdure_Footfalls |
+| 87 | 1320 | Champion_of_the_Dawn |
+| 87 | 1330 | The_Dawn_Also_Rises |
+| 87 | 1340 | A_Forbidden_Reunion |
+| 89 | 1150 | Succor_to_the_Sidhe |
+| 90 | 200 | Survival_of_the_Wisest |
+| 91 | 1010 | The_Swarm |
+| 94 | 1000 | Healing_Herbs |
+| 94 | 1040 | When_One_Man_Is_Not_Enough |
+| 94 | 1050 | A_Feast_for_Gnats |
+| 94 | 1080 | The_Long_March_North |
+| 94 | 1090 | The_Forbidden_Path |
+| 94 | 1130 | Sins_of_the_Mothers |
+| 94 | 1140 | Howl_from_the_Heavens |
+| 94 | 1200 | Manifest_Destiny |
+| 94 | 1210 | At_Journeys_End |
+| 96 | 1230 | A_Manifest_Problem |
+
+Every one is a round multiple of 10 far above anything real in its zone (zone 94's
+NPCs top out around 235), which is the signature of an invented id.
+
+### 29 that must NOT be rewritten — DAT-version drift
+
+`Divine_Interference` (930-932), `Waking_the_Colossus` (925-929),
+`Embers_of_His_Past` (916-921), `Soothing_Waters` (894-897),
+`Such_Sweet_Sorrow` (582-584, 956), `Saga_of_the_Skyserpent` (953),
+`Promotion_First_Lieutenant` (5087-5089), `Trust_Nashmeira` (5092),
+`Trust_Abquhbah` (170) — all zone 50; plus `The_Prankster` (52, 17) and
+`BLU_AF3_Transformations` (72, 24-25).
+
+These are upstream LSB quests, are **not** self-declared stubs, and their ids sit
+*interleaved inside dense populated ranges* — zone 50 has 850-893, 898-914, 917,
+919, 922-924 all present around the gaps, and 5000-5070 present with a hard tail
+cutoff right before 5087. That is the signature of a DAT dump older than the
+content the repo targets, not of invented ids. Zone 50 is 83% valid over 664
+references. **Confirm the client version before touching any of these.**
+
+## Healing Herbs (crystalWar 3) — decoded, rebuild ready
+
+Stub binds `Lehko_Habhoka` + csid 1000; the real quest is the Rhinostery door.
+All Windurst Waters (S) events sit on the `blank` holder **17162754** (idx 514),
+resolved with `csidscan.py` (note: `csidmsg.py` returns nothing for zone 94 — its
+own docstring names 94 as a known failure, use csidscan):
+
+| Step | csid | Dialog evidence |
+|---|---|---|
+| 1. first CS, flags quest | **126** | 11339-11349; 11342 "He's Maju-Naju, a Rhinostery researcher" |
+| 3. learn of the fireblossom | **123** | 11351-11362; 11358 "the essence of the fireblossom!", 11359 "growing in Grauberg" |
+| (too early) reminder | **142** | 11363 "I don't know how long I can preventaru Maju-Naju from ru[nning]" |
+| 5. returned with it | **124** | 11364-11369; 11365 "you harvested the fireblossom in my stead!?" |
+| 6. after 1st game day | **125** | 11370-11393; 11373 "that maniacal laughter... Does this mean...?" |
+| 7. final CS + Tincture | **127** | 11394-11399 |
+
+Present-day Windurst Waters (238), holder **Selenana 17752339**:
+**976** -> 12350-12370 (grants the KI; 12358 "That's Maju-Naju...") and
+**977** -> 12371-12374 (takes the KI back).
+
+Trigger NPC is **`Door_Rhinostery_South`** (17162703), not the North door —
+bg-wiki says "the one on the left activates this quest", and `The_Lost_Book.lua`
+already binds South successfully with csids 143/144/148/150 that live on this
+same holder 17162754.
+
+Supporting data exists: ki **FIREBLOSSOM 956**, ki **THE_HEALING_HERB 957**,
+item **VIAL_OF_TINCTURE 5418** (item_basic name is `vial_of_tincture`, sort name
+`tincture` — an enum grep for "TINCTURE" alone finds it, but check by id 5418).
+
+**TWO UNKNOWNS BLOCK THE REBUILD, not guessed:**
+1. The present-day trigger. Zone 238 has **no** Rhinostery door in `npc_list` —
+   only 11x `Door_Acolyte_Hostel` and one `Door_House`. Needs identifying before
+   the zone-238 half can be bound.
+2. The Grauberg (S) `???` at H-13 that grants FIREBLOSSOM. Zone 89 has 13 `qm*`
+   entities; none is confidently H-13. The only H-13 coordinate in the repo
+   (`hobbies/helm/data.lua:52`) is labelled `(R)` and belongs to another zone, so
+   it cannot be transferred. Zone 89 has no "fireblossom" dialog, so the KI is
+   granted scriptlessly and leaves no DAT trace to match on.
+
+## Walk of Echoes / Cait Sith — decoded, needs a battlefield
+
+The Ornate Door is **`qm` 17523345** (zone 182, idx 657): owns 123, 124, **32000**,
+125, 126, 127, 128. That maps exactly onto bg-wiki's "check the Ornate Door three
+times": **123** (offer) -> **124** (shorter CS) -> **32000** (battlefield entry).
+`Regal_Pawprints` **17523321** shares 124/126/128 — the loss-recovery path.
+
+Pinning dialog: **8150** "Assist Cait Sith? / Absolutely. / Not happening."
+(option **0** accepts) and **8171** "How do you respond?" are both in csid 123;
+**8175** "Spoken like a true Champion of the Dawn!" names the quest; **8146**
+"You have gained the ability to summon Cait Sith!" is the reward; **8147** is the
+inventory-full -> Regal Pawprints fallback. csid 124 -> **8191**.
+
+Blocked on a battlefield that does not exist: no `bcnm_info` row for zone 182, no
+`scripts/battlefields/Walk_of_Echoes/`, no battlefield enum id, and no
+`mob_groups` row for Cait Sith in zone 182 (the pool exists: **5775**).

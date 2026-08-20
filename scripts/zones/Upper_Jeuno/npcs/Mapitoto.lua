@@ -58,7 +58,16 @@ entity.onTrigger = function(player, npc)
 end
 
 entity.onEventFinish = function(player, csid, option, npc)
-    if (csid == 10223 or csid == 10224) and option == 1 then
+    -- 10226 is the post-completion retry offer, fired by onTrigger above whenever
+    -- the quest is COMPLETED. It had NO branch here at all, so bg-wiki's
+    -- "Speak to Mapitoto and select 'Let's do this.' to attempt it" did nothing
+    -- and the Raptor Wrangler title was unreachable. It re-arms the minigame the
+    -- same way the initial offers do: charvar 1 is Normal Mode, which is also the
+    -- only difficulty the title can be earned on.
+    if csid == 10226 and option == 1 then
+        player:setCharVar('[QUEST]FullSpeedAhead', 1)
+        player:setPos(475, 8.8, -159, 128, 105)
+    elseif (csid == 10223 or csid == 10224) and option == 1 then
         player:addQuest(xi.questLog.JEUNO, xi.quest.id.jeuno.FULL_SPEED_AHEAD)
         player:setCharVar('[QUEST]FullSpeedAhead', 1) -- Flag to start minigame
         player:setPos(475, 8.8, -159, 128, 105)

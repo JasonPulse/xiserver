@@ -9,9 +9,10 @@ local quest = Quest:new(xi.questLog.SANDORIA, xi.quest.id.sandoria.TIGERS_TEETH)
 
 quest.reward =
 {
-    gil   = 2100,
-    title = xi.title.FANG_FINDER,
-    fame  = 30,
+    gil      = 2100,
+    title    = xi.title.FANG_FINDER,
+    fame     = 30,
+    fameArea = xi.fameArea.SANDORIA,
 }
 
 quest.sections =
