@@ -1,0 +1,2113 @@
+sha,date,tier,area,files,status,note,subject
+bfd92af853,2025-10-08,D,lua+sql,115,skip-large,"115 files, structural",[lua] Mobskill Rework: Magical
+4d6a102533,2025-12-08,D,lua,150,skip-large,"150 files, structural",[lua] Magic Mobskill Rework 3/3
+4e3d25c0aa,2025-12-08,D,sql,1,,,[lua][sql] Correcting Amphiptere Knockback Skill ID
+aca65af5d3,2025-12-08,D,lua+sql,96,skip-large,"96 files, structural",[lua] Magic Mobskill Rework 2/3
+219907d7c0,2025-12-23,D,lua+sql,10,,,[lua] [sql] BCNM 50 Idol Thoughts
+2e25cf2ea4,2026-01-03,D,lua+sql,11,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,[lua] [sql] ENM Fire in the Sky
+5822f31afe,2026-01-08,D,other,7,,,"[ci,docker] Update to Ubuntu 26.04"
+91933242a7,2026-01-08,D,other,1,,,Update some dependencies
+c325ca7c27,2026-01-08,D,other,2,,,[docker] Update to latest Alpine stable
+88db5c32ec,2026-01-12,D,cpp,16,,,Clean up cppcheck errors
+43e97389af,2026-01-27,D,mod,1,,,PacketCap module to save clients packets
+644f9f5cab,2026-01-30,D,mod,3,,,[sql] RDM era changes
+86031bf18b,2026-02-01,D,lua+mod+sql,10,,,"[lua, sql][module] Pld Era Audits"
+f856eb676b,2026-02-02,D,lua,2,,,Cleanup pirate_chart and brigands_chart scripts
+1e09cef4fd,2026-02-03,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Quest SOB6 Wild Card Bug Fix Wrong Zone
+23d834ff0c,2026-02-03,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Ifrits Cauldron untargetable mining point fix
+3d5daf9b01,2026-02-03,D,cpp,2,,,Synthutils: Cleanup pre-work
+63cab45adf,2026-02-03,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Teleport pets on player cutscene teleport
+919368fb93,2026-02-03,D,lua,1,,,Critical WS tests
+920093a4e1,2026-02-03,D,cpp,1,,,[search] Update LS list loader to support 64 characters
+ab602d9586,2026-02-03,D,cpp,1,,,Separate synthesis from desynthesis calculations
+b741c57ff0,2026-02-03,D,sql,1,,,[sql] Update quantity of items sold by Leathercraft guild
+f3864e4d7a,2026-02-03,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,BLM AF 1 Audit
+f5f33f62f0,2026-02-03,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix enfeebling spell tier fetching
+4246fc4d19,2026-02-04,D,sql,1,,,[sql] Update quantity of items sold by Cooking guild
+5fcfda796b,2026-02-04,D,lua+sql,7,,,Castle Zvahl NM Audits
+75e4173ee5,2026-02-04,D,lua+sql,4,,,BLM AF3 Audit and Bio III access adjustment
+9bcd274541,2026-02-04,D,lua,2,,,[test] Adjust for rename of dmg -> damage
+a4fed23e47,2026-02-04,D,lua,949,skip-large,"949 files, structural",[lua] Adjust mobskills/petskills to pass a table/in out of ALL of them
+beafd4c62e,2026-02-04,D,sql,1,,,[SQL] Update yield quantity of Antacid synth
+c88d0dfa3b,2026-02-04,D,lua+sql,11,,,[lua] [sql] Gigas Audit
+cc0b1d9b47,2026-02-04,C,lua+sql,10,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,[lua] [sql] Gration & Additional Gigas Fixes
+f05b772d33,2026-02-04,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,Samurai AF2 part 2 Audit
+2b1db03aba,2026-02-05,C,lua,1,candidate,"applies cleanly, not yet built or reviewed","Fix map error from quest ""Test My Mettle"""
+53cd826623,2026-02-05,D,lua,63,skip-large,"63 files, structural",[lua] Breath Mobskill Adjustments
+6d6b007523,2026-02-05,D,lua+sql,6,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,White Coney Audit
+6dd19b0566,2026-02-05,D,lua,1,,,chaging blood saber to wipe shadows instead of ignoring them
+8a82772fc7,2026-02-05,D,lua,1,,,[lua] Define more monskill ENUMs
+90707ef70b,2026-02-05,D,sql,1,,,[sql] Update quantity of items sold by Smithing guild
+a4f088aa2f,2026-02-05,B,cpp+lua,4,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] add onMobSkillReadyTime to choose ready time for mobskill
+adf7d592ee,2026-02-05,A,lua,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[lua] Add nil check to black dragon title obtainment
+bab2ce4759,2026-02-05,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] Adjust desynth HQ2/3 algo, add comments"
+ef3081570a,2026-02-05,D,lua,4,,,Add Trust Setting to Bastok -> Sandy 2-3
+056cd9e5a2,2026-02-06,D,sql,1,,,Lizard TP move ready times audit
+11fae471ea,2026-02-06,D,sql,1,,,[sql] Update quantity of items sold by Woodworking guild
+13fcc0aa8f,2026-02-06,D,lua+sql,10,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,SAM AF3 Audit
+6d51727950,2026-02-06,D,lua,14,,,"Avatar ""spells"" mobskills ignore shadows"
+6f3b7df14e,2026-02-06,D,lua,125,skip-large,"125 files, structural",Add player check to all mobs that grant a title in onMobDeath
+733df81c2a,2026-02-06,D,lua,1,,,Horu/CastleKeep Chest Spawn pos
+86322838d0,2026-02-06,D,lua,1,,,"Make Violent Flourish Stun effect use ""Resist State"" function"
+9b3e1b35f8,2026-02-06,D,sql,1,,,BST jugpets hitboxes
+ae47787be8,2026-02-06,D,cpp,1,,,Adjust desynth success penalty for -1 to -7 range
+be908c1057,2026-02-06,D,lua,1,,,[lua] Update Gration skill ready times to 0
+f047a43c67,2026-02-06,D,lua,1,,,Treasure/Coffer gem drop rate adjustment
+ff894b5d02,2026-02-06,D,lua,1,,,Overhaul magic_hit_rate functions to use a parameter table
+8fd8ce133c,2026-02-07,D,lua+sql,4,,,SMN AF1 Fight Audit
+bcf67e7290,2026-02-07,D,lua,2,,,Minotaur/KV party draw-in consider pet master
+055c11e2e5,2026-02-08,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix treasure weakness time
+1b6201db12,2026-02-08,D,lua,1,,,"[lua] JoL adjustments for edge cases, some retail accuracy for AV spawn"
+43e73d7b5d,2026-02-08,D,lua+sql,5,,,SMN AF2 and AF3 Audit
+565ea41a3d,2026-02-08,D,lua,1,,,[lua] Uncomment 180s idle despawn time in Absolute Virtue
+634005f9bf,2026-02-08,D,lua,2,,,Move Oggbi's DA back to the DA lua
+704cbf8951,2026-02-08,A,cpp,26,conflict,does not apply cleanly onto 9e6f10c2fb,[core] ASan/UBSan fixes [UAF/overflows/NaN/bad casts] (#9388)
+733d52a302,2026-02-08,D,sql,2,,,[sql] Consolidate Automaton Mob Family
+7360d4b931,2026-02-08,B,cpp,35,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] Misc static analysis fixes [nil checks, truncation, casts] (#9407)"
+765c824a1c,2026-02-08,D,lua+sql,4,,,[lua][sql] Consolidate Hippogryph Families
+8376d49b07,2026-02-08,D,lua,1,,,[lua] Init Sacrarium labyrinth doors on startup
+8c73659809,2026-02-08,D,sql,1,,,Turns off a QM in Carpenters Landing
+b138ad5f2e,2026-02-08,D,lua,1,,,"[lua] If a mob has zero skill from skill rank, set it to A+"
+b38874182d,2026-02-08,D,lua,1,,,[lua] Remove resist rank check for mobs in calculateResistanceFactor
+b55bee1685,2026-02-08,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",passing correct amount of ice arrows
+b889931b5a,2026-02-08,D,lua,17,,,[lua] Implement Samurai job util
+d4f73598a5,2026-02-08,D,cpp+lua+mod,11,,,"[lua, sql, cpp][module] Samurai Era Audit"
+d676d817f6,2026-02-08,D,sql,1,,,[sql] Update quantity of items sold by Fishing guild
+ddb0443ba7,2026-02-08,D,lua+sql,3,,,BRD AF3 mob audit
+022e9a635f,2026-02-09,D,lua,1,,,Make `Flask of Panacea` remove slow instead of paralysis
+2103afd715,2026-02-09,D,lua,2,,,Clamming rewrite: Toh Zonikki logic conversion
+2c7635a1ae,2026-02-09,D,lua+sql,5,,,Oldton Movalpolos NM Audits
+348dbd1ecb,2026-02-09,D,lua,1,,,Minor treasure cleanup
+445fd325c0,2026-02-09,D,lua+sql,5,,,Black Coney Audit
+4eace37717,2026-02-09,D,lua,2,,,Clamming rewrite: Complete loot lists and add logic for variable rates
+56d0e093f5,2026-02-09,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",MNK AF2 Bug Fix no KI check
+7715effc23,2026-02-09,D,lua+sql,13,,,Clamming rewrite: Clamming point NPC logic and separation
+952c7f953b,2026-02-09,D,lua,1,,,KS99 Draw-In
+d1816cf0c0,2026-02-09,D,lua,42,skip-large,"42 files, structural","[lua] Abyssea - Dawn of Death, Maws Clean up"
+d221090151,2026-02-09,D,lua+sql,395,skip-large,"395 files, structural",[lua] Magical Mobskill Rework Refactor
+d555335184,2026-02-09,D,lua,1,,,[chests] Battle Gloves and Electrum Ring rates
+e9ecd85107,2026-02-09,D,lua+sql,6,,,BRD AF1 and AF2 Audit
+05cc75a78a,2026-02-10,D,lua,1,,,Digging: Relax position distance check and make it more precise
+4b8069e264,2026-02-10,D,lua+sql,3,,,PLD AF1 Audit
+887c6aa2bc,2026-02-10,D,lua,2,,,Roc/Simurgh draw in adjustment
+a7d817f202,2026-02-10,D,cpp+lua,12,,,Cleanup `WEAPONSKILL_TAKE` listener usage and reorder parameters
+b382f9fabb,2026-02-10,D,cpp+sql,4,,,Trust Tokens
+0e2e240883,2026-02-11,A,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Add nullptr checks to direct usages of loc.zone in lua baseentity
+1d1c2320cc,2026-02-11,D,cpp+tools,2,,,[login] Enforce xiloader 2.1.x
+21d9124cc1,2026-02-11,D,lua+sql,4,,,PLD AF3 Fight Audit
+2b72af4d38,2026-02-11,D,sql,1,,,[sql] Ro'meave Spring Water Drop Rate
+92dd48463c,2026-02-11,D,lua,1,,,Gusgen Treasure Cheast POS
+c142368c38,2026-02-11,D,lua+sql,5,,,PLD AF2 Mob Audit
+cce0270875,2026-02-11,D,cpp+lua,6,,,Cleanup `ABILITY` listeners
+0656a8cb90,2026-02-12,D,sql,1,,,[client] NPC ID shifts
+3500a6d4d3,2026-02-12,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Quest NM Marquis Andrealphus Bug Fix
+4dc5020dad,2026-02-12,D,cpp+lua+sql,25,,,Update Summoner and Pet functionality
+855f1d1926,2026-02-12,D,sql,1,,,[sql] Envier size/hitbox
+9d4674b9a3,2026-02-12,D,cfg+lua,268,blocked-client,"shifts zone text IDs, our client is pinned","[client] Text ID shifts, Version update"
+fc758a3050,2026-02-12,D,sql,1,,,[sql] Update quantity of items sold by Tenshodo guild
+fcf1b3d11c,2026-02-12,D,lua+sql,10,,,[lua] [sql] ENM Brothers
+1f8c0d05d8,2026-02-13,D,cpp+lua+sql,15,,,"[lua, sql, c++] Ranger job adjustments"
+1fcccb52fe,2026-02-13,D,cpp,1,,,Adventuring Fellows names
+2d9b845774,2026-02-13,D,lua,10,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,[lua] Abyssea - Main story quests Part 2
+4b9bd4c540,2026-02-13,D,lua,1,,,[lua] Allow defaultIfNil() to accept tables/boolean.
+a3b72d46e6,2026-02-13,D,lua,5,,,Jeuno Quest: Unlisted Qualities
+ce1789b28a,2026-02-13,D,lua+sql,3,,,BST AF2 mob audit
+e04060b827,2026-02-13,D,cfg+cpp+sql+tools,28,,,Help Desk support
+f70b36bdb0,2026-02-13,D,lua+sql,2,,,Sonic Boom Audit
+0a2870b165,2026-02-14,C,cpp+lua,12,conflict,does not apply cleanly onto 9e6f10c2fb,Fixed pup and cleaned up a bit
+2ee8e1b48e,2026-02-14,D,sql,1,,,Synthesis key item recipes June 2012
+45b3f244bc,2026-02-14,D,lua+mod,13,,,"[lua, sql][module] RNG Era Audit"
+5ced57ee62,2026-02-14,D,lua+sql,5,,,BST AF3 Mob Audit
+5d291a669a,2026-02-14,D,lua+sql,8,,,Newton Movalpolos NM Audits
+6ff9e191c9,2026-02-14,D,lua+sql,11,,,[lua] Abyssea - Main story quests Part 3
+affb7ade2c,2026-02-14,D,lua+sql,4,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=yes,[npc] WHM AF3 QM Position
+b28ac45157,2026-02-14,D,cpp+lua+mod,15,,,"[lua, sql, c++] Ninja Era Audit"
+bd6be74d6d,2026-02-14,D,sql,1,,,Add missing comment to mob_droplist.sql
+c1b3191ed5,2026-02-14,D,lua,3,,,Track which AF pieces from coffers have been obtained
+c43405c70f,2026-02-14,D,lua+sql,7,,,[lua] [sql] Lv60 Avatar Audits (Trial By...)
+c5eaada01b,2026-02-14,D,sql,1,,,[sql] Apocalyptic Ray Range
+d1db4d7ef2,2026-02-14,D,cpp+lua,4,,,setRespawnTime(0) disables respawn
+d3865d613b,2026-02-14,D,cpp+lua,7,,,Set allow respawn for scripted mobs setting timer in initialize
+e490bf8f34,2026-02-14,D,cpp,1,,,ACTION entity lookup order change for trusts
+1c11060340,2026-02-15,D,sql,2,,,Labyrinth of Onzozo spawn slots
+296d535a66,2026-02-15,D,lua+sql,4,,,NIN AF2 Audit
+69417d31a0,2026-02-15,D,lua+sql,11,,,[lua] [sql] Fenrir Prime
+8ae8829bcf,2026-02-15,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=6; applies_clean=yes,Ranger AF3 Audit
+af9b4d5697,2026-02-15,D,cpp,2,,,Dont broadcast effect wears off messages
+c3e062b6b3,2026-02-15,B,cpp+lua,6,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] [lua] Send HELM emote to other players
+c842f798a0,2026-02-15,D,sql,2,,,Qufim Island spawn slots
+d67285afd4,2026-02-15,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Ro'Maeve Moongates
+f5c04a600a,2026-02-15,D,lua+sql,4,,,NIN AF1 Audit
+206c245d8b,2026-02-16,B,cpp,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,"[core] Remove ""big"" mobmod"
+2c2ca20d03,2026-02-16,D,sql,1,,,[sql] Update pseudo guilds and clean-up
+34a5fe2f8e,2026-02-16,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Boost roam randomness to uint32
+6242807e0b,2026-02-16,D,cpp+lua,8,,,Review Amendments
+8f9dc1b4dc,2026-02-16,D,lua,1,,,[lua] Comment out print in utils.defaultIfNil()
+ad9cd30295,2026-02-16,D,lua+sql,7,,,[lua][sql] Bat Mob Skill Lists COP+
+cb218d88e7,2026-02-16,D,lua+sql,3,,,Blue Mage AF2 Fight Audit
+d0baeec999,2026-02-16,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,NIN AF3 Audit
+04e36b517b,2026-02-17,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Apkallu mixin run away behavior
+6b9735b280,2026-02-17,D,lua,17,content-queued,see content_queue.csv; new_text_keys=6; applies_clean=no,[lua]  Abyssea - Main story quests Part 4
+af29063bce,2026-02-17,D,cpp,2,,,blocked player charmed mobs and mobs claiming with magic
+c2bedcec9a,2026-02-17,D,lua,1,,,Bune Draw in
+c343e8f934,2026-02-17,D,lua+sql,3,,,SMN AF3 Ogmios
+012d381bec,2026-02-18,D,cpp+sql,4,,,Zoneline origination points; spawn slotting
+765be7cd43,2026-02-18,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Dawn Phase 2
+8023d32878,2026-02-18,D,lua+sql,4,,,Mis Coast NM Audits
+bfa76eb1ea,2026-02-18,D,cpp+lua+sql,4,,,Brigand chart: Make chests fishable
+eab1ea383e,2026-02-18,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=yes,RDM AF3 part 2 Audit
+169832b332,2026-02-19,D,cpp+lua,3,,,addStatusEffect binding
+374882bde2,2026-02-19,D,lua,2,,,ISNM3k Shadows of the Mind
+77ba9d957a,2026-02-19,D,cpp,10,,,Engine: General updates to xirand
+b51a58c147,2026-02-19,D,cpp+lua,1523,skip-large,"1523 files, structural",Migrate addStatusEffect
+0f5516a0e3,2026-02-20,D,lua,1,,,Migrate remaining addStatusEffectEx call
+951b1861cc,2026-02-20,D,cpp,1,,,Update modifier.h to include enspell_dmg_pct
+a291c39bf2,2026-02-20,D,cpp,1,,,Removing space on ln814
+a5ba09b31b,2026-02-20,D,cpp,1,,,trust remove battlefield effect battlefield.cpp
+b409ca3548,2026-02-20,D,sql,1,,,Update augments.sql to enable enspell_dmg_pct
+bed3acfa48,2026-02-20,D,cpp+lua+mod+sql,17,,,"[lua, sql, c++][module] DRG Era Audit"
+d0165058db,2026-02-20,D,lua,1,,,Update mod.lua to include enspell_dmg_pct
+ecbf509615,2026-02-20,D,cpp,1,,,Update battleutils.cpp for enspell_dmg_pct
+8cc514f6f0,2026-02-21,D,lua,1,,,Wait a little longer before asserting KA respawn
+d991c3d6d7,2026-02-21,D,lua+sql,4,,,[lua] [sql] King Vinegarroon
+45007b6057,2026-02-22,D,cpp+sql,3,,,Allow setting custom wear off message per status effect
+962a811110,2026-02-22,C,cpp+lua+mod+sql,8,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua,sql,c++] Correct AOE ability buff messaging"
+e09af446a2,2026-02-22,D,mod,5,,,[lua][module] Update modules to new status effect method
+e450ef88d5,2026-02-22,D,lua,1,,,[lua] Hell Freezes Over Armoury Crate
+e7d8e23c12,2026-02-22,D,sql,1,,,Status effect ON_ZONE flags
+f65bda686c,2026-02-22,D,cpp+lua+sql,7,,,"Item mod corrections: SC DMG, Crit Evasion"
+04dc6c25ba,2026-02-23,D,lua,1,,,convert chronoshift to use copyStatusEffect
+83ce4f0380,2026-02-23,D,cpp,36,,,Retail accurate inventory container tracking (#9409)
+3fa2d83c30,2026-02-24,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Correct weather/sky in Walk of Echoes
+47cbe24ffe,2026-02-24,D,lua,4,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,[lua] Bastok [S] + Grauberg [S] locked doors
+5a89192711,2026-02-24,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",Fix Einherjar abjuration drops
+b81a7f6e3e,2026-02-24,D,cpp+lua+sql,5,,,fishing snares for pirate chart
+02a2ae762d,2026-02-25,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] WoTG 49 - Cait in the Woods CS NPC fix
+05fad3f936,2026-02-25,D,lua,8,content-queued,see content_queue.csv; new_text_keys=4; applies_clean=yes,[lua] WoTG 41 - Her Memories - Lua Cleanup
+117b932c9f,2026-02-25,A,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,Null check before attempting to interrupt item
+46a597d04c,2026-02-25,D,cpp+lua,5,,,"[lua, c++]  WoTG 37/46 - Spitewarden Mimicry"
+5e343e7970,2026-02-25,D,lua+sql,13,,,Merge pull request #9529 from sruon/respawn_times_5
+94434779ee,2026-02-25,D,cpp,4,,,Core: Make ConnectEngine::periodicCleanup() a coroutine
+a8ea1bcd0e,2026-02-25,D,lua,1,,,[lua] WoTG 42 - Forget me Not - Lua Cleanup
+d293d4e0d2,2026-02-25,D,lua+sql,13,content-queued,see content_queue.csv; new_text_keys=11; applies_clean=no,BLU LB (The Beast Within)
+d4276f75a1,2026-02-25,D,cpp,11,,,Core: Add ASIO-based Scheduler
+e34ed9f435,2026-02-25,D,cpp+lua,4,,,Add lua binding for non-player entities for starting an spell cast
+ea97d06834,2026-02-25,D,cpp+lua,9,,,Add `target` parameter to new function and old listener
+240459a2d5,2026-02-26,D,lua,1,,,Changes jug test to target a non-slotted mob
+2bc710507d,2026-02-26,D,cpp,4,,,Ext: Bump to Tracy 0.13.1
+3c2e2912c6,2026-02-26,D,cpp,4,,,Core: Propagate new Scheduler out to xi_world
+490a5d31f2,2026-02-26,D,lua,1,,,Reorder xi.msg.basic
+6d6fb7935c,2026-02-26,D,cpp+lua,16,,,BATTLE2 enforce MsgBasic usage
+74868b81fb,2026-02-26,D,other,1,,,Ext: Bump ASIO version to 1.36.0
+90a067cd93,2026-02-26,D,cpp,3,,,Login: Handle sessions on worker thread
+a27be118bc,2026-02-26,D,cpp,9,,,Core: Propagate new Scheduler out to xi_search
+a453b7a3c7,2026-02-26,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix addallmounts Add addallwarps [Commands] (#9509)
+afda2d4359,2026-02-26,D,lua,19,,,Add en-spell check to additional effect functions. Clean mob AE sections
+ca6f0ea645,2026-02-26,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix ToAU mission 7 getting stuck on CS option
+e1bde4e09e,2026-02-26,D,cpp,11,,,Core: Propagate new Scheduler out to xi_map and xi_test
+e3bc0cc44f,2026-02-26,D,cpp,4,,,Core: Make ConsoleService use new Scheduler
+f44129419d,2026-02-26,D,cpp,2,,,Core: Enforce Scheduler fire-and-forget
+fc9f330650,2026-02-26,D,lua+sql,15,,,[lua] Ultima Skill Audit
+a75c207ae9,2026-02-27,D,lua+sql,4,,,[mob]Cor AF1 NM Lost Soul
+05f4e2bec5,2026-02-28,D,cpp,1,,,Don't get leader of null party
+35ab2d31f4,2026-02-28,D,sql,1,,,[sql] Add Living Rod's Hidden Effect
+683f6dff56,2026-02-28,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Bug Fix SMN AF 1 Quest - Flow
+6a1c3c6a43,2026-02-28,D,sql,2,,,Implement Beaucedine Glacier spawn slots
+846502ea5a,2026-02-28,D,cpp,43,skip-large,"43 files, structural",MsgBasic converted to PascalCase
+8cb5738408,2026-02-28,D,sql,2,,,Implement North Gusta spawn slots
+e87d7d742d,2026-02-28,D,cpp,1,,,Cancel synth if result is rare and already owned
+76e89d8123,2026-03-02,D,lua,1,,,Old Sabertooth: Rework poison and file cleanup
+8dfc82cca4,2026-03-02,D,lua+sql,3,,,Message on subjob restriction. No message on loss.
+8e8398c862,2026-03-02,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,Corsair LB (Breaking the Bonds of Fate)
+b42bdd8061,2026-03-02,C,mod,1,candidate,"applies cleanly, not yet built or reviewed",Modules: Fix announce_player_login.lua
+d8fe673756,2026-03-02,C,cpp+tools,2,candidate,"applies cleanly, not yet built or reviewed",Tools: Fix announce.py encoding
+36faa2e85e,2026-03-03,D,cpp,5,,,"Scheduler: Rename ioContext to mainContext, add All (vector)"
+3a6624ffb4,2026-03-03,D,cpp,1,,,Add checks for master in isMobOwner
+5c20f3d437,2026-03-03,D,sql,1,,,bst jug abilities added
+6e0da5e6f5,2026-03-03,D,cpp,1,,,"Core: Add preparedStmt(Scheduler&, ...)"
+70555ea2cc,2026-03-03,D,cpp,2,,,Core: Clean up CAIEventHandler
+70c462875d,2026-03-03,D,sql,1,,,Add missing jug pets to mob pools
+7c3618bca3,2026-03-03,D,sql,2,,,Implement Lower Delkfutt's Tower spawn slots
+8e313be14d,2026-03-03,D,sql,2,,,Audit and addition of mob skills to support jug skills
+a0973b040a,2026-03-03,D,sql,2,,,implement Castle Zvahl Baileys spawn slots
+c3e5d7893a,2026-03-03,D,sql,2,,,Implement The Boyahda Tree spawn slots
+c70813af68,2026-03-03,D,sql,1,,,Audit and addition of all jug pet jug items
+ce80dbd2dc,2026-03-03,D,sql,2,,,Audit and update of pet list and pet skills
+e0392b7ad6,2026-03-03,D,lua+sql,3,,,Implement Arrapago Reef spawn slots
+222b23f4f3,2026-03-04,D,sql,1,,,Remove Earth Pounder KV
+be954ee36d,2026-03-04,D,cpp,49,skip-large,"49 files, structural",Core: Remove CTaskManager
+c6c7f9aa9c,2026-03-04,D,lua+sql,8,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,PUP AF3 Puppetmaster Blues
+f01aa29f13,2026-03-04,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix HQ 2 and 3 distribution
+0baf054223,2026-03-05,D,cpp,11,,,Core: Run all MapEngine tasks in Scheduler
+6824a24af0,2026-03-05,D,cpp,18,,,Core: Make ZoneServer a coroutine
+6c627c6b01,2026-03-05,D,cpp,75,skip-large,"75 files, structural",Core: Use Maybe alias for std::optional
+7733be9e90,2026-03-05,D,tools,1,,,Tools: Update cppcheck to C++20
+785931177a,2026-03-05,D,cpp+lua,1553,skip-large,"1553 files, structural",Reorder onMobWeaponskill params and make usage consistent all across
+81805e041e,2026-03-05,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,PUP LB (Achieving True Power)
+92f024bb1e,2026-03-05,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Fetch automaton head or frame from PChar or Automaton pet
+b26fb5b5f4,2026-03-05,D,cpp,40,,,Core: Remove Async helpers
+e0eecb794c,2026-03-05,D,cpp,4,,,Core: Simplify charutils::LoadChar
+f09456bca0,2026-03-05,D,cpp+lua,42,skip-large,"42 files, structural","Make WEAPONSKILL_USE/TAKE listeners use skill object, not just id"
+ffd222113a,2026-03-05,D,lua+sql,15,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,"[lua, sql] Implement Pulling the Plug ENM"
+0a3958e825,2026-03-06,D,lua+sql,6,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,PUP AF1 fight Caedarva Toad
+5743d71666,2026-03-06,D,tools,1,,,[ci] Skip merge commits for length checks
+5f3b01dd75,2026-03-06,D,lua,5,,,[lua] Convert quest The Fumbling Friar to IF
+e16249e73b,2026-03-06,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Update Buarainech to correct model ID
+fc60e7dc9d,2026-03-06,D,cpp+lua,18,,,Automaton cleanup
+1e5040d39a,2026-03-07,D,lua+sql,11,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,"[lua, sql] Tango With A Tracker adjustments"
+2b9b9be2e8,2026-03-07,C,lua,1,candidate,"applies cleanly, not yet built or reviewed","Update ""Guard rate"" skillDelta"
+357566299b,2026-03-07,D,lua,3,,,Treasures & Tribulations bugfix
+5b99aeaf04,2026-03-07,D,cpp,25,,,Core: Make time_server a coro
+7021de121a,2026-03-07,B,cpp+lua,21,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] [lua] Add level -1 support, add mods to mobs"
+a12a21c858,2026-03-07,D,sql,1,,,"COR AF3 mobs hitboxes, flags"
+ea768911e8,2026-03-07,D,lua,1,,,PUP LB Event Puppet model
+010f3b28f4,2026-03-08,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Don't tap aggro if mob is dead
+2233cd6fc8,2026-03-08,A,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Fix underflow with lvl -1 mob exp gain
+3377c380a2,2026-03-08,D,cpp+tools,40,,,Core: Propagate coros into AI::Tick()
+4a54ebee18,2026-03-08,D,cpp,5,,,Core: Introduce Scheduler::TaskGroup
+6c0ae0fdae,2026-03-08,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Don't try to make dead mobs link
+bba7c68fce,2026-03-08,D,lua+sql,15,,,"[lua, sql] Waking Dream battlefield audit"
+dd1441de28,2026-03-08,D,lua,4,,,[lua] Convert Waking Dreams to IF
+de69317642,2026-03-08,D,cpp+lua+sql,10,,,Add Amchuchu's Gambits and supporting code
+03929f83e4,2026-03-09,D,sql,1,,,Update augments.sql dmg & delay
+713ff5aeb7,2026-03-09,D,cpp+lua,4,,,Changed lunge check to only be light/dark SC's
+afa113481f,2026-03-09,D,sql,2,,,[sql] Remove duplicates from mob groups
+e59d8ee23a,2026-03-09,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Fixes elementals instantly respawning in some zone
+ff95d08590,2026-03-09,C,sql,2,candidate,"applies cleanly, not yet built or reviewed",[sql] Fixes typos in mob groups and spawn point sqls
+0e714b66e1,2026-03-10,D,lua,3,,,[lua] Implement Requiem of Sin Quest
+3b3f6ac6f0,2026-03-10,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",[c++]  Fix skillchain resistance formula
+49fe639048,2026-03-10,D,cpp+lua+sql+tools,18,,,Alter Ego upgrades packets and currency
+8ea8c0cdf6,2026-03-10,D,lua+sql,10,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,"[lua, sql] Implement Requiem of Sin battlefield"
+a561523612,2026-03-10,C,lua,4,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Fix Fast Blade mobskill message and add safety to COR AF3
+d3e46c1fce,2026-03-10,D,lua,3,,,PUP AF crafting system
+809cdd0418,2026-03-11,D,cpp,4,,,[cpp] Adds getLocalVars lua binding
+86c7b27ca5,2026-03-11,D,cpp,7,,,Clean clang-tidy-22 warnings
+be830dbb47,2026-03-11,D,cpp+tools,20,,,Update to clang-format-22
+c7f03e5ecc,2026-03-11,D,cpp,4,,,Track FRAGMENTS offset for retries purposes
+037acd26d7,2026-03-12,D,lua,1,,,Change resist tier calculation to stop on resist failure
+d59e51a64f,2026-03-12,D,lua,4,content-queued,see content_queue.csv; new_text_keys=7; applies_clean=yes,[lua] Abyssea Minor Clean up
+2c90dc26ac,2026-03-13,D,cpp,6,,,Core: add Scheduler::blockOnMain
+c170743d70,2026-03-13,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Bug Fix Out of the Depths Title Reward fix
+c28c82715d,2026-03-13,D,cpp,28,,,Core: Pipe Scheduler into CLuaTestEntity
+f86f25d137,2026-03-14,B,cpp,2,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] adjust usage of std::stack pop calls
+8964c53d66,2026-03-15,C,cpp+lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,"[trust] AAEV gambits, Amchuchu gambit ONE_FOR_ALL ai.r.MA->ai.r.JA fix"
+ad3008f909,2026-03-15,D,cpp+lua+sql,5,,,"[sql,lua,core] Make gambit RANDOM skillchain-aware; add AAEV mobskills"
+bcb38d4777,2026-03-15,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Remove status effects by flag before adding level sync
+c4d1146910,2026-03-15,B,cpp,6,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Add CLuaWeaponskill for lua userdata type
+323e855bb9,2026-03-16,D,sql,2,,,Implement Monastic Cavern spawn slots
+642370e4b5,2026-03-16,D,sql,2,,,Implement Ro'Maeve spawn slots
+8b97a84e11,2026-03-16,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Seasons Greetings Delay Fixes
+9a84daeafa,2026-03-16,D,lua+sql,5,,,Implement Ifrit's Cauldron spawn slots
+c26774e30d,2026-03-16,D,lua+sql,3,,,Implement Konschtat Highlands spawn slots
+d6af23d3a5,2026-03-16,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix `givemagianitem` GM command
+d7ce0f4d56,2026-03-16,D,lua+sql,10,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=no,COR AF3 Fight (Against All Odds)
+ef8628363e,2026-03-16,D,lua+sql,3,,,Implement La Theine Plateau spawn slots
+0652d176d9,2026-03-17,D,lua+sql,3,,,Implement Crawler's Nest spawn slots
+0daa2bb99b,2026-03-17,D,lua+sql,5,,,Implement Bostaunieux Oubliette spawn slots
+1363188e72,2026-03-17,D,other,12,,,[ci] Update actions versions
+33422d5d1c,2026-03-17,D,cpp,1,,,Move `WEAPONSKILL_USE` and `WEAPONSKILL_TAKE` listeners
+7e1e254702,2026-03-17,D,cpp+lua,28,,,Normalize the usage of `WEAPONSKILL_STATE_EXIT` listener
+805c8ccf83,2026-03-17,D,lua+sql,5,,,Implement Fei'Yin spawn slots
+bf644bfd78,2026-03-17,D,lua+sql,7,,,Implement Davoi spawn slots
+f8a968cb95,2026-03-17,D,lua+sql,6,,,Implement Castle Zvahl Keep spawn slots
+fb51be818c,2026-03-17,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fixes #9398
+ff7440a337,2026-03-17,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fixes #9100
+1593bb8d31,2026-03-18,D,lua,2,,,Adjust SC Trigger distance for Against All Odds
+63a1e00f34,2026-03-18,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Despot behavior
+3430df2dad,2026-03-19,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[trust] AAEV fixed palisade using MA not JA
+a5af516c32,2026-03-19,D,cpp,31,,,Core: Unify scheduler naming
+b4089cc1f0,2026-03-19,D,lua,6,,,Reorder jsa enum and remove associated alias
+ea57bf8dfc,2026-03-19,D,lua+sql,2,,,"[sql,lua] AAEV shield mastery power lvl range, reprisal spell"
+f3cf563b03,2026-03-19,D,lua,87,skip-large,"87 files, structural",Convert jsa.SKILL to mobSkill.SKILL
+10ab9302a5,2026-03-20,D,lua+sql,10,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] [sql] Follow the White Rabbit
+3f18a7b93c,2026-03-20,D,lua,4,,,Exdata supporting enums for Bonanza/Brenner/Escutcheons/Legion
+9a0b9eff18,2026-03-20,D,lua,2,,,Enum and data for Moblin Maze Mongers
+0e101409bd,2026-03-21,D,lua+sql,2,,,[trust] AAHM: Added gambits/mods/tp usage
+10476d4cd5,2026-03-21,D,cpp,28,,,Core: Remove Scheduler::isTest helpers
+1b8c0fc087,2026-03-21,D,lua,2,,,Bundled augments enum and data
+38eecefdb0,2026-03-21,D,cpp,4,,,Core: Remove g_PTrigger legacy global
+61fba4f9d3,2026-03-21,D,cpp,1,,,Add safety to spawn lists
+6222643642,2026-03-21,D,lua,4,,,Enums and data for Pankration
+8c282b9d84,2026-03-21,D,lua,1,,,Evolith data tables
+9928a9d7bf,2026-03-21,D,cpp,6,,,Core: Simplify ZMQ wrapper lifetimes
+a548d3795c,2026-03-21,C,mod,1,candidate,"applies cleanly, not yet built or reviewed",Modules: Fix issue with GM Horro
+a68d47b389,2026-03-21,D,cpp+mod,2,,,Core: Add forced yields in ZoneServer cleanup steps
+d68fd1eab8,2026-03-21,D,lua,2,,,Exdata enums for Evolith/Meeble
+f97426167a,2026-03-21,D,lua,5,,,"Enums for Chocobo Racing/Raising, Mannequins"
+21dd80fcfa,2026-03-22,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Yazquhl ws message placement fix
+29f064c250,2026-03-22,D,lua,1,,,Remove unused `xi.ws` weaponskill alias
+621a625dd2,2026-03-22,D,lua,9,,,`WEAPONSKILL_USE` minor cleanup leftovers
+63287096f5,2026-03-22,D,lua,3,,,Enums for Mezzotinting exdata
+77a6ca084b,2026-03-22,B,cpp+lua+mod+tools,11,conflict,does not apply cleanly onto 9e6f10c2fb,[core] [lua] Load /check exp curve from lua
+9a54a437a7,2026-03-22,D,lua,3,,,[trust] tuned AAEV/AAHM/Amchuchu and cleaned up scripts
+90e0803fe6,2026-03-23,D,cpp,1,,,Update client spells and abilities after changing equip
+b2372f8afd,2026-03-23,D,cpp+lua,25,,,Revamp exdata handling
+d30bacf678,2026-03-23,D,cpp,1,,,Update synthesis skill up amount calculations
+e89cd15371,2026-03-23,D,sql,1,,,"Spells cost,recast,levels audit"
+e936ed1a5c,2026-03-23,A,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] nullptr check for Rune Enhancement
+eba9f55da9,2026-03-24,D,lua,3,,,[tests] Adjust Sonic Boom Finish & mobs parrying/guarding tests
+731a56beb2,2026-03-26,D,mod,2,,,[lua][module] ToAU mission era wait times
+79160eda1f,2026-03-26,D,lua,1,,,[lua] Changed Valkurm Emperor to true lotto
+cc3e1f41fb,2026-03-26,D,lua+mod,2,,,[lua] Refactor PDIF clamping and simplify code
+03d2a3e1be,2026-03-27,D,cpp,2,,,Core: Move NetworkBuffer definition
+2c0b453c68,2026-03-27,D,cpp,2,,,Core: add operator== and hash to IPP
+87679ec73c,2026-03-27,D,lua,2,,,Add rewards to brigands chart
+a1a539fc07,2026-03-27,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix Ranged Weapon Rank
+b50dc1ba1a,2026-03-27,D,cpp+sql,4,,,Mob fishable for brigands chart
+c28468d5ae,2026-03-27,D,cpp+lua,4,,,Core: Remove PacketMod system
+25eb02485b,2026-03-28,D,lua+sql,15,content-queued,see content_queue.csv; new_text_keys=18; applies_clean=no,The Bonds of Fate (Qultada)
+2a089fb611,2026-03-28,D,lua,3,,,[lua] KS99 Horns of War
+2e362739c9,2026-03-28,D,cpp,2,,,Core: Refactor packet building in MapNetworking
+300d431dee,2026-03-28,D,cpp,2,,,Core: Move network cpp locals into class members
+3f512b54d3,2026-03-28,D,lua+sql,8,,,Implement Middle Delkfutts Tower spawn slots
+5d8eed9c54,2026-03-28,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] KS30 ODS Fix
+6d5a39e3da,2026-03-28,D,cpp,5,,,Core: Tidy up MapSocket
+8dab201cad,2026-03-28,D,cpp,5,,,Core: Use IPP as const&
+d4009182af,2026-03-28,D,cpp,6,,,Allow mob entities to use job abilities
+d62518a18a,2026-03-28,D,cpp+lua,21,,,Exdata definitions
+f7620e3e27,2026-03-28,D,cpp,4,,,Core: Streamline MapStatistics usage in MapNetworking
+495ccff91c,2026-03-29,D,cpp+lua,29,,,Enable ximesh files support
+705b757e7b,2026-03-29,D,lua+sql,10,,,Implement Kuftal Tunnel spawn lots and NM PHs
+bd6f94195c,2026-03-29,D,sql,2,,,Implement Promy Dem spawn slots
+dea239f7b6,2026-03-29,D,lua+sql,17,,,Implement Sea Serpent Grotto spawn slots and NM phs
+deb1718220,2026-03-29,D,lua+sql,3,,,Implement PsoXja spawn slots and NM info
+df7fa93e39,2026-03-29,D,lua+sql,4,,,Implement Upper Delkfutt's Tower spawn slots and update NM PHs
+11041643a4,2026-03-30,D,lua+sql,8,,,Implement Inner Horutoto Ruins spawn slots and phs
+14813751f2,2026-03-30,D,lua+sql,16,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,Audit Uleguerand Range NMs
+5e1af23ab5,2026-03-30,D,lua,2,,,Implemented burden of suspicion
+6c8c49b84d,2026-03-30,D,lua+sql,4,,,Implement King Ranperre's Tomb spawn slots & ph info
+72b1a305e3,2026-03-30,D,lua+sql,3,,,Implements yuhtunga jungle spawn slots
+91cb5663d0,2026-03-30,D,lua+sql,2,,,Implemented Storm on the Horizon
+95be31d2bd,2026-03-30,D,lua+sql,4,,,Implement West Sarutabaruta spawn slots and ph ids
+c1f0f0c919,2026-03-30,D,lua+sql,3,,,Implement cape Teriggan spawn slots
+cd6085f8f7,2026-03-30,D,sql,2,,,Implement Ve'Lugannon Palace spawn slots
+3bd97fcd30,2026-03-31,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix edge cases that report incorrect misses for mob/weaponskill
+7ac7f64457,2026-03-31,B,cpp+lua,14,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,"[core] [lua] Actually enforce ""must zone"" and not just /logout"
+b97af9bec6,2026-03-31,A,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,Fix stackoverflow from reentrant action queue
+1b3e4abe82,2026-04-01,D,cpp+lua,25,,,Exdata definitions
+27d9d96ac9,2026-04-02,D,lua,20,,,Replace magic numbers in TOAU shops
+4543311d5d,2026-04-02,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Filter additional bad equip packets
+484870adcb,2026-04-02,B,cpp,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Always fetch subjob when saving char to db
+9b0853e13b,2026-04-02,D,cpp+lua,39,,,Exdata definitions
+ca89c38ab3,2026-04-02,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] thunder element should look up thunder res rank
+ec482c38ff,2026-04-02,D,lua,2,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,Quest Cleanup Promotion Superior Private
+f8703d079a,2026-04-02,D,lua,3,,,[lua] Add 'hitsLanded' = 1 to calcparams of magic ws (#9701)
+2a5c95b2c6,2026-04-03,D,lua,24,,,"Replace Magic Numbers in Tavnazia, Nashmau, Shadowreign shops"
+fe8fa98123,2026-04-03,D,lua,3,,,[lua] [lls] Adjust some LLS hinting for new LLS version
+16c325eecb,2026-04-04,D,cpp+lua,22,,,Exdata definitions
+6ecd7d73e3,2026-04-04,D,lua,3,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] ENM Pulling the Strings framework
+80d778ae8b,2026-04-04,D,lua+sql,4,,,Ancient Goobbue Audits
+5fe5925e87,2026-04-05,D,lua+sql,16,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,[lua] [sql] Moblin Fantocciniman + Marionette Dice
+68231186eb,2026-04-05,D,lua+sql,6,,,"[lua, sq;] ToAU 13 Lost Kingdom fight adjustments"
+92f308c5e4,2026-04-05,D,lua+sql,6,,,[lua] [sql] Moblin Emotes
+be0f07fe05,2026-04-05,D,lua,1,,,TOAU Mission 5 Quest IF Adjustments
+e8377fd0e1,2026-04-05,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Bug Fix Quest Rock Racketeer wrong Prog Value
+f1cd54d8f5,2026-04-05,D,sql,1,,,Remove Silver beastcoin from THF quest quadavs
+471e77bfd1,2026-04-06,D,lua,1,,,Yeet unneeded THF AF1 stew code
+c277d76ef4,2026-04-06,D,lua+sql,8,,,[lua] [sql] Marionette Dice Pt. 1
+d8eb64ef39,2026-04-06,C,cpp+lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix message ID for Leviathan Slowga
+e2d128deb0,2026-04-06,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[c++] Fix Moghouse entry in WoTG + SoA
+ea1281f3be,2026-04-06,D,cpp+lua,45,skip-large,"45 files, structural",Exdata definitions
+e0f887abc9,2026-04-07,D,cfg+cpp,2,,,Limit delivery box to 128 items in flight
+0cd9023c07,2026-04-08,D,lua+sql,11,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Behind the Smile quest implementation
+3735add32f,2026-04-08,C,lua+sql,23,conflict,does not apply cleanly onto 9e6f10c2fb,Fix item names and sortnames to match retail data
+3e61639fb7,2026-04-08,D,lua,1,,,BRD AF3 Bugfix
+64eff5815a,2026-04-08,D,cpp+lua,9,,,Call onItemDrop when passing through the recycle bin
+65b483eb2f,2026-04-08,D,cpp+sql,8,,,Bump item flags from uint16 to uint32
+7eee10269d,2026-04-08,B,cpp+lua,535,skip-large,"535 files, structural",[core][lua] Physical Mobskll Refactor
+aba8a3899e,2026-04-08,C,lua+sql,4,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,"[lua, sql] Fixes COP 7-1 full inventory message and NPC"
+cb6178d986,2026-04-08,D,lua+sql,21,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Boat Audit Pt. 1 revisions
+cd584cc3ef,2026-04-08,D,cpp,1,,,[login] Increment key after char deletion
+fd909cba89,2026-04-08,D,lua,141,content-queued,see content_queue.csv; new_text_keys=19; applies_clean=no,[documentation] Moves all of the old limbus to documentation folder
+03264f9ee2,2026-04-09,D,lua,49,skip-large,"49 files, structural",Missions: Add empty stubs for TVR mission line
+03afc2a27e,2026-04-09,D,sql,2,,,Add missing general items
+100d7ddfee,2026-04-09,D,lua,10,,,Missions: Add empty stubs for remaining ASA missions
+1e4ef32fb0,2026-04-09,D,cpp+lua,20,,,Move item flags to ItemFlag enum class
+256d6fd5f2,2026-04-09,D,lua+sql,15,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] [sql] Ouryu Cometh
+427cfc249a,2026-04-09,D,sql,4,,,Add missing equipment and weapon items
+5fa07c8354,2026-04-09,D,lua,14,,,Missions: Format AMK missions a little
+7ffd5e4d37,2026-04-09,D,cpp+sql,2,,,Convert item_basic flags to readable SQL variables
+8878944eeb,2026-04-09,D,lua+sql,7,,,[lua] [sql] KS99 Adjustments
+aa8970bdd8,2026-04-09,D,other,1,,,Docs: Add advanced guidance for IF usage and event packets
+b9cb752efc,2026-04-09,D,sql,2,,,Add missing usable items
+c0c6f2e831,2026-04-09,D,lua,11,,,Missions: Add empty stubs for remaining ACP missions
+c567ad1e11,2026-04-09,D,other,3,,,Docs: Add information on capture formats
+ce528ee35b,2026-04-09,D,cpp,6,,,[login] Adjust char info management during the lifetime of data_session
+e1dccd163f,2026-04-09,D,lua+sql,4,,,Add missing BCNM orbs and storage slips
+ed71830055,2026-04-09,D,other,4,,,Docs: Add guidance for humans and AI agents
+f6c6c0386a,2026-04-09,D,cpp+sql,2,,,Support floating activation time on usable items
+fc8e12820b,2026-04-09,D,sql,2,,,Add missing furnishing items
+04434dc6a6,2026-04-10,D,lua+sql,8,,,Knocking on Forbidden Doors fight mechanics and adjustments
+144bc22d80,2026-04-10,D,sql,1,,,"Audit equipment levels, jobs, slot, size"
+23b2918f54,2026-04-10,D,lua,1,,,Drop nodiscard flag from setters
+370ef5efca,2026-04-10,D,sql,1,,,"Audit weapons skill, damage, delay"
+520420b62a,2026-04-10,D,sql,1,,,Audit items stack size
+5ecee5d3f0,2026-04-10,D,sql,1,,,"Audit furnishing storage, element"
+7e75c5e7a3,2026-04-10,D,sql,1,,,Audit usable items usage time and targets
+86bd915c59,2026-04-10,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Exclude mobs from Martial Arts calculations
+8e55a34834,2026-04-10,D,mod,1,,,[lua] WoTG Sword Module Bugfix
+9017a8e1c6,2026-04-10,D,sql,1,,,Audit item flags
+92bde839a8,2026-04-10,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fixes curtana floating qm
+a611a44059,2026-04-10,B,cpp+lua,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core][lua] Correct base TP returns for mobs.
+addc03c7d3,2026-04-10,D,lua,1,,,[lua] Aydeewa Diremite Remove unused mixin
+ea0859a360,2026-04-10,D,sql,1,,,Audit weapon damage type
+f2b185ef6d,2026-04-10,D,sql,1,,,Sort usable item entries
+16b23947fd,2026-04-11,D,cpp+sql,3,,,Flag certain items to skip rare check and recycle bin
+3858da89af,2026-04-11,D,cpp+sql,7,,,Validate furniture placement
+6b5f71d4a2,2026-04-11,D,lua,2,,,[lua][chore] ROE Objective enums
+8fc22d13d3,2026-04-11,D,cpp+lua+sql,20,,,"[Trust, core, sql, lua] August gambits and supporting gambit_container changes (#9718)"
+2deb0371df,2026-04-12,D,lua+sql,6,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Return to the Depths implementation
+334f609f8c,2026-04-12,D,sql,1,,,[sql] Minuet / Titanis Earring Latents
+3717ea254e,2026-04-12,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Alsha immediately changing phase after last cure is casted
+4d6f3c1419,2026-04-12,D,lua+sql,6,,,"[lua, sql] Implement Promy Dem Apex Mobs"
+706b1dae70,2026-04-12,D,lua+sql,5,,,[sql] Delete unused and duplicate mob family values
+8f06279c4f,2026-04-12,D,lua+sql,4,,,[lua] [sql] Storms of Fate & Bahamut Mobskills
+bf2857a1f1,2026-04-12,D,lua+sql,29,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=no,"[lua, sql] Rework ToAU 15 Black Coffin battlefield"
+c696d2a797,2026-04-12,D,lua+sql,2,,,"Curilla gambits, skills and mods"
+07892ae888,2026-04-13,D,cpp+sql,11,,,"/translate support, JP item names"
+1a2a4edc26,2026-04-13,D,lua+sql,5,,,Implement Promy Vahzl Apex Mobs
+637bd9281b,2026-04-13,D,lua+sql,5,,,Implement Promy Holla Apex Mobs
+b768adde6d,2026-04-13,D,lua+sql,5,,,Implement Promy Mea Apex Mobs
+253e0241cd,2026-04-14,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix ranged PDIF edgecase
+466b390b83,2026-04-14,D,lua+sql,6,,,Riverne A NM Audits
+755a441748,2026-04-14,D,lua,1,,,Unbridled Passion bugfix
+760bf5a3c2,2026-04-14,D,lua+sql,10,,,Skull of Sins Audit
+7f3d94b50e,2026-04-14,D,lua,5,,,Cleanup teleport NPC scripts
+8267b4f324,2026-04-14,D,cfg+cpp+mod+tools,171,skip-large,"171 files, structural",Fold PacketGuard into the general C2S system
+890547924b,2026-04-14,D,lua,12,,,[lua] Convert Better Part of Valor + Fires of Discontent  to IF
+c4d0b85bfa,2026-04-14,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Don't fire mobskill if mob has Hysteria status
+c8fbdc13f7,2026-04-14,D,lua,1,,,[lua] Move melee spike ratio out to a function
+cad7d51cb6,2026-04-14,D,lua,1,,,[lua] Implement high/low pdif rolls for melee
+da3761ecdb,2026-04-14,D,lua+sql,8,,,[lua] [sql] Divine Might Tuning
+e1276d41c6,2026-04-14,D,lua,1,,,[Quest] Chocobos Wounds Trade Function Correction
+0c5660bd26,2026-04-15,D,lua+sql,21,,,[lua][sql] COP Bomb/Snoll Skill Lists + Audit
+18bda03219,2026-04-15,D,cpp+sql,6,,,[cpp] Cleanup my old HP formula
+414034479b,2026-04-15,D,lua,1,,,BLU LB Raubahn out of combat self buff adjustment
+480fc90af8,2026-04-15,D,lua,1,,,SMN AF2 Dryad roaming
+74168dee71,2026-04-15,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,"Fix quest events, their priority and overall cleanup"
+77a45077e4,2026-04-15,D,cpp,1,,,Remove Battlefield Scripted Roamflag
+8a0b14a9d1,2026-04-15,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Adjust IEP code to /check IEP at 56 exactly
+9c6a96c167,2026-04-15,D,sql,1,,,Change default spell list entry to a buff
+bbcc6daecc,2026-04-15,D,lua,2,,,Corrects Tantra Cyclas +1 functionality and cleanup Impetus
+0d5d533026,2026-04-16,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Chocobo's Wounds
+4bac3d196f,2026-04-16,D,mod,1,,,"[Module] Quest ""Chocobo's Wounds"" - Era-Wait-Time"
+5c2811106e,2026-04-16,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,"Fix mobskill spam: Angler Orobon, Tinnin"
+70bc4de761,2026-04-16,D,cpp,1,,,[cpp] Changes crystal drop rate per party member and rates
+ae66f530fc,2026-04-16,D,lua+sql,24,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] [sql] The Wyrmking Descends
+ebd76f3ff3,2026-04-16,D,cpp+lua,653,skip-large,"653 files, structural","[cpp, lua] Moves dynamis cpp function to lua"
+1fd0331521,2026-04-17,D,lua,4,,,[lua] utils.shadowAbsorb cleanup
+5d27c7291b,2026-04-17,D,cpp,1,,,Round packet size to nearest 4
+880a1b23d6,2026-04-17,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[cpp] Fix NM hp in mob groups not working
+f32ef90c70,2026-04-17,D,lua+sql,6,,,Riverne B NM Audits
+084693c510,2026-04-18,D,lua+sql,15,,,[lua] [sql] Markmanship Mobskills
+123a4de7f0,2026-04-18,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Set EVA Rank fallback for jobs with no subjob.
+51bb1d040e,2026-04-18,D,cpp+lua,4,,,Fire _TAKE listeners on all AoE targets
+5d4a6ffd93,2026-04-18,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Correct Ancient Bomb Levels
+6298ad87cf,2026-04-18,D,lua,1,,,Lower chance for Dynamis staggers if not main target
+6b60896e0c,2026-04-18,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix hybridDamage mobskill function
+87e92a29f5,2026-04-18,D,lua,6,,,Raising: Split out logic into different files
+89efa17575,2026-04-18,D,lua+sql,28,,,[lua] [sql] Sword mobskills
+8c6829fd90,2026-04-18,D,lua,2,,,Uplift !additem to new exdata format
+8d3e13f56f,2026-04-18,D,lua+mod,2,,,[lua][module] Set gravity to apply evasion penalty
+972cd40278,2026-04-18,D,cpp,1,,,Raising: Remove invalid LIMIT from setChocoboRaisingInfo query
+995fed46e6,2026-04-18,C,lua,2,candidate,"applies cleanly, not yet built or reviewed","Raising: Split out Event Condenser, fix condenser logic"
+a8fc29e87a,2026-04-18,D,cpp,2,,,Mobskills only trigger resonance on main target
+1945d7567a,2026-04-19,D,cpp,2,,,Crit fail synthesis when taking damage
+3ee570ea73,2026-04-19,A,cpp+lua+sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,"[trust, sql, lua, core] Gessho adjustments and Issekigan Job Point crash fix for trust (#9826)"
+7d8c3ccc61,2026-04-19,D,lua,1,,,Chuchuroon patrol nodes
+cfe29a77c2,2026-04-19,D,cpp+lua,3,,,[lua] Have core use lua functions for fSTR
+d8cf19cf0e,2026-04-19,D,lua,2,,,[lua] Premium Mogti WS Message
+e9f5f08d66,2026-04-19,D,cpp+lua,2,,,Cap targetfinding vertical search to 8/8.5y
+edef4911f6,2026-04-19,D,lua,2,,,Improve mobskill status effect handling and application
+1ad85a152c,2026-04-21,D,lua,3,,,[lua] What Price Loyalty quest
+21de603203,2026-04-21,D,lua,1,,,Raising: Even more White Handkerchief quest latching
+3fd22d2ce3,2026-04-21,D,lua,4,,,[lua] Fire in the Hole quest
+470ed46487,2026-04-21,D,lua,6,,,"Raising: Remove synthetic events, general cleanup"
+51ed28c235,2026-04-21,D,lua,3,,,[lua] Quelling the Storm quest
+5d91a64974,2026-04-21,D,lua,5,,,Raising: Clean up stat packing and condition reporting
+61711a6736,2026-04-21,D,lua+sql,20,,,[lua] [sql] H2H Mobskills
+6f6d2d0850,2026-04-21,D,lua,3,,,Raising: Confirm force-naming at ADULT_3
+717e747fd7,2026-04-21,D,lua,3,,,[lua] Beneath the Mask quest
+7eac0756e7,2026-04-21,D,lua,1,,,Raising: Hide more information from PRESENT_CHOCOBO_APPEARANCE
+828c198cfd,2026-04-21,D,lua,3,,,Raising: Don't accumulate energy usage through full report
+8c40c8ba35,2026-04-21,D,lua,3,,,Raising: Clean up White Handkerchief quest latching
+8c58e5d6e4,2026-04-21,D,lua,4,,,Raising: Handle initial care plan shifting and reporting
+9b4c921ab9,2026-04-21,D,lua,1,,,Raising: Map out care plan menu
+b050bff13a,2026-04-21,D,lua,1,,,[lua] Bahamut BV2 Message
+b4af979fb3,2026-04-21,C,lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,Raising: Trying to correct care plan overrun
+b9668c1f96,2026-04-21,D,lua,3,,,[lua] Truth Lies Hid quest
+bb8c05a42b,2026-04-21,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Prevent client lockup during Brygid The Stylist Returns
+bc1017fd0a,2026-04-21,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Raising: Fix GM stat printing
+c3a0118ac0,2026-04-21,D,lua,1,,,Raising: Clean up REGISTER_CHOCOBO_WHISTLE
+c5d84ff272,2026-04-21,D,lua,1,,,[lua] Evisceration bugfix
+cfdc9ca394,2026-04-21,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,[lua] Bonds of Mythril quest
+d9336ca974,2026-04-21,D,lua,3,,,[lua] Honor Under Fire quest
+d9e47a0e23,2026-04-21,D,lua,5,,,"Raising: First pass of Chocobo Whistle questing, registration, and usage"
+ddbae9eb03,2026-04-21,D,lua,4,,,Raising: Handle White Handkerchief quest
+e129416c26,2026-04-21,A,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Raising: Don't leak appearance data before it's time
+e5670ec0d8,2026-04-21,D,mod,3,,,"[lua, sql][module] Remove OOE HELM items"
+e69a5a7334,2026-04-21,D,lua+sql,19,,,[lua] [sql] Dagger mobskills
+f80252b243,2026-04-21,D,lua,1,,,Raising: Clean up INTRO_MENU_PT_3
+03a3bccfac,2026-04-22,D,lua,7,,,Raising: General VM cleanup
+40d50c4ecc,2026-04-22,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Raising: Fix forced retirement
+6ecb3c48d0,2026-04-22,D,mod,1,,,[lua] [module] Implement old TP gain as module
+802a3ef02e,2026-04-22,D,lua,4,,,Raising: Tidy walks
+9a7b71dbf1,2026-04-22,D,lua+mod,2,,,[Module][Quest] Home Point Era Menu
+8512dd8d0e,2026-04-23,D,lua+sql,16,,,[lua] [sql] Great Sword Mobskills
+9a2000d7c6,2026-04-23,B,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Unify more Core/Lua TP Functions
+a51859a5f7,2026-04-23,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix impetus setMod() usage
+b2e1d6152c,2026-04-23,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",Fixes Bind allowed resist state value and duration calculation
+c60b2c6cb2,2026-04-23,D,lua,1,,,[lua] Add Choke Effect to Gale Axe
+6f266955fe,2026-04-24,D,lua+sql,16,,,[lua] [sql] Axe Mobskills
+8bd2e5ce35,2026-04-24,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",[lua] Repeatable Quest Fixes
+9df0249ef1,2026-04-24,D,lua+sql,16,,,[lua] [sql] Greataxe mobskills
+0ee3ef8c89,2026-04-25,D,lua+sql,16,,,Implement katana mobskills
+14215930ed,2026-04-25,D,cpp,59,skip-large,"59 files, structural",Route all item creation/lookups through xi::items
+18f3937799,2026-04-25,D,lua+sql,16,,,[lua] [sql] Scythe Mobskills
+44986d4730,2026-04-25,D,lua+sql,17,,,Great Katana Mobskills
+4e945602bf,2026-04-25,C,sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Fixes several droplist typos in mob groups
+50b9e43b63,2026-04-25,D,lua+sql,19,,,[lua] [sql] Staff Mobskills
+513e98eca4,2026-04-25,D,lua+sql,19,,,[lua] [sql] Club Mobskills
+64efc5afb0,2026-04-25,D,lua+sql,16,,,Implement polearm mobskills
+85e587657b,2026-04-25,D,lua+sql,13,,,[lua] [sql] Archery Mobskills
+f02032d278,2026-04-25,D,lua+sql,3,,,[lua] Fafnir Audit
+1b38530215,2026-04-26,D,lua,2,,,Raising: Map out chocobo visible mood opcode
+24c73e75b9,2026-04-26,D,cpp+lua,10,,,"Items, containers tests"
+5809128782,2026-04-26,D,cpp,1,,,Limit HQ2 and HQ3 results depending on HQ tier
+9b6fc82a8b,2026-04-26,D,cpp,6,,,ItemState and badge-gated mark() role transitions
+9f0cec30fe,2026-04-26,D,lua,7,,,[lua] Convert COR AF2 to Interaction Framework
+c0b97f514d,2026-04-26,D,lua,1,,,Raising: Map out ability learning flow
+c6151f097c,2026-04-26,D,mod,3,,,[lua][module] Adds blocks for certain door related KIs
+faf562cf7e,2026-04-26,D,lua,3,,,Raising: Map out the rest of xi.chocoboRaising.cutscenes
+2c910c95ab,2026-04-28,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] print an error if a mob droplist is empty
+44cfeef944,2026-04-28,D,cpp+lua+sql,10,,,[chore] Starts mob ecosystem cleanup
+476f01dd8c,2026-04-28,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Skip sub slot if main is h2h with /lockstyleset #
+6186f7998f,2026-04-28,D,sql,1,,,Adjust several MNK NMs to observed delays
+9098bafbd2,2026-04-28,B,cpp,4,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Adjust EXP Rate settings & mechanics
+91ecfa2721,2026-04-28,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Chocobo riding game reward fix
+a665389800,2026-04-28,D,lua,1,,,[lua] Ouryu Bugfix
+ab2cec16fb,2026-04-28,D,lua+sql,15,content-queued,see content_queue.csv; new_text_keys=10; applies_clean=no,Puppetmaster LB Fight
+b217bbe79d,2026-04-28,D,sql,2,,,"[sql] Enable some drop pools, disable drop pool for another"
+eaa872628f,2026-04-28,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Update Dialogue to reference correct brother in The Competition
+f3a4be9921,2026-04-28,D,lua,2,,,"[lua] Give Peg Powler a PH, upgrade spawn rate"
+513c916fe8,2026-04-29,D,cpp+lua,24,,,Encapsulate PC equipment and set ItemState
+6db292dde7,2026-04-29,D,lua,2,,,Raising: Add breeding.lua (not hooked up yet)
+9848ba067a,2026-04-29,D,lua+sql,7,,,"Mnejing, gambits, scripts, sql and mob_skill.lua additions"
+26b589630e,2026-04-30,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Only queue equip update if item was equipped
+34168826a5,2026-04-30,D,lua+sql,5,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] [sql] Implement Hyakume
+3c725763a6,2026-04-30,C,lua,4,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fixes 3 mobskills
+70c7c43530,2026-04-30,D,lua,1,,,[lua] Check if any NM in the PH list is spawned or going to spawn
+82e911e67f,2026-04-30,B,cpp,3,conflict,does not apply cleanly onto 9e6f10c2fb,[core] equip sync: remove stale references from items being deleted
+ce918a1ac6,2026-04-30,D,lua+sql,4,,,[lua] [sql] Barrage support to ranged attacks
+dec3f9bf70,2026-04-30,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[SQL] Correct Four of Batons dropid
+e90b78a9f0,2026-04-30,D,lua,3,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] Enable spawning of both Tom Tit Tat copies
+3de0444bb6,2026-05-01,D,lua,1,,,Adds getLocalVars table for LLS
+68207f8f75,2026-05-01,D,lua,1,,,Add player and trial table check to magian onMobDeath function
+90bc6d3543,2026-05-01,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Conflict fix for automaton skills in mob_skill.lua
+aa792dc268,2026-05-01,D,lua,1,,,Adds event 171 default action to qm_cancel_escort in Grand Palace
+d66a0068ce,2026-05-01,D,sql,1,,,Adjust Foreseer's delay back to 240
+dfdc2eb3b9,2026-05-01,D,lua+sql,2,,,Adjust Tyrannic Tunnok to a 7 hit
+081768a45e,2026-05-02,B,cpp,2,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Remove some NM only mods (no proof exists)
+102696895b,2026-05-02,D,lua,15,,,[lua] Convert COR AF3 to Interaction Framework
+6f370bd1ce,2026-05-02,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Fix Fluorescence target flag to self
+7a67757295,2026-05-02,D,cpp,5,,,Core: Turn REPLACE INTO into upserts
+a7f0e29d37,2026-05-02,D,cpp+sql+tools,3,,,Core: make chocoboRaisingInfo upserts
+f16d96f3da,2026-05-02,D,lua+sql,7,,,ISNM3k Compliments to the Chef adjustment
+6d6250afb8,2026-05-03,D,cpp+lua,17,,,Engine: Add runtime navmesh generation
+7f67b5b510,2026-05-03,D,cpp+lua,14,,,Route item usage through transactions
+b1bfb898ee,2026-05-03,D,mod,1,,,[lua] [module] Lamian Fang Key Conquest Timer
+b3c4bee0b8,2026-05-03,B,cpp,3,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Use message to determine if spell had no effect
+b99511e59b,2026-05-03,B,cpp,5,conflict,does not apply cleanly onto 9e6f10c2fb,[core] add CLuaItemPuppet
+cd81c85a4a,2026-05-03,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Mob 2hr TP Flag Fix
+da9587ebfe,2026-05-03,D,sql,1,,,[sql] Update pepperoni price
+e483a2ad50,2026-05-03,D,cpp+lua+sql,21,,,[cpp] Adds missing ranged attack animations
+f71b7c26a4,2026-05-03,D,cpp,2,,,Bump ximeshes version
+fa0be330bb,2026-05-03,C,cpp+lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Blu physical spell miss message
+fcd81c9f7d,2026-05-03,D,lua,1,,,[lua] Chicken Knife
+05bcd7c7d7,2026-05-04,D,cpp,1,,,gambits_container RANDOM TP amount trigger
+0c9fbf0af0,2026-05-04,B,cpp+lua+sql,22,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[core][lua][sql] Movalpolis Patrols and Guards
+13f848373b,2026-05-04,D,lua+sql,27,,,[lua] [sql] Pulling the Strings
+1ff35028fb,2026-05-04,D,cpp,3,,,"Core: Flatten CPetController::DoRoamTick logic, general tidy"
+27c2e46850,2026-05-04,D,cpp+lua,5,,,synth HQ rate xi_test
+2d7ee273f9,2026-05-04,D,lua+sql,4,,,ISNM 3k Happy Caster adjustment
+2fc4414681,2026-05-04,D,lua+sql,2,,,[lua] [sql] Implement Lamiabane
+339b47616e,2026-05-04,D,cpp+lua,8,,,Streamline ATTACK/ON_ATTACK effects removal handling
+362730de64,2026-05-04,D,cpp+lua,3,,,Cancel fishing on hostile action received
+4a0bcae26f,2026-05-04,B,cpp+sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Refactor getBarrageShotCount to allow trusts to use it
+55fedfe03f,2026-05-04,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix Water Way to Go trade item not consumed on completion
+5ef93fa7b3,2026-05-04,D,cpp+lua,23,,,Route synthesis through SynthTransaction
+6ed1f18e42,2026-05-04,D,sql,2,,,[sql] Snakeeye / Snakeeye+1
+741fe6c22f,2026-05-04,D,cpp+lua,3,,,"[cpp] adds entity:getMasterThreatMob - Adds function for entities, inspired by trusts, to get the notoriety list of their master on mobs within a specified range"
+7f9214a64f,2026-05-04,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Adjust some logic for BST pets causing heap corruption
+8225b3cc7b,2026-05-04,D,sql,1,,,[sql] Toreadors Cape Crit Rate
+9b7b0c2962,2026-05-04,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Dual Wield Setup
+a77d99767c,2026-05-04,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix Kumhau the Flashfrost Naakual cutscene exit position
+a8783e99b8,2026-05-04,D,lua,1,,,[lua] Add rank requirement to signet staves
+c92e8b70b8,2026-05-04,D,lua,1,,,style check for royal_savior.lua
+cb1ea02dc9,2026-05-04,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",Fixes augment 1152 - DEF +10
+d493983159,2026-05-04,D,sql,1,,,[sql] Add BARRAGE_COUNT item mods where applicable
+dc58a21a08,2026-05-04,D,lua,1,,,[lua] Charmed Pet/MNK Mob TP Returns
+dcda80382e,2026-05-04,B,cpp,2,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Simplify magic/ranged state hasMoved()
+ef51755e6d,2026-05-04,D,lua+sql,7,,,rughadjeen and trion gambits and skills
+f0de2d8599,2026-05-04,D,lua+sql,2,,,[lua] [sql] Balmung AE Dispel
+5317653553,2026-05-05,D,lua+sql,4,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] [sql] Improve Hundredfaced Hapool Ja
+5566b0d912,2026-05-05,D,cpp,4,,,Stamp Scheduler on MapSession at creation
+7a189911ad,2026-05-05,C,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[cpp] fixes ranged job abilities - Removes shadow bug for double and triple shot (+40% activation rate over what's shown on mod::double_shot_rate and mod::triple_shot_rate
+87ea21db25,2026-05-05,D,lua+sql,7,,,Return to the Depths Fight
+0ef9a90ce9,2026-05-06,D,lua+sql,9,,,[lua] [sql] Troll Automaton Mixin
+2471cf5582,2026-05-06,A,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,Core: Fix packBits heap-buffer-overflow.
+24beaf4ebf,2026-05-06,D,mod,1,,,[lua] [module] DEL duplicate module Lamia Fang Key timer
+364613c83d,2026-05-06,D,lua,2,,,Give Peace a Chance Full inv event
+424969c092,2026-05-06,D,cpp+lua,6,,,[cpp] Combined trust and char ranged attack code to battle entity
+5ebe9a2165,2026-05-06,D,other,1,,,Link earcut.hpp; polygon triangulation lib
+6ee8fcc214,2026-05-06,D,other,1,,,Link rapidyaml; YAML parsing lib
+73f06a800f,2026-05-06,D,cpp+lua,23,,,"[cpp, lua] Change delay to have the in-game input instead of milliseonds"
+950206ef69,2026-05-06,D,sql,3,,,[sql] Expansion Flock Bat SkillList Audit
+a57e9c9e8c,2026-05-06,D,cpp+lua,5,,,Lazy load instances
+fb484cd306,2026-05-06,D,lua,2,,,[lua] curio moogle 2025-26 Q1
+0beb1b0644,2026-05-07,D,cpp,8,,,Remove mentions of losmeshes
+0c4426dddd,2026-05-07,D,sql,1,,,Add missing NO_CANCEL to effects
+2966c451aa,2026-05-07,D,cpp+lua,5,,,Core: Add safety check to entity:canSee(...) binding
+2ded4c9f3e,2026-05-07,D,cpp,1,,,Core: Clean up Vector3
+2ee4c8fee9,2026-05-07,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix cross-family mob linking in Einherjar
+5e0bc8a733,2026-05-07,D,sql,1,,,Set Purgonorgo 'Jagil' mob to non-agressive
+6f4eae08eb,2026-05-07,D,lua+sql,6,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua][sql] Rapid Raptors
+9730950e35,2026-05-07,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Ode to the Serpents follow up quest conditional fix
+9889607e81,2026-05-07,D,sql,1,,,Add missing HIDE_TIMER to effects
+c37a7c8123,2026-05-07,D,other,1,,,[cmake] Update MariaDBCPP commit
+cf8ddf8adb,2026-05-07,D,lua+sql,2,,,Add missing status effects
+dd80a48a2b,2026-05-07,D,other,2,,,Removed losmeshes submodule
+f78196c245,2026-05-07,D,cpp+lua,47,skip-large,"47 files, structural","Core: Use ximesh for raycasts, remove LOSmeshes"
+fbe47927ed,2026-05-07,D,sql,1,,,Synthesis 'Dawn Mulsum' content_tag ABYSSEA
+fd5da905cd,2026-05-07,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix physical mobskill missing enmity update
+20cf73bf35,2026-05-08,D,cpp,6,,,[cpp] Allows dualWield to be changed on the fly
+3052195bae,2026-05-08,D,lua,1,,,Add player nation to Thf Af3 Cutscene
+32f14ed19a,2026-05-08,D,lua,1,,,[lua] Add level penalty to picklocking treasure chests / coffers
+4ca4bd0a1b,2026-05-08,D,lua,1,,,Add support for drain-like AEs
+7bbaa8626a,2026-05-08,D,cpp,3,,,Core: Improve ximesh raycast around block.hasBarriers
+9b04ff24d3,2026-05-08,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix 2 broken `onTriggerAreaEnter` cases
+a1a38bf080,2026-05-08,D,cfg+cpp,2,,,[cpp] Adds setting for era recast time
+b301eb222d,2026-05-08,D,lua+sql,3,,,[lua] Pulling the Strings Bugfixes
+bdcbd88a78,2026-05-08,D,lua,1,,,[lua] Pulling the Strings Improvements
+c1294fff64,2026-05-08,C,lua+sql,7,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] [sql] Various BCNM Fixes
+d3068fb588,2026-05-08,D,sql,1,,,[sql] Movalpolis Goblin Skill List Audit
+e354e274c5,2026-05-08,D,cpp+lua+sql,17,,,Allow spells to set knockback and distortion in packets
+f759c3d294,2026-05-08,D,lua+sql,2,,,[lua] Royal Jelly Refactor
+0940d47bfe,2026-05-09,D,cpp,4,,,/itemsearch support
+1f243b2015,2026-05-09,D,lua+sql,3,,,[lua] [sql] Up in Arms Improvements
+2761d66d60,2026-05-09,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=12; applies_clean=yes,Moment of Truth implementation
+80cf557f50,2026-05-09,D,cpp+lua,4,,,Lua bindings for PC-to-PC trades tests
+82249ebec3,2026-05-09,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Fixes promy dem mob name
+8f765132f3,2026-05-09,D,cpp+lua+sql,9,,,"[trust, sql, lua, core] Valaineral gambits, mods, spells, gambit support (#9947)"
+ae26c6d65f,2026-05-09,C,lua+sql,3,candidate,"applies cleanly, not yet built or reviewed",Behemoth NM Audits Resists Fix
+29f39a77fe,2026-05-10,D,lua+sql,3,,,[lua][sql] Moblin Scalpelman/Gurneyman Spell Lists
+5c744a8dda,2026-05-10,D,cpp+lua,5,,,Lua bindings to get/set MMM unlocks
+765afd8ae8,2026-05-10,D,cpp,10,,,Load and send MMM unlocks to player
+c0ff0448db,2026-05-10,D,sql,1,,,Add missing RACC for Demon Arrow
+ccd864a802,2026-05-10,D,lua,5,,,[lua] Holy Cow
+d1acdc8fe7,2026-05-10,D,sql+tools,2,,,Add MMM unlocks to char_unlocks table
+de9b3c30c4,2026-05-10,D,lua,3,,,[lua] Bahamut TP Move Cleanup
+e9ea19f2d3,2026-05-10,D,lua+sql,113,skip-large,"113 files, structural",MMM Rune/Vouchers unlocks
+1ab44d853c,2026-05-11,A,cpp+sql,2,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[cpp] Fixes underflow in avatar perpetuation
+2253df7449,2026-05-11,D,lua,294,blocked-client,"shifts zone text IDs, our client is pinned",30260429_1 Strings
+484030505b,2026-05-11,D,cpp+lua+sql+tools,22,content-queued,see content_queue.csv; new_text_keys=15; applies_clean=no,Linkshell Concierge support
+4ad9ebd12c,2026-05-11,D,lua+sql,3,,,[lua] [sql] Dragon Poison Breath
+6e7468d7b0,2026-05-11,D,cfg,1,blocked-client,"CLIENT_VER bump, never take while pinned",Bump CLIENT_VER to 30260429_1
+77730f434d,2026-05-11,D,cpp+lua+sql,36,,,"[cpp, lua, sql] Implements new family system"
+7814f114cd,2026-05-11,D,lua,1,,,Mocking Colibri base dmg adjustment
+802b262769,2026-05-11,D,sql,1,,,[sql] Add Elementals Ancient Magic
+e01e08b598,2026-05-11,D,lua+sql,10,,,Shots in the Dark
+e59f347594,2026-05-11,C,tools,1,candidate,"applies cleanly, not yet built or reviewed",fix(dbtool): open modules/init.txt with utf-8 encoding
+ef171074aa,2026-05-11,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix bad polutils name
+0265e51c80,2026-05-12,D,lua,75,skip-large,"75 files, structural",[lua] Superlinking
+7bcf565bf6,2026-05-12,D,lua,1,,,UO spelllist logic
+8607dc0410,2026-05-12,D,lua,18,,,Add ENM Timer NPCs and some additional ENM KIs
+b25b252654,2026-05-12,D,lua+sql,5,,,Crustacean Conundrum
+b432c7de9f,2026-05-12,D,lua+sql,2,,,Watch Wamoura adjustment
+d51f0f9939,2026-05-12,C,cpp+lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,[cpp] Fixes ordering of mods applied in bcnms
+a3ae784c13,2026-05-13,D,lua+sql,10,,,Khimaira Audit
+d94be24d66,2026-05-13,C,mod,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua][module] BST Era Bug Fix
+ed4ad5bac7,2026-05-13,C,lua,3,candidate,"applies cleanly, not yet built or reviewed",[lua] AA MR Pet Fix
+7913999d3e,2026-05-14,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix Automaton Skill Lookup
+992b88a019,2026-05-14,D,lua,1,,,Convert Bugfix
+c6ac4eea1c,2026-05-14,D,lua+sql,2,,,[lua] [sql] Implement Dainslaif's add effect
+cf7257a76f,2026-05-14,D,sql,3,,,Crawlers Nest [S] Apex and Locus mobs
+15db68d7ef,2026-05-15,D,cpp+lua,2,,,Allow ammo to be consumed while equipped
+1fdd0c2088,2026-05-15,D,lua+sql,15,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,"Stage 1 Maat Migration to Individualized Luas (War, Rng, Blm)"
+262c61af66,2026-05-15,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix hit distortion wrap on overkills
+2700e15c88,2026-05-15,D,lua+mod,20,,,Automaton mobSkill Refactor
+38b4e16eb9,2026-05-15,D,cpp,2,,,Carry ItemUse transaction on PChar for dtor order
+3eb7de22a9,2026-05-15,D,cpp,1,,,Send item unlock packet on craft material saved
+653d23a1fa,2026-05-15,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Don't clobber look string data on entities with no size data
+80a015d6cb,2026-05-15,D,sql,1,,,Add missing steal to Antican Praetor and Legatus
+9c9a9a121d,2026-05-15,C,lua+sql,4,candidate,"applies cleanly, not yet built or reviewed",Fix Rice balls latent values on gear
+b0c92c29de,2026-05-15,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fixes nil errors in Disaster Idol spell choose
+b598214cb5,2026-05-15,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Use slot to determine delay for TP return
+e27e7da5df,2026-05-15,D,cpp+lua+sql,34,,,"[cpp, lua, sql] Renames family to species"
+e395d19bf7,2026-05-15,D,sql,3,,,Adds Alzadaal Undersea Ruins missing mobs
+22913d0cbc,2026-05-16,D,cpp+lua+sql,18,,,"[trust, sql, lua, core] Trust Tank audit and cleanup (#10002)"
+a2b79a53d4,2026-05-16,D,lua+sql,3,,,[lua] [sql] Mammet Bugfixes
+dbc2618458,2026-05-16,D,cpp+lua+sql,39,,,"[cpp, lua, sql] Renames superFamily to Family"
+481c948fa5,2026-05-17,C,lua,3,candidate,"applies cleanly, not yet built or reviewed","Nyzul fixes: NM coffers, Friars Lanterns, removePathos"
+67ad4900b9,2026-05-17,D,lua+tools,4,,,[lua] Add progressOptionalCutscene hook and update battlefield
+6fcb0ffbef,2026-05-17,D,lua+sql,4,,,Locus Fiddler Crabs in Bibiki Bay
+9a416810b2,2026-05-17,D,sql,3,,,Campaign mobs
+a475f8b765,2026-05-17,D,sql,2,,,Campaign NPCs
+fa08ef80ae,2026-05-17,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",Fix Pantin Tobe +1 pet acc bonus
+0b4090fc19,2026-05-18,D,cpp+lua,5,,,[cpp] Add lua binding for setting stat ranks
+43fce702b9,2026-05-18,D,sql,3,,,Sortie mobs
+6095e0587e,2026-05-18,D,lua,1,,,[Lua] Change Bonnacon window to 1 hour (#10057)
+aa44681160,2026-05-18,D,sql,3,,,Reisenjima Henge TVR mobs
+aaf72b0921,2026-05-18,D,mod,13,,,WS Module Update
+d2df74d2e4,2026-05-18,D,sql,3,,,Odyssey mobs
+d9f19cea64,2026-05-18,D,lua,1,,,Nocuous Weapon Spawn Time
+db5669d938,2026-05-18,D,sql,3,,,Ruhotz Silvermine / Ghoyu's Reverie mobs
+f3ff385bb5,2026-05-18,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",[cpp] Fixes mobs that aggro by sight and sound
+faba088cf7,2026-05-18,D,cpp,5,,,[cpp] Enable cutscene immunity on zone-in events
+410a1aa2ff,2026-05-19,D,sql,1,,,Set Oldton Movalpolos Stirge to nonaggro
+464f7b4a86,2026-05-19,D,lua+mod,5,,,[lua] Automaton Replicator
+a1d598f515,2026-05-19,D,cpp,1,,,[cpp] Stop actions against locked players
+bf0ebbf00e,2026-05-19,D,cpp,5,,,[cpp] Implement necessary code for Event Skipped
+03d5c10bcf,2026-05-20,D,lua,5,,,PromyvionXPFix
+179bd6512c,2026-05-20,D,sql,5,,,30260429_1 new items
+5494bdd6f7,2026-05-20,C,cpp+sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix shifted hidden furniture NPCs
+5af74497e6,2026-05-20,D,mod,1,,,[lua] Adds spawn points to old hnm module
+5ff253c134,2026-05-20,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Light shot
+c7105a52f1,2026-05-20,D,cpp,1,,,Add various DT to Frame setup
+e78eafcdd0,2026-05-20,D,lua+sql,2,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Merge pull request #10067 from sruon/30260429_1_NPCs
+fd8919775b,2026-05-20,D,lua+sql,15,,,Zilart King Audits
+28cd75db19,2026-05-21,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] Fix trust release messaging, improve despawn animation"
+5a080a056c,2026-05-21,D,lua+sql,10,,,Macro Test mobs
+63d8fe0e4d,2026-05-21,D,sql,1,,,Hide Terminal Coffer in Horlais Peak
+709ff6998f,2026-05-21,D,lua+sql,4,,,Caedarva Locus Imps mobs
+a81b329d4b,2026-05-21,B,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,[core] [lua] Make GEO trusts untargetable
+abeb9776aa,2026-05-21,D,sql,2,,,Set Blade Bat Inner Horutoto to nonaggro
+d7ee655cef,2026-05-21,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Prevent multiple trust releases during delayed action
+dfd9a29e9f,2026-05-21,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Adjust Tiny Mandragoras to not guard
+00ad3121de,2026-05-22,D,lua,4,,,Stater zone Mandies no h2h penalty
+64056cd7c5,2026-05-22,D,lua,14,,,Implement DA for Automaton WS / Update Automaton Shield Bash
+8978126639,2026-05-22,D,cfg+lua+sql,18,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=no,Strange Happenings event
+e136de4081,2026-05-22,D,lua,1,,,[lua] Block teleports while in events
+174f4346c0,2026-05-23,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Correct Magic Mortar Formula
+1cf81d68dd,2026-05-23,D,lua,1,,,[lua] Adjust fSTR/fSTR2 functions to match sheet
+4779c07f1e,2026-05-23,D,lua+sql,5,,,Apollyon/Temenos mobs
+7c4e99e60f,2026-05-23,D,lua+sql,227,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,"[lua, sql] Besieged mobs / Al Zahbi NPCs (#10095)"
+a67bdc9a10,2026-05-23,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix content_tag for Gobbie Mystery Box and Trust Quest NPCs
+a75b4b2f0c,2026-05-23,D,lua,1,,,Require Sandy 1-2 completion
+d0ab3b950c,2026-05-23,D,lua,3,,,[lua] Update rank 2-3 battlefield to 15 minutes
+d4a3d24902,2026-05-23,D,lua,5,,,[lua] Windurst rank 1 and 2 enmity drop and Battlefield event skip
+d507f3132c,2026-05-23,D,sql,1,,,Sprinkler RDM/WAR
+efce5e6eae,2026-05-23,D,sql,1,,,Sets Lamp Marimo basesell to 31
+f233e5224b,2026-05-23,C,lua+sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,Jaded Jody Audit + KB Fix
+f5ea5a3774,2026-05-23,D,cfg+cpp+lua+sql,35,,,Passive trust movement/animation gambits/auras
+026a7df197,2026-05-24,D,sql,3,,,Everbloom Hollow mobs
+0b7a10129d,2026-05-24,D,cpp,18,,,/nominate support
+11e1807eaa,2026-05-24,D,lua,6,,,No H2H Penalty for Low Level Monks
+36bf6b9fea,2026-05-24,D,lua+mod,8,,,Update Automaton Eraser / Add Era Module + Strobe
+48c7a96e6f,2026-05-24,D,lua,5,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,"[quests] Added Abyssea quests 2, 3, and 9 (#10091)"
+52e5ad69f7,2026-05-24,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=5; applies_clean=no,[npc][lua] Halvung Gates Key Item check
+676abe2bea,2026-05-24,D,sql,3,,,★Crystal Paradise★ mobs
+9e6a5f3f48,2026-05-24,D,sql,1,,,[sql] Add content_tag to NPCs [Windurst]
+b9c9ebdfd2,2026-05-24,D,sql,3,,,[sql] The Wyrm God ★ / Peach Power mobs (#10113)
+ce2b17ce39,2026-05-24,D,lua+mod,4,,,[lua] Update Automaton Ice Maker
+f8a8e3a814,2026-05-24,D,sql,3,,,ToAU Kings BCNM mobs
+f8b22d23b6,2026-05-24,D,lua+sql,8,content-queued,see content_queue.csv; new_text_keys=11; applies_clean=no,Aydeewa NM Audits
+06cee087c6,2026-05-25,B,cpp+lua,10,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Fix direct usages of CItem templates
+18e62f7088,2026-05-25,B,cpp+lua,2227,skip-large,"2227 files, structural",[core] [lua] remove unused ITEMCHECK/param from onItemCheck
+2723e99c7c,2026-05-25,D,lua+mod,4,,,[lua] Implement Automaton Analyzer / Era Module
+3c85665f47,2026-05-25,D,lua,1,,,[lua] Set Altepa Gate & pillars/switches always relevant
+4cab75bb72,2026-05-25,D,lua,1,,,[lua] Fail to steal/despoil rare items you already have
+560195b530,2026-05-25,D,lua,2,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] Set Bastok Drawbridge NPCs always relevant
+569e936e6e,2026-05-25,D,cpp+lua,8,,,Track and enforce job/guild level requirements on shop items
+5863918e51,2026-05-25,D,sql,3,,,[sql] ★Oathsworn Blade★ mobs / Quicksand caves missing mobs (#10118)
+614eca65ca,2026-05-25,D,lua,11,,,"[lua] set Pso'Xja elevators and ""elevator doors"" always relevant"
+721cfccb7a,2026-05-25,B,cpp+lua,5,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,"[core] Support ""Always Relevant"" npcs, such as doors/drawbridge etc"
+76e5df6bdf,2026-05-25,D,cpp+sql,6,,,Support alternative entity lists for instances
+817c5d71b2,2026-05-25,D,other,3,,,[cmake] Add zstd to unix build deps
+89a64fabb3,2026-05-25,D,lua,3,,,[lua] Implement Automaton Resister
+8cf350c90c,2026-05-25,D,lua,3,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,"Add Parike-Poranke, Brown Mage Practitioner"
+a1d8bb0ec1,2026-05-25,B,cpp,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] attack/attackround/pdif cleanup/audit
+a6a97b6f2a,2026-05-25,D,lua,1,,,[lua] Disable parry if neither main nor subjob has parry rank
+bd701aa680,2026-05-25,B,cpp+lua,6,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] [lua] Stolen items only reset on kill (or BC/QM pops)
+ca1ebd2017,2026-05-25,B,cpp,4,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,"[core] Remove broken ""CheckEquipLogic"""
+d209b953f0,2026-05-25,D,cpp+lua+tools,20,,,"[lua, cpp] Assault Framework Rework"
+d493517793,2026-05-25,D,lua,5,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,[lua] Curtana/Brigandish Blade/Bartholomew Knife retail improvements (#10120)
+e91581a4c2,2026-05-25,D,lua,1,,,[lua] Set La Theine Rainbow always relevant
+f47bceac5b,2026-05-25,D,lua,1,,,Adds skip FSTR to 1000 Needles
+fb7d21ab3a,2026-05-25,D,lua,3,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,Rararoon shop
+0052aebbf5,2026-05-26,D,sql,1,,,[sql] Sabertooth Tigher - Black Tiger Fang: Common -> Very Common
+0b8592a64d,2026-05-26,D,lua+sql,4,,,Sandy 6-1 NM Audit
+15eb1e0d47,2026-05-26,D,lua+sql,10,,,Giant Orobon Audits
+2d57ef5e0a,2026-05-26,D,lua,3,,,[lua] Add Automaton Amplifier
+50f8b7a6cf,2026-05-26,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Telepoint in Tahrongi
+6a7ae2cd37,2026-05-26,D,sql,3,,,Awoken mobs
+790cd07c8a,2026-05-26,D,lua,3,,,Tweak flaky crafting tests
+79168a75da,2026-05-26,B,cpp+lua,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] add setCrystalElement binding
+8c7d692d10,2026-05-26,D,lua,2,,,[lua] set Gustaberg Rock Lizards to drop earth crystals
+929d9dc4d4,2026-05-26,D,lua,1,,,[lua] Add Massacre Elegy to Enfeebling_Song.lua
+b0344d518b,2026-05-26,D,lua,1,,,[lua] Check & target wyvern on Gargoyle Boots usage
+d177715048,2026-05-26,D,lua,1,,,Energetic Eruca Audits pt. 2
+d8de709acc,2026-05-26,D,lua,1,blocked-client,"shifts zone text IDs, our client is pinned",[lua] Revert Message IDs in Abyssea-La_Theine
+df0966a294,2026-05-26,D,lua,3,,,ToAU Maat damage enrage mechanics
+e326fde779,2026-05-26,B,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] [C++] [lua] Add MP Cost Reduction Mod, Implement Power Cooler"
+ed08ef0aa0,2026-05-26,B,cpp+lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] [lua] Cleanup C++ Shield Mastery impl, add it to mobskills"
+feda732a01,2026-05-26,D,lua+sql,5,,,Energetic Eruca Audits
+2cc1d8b274,2026-05-27,B,cpp+lua,7,conflict,does not apply cleanly onto 9e6f10c2fb,[core] [lua] Improve Attuner backend
+5b3ef82780,2026-05-27,D,sql,1,,,[sql] Add content_tag to NPCs [San d'Oria][Sandy]
+62135df6ae,2026-05-27,D,cpp+tools,26,,,Format Tracy scoped blocks (#10143)
+706c2fe199,2026-05-27,D,lua+sql,6,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] [sql] Implement Voirloup
+9603007a1b,2026-05-27,D,lua,1,,,[lua] Update Swashstox Beadblinker PH to match spawn slot sheet
+a370e4282b,2026-05-27,D,lua,1,,,Disable Tame when Trusts in party
+ad46243025,2026-05-27,D,sql,1,,,Merge pull request #10163 from sruon/layered_npcs_backfill
+ee43e7cb70,2026-05-27,D,cpp+sql+tools,3,,,Optimize auction_house indexes
+fa53001594,2026-05-27,D,cpp,3,,,[cmake] Do not use fast math
+100e5fbc71,2026-05-28,C,tools,1,candidate,"applies cleanly, not yet built or reviewed",[ci] add GetTableOfIDs to lua.sh sanity checks
+3f0bcf75da,2026-05-28,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,Add Bugard in the Clouds battlefield and Hotupuku implementation
+7cc28d6838,2026-05-28,D,cpp,3,,,Core: Speed up module loading
+864a0f7990,2026-05-28,D,lua+sql,8,,,Implement Barrier Module I+II / Cleanup Inhibitor + Speedloader.
+95d518da3e,2026-05-28,D,cpp,2,,,Core: Add startup time reporting
+99eefb822a,2026-05-28,D,other,2,,,[docker] Add libzstd-dev/zstd-dev to dockerfile
+9d5c0ce05e,2026-05-28,D,cpp+lua,5,,,Core: Disable hot-reloading of spec files (#10172)
+bace28a0ce,2026-05-28,D,sql,1,,,[sql] Set a pso'xja door default animation to closed
+d46cadf085,2026-05-28,D,sql,4,,,The Voracious Resurgence mobs
+df2d04b764,2026-05-28,D,sql,2,,,Poison Fungaur aggro/link behaviour
+e8c5fb8b9d,2026-05-28,D,other,2,,,[ci] Add libzstd-dev to ubuntu deps
+0cad5801cb,2026-05-29,D,cpp,2,,,Add SubIcon parameter to status effect function calls
+2ec3c90be5,2026-05-29,D,sql,1,,,Attohwa Chasm Gallinipper non-aggro
+307740e088,2026-05-29,D,sql,2,,,Promyvion Holla Weeper non-linking
+4226d19b89,2026-05-29,D,cpp,2,,,Do not treat all SubKind 4 NPCs as always relevant
+7bcd7f1616,2026-05-29,D,sql,3,,,Manaclipper aggro
+91d35040d9,2026-05-29,D,sql,1,,,Attohwa Chasm Hunter Antlion non-aggro
+91f81a8a34,2026-05-29,D,lua,1,,,[lua] Added Kannagi and Almace Magian Trial Data
+a1c34214d8,2026-05-29,D,sql,1,,,Newton Movalpolos bats non-aggro
+b64d0aa55c,2026-05-29,D,sql,1,,,Purgonorgo Toucan Link
+c5c7a59f53,2026-05-29,D,sql,1,,,Psoxja Camazoztz non-linking
+df998a0b43,2026-05-29,D,cfg+cpp,11,,,Forbid login if zone player count exceeds cap
+e86bd2efea,2026-05-29,D,cfg+cpp,12,,,Support JSON logging with structured context
+01471c831e,2026-05-30,D,cpp,2,,,GP_CLI_COMMAND_CHARREQ2
+2a0ebd9505,2026-05-30,D,sql,4,,,Add missing NPCs  [May 2026 Version Update]
+8d8077d1e8,2026-05-30,B,cpp,3,conflict,does not apply cleanly onto 9e6f10c2fb,[core] roamflag worm = don't cast in melee range
+ab3695d7f4,2026-05-30,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Worms don't get standback cooldown for spells
+bee40e1510,2026-05-30,D,lua,1,,,[lua] Bugfix: Antlion buried too deep in Sheep in Antlions Clothing
+c77333445a,2026-05-30,D,sql,1,,,[sql] Add content_tag to NPCs [Bastok]
+38777fcedb,2026-05-31,D,sql,1,,,BT Incubus Bats remove aggro
+78e5a154b3,2026-05-31,D,sql,1,,,[sql] content_tag NPCs [Mhaura][Selbina] + Others
+7a59c07e0b,2026-05-31,D,sql,1,,,Carmine Eruca remove true detection
+838cd558e0,2026-05-31,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[SQL] Correct columns for Barblizzard
+a4edfcb1af,2026-05-31,D,sql,1,,,Date Eruca remove linking
+b3f083ede5,2026-05-31,D,sql,1,,,Skoffin remove linking
+c3655b9df5,2026-05-31,D,sql,1,,,Remove Fomor BT Linking
+db203e9846,2026-05-31,D,lua+sql,3,,,Caedarva Mire NM Audits
+150f294c1f,2026-06-01,D,lua+sql,5,,,Implement Automaton Regulator
+4ff39576e1,2026-06-01,D,cpp,2,,,Remove Reraise on Level
+99a1cbf27b,2026-06-01,D,lua,5,,,Implement Automaton Damage Gauge II + Audit Values
+b2d9e4cd59,2026-06-01,D,lua,37,,,[lua] Audit Missions and Event Skipped Teleporters - Two
+ff7600bcda,2026-06-01,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Arrapago Reef / Caedarva Mire link/aggro fixes
+0323bd0439,2026-06-02,D,lua,9,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] Fixup Carnero/Aquarius/LL spawn to match retail spawn slots
+0cba2bceb8,2026-06-02,D,lua,3,,,[lua] Improve Morion Worm retail accuracy
+75c0ee7a4a,2026-06-02,D,sql,1,,,[sql] ROTZ Content Tags 1-50
+7a6eacd891,2026-06-02,D,cpp,1,,,Audit Automaton Recast Times
+c51766f90e,2026-06-02,D,lua+sql,6,,,Zizzy Zillah Audits
+e765243dff,2026-06-02,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Fix Aquarius PH spawn slot
+ef0136b8a4,2026-06-02,D,cfg+cpp+sql,6,,,[lua] [sql] [cpp] Add ROTZ Content Tag (#10213)
+49da7035f5,2026-06-03,D,lua,2,,,Audit Automaton Smoke Screen
+1dacacd799,2026-06-04,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix Onward to Adoulin waypoint warping to Ceizak
+c4c1c96fd7,2026-06-04,D,sql,1,,,Halvung True Sight
+f3fee5f8f5,2026-06-04,C,mod,1,candidate,"applies cleanly, not yet built or reviewed",[module] Fix 2007 EXP table error
+1cfd40a6ea,2026-06-05,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",[lua]  Fix WoTG Nation quest req for Cait Sith mission
+2fdcc12bfa,2026-06-05,D,lua,5,,,Audit Shock Absorber I / II / III
+4ad53b9792,2026-06-05,D,lua,4,,,Refactor Heat Capacitor I + II
+4b9d4ed909,2026-06-05,D,lua,1,,,Refactor Heat Seeker
+6f40ea8625,2026-06-05,D,cpp+lua+sql+tools,46,skip-large,"46 files, structural",YAML data: codegen pipeline + status_effects migration
+7abd925621,2026-06-05,D,lua,12,,,[lua] Convert The Tigress Stirs + Tigress Strikes to IF
+ad09e8f09a,2026-06-05,D,cpp+lua,8,,,Update Mana Channeler and Mana Booster
+bbff95dc0d,2026-06-05,D,lua,2,,,Refactor Automaton Attachment Disruptor
+d204326d72,2026-06-05,D,lua+sql,31,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Stage 2 Maat Migration to Individualized Lua
+dba3129f9d,2026-06-05,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix Western Adoulin Auction House/Rent-a-Room waypoints
+1ab58dfa6b,2026-06-06,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels to Maze of Shakhrami"
+32c9c92a42,2026-06-06,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels to West Ronnfaure"
+400e0d47b3,2026-06-06,D,lua+sql,2,,,[lua] [sql] Improve retail accuracy of bloody bolt
+438449cfac,2026-06-06,D,lua,10,,,[lua] Convert Dances with Luopans to IF
+526a8b26dc,2026-06-06,D,lua+sql,8,,,"[sql, lua] Add spawn slot and levels to Outer Horutoto Ruins"
+59216238b0,2026-06-06,D,lua+sql,4,,,"[sql, lua] Add spawn slot and levels t The Shrine of RuAvitau"
+695a17582c,2026-06-06,D,lua+sql,4,,,"[sql, lua] Add spawn slot and levels to Eldieme Necropolis"
+6d79e604b8,2026-06-06,D,cpp,1,,,[login] Add some missing openssl free memory funcs
+73eb151882,2026-06-06,D,lua,2,,,[lua] Refactor Flashbulb
+99bd28da5d,2026-06-06,C,mod,2,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fixes addStatusEffect in a couple modules
+9cf3935dc3,2026-06-06,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Support scripted ranged item add effect procs
+9d65767f7c,2026-06-06,D,lua+sql,6,,,"[sql, lua] Add spawn slot and levels to Garlaige Citadel"
+a3fe8409bf,2026-06-06,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels to East Sarutabaruta"
+a8c3991e39,2026-06-06,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels to Tora Canal"
+bc7a892970,2026-06-06,D,lua,2,,,[lua] Refactor Economizer
+bcd485a760,2026-06-06,C,mod,3,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fixes module errors on startup
+c9173463ea,2026-06-06,D,lua,1,,,Refactor Target Marker
+e595cb080d,2026-06-06,D,lua,1,,,"[add effects] support ""over drain"" to drain beyond remaining hp/mp/tp"
+ecb264f77a,2026-06-06,C,cpp+lua,6,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Automaton Evasion Calculations / Refactor Pattern Reader
+f89fb99cae,2026-06-06,D,lua+sql,18,,,"[sql, lua] Add spawn slots and mob level info to Ule Range, Beadeaux, Xarc, Newton (#10239)"
+ff2e9b67d7,2026-06-06,D,sql,2,,,Lufaise + Misareaux aggro/link audit
+00570d3f3c,2026-06-07,D,mod,8,,,"[lua, sql][Module] BRD, DRG, and spell era module adjustments"
+0243323dfb,2026-06-07,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels to Eastern Altepa"
+0879e06782,2026-06-07,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix RuAun QMs
+3ea7b1d0d5,2026-06-07,D,lua,2,,,Refactor Mana Converter
+5c6a5b3548,2026-06-07,D,cpp+lua,12,,,Update Automaton Steam Jacket
+63110868cd,2026-06-07,D,lua+sql,6,,,"[sql, lua] Add spawn slot and levels to Meriphataud Mountains"
+66013b70f1,2026-06-07,D,lua+sql,9,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,Arrapago Reef NM Audits
+6e479b253b,2026-06-07,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,"[sql, lua] Add spawn slot and levels to Batallia Downs"
+7492f3e56e,2026-06-07,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix FKNS QMs
+9818c056ab,2026-06-07,D,lua,2,,,Refactor Reactive Shield
+9a55c2621e,2026-06-07,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix Plague Chigoe spawn for The Prankster quest
+ab8ad01bad,2026-06-07,D,lua,2,,,Wire PsoXja elevators to the right gates
+d8109fc0fa,2026-06-07,D,sql,1,,,[sql] Abyssea ability content tags
+f0a943c19c,2026-06-07,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels to The Shrine of RuAvitau"
+f4a4fe8c2c,2026-06-07,C,cfg+lua+sql,6,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua, sql] Nyzul Isle bug fix/adjustments"
+fd1dd38e1b,2026-06-07,D,sql,1,,,Update items sale price
+09872ddada,2026-06-08,D,cpp+lua,2,,,Move Automaton Mods From C++ to LUA / Add CD to Automaton Abilities
+1dc982bc3e,2026-06-08,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels to Yhoator Jungle"
+1e20cd2c13,2026-06-08,D,lua+sql,4,,,"[sql, lua] Add spawn slot and levels to Tahrongi Canyon"
+2b8f2b1494,2026-06-08,D,sql,2,,,"[sql, lua] Add spawn slot and levels to Promyvion - Vahzl"
+35ddb46fca,2026-06-08,D,sql,2,,,"[sql, lua] Add spawn slot and levels to Phomiuna Aqueducts"
+669ecfa49d,2026-06-08,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix swapped door reference for a Pso'Xja elevator
+82b365ac29,2026-06-08,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels to Riverne Site A01"
+a61a2a6541,2026-06-08,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels to Bibiki Bay"
+bff422a1f8,2026-06-08,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels to Caedarva Mire"
+ce928bf782,2026-06-08,D,cfg+cpp+sql,5,,,"[cpp,sql,lua] Raise influence cap and reset weekly"
+eebb71208a,2026-06-08,D,lua,10,content-queued,see content_queue.csv; new_text_keys=5; applies_clean=no,[lua] Convert Snake on the Plains to IF
+fd4fe6dee6,2026-06-08,D,lua+sql,4,,,"[sql, lua] Add spawn slot and levels to Mt Zhayolm"
+4fcba280d0,2026-06-09,D,lua,3,,,[lua] Yonin/Innin audit
+8f033ec963,2026-06-09,D,lua+sql,4,,,Big Bomb Audits
+e9ab6ac0c7,2026-06-09,D,sql,2,,,[sql] Additional ability/spell content tags
+067259609a,2026-06-10,D,lua,1,,,[lua] Add dINT formula to Dainslaif
+1e8875c5f9,2026-06-10,D,lua,8,,,[lua] Update and add gate glyph teleport items
+2e1ac6e323,2026-06-10,D,cpp+lua+sql,33,,,Lua-driven Guild Shops
+2eaa99043f,2026-06-10,D,lua+sql,9,,,"[sql, lua] Add spawn slot and levels to Western Altepa Desert"
+300b71791d,2026-06-10,D,lua,1,,,Add xi.job.NONE to isInnateCaster
+3c23011f07,2026-06-10,D,lua+sql,15,,,"[sql, lua] Add spawn slot and levels to Quicksand Caves"
+4c8ae9ea63,2026-06-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Correct model ID of AA EV Cosmetics
+4f3bdf8861,2026-06-10,D,sql,1,,,Hide seasonal event NPCs
+5319f2f7b6,2026-06-10,D,sql,1,,,30260604_0 Apollyon/Temenos NPCs
+6e462bd022,2026-06-10,D,lua+sql,6,,,"[sql, lua] Add spawn slot and levels to Pashhow Marshlands"
+764ce0fe57,2026-06-10,D,sql,2,,,"[sql, lua] Add spawn slot and levels to Sacrarium"
+84df90adb9,2026-06-10,D,lua,1,,,[lua] Add military scrip purchase to Wrath of the Griffon
+85fe7e31ba,2026-06-10,D,lua+sql,10,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Pirates Spawning Behavior
+a46e335e79,2026-06-10,D,cpp,2,,,[C++] Add Subpower Hook to Base XP on True Level
+a7d6bc9b2d,2026-06-10,D,sql,3,,,30260604_0 Apollyon/Temenos mobs
+ad886c6ef8,2026-06-10,D,cpp,2,,,[C++] Add lua hooks to modify conquest influence
+be3b9f4ac0,2026-06-10,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels to Attohwa Chasm"
+c131efc69b,2026-06-10,D,sql,3,,,30260604_0 Version Update Items
+d6366c03c7,2026-06-10,D,lua,294,blocked-client,"shifts zone text IDs, our client is pinned",30260604_0 Version Update strings
+d767ed5251,2026-06-10,D,cfg,1,blocked-client,"CLIENT_VER bump, never take while pinned",Bump client version to 30260604_0
+ef751e4442,2026-06-10,D,lua+sql,4,,,"[sql, lua] Add spawn slot and levels to Alzadaal Undersea Ruins"
+037e9c27fc,2026-06-11,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix CoP 1-3 Promy Entry Blackscreen
+0d8f881e4b,2026-06-11,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix Back to the Beginning Cutscene
+1b2b0d6bc4,2026-06-11,C,lua,7,candidate,"applies cleanly, not yet built or reviewed",Fix Mijin Gakure printing 0 damage
+54561bf321,2026-06-11,B,cpp+lua+sql,14,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Actually instansiate CFlowerPot
+56e5fced68,2026-06-11,B,cpp+lua,4,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] add delStatusEffectsByType
+6bf4fba0d4,2026-06-11,D,lua,1,,,"[lua] Increase ""tier 2"" shock spikes power to 19 for Geirskogul"
+960c3482fc,2026-06-11,D,lua,1,,,Add isEngaged() to targeted spells in entity behaviors
+9c77e91abf,2026-06-11,D,sql,1,,,[sql] Set Deluge Spikes type to 34 like the rest of the spikes
+a08e8d843b,2026-06-11,B,cpp+lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] [lua] Geirskogul Shock Spikes edge case, some AM cleanup"
+b3210c1a5d,2026-06-11,D,sql,1,,,[sql] Enable pets in Walk of Echoes/Provenance
+ca80d8a7f8,2026-06-11,C,lua,2,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] Fix QM0 in Valley of Sorrows
+f0633bfd19,2026-06-11,A,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Spikes - warn instead of accessing out of bounds element
+1971a0a2df,2026-06-12,D,cpp,1,,,Improve Automaton Frame Stats Unwrapping
+1bfda565df,2026-06-12,D,lua,1,,,Check for chest illusion before failure checks
+28040e7e63,2026-06-12,D,lua+sql,5,,,"[sql, lua] Add levels and NM info for The Boyahda Tree"
+35af50f34e,2026-06-12,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels for Rolanberry Fields"
+4bd5aa6673,2026-06-12,D,lua+sql,6,,,"[sql, lua] Add spawn slot and levels for Temple of Uggalepih"
+720150f32f,2026-06-12,D,cfg+lua,4,,,Cleans up unused settings
+7b0c9975cf,2026-06-12,D,lua+sql,23,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Final Stage Maat Migration to Individualized Luas
+b4dd0af85c,2026-06-12,D,lua+sql,5,,,Amulya Guild Shop converted to lua
+ba51ccd05d,2026-06-12,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Weeping Willow Respawn behavior
+bea9fba938,2026-06-12,D,sql,2,,,"[sql, lua] Add spawn slot and levels for Misareaux Coast"
+cde2e8b849,2026-06-12,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels for Sauromugue Champaign"
+e16a3881e0,2026-06-12,D,sql,2,,,"[sql, lua] Add spawn slot and levels for The Sanctuary of ZiTah"
+e8a8d5d704,2026-06-12,D,cpp+lua,2,,,Implement Retail Accurate Automaton Stats
+fa4d5a044a,2026-06-12,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Fix Unkai Sune-Ate + Bale Gauntlets mods
+fbef4edef7,2026-06-12,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Fix Retaliation bonus integer truncation
+1849ca2dab,2026-06-13,D,cpp,1,,,[login] Mark char data structs as stale on successful login
+26b73b3701,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for Valkurm Dunes
+3ac5ab5c07,2026-06-13,D,sql,2,,,"[sql, lua] Add spawn slot and levels for Promyvion - Mea"
+41978b47e1,2026-06-13,D,cpp+lua,2,,,Implement Retail Accurate Automaton Skill Caps
+41e63a7a7d,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for Carpenters Landing
+5425b32e73,2026-06-13,D,sql,1,,,Remove missing NPCs from Bastok Markets
+5480467d65,2026-06-13,D,sql,2,,,"[sql, lua] Add spawn slot and levels for Promyvion - Holla"
+5e440f6367,2026-06-13,D,lua,20,,,[lua] More Maat adjustments
+608f81e86d,2026-06-13,D,sql,1,,,[sql] Adds missing Delimiter to triggers.sql
+61c34abefb,2026-06-13,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels for Lufaise Meadows"
+64a2595f28,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for La Theine Plateau
+65202a708e,2026-06-13,D,lua+sql,4,,,Mep Nhapopoluko Guild Shop converted to lua
+78af594f0c,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for The Garden of RuHmet
+7c51f86fca,2026-06-13,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels for Bhaflau Thickets"
+815031a116,2026-06-13,D,lua+sql,14,,,Attohwa Chasm NM Audits
+8779f8e59e,2026-06-13,D,sql,1,,,[sql] Riverne A01 Linking/Aggro fixing
+8e0fb6716a,2026-06-13,D,sql,1,,,[sql] Phomiuna Aqueducts aggro/link testing
+905aabf5e8,2026-06-13,D,lua+sql,3,,,"[sql, lua] Add spawn slot and levels for Riverne - Site #B01"
+92dff64a89,2026-06-13,D,cpp,1,,,Revert router socket to blocking wait
+945b61bc54,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for Oldton Movalpolos
+98cf330ec0,2026-06-13,D,sql,2,,,"[sql, lua] Correction for spawn slot info for Mt. Z"
+99c5cfee26,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for PsoXja
+9a3df220aa,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for Al'Taieu
+9a651cf8cf,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for Grand Palace of Hu'Xzoi
+be23b736ef,2026-06-13,D,sql,1,,,[sql] Adds retail level changes for Promy Dem
+cd210f8f3a,2026-06-13,D,lua,15,,,[lua] Event Audit for CoP 3-1 to 5-2
+e1ea86f0a2,2026-06-13,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Move merit bonus in PUP data packet
+f1cb277a0e,2026-06-13,D,lua+sql,5,,,"[sql, lua] Add spawn slot and levels for Wajaom Woodlands"
+2796f526b3,2026-06-14,D,lua+sql,7,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Stubborn Dredvodd Audits
+3b24d268a2,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for Qufim Island
+3d0bf5c9d3,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for Yuhtunga Jungle
+75532fc22b,2026-06-14,D,cpp,2,,,Update Automaton Base Damage Calculation
+86bb6a4996,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for West Sarutabaruta
+9321bbb84b,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for Beaucedine Glacier
+a1d2f8043e,2026-06-14,D,lua+sql,7,,,Implement Nott for Trusts
+adf7547314,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for Cape Teriggan
+b8dca56081,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for North Gustaberg
+bdae3da585,2026-06-14,D,lua+sql,5,,,Kopopo guild shop converted to lua
+e888f3ddff,2026-06-14,D,sql,1,,,[sql] Adds retail level changes for Konschtat Highlands
+0b1c5dddd7,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Castle Oztroja
+21b84398dc,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Castle Zvahl Baileys
+439cadd7d5,2026-06-15,D,cpp,1,,,Core: Enforce the usage of ximeshes and navmeshes
+5bff523848,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Palborough Mines
+60b971523c,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Davoi
+640d463c8b,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Den of Rancor
+6af70322fb,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Ranguemont Pass
+7a3c654ed2,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Giddeus
+8248228db3,2026-06-15,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Emote rate limit to 1 sec
+8aa5014647,2026-06-15,D,lua+sql,2,,,Almighty Apkallu Spawn Anim
+96475f8ede,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Korroloka Tunnel
+9980ac5e1e,2026-06-15,D,lua,25,,,[lua] Update COR roll effect luas
+a2ff69179f,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Middle Delkfutts Tower
+b754045677,2026-06-15,D,sql,1,,,[sql] Updates to Bostaunieux Oubliette mob levels
+b8757bfb54,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Monastic Cavern
+ca9bc14452,2026-06-15,C,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Repair Kit / Mana Tank Interactions
+cfb644db73,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Zeruhn Mines
+d3ded4ad16,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Fort Ghelsba
+d8a814049d,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Behemoths Dominion
+de595c3eaa,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Dragons Aery
+e1cf636c7f,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Ghelsba Outpost
+e98f785ebb,2026-06-15,D,cfg+cpp,36,,,Core: Refactor ZMQ usage into ZMQService
+ed771ff6e5,2026-06-15,D,sql,1,,,[sql] Adds retail level changes for Castle Zvahl Keep
+eed8b48112,2026-06-15,D,cpp+lua,4,,,Implement Automaton Equalizer
+063008c1d9,2026-06-16,D,other,1,,,[navmeshes] Update submodule commit
+13ff0a7927,2026-06-16,D,cpp+tools,74,skip-large,"74 files, structural",Cleanup deprecated Status Effect enums
+7c19130c59,2026-06-16,D,other,1,,,Improve error message when codegen dependencies are missing
+88769f91b4,2026-06-16,C,other,3,conflict,does not apply cleanly onto 9e6f10c2fb,[docker] Fix issue with write access
+984b000675,2026-06-16,D,cpp+lua,7,,,"Globalize Attachment Mods, Add Volt Gun, Cleanup Automaton.lua"
+9eaf4e2689,2026-06-16,D,mod,62,skip-large,"62 files, structural",[modules] rework module structure
+f1a47645ea,2026-06-16,D,lua+sql,7,,,Yabby Tanmikey guild shop converted to Lua
+07f6676849,2026-06-17,D,sql,1,,,Backfill missing mob hitboxes
+dd1028b323,2026-06-17,D,lua+sql,18,,,More Maat Adjustments
+05c20a592f,2026-06-18,D,cpp+lua,65,skip-large,"65 files, structural",Migrate DAMAGE_TYPE enum to YAML
+353b818a29,2026-06-18,C,cpp+lua,2,candidate,"applies cleanly, not yet built or reviewed",Fix typo: DEUX_EX_AUTOMATA TO DEUS_EX_AUTOMATA
+36fd600beb,2026-06-18,D,lua,30,,,[lua] Convert Physical Bloodpacts To Mobskill Framework
+3cb7f6d35f,2026-06-18,D,cpp+lua,23,,,Migrate ECOSYSTEM enum to YAML
+53299bdbcd,2026-06-18,D,cpp+lua,15,,,"[lua, sql] Corsair job util enhancements"
+5dfabb93d4,2026-06-18,D,mod,12,,,ToAU Era PUP Module Suite
+6bf63da04d,2026-06-18,D,lua+sql,6,,,Linkshell vendors converted to lua
+70f316d2a0,2026-06-18,D,lua+sql,3,,,Akamafula converted to standard shop
+809edb261a,2026-06-18,D,lua+sql,6,,,Chip Goblins guild shops converted to Lua
+a6b0ea737a,2026-06-18,D,cpp+lua,11,,,Migrate LATENT enum to YAML codegen
+010e392d80,2026-06-19,D,cpp,3,,,Build: Split xi_map cmake targets
+01889ff211,2026-06-19,D,sql,1,,,Increase Marionette Dice Range
+4e07f64f99,2026-06-19,D,cpp+lua+tools,13,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,"[lua, cpp] Leujaoam Cleansing Assault; Lootbox Logic"
+69ebfeb7e0,2026-06-19,D,sql,1,,,[sql] Adjusts more mob levels to match retail for 10 more zones (#10356)
+b6440fbb26,2026-06-19,D,lua+sql,4,,,Culberry Audits
+d449280514,2026-06-19,D,cpp+lua,3,,,Update LoadAutomaton ordering in lua_baseentity
+38a93d078f,2026-06-20,D,cpp,7,,,Core: Tidy CTrustEntity interface
+41c52121b7,2026-06-20,D,cpp+lua+sql,16,,,Implement Overdrive / Tactical Switch
+65f125846e,2026-06-20,D,cpp+mod,383,skip-large,"383 files, structural","Core: Rename entity files (charentity.h -> char_entity.h, etc.)"
+6892d2d4fe,2026-06-20,D,cpp,25,,,Core: Clean up Zone interface surface
+7a8832595b,2026-06-20,C,cpp,3,conflict,does not apply cleanly onto 9e6f10c2fb,Core: Fix some accidental copies during iteration
+890cfb0036,2026-06-20,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix table data fetching for Shadow Lord phases
+8aa8398041,2026-06-20,D,cpp,5,,,Core: Remove friend class decl from CCharEntity
+ccb6fbef57,2026-06-20,D,cpp,12,,,Core: Reorg CAutomatonEntity and associated types
+cf60b9abc9,2026-06-20,D,cpp,2,,,Core: Add WeatherContainer
+ddf2e57de9,2026-06-20,D,sql,1,,,[sql] Adjusts the remaining COP/TOAU zones for retail mob levels (#10365)
+e331b2c55b,2026-06-20,D,lua+mod+sql,31,,,Implement JA Heady Artifice
+e4b9e51af2,2026-06-20,D,lua,1,,,[lua] Adding CrystalWar Quest 7 70
+e612d3542f,2026-06-20,D,cpp,31,,,"Core: Tidy interfaces for {automaton, fellow, npc, pet, trust}_entity"
+f8c3d5d01b,2026-06-20,D,cpp,8,,,Core: Tidy up entity class declarations and destructors
+05c00d3bb8,2026-06-21,C,cpp+lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua, cpp] Pulling the Plug fixes; OnSpellCastStart fix"
+09b262bfc1,2026-06-21,D,cpp+tools,5,,,Scripts: Add LLVM windows path to run_clang_format.py
+1c30434a18,2026-06-21,D,lua,1,,,Test: Rename constants in status benchmark
+1e2ec9c3a7,2026-06-21,D,cpp,7,,,Core: Add mockable socket interface
+4fc8d28ba7,2026-06-21,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Core: Fix xi_map tracy linkage
+614fef3a33,2026-06-21,D,cpp,6,,,Core: Improve logging
+61ab350399,2026-06-21,D,cpp,1,,,"Core: Improve to_upper, to_lower"
+6f7e0c4d9e,2026-06-21,D,cpp,24,,,Core: Refactor StatusEffectContainer to hide allocations
+8334db98ce,2026-06-21,D,cpp+lua,2,,,Lua: Add second-level caching for status effect scripts
+848adc0ca2,2026-06-21,A,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,Core: Fix crash on shutdown via SIGINT/SIGTERM
+9d8949f9e9,2026-06-21,D,lua,1,,,Test: Add Status Effect benchmark test
+c594e84511,2026-06-21,D,lua,1,,,Strip comment that has not aged well
+cf81279e43,2026-06-21,C,lua+sql,7,conflict,does not apply cleanly onto 9e6f10c2fb,Self Destruct damage fix
+d58978daa5,2026-06-21,D,cpp,36,,,"DB: Extract out interface, implement C-connector backend"
+eb7c9f9032,2026-06-21,D,lua,1,,,Test: Add estimated network drain to status benchmark
+efa445c0c6,2026-06-21,D,cpp,2,,,Core: Add more tracy scopes to StatusEffectContainer
+fbae82c2ea,2026-06-21,D,lua,1,,,Cleanup Shadow Lord (phase 1) lua file
+1aed28a22d,2026-06-22,D,cpp,3,,,Deps: Add FlatHashMap
+2b5f62a5c3,2026-06-22,D,lua,3,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,Use listener to try to not to call all players in a zone every tick
+6240e3bf3c,2026-06-22,D,cpp,5,,,Core: Add LosCache to CanSeeTarget
+95441da5fc,2026-06-22,D,cpp+lua,5,,,"Removed nested buffing logic from doRoamTick, add doBuffTIck"
+a847dd01be,2026-06-22,D,other,1,,,Build: Add CMakePresets for easier CLI builds
+bef2342f9b,2026-06-22,D,cpp,1,,,Core: Tidy event handler
+d655041a28,2026-06-22,D,lua,1,,,Make Lamia 19 script readable by humans.
+e711fc8e04,2026-06-22,D,cpp,2,,,Core: Reinstate and improve 2nd-level Lua caching
+f72ddee704,2026-06-22,D,tools,1,,,Scripts: Add build helper script (for CLI help)
+f81e77c8ff,2026-06-22,D,tools,1,,,Scripts: Add tracy capture helper script
+01b2beb72f,2026-06-23,D,cpp,2,,,Core: Throttle TryLink()
+1c38e88138,2026-06-23,D,other,1,,,Set DEBUGGER_WORKING_DIRECTORY for Ninja debug sessions
+1c65b73953,2026-06-23,D,lua,8,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=no,add mimeo stone quest and update rewards
+4787c5acf1,2026-06-23,D,cpp,19,,,"Core: Refactor ""2nd-level"" caching to be the only cache"
+50b1662462,2026-06-23,D,lua,1,,,Change Sweep test enemy from BRD to MNK
+7009d0fb72,2026-06-23,D,cpp,2,,,Core: Replace xi:eraseIf with stdlib version
+f6434f362d,2026-06-23,D,other,1,,,Build: Tidy up default build config selection
+09ac8a5e89,2026-06-24,D,cpp,1,,,Core: Add basic level of Lua empty-handler elision
+3b0b963617,2026-06-24,D,cpp+lua,2,,,Test: Add test to verify default Horro module
+721e3d1985,2026-06-24,B,cpp+lua,51,skip-large,"51 files, structural",[core][lua] Mob Weapon Damage Refactor
+88dc1b6dcc,2026-06-24,D,lua,1475,skip-large,"1475 files, structural",Remove all cases of empty mob functions inside scripts/zones folder
+95bb204a96,2026-06-24,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",Fixes 2 cases of missing parameters and a quest not propely written
+9eba401df5,2026-06-24,D,lua,9,,,[lua] Route quick draw logic through corsair job util
+dbd44101d1,2026-06-24,D,lua,12,,,Additional Maat Adjustments
+172feae427,2026-06-25,D,sql,1,,,[sql] Quadav Fetich droplist audit + a few others in pal mines
+337f0adbd6,2026-06-25,D,sql,1,,,[sql] ROTZ Content Tags 51-100
+5ec7f6201a,2026-06-25,D,sql,1,,,[sql] ROTZ Content Tags 101-150
+70cca2df9b,2026-06-25,D,lua+sql,4,,,Shen Audits
+0f462d5210,2026-06-26,D,lua,1,,,Adds medicine/food removal to !reset
+1f307345a8,2026-06-26,D,cpp,1,,,Core: Collapse queries in recv_parse
+22836b9ce3,2026-06-26,D,lua+sql,4,,,Vuliaie guild shop converted to Lua
+23ca4c3ad0,2026-06-26,D,cpp,2,,,Core: Remove TaskGroup usage in ZoneEntities
+3ed5d5dd48,2026-06-26,D,cpp,3,,,"Core: Add blowfish_{encipher, decipher}_blocks"
+44f877dd63,2026-06-26,D,lua+sql,5,,,Achika guild shop converted to lua
+514d543f49,2026-06-26,D,cpp,10,,,Core: Add SpatialGrid to reduce work in ZoneServer
+55b8d609a9,2026-06-26,D,cpp,1,,,Core: Use FlatHashMap for EntityList_t
+5e114579af,2026-06-26,D,cpp,2,,,Core: Re-use a scratch packet in networking
+6602ccdba7,2026-06-26,D,cpp,2,,,Core: Extract tapMobAggro from the SpawnMOBs aggro lambda
+795c1fef28,2026-06-26,D,sql,1,,,[sql] Audit some synthesis content tags (151-200)
+82f7334faf,2026-06-26,D,cpp,3,,,Core: Use FlatHashMap for SpawnIDList_t
+95cd00832c,2026-06-26,D,cpp+lua,67,skip-large,"67 files, structural",Core: Refactor PathFind
+a39b72a899,2026-06-26,D,lua,26,content-queued,see content_queue.csv; new_text_keys=12; applies_clean=no,[lua] Add SoA survival skill obstacle traversing
+ac40555987,2026-06-26,D,lua+sql,12,,,Self-Destruct and Hypothermal Combustion adjustments
+d7ed78d4d5,2026-06-26,D,lua+sql,5,,,Chiyo Guild Shop converted to Lua
+e26b3d8b2b,2026-06-26,D,other,1,,,Chore: Add .cpm-cache/ to gitignore
+e2de5aa909,2026-06-26,D,cpp,1,,,"Core: Optimise zlib_{compress, decompress}"
+f177cffb9d,2026-06-26,D,cpp,2,,,XiMesh: Speed up raycast with broad-phase culling
+f95916e166,2026-06-26,B,cpp+lua+mod+sql,8,conflict,does not apply cleanly onto 9e6f10c2fb,[core][lua][sql] Avatar Weapon/Bloodpact Damage Modules
+04bd22c4f3,2026-06-27,D,lua,1,,,Implement Theurgic Focus MAB bonus
+26ec91e0f8,2026-06-27,D,cpp,7,,,Test: Track exit status
+2d48e0daad,2026-06-27,D,sql,2,,,Add Cryptonberry skill list
+4b7c91ff1f,2026-06-27,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Meikyo Shisui / Sekkanoki Interactions
+632b3db30a,2026-06-27,D,lua+sql,5,,,Jirokichi guild shop converted to Lua
+6723c3318d,2026-06-27,D,lua,2,,,[lua] Implement Yahse-Adoulin Ferry
+6ab71f2bac,2026-06-27,D,cpp+lua,7,,,Core: Refactor use of AI::StateStack
+6ebd915731,2026-06-27,C,cpp+lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Prevent Patrolling mobs from buffing
+701075e759,2026-06-27,D,lua,2,,,Handle Addle properly and Implement Addle II
+808f8ea9e3,2026-06-27,D,cpp+lua+sql,4,,,"Add ""Enspell Duration Bonus"" modifier and apply it to items and code"
+9bdc95f2ca,2026-06-27,D,lua+sql,3,,,Silver Owl guild shop converted to Lua
+cdc7c7886a,2026-06-27,D,lua+sql,4,,,Jabbar guild shop converted to Lua
+f2bb78a945,2026-06-27,D,lua+sql,5,,,Maymunah guild shop converted to Lua
+fe280e6add,2026-06-27,D,lua,5,,,[lua] Add Rala Waterways sluice gate handlers
+10c913d9ed,2026-06-28,D,lua+sql,3,,,Tsutsuroon guild shop converted to lua
+3690de4bc9,2026-06-28,D,lua+sql,4,,,Chaupire guild shop converted to Lua
+3b59388e0a,2026-06-28,D,lua+sql,4,,,Dehbi Moshal guild shop converted to Lua
+4ba342d0a9,2026-06-28,D,lua+sql,5,,,Shih Tayuun guild shop converted to Lua
+5c52eaca97,2026-06-28,D,lua+sql,7,,,Gathweeda / Wahraga guild shops converted to Lua
+6a050f923c,2026-06-28,D,lua+sql,3,,,Ndego guild shop converted to lua
+814d000316,2026-06-28,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Add onUpdate to spawn list functions
+9750b40184,2026-06-28,D,lua+sql,5,,,Doggomehr guild shop converted to Lua
+a5748e532b,2026-06-28,D,lua+sql,4,,,Kueh Igunahmori guild shop converted to Lua
+ac57b7ad21,2026-06-28,C,lua+mod+sql,7,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua, sql][module] COR Era Adjustment Modules; COR and module bug fix"
+b41373ecd9,2026-06-28,D,lua+sql,2,,,Small Maat tweaks
+badd18713f,2026-06-28,D,lua,3,,,[lua] Audit Aqueducts locked doors
+cf04fcb15b,2026-06-28,D,lua,23,,,Remove empty functions from npc scripts
+e7eb2f691d,2026-06-28,D,sql,1,,,[sql] Audit some synthesis content tags (201-250)
+ee8131a2ff,2026-06-28,D,cpp+lua+mod,4,,,"[lua, sql, cpp] Beastmaster Sic bugfix; Sic Era Module"
+fb2f6a4da6,2026-06-28,D,cpp+lua,2,,,Disable SQL Fallback for valid lua spell overrides
+3452b4c77a,2026-06-29,D,lua,19,,,[lua] Event updates for CoP 5-3 Until End
+450d7ba660,2026-06-29,D,cpp,1,,,Core: Add steps checking to rayIntersect
+52b836d76a,2026-06-29,D,lua,2,,,Tests: Add Aggro-tap test
+87279ae651,2026-06-29,D,lua+sql,7,,,Clothcraft guild shops converted to Lua
+8df4dea7b3,2026-06-29,D,cpp+lua,5,,,Convert skillchain damage calculations to lua
+a7b9a120ae,2026-06-29,D,lua,1,,,Tests: Add Aggro-LOS test
+db5a8fc66d,2026-06-29,D,lua+sql,4,,,Goldsmithing guild shops converted to Lua
+f9ebe55b01,2026-06-29,D,lua+sql,17,,,Fishing guild shops converted to Lua
+01c66ec923,2026-06-30,B,cpp,4,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Fix no-resend with dropped 0x00As
+077cbf5c88,2026-06-30,D,lua+sql,4,,,Create new default spell list for non-buffing mobs
+2caeabd88f,2026-06-30,D,sql,1,,,[sql] Audit some synthesis content tags (251-300)
+2d157e991d,2026-06-30,D,cpp+lua,2,,,Restore Optional Targeting to TryCastSpell() Refactor Avatar.lua
+48790dde2b,2026-06-30,B,cpp+lua,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] [lua] Remove unused and broken function
+85be2c7445,2026-06-30,D,lua+sql,12,,,Sacrarium NM Audits
+97b1af14f6,2026-06-30,D,lua,1,,,General damage spell maintenance
+a640623bd1,2026-06-30,D,lua,1,,,Style changes
+b50ee79813,2026-06-30,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Automaton Spawn Animation
+ca1f1c1681,2026-06-30,D,lua,30,,,Cleanup Geo effects
+ed36e44e05,2026-06-30,B,cpp,7,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Add some guardrails to some zoning logic
+080f1e593e,2026-07-01,D,cpp,1,,,Add newer Alter Ego categories
+0aafb8025d,2026-07-01,D,cpp+lua+sql+tools,4,,,Add tests for Abyssea Traverser Stones
+1cc1b82dbb,2026-07-01,D,cpp+lua+sql,13,,,Allow customized spawn times for TOTD mobs
+1db6cc5629,2026-07-01,D,lua,2,,,Reorder guild shop entries to match expected order
+32141ea192,2026-07-01,A,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Add nil check to shadow lord listener
+419298bc23,2026-07-01,D,cpp+lua+sql,5,,,Implement Cascade JA and effect properly
+428b5869eb,2026-07-01,A,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Skillchain: Fix out of bounds table data fetching
+50bbad9173,2026-07-01,D,sql,1,,,[sql] Audit some synthesis content tags (301-350)
+51034e95ed,2026-07-01,D,cpp+lua+sql+tools,17,,,Deprecate legacy guild shop system
+54af93d7d3,2026-07-01,D,lua,8,,,Additional Maat damage adjustments
+60ea100ba8,2026-07-01,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Remove pending deleted pets from players spawnlists
+6ed8665274,2026-07-01,D,cpp,2,,,Core: Don't walk RTTI tree in updateEntityPacket
+723df05222,2026-07-01,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix Meikyo Shisui sequence on interrupt
+8307cbb093,2026-07-01,D,mod,1,,,[modules] update comment in exp sql module
+88e2542d8b,2026-07-01,D,other,1,,,[yaml] Update names of some statuses that share the same script
+928f4da819,2026-07-01,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Correct some SQL spell list entries
+9b05174c15,2026-07-01,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Unset no despawn in battlefield cleanup
+aee9b1d247,2026-07-01,D,lua,9,,,Add isEngaged() to Dispel lua spell lists
+c0c7eeaffb,2026-07-01,D,cpp,2,,,Update CHAT_NAME documentation to match XiPackets
+2459ddac33,2026-07-02,D,cpp,14,,,Ext: Remove Mariadb CPP connector
+372336b20a,2026-07-02,D,other,1,,,Ext: Bump all dependencies
+39f7ea8706,2026-07-02,D,sql,1,,,[sql] Reorder QMs in North Gustaberg and Shadowreign version
+48066c0cc2,2026-07-02,D,lua,3,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,[lua] Audit Siren's Tear QM
+69f51e3ea4,2026-07-02,D,lua,1,,,[lua] Set qm2 default action in North Gustaberg
+86c19197a6,2026-07-02,D,cpp,6,,,Entities: Remove unused members
+9c6473eea5,2026-07-02,D,lua,1,,,COR AF2 Bugfix
+9e539e3a24,2026-07-02,D,other,1,,,Misc: Add tracy* to gitignore
+aeb8432018,2026-07-02,D,other,1,,,Tracy: Build capture tools on Mac/Linux
+d279951a3a,2026-07-02,D,tools,1,,,Tracy: Add port support to capture.py
+1a67a808fa,2026-07-03,C,other,1,candidate,"applies cleanly, not yet built or reviewed",Fix aiso CI: Use new aiso directory instead of old one
+1d1c9dd6ed,2026-07-03,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Trusts not getting interrupted
+31aed360f2,2026-07-03,D,lua,1,,,[test] Remove changing wall groundskeeper aggro from aggro test
+35dbd73d86,2026-07-03,D,cpp+sql+tools,11,,,Support forced rename flow in lobby
+4886906a60,2026-07-03,D,cpp,1,,,Core: More safety in ~CTrustController()
+4ab82eb0ae,2026-07-03,D,cpp,1,,,Core: Ensure binding of const CLuaBaseEntity*
+86ad2105f1,2026-07-03,C,sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Son of Anansi Animations
+9a424ada80,2026-07-03,D,sql,1,,,[sql] Audit some synthesis content tags (351-400)
+b3b0deed53,2026-07-03,D,lua,58,skip-large,"58 files, structural",Convert tutorial mini-questline to a hidden quest and modernize it
+ba1d033e06,2026-07-03,D,tools,1,,,Skip binary files in CI general checks
+d0d48cecd4,2026-07-03,D,lua,1,,,Add missing require in the healing effect script
+ec9a17d90d,2026-07-03,D,lua,2,,,[lua] Set wall groundskeepers to aggro
+11e91561ae,2026-07-04,D,lua,7,content-queued,see content_queue.csv; new_text_keys=8; applies_clean=yes,[lua] Remove Expeditionary Force KI on Nation Swap
+1218a14533,2026-07-04,D,cpp+lua+sql,17,,,Implement ecosystem damage multipliers
+227e880c9e,2026-07-04,D,sql,1,,,[sql] Update Expeditionary Force levels and spawn
+24af747f9b,2026-07-04,D,cpp,4,,,Explicitly state badnames.bin is not a retail file
+3e51a63740,2026-07-04,D,lua,2,,,COR AF3 Fight (Against All Odds) bugfix
+497e2fb7a8,2026-07-04,D,cpp,2,,,Core: Slightly cleaner exit for xi_map
+8f9d0e81c9,2026-07-04,D,cpp+lua,19,,,Gardening tests
+981ff1193e,2026-07-04,D,other,1,,,Chore: Update clang-format rules
+a3f1ec5534,2026-07-04,D,cpp,2,,,xirand: Add compile-time tests for skew
+af8be49950,2026-07-04,D,lua+sql,2,,,[sql] [lua] Audit Temple Guardian and its Granite Door
+b9a14dc2e9,2026-07-04,C,cpp,4,conflict,does not apply cleanly onto 9e6f10c2fb,xirand: Fix integer promotion issue in GetRandomNumber
+ba209c9299,2026-07-04,D,other,2,,,[ci] Run xi_test on macOS
+cc49e49f3c,2026-07-04,D,lua,1,,,[lua] Enable EF conversations with conquest guards
+d10a28b2bf,2026-07-04,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,fix several tags that were initially overlooked during ROTZ tag batches
+d26022395b,2026-07-04,D,cpp+mod,169,skip-large,"169 files, structural",Chore: Run new clang-format rules
+d8cfbebd2c,2026-07-04,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",[C++] Fix ally NPCs not spawning in instances
+e6aabae622,2026-07-04,D,cpp+lua,11,,,xirand: Make usage deterministic on all platforms
+14a6dbf80f,2026-07-05,D,cpp,1,,,Core: Manually clear authenticatedSessions_ on shutdown
+17cc7389ad,2026-07-05,D,cpp,2,,,Core: Upgrade build to C++23
+1f2d8d500e,2026-07-05,D,lua+sql,2,,,Update Shadow Lord spell list
+2c2882ec09,2026-07-05,D,cpp,2,,,Core: Remove Lua empty function elision
+2c7fc37eae,2026-07-05,D,cpp+lua,17,,,Port SpawnAnimation to YAML based enum
+32ffaff292,2026-07-05,D,cpp,1,,,Skip animation lock if JA couldnt be fired
+3d6ee87468,2026-07-05,D,cpp+lua,56,skip-large,"56 files, structural",Port Allegiance and Status to YAML based enums
+47e1618820,2026-07-05,D,cpp+lua,94,skip-large,"94 files, structural",Core: Upgrade to C++23
+4a411e5944,2026-07-05,D,lua,1,,,Edit instrument macc and remove day macc bonuses
+6591fa6ac0,2026-07-05,D,cpp+lua+tools,4,,,Lua: Add math.randomInt and math.randomFloat
+716edd3d20,2026-07-05,D,cfg+cpp+mod,9,,,"[lua,sql,cpp][module] Summoner era modules and adjustments"
+782a25b5ab,2026-07-05,D,lua,1,,,Reduce Ranged Attack Damage
+866795648b,2026-07-05,D,lua,1,,,Test: Add more math.random() tests
+86f73d04e8,2026-07-05,D,cpp+lua,13,,,Port MobType to YAML based enum
+8cdaa6965c,2026-07-05,D,cpp,5,,,xirand: Add narrow-to-float safety
+93b014fa90,2026-07-05,D,lua,14,content-queued,see content_queue.csv; new_text_keys=61; applies_clean=no,[lua] Expeditionary Force Battle Logic
+94cced67ed,2026-07-05,D,cpp+lua,5,,,Core/Lua: Add math.randomNormal()
+9d695fb764,2026-07-05,D,lua,56,content-queued,see content_queue.csv; new_text_keys=31; applies_clean=no,[lua] Enable Expeditionary Force with Treasure
+a4a25ca765,2026-07-05,D,cpp+lua,20,,,Port AttackType to YAML based enum
+ab7466d241,2026-07-05,D,cpp,6,,,Core: Add UDP backpressure stats
+b518961aca,2026-07-05,D,cpp,2,,,Core: Harden synthutils to use only doubles
+c5657d02b7,2026-07-05,D,sql,1,,,[sql] Audit some synthesis content tags (401-450)
+d198a1a3ff,2026-07-05,D,lua,1,,,Retail Accurate Boyahda Tree Coffer Positions
+dee8d92131,2026-07-05,D,cfg+cpp+lua,7,,,Optional holiday setting for guild shops
+e1cab1c894,2026-07-05,D,cpp+lua+mod+tools,1156,skip-large,"1156 files, structural",Lua: Migrate to math.randomInt and math.randomFloat
+e1eca269b0,2026-07-05,D,cpp,312,skip-large,"312 files, structural",Chore: Run and tidy a chunk of IWYU warnings
+e91068d080,2026-07-05,D,lua,1,,,Tests: Harden 'Item use' test
+ef25799939,2026-07-05,D,cpp,1,,,Core: Make math.random() binding resolution clear
+fd0caff31b,2026-07-05,D,cpp+lua,7,,,Port ClaimType to YAML based enum
+0b36e6bc14,2026-07-06,D,lua,5,,,Rework magic burst multiplier function
+18bd8fb860,2026-07-06,D,lua+sql,2,,,DRG Job Quest NM Audits
+2fc73083ae,2026-07-06,D,cfg+cpp,5,blocked-client,changes CLIENT_VER,[login] Set OTP features bit if account has OTP enabled
+42e0613c87,2026-07-06,D,lua,11,,,Move magic burst script to combat folder and update usage and requires
+6045f90b6e,2026-07-06,D,lua,2,,,Globalize 2 spell tables
+7095c79d16,2026-07-06,D,sql,1,,,[sql] Audit some synthesis content tags (451-500)
+7b721271d5,2026-07-06,D,cpp+tools,9,,,Test: Add Catch2 tests
+8859bb47ae,2026-07-06,D,lua,2,,,Update Glyryvilu's Cross Attack
+8fd37f9a15,2026-07-06,D,cpp,1,,,Core: Add lint exception for pq.pop()
+9248f142ea,2026-07-06,D,cpp,9,,,Core: Tidy Variant
+94e43ac5a7,2026-07-06,D,cpp+lua,5,,,Audit status effect removal location for spell-specific effects
+9868e8ee82,2026-07-06,D,cpp,2,,,Test: Init Catch2 after TestApplication
+9a78254070,2026-07-06,D,lua,15,,,Audit some `requires`
+ab94cec20e,2026-07-06,D,lua+sql,3,,,Add Khimaira res ranks
+eba66c5f0e,2026-07-06,D,cpp,7,,,Core: Introduce Heap
+ec936a6b35,2026-07-06,D,cpp+lua,13,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Skill Specific fTP Binding
+fd7a828c65,2026-07-06,D,lua,15,,,Move job points enum file to the enum folder
+0fb133ed39,2026-07-07,D,cpp+lua,32,,,Cleanup requires and hook to lua loading
+1494a9978c,2026-07-07,D,cpp+lua,7,,,Chocobo racing packets/bindings
+150d7cb6d6,2026-07-07,D,lua,1,,,[lua] Allow purchase of exp ring with voucher
+6081d81522,2026-07-07,D,cpp+lua+sql,6,,,Cleanup old skillchain code
+852d89ff9b,2026-07-07,D,lua,18,,,Move `Combat` folder outside `globals` folder
+8f24765549,2026-07-07,D,lua+sql,2,,,Refactor Tiamat
+a5e540db62,2026-07-07,D,lua,2,,,[lua] Stop Ul'hpemde from diving
+e10c72ac99,2026-07-07,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Prevent interruption during chainspell
+059ac98622,2026-07-08,D,sql,1,,,Promyvion-Vahzl link/aggro audit
+0868d148c9,2026-07-08,D,lua,12,,,Adjust starter mob attack to match retail damage
+1e11ee9c45,2026-07-08,D,lua,1,,,Add Automaton Skills to !capallskills
+1e5e6d049b,2026-07-08,D,sql,1,,,Update NPC sell prices to retail values
+2f61c8fa48,2026-07-08,D,lua+mod,9,,,Attachment Burden Values
+2f779f9a01,2026-07-08,D,cfg,1,blocked-client,"CLIENT_VER bump, never take while pinned",Bump client version July 2026 VU
+6f5b60c3e7,2026-07-08,D,mod,1,,,Era Skillchain Module
+72d5fbd05c,2026-07-08,D,lua,1,,,[lua] Don't lock Dhalmel Meat when not necessary
+8dc35237e6,2026-07-08,D,lua+sql,8,,,Sky Respawn Timer Cleanup
+acad0e8b44,2026-07-08,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix Jakaka trigger function accessing nil
+c410cacf43,2026-07-08,D,lua+sql,9,,,"Update Grand Wyrms, Add Revilers Helm"
+e2880c6a41,2026-07-08,D,lua+sql,16,,,Audit some Arrows/Bolts `Additional effect: Elemental damage`
+1075ee0e03,2026-07-09,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Bhaflau mismatched QMs
+14be6366c0,2026-07-09,D,sql,1,,,[July 2026 VU] Cities NPC shifts
+15a2b093c1,2026-07-09,D,sql,1,,,Shift NPCs up in Stellar Fulcrum
+249ae3830f,2026-07-09,D,lua,4,blocked-client,"shifts zone text IDs, our client is pinned",[July 2026 VU] String shifts
+25112ad6fe,2026-07-09,D,lua,29,,,Edit `calculateNullification()` to account for non-magical damage source
+25da384ae3,2026-07-09,D,sql,1,,,[sql] Audit some synthesis content tags (501-550)
+296ec74650,2026-07-09,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Wajaom mismatched QMs
+2b14759cf4,2026-07-09,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Uggalepih mismatched QMs
+2ff4e39008,2026-07-09,C,lua,4,conflict,does not apply cleanly onto 9e6f10c2fb,Convert Rubbish Day to IF / Fix Compatability Events
+3855c78e96,2026-07-09,D,lua,1,,,Tiamat Mighty Strikes Bugfix
+3949d478e2,2026-07-09,D,mod,1,,,Mog House Exit Event Module
+4366bb16a6,2026-07-09,C,lua+sql,2,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Fix Yhoator mismatched QMs
+492c86ab6f,2026-07-09,D,sql,2,,,Temenos entities rework
+4d311b479d,2026-07-09,D,lua,1,,,[July 2026 VU] Disable level correction in Stellar Fulcrum
+5e018a4779,2026-07-09,D,sql,1,,,Phantom Gem Box NPC in cities
+63812beca3,2026-07-09,D,cpp+lua+sql,8,,,[cpp][sql][lua] Add Neutral region control
+66197fbad0,2026-07-09,D,lua,12,,,Make mob spikes use their own spikes global system
+6aab1e5994,2026-07-09,D,lua+sql,3,,,Add Mandragora / Sabotender Photosynthesis
+6d1a597101,2026-07-09,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Tateeya Attachment Trade
+7a055dc19f,2026-07-09,D,lua,25,,,Convert `Excalibur` to new AE system and normalize parameters
+81d17575e0,2026-07-09,D,sql,1,,,Content Tag some NPCs
+89c3abef4f,2026-07-09,D,lua,17,,,Kill `finalMagicNonSpellAdjustments()`
+ad00b54ec2,2026-07-09,D,lua,29,,,Edit `calculateAbsorption()` to account for non-magical damage sources
+b0efbca15b,2026-07-09,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix SGusta mismatched QMs
+b4f0d85a64,2026-07-09,D,sql,3,,,[July 2026 VU] New items
+bc0a41c69a,2026-07-09,D,sql,3,,,New mobs in Stellar Fulcrum
+bfe844b369,2026-07-09,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Jugner mismatched QMs
+cc544e832d,2026-07-09,D,cpp+lua,16,,,Toteboard packets
+ccd146cd1a,2026-07-09,D,cpp,1,,,Bump constexpr steps limit for clang builds
+e5a496c50f,2026-07-09,D,lua,1,,,Adjust guild initial stocks
+f38a1c5106,2026-07-09,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",Correct HQ results for Cherry Muffin Recipe
+f5f660bb21,2026-07-09,D,lua,1,,,Tweak guild shops target stock
+f64a9b34a5,2026-07-09,D,lua,1,,,Tweak Leather guild shop initial stock
+040b72b608,2026-07-10,D,lua,14,,,[lua] Rename mob files to match SQL
+10cf025104,2026-07-10,D,sql,1,,,Faf/Nidhogg removal of immunities in SQL
+1342b15f2b,2026-07-10,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Xolotl Bug Fixes
+23188affbe,2026-07-10,D,lua,2,,,Update Knight Crabs and KA to always Aggro
+24e0a479ce,2026-07-10,D,cpp+lua,2,,,Apply cooldown to Blood Pact on paralyze proc
+250a16a337,2026-07-10,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix RSE Quest Dialogue
+276039e2bf,2026-07-10,D,cpp,2,,,Reject lockstyle if item can't be equipped / has wrong skill type
+37ceb569d8,2026-07-10,D,lua,4,,,Tweak flaky tests
+4193cadd0d,2026-07-10,D,mod,2,,,Update `calculateAbsorbtion` and `calcullateNullification` in modules
+43688b4157,2026-07-10,D,sql,1,,,[sql] Adds content tags to Abyssea mobs
+449d422eb2,2026-07-10,D,lua,1,,,Add TP Clamp to Aftermath handler
+537b17e0ad,2026-07-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Friars Lantern no standback fix
+5636a9ca0d,2026-07-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Wajaom Tablet models
+66a1cf00b1,2026-07-10,D,mod,1,,,[sql][module] Adds module to revert Tiamat to drop Herald's Gaiters
+6c814f7b5d,2026-07-10,D,cpp,1,,,Unequip linkshell and rebind new when changing item during promotion
+6e462ea3ca,2026-07-10,D,cpp,1,,,Log item name and ID when a locked trade happens
+6faf88039e,2026-07-10,C,mod+sql,6,conflict,does not apply cleanly onto 9e6f10c2fb,"[sql, lua][module] Fix ToAU/era merit ability recast bugs"
+754b27b4a3,2026-07-10,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix bolts addEffect typo
+791af1b250,2026-07-10,D,lua,1,,,Bandaid: Blue spell ecosystem being nil
+861383ecf4,2026-07-10,D,cpp+lua,2,,,Single message on paralyze proc
+9344a4348e,2026-07-10,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Ifrit's TP spells
+997d2d5663,2026-07-10,C,mod,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix PUP Module Repair Message
+9efb5449b4,2026-07-10,D,lua+sql,11,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Remove duplicate QM logic in Zilart King scripts
+a25adffece,2026-07-10,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Zoredonite Bug Fixes
+a828ff707d,2026-07-10,A,lua,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,Cap crystal trade overflow conquest points to 1000
+a87b0dbefa,2026-07-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Friars Lantern (no grow) job fix
+b9e43e6809,2026-07-10,D,lua+sql,2,,,Update Seiryi to WAR/RDM
+bb490d3e07,2026-07-10,D,lua+mod,5,,,Update modules combat folder location and structure
+bb8bbc0042,2026-07-10,D,cpp,7,,,Reject lockstyle if item is no longer owned
+c76adfe30f,2026-07-10,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix maat testimony check
+cb3466db14,2026-07-10,D,cpp,1,,,Handle TOTD despawning differently in sleeping zones
+cbea124907,2026-07-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Kuftal Rock always being down
+cc658b5923,2026-07-10,D,sql,2,,,[sql] Adds mob pool for Seethers in regular Promy zones
+d05a9d8aae,2026-07-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Porphyrion Mob Family
+d7d0f4fa8d,2026-07-10,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Crimson Pawberry QM and Toppi-Meppi Content Tag
+da6e3e05bb,2026-07-10,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Wyrm Draw-in Location
+e772cd2c97,2026-07-10,D,lua+sql,3,,,King Arthro adjustments
+f976d4150e,2026-07-10,D,lua,15,,,[lua] Audit CoP 1-1 and Transport events
+0129055a23,2026-07-11,D,lua+sql,2,,,Enable Hocho in guild shops
+022a51cdfa,2026-07-11,D,sql,1,,,Content Tags
+0a6004fd61,2026-07-11,D,cpp+lua,32,,,Port Weather and SpawnType to YAML based enums
+0d787f284a,2026-07-11,D,cpp+lua,15,,,Port RoamFlag to YAML based enum
+1109fe03ba,2026-07-11,D,lua+sql,2,,,Tweak Wahnid guild shop restocks
+14bcb059c9,2026-07-11,D,lua+sql,13,,,[lua] Add Ra'Kaznar elevators
+18d662bd7a,2026-07-11,D,lua,1,,,Reorder Hagakoff shop and check for Candescence
+19859722be,2026-07-11,D,lua+sql,6,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,Audit Konchtat Highlands ??? npcs and associated quests
+1e3fcf944b,2026-07-11,D,cpp+lua,13,,,Port ZoneType to YAML based enum
+1f0ab1815b,2026-07-11,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Wajaom NPC stray position
+263a707e31,2026-07-11,D,lua+mod,27,,,[lua][module] Adds modules to rework many vendor stocks
+29587c0c6b,2026-07-11,D,lua,1,,,Add back missing parameter to status AEs deleted on accident
+2f21b285f2,2026-07-11,D,cpp+lua,27,,,Port ZoneMisc to YAML based enum
+42fdeed3aa,2026-07-11,D,cpp,1,,,[C++] Set all mobs to deaggro on m_Locked
+4aadfe2ddb,2026-07-11,C,mod,1,conflict,does not apply cleanly onto 9e6f10c2fb,PUP Era Module Bug Fixes
+4e7bf67d10,2026-07-11,D,lua,11,,,"[lua] Event Audit: ToAU gates, Sandy 1-2, and THF AF3"
+55014f2d0b,2026-07-11,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Automaton Healing Calculations
+56d2e7bc07,2026-07-11,C,lua+sql,5,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Alzadaal QMs
+58e2ef896e,2026-07-11,D,cpp+lua,48,skip-large,"48 files, structural",Port SkillType to YAML based enum
+59091656d2,2026-07-11,D,lua+sql,3,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Document Upper Delkfutts Tower Key ??? npc
+6223d51e06,2026-07-11,D,lua,1,,,[lua] Remove city chocobo sound on event
+699d97010e,2026-07-11,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Maze of Shakhrami position fixes
+7371778b01,2026-07-11,D,cpp+lua,13,,,Port Immunity to YAML based enum
+7c0540d90d,2026-07-11,D,lua,3,,,[lua] Block teleports while mounted
+7e7aa2d57b,2026-07-11,D,sql,1,,,Make Beach Pugils not link
+8178fcb358,2026-07-11,D,lua,1,,,[lua] Reset mission status of failed Windurst 2-2
+9757ca7525,2026-07-11,D,cpp+lua,17,,,Port Behavior to YAML based enum
+9eb69b546c,2026-07-11,D,cpp,2,,,Remove unused CNpcEntity::hpHidden
+b2924f950b,2026-07-11,D,cpp+sql,2,,,Bump NPC script name column to 64 chars
+bf441f5253,2026-07-11,C,sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix 7-2 Orcs Wyvern
+c089626913,2026-07-11,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",Fix Oztroja trap door timing
+c0a29c8b82,2026-07-11,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix bug in Phuabo deaggro
+c1b430a99f,2026-07-11,D,lua,1,,,Tweak fishing guild shops
+c1e9145136,2026-07-11,D,sql,1,,,Valor and Honor spawn point
+cb35499538,2026-07-11,D,lua,1,,,Tweak Bornahn supply
+e06e433097,2026-07-11,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix the base sell values of 11 more items. (#10621)
+e1def3711c,2026-07-11,D,cpp,1,,,[cpp] Adds extra logging for ITEM_TRANSFER packet on reserved items
+e5558d59bd,2026-07-11,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Delete KIs at the correct prog for Early Bird Catches the Bookworm
+e9af421f99,2026-07-11,D,cpp,16,,,Port NameVis and EntityFlags to YAML based enums
+e9eca07d85,2026-07-11,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Tutorial Quest Step 10 Copper A.M.A.N. Voucher reward
+eb8aad55b6,2026-07-11,D,lua,1,,,Rewrite freshly summoned pet logic's return pos
+f45a5b901e,2026-07-11,D,lua,1,,,Require Astral Cadescence for certain shop items
+f492c0b74c,2026-07-11,D,cpp+lua,8,,,Port Detects to YAML based enum
+f9d8828dbe,2026-07-11,D,lua,1,,,Add Superlink to Kindred Spirits
+fd48af3475,2026-07-11,D,cpp+tools,5,,,Move enum_traits.h to common for cross-module enum use
+ffb1ec6e60,2026-07-11,D,lua,1,,,Force Nin unlock leeches to aggro/claim on spawn
+1536315932,2026-07-12,D,lua,1,,,Adjust Maat Mnk's accuracy
+159a3576f8,2026-07-12,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Kill tiger in the correct amount of time
+1efae911cf,2026-07-12,B,cpp+lua,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] [lua] add getUnkillable to lua bindings
+29bdb5342f,2026-07-12,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Windurst 6-1 Cardians linking
+2c729a3bde,2026-07-12,C,lua,5,content-queued,see content_queue.csv; new_text_keys=5; applies_clean=no,"[lua] Fix quest getMustZone, Bastok Mom quests, Konschtat signposts"
+4e9c03205c,2026-07-12,D,sql,1,,,Update some bunnies to have stealable meat
+5b59cfc2ff,2026-07-12,D,lua+mod,2,,,"Rewrite ""Mom the adventurer"" and cleanup associated module"
+5cb594e512,2026-07-12,D,lua+sql,2,,,Gil adjustment for Cargo Crab Colin
+605f295f8a,2026-07-12,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix caster check in mob utils
+6695a94e32,2026-07-12,C,cpp+lua+mod,7,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Rampart Magic Shield absorbing physical damage.
+6d56c36370,2026-07-12,D,sql,1,,,Update normal rabbits to be warriors
+7f92e6bdee,2026-07-12,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix player transport sending target to HP instead of location
+952f91f83f,2026-07-12,D,sql,1,,,Update Ghrahs to war main blm sub
+9bb70605eb,2026-07-12,D,cpp,6,,,[cpp] Add hidden option for event
+9fc7761ff8,2026-07-12,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Adjust magic state interrupt
+b2cd6f79e9,2026-07-12,C,lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,"Rewrite ""A flash in the pan"" and other minor fixes"
+c3d3d8fe1b,2026-07-12,D,lua,1,,,Add Bind to Mountain Buster
+cbbf0f2121,2026-07-12,C,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,Fix Valley of Sorrows QMs
+cbf05f3163,2026-07-12,B,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Don't do silly calculations for no reason for base delay
+dc07afb62e,2026-07-12,D,lua,1,,,Tweak Curry Powder and Sabiki Rig guild shop prices
+e3b014a206,2026-07-12,B,cpp,1,adopted,adopted with tweak: xi::StatusEffect::Seigan -> EFFECT_SEIGAN,[core] Reduce Third Eye merit recast reduction by half with Seigan
+f0db19a151,2026-07-12,C,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Maidens Virelai
+0164ed8eb2,2026-07-13,D,lua,5,blocked-client,"shifts zone text IDs, our client is pinned",Convert some raw entity IDs to GetFirstID() methods
+0dfda321ca,2026-07-13,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] change resetDelay to use setDelay of base delay
+0eedb73ce7,2026-07-13,D,lua,1,,,Remove Extra Hits TP from Meikyo Shisui
+233c459d95,2026-07-13,C,lua,8,conflict,does not apply cleanly onto 9e6f10c2fb,Fix KS99 Wyrm No Miss
+2976131650,2026-07-13,D,cpp,1,,,Do not block REQSUBMAPNUM while in CS
+29ffa41366,2026-07-13,D,lua,47,skip-large,"47 files, structural",Convert Call of the Wildcat to IF
+2ead23a552,2026-07-13,D,lua+sql,5,,,Sandy 6-2 Audits
+40823b40eb,2026-07-13,D,lua,17,,,"Create a separate mixin for ""sleep at night"" behavior and apply it"
+4c14424658,2026-07-13,D,cpp,4,,,Deny zoning with rental chocobo to non-riding zones
+65d535d363,2026-07-13,D,lua+sql,233,skip-large,"233 files, structural",[lua][sql] Create Expeditionary Force mobs and enable zones
+67aba7c85a,2026-07-13,D,lua,23,,,Cleanup stoneskin handling and usage
+6c642ed975,2026-07-13,C,lua+sql,6,conflict,does not apply cleanly onto 9e6f10c2fb,Fix SMN BP TP Consumption
+8d9b1f9537,2026-07-13,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Queen Jelly HP
+955f48f7c6,2026-07-13,D,sql,2,,,[sql] Update Expeditionary Force models and skills
+a50872d468,2026-07-13,D,cpp+mod,4,,,Rename ZoneMisc::AuctionHouse
+bb07bae2b0,2026-07-13,D,lua,2,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,Enable Bostaunieux trap doors
+c08fbb3d9e,2026-07-13,D,cfg+cpp+lua,5,,,Add settings to Mog House settings
+ca810e6ab2,2026-07-13,D,lua+sql,2,,,Khaf Jhifanm shop accounts for Candescence
+d38fa1454f,2026-07-13,D,cpp+lua+sql,18,,,Fence rendering culling; Domain Invasion POC
+d6a7795a21,2026-07-13,D,lua+sql,10,,,[chore] Restore Ra'Kaznar elevator retail names
+dad9c143f5,2026-07-13,D,lua+sql,2,,,Adjust guild stocks
+db37e3d4ca,2026-07-13,D,lua+sql,9,,,Sandy 7-1 and 7-2 Audits
+e531c00c3c,2026-07-13,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Correct flags for Windurst 9-2 final CS in Walls
+15b9686b8d,2026-07-14,D,other,1,,,[ci] Remove built exes from build cache
+1600c6ba9e,2026-07-14,D,lua,57,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] Move fomorParty superlink to onMobInit
+3edc447413,2026-07-14,C,lua+sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,ZM4 Fixes and Audits
+5b4079d940,2026-07-14,D,lua,3,,,[lua] Add in store tp merit to tp return calcs
+5f527fe6a4,2026-07-14,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Ark Angel MR Pet Respawn
+633cd2488f,2026-07-14,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Mamool Ja's Lizard Fix
+710cb5faec,2026-07-14,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix Chi Blast Boost multiplier
+75dc4a99a8,2026-07-14,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Allow Blink/Utsusemi to negate knockback
+853fdfe3eb,2026-07-14,D,cpp,1,,,[C++] Hide player from own events when marked hidden
+89720a8900,2026-07-14,B,cfg+cpp,5,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Add setting to hide readies target id
+8b640c8829,2026-07-14,D,cpp,1,,,Tighten job change checks
+8bcd3b16ee,2026-07-14,D,lua,4,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=yes,Add Goblin Footprint in RuAun
+8c8d4bd08c,2026-07-14,D,lua,1,,,Add Music to Pirates
+8d194cb073,2026-07-14,D,lua,3,,,Harden Promy Vahzl Boss Engage
+b24f30f1d4,2026-07-14,D,cpp,2,,,Change Pet getMobHP() to int32
+b4ddbea641,2026-07-14,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Skip grid check on UpdateEntityPacket for always relevant npc
+b89977cdc1,2026-07-14,D,lua+sql,6,,,Add Final Roll to Pulling the Strings
+c8e204cb2e,2026-07-14,C,sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,"Add Content Tags, Fix Apex Drifer Mob Group"
+cb20325964,2026-07-14,D,lua,1,,,Audit Suzaku res
+d311881879,2026-07-14,D,sql,2,,,MNK/PUP Mob Weapon Delay Audits (#10693)
+d37bea4ccd,2026-07-14,D,lua,24,,,Damaging AEs: Rename `isRanged` to `ignoreEnSpell` & apply to Excalibur
+d797d2ba25,2026-07-14,D,cfg+cpp,2,,,Add era Counterstance DEF behind USE_OLD_COUNTERSTANCE
+dfa6718450,2026-07-14,D,lua,7,,,[lua] Restrict xp in Eco-Warrior and Garrison
+ea9b68dfbf,2026-07-14,C,lua,8,conflict,does not apply cleanly onto 9e6f10c2fb,Various item blocking fixes
+f6cdfdca25,2026-07-14,C,lua+sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Den of Rancor QMs
+0f32dd99aa,2026-07-15,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",Correct Killer Effects on Items
+14b9e50805,2026-07-15,D,lua,12,,,"[lua] Ominous Cloud enums, add missing pouch luas"
+1c4b1d2906,2026-07-15,D,lua,2,,,Remove `Server Variable` usage from Awaerns and Ixaern
+2afa9aa4b6,2026-07-15,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix teleport spells
+2b09985334,2026-07-15,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] fix mob ranged fSTR lower bounds
+42dd4e6169,2026-07-15,C,lua+sql,5,conflict,does not apply cleanly onto 9e6f10c2fb,"[sql, lua] Fix Windurs 6-1 Jack Cardians"
+43c2a77f42,2026-07-15,D,lua,1,,,[lua] Change Sunsand must zone check to ~= 0
+4685cb369b,2026-07-15,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Faust Aggro Fixes
+4b6a2577ab,2026-07-15,D,lua,1,,,[lua] Add missing 10th point to Morion Worm QM
+694cd7925b,2026-07-15,D,sql,1,,,[sql] Adjust South Gustaberg QMs to match retail
+8076914c5a,2026-07-15,D,lua,1,,,[lua] Adjust BLU quest tradehas order to not lock item accidentally
+8fd3720877,2026-07-15,D,lua,1,,,Update SMN Maat's defenses
+92b8c80020,2026-07-15,D,sql,1,,,Remove Castle Zvahl Baileys Music
+958b30275d,2026-07-15,D,lua,7,,,Minor Garden of Ruhmet cleanup
+9a1911f852,2026-07-15,D,lua,8,,,Delete empty onMobDeath functions with bad parameters
+abb0bd807b,2026-07-15,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix mob fstr lower bounds
+b6915cb5ff,2026-07-15,D,lua,1,,,[lua] Expeditionary Force - Award Influence
+b93d7c0d10,2026-07-15,D,lua,1,,,Update Sticky Thread TP scaling duration
+c59df6142a,2026-07-15,D,lua,1,,,[lua] Appraisal: Don't lock items unless they will actually be taken
+c7fb2f3320,2026-07-15,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Correct Utsusemi Effect Wear Message
+c9dd1b046e,2026-07-15,D,lua,1,,,Give Despot 1ms Ready time for Ready Message
+d03ad7b9f3,2026-07-15,D,lua,1,,,Remove string penalty from song potency
+ee562f1c7c,2026-07-15,D,lua,1,,,[lua] Adjust campfire default action to match retail in sgusta
+1a6b1d7472,2026-07-16,D,lua+sql,7,,,Trials Size Avatar Fight Res Override
+37d73695a5,2026-07-16,D,sql,1,,,[sql] Audit some synthesis content tags (551-600)
+3beb15e4be,2026-07-16,D,lua,40,,,Make `xi.mobskills.calculateDuration` work like it claims it does
+52cc69b57f,2026-07-16,D,sql,1,,,[sql] Adjust Ifrit's Cauldron's 2nd set of mining points to be visible
+542ddba843,2026-07-16,D,cpp,1,,,[C++] Account for if conquest setting is reduced midweek
+5b5ea69a10,2026-07-16,D,lua,1,,,Make Tarasque claimed on spawn
+6423f79910,2026-07-16,D,lua,2,,,Add check for CoP 8-2 to disallow entering The garden of Ru'Hmet
+7d28390b27,2026-07-16,C,lua,3,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix fade-to-black nation change event
+ad7d8e6c52,2026-07-16,C,lua+sql,2,candidate,"applies cleanly, not yet built or reviewed",Correct Boreas Cesti AE to 5-7 DMG
+b44c56f9f3,2026-07-16,D,lua+sql,4,,,Sandy 8-1 Audits
+c25653dd2e,2026-07-16,B,cpp+sql+tools,3,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,"[core] [lua] Extend charvar to 64 characters, add size check msg"
+e6210918ba,2026-07-16,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix not checking if pet is nil before fetching pet entity type
+ec1160d230,2026-07-16,D,lua,4,,,[lua] Perform intro event on nation swap
+f2cc43d096,2026-07-16,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",Silk Caterpillar Despawn Fixes
+046904e127,2026-07-17,D,lua,4,,,Combat: Skip SDT checks on absorb
+0b4582d766,2026-07-17,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",Correct animation ID for Steaming Rage / Feather Barrier
+19d90155e4,2026-07-17,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Kamlanaut aggro range fix
+23de6a3232,2026-07-17,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Sandy 6-2 Aggro Fixes
+24956c5512,2026-07-17,D,lua+sql,17,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Update Dynamis Lord
+56ec99819c,2026-07-17,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Sandy 8-2 Fixes
+69e0e8f91a,2026-07-17,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Sandy 6-1 Key Item Fix
+78a2a023dc,2026-07-17,D,sql,1,,,"[sql] Set Raptor's Food npcs to ROV, hide from widescan"
+7a7126ae11,2026-07-17,D,lua,1,,,[lua] Habetrot qm respawn 15 mins
+8df1f04d8a,2026-07-17,D,lua,3,,,[lua] Add Bartabaq outpost vendor
+945246f166,2026-07-17,C,cpp,5,conflict,does not apply cleanly onto 9e6f10c2fb,Fix ghost item in ammo slot
+a306f81ecb,2026-07-17,D,lua,2,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Handle onEventUpdate for Manaclipper ticket seller
+a5c6d4609a,2026-07-17,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,mob pos fixes
+c9624e4107,2026-07-17,D,sql,1,,,[sql] Start Mjoll's Goods door in closed state
+d74530918e,2026-07-17,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] Spawn, but hide content tagged NPCs"
+da420bb080,2026-07-17,D,lua,2,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,[lua] NPC Tswe Panipahr (Manaclipper) cleanup
+ebbb161b59,2026-07-17,D,lua,1,,,[lua] Stardust quest repeatable mustZone
+f47090c1de,2026-07-17,C,lua+sql,12,content-queued,see content_queue.csv; new_text_keys=30; applies_clean=no,Barge fixes and NM Adjustments
+0cb2ac1a9d,2026-07-18,D,cpp,2,,,Core: Only make 1 SQL query when loading a char
+0d8a97fd87,2026-07-18,D,cpp,1,,,Harden charselect reply write and reject 0.0.0.0 map address
+1903632d0c,2026-07-18,D,mod,1,,,NIN DRG SAM quest era module
+225666dd27,2026-07-18,D,tools,1,,,dbtool: Support local network from ip menu
+2de771d590,2026-07-18,D,lua+mod,3,,,"Globalize bestowSignet, add Era module"
+313267e3ce,2026-07-18,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix H2H rendering with weapon-less lockstyle
+37b29bc3bd,2026-07-18,D,cpp,4,,,Map: Move socket recv/send to own thread
+38281155c2,2026-07-18,D,sql,2,,,[sql] Sabertooth Tiger meat steal tables
+3891fe732f,2026-07-18,D,lua,3,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=yes,Adjust Locker lease when switching access
+42faedde8a,2026-07-18,D,cpp,2,,,Core: Various Windows tweaks to performance
+43a28cce91,2026-07-18,D,cpp,1,,,Chore: Change stats reporting ordering
+47a5ef3d18,2026-07-18,D,cfg+cpp,2,,,Era Experience points setting
+649497138d,2026-07-18,D,other,3,,,Ext: Vendor SPSCQueue
+6a37270c8c,2026-07-18,D,cpp+lua,2,,,"[C++,lua] Critical hit hooks for ranged and BLU"
+6fe9908423,2026-07-18,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix checkPetCommand
+751ff95f45,2026-07-18,D,lua+sql,6,,,SAM unlock Quest and NMs audit
+7d562e4853,2026-07-18,D,cpp,1,,,Chore: Use Fn in socket.h
+88015eba58,2026-07-18,D,cpp+lua,6,,,Set high bit on daily guild close to suppress message
+ab3027f9af,2026-07-18,D,cpp,1,,,Raise open-file soft limit to the hard limit
+ad8bd1d4e6,2026-07-18,D,cpp,4,,,Core: Add Box alias for unique_ptr
+aea694ad15,2026-07-18,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix session hash collision for concurrent same-IP logins
+bcea01506a,2026-07-18,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",Fix Gold Musketeer's Ring and Diabolos's Torque latents.
+bdf6c93ddd,2026-07-18,D,mod,1,,,Era Gobbiebag Fame Requirements
+bf1e02b524,2026-07-18,C,lua+sql,5,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Olla Pequena/Media/Grande
+c26b659858,2026-07-18,D,cpp,2,,,Chore: Link winmm in StandardProjectSettings
+c3d8bdf265,2026-07-18,C,sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix some content tags and mob spawn points
+d895ca21e9,2026-07-18,D,lua,2,,,DRG Unlock Quest Audits
+da0bcd135c,2026-07-18,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Laughing Bison animation for the sign
+db1dc709a1,2026-07-18,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,Ding Bat POS Fix
+dc72a83fd3,2026-07-18,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,NIN Unlock Quest Audits
+e1746ea400,2026-07-18,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Fradubio (NM) pets despawn on death
+e6a7ae498f,2026-07-18,D,tools,1,,,dbtool: Add WinDefender exclusions task
+e71825e0d3,2026-07-18,D,cpp,1,,,Retrieve zone musics as uint16
+f83a9fe146,2026-07-18,D,lua,31,,,"[lua] Nokkhi Jinjahl quiver npc enums, item luas"
+ffa7af13af,2026-07-18,D,sql,1,,,Adjust Charybdis' job to Warrior
+006e618d06,2026-07-19,D,lua,28,,,Chore: Rename WOTG Nation Quests
+092083b041,2026-07-19,D,lua,1,,,Quests: Add trade reminders for WOTG-WIN-3
+0b4532b693,2026-07-19,D,lua,6,,,Quests: Quick port of WOTG-WIN-03 to IF
+11cca488bb,2026-07-19,D,other,3,,,Chore: Un-vendor backward-cpp
+1a0e12ffb4,2026-07-19,A,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,Core: Mark hang and crash as NOINLINE
+223dfdd52b,2026-07-19,D,cpp,7,,,Core: Add more info to tombstones
+2771b87b22,2026-07-19,D,cpp,7,,,Core: Add debug core dump hints
+2fbf2296df,2026-07-19,A,cpp,4,conflict,does not apply cleanly onto 9e6f10c2fb,Core: Crash directly in Watchdog instead of throwing
+427fe14b37,2026-07-19,D,sql,1,,,[sql] Treasure casket default status adjustment
+49e5bb54dd,2026-07-19,D,cpp,1,,,Don't allow Harvests into Locked Mog Safe 2
+4a24574c54,2026-07-19,D,lua,1,,,Colosseum gate NPCs default actions
+4c6d16541a,2026-07-19,D,cpp+lua+sql,14,,,Add Gravity resistance rank
+4d5ce01669,2026-07-19,D,cpp,10,,,Core: Use cpptrace for tombstone generation
+536bff167d,2026-07-19,C,lua+mod,3,candidate,"applies cleanly, not yet built or reviewed",Fix Marksmanship Module Aftermaths
+55e46cb4a0,2026-07-19,D,lua,9,,,Implement Merry Map Markers
+6e10cb2202,2026-07-19,D,cpp,3,,,Chore: Un-vendor Wheaty
+7a60bf8cab,2026-07-19,D,lua+sql,2,,,Adjust Byakko res and stats
+7bc23f138d,2026-07-19,D,other,1,,,[ci] Only update homebrew once per workflow run
+7c809f6d26,2026-07-19,C,cpp+lua+sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Escape Zone Masks / Update Can't Escape Msg.
+802822f4cd,2026-07-19,D,cpp+mod,3,,,Remove Skillchain Resistance Rank Reduction
+9c229e0e10,2026-07-19,D,cpp,2,,,Core: Improve tombstone reports on Mac
+9f0ecf54bd,2026-07-19,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Quests: Fix WOTG-WIN-1 reminder text
+a797a734ae,2026-07-19,C,lua,10,conflict,does not apply cleanly onto 9e6f10c2fb,Gigas BST Fixes
+ba0769e253,2026-07-19,D,lua,5,,,Introduce `npcUtil.tradeMatches()` and apply usage to some missions
+bd4fd739f9,2026-07-19,D,other,6,,,Chore: Un-vendor wepoll
+be4a712ce7,2026-07-19,D,lua,1,,,Adjust Default Mog Locker State
+bfbd36d127,2026-07-19,D,cfg+lua,2,,,[lua] Add forced gathering wait server setting
+c934bc39ef,2026-07-19,D,cpp+lua,7,,,Disable sleeping empty zones
+caefc4b3c3,2026-07-19,D,lua,1,,,Quests: Add tests for WOTG-SAN-01 and 02
+dc3f4b9cb5,2026-07-19,D,lua,3,,,Quests: First pass of WOTG nation quests intro tests
+ddeabc42dc,2026-07-19,D,cpp,7,,,Core: Get other-thread traces in tombstone
+ea60e3dacd,2026-07-19,D,other,2,,,CMake: Add cpptrace dep
+eaefcc5700,2026-07-19,D,cpp,1,,,Grid scheduling
+f8331b60b8,2026-07-19,D,other,1,,,CMake: Pass XI_BUILD_TYPE into build
+f89cd10a2f,2026-07-19,D,lua,30,,,Quests: Tidy headers of WOTG nation quests
+0bc89e1adf,2026-07-20,D,other,1,,,Clang: -Wno-nontrivial-memcall
+0ce919df73,2026-07-20,D,cpp,5,,,Core: Report CMAKE_BUILD_TYPE on startup
+1120c0e30d,2026-07-20,D,cpp,2,,,Allow looking up instances by run ID
+14639e79e2,2026-07-20,D,cpp+lua,5,,,Restrict Sanction/Sigil food bonus to relevant regions
+1615216fe0,2026-07-20,D,cpp,1,,,Chore: Suppress warnings on XI_STRINGIFY
+178b4cef5f,2026-07-20,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix Reward Mobskill Case
+2624e7e39b,2026-07-20,A,cpp,1,blocked-infra,needs upstream EntityID_t::resolve<T>(); ours is a plain POD,Fix UAF with captured pointers in several bindings
+269f55a403,2026-07-20,D,cpp,7,,,BattleEntity stores EntityID_t instead of targid
+28ff08be9c,2026-07-20,D,other,5,,,CI: Add libdwarf dependency
+2e57e05400,2026-07-20,D,cpp,2,,,Cancel item use on job change
+3cc2ac4ca0,2026-07-20,D,cpp,6,,,EntityID_t stores more information for accurate lookups
+41cfd0bad3,2026-07-20,D,cpp,6,,,Core: Clean up Win-only defines
+459b4d4622,2026-07-20,C,cpp,3,conflict,does not apply cleanly onto 9e6f10c2fb,Debug: Fix const-ness of raw_trace.resolve()
+498009c347,2026-07-20,D,lua,1,,,Give Icarus Wing Store TP scaling
+5a799eee71,2026-07-20,D,lua,1,,,Update Bane to use effect:addMod
+6214f806ab,2026-07-20,D,other,1,,,CMake: Use libdwarf for symbols on Linux
+6fd2f8a4e6,2026-07-20,D,lua,1,,,[lua] Restrict kill types for Chaosbringer
+89a9e108fb,2026-07-20,D,lua+sql,12,,,Implement Cerberus Mechanics
+9328afd31e,2026-07-20,D,sql,1,,,Cotton Tofu sell price
+984bd8bb6b,2026-07-20,D,cpp,2,,,Stamp all entities with an auto-incrementing ID
+998fc80d00,2026-07-20,C,lua,2,candidate,"applies cleanly, not yet built or reviewed",Fix incorrect ToAU mission 11 to 12 wait and timer
+ab366144c6,2026-07-20,D,cfg+cpp,6,,,Core: Make core dumps opt-in
+b09c3f4b5f,2026-07-20,D,lua,1,,,[lua] Remove Hit Interrupt For Ranged Mobskills
+b5e626a6ad,2026-07-20,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Correct Rock Bottom trade requirements
+bc1124be15,2026-07-20,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua] Mom the Adventurer - fix Daughter repeat, Parnika text"
+be85f0cb0e,2026-07-20,D,lua,33,,,Audit and destroy all mission uses of `npcUtil.tradeHasExactly()`
+cd345bb401,2026-07-20,D,lua+sql,4,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[sql][lua] Rename event Raminel to avoid onSpawn
+e81dd98d9b,2026-07-20,D,lua,3,,,Rename flask of vitriol
+f6e8650d0a,2026-07-20,D,cpp,4,,,Stamp instances with a unique auto-incrementing ID
+facb3dcc8d,2026-07-20,D,other,1,,,CMake: CMAKE_CXX_SCAN_FOR_MODULES: OFF
+fbe9e8aeb0,2026-07-20,D,lua+mod,2,,,Move Atonment Clamp
+06912e4f7d,2026-07-21,D,cpp,1,,,Update LoadPet with frame check
+1c87b55496,2026-07-21,D,lua,2,,,[lua] Allow Mobmod Commands To Be Used On Pets
+1d23cc717c,2026-07-21,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Moment of Truth battlefield win event fix
+1efa97c7a0,2026-07-21,C,lua+sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,Citipati and Xol Fixes
+34e85e3cd8,2026-07-21,D,lua,1,,,[lua] Give Dainslaif it's proper dINT rate scaling
+43ceff0c43,2026-07-21,D,cpp+lua,33,,,Port MobMod to YAML based enum
+524b18daa4,2026-07-21,D,sql,2,,,[sql] Bat/Funguar Aggro/Link Behavior Adjustments
+555a4d283a,2026-07-21,D,cpp+lua,125,skip-large,"125 files, structural",Port Animation to YAML based enum
+5c37dae39b,2026-07-21,D,lua,1,,,[lua] Add linear scaling function for add effect dStat
+5c5a068c8e,2026-07-21,D,cpp,1,,,[C++]  Remove NavMesh snap on zone transition
+5ed8e5c3a6,2026-07-21,D,cpp,2,,,Core: Don't use ptrace to detect debugger
+6b5fffdcdc,2026-07-21,C,sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Assorted Link / Aggro fixes
+7c5abe3063,2026-07-21,D,cpp+lua,9,,,Don't auto-HP warping dead players
+81a40e08bf,2026-07-21,D,other,1,,,CI: Add PkgConfig to docker
+a7c5bb7bd9,2026-07-21,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Ghatsad frame/head level requirement fix
+a89516e32d,2026-07-21,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix Shrine of RuAvitau teleporters
+ab25cd14bc,2026-07-21,D,lua,2,,,Skip teleport if dead
+b96d447f73,2026-07-21,D,lua+sql,2,,,[lua] [sql] Implement Bloodsword add effect
+bfe36cbc2e,2026-07-21,D,mod,1,,,Add trailing newline
+c3ea6ded20,2026-07-21,D,cfg+cpp,3,,,Adjust Ranged Attack State Delays
+d2164ed20c,2026-07-21,C,lua,3,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,[lua] Clamming fixes; Remove KI on zone-out; Increase point cooldown (#10837)
+de12fa1a7f,2026-07-21,D,cpp+lua,5,,,Only reset TP on legitimate swaps
+e4849671ea,2026-07-21,D,lua,3,,,"Ensure Cerberus isnt moving before executing ""Roar"" and mobskill logic"
+e62d5a1479,2026-07-21,D,mod,1,,,Restore era JP midnight wait on Missionary Man
+fbf353f549,2026-07-21,D,lua+sql,6,,,[lua][sql] Update break on mobs
+0624f1dc53,2026-07-22,D,sql,2,,,[sql] Mamook aggro/link audit
+13f4387512,2026-07-22,D,other,1,,,"[docker,alpine] Use ninja-build instead of samurai"
+1e11440a8c,2026-07-22,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Fix attack timer skipping the tick it swings on
+3af1f2bbb8,2026-07-22,D,lua,53,skip-large,"53 files, structural",Audit Bastok quest trades
+4640ec544c,2026-07-22,D,cpp,28,,,Clean up state files const/style
+87d15607e8,2026-07-22,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix Synthesis Support subPower
+a22230633f,2026-07-22,D,sql,1,,,[sql] Audit some synthesis content tags (601-650)
+b6376ecba8,2026-07-22,D,cpp,7,,,Add EntityID_t overloads for target validation
+c01bd24694,2026-07-22,D,cpp,3,,,lastAttackerId converted to EntityID_t
+c71acba110,2026-07-22,D,lua,2,,,Add real clamming loot tables
+c740923f20,2026-07-22,D,lua,1,,,[lua] Add in the minimum value to the linear add effect rate calc
+d94defb80f,2026-07-22,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[cpp] Fixes broken linkshell query
+e2b53585dd,2026-07-22,D,cpp+lua,67,skip-large,"67 files, structural",Port Mod to YAML based enum
+f02198e629,2026-07-22,D,cpp,2,,,CMobEntity::getMobMod const
+f3a119d497,2026-07-22,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Magic: fix instrument check
+f9f3d2bbd3,2026-07-22,D,cpp+lua,14,,,Remove legacy Stoneskin power tracking method
+fade5f22b8,2026-07-22,D,sql,1,,,[sql] BhoWho Warmonger add aggro
+28440aee7e,2026-07-23,D,lua+sql,22,content-queued,see content_queue.csv; new_text_keys=12; applies_clean=no,Sandy 9-1 and 9-2 audits
+29492c00c7,2026-07-23,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,[test] Fix flaky battle2 Clipper and gardening mog safe tests
+4485b10936,2026-07-23,D,lua,13,,,[lua] Add Shadowreign support to An Explorer's Footsteps
+46c8fca5f7,2026-07-23,D,cpp+lua,2,,,[C++][lua] Conquest: Set rank of ties for first to lower value
+46d84c32e3,2026-07-23,D,cpp,10,,,Support retrying individual tests on failure
+47453e4675,2026-07-23,D,cpp,2,,,Handle +Skill Latent Effects
+7abc276d22,2026-07-23,D,lua,3,,,Promyvion Fight Requirements
+7b7a990bc2,2026-07-23,C,lua+sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,Shadow Lord Bug Fixes
+7dc84274e4,2026-07-23,D,cpp+lua,10,,,Filter certain traits on monsters
+bf4953b6ee,2026-07-23,C,lua,10,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=no,Clean Up / Fix RSE Sachet NM Code
+d018fd3594,2026-07-23,C,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,"[test] Fix flaky effect flag and soultrapper tests, reset weather"
+d892d5eeaa,2026-07-23,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] Fix Mokop-Sankop animation in Windurst
+e0742659d6,2026-07-23,C,sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,[sql] EF - NM flags plus delay and skill list fixes
+053b1f700a,2026-07-24,D,cfg+cpp,3,,,Load rate limits from config
+10ad3c8e77,2026-07-24,D,cpp,3,,,Feed EntityID_t to FaceTarget
+1238aa094b,2026-07-24,D,cpp,17,,,Feed EntityID_t to Controller::Cast
+1261f5feaf,2026-07-24,D,lua,1,,,[lua] Quest Say It With Flowers: Add title reward
+14ea61834d,2026-07-24,D,cpp,12,,,Feed EntityID_t to Controller::RangedAttack
+2af32e9865,2026-07-24,D,other,26,,,Reformat all YAML files with consistent style
+480efca09a,2026-07-24,D,cpp,10,,,Feed EntityId to Controller::WeaponSkill
+6c5ec5e6b7,2026-07-24,D,cpp,25,,,Rename EntityID_t to EntityId
+7c1dd81f30,2026-07-24,D,cpp+lua,65,skip-large,"65 files, structural",Port Job to YAML based enum
+847657cbbf,2026-07-24,D,other,1,,,Enforce LF for YAML
+8cacc78ed1,2026-07-24,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Fix BLU Auto Refresh trait value
+9dc71d24b5,2026-07-24,D,lua,3,,,[lua] Add Mute additional effect to Eight of Cups
+a2fb602f76,2026-07-24,D,tools,8,,,Use custom formatter for YAML files
+ad331314a4,2026-07-24,D,lua+sql,4,,,Adjust several mob TP abilities
+bfcbafe3f4,2026-07-24,D,cpp,17,,,Feed EntityId to Controller::Ability
+d868a41b7b,2026-07-24,D,cpp,14,,,Tidy controllers style/const
+0eae29dcfa,2026-07-25,D,cpp,3,,,Construct WeaponSkillState with EntityId
+1692f07bf0,2026-07-25,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix elegy potency bug
+16b2679e82,2026-07-25,D,cpp,3,,,Construct MobSkillState with EntityId
+19ce7b6f7e,2026-07-25,D,cpp,3,,,Construct TriggerState with EntityId
+24a49d2443,2026-07-25,D,cpp,18,,,Feed EntityId through Engage controller/state
+31942963ad,2026-07-25,D,cpp,5,,,Remove SetTarget uint16 shim
+34e7331aa9,2026-07-25,D,lua,1,,,Goblin Wolfman resistances
+35b353d642,2026-07-25,D,cpp,5,,,Construct RangeState and MagicState with EntityId
+385a46d671,2026-07-25,D,cpp,3,,,Construct ItemState with EntityId
+3eaf824499,2026-07-25,D,cpp,8,,,Make m_targid private in states
+55125a2fea,2026-07-25,C,lua,11,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,NM placeholder fixes and cleanup
+6e46195a42,2026-07-25,D,cpp,18,,,Feed EntityId through the controllers
+77f233bad1,2026-07-25,D,lua,1,,,[lua] dStat linear formula: Subtract out the floor for per stat rate
+8ed324c9d1,2026-07-25,D,cpp,2,,,Allow construction of states with EntityId
+987b397bf3,2026-07-25,D,cpp,4,,,Construct light states with EntityId
+c1b81f9221,2026-07-25,D,lua,3,,,"[lua] 2k, 4k, 10k Needles Mobskill Param Adjustment"
+c6e17543e4,2026-07-25,D,cpp,3,,,Construct PetSkillState with EntityId
+cca7d1c2c8,2026-07-25,C,mod,2,conflict,does not apply cleanly onto 9e6f10c2fb,[lua][module] Correct module startup errors
+d8fa900a5b,2026-07-25,D,cpp,2,,,Tidy AIContainer codestyle
+e10af5a73e,2026-07-25,D,cpp,3,,,Construct AbilityState with EntityId
+ed6d43eb50,2026-07-25,D,lua+sql,13,,,"[lua] [sql] Implement Vampiric Claws/Deae Gratia, crafted drain weapons"
+115ec6340e,2026-07-26,D,lua,7,,,Gate shop items to Astral Candescence availability
+39135f9532,2026-07-26,D,lua,96,skip-large,"96 files, structural",Make magic hit rate global function use a table of parameters
+8ed822e48b,2026-07-26,D,sql,1,,,Adjust ready/lockout time of Hydra/Cerb/Vrtra
+bd929bdd40,2026-07-26,A,cpp,38,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Resolve AI targets through EntityId to fix UAF (#10908)
+d33f280918,2026-07-26,C,cpp+lua,4,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Free Phase Ordering / Prevent Rapid Shot on Throwing
+ea6b9e66e3,2026-07-26,B,cpp,1,adopted,adopted with tweak: xi::StatusEffect::Hysteria -> EFFECT_HYSTERIA,[core] Interrupt petskills with sleep/stun/etc during completion
+f3c6939e52,2026-07-26,D,lua+sql,5,,,Additiona TP move adjustments
+09144b9a34,2026-07-27,D,cpp+lua+sql+tools,99,content-queued,see content_queue.csv; new_text_keys=21; applies_clean=no,Port Zone to YAML based enum
+0c8ef218cf,2026-07-27,D,cpp,30,,,Core: Don't use exceptions in AI state regular usage
+46bbc088c2,2026-07-27,D,cpp+lua,24,,,Port MusicSlot to YAML based enum
+4ddb4cbe2d,2026-07-27,D,lua+sql,14,content-queued,see content_queue.csv; new_text_keys=22; applies_clean=no,ZM5 Audits
+5d45a193bb,2026-07-27,D,sql,1,,,TP Ready/Lockout Adjustment for mobs of Uleguerand Range
+6be8deed24,2026-07-27,C,sql,1,conflict,does not apply cleanly onto 9e6f10c2fb,TOAU Mob POS Fixes
+74881e5f47,2026-07-27,D,cpp,1,,,Core: Update ErrorOr with Error/Success aliases
+7b0c5c525f,2026-07-27,D,lua,332,skip-large,"332 files, structural",Audit fame values across all regions
+7d202d40a1,2026-07-27,B,cpp,39,conflict,does not apply cleanly onto 9e6f10c2fb,"[core] Rename EntityId fields, deprecate GetBattleTargetID() (#10912)"
+f92d0be26e,2026-07-27,D,lua+sql,17,,,ZM 6- 7 Audits
+7388da5409,2026-07-28,C,lua,52,skip-large,"52 files, structural",Ranged mobskill fixes
+987d8e5654,2026-07-28,D,cpp,1,,,[login] Clear justCreatedNewChar after character select (#10929)
+c60908794b,2026-07-28,D,lua,2,,,Port StatRank to YAML
+c97182c255,2026-07-28,C,lua+sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Mammet family ID
+d5fb21c9cf,2026-07-28,D,tools,4,,,[codegen] Support multiple enums from one data file
+d9517e28ba,2026-07-28,D,sql,1,,,Assign unspecified family to unimplemented mobs
+ddc139efe5,2026-07-28,D,cpp+sql,5,,,Drop several unused detection and merge WS/JA
+f0e7912c30,2026-07-28,D,other,1,,,[codegen] Validate data yamls during the build
+1d78f2ae2d,2026-07-29,D,lua+sql,2,,,Adjust Promivion mob TP move ready/lockout time
+1fcaed7d32,2026-07-29,C,cfg+cpp+lua+mod+sql+tools,13,conflict,does not apply cleanly onto 9e6f10c2fb,[lua][sql] Fixes fame system rank values and fame calcs
+32431070b4,2026-07-29,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Can Cardians Cry Title Fix
+3710b8cbf8,2026-07-29,D,cpp+tools,9,,,Generate the record loader instead of driving it by hand
+3ef62b327b,2026-07-29,D,cpp+lua,5,,,Auto-generate off-mesh drop/step links in navmesh builder
+93a8c7b931,2026-07-29,D,sql,2,,,Empty species true sound detection
+a59baecea7,2026-07-29,C,mod,20,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Module Status Effects
+ecb93a54e0,2026-07-29,D,lua+sql,18,content-queued,see content_queue.csv; new_text_keys=4; applies_clean=no,ZM8-13 Audits
+083893e6bb,2026-07-30,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fomor Party Fixes
+1c69f00f24,2026-07-30,D,lua+sql,4,,,NM Respawn Times pt. 2
+36bbb4bbdd,2026-07-30,D,lua,5,,,Convert Subjob Quests to IF
+38f0aea877,2026-07-30,C,lua+sql,8,conflict,does not apply cleanly onto 9e6f10c2fb,NM Spawn Window Fixes
+3c009a5659,2026-07-30,C,lua,9,conflict,does not apply cleanly onto 9e6f10c2fb,Some NM Bug Fixes
+4ed90e5492,2026-07-30,D,sql,1,,,TP Adjustments Leech/Fly/Antlion/Crawler/Coeurl
+59a710d7eb,2026-07-30,D,tools,4,,,Generate all-optional structs for x-partial shapes
+9dc9600b43,2026-07-30,C,cpp,9,conflict,does not apply cleanly onto 9e6f10c2fb,Fix packet bounds and size truncation in xi_search
+c9f733a136,2026-07-30,D,cpp,21,,,Tidy xi_search codestyle
+dac0dcc66f,2026-07-30,D,cpp,13,,,Return search entries by value in container
+e391fd29d7,2026-07-30,D,cpp+lua+sql+tools,19,,,Replace mob_species_system with data/ecosystem.yaml
+f713fb89bf,2026-07-30,D,cpp+lua,7,,,Expand CChar Fame structure
+00739b7826,2026-07-31,D,cpp+sql+tools,13,,,[C++] Update Beastmen Influence formulation
+7dd4152460,2026-07-31,D,cpp+lua,8,,,[lua][cpp] Adds price ranks for fame
+9085a675b9,2026-07-31,D,lua,1,,,Add missing title to BLU AF1 Quest Beginnings
+bd2c63fa60,2026-07-31,D,sql,1,,,Additional Content Tags pt. 3
+e1c6d941f7,2026-07-31,D,mod,1,,,old nm respawn timers module
+1710d47047,2026-08-01,D,sql,2,,,"Greater Pugil + Oztroja, Garlaige Aggro/Link"
+1ebfb14e44,2026-08-01,D,lua,1,,,Sanction Bugfixes
+23bac43bea,2026-08-01,C,lua,3,candidate,"applies cleanly, not yet built or reviewed",Promyvion Spire Door Fixes
+4db0e55140,2026-08-01,D,lua,1,,,Add Event to JoL QM
+5407136f6b,2026-08-01,D,other,2,,,"[docker,alpine] Use GCC for build"
+7a20f9503b,2026-08-01,D,cpp+tools,46,skip-large,"46 files, structural",Replace schema POD codegen with C++ bindings
+7e75aba38b,2026-08-01,D,sql,1,,,Remove Spells from Cancer
+a69d81f6d8,2026-08-01,D,sql,1,,,More mob TP adjustments ready/lockout time
+ce1d7c9900,2026-08-01,D,lua,1,,,Adjust Crimson-toothed Pawberry's Astral Flow behavior
+d84de43aa8,2026-08-01,C,lua,3,content-queued,see content_queue.csv; new_text_keys=5; applies_clean=no,Fix Gration Ready time / Add Dried Up Fountain QM msg.
+d9db64719f,2026-08-01,D,sql,2,,,"Meriphataud, Sauromugue aggro/link audit"
+02f74b3497,2026-08-02,D,sql,1,,,Adjust missing NM tags on some AF NMs.
+078ad4eb28,2026-08-02,D,lua,3,,,Convert Collect Tarut Cards to IF
+51015a1239,2026-08-02,D,lua+sql,4,,,Adjust several TP abilities
+581ef6b501,2026-08-02,D,mod,8,,,[sql][module] Merit module additions and reorganization
+60ca150b0b,2026-08-02,D,lua,7,,,DRG Wyvern Mixin
+7b52048fea,2026-08-02,C,lua,2,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,Scattered into Shadow Fixes
+8d43cd8963,2026-08-02,D,sql,2,,,Beadeax Crawlers Nest link/aggro
+94112758ce,2026-08-02,D,cpp+lua,7,,,Core: Add navmesh filtering for specific zones
+bc672de97c,2026-08-02,D,sql,1,,,[sql] Audit some synthesis content tags (651-700)
+c26c20a178,2026-08-02,C,lua+sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua] [sql] Add Kawahori Kabuto anim, correct blind power/duration"
+c52fc35f4d,2026-08-02,C,lua,2,content-queued,see content_queue.csv; new_text_keys=5; applies_clean=yes,Fix Garlaige Incinerator Door
+fdbe7d3053,2026-08-02,D,lua,2,,,[lua] Adjust Hundredscar Hajwaj PH
+1f0c7f3a3c,2026-08-03,D,mod,1,,,Update Mog House Exit to only prompt on main job change
+27c186d0f4,2026-08-03,C,lua+sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,Sleep at Night Mixing fix for friendly Karakul
+35fb902ff8,2026-08-03,C,lua+sql,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Coated Shield
+3bc5123927,2026-08-03,D,lua,8,,,Wondering Minstrel IF Conversion
+4cc99bba74,2026-08-03,D,cpp,1,,,Increase border cells context during navmesh bake
+4cd618176d,2026-08-03,C,lua,2,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=yes,Flame Spout Trade Fix
+67a53fbd63,2026-08-03,D,cpp+lua,2,,,Do not unequip offhand when switching 1H mainhand
+67c305b885,2026-08-03,D,other,1,,,Bump navmeshes submodule to off-mesh + barrier-aware meshes
+79fe02c62b,2026-08-03,D,cpp,3,,,Dont shortcut through corners
+7d3b5e9da7,2026-08-03,D,sql,1,,,Content Tags Pt. 4
+c4cdae9495,2026-08-03,D,lua,1,,,Clear TODO from Haste Belt
+ea633ac786,2026-08-03,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,SAM Unlock Quest Fix
+eb64f7a103,2026-08-03,D,mod,3,,,Teamwork Quest Modules
+fd749eda9e,2026-08-03,D,lua+sql,3,,,Implement Dispel Couse
+245d9c642e,2026-08-04,D,mod,1,,,NM Respawn Timer Module Move
+2ed8fa160e,2026-08-04,D,lua,7,,,Sin Hunting IF
+55a04d5b3b,2026-08-04,D,cpp,1,,,Improve Automaton Inhibitor Logic
+5892b8d875,2026-08-04,D,lua,5,,,Trial by Fire IF
+5b0ef828a8,2026-08-04,D,lua,6,,,The Requiem IF
+91f8d0b511,2026-08-04,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Add nil guard to aern mixin
+9771498e3b,2026-08-04,D,cpp+lua,2,,,[test] [core] Unreserve non-confirmed items in confirmTrade
+1b3c0de5b6,2026-08-05,D,cpp,1,,,Wipe TP for level capped battlefields
+2b9adc8156,2026-08-05,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Olduum Quest Fixes
+2d002ecec1,2026-08-05,D,cpp,1,,,Reorder instance entities loading
+33fb361c78,2026-08-05,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,fix onSpawn for mob and npc in instances
+368cefed46,2026-08-05,C,lua,13,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Correct drain weapon dint scaling
+41066aeb54,2026-08-05,D,lua,2,,,Clamming: Tide adjusted loot tables. Swimsuit effects.
+521fe876b9,2026-08-05,D,sql,1,,,Altana's Repast -> AH Meats and Eggs
+529999f81b,2026-08-05,D,sql,1,,,Synthesis content tags for Hi-Potions and Drops
+6d7ab56165,2026-08-05,D,lua+sql,3,,,TP Adjustments (Orcs Sahagins and Qudavs)
+70aec122cd,2026-08-05,D,lua,10,,,The Circle of Time IF
+7e99246cf5,2026-08-05,D,sql,1,,,Blurred Harp/+1 and Nepote Bell -> Instruments
+95808fcd41,2026-08-05,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",OP Supply Quest Fix
+974681ab6c,2026-08-05,D,lua,2,,,[lua] Support non-whole number proc rates (2 digits of precision)
+9bf4ced1bc,2026-08-05,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fixes Yagudo and Quadav EES animations
+9c2787bcc8,2026-08-05,C,lua,7,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Hydra Equipment
+a674087af8,2026-08-05,D,sql,1,,,Update items vendor sale prices
+aa8bc975f9,2026-08-05,C,lua+mod,115,skip-large,"115 files, structural",era module price fixes
+bfe02ca873,2026-08-05,D,cpp+lua,7,,,Guild sales go through transaction framework
+c3e0a34ce4,2026-08-05,D,cpp,4,,,Account for recent tick movement on instant casts
+c690ad2b5a,2026-08-05,D,mod,1,,,Sandy Mission JST Waits
+d006e58256,2026-08-05,D,lua,2,,,Add support to cleanup debuffs on battlefield victories
+faa8c7570c,2026-08-05,D,cpp,1,,,Check if mob is spawned rather than alive when processing spawn slots
+fdb3293f77,2026-08-05,D,mod,1,,,Sin Hunting Module
+0d41f13b76,2026-08-06,D,lua+sql,7,,,Make Sand Pugils not link
+1f8b8b13e1,2026-08-06,C,lua,1,candidate,"applies cleanly, not yet built or reviewed","Fix missing item name in ""The Three Magi"" quest dialogue"
+36d0d2df9d,2026-08-06,D,cpp,1,,,Use DT_PARTIAL_RESULT to detect partial paths
+37042223eb,2026-08-06,D,cpp+lua,5,,,Unreserve partial confirmed stack
+44ee47472a,2026-08-06,C,cpp+lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix roam paths being built from the spawn point
+6ac5b8ec08,2026-08-06,D,lua+sql,5,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=no,[lua][sql] Windurst 8-2 audit
+88b7f56447,2026-08-06,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Correct mobs for Windurst 2-2
+90e29acc55,2026-08-06,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Prevent Aerns from casting on spawn
+92fe23b47e,2026-08-06,D,cpp,2,,,Interrupt Ranged Attack on Untargetable
+9a7a71843c,2026-08-06,D,cpp,35,,,Batch periodic character persistence into a single sweep
+9b1657d698,2026-08-06,D,lua+sql,20,,,[lua] [sql] Implement Spark weapons
+9d0919cfb4,2026-08-06,D,lua+mod,2,,,Enveloped in Darkness Era Module
+9e061b43c9,2026-08-06,D,lua+sql,11,,,Ill Take the Big Box IF
+a61e721cca,2026-08-06,D,other,4,,,Docs: Update rules and guidance for AI agents
+a7a52a321e,2026-08-06,D,lua,15,,,Add debuff cleanup to Maat fights and Mission 2-3
+be9c888c01,2026-08-06,D,lua+mod,2,,,The Circle of Time Era Module
+c1410923f2,2026-08-06,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix dangling reference in pruneTailWithin
+c94d52b02b,2026-08-06,D,lua,3,,,[lua] Implement plumbing for Pump/Fan/Battery weapons
+ce79977276,2026-08-06,D,lua,3,,,[lua] Make Water Way to Go repeatable and zone
+d180429837,2026-08-06,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Sheep in Antlions Clothing ENM
+d9e0e147f8,2026-08-06,D,cpp,1,,,Write ranged model when lockstyling with throwing ammo
+f0cd0b28bd,2026-08-06,D,lua,16,,,Pulling the Strings Item Enchantment Audit
+07b45069c6,2026-08-07,D,cpp,1,,,[C++] Send General flags when setting hidden state
+13e7fbe481,2026-08-07,D,sql+tools,5,,,"Index char_vars, accounts_parties and accounts_sessions filters"
+494be80d63,2026-08-07,C,lua+sql,7,conflict,does not apply cleanly onto 9e6f10c2fb,Sickle Slash crit fix and Ghrah adjustment
+5018da9f56,2026-08-07,D,sql,1,,,Ropchop Content Tag
+5654bd0045,2026-08-07,D,sql,1,,,Gustaberg aggro/link audit
+7cd00f974f,2026-08-07,D,lua,3,,,LB2 NM Improvements
+ae73688ade,2026-08-07,D,lua,2,,,Adjust Ziryu Roam Range
+d50054ce1a,2026-08-07,D,cpp,1,,,Rewrite party chat IPP lookup so accounts_parties indexes are usable
+e50c5759a1,2026-08-07,C,lua,2,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix BLU Ecosystem Multiplier
+e553446ff2,2026-08-07,D,lua+mod,4,,,Apoc Nigh Quest Chain Modules
+f8c93597b7,2026-08-07,C,mod,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Economizer in PUP Module
+1ab89d6d14,2026-08-08,C,lua+sql,11,conflict,does not apply cleanly onto 9e6f10c2fb,One to be Feared CoP 6-4 Fixes
+286f2fc59f,2026-08-08,D,lua+sql,4,,,Ronfaure agro/link and other bat stuff
+3cf40e7dd8,2026-08-08,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",[lua] Fix New Character CS camera
+4d9a3743d5,2026-08-08,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Moonlit Path turn-in consuming Whisper of the Moon on full inventory
+5092fa7221,2026-08-08,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Set HP update flag on Wild Card roll 3 or higher
+547431d2bf,2026-08-08,C,lua+sql,15,content-queued,see content_queue.csv; new_text_keys=2; applies_clean=no,Title Fixes + Cold Light of Day Audit
+5bcf2a1937,2026-08-08,C,cpp+sql,2,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Dancers / Evokers Roll
+658e5e9691,2026-08-08,D,cpp+lua,4,,,[lua][cpp] Disallow respawns for spawn slots mobs when a PH dies
+6665a56ec1,2026-08-08,C,lua,7,candidate,"applies cleanly, not yet built or reviewed",Fix onlyInitiator in Battlefield Handler
+6b89f8ec51,2026-08-08,D,lua,1,,,Update Ark Angel HM Aggro Range
+709e7fe329,2026-08-08,D,other,1,,,Remove Bust on Logout
+7980612718,2026-08-08,D,cpp,1,,,Wrap batched character position writes in a transaction
+8216522e48,2026-08-08,D,cpp,1,,,Throw if executeBulk fails for rollback
+96ff82d9b8,2026-08-08,D,lua,16,,,Rename cutscene flags
+a0a6455897,2026-08-08,D,lua,7,,,Add Free Alzadaal Entry with Remnants Permit
+bca3fa628e,2026-08-08,D,lua,25,content-queued,see content_queue.csv; new_text_keys=3; applies_clean=no,Eco-Warrior IF
+c51a0a8e17,2026-08-08,D,mod,4,,,75 Era Silent Oil / Prism Powder Duration Module
+d1bdcd1839,2026-08-08,D,lua+sql,4,,,Test your Mite Improvements
+f40580753a,2026-08-08,C,sql,1,candidate,"applies cleanly, not yet built or reviewed",[sql] Fix Mana Converter crystal
+11b3e12e79,2026-08-09,D,mod,3,,,[lua][module] Homepoint and WHM AF NPC location adjustments
+1f98a8a77e,2026-08-09,D,cpp,4,,,Do not automatically retry while in transaction
+266171d940,2026-08-09,C,lua,7,candidate,"applies cleanly, not yet built or reviewed",Various Promyvion Fixes
+29be689431,2026-08-09,D,cpp+lua,7,,,"Lua, Core: Add flexible entity Lua data store"
+2c355206a5,2026-08-09,C,lua+sql,11,conflict,does not apply cleanly onto 9e6f10c2fb,Add Terroanima Mixin / Fix Offspring HP
+2c5f4aee96,2026-08-09,C,lua,8,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Various Quest Battlefield Entry Requirements
+3cf7ef6d41,2026-08-09,D,cpp,2,,,Drop the autocommit juggling from db::transaction
+3dad9522f2,2026-08-09,D,lua+sql,5,,,TP ready/lockout adjustments Sky Mobs
+3ec88c15b6,2026-08-09,D,lua+sql,13,,,[lua] [sql] Implement Hydro weapons
+4c13855e2b,2026-08-09,D,tools,3,,,Collect modules enums
+59bfcd7210,2026-08-09,D,lua+sql,13,,,[lua] [sql] Implement Wind Fan weapons
+632936e1d3,2026-08-09,D,other,1,,,Deps: Update to Tracy 14.0.0
+798bb161a4,2026-08-09,D,tools,2,,,Allow null keys in yaml
+7b88fb3ce9,2026-08-09,D,sql,1,,,Update Memory Receptacle HP
+7fbcbcea6d,2026-08-09,D,cpp+lua+mod+sql+tools,36,,,Migrate merits to YAML
+b3d67ab75e,2026-08-09,D,cpp,1,,,Check for SQL commit result
+d99b32b1a7,2026-08-09,D,lua,43,skip-large,"43 files, structural",[lua] Make Hydro/Gust/Spark weapons not proc off wrong ammo type
+faef00f5f5,2026-08-09,A,cpp+lua,5,conflict,does not apply cleanly onto 9e6f10c2fb,Tests: Pin the mob level in the tests that assert exact damage
+180351f949,2026-08-10,D,lua,7,,,[lua] Update ToAU 5 - 11
+275bca76df,2026-08-10,D,lua,2,,,[lua] ToAU Mission 3 and 4 audit
+2eb520e15d,2026-08-10,D,cpp,10,,,Refactor container checks
+504f61716d,2026-08-10,D,lua+mod,6,,,SAM AF Quest Audits + Era Modules
+541254471e,2026-08-10,D,lua,5,,,BLU Quest Audits
+6f74be1141,2026-08-10,D,cpp,2,,,Generate YAML schemas when building xi_map
+8028e2a7b2,2026-08-10,D,mod,1,,,Update Repair Values in PUP Module
+81c0fd3f80,2026-08-10,D,cpp,2,,,Deprecate Spells merit IDs
+896b3872db,2026-08-10,D,cpp+sql+tools,9,,,[sql][cpp] Adds more more detailed tracking data to audit_vendor
+b22f8d013a,2026-08-10,D,lua+sql,5,,,Implement Seether and Weeper Type Strays
+bbed173a1d,2026-08-10,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,"[lua] Fix Parraggoh's intro events in ""Beauty and the Galka"""
+f0067ab80f,2026-08-10,D,cpp+tools,7,,,Animation locks dump
+10e8904774,2026-08-11,D,cpp,3,,,Proper level ranges for each type of seals
+132695d56a,2026-08-11,D,lua,2,content-queued,see content_queue.csv; new_text_keys=1; applies_clean=yes,TOAU Quest Audits
+14946f22c6,2026-08-11,C,mod,3,conflict,does not apply cleanly onto 9e6f10c2fb,SAM Era Modules Fix
+1ac7005cf0,2026-08-11,D,cpp,1,,,"Seals, geodes and avatarites do not drop in sea"
+236bd9b96d,2026-08-11,D,cpp+lua+mod,181,skip-large,"181 files, structural","Modules, Core, CI: Register modules instead of returning them"
+27184e04b7,2026-08-11,D,cpp+mod,2,,,Modules: Drop the stale custom/commands entry from init.txt
+46f7358b79,2026-08-11,C,mod,1,candidate,"applies cleanly, not yet built or reviewed",[module] Claimshield fixes
+47d0e7a61a,2026-08-11,D,tools,1,,,CI: follow CPM_SOURCE_CACHE when filtering clang-tidy warnings
+47fd564c6f,2026-08-11,D,cfg+cpp+lua+sql,9,,,Migrate Experience Points Calculations to lua (#10865)
+4be734b4f4,2026-08-11,D,cpp,3,,,Build: keep clang-tidy off Catch2's sources
+51084c308d,2026-08-11,C,cpp,1,candidate,"applies cleanly, not yet built or reviewed",Alpaca: Use fixed length integers
+62561eb4f9,2026-08-11,D,mod,3,,,Eco-Warrior Era Modules
+63a768935a,2026-08-11,D,lua+sql,5,,,TP ready/lockout Bibiki mobs
+65a5471242,2026-08-11,D,cpp+mod,4,,,Implement ToAU Era Experience Points Module
+6a77d87e5c,2026-08-11,D,cpp,1,,,NMs do not drop seals
+870b383b13,2026-08-11,D,lua,294,blocked-client,"shifts zone text IDs, our client is pinned",30260805_0 string shifts
+9c441374bd,2026-08-11,D,sql,2,,,30260805_0 new items
+aa4bea0d28,2026-08-11,D,other,1,,,Docker: drop the meshes-specific dockerignore
+b53d5eb311,2026-08-11,D,other,2,,,Docker: keep mesh directories in the build context
+cb0ad243e0,2026-08-11,D,tools,1,,,CI: Allow the module framework methods in the Lua binding check
+ddb68f8c3f,2026-08-11,C,cpp,6,conflict,does not apply cleanly onto 9e6f10c2fb,Fix linkshell permissions packet
+e1678ac8f9,2026-08-11,D,cfg,1,blocked-client,"CLIENT_VER bump, never take while pinned",Bump version update
+e19d233997,2026-08-11,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix untargetable caskets and early-despawns
+e3c398b89c,2026-08-11,D,cfg+cpp+lua,3,,,[cpp] Adds retail skill up chance weights and era skill up rates
+e5d279f2f4,2026-08-11,D,cpp,4,,,No cooldown on bad crafting recipe
+f8f54d9dcf,2026-08-11,D,sql,1,,,[sql] Audit some synthesis content tags (701-750)
+fde34dd76e,2026-08-11,C,other,15,conflict,does not apply cleanly onto 9e6f10c2fb,"CI, Docker: fix build caching, meshes publishing, and arch claims"
+08162051f5,2026-08-12,D,sql,1,,,Audit some Synthesis Recipes
+09362a9510,2026-08-12,C,sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,"[sql, yaml] Entities values fixes (#11119)"
+1f6ebc06cf,2026-08-12,D,cpp,1,,,Clear the engaged flags when AI is reset
+3c6c3c3609,2026-08-12,D,cpp+lua+sql+tools,11,,,Move species mods to ecosystem YAML
+6456e1a3f4,2026-08-12,D,mod,1,,,Update SoA WS Module to Revoke Certain WS
+760886cd41,2026-08-12,B,cpp,4,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Improve automaton skill recalculation
+7d2b120473,2026-08-12,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Eurytos PH
+806f80b4d9,2026-08-12,B,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,[core] Simplify automaton skill merits/gear mod addition
+a02c7e0e9c,2026-08-12,D,cpp+lua,5,,,Don't free an AI state from inside its own update
+a1d430afb7,2026-08-12,D,cpp,2,,,Resume the next AI state before running Cleanup
+c3a70457e8,2026-08-12,D,mod,1,,,Adjust Berserk / Defender in era module
+c69cb9b294,2026-08-12,D,mod,3,,,BLU AF Era Modules
+dbc1b3eec0,2026-08-12,C,lua,9,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Fomor detection
+ea682f3ebb,2026-08-12,D,cpp+lua,2,,,Clear the action queues when AI is reset
+01156a5ebf,2026-08-13,C,cpp+lua,4,conflict,does not apply cleanly onto 9e6f10c2fb,Automaton Bug Fixes
+0565d0b18f,2026-08-13,D,other,1,,,Update Ahriman Species with -25% MDT
+6194f08f49,2026-08-13,D,lua,6,content-queued,see content_queue.csv; new_text_keys=0; applies_clean=no,[lua] Open the Rampart Gates for mounted players in the [S] areas
+68f88390ae,2026-08-13,D,mod,4,,,ToAU Circle Effects Modules
+843f108a94,2026-08-13,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix rampart gate lookup in the [S] areas
+90523c2fc5,2026-08-13,D,mod,1,,,Inside the Belly Era Module
+b0a321dd09,2026-08-13,D,mod,1,,,PUP Frame and Head Quest Era Module
+f386570c8f,2026-08-13,D,cpp+lua,3,,,Add curse immunity
+f4c079345b,2026-08-13,D,cpp+lua,24,,,Route PC to PC trades through PlayerTradeTransaction
+f964278469,2026-08-13,B,cpp,1,adopted,in verified batch 2026-08-21; build + 264/264 tests pass,[core] Don't reset auto attack delay on equips
+6f80f07cca,2026-08-14,D,mod,5,,,[lua][module] Merit sql module removal; Merit yaml module additions
+7b628d19fc,2026-08-14,D,lua,4,,,Quest Level Corrections
+be3aab6443,2026-08-14,C,cpp,2,conflict,does not apply cleanly onto 9e6f10c2fb,[cpp] Fixes multiple mobskill check triggering over and over again
+c3fcece585,2026-08-14,D,lua,3,adopted,content ported 2026-08-21; IDs.lua text kept ours; 265/265 tests,Implement Norg Tales' Beginning for ZM1
+12b1365906,2026-08-15,D,cpp,4,,,Claim the gil a payment is about to move
+16b7b5c85a,2026-08-15,D,mod,1,,,COR AF2 Era Module
+24c7db3e03,2026-08-15,D,cpp+lua,38,,,Close an NPC trade left open at the end of an event
+2e1a311a4b,2026-08-15,D,cpp+lua,7,,,Cover the item transaction layer with tests
+36b1f61a62,2026-08-15,D,cpp,17,,,Make item creation and destruction transaction-only
+46b0fceb92,2026-08-15,D,cpp,10,,,Hold NPC trade offers in a transaction
+48f7737e65,2026-08-15,D,cpp,22,,,Hold claims in the base as item references
+4f31836252,2026-08-15,D,lua+sql,18,,,Adjust City Dynamis TP Lists/Behaviors and Read/Lockouts
+52b79b00a3,2026-08-15,D,cpp,18,,,Undo what a step applied rather than what it requested
+5c75b2df1e,2026-08-15,D,cpp,1,,,Unwind an auction sale as a single transaction
+77f6b263a7,2026-08-15,D,cpp+lua,20,,,Consume the gear a porter slip records
+81fac4dc68,2026-08-15,D,cpp,20,,,Let a transaction mutate the items it holds
+8ebae71f82,2026-08-15,D,cpp,26,,,Make item mutation unreachable outside the transaction layer
+a3ea99327c,2026-08-15,D,cpp,15,,,Claim the stacks an operation mutates
+aca7e5fb5f,2026-08-15,C,lua,1,candidate,"applies cleanly, not yet built or reviewed",Fix impossible to meet bit condition
+bad31e955e,2026-08-15,D,lua+mod,11,,,Chasing Quotas IF
+c72de6a1ea,2026-08-15,D,cpp,27,,,Track item claims as item state
+c9545662f8,2026-08-15,D,cpp+lua,30,,,Delete the item reserve
+ce89e903a3,2026-08-15,D,cpp,1,,,Route script item changes through a transaction
+fbf1d3a7c6,2026-08-15,D,other,1,,,Add DT Modifiers to Orobon species
+fd843f878b,2026-08-15,D,cpp,11,,,Release only what a transaction claimed
+1d149e8be4,2026-08-16,D,lua+sql,4,,,Implement Minotaur's Mortal Ray
+1e8dd46239,2026-08-16,D,cpp,3,,,Entities: stop GetLocalVar inserting on a miss
+21233f1918,2026-08-16,A,cpp,3,conflict,does not apply cleanly onto 9e6f10c2fb,Logging: split the crash breadcrumb ring in two
+31f2f37be3,2026-08-16,D,other,1,,,Build: raise the asio coroutine frame cache to 8
+351814020e,2026-08-16,D,cpp+lua,5,,,Stop status effects reverting to their original duration on zone
+372f051944,2026-08-16,D,cpp,16,,,Reduce the transaction API to its journaled verbs
+3cc764ecc2,2026-08-16,D,cpp,3,,,Bump neutral time to 15s and apply to NMs
+3dffa41c01,2026-08-16,D,cpp,1,,,Spawn mobs already roaming
+408b63b294,2026-08-16,D,cpp,1,,,Unlock staged items on the client when a trade closes
+41ce2e0d96,2026-08-16,D,cpp,1,,,Mobs: move m_mobModStat to FlatHashMap
+429d1bcc72,2026-08-16,D,lua+mod,9,,,Mog Safe Quest Modules
+4ac28aeb6f,2026-08-16,D,cpp,1,,,Pathfind: skip the end-gap navmesh query when the gap cannot be beaten
+5183a48749,2026-08-16,D,lua,1,,,[lua] Sets minimum shop sell value to 1
+734ea06577,2026-08-16,D,cpp,2,,,"Chars, ROE: drop three redundant statements from the tick thread"
+8232c174b8,2026-08-16,D,cpp,15,,,Roam regions support
+8a87a9d0fb,2026-08-16,D,cpp,4,,,Tracy: introduce TracyZoneScopedS
+984df8173a,2026-08-16,D,cpp+lua,6,,,"Core, Tests: Respawn dynamic and instanced mobs"
+c2503780d4,2026-08-16,D,mod,1,,,Map Vendor Era Module
+c9e92d9863,2026-08-16,D,lua+sql,5,,,"Ix Drk Spells, Dragur / Wamoura family DTs, bolt case size"
+cae8b40c21,2026-08-16,D,lua,1,,,Tests: Deflake Jug Pet Ready by stopping the pet's auto-attacks
+cddd6c9bb3,2026-08-16,D,cpp,1,,,Core: Bounds-check mob and weapon skill ids on load
+d013e2fa9a,2026-08-16,D,cpp,11,,,Fail an action when its item cannot be spent
+d2731e4387,2026-08-16,D,cpp,2,,,Roam: evaluate the spell-cast conditions lazily as lambdas
+d4f0a8da02,2026-08-16,D,other,1,,,Soulflayer MDT / MDEF
+e5bd6da763,2026-08-16,C,lua,3,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Orc TP Skills
+e9b6a414e5,2026-08-16,D,cpp,2,,,Name the zone when a trade is left open at the end of an event
+f7227878e6,2026-08-16,D,cpp+lua,18,,,Propagate confirm failures and return an optional slot
+f802acc65a,2026-08-16,D,cpp,2,,,Pathfind: memoize ValidPosition in a small per-entity LRU cache
+fbed261a68,2026-08-16,D,cpp,3,,,Map: remove three needless copies and a per-tick clock read
+11e7822a89,2026-08-17,C,lua,1,conflict,does not apply cleanly onto 9e6f10c2fb,[lua] Fix ToAU 4 bug with onEventUpdate
+686e352c53,2026-08-17,D,lua,3,,,Opo-Opo TP ability adjustments
+85496fe0d6,2026-08-17,D,lua,2,,,Add Missing Job Emotes
+8b8f38a25e,2026-08-17,C,lua+sql,4,conflict,does not apply cleanly onto 9e6f10c2fb,Fix various TP moves
+945dee3481,2026-08-17,D,sql,1,,,"Passhow, Rolanberry, Zeruhn, Korroloka audit"
+bf32e5f500,2026-08-17,D,sql,2,,,Zulkheim aggro/link audit
+cf45be8cf0,2026-08-17,D,cpp,3,,,"Refuse an item use with no transaction, and a merge that did not fit"
+dc6baa8d1a,2026-08-17,D,lua,2,,,[lua] Reflect retail PH for Amemet

@@ -1,5 +1,11 @@
 -----------------------------------
 -- Zone: Altar_Room (152)
+-- A Moral Manifest?
+--
+-- Declared here because this file is where the quest is added and completed. The
+-- rest of it lives on Ponono in Windurst Woods (the cloth trade and the Yagudo
+-- headdress cutting) and on the Stone Lid and Yagudo Avatar in this zone, so no
+-- single quest file exists to name it and every bg-wiki lookup read as MISSING.
 -----------------------------------
 ---@type TZone
 local zoneObject = {}

@@ -1,5 +1,18 @@
 -----------------------------------
 -- Her Memories: Homecoming Queen
+-- Her Memories: Old Bean
+-- Her Memories: The Faux Pas
+-- Her Memories: The Grave Resolve
+-----------------------------------
+-- FOUR bg-wiki rows, one file. The three sub-quests are not separate scripts: this
+-- file adds and completes each of them in its own section below, and
+-- handleQuestCompletion is what melds their three Tiny memory fragments into the
+-- Large memory fragment that finishes Homecoming Queen. Declared one per line
+-- because build_ledger.py resolves a bg-wiki row by matching header title lines, and
+-- with only the parent named all three read as MISSING.
+--
+-- bg-wiki titles the third "Her Memories: Grave Resolve"; the enum and the client
+-- call it THE_GRAVE_RESOLVE. The ledger strips articles, so both normalise alike.
 -----------------------------------
 -- !addquest 7 64
 -- Thierride  : !pos -67 -5 -28 232

@@ -118,6 +118,10 @@ def build_impl_index():
     globs = [
         "scripts/quests/**/*.lua",
         "scripts/zones/**/npcs/*.lua",
+        # Zone.lua legitimately implements quests through onZoneIn / onEventFinish.
+        # A Moral Manifest? is added AND completed in scripts/zones/Altar_Room/Zone.lua
+        # and was invisible while only npcs/ was scanned.
+        "scripts/zones/**/Zone.lua",
         "scripts/globals/**/*.lua",
         "scripts/battlefields/**/*.lua",
         "scripts/missions/**/*.lua",
@@ -127,13 +131,27 @@ def build_impl_index():
         for p in glob.glob(os.path.join(ROOT, g), recursive=True):
             rel = os.path.relpath(p, ROOT)
             try:
-                head = (
-                    open(p, encoding="utf-8", errors="replace")
-                    .read(4000)
-                    .split("\n")[:8]
+                lines = (
+                    open(p, encoding="utf-8", errors="replace").read(4000).split("\n")
                 )
             except Exception:
                 continue
+
+            # The first 8 lines catch the ordinary case, where a quest file names
+            # its quest on line 2. But a SHARED implementation names one title per
+            # line and can hold more than eight of them: kupofried_moogle_magic.lua
+            # implements fourteen bg-wiki rows from one file. So also take the
+            # header's opening separator-delimited block, which is where LSB puts
+            # titles by convention.
+            #
+            # Deliberately NOT the whole header: the blocks below the title block
+            # hold bg-wiki prose that quotes OTHER quests' names in |Previous= and
+            # |Next= fields, and indexing those would attribute a quest to whichever
+            # unrelated file happened to mention it.
+            head = lines[:8]
+            seps = [i for i, l in enumerate(lines[:80]) if re.match(r"^-{5,}\s*$", l)]
+            if len(seps) >= 2:
+                head = head + lines[seps[0] + 1 : seps[1]]
             for line in head:
                 m = re.match(r'^--\s*([A-Z0-9"\'].*?)\s*$', line)
                 if m and not m.group(1).startswith(
@@ -225,9 +243,29 @@ def main():
     ):
         zmap[m.group(1)] = int(m.group(2))
 
+    # Quest ids come from the derived join, never from the enum. The join is
+    # produced by tools/coverage/verify_quest_ids.py, which checks every id
+    # against the client's own table. Reading it here is what lets an agent
+    # answer "what id is this quest" from the ledger alone.
+    id_map = {}
+    map_path = os.path.join(ROOT, "tools/coverage/data/quest_id_map.tsv")
+    if os.path.exists(map_path):
+        with open(map_path, encoding="utf-8") as fh:
+            head = fh.readline().rstrip("\n").split("\t")
+            for line in fh:
+                if not line.strip():
+                    continue
+                vals = line.rstrip("\n").split("\t")
+                vals += [""] * (len(head) - len(vals))
+                row = dict(zip(head, vals))
+                key = core(row.get("bgwiki_title", ""))
+                if key and key not in id_map:
+                    id_map[key] = (row.get("log_area", ""), row.get("declared_id", ""))
+
     rows = []
     for title in sorted(master):
         cats = [c for c in master[title] if c != "Quests"]
+        area, qid = id_map.get(core(title), ("", ""))
         f = impl.get(core(title), "")
         page = wiki_page(title)
         # only meaningful for rows we could not match
@@ -272,6 +310,8 @@ def main():
                 npc_file,
                 "https://www.bg-wiki.com/ffxi/"
                 + urllib.parse.quote(title.replace(" ", "_")),
+                area,
+                qid,
             ]
         )
 
@@ -279,7 +319,7 @@ def main():
     with open(out, "w") as fh:
         fh.write(
             "bgwiki_title\tcategory\tstate\timpl_file\twiki_fetch\tcsid_check\t"
-            "start_npc_file\twiki_url\n"
+            "start_npc_file\twiki_url\tlog_area\tquest_id\n"
         )
         for r in rows:
             fh.write("\t".join(r) + "\n")

@@ -15,6 +15,7 @@ zones[xi.zone.PORT_SAN_DORIA] =
         ITEM_OBTAINED                  = 6435,  -- Obtained: <item>.
         GIL_OBTAINED                   = 6436,  -- Obtained <number> gil.
         KEYITEM_OBTAINED               = 6438,  -- Obtained key item: <keyitem>.
+        NOT_HAVE_ENOUGH_GIL            = 6440,  -- You do not have enough gil.
         ITEM_RETURNED                  = 6447,  -- The <item> is returned to you.
         REPORT_TO_CAIT_SITH            = 6465,  -- You have obtained all of Lilisette's memory fragments. Make haste and report to Cait Sith.
         YOU_MUST_WAIT_ANOTHER_N_DAYS   = 6471,  -- You must wait another <number> [day/days] to perform that action.

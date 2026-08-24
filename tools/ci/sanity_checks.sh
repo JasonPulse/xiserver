@@ -35,6 +35,19 @@ fi
 # General
 run_check tools/ci/sanity_checks/general.sh "${CHANGED_FILES[@]}"
 
+# Quest ids
+questid_output=$(python tools/ci/sanity_checks/quest_ids.py 2>&1 || true)
+if [[ -n "$questid_output" ]]; then
+    checks_failed=true
+    {
+        echo "## :x: Quest Id Checks Failed"
+        echo '```'
+        echo "$questid_output"
+        echo '```'
+        echo
+    } | tee -a "$OUTPUT"
+fi
+
 # Python
 run_check tools/ci/sanity_checks/python.sh "${CHANGED_FILES[@]}"
 

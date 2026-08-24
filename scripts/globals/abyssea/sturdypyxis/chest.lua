@@ -150,6 +150,13 @@ xi.pyxis.openChest = function(player, npc)
 
     npc:setAnimationSub(13)
 
+    -- This is the single success path for every chest colour, which is why the
+    -- Wanted: Medical Supplies roll hangs here. It is gated to blue because that is
+    -- the only colour bg-wiki says drops the key item.
+    if npc:getLocalVar('CHESTTYPE') == xi.pyxis.chestType.BLUE then
+        xi.abyssea.medicalSupplyRoll(player, npc)
+    end
+
     switch(dropType) : caseof
     {
         [xi.pyxis.chestDropType.LIGHT] = function() -- LIGHT

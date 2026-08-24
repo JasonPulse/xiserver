@@ -1,0 +1,104 @@
+source	log_area	quest_id	title	category	start_npc	previous
+ledger_missing	adoulin	105	A Barrel of Laughs	Adoulin Quests	Tuffle-Buffle, Western Adoulin	[[To Laugh Is to Love]]
+ledger_missing	jeuno	163	A Quaternary Trial in Tandem	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Yet Another Trial in Tandem]]
+ledger_missing	adoulin	117	A Thirst Before Time	Adoulin Quests	Roskin, Eastern Adoulin	[[The Curious Case of Melvien]]<br />[[A Thirst for Eternity]]
+ledger_missing	adoulin	116	A Thirst for Eternity	Adoulin Quests	[[Roskin]] (Near Cafe des Larmes, Eastern Adoulin)	[[A Thirst for the Eons]]
+ledger_missing	adoulin	115	A Thirst for the Eons	Adoulin Quests	[[Roskin]] (Near Caf['e] des Larmes, Eastern Adoulin)	[[A Thirst for the Ages]]
+ledger_missing			A Thousand Cuts	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing	jeuno	160	A Trial in Tandem	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Clash of the Comrades]]
+ledger_missing	jeuno	164	A Trial in Tandem Revisited	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]]	[[A Quaternary Trial in Tandem]]
+ledger_missing	jeuno	161	A Trial in Tandem, Redux	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[A Trial in Tandem]]
+ledger_missing			Altepa Gate	Mini-Quests	<no Start field>	
+ledger_missing	jeuno	174	Beam Me Up...No, Not There!	Jeuno Quests	[[Anastase]], [[Ru'Lude Gardens]] (G-9)	[[Further Founts]]
+ledger_missing	jeuno	81	Blighted Gloom	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Past Reflections]]
+ledger_missing	otherAreas	126	Chacharoon's Cheer	Mog Garden Quests	[[Green Thumb Moogle]], Mog Gardens	[[Cry Not, Caretaker]]
+ledger_missing	jeuno	84	Chameleon Capers	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	
+ledger_missing	jeuno	101	Clash of the Comrades	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Mixed Signals]]
+ledger_missing	otherAreas	125	Cry Not, Caretaker	Mog Garden Quests	Green Thumb Moogle, Mog Garden	[[Feeding Frenzy]]
+ledger_missing	adoulin	62	Did You Feel That?	Adoulin Quests	[[Udip Ferawoh]], [[Marjami Ravine]]	
+ledger_missing			Disappointment Valley	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing	otherAreas	128	Doctor Chacharoon	Mog Garden Quests	Chacharoon, Mog Garden	[[Trial of the Chacharoon]]
+ledger_missing	adoulin	143	Epiphany	Adoulin Quests	[[Octavernost]], [[Western Adoulin]] (K-9)	[[Rune Fencer Relic Armor]]
+ledger_missing	adoulin	137	Eye of the Beholder	Adoulin Quests	[[Behsa Alehgo]], [[Eastern Adoulin]] - (J-8)	[[The Secret to Success]]
+ledger_missing			Fame		<no Start field>	
+ledger_missing	otherAreas	124	Feeding Frenzy	Mog Garden Quests	Green Thumb Moogle, Mog Garden	[[Release the Fleece]]
+ledger_missing			Fish Favors the Bold	Outlands Quests	[[Irmilant]], [[Rabao]] - (G-7)	[[Indomitable Spirit]]
+ledger_missing	adoulin	120	Flowers for Svenja	Adoulin Quests	[[Door: Svenja's Manor|Door: Svenja's Manor]], [[Western Adoulin]] - (I-8)	
+ledger_missing			Geomancer Relic Armor	Adoulin Quests	Hestefa, Celennia Memorial Library	[[The Communion]]
+ledger_missing	adoulin	134	Geomancerrific	Adoulin Quests	Nhili Uvolep (Order of Renaye, Eastern Adoulin)	[[Elementary, My Dear Sylvie]]
+ledger_missing	jeuno	78	Girl in the Looking Glass	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Unlisted Qualities]]
+ledger_missing	otherAreas	130	Glittering Gals	Mog Garden Quests	[[Green Thumb Moogle]], [[Mog Garden]]	[[Full Speed Ahead!]]<br />[[Titillating Tomes]]<br />[[Rowing Together]]
+ledger_missing			Go With the Flow	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing			Goblin Stew 880	Gobbiebag Quests	<no Start field>	
+ledger_missing			Golden Rule	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing	adoulin	124	Hypocritical Oath	Adoulin Quests	[[Alianne]], [[Western Adoulin]] - (I-8)	[[Do Not Go Into the Light]]
+ledger_missing			Impermanence	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing	adoulin	140	In the Land of the Blind	Adoulin Quests	[[Behsa Alehgo]], [[Eastern Adoulin]] - (J-8)	[[Eye of the Beholder]]
+ledger_missing	otherAreas	76	In the Name of Science	Other Quests	[[Yurim]]	
+ledger_missing			Investigation of the Emptiness	Fellowship Quests	Adventuring Fellow, Rendezvous Point	[[Past Reflections]]
+ledger_missing	adoulin	71	Keep Your Bloomers On, Erisa	Adoulin Quests	Door: Research Chamber, [[Eastern Adoulin]] - (J-8)	
+ledger_missing			Leonine Excruciation	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing			Lost Chocobo Chick Mini-Quest	Mini-Quests	<no Start field>	
+ledger_missing			Luck Rune	Mini-Quests	<no Start field>	
+ledger_missing			Minnow Wrangler	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing	jeuno	83	Mirror Images	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Blessed Radiance]]
+ledger_missing	jeuno	79	Mirror, Mirror	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Girl in the Looking Glass]]
+ledger_missing	adoulin	129	Mistress of Ceremonies	Adoulin Quests	[[Rigobertine]], Eastern Adoulin	[[No Mercy for the Wicked]]
+ledger_missing	jeuno	87	Mixed Signals	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Regaining Trust]]
+ledger_missing	adoulin	128	No Mercy for the Wicked	Adoulin Quests	[[Rigobertine]], [[Eastern Adoulin]]	
+ledger_missing			Not-So-Clean Bill	Adoulin Quests	[[Door: Svenja's Manor]], Western Adoulin (I-8)	[[Sick and Tired]]
+ledger_missing	jeuno	175	Now Recording...	Jeuno Quests	[[Darcia]], [[Lower Jeuno]] (H-7)	[[The Geomagnetron]]
+ledger_missing	adoulin	28	One Good Turn...	Adoulin Quests	[[Chelidoine]], [[Eastern Adoulin]] - (J-9)	
+ledger_missing			Over Ninety-Thousand	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing			Panta Rhei	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing			Petals of Recollection	Jeuno Quests	[[Nantoto]], [[Lower Jeuno]]	[[Shifty Shades of Prey]]
+ledger_missing	otherAreas	31	Picture Perfect	Fellowship Quests	[[Diederik]], [[Selbina]] (G-10)	[[Mirror, Mirror]]<br/>[[A Pose by Any Other Name]]
+ledger_missing	adoulin	132	Quiescence	Adoulin Quests	Gaddiux, Western Adoulin	[[Destiny's Device]]
+ledger_missing	jeuno	85	Regaining Trust	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[Picture Perfect]]
+ledger_missing	otherAreas	123	Release the Fleece	Mog Garden Quests	Green Thumb Moogle, Mog Garden	
+ledger_missing			Remembrance of Flowers Past	Jeuno Quests	[[Nantoto]], [[Lower Jeuno]] (H-8)	[[To Kill Mocking Birds]]
+ledger_missing	otherAreas	129	Rowing Together	Mog Garden Quests	Green Thumb Moogle, Mog Garden	[[Doctor Chacharoon]]
+ledger_missing			Rune Fencer Relic Armor	Adoulin Quests	Hestefa, [[Celennia Memorial Library]]	[[Destiny's Device]]
+ledger_missing	adoulin	135	Rune Fencing the Night Away	Adoulin Quests	Gaddiux (Inventors' Coalition, Western Adoulin)	[[Children of the Rune]]
+ledger_missing			Sahagin Key	Mini-Quests	<no Start field>	
+ledger_missing	otherAreas	131	Sally Forth!	Mog Garden Quests	[[Green Thumb Moogle]], [[Mog Garden]]	[[Glittering Gals]]
+ledger_missing	adoulin	131	Saved by the Bell	Adoulin Quests	[[Nhili Uvolep]], [[Eastern Adoulin]] (I-7)	*[[The Communion]]
+ledger_missing			Shiver Me Timbers	Jeuno Quests	[[Duberasson]], [[Western Adoulin]] (H-11)	[[To Kill Mocking Birds]]
+ledger_missing	adoulin	133	Sick and Tired	Adoulin Quests	[[Svenja]], [[Western Adoulin]] - (I-8)	[[Hypocritical Oath]]
+ledger_missing			Thanks for All the Fish	Outlands Quests	[[Jourdenaux]], [[Rabao]] - (F-8)	
+ledger_missing			The Arciela Directive	Adoulin Quests	[[Fremilla]], [[Eastern Adoulin]] - (K-9)	[[The Ygnas Directive]]
+ledger_missing			The Flying Machine of Eld	Jeuno Quests	[[Jeridade]], [[Upper Jeuno]]	[[Full Speed Ahead!]]
+ledger_missing	adoulin	125	The Good, the Bad, the Clement	Adoulin Quests	[[Zaffeld]], [[Eastern Adoulin]] - (J-8)	[[Velkkovert_Operations|Velkkovert Operations]]
+ledger_missing	adoulin	127	The Secret to Success	Adoulin Quests	[[Behsa Alehgo]], [[Eastern Adoulin]] - (J-8)	
+ledger_missing			The Silent Forest	Adoulin Quests	[[Levil]], [[Western Adoulin]] (E-8)	[[The Light Within]]<br />[[A Rhapsody for the Ages]]
+ledger_missing	adoulin	136	The Weatherspoon Inquisition	Adoulin Quests	Nashu, Eastern Adoulin	[[The Good, the Bad, the Clement]]
+ledger_missing	adoulin	141	The Weatherspoon War	Adoulin Quests	Nashu, Marjami Ravine	[[The Weatherspoon Inquisition]]
+ledger_missing			The Ygnas Directive	Adoulin Quests	[[Fremilla]], [[Eastern Adoulin]] - (K-9)	[[The Light Within]]
+ledger_missing	adoulin	121	Thorn in the Side	Adoulin Quests	[[Zaffeld]], [[Eastern Adoulin]] - (J-8)	
+ledger_missing	otherAreas	122	Titillating Tomes	Mog Garden Quests	Green Thumb Moogle, [[Mog Garden]]	[[Hypnotic Hospitality]]
+ledger_missing	adoulin	104	To Laugh Is to Love	Adoulin Quests	Peladi Shalmohr - Western Adoulin Mummers' Coalition (G-10)	[[All the Way to the Bank]]
+ledger_missing	adoulin	142	Treasures of the Earth	Adoulin Quests	[[Sylvie]], [[Western Adoulin]] (I-5)	[[Geomancer Relic Armor]]
+ledger_missing	otherAreas	127	Trial of the Chacharoon	Mog Garden Quests	Susuroon, Mog Garden	[[Chacharoon's Cheer]]
+ledger_missing	jeuno	77	Unlisted Qualities	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	None
+ledger_missing			User:Metalsmith	Other Quests	<no Start field>	
+ledger_missing			User:Niamor/Sandbox		<no Start field>	
+ledger_missing			Winds of Eternity	Adoulin Quests	[[Siren]], [[Leafallia]] (H-7)	[[The Silent Forest]]
+ledger_missing	jeuno	162	Yet Another Trial in Tandem	Fellowship Quests	[[Luto Mewrilah]], [[Upper Jeuno]] (G-8)	[[A Trial in Tandem, Redux]]
+marker_lies	jeuno	33	Mystery of Fire	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	34	Mystery of Water	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	35	Mystery of Earth	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	36	Mystery of Wind	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	37	Mystery of Ice	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	38	Mystery of Lightning	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	39	Mystery of Light	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	40	Mystery of Darkness	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	
+marker_lies	jeuno	77	Unlisted Qualities	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	78	Girl in the Looking Glass	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	79	Mirror, Mirror	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	81	Blighted Gloom	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	83	Mirror Images	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	84	Chameleon Capers	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	85	Regaining Trust	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	87	Mixed Signals	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	jeuno	101	Clash of the Comrades	declared id, marker claims implemented, nothing in scripts/ references it	Luto Mewrilah, Upper Jeuno (G-8), entity 17776780	
+marker_lies	outlands	128	The Sahagin's Key	declared id, marker claims implemented, nothing in scripts/ references it	NO RETAIL SPEC: absent from bg-wiki and FFXIclopedia	

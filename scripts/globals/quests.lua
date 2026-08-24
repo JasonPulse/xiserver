@@ -467,6 +467,14 @@ xi.quest.id =
         VW_OP_118_BUBURIMU_SQUALL       = 169, -- + Converted
         PRELUDE_TO_PUISSANCE            = 170, -- + Converted
 
+        RESEARCHERS_FROM_THE_WEST       = 171,
+        MIDDLE_LANDS_INVESTIGATION      = 172,
+        FURTHER_FOUNTS                  = 173,
+        BEAM_ME_UP_NO_NOT_THERE         = 174,
+        NOW_RECORDING                   = 175,
+        TELEPORTS_BY_TWILIGHT           = 176,
+        SHIFTY_SHADES_OF_PREY           = 177,
+        TO_KILL_MOCKING_BIRDS           = 178,
         FULL_SPEED_AHEAD                = 179, -- +
     },
 
@@ -542,6 +550,26 @@ xi.quest.id =
         A_GENEROUS_GENERAL              = 109, -- + Converted
         RECORDS_OF_EMINENCE             = 110, -- + Converted
         UNITY_CONCORD                   = 111, -- + Converted
+        FULL_FIELDS                     = 112,
+        GREEN_GROVES                    = 113,
+        MINING_MISSIVE                  = 114,
+        POND_PROBING                    = 115,
+        COASTAL_CHAOS                   = 116,
+        SEED_SOWING                     = 117,
+        FLOTSAM_FINDING                 = 118,
+        COURTESY_CRUSTACEAN             = 119,
+        TRINKET_FOR_THE_TYRANT          = 120,
+        HYPNOTIC_HOSPITALITY            = 121,
+        TITILLATING_TOMES               = 122,
+        RELEASE_THE_FLEECE              = 123,
+        FEEDING_FRENZY                  = 124,
+        CRY_NOT_CARETAKER               = 125,
+        CHACHAROONS_CHEER               = 126,
+        TRIAL_OF_THE_CHACHAROON         = 127,
+        DOCTOR_CHACHAROON               = 128,
+        ROWING_TOGETHER                 = 129,
+        GLITTERING_GALS                 = 130,
+        SALLY_FORTH                     = 131,
     },
 
     -----------------------------------

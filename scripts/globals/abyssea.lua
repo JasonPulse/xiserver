@@ -1447,3 +1447,59 @@ xi.abyssea.getZoneKIReward = function(player)
 
     return zoneQuestReward[numCompleted + 1]
 end
+
+-----------------------------------
+-- Shared reward payout for the repeatable Abyssea side quests.
+--
+-- Almost every one of them pays the same shape: a cruor sum that is larger on the
+-- first completion than on repeats, and "a chance at one of the following Empyrean
+-- Armor +1 <slot> seals". bg-wiki never publishes the seal rate, so one rate lives
+-- here rather than being invented separately in thirty quest files.
+-----------------------------------
+local sealChance = 30
+
+--- Pay a cruor reward and roll for one seal from the quest's own list.
+---@param player CBaseEntity the player being paid
+---@param cruor integer how much cruor to grant
+---@param seals table|nil the seal item ids bg-wiki lists for this quest
+xi.abyssea.questReward = function(player, cruor, seals)
+    local ID = zones[player:getZoneID()]
+
+    if cruor > 0 then
+        player:addCurrency('cruor', cruor)
+        player:messageSpecial(ID.text.CRUOR_OBTAINED, cruor, player:getCurrency('cruor'))
+    end
+
+    if seals ~= nil and #seals > 0 and math.random(1, 100) <= sealChance then
+        npcUtil.giveItem(player, seals[math.random(1, #seals)])
+    end
+end
+
+-- Wanted: Medical Supplies (Abyssea - Misareaux, quest 56) takes its key item off a
+-- manually opened BLUE sturdy pyxis, so the roll lives here rather than inside any
+-- one chest colour's unlock routine. bg-wiki: "There is a chance that you will
+-- receive the KI Medical supply chest. It appears to be proportional to the Pyxis
+-- level", and "Using Forbidden Keys to open the chest will not give you the key
+-- item, you must open it manually." No percentage is published, so the rate below is
+-- our tuning in the same spirit as the martello regeneration rate.
+local supplyChancePerTier = 10
+local supplyChanceCap     = 50
+
+--- Roll the Medical supply chest for a player who is on the quest.
+---@param player CBaseEntity the player who opened the pyxis
+---@param npc CBaseEntity the pyxis, whose TIER localVar is its level
+xi.abyssea.medicalSupplyRoll = function(player, npc)
+    if
+        player:getQuestStatus(xi.questLog.ABYSSEA, xi.quest.id.abyssea.WANTED_MEDICAL_SUPPLIES) ~= xi.questStatus.QUEST_ACCEPTED or
+        player:hasKeyItem(xi.ki.MEDICAL_SUPPLY_CHEST)
+    then
+        return
+    end
+
+    local tier   = math.max(1, npc:getLocalVar('TIER'))
+    local chance = math.min(supplyChanceCap, tier * supplyChancePerTier)
+
+    if math.random(1, 100) <= chance then
+        npcUtil.giveKeyItem(player, xi.ki.MEDICAL_SUPPLY_CHEST)
+    end
+end

@@ -1,12 +1,26 @@
 -----------------------------------
+-- Kupofried's H2H Moogle Magic
+-- Kupofried's Dagger Moogle Magic
+-- Kupofried's Sword Moogle Magic
+-- Kupofried's Great Sword Moogle Magic
+-- Kupofried's Axe Moogle Magic
+-- Kupofried's Great Axe Moogle Magic
+-- Kupofried's Scythe Moogle Magic
+-- Kupofried's Polearm Moogle Magic
+-- Kupofried's Katana Moogle Magic
+-- Kupofried's Great Katana Moogle Magic
+-- Kupofried's Club Moogle Magic
+-- Kupofried's Staff Moogle Magic
+-- Kupofried's Archery Moogle Magic
+-- Kupofried's Marksmanship Moogle Magic
+-----------------------------------
 -- Kupofried's Weapon Skill Moogle Magic
 --
--- Fourteen bg-wiki quests, one per weapon skill type, all driven by the same
--- ??? in the Walk of Echoes -- they are a single client menu, not fourteen
--- separate scripts:
---   Kupofried's H2H / Dagger / Sword / Great Sword / Axe / Great Axe / Scythe /
---   Polearm / Katana / Great Katana / Club / Staff / Archery / Marksmanship
---   Moogle Magic
+-- The fourteen titles above are declared one per line on purpose. They are
+-- FOURTEEN bg-wiki quests driven by a single client menu on one ??? in the Walk
+-- of Echoes, not fourteen separate scripts, and build_ledger.py resolves a
+-- bg-wiki row to an implementation by matching header title lines. Run together
+-- on one line they matched nothing and all fourteen read as MISSING.
 --
 -- None of the fourteen has a quest-log id (they are |Title= and |Repeatable=
 -- empty on bg-wiki and never appear in the log), which is why this is an NPC

@@ -1,7 +1,13 @@
 -----------------------------------
+-- Matthias
+-----------------------------------
 -- Crafted Dancer Artifact
 -- Olgald   : !pos -53.072 -1 103.380 244
 -- Matthias : !pos -114.1 -4.29 -107.28 235
+--
+-- bg-wiki files this under the NPC's own name, "Matthias", rather than a quest
+-- title, which is why that line is declared above: he is the Dancer Artifact
+-- commission NPC, reached after The Road to Divadom and Olgald in Upper Jeuno.
 -----------------------------------
 -- Variable Notes:
 -- * Prog   - Overall completion progress

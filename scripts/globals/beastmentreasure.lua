@@ -1,6 +1,18 @@
 -----------------------------------
+-- Peddlestox's Treasure Box: Elshimo Lowlands
+-- Peddlestox's Treasure Box: Elshimo Uplands
+-- Peddlestox's Treasure Box: Kuzotz
+-----------------------------------
 -- Beastmen Treasure side quests
 -- https://ffxiclopedia.fandom.com/wiki/Beastmen_Treasure
+--
+-- The three titles above are declared one per line on purpose. bg-wiki files this
+-- as three separate quests, one per region, but they are ONE system: the zoneData
+-- table below drives all three from the same handlers, keyed by the zone
+-- Peddlestox appears in. Yuhtunga Jungle is Elshimo Lowlands, Yhoator Jungle is
+-- Elshimo Uplands, and Western Altepa Desert is Kuzotz. Verified against bg-wiki:
+-- the Kuzotz page names Earthsday and the four Xhifhut items, which is exactly the
+-- WESTERN_ALTEPA_DESERT entry.
 -----------------------------------
 require('scripts/globals/quests')
 -----------------------------------

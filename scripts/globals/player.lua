@@ -229,6 +229,9 @@ xi.player.onGameIn = function(player, firstLogin, zoning)
     -- apply mods from gearsets (scripts/globals/gear_sets.lua)
     xi.gear_sets.checkForGearSet(player)
 
+    -- apply the active Monster Rearing cheer (scripts/globals/monster_rearing.lua)
+    xi.monsterRearing.applyCheer(player)
+
     -- god mode
     if player:getCharVar('GodMode') == 1 then
         player:addStatusEffect(xi.effect.MAX_HP_BOOST, 1000, 0, 0)

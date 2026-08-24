@@ -1,0 +1,1113 @@
+log_area	enum_name	declared_id	client_id	client_title	bgwiki_title	impl_file	marker	verdict
+sandoria	A_SENTRYS_PERIL	0	0	A Sentry's Peril	A Sentry's Peril	scripts/quests/sandoria/A_Sentrys_Peril.lua	+ Converted	CONFIRMED
+sandoria	WATERS_OF_THE_CHEVAL	1	1	Waters of the Cheval	Waters of the Cheval	scripts/quests/sandoria/Waters_of_the_Cheval.lua	+ Converted	CONFIRMED
+sandoria	ROSEL_THE_ARMORER	2	2	Rosel the Armorer	Rosel the Armorer	scripts/quests/sandoria/Rosel_the_Armorer.lua	+ Converted	CONFIRMED
+sandoria	THE_PICKPOCKET	3	3	The Pickpocket	The Pickpocket	scripts/quests/sandoria/The_Pickpocket.lua	+ Converted	CONFIRMED
+sandoria	FATHER_AND_SON	4	4	Father and Son	Father and Son	scripts/quests/sandoria/Father_and_Son.lua	+ Converted	CONFIRMED
+sandoria	THE_SEAMSTRESS	5	5	The Seamstress	The Seamstress	scripts/quests/sandoria/The_Seamstress.lua	+ Converted	CONFIRMED
+sandoria	THE_DISMAYED_CUSTOMER	6	6	The Dismayed Customer	The Dismayed Customer	scripts/quests/sandoria/The_Dismayed_Customer.lua	+ Converted	CONFIRMED
+sandoria	THE_TRADER_IN_THE_FOREST	7	7	The Trader in the Forest	The Trader in the Forest	scripts/quests/sandoria/The_Trader_in_the_Forest.lua	+ Converted	CONFIRMED
+sandoria	THE_SWEETEST_THINGS	8	8	The Sweetest Things	The Sweetest Things	scripts/quests/sandoria/The_Sweetest_Things.lua	+ Converted	CONFIRMED
+sandoria	THE_VICASQUES_SERMON	9	9	The Vicasque's Sermon	The Vicasque's Sermon	scripts/quests/sandoria/The_Vicasques_Sermon.lua	+ Converted	CONFIRMED
+sandoria	A_SQUIRES_TEST	10	10	A Squire's Test	A Squire's Test	scripts/quests/sandoria/A_Squires_Test.lua	+ Converted	CONFIRMED
+sandoria	GRAVE_CONCERNS	11	11	Grave Concerns	Grave Concerns	scripts/quests/sandoria/Grave_Concerns.lua	+ Converted	CONFIRMED
+sandoria	THE_BRUGAIRE_CONSORTIUM	12	12	The Brugaire Consortium	The Brugaire Consortium	scripts/quests/sandoria/The_Brugaire_Consortium.lua	+ Converted	CONFIRMED
+sandoria	LIZARD_SKINS	15	15	Lizard Skins	Lizard Skins	scripts/quests/sandoria/Lizard_Skins.lua	+ Converted	CONFIRMED
+sandoria	FLYERS_FOR_REGINE	16	16	Flyers for Regine	Flyers for Regine	scripts/quests/flyers_for_regine.lua	+	UNVERIFIED
+sandoria	GATES_TO_PARADISE	18	18	Gates to Paradise	Gates to Paradise	scripts/zones/La_Theine_Plateau/npcs/Faurbellant.lua	+	UNVERIFIED
+sandoria	A_SQUIRES_TEST_II	19	19	A Squire's Test II	A Squire's Test II	scripts/quests/sandoria/A_Squires_Test_II.lua	+ Converted	CONFIRMED
+sandoria	TO_CURE_A_COUGH	20	20	To Cure a Cough	To Cure a Cough	scripts/zones/Davoi/npcs/qm1.lua	+	UNVERIFIED
+sandoria	TIGERS_TEETH	23	23	Tiger's Teeth	Tiger's Teeth	scripts/quests/sandoria/Tigers_Teeth.lua	+ Converted	CONFIRMED
+sandoria	UNDYING_FLAMES	26	26	Undying Flames	Undying Flames	scripts/quests/sandoria/Undying_Flames.lua	+ Converted	CONFIRMED
+sandoria	A_PURCHASE_OF_ARMS	27	27	A Purchase of Arms	A Purchase of Arms	scripts/quests/sandoria/A_Purchase_of_Arms.lua	+ Converted	CONFIRMED
+sandoria	A_KNIGHTS_TEST	29	29	A Knight's Test	A Knight's Test	scripts/quests/sandoria/A_Knights_Test.lua	+ Converted	CONFIRMED
+sandoria	THE_MEDICINE_WOMAN	30	30	The Medicine Woman	The Medicine Woman	scripts/quests/sandoria/The_Medicine_Woman.lua	+ Converted	CONFIRMED
+sandoria	BLACK_TIGER_SKINS	31	31	Black Tiger Skins	Black Tiger Skins	scripts/quests/sandoria/Black_Tiger_Skins.lua	+ Converted	CONFIRMED
+sandoria	GROWING_FLOWERS	58	58	Growing Flowers	Growing Flowers	scripts/quests/sandoria/Growing_Flowers.lua	+ Converted	CONFIRMED
+sandoria	TRIAL_BY_ICE	59	59	Trial by Ice	Trial by Ice	scripts/zones/Northern_San_dOria/npcs/Gulmama.lua	+	CONFIRMED
+sandoria	THE_GENERALS_SECRET	60	60	The General's Secret	The General's Secret	scripts/quests/sandoria/The_Generals_Secret.lua	+ Converted	CONFIRMED
+sandoria	THE_RUMOR	61	61	The Rumor	The Rumor	scripts/quests/sandoria/The_Rumor.lua	+ Converted	CONFIRMED
+sandoria	HER_MAJESTYS_GARDEN	62	62	Her Majesty's Garden	Her Majesty's Garden	scripts/quests/sandoria/Her_Majestys_Garden.lua	+ Converted	CONFIRMED
+sandoria	INTRODUCTION_TO_TEAMWORK	63	63	Introduction to Teamwork	Introduction to Teamwork	scripts/quests/sandoria/Introduction_to_Teamwork.lua	+ Converted	CONFIRMED
+sandoria	INTERMEDIATE_TEAMWORK	64	64	Intermediate Teamwork	Intermediate Teamwork	scripts/quests/sandoria/Intermediate_Teamwork.lua	+ Converted	CONFIRMED
+sandoria	ADVANCED_TEAMWORK	65	65	Advanced Teamwork	Advanced Teamwork	scripts/quests/sandoria/Advanced_Teamwork.lua	+ Converted	CONFIRMED
+sandoria	GRIMY_SIGNPOSTS	66	66	Grimy Signposts	Grimy Signposts	scripts/quests/sandoria/Grimy_Signposts.lua	+ Converted	CONFIRMED
+sandoria	A_JOB_FOR_THE_CONSORTIUM	67	67	A Job for the Consortium	A Job for the Consortium	scripts/quests/sandoria/A_Job_for_the_Consortium.lua	+ Converted	CONFIRMED
+sandoria	TROUBLE_AT_THE_SLUICE	68	68	Trouble at the Sluice	Trouble at the Sluice	scripts/quests/sandoria/Trouble_at_the_Sluice.lua	+ Converted	CONFIRMED
+sandoria	THE_MERCHANTS_BIDDING	69	69	The Merchant's Bidding	The Merchant's Bidding	scripts/quests/sandoria/The_Merchants_Bidding.lua	+ Converted	CONFIRMED
+sandoria	UNEXPECTED_TREASURE	70	70	Unexpected Treasure	Unexpected Treasure	scripts/quests/sandoria/Unexpected_Treasure.lua	+ Converted	UNVERIFIED
+sandoria	BLACKMAIL	71	71	Blackmail	Blackmail	scripts/quests/sandoria/Blackmail.lua	+ Converted	CONFIRMED
+sandoria	THE_SETTING_SUN	72	72	The Setting Sun	The Setting Sun	scripts/quests/sandoria/The_Setting_Sun.lua	+ Converted	CONFIRMED
+sandoria	DISTANT_LOYALTIES	74	74	Distant Loyalties	Distant Loyalties	scripts/quests/sandoria/Distant_Loyalties.lua	+ Converted	CONFIRMED
+sandoria	THE_RIVALRY	75	75	The Rivalry		scripts/quests/sandoria/The_Rivalry.lua	+ Converted	CONFIRMED
+sandoria	THE_COMPETITION	76	76	The Competition		scripts/quests/sandoria/The_Competition.lua	+ Converted	CONFIRMED
+sandoria	STARTING_A_FLAME	77	77	Starting a Flame	Starting a Flame	scripts/quests/sandoria/Starting_a_Flame.lua	+ Converted	CONFIRMED
+sandoria	FEAR_OF_THE_DARK	78	78	Fear of the Dark	Fear of the Dark	scripts/quests/sandoria/Fear_of_the_Dark.lua	+ Converted	CONFIRMED
+sandoria	WARDING_VAMPIRES	79	79	Warding Vampires	Warding Vampires	scripts/quests/sandoria/Warding_Vampires.lua	+ Converted	CONFIRMED
+sandoria	SLEEPLESS_NIGHTS	80	80	Sleepless Nights	Sleepless Nights	scripts/quests/sandoria/Sleepless_Nights.lua	+ Converted	CONFIRMED
+sandoria	LUFETS_LAKE_SALT	81	81	Lufet's Lake Salt	Lufet's Lake Salt	scripts/quests/sandoria/Lufets_Lake_Salt.lua	+ Converted	CONFIRMED
+sandoria	HEALING_THE_LAND	82	82	Healing the Land	Healing the Land	scripts/quests/sandoria/Healing_the_Land.lua	+ Converted	CONFIRMED
+sandoria	SORCERY_OF_THE_NORTH	83	83	Sorcery of the North	Sorcery of the North	scripts/quests/sandoria/Sorcery_of_the_North.lua	+ Converted	CONFIRMED
+sandoria	THE_CRIMSON_TRIAL	84	84	The Crimson Trial	The Crimson Trial	scripts/quests/sandoria/RDM_AF1_The_Crimson_Trial.lua	+ Converted	CONFIRMED
+sandoria	ENVELOPED_IN_DARKNESS	85	85	Enveloped in Darkness	Enveloped in Darkness	scripts/quests/sandoria/RDM_AF2_Enveloped_in_Darkness.lua	+ Converted	CONFIRMED
+sandoria	PEACE_FOR_THE_SPIRIT	86	86	Peace for the Spirit	Peace for the Spirit	scripts/zones/FeiYin/npcs/Dry_Fountain.lua	+	UNVERIFIED
+sandoria	MESSENGER_FROM_BEYOND	87	87	Messenger from Beyond	Messenger from Beyond	scripts/quests/sandoria/Messenger_From_Beyond.lua	+ Converted	CONFIRMED
+sandoria	PRELUDE_OF_BLACK_AND_WHITE	88	88	Prelude of Black and White	Prelude of Black and White	scripts/quests/sandoria/Prelude_of_Black_and_White.lua	+ Converted	CONFIRMED
+sandoria	PIEUJES_DECISION	89	89	Pieuje's Decision	Pieuje's Decision	scripts/zones/Chateau_dOraguille/npcs/_6h1.lua	+	CONFIRMED
+sandoria	SHARPENING_THE_SWORD	90	90	Sharpening the Sword	Sharpening the Sword	scripts/quests/sandoria/Sharpening_the_Sword.lua	+ Converted	CONFIRMED
+sandoria	A_BOYS_DREAM	91	91	A Boy's Dream	A Boy's Dream	scripts/zones/Crawlers_Nest/npcs/qm9.lua	+	CONFIRMED
+sandoria	UNDER_OATH	92	92	Under Oath	Under Oath	scripts/zones/Southern_San_dOria/npcs/Vemalpeau.lua	+	CONFIRMED
+sandoria	THE_HOLY_CREST	93	93	The Holy Crest	The Holy Crest	scripts/zones/Northern_San_dOria/npcs/Morjean.lua	+	CONFIRMED
+sandoria	A_CRAFTSMANS_WORK	94	94	A Craftsman's Work	A Craftsman's Work	scripts/zones/Northern_San_dOria/npcs/Miaux.lua	+	CONFIRMED
+sandoria	CHASING_QUOTAS	95	95	Chasing Quotas	Chasing Quotas	scripts/zones/Chateau_dOraguille/npcs/Rahal.lua	+	UNVERIFIED
+sandoria	KNIGHT_STALKER	96	96	Knight Stalker	Knight Stalker	scripts/zones/Southern_San_dOria/npcs/Balasiel.lua	+	CONFIRMED
+sandoria	ECO_WARRIOR	97	97	Eco-Warrior	Eco-Warrior	scripts/zones/Southern_San_dOria/npcs/Norejaie.lua	+	CONFIRMED
+sandoria	METHODS_CREATE_MADNESS	98	98	Methods Create Madness	Methods Create Madness	scripts/quests/sandoria/Methods_Create_Madness.lua	+ Converted	CONFIRMED
+sandoria	SOULS_IN_SHADOW	99	99	Souls in Shadow	Souls in Shadow	scripts/quests/sandoria/Souls_in_Shadow.lua	+ Converted	CONFIRMED
+sandoria	A_TASTE_FOR_MEAT	100	100	A Taste for Meat	A Taste for Meat	scripts/quests/sandoria/A_Taste_for_Meat.lua	+ Converted	CONFIRMED
+sandoria	EXIT_THE_GAMBLER	101	101	Exit the Gambler	Exit the Gambler	scripts/quests/sandoria/Exit_the_Gambler.lua	+ Converted	CONFIRMED
+sandoria	OLD_WOUNDS	102	102	Old Wounds	Old Wounds	scripts/quests/sandoria/Old_Wounds.lua	+ Converted	CONFIRMED
+sandoria	ESCORT_FOR_HIRE	103	103	Escort for Hire (San d'Oria)	Escort for Hire	scripts/quests/sandoria/Escort_for_Hire.lua	+ Converted	UNVERIFIED
+sandoria	A_DISCERNING_EYE	104	104	A Discerning Eye (San d'Oria)	A Discerning Eye (Bastok)	scripts/quests/sandoria/A_Discerning_Eye.lua	+ Converted	CONFIRMED
+sandoria	A_TIMELY_VISIT	105	105	A Timely Visit	A Timely Visit	scripts/quests/sandoria/A_Timely_Visit.lua	+ Converted	CONFIRMED
+sandoria	FIT_FOR_A_PRINCE	106	106	Fit for a Prince	Fit for a Prince	scripts/quests/sandoria/Fit_for_a_Prince.lua	+ Converted	UNVERIFIED
+sandoria	TRIAL_SIZE_TRIAL_BY_ICE	107	107	Trial-Size Trial by Ice	Trial-Size Trial by Ice	scripts/quests/sandoria/Trial_Size_Trial_by_Ice.lua	+ Converted	CONFIRMED
+sandoria	SIGNED_IN_BLOOD	108	108	Signed in Blood	Signed in Blood	scripts/quests/sandoria/Signed_in_Blood.lua	+ Converted	CONFIRMED
+sandoria	TEA_WITH_A_TONBERRY	109	109	Tea with a Tonberry?	Tea with a Tonberry?	scripts/quests/sandoria/Tea_with_a_Tonberry.lua	+ Converted	CONFIRMED
+sandoria	SPICE_GALS	110	110	Spice Gals	Spice Gals	scripts/quests/sandoria/Spice_Gals.lua	+ Converted	CONFIRMED
+sandoria	OVER_THE_HILLS_AND_FAR_AWAY	112	112	Over the Hills and Far Away	Over the Hills and Far Away	scripts/quests/sandoria/Over_the_Hills_and_Far_Away.lua	+ Converted	CONFIRMED
+sandoria	LURE_OF_THE_WILDCAT	113	113	Lure of the Wildcat (San d'Oria)	Lure of the Wildcat	scripts/zones/Chateau_dOraguille/npcs/Halver.lua	+	UNVERIFIED
+sandoria	ATELLOUNES_LAMENT	114	114	SDクエスト114	Atelloune's Lament	scripts/quests/sandoria/Atellounes_Lament.lua	+ Converted	CONFIRMED
+sandoria	THICK_SHELLS	117	117	Thick Shells	Thick Shells	scripts/quests/sandoria/Thick_Shells.lua	+ Converted	CONFIRMED
+sandoria	FOREST_FOR_THE_TREES	118	118	SDクエスト118	Forest for the Trees	scripts/quests/sandoria/Forest_for_the_Trees.lua	+ Converted	CONFIRMED
+sandoria	TRUST_SANDORIA	119	119	SDクエスト119		scripts/quests/sandoria/Trust_Sandoria.lua	+ Converted	CONFIRMED
+bastok	THE_SIRENS_TEAR	0	0	The Siren's Tear	The Siren's Tear	scripts/quests/bastok/The_Sirens_Tear.lua	+ Converted	CONFIRMED
+bastok	BEAUTY_AND_THE_GALKA	1	1	Beauty and the Galka	Beauty and the Galka	scripts/quests/bastok/Beauty_and_the_Galka.lua	+ Converted	CONFIRMED
+bastok	WELCOME_TO_BASTOK	2	2	Welcome to Bastok	Welcome to Bastok	scripts/quests/bastok/Welcome_to_Bastok.lua	+ Converted	CONFIRMED
+bastok	GUEST_OF_HAUTEUR	3	3	Guest of Hauteur	Guest of Hauteur	scripts/quests/bastok/Guest_of_Hauteur.lua	+ Converted	CONFIRMED
+bastok	THE_QUADAVS_CURSE	4	4	The Quadav's Curse	The Quadav's Curse	scripts/quests/bastok/The_Quadavs_Curse.lua	+ Converted	CONFIRMED
+bastok	OUT_OF_ONES_SHELL	5	5	Out of One's Shell	Out of One's Shell	scripts/quests/bastok/Out_of_Ones_Shell.lua	+ Converted	CONFIRMED
+bastok	HEARTS_OF_MYTHRIL	6	6	Hearts of Mythril	Hearts of Mythril	scripts/quests/bastok/Hearts_of_Mythril.lua	+ Converted	CONFIRMED
+bastok	THE_ELEVENTHS_HOUR	7	7	The Eleventh's Hour	The Eleventh's Hour	scripts/quests/bastok/The_Elevenths_Hour.lua	+ Converted	CONFIRMED
+bastok	SHADY_BUSINESS	8	8	Shady Business	Shady Business	scripts/quests/bastok/Shady_Business.lua	+ Converted	CONFIRMED
+bastok	A_FOREMANS_BEST_FRIEND	9	9	A Foreman's Best Friend	A Foreman's Best Friend	scripts/quests/bastok/A_Foremans_Best_Friend.lua	+ Converted	CONFIRMED
+bastok	BREAKING_STONES	10	10	Breaking Stones	Breaking Stones	scripts/quests/bastok/Breaking_Stones.lua	+ Converted	CONFIRMED
+bastok	THE_COLD_LIGHT_OF_DAY	11	11	The Cold Light of Day	The Cold Light of Day	scripts/quests/bastok/The_Cold_Light_of_Day.lua	+ Converted	CONFIRMED
+bastok	GOURMET	12	12	Gourmet	Gourmet	scripts/quests/bastok/Gourmet.lua	+ Converted	CONFIRMED
+bastok	THE_ELVAAN_GOLDSMITH	13	13	The Elvaan Goldsmith	The Elvaan Goldsmith	scripts/quests/bastok/The_Elvaan_Goldsmith.lua	+ Converted	CONFIRMED
+bastok	A_FLASH_IN_THE_PAN	14	14	A Flash in the Pan	A Flash in the Pan	scripts/quests/bastok/A_Flash_in_the_Pan.lua	+ Converted	CONFIRMED
+bastok	SMOKE_ON_THE_MOUNTAIN	15	15	Smoke on the Mountain	Smoke on the Mountain	scripts/quests/bastok/Smoke_on_the_Mountain.lua	+ Converted	CONFIRMED
+bastok	STAMP_HUNT	16	16	Stamp Hunt	Stamp Hunt	scripts/quests/bastok/Stamp_Hunt.lua	+ Converted	CONFIRMED
+bastok	FOREVER_TO_HOLD	17	17	Forever to Hold	Forever to Hold	scripts/quests/bastok/Forever_to_Hold.lua	+ Converted	CONFIRMED
+bastok	TILL_DEATH_DO_US_PART	18	18	Till Death Do Us Part	Till Death Do Us Part	scripts/quests/bastok/Till_Death_Do_Us_Part.lua	+ Converted	CONFIRMED
+bastok	FALLEN_COMRADES	19	19	Fallen Comrades	Fallen Comrades	scripts/quests/bastok/Fallen_Comrades.lua	+ Converted	CONFIRMED
+bastok	RIVALS	20	20	Rivals	Rivals	scripts/quests/bastok/Rivals.lua	+ Converted	CONFIRMED
+bastok	MOM_THE_ADVENTURER	21	21	Mom, the Adventurer?	Mom, the Adventurer?	scripts/quests/bastok/Mom_the_Adventurer.lua	+ Converted, NOTE: This is missable on retail. We've opted not to follow that behaviour. There is a module in /modules/era/lua to restore that behaviour if desired	CONFIRMED
+bastok	THE_SIGNPOST_MARKS_THE_SPOT	22	22	The Signpost Marks the Spot	The Signpost Marks the Spot	scripts/quests/bastok/The_Signpost_Marks_the_Spot.lua	+ Converted	CONFIRMED
+bastok	PAST_PERFECT	23	23	Past Perfect	Past Perfect	scripts/quests/bastok/Past_Perfect.lua	+ Converted	CONFIRMED
+bastok	STARDUST	24	24	Stardust	Stardust	scripts/quests/bastok/Stardust.lua	+ Converted	CONFIRMED
+bastok	MEAN_MACHINE	25	25	Mean Machine	Mean Machine	scripts/quests/bastok/Mean_Machine.lua	+ Converted	CONFIRMED
+bastok	CIDS_SECRET	26	26	Cid's Secret	Cid's Secret	scripts/quests/bastok/Cids_Secret.lua	+ Converted	CONFIRMED
+bastok	THE_USUAL	27	27	The Usual	The Usual	scripts/quests/bastok/The_Usual.lua	+ Converted	CONFIRMED
+bastok	BLADE_OF_DARKNESS	28	28	Blade of Darkness	Blade of Darkness	scripts/quests/bastok/Blade_of_Darkness.lua	+ Converted	CONFIRMED
+bastok	FATHER_FIGURE	29	29	Father Figure	Father Figure	scripts/quests/bastok/Father_Figure.lua	+ Converted	CONFIRMED
+bastok	THE_RETURN_OF_THE_ADVENTURER	30	30	The Return of the Adventurer	The Return of the Adventurer	scripts/quests/bastok/The_Return_of_the_Adventurer.lua	+ Converted	CONFIRMED
+bastok	DRACHENFALL	31	31	Drachenfall	Drachenfall	scripts/quests/bastok/Drachenfall.lua	+ Converted	CONFIRMED
+bastok	VENGEFUL_WRATH	32	32	Vengeful Wrath	Vengeful Wrath	scripts/quests/bastok/Vengeful_Wrath.lua	+ Converted	CONFIRMED
+bastok	BEADEAUX_SMOG	33	33	Beadeaux Smog	Beadeaux Smog	scripts/quests/bastok/Beadeaux_Smog.lua	+ Converted	CONFIRMED
+bastok	THE_CURSE_COLLECTOR	34	34	The Curse Collector	The Curse Collector	scripts/quests/bastok/The_Curse_Collector.lua	+ Converted	CONFIRMED
+bastok	FEAR_OF_FLYING	35	35	Fear of Flying	Fear of Flying	scripts/quests/bastok/Fear_of_Flying.lua	+ Converted	CONFIRMED
+bastok	THE_WISDOM_OF_ELDERS	36	36	The Wisdom of Elders	The Wisdom of Elders	scripts/quests/bastok/The_Wisdom_of_Elders.lua	+ Converted	CONFIRMED
+bastok	GROCERIES	37	37	Groceries	Groceries	scripts/quests/bastok/Groceries.lua	+ Converted	CONFIRMED
+bastok	THE_BARE_BONES	38	38	The Bare Bones	The Bare Bones	scripts/quests/bastok/The_Bare_Bones.lua	+ Converted	CONFIRMED
+bastok	MINESWEEPER	39	39	Minesweeper	Minesweeper	scripts/quests/bastok/Minesweeper.lua	+ Converted	CONFIRMED
+bastok	THE_DARKSMITH	40	40	The Darksmith	The Darksmith	scripts/quests/bastok/The_Darksmith.lua	+ Converted	CONFIRMED
+bastok	BUCKETS_OF_GOLD	41	41	Buckets of Gold	Buckets of Gold	scripts/quests/bastok/Buckets_of_Gold.lua	+ Converted	CONFIRMED
+bastok	THE_STARS_OF_IFRIT	42	42	The Stars of Ifrit	The Stars of Ifrit	scripts/quests/bastok/The_Stars_of_Ifrit.lua	+ Converted	CONFIRMED
+bastok	LOVE_AND_ICE	43	43	Love and Ice	Love and Ice	scripts/quests/bastok/Love_and_Ice.lua	+ Converted	CONFIRMED
+bastok	BRYGID_THE_STYLIST	44	44	Brygid the Stylist	Brygid the Stylist	scripts/quests/bastok/Brygid_the_Stylist.lua	+ Converted	CONFIRMED
+bastok	THE_GUSTABERG_TOUR	45	45	The Gustaberg Tour	The Gustaberg Tour	scripts/quests/bastok/The_Gustaberg_Tour.lua	+ Converted	CONFIRMED
+bastok	BITE_THE_DUST	46	46	Bite the Dust	Bite the Dust	scripts/quests/bastok/Bite_the_Dust.lua	+ Converted	CONFIRMED
+bastok	BLADE_OF_DEATH	47	47	Blade of Death	Blade of Death	scripts/quests/bastok/Blade_of_Death.lua	+ Converted	CONFIRMED
+bastok	SILENCE_OF_THE_RAMS	48	48	Silence of the Rams	Silence of the Rams	scripts/quests/bastok/Silence_of_the_Rams.lua	+ Converted	CONFIRMED
+bastok	ALTANAS_SORROW	49	49	Altana's Sorrow	Altana's Sorrow	scripts/quests/bastok/Altanas_Sorrow.lua	+ Converted	CONFIRMED
+bastok	A_LADYS_HEART	50	50	A Lady's Heart	A Lady's Heart	scripts/quests/bastok/A_Ladys_Heart.lua	+ Converted	CONFIRMED
+bastok	GHOSTS_OF_THE_PAST	51	51	Ghosts of the Past	Ghosts of the Past	scripts/quests/bastok/MNK_AF1_Ghosts_of_the_Past.lua	+ Converted	CONFIRMED
+bastok	THE_FIRST_MEETING	52	52	The First Meeting	The First Meeting	scripts/quests/bastok/MNK_AF2_The_First_Meeting.lua	+ Converted	CONFIRMED
+bastok	TRUE_STRENGTH	53	53	True Strength	True Strength	scripts/quests/bastok/MNK_AF3_True_Strength.lua	+ Converted	CONFIRMED
+bastok	THE_DOORMAN	54	54	The Doorman	The Doorman	scripts/quests/bastok/WAR_AF1_The_Doorman.lua	+ Converted	CONFIRMED
+bastok	THE_TALEKEEPERS_TRUTH	55	55	The Talekeeper's Truth	The Talekeeper's Truth	scripts/quests/bastok/WAR_AF2_The_Talekeepers_Truth.lua	+ Converted	CONFIRMED
+bastok	THE_TALEKEEPERS_GIFT	56	56	The Talekeeper's Gift	The Talekeeper's Gift	scripts/quests/bastok/WAR_AF3_The_Talekeepers_Gift.lua	+ Converted	CONFIRMED
+bastok	DARK_LEGACY	57	57	Dark Legacy	Dark Legacy	scripts/quests/bastok/DRK_AF1_Dark_Legacy.lua	+ Converted	CONFIRMED
+bastok	DARK_PUPPET	58	58	Dark Puppet	Dark Puppet	scripts/quests/bastok/DRK_AF2_Dark_Puppet.lua	+ Converted	CONFIRMED
+bastok	BLADE_OF_EVIL	59	59	Blade of Evil	Blade of Evil	scripts/quests/bastok/DRK_AF3_Blade_of_Evil.lua	+ Converted	CONFIRMED
+bastok	AYAME_AND_KAEDE	60	60	Ayame and Kaede	Ayame and Kaede	scripts/quests/bastok/Ayame_and_Kaede.lua	+ Converted	CONFIRMED
+bastok	TRIAL_BY_EARTH	61	61	Trial by Earth	Trial by Earth	scripts/quests/bastok/Trial_by_Earth.lua	+ Converted	CONFIRMED
+bastok	A_TEST_OF_TRUE_LOVE	62	62	A Test of True Love	A Test of True Love	scripts/quests/bastok/A_Test_of_True_Love.lua	+ Converted	CONFIRMED
+bastok	LOVERS_IN_THE_DUSK	63	63	Lovers in the Dusk	Lovers in the Dusk	scripts/quests/bastok/Lovers_in_the_Dusk.lua	+ Converted	CONFIRMED
+bastok	WISH_UPON_A_STAR	64	64	Wish Upon a Star	Wish Upon a Star	scripts/quests/bastok/Wish_Upon_a_Star.lua	+ Converted	CONFIRMED
+bastok	ECO_WARRIOR	65	65	Eco-Warrior	Eco-Warrior	scripts/zones/Port_Bastok/npcs/Raifa.lua	+	CONFIRMED
+bastok	THE_WEIGHT_OF_YOUR_LIMITS	66	66	The Weight of Your Limits	The Weight of Your Limits	scripts/quests/bastok/The_Weight_of_Your_Limits.lua	+ Converted	CONFIRMED
+bastok	SHOOT_FIRST_ASK_QUESTIONS_LATER	67	67	Shoot First, Ask Questions Later	Shoot First, Ask Questions Later	scripts/quests/bastok/Shoot_First_Ask_Questions_Later.lua	+ Converted	CONFIRMED
+bastok	INHERITANCE	68	68	Inheritance	Inheritance	scripts/quests/bastok/Inheritance.lua	+ Converted	CONFIRMED
+bastok	THE_WALLS_OF_YOUR_MIND	69	69	The Walls of Your Mind	The Walls of Your Mind	scripts/quests/bastok/The_Walls_of_Your_Mind.lua	+ Converted	CONFIRMED
+bastok	ESCORT_FOR_HIRE	70	70	Escort for Hire (Bastok)	Escort for Hire	scripts/quests/bastok/Escort_for_Hire.lua	+ Converted	CONFIRMED
+bastok	A_DISCERNING_EYE	71	71	A Discerning Eye (Bastok)	A Discerning Eye (Bastok)	scripts/quests/bastok/A_Discerning_Eye.lua	+ Converted	CONFIRMED
+bastok	TRIAL_SIZE_TRIAL_BY_EARTH	72	72	Trial-Size Trial by Earth	Trial-Size Trial by Earth	scripts/quests/bastok/Trial_Size_Trial_by_Earth.lua	+ Converted	CONFIRMED
+bastok	FADED_PROMISES	73	73	Faded Promises	Faded Promises	scripts/quests/bastok/Faded_Promises.lua	+ Converted	CONFIRMED
+bastok	BRYGID_THE_STYLIST_RETURNS	74	74	Brygid the Stylist Returns	Brygid the Stylist Returns	scripts/quests/bastok/Brygid_the_Stylist_Returns.lua	+ Converted	CONFIRMED
+bastok	OUT_OF_THE_DEPTHS	75	75	Out of the Depths	Out of the Depths	scripts/quests/bastok/Out_of_the_Depths.lua	+ Converted	CONFIRMED
+bastok	ALL_BY_MYSELF	76	76	All by Myself	All by Myself	scripts/quests/bastok/All_by_Myself.lua	+ Converted	CONFIRMED
+bastok	A_QUESTION_OF_FAITH	77	77	A Question of Faith	A Question of Faith	scripts/quests/bastok/A_Question_of_Faith.lua	+ Converted	CONFIRMED
+bastok	RETURN_TO_THE_DEPTHS	78	78	Return to the Depths	Return to the Depths	scripts/quests/bastok/Return_to_the_Depths.lua	+ Converted	CONFIRMED
+bastok	TEAK_ME_TO_THE_STARS	79	79	Teak Me to the Stars	Teak Me to the Stars	scripts/quests/bastok/Teak_Me_to_the_Stars.lua	+ Converted	CONFIRMED
+bastok	HYPER_ACTIVE	80	80	Hyper Active	Hyper Active	scripts/quests/bastok/Hyper_Active.lua	+ Converted	CONFIRMED
+bastok	THE_NAMING_GAME	81	81	The Naming Game	The Naming Game	scripts/quests/bastok/The_Naming_Game.lua	+ Converted	CONFIRMED
+bastok	CHIPS	82	82	Chips	Chips	scripts/quests/bastok/Chips.lua	+ Converted	CONFIRMED
+bastok	BAIT_AND_SWITCH	83	83	Bait and Switch	Bait and Switch	scripts/quests/bastok/Bait_and_Switch.lua	+ Converted	CONFIRMED
+bastok	LURE_OF_THE_WILDCAT	84	84	Lure of the Wildcat (Bastok)	Lure of the Wildcat	scripts/quests/bastok/Lure_of_the_Wildcat_Bastok.lua	+ Converted	CONFIRMED
+bastok	ACHIEVING_TRUE_POWER	85	85	Achieving True Power	Achieving True Power	scripts/quests/bastok/Achieving_True_Power.lua	+ Converted	CONFIRMED
+bastok	TOO_MANY_CHEFS	86	86	BSクエスト86	Too Many Chefs	scripts/zones/Bastok_Markets/npcs/Umberto.lua	+	CONFIRMED
+bastok	A_PROPER_BURIAL	87	87	BSクエスト87	A Proper Burial	scripts/quests/bastok/A_Proper_Burial.lua	+ Converted	CONFIRMED
+bastok	FULLY_MENTAL_ALCHEMIST	88	88	BSクエスト88	Fully Mental Alchemist	scripts/quests/bastok/Fully_Mental_Alchemist.lua	+ Converted	CONFIRMED
+bastok	SYNERGUSTIC_PURSUITS	89	89	BSクエスト89		scripts/quests/bastok/Synergistic_Pursuits.lua	+ Converted	CONFIRMED
+bastok	THE_WONDROUS_WHATCHAMACALLIT	90	90	BSクエスト90	The Wondrous Whatchamacallit	scripts/quests/bastok/The_Wondrous_Whatchamacallit.lua	+ Converted	CONFIRMED
+bastok	SYNERGISTIC_SUPPORT	91	91	BSクエスト91	Synergistic Support	scripts/quests/bastok/Synergistic_Support.lua	+ Converted	CONFIRMED
+bastok	TRUST_BASTOK	92	92	BSクエスト92	Trust: Bastok	scripts/quests/bastok/Trust_Bastok.lua	+ Converted	CONFIRMED
+windurst	HAT_IN_HAND	0	0	Hat in Hand	Hat in Hand	scripts/zones/Windurst_Waters/npcs/Baren-Moren.lua	+	CONFIRMED
+windurst	A_FEATHER_IN_ONES_CAP	1	1	A Feather in One's Cap	A Feather in One's Cap	scripts/quests/windurst/A_Feather_in_Ones_Cap.lua	+ Converted	CONFIRMED
+windurst	A_CRISIS_IN_THE_MAKING	2	2	A Crisis in the Making	A Crisis in the Making	scripts/quests/windurst/A_Crisis_in_the_Making.lua	+ Converted	CONFIRMED
+windurst	MAKING_AMENDS	3	3	Making Amends	Making Amends	scripts/quests/windurst/Making_Amends.lua	+ Converted	CONFIRMED
+windurst	MAKING_THE_GRADE	4	4	Making the Grade	Making the Grade	scripts/quests/windurst/Making_the_Grade.lua	+ Converted	CONFIRMED
+windurst	IN_A_PICKLE	5	5	In a Pickle	In a Pickle	scripts/quests/windurst/In_a_Pickle.lua	+ Converted	CONFIRMED
+windurst	WONDERING_MINSTREL	6	6	Wondering Minstrel	Wondering Minstrel	scripts/quests/windurst/Wondering_Minstrel.lua	+	CONFIRMED
+windurst	A_POSE_BY_ANY_OTHER_NAME	7	7	A Pose by Any Other Name	A Pose by Any Other Name	scripts/quests/windurst/A_Pose_by_Any_Other_Name.lua	+ Converted	CONFIRMED
+windurst	MAKING_AMENS	8	8	Making Amens!	Making Amens!	scripts/zones/Garlaige_Citadel/npcs/Mashira.lua	+	UNVERIFIED
+windurst	THE_MOONLIT_PATH	9	9	The Moonlit Path	The Moonlit Path	scripts/zones/Windurst_Waters/npcs/Leepe-Hoppe.lua	+	CONFIRMED
+windurst	STAR_STRUCK	10	10	Star Struck	Star Struck	scripts/quests/windurst/Star_Struck.lua	+ Converted	CONFIRMED
+windurst	BLAST_FROM_THE_PAST	11	11	Blast from the Past	Blast from the Past	scripts/quests/windurst/Blast_from_the_Past.lua	+ Converted	CONFIRMED
+windurst	A_SMUDGE_ON_ONES_RECORD	12	12	A Smudge on One's Record	A Smudge on One's Record	scripts/quests/windurst/A_Smudge_on_Ones_Record.lua	+ Converted	CONFIRMED
+windurst	CHASING_TALES	13	13	Chasing Tales	Chasing Tales	scripts/quests/windurst/Chasing_Tales.lua	+ Converted	CONFIRMED
+windurst	FOOD_FOR_THOUGHT	14	14	Food for Thought	Food for Thought	scripts/quests/windurst/Food_for_Thought.lua	+ Converted	CONFIRMED
+windurst	OVERNIGHT_DELIVERY	15	15	Overnight Delivery	Overnight Delivery	scripts/quests/windurst/Overnight_Delivery.lua	+ Converted	CONFIRMED
+windurst	WATER_WAY_TO_GO	16	16	Water Way to Go!	Water Way to Go!	scripts/quests/windurst/Water_Way_to_Go.lua	+ Converted	CONFIRMED
+windurst	BLUE_RIBBON_BLUES	17	17	Blue Ribbon Blues	Blue Ribbon Blues	scripts/quests/windurst/Blue_Ribbon_Blues.lua	+ Converted	CONFIRMED
+windurst	THE_ALL_NEW_C_3000	18	18	The All-New C-3000	The All-New C-3000	scripts/quests/windurst/The_All_New_C_3000.lua	+ Converted	CONFIRMED
+windurst	THE_POSTMAN_ALWAYS_KOS_TWICE	19	19	The Postman Always K.O.'s Twice		scripts/zones/Windurst_Walls/npcs/Ambrosius.lua	+	CONFIRMED
+windurst	EARLY_BIRD_CATCHES_THE_BOOKWORM	20	20	Early Bird Catches the Bookworm	Early Bird Catches the Bookworm	scripts/quests/windurst/Early_Bird_Catches_the_Bookworm.lua	+ Converted	CONFIRMED
+windurst	CATCH_IT_IF_YOU_CAN	21	21	Catch It If You Can!	Catch It If You Can!	scripts/quests/windurst/Catch_It_If_You_Can.lua	+ Converted	CONFIRMED
+windurst	ALL_AT_SEA	23	23	All at Sea	All at Sea	scripts/quests/windurst/All_At_Sea.lua	+ Converted	CONFIRMED
+windurst	THE_ALL_NEW_C_2000	24	24	The All-New C-2000	The All-New C-2000	scripts/quests/windurst/The_All_New_C_2000.lua	+ Converted	CONFIRMED
+windurst	MIHGOS_AMIGO	25	25	Mihgo's Amigo	Mihgo's Amigo	scripts/quests/windurst/Mihgos_Amigo.lua	+ Converted	CONFIRMED
+windurst	ROCK_RACKETEER	26	26	Rock Racketeer	Rock Racketeer	scripts/quests/windurst/Rock_Racketeer.lua	+ Converted	CONFIRMED
+windurst	CHOCOBILIOUS	27	27	Chocobilious	Chocobilious	scripts/quests/windurst/Chocobilious.lua	+ Converted	CONFIRMED
+windurst	TEACHERS_PET	28	28	Teacher's Pet	Teacher's Pet	scripts/quests/windurst/Teachers_Pet.lua	+ Converted	CONFIRMED
+windurst	REAP_WHAT_YOU_SOW	29	29	Reap What You Sow	Reap What You Sow	scripts/quests/windurst/Reap_What_You_Sow.lua	+ Converted	CONFIRMED
+windurst	GLYPH_HANGER	30	30	Glyph Hanger	Glyph Hanger	scripts/quests/windurst/Glyph_Hanger.lua	+ Converted	CONFIRMED
+windurst	THE_FANGED_ONE	31	31	The Fanged One	The Fanged One	scripts/quests/windurst/The_Fanged_One.lua	+ Converted	CONFIRMED
+windurst	CURSES_FOILED_AGAIN_1	32	32	Curses, Foiled Again!	Curses, Foiled Again!	scripts/quests/windurst/Curses_Foiled_Again_1.lua	+ Converted	CONFIRMED
+windurst	CURSES_FOILED_AGAIN_2	33	33	Curses, Foiled...Again!?	Curses, Foiled Again!	scripts/quests/windurst/Curses_Foiled_Again_2.lua	+ Converted	CONFIRMED
+windurst	MANDRAGORA_MAD	34	34	Mandragora-Mad	Mandragora-Mad	scripts/quests/windurst/Mandragora_Mad.lua	+ Converted	CONFIRMED
+windurst	TO_BEE_OR_NOT_TO_BEE	35	35	To Bee or Not to Bee?	To Bee or Not to Bee?	scripts/quests/windurst/To_Bee_or_Not_to_Bee.lua	+	CONFIRMED
+windurst	TRUTH_JUSTICE_AND_THE_ONION_WAY	36	36	Truth, Justice, and the Onion Way!	Truth, Justice, and the Onion Way!	scripts/quests/windurst/SOB1_Truth_Justice_and_the_Onion_Way.lua	+ Converted	CONFIRMED
+windurst	MAKING_HEADLINES	37	37	Making Headlines	Making Headlines	scripts/zones/Inner_Horutoto_Ruins/npcs/_5ca.lua	+	UNVERIFIED
+windurst	SCOOPED	38	38	Scooped!	Scooped!	scripts/quests/windurst/Scooped.lua	+ Converted	CONFIRMED
+windurst	CREEPY_CRAWLIES	39	39	Creepy Crawlies	Creepy Crawlies	scripts/quests/windurst/Creepy_Crawlies.lua	+ Converted	CONFIRMED
+windurst	KNOW_ONES_ONIONS	40	40	Know One's Onions	Know One's Onions	scripts/quests/windurst/SOB2_Know_Ones_Onions.lua	+ Converted	CONFIRMED
+windurst	INSPECTORS_GADGET	41	41	Inspector's Gadget!	Inspector's Gadget!	scripts/quests/windurst/SOB3_Inspectors_Gadget.lua	+ Converted	CONFIRMED
+windurst	ONION_RINGS	42	42	Onion Rings	Onion Rings	scripts/quests/windurst/SOB4_Onion_Rings.lua	+ Converted	CONFIRMED
+windurst	A_GREETING_CARDIAN	43	43	A Greeting Cardian	A Greeting Cardian	scripts/zones/Buburimu_Peninsula/npcs/Five_of_Spades.lua	+	UNVERIFIED
+windurst	LEGENDARY_PLAN_B	44	44	Legendary Plan B	Legendary Plan B	scripts/quests/windurst/Legendary_Plan_B.lua	+ Converted	CONFIRMED
+windurst	IN_A_STEW	45	45	In a Stew	In a Stew	scripts/quests/windurst/In_a_Stew.lua	+ Converted	CONFIRMED
+windurst	LET_SLEEPING_DOGS_LIE	46	46	Let Sleeping Dogs Lie	Let Sleeping Dogs Lie	scripts/quests/windurst/Let_Sleeping_Dogs_Lie.lua	+ Converted	CONFIRMED
+windurst	CAN_CARDIANS_CRY	47	47	Can Cardians Cry?	Can Cardians Cry?	scripts/quests/windurst/Can_Cardians_Cry.lua	+ Converted	CONFIRMED
+windurst	WONDER_WANDS	48	48	Wonder Wands	Wonder Wands	scripts/zones/Port_Windurst/npcs/Goltata.lua	+	UNVERIFIED
+windurst	HEAVEN_CENT	49	49	Heaven Cent	Heaven Cent	scripts/quests/windurst/Heaven_Cent.lua	+ Converted	CONFIRMED
+windurst	SAY_IT_WITH_FLOWERS	50	50	Say It with Flowers	Say It with Flowers	scripts/quests/windurst/Say_It_With_Flowers.lua	+ Converted	CONFIRMED
+windurst	HOIST_THE_JELLY_ROGER	51	51	Hoist the Jelly, Roger	Hoist the Jelly, Roger	scripts/quests/windurst/Hoist_the_Jelly_Roger.lua	+ Converted	CONFIRMED
+windurst	SOMETHING_FISHY	52	52	Something Fishy	Something Fishy	scripts/quests/windurst/Something_Fishy.lua	+ Converted	CONFIRMED
+windurst	TO_CATCH_A_FALLING_STAR	53	53	To Catch a Falling Star	To Catch a Falling Star	scripts/zones/Port_Windurst/npcs/Sigismund.lua	+	CONFIRMED
+windurst	PAYING_LIP_SERVICE	60	60	Paying Lip Service	Paying Lip Service	scripts/quests/windurst/Paying_Lip_Service.lua	+ Converted	CONFIRMED
+windurst	THE_AMAZIN_SCORPIO	61	61	The Amazin' Scorpio	The Amazin' Scorpio	scripts/quests/windurst/The_Amazin_Scorpio.lua	+ Converted	CONFIRMED
+windurst	TWINSTONE_BONDING	62	62	Twinstone Bonding	Twinstone Bonding	scripts/quests/windurst/Twinstone_Bonding.lua	+ Converted	CONFIRMED
+windurst	CURSES_FOILED_A_GOLEM	63	63	Curses, Foiled A-Golem!?	Curses, Foiled A-Golem!?	scripts/quests/windurst/Curses_Foiled_A_Golem.lua	+ Converted	CONFIRMED
+windurst	ACTING_IN_GOOD_FAITH	64	64	Acting in Good Faith	Acting in Good Faith	scripts/quests/windurst/Acting_in_Good_Faith.lua	+ Converted	CONFIRMED
+windurst	FLOWER_CHILD	65	65	Flower Child	Flower Child	scripts/quests/windurst/Flower_Child.lua	+ Converted	CONFIRMED
+windurst	THE_THREE_MAGI	66	66	The Three Magi	The Three Magi	scripts/zones/Xarcabard/npcs/qm1.lua	+	CONFIRMED
+windurst	RECOLLECTIONS	67	67	Recollections	Recollections	scripts/zones/Castle_Zvahl_Keep/npcs/_4i5.lua	+	CONFIRMED
+windurst	THE_ROOT_OF_THE_PROBLEM	68	68	The Root of the Problem	The Root of the Problem	scripts/zones/Heavens_Tower/npcs/Chumimi.lua	+	CONFIRMED
+windurst	THE_TENSHODO_SHOWDOWN	69	69	The Tenshodo Showdown	The Tenshodo Showdown	scripts/quests/windurst/THF_AF1_The_Tenshodo_Showdown.lua	+ Converted	CONFIRMED
+windurst	AS_THICK_AS_THIEVES	70	70	As Thick as Thieves	As Thick as Thieves	scripts/quests/windurst/THF_AF2_As_Thick_as_Thieves.lua	+ Converted	CONFIRMED
+windurst	HITTING_THE_MARQUISATE	71	71	Hitting the Marquisate	Hitting the Marquisate	scripts/quests/windurst/THF_AF3_Hitting_the_Marquisate.lua	+ Converted	CONFIRMED
+windurst	SIN_HUNTING	72	72	Sin Hunting	Sin Hunting	scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua	+	CONFIRMED
+windurst	FIRE_AND_BRIMSTONE	73	73	Fire and Brimstone	Fire and Brimstone	scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua	+	CONFIRMED
+windurst	UNBRIDLED_PASSION	74	74	Unbridled Passion	Unbridled Passion	scripts/zones/Windurst_Woods/npcs/Perih_Vashai.lua	+	CONFIRMED
+windurst	I_CAN_HEAR_A_RAINBOW	75	75	I Can Hear a Rainbow	I Can Hear a Rainbow	scripts/quests/windurst/SMN_I_Can_Hear_a_Rainbow.lua	+ Converted	CONFIRMED
+windurst	CRYING_OVER_ONIONS	76	76	Crying Over Onions	Crying Over Onions	scripts/quests/windurst/SOB5_Crying_Over_Onions.lua	+ Converted	CONFIRMED
+windurst	WILD_CARD	77	77	Wild Card	Wild Card (Quest)	scripts/quests/windurst/SOB6_Wild_Card.lua	+ Converted	CONFIRMED
+windurst	THE_PROMISE	78	78	The Promise	The Promise	scripts/quests/windurst/SOB7_The_Promise.lua	+ Converted	CONFIRMED
+windurst	NOTHING_MATTERS	79	79	Nothing Matters	Nothing Matters	scripts/quests/windurst/Nothing_Matters.lua	+ Converted	CONFIRMED
+windurst	TORAIMARAI_TURMOIL	80	80	Toraimarai Turmoil	Toraimarai Turmoil	scripts/quests/windurst/Toraimarai_Turmoil.lua	+ Converted	CONFIRMED
+windurst	THE_PUPPET_MASTER	81	81	The Puppet Master	The Puppet Master	scripts/quests/windurst/SMN_AF1_The_Puppet_Master.lua	+ Converted	CONFIRMED
+windurst	CLASS_REUNION	82	82	Class Reunion	Class Reunion	scripts/zones/Windurst_Waters/npcs/Fuepepe.lua	+	UNVERIFIED
+windurst	CARBUNCLE_DEBACLE	83	83	Carbuncle Debacle	Carbuncle Debacle	scripts/zones/Mhaura/npcs/Ripapa.lua	+	UNVERIFIED
+windurst	ECO_WARRIOR	84	84	Eco-Warrior	Eco-Warrior	scripts/zones/Windurst_Waters/npcs/Lumomo.lua	+	CONFIRMED
+windurst	FROM_SAPLINGS_GROW	85	85	From Saplings Grow	From Saplings Grow	scripts/quests/windurst/From_Saplings_Grow.lua	+ Converted	CONFIRMED
+windurst	ORASTERY_WOES	86	86	Orastery Woes	Orastery Woes	scripts/quests/windurst/Orastery_Woes.lua	+ Converted	CONFIRMED
+windurst	BLOOD_AND_GLORY	87	87	Blood and Glory	Blood and Glory	scripts/quests/windurst/Blood_and_Glory.lua	+ Converted	CONFIRMED
+windurst	ESCORT_FOR_HIRE	88	88	Escort for Hire (Windurst)	Escort for Hire	scripts/quests/windurst/Escort_for_Hire.lua	+ Converted	CONFIRMED
+windurst	A_DISCERNING_EYE	89	89	A Discerning Eye (Windurst)	A Discerning Eye (Bastok)	scripts/quests/windurst/A_Discerning_Eye.lua	+ Converted	CONFIRMED
+windurst	TUNING_IN	90	90	Tuning In	Tuning In	scripts/quests/windurst/Tuning_In.lua	+ Converted	CONFIRMED
+windurst	TUNING_OUT	91	91	Tuning Out	Tuning Out	scripts/zones/Windurst_Waters/npcs/Leepe-Hoppe.lua	+	CONFIRMED
+windurst	ONE_GOOD_DEED	92	92	One Good Deed?	One Good Deed?	scripts/quests/windurst/One_Good_Deed.lua	+ Converted	CONFIRMED
+windurst	WAKING_DREAMS	93	93	Waking Dreams	Waking Dreams	scripts/quests/windurst/Waking_Dreams.lua	+ Converted	CONFIRMED
+windurst	LURE_OF_THE_WILDCAT	94	94	Lure of the Wildcat (Windurst)	Lure of the Wildcat	scripts/zones/Port_Windurst/npcs/Choyi_Totlihpa.lua	+ Converted	UNVERIFIED
+windurst	BABBAN_NY_MHEILLEA	95	95	Windurst Quest #95	Babban Ny Mheillea	scripts/quests/windurst/Babban_Ny_Mheillea.lua	+ Converted	CONFIRMED
+windurst	TRUST_WINDURST	96	96	Windurst Quest #96	Trust: Windurst	scripts/quests/windurst/Trust_Windurst.lua	+ Converted	CONFIRMED
+jeuno	CREST_OF_DAVOI	0	0	Crest of Davoi	Crest of Davoi (Quest)	scripts/quests/jeuno/Crest_of_Davoi.lua	+ Converted	CONFIRMED
+jeuno	SAVE_MY_SISTER	1	1	Save My Sister	Save My Sister	scripts/quests/jeuno/Save_My_Sister.lua	+ Converted	CONFIRMED
+jeuno	A_CLOCK_MOST_DELICATE	2	2	A Clock Most Delicate	A Clock Most Delicate	scripts/quests/jeuno/A_Clock_Most_Delicate.lua	+ Converted	CONFIRMED
+jeuno	SAVE_THE_CLOCK_TOWER	3	3	Save the Clock Tower	Save the Clock Tower	scripts/quests/jeuno/Save_the_Clock_Tower.lua	+ Converted	CONFIRMED
+jeuno	CHOCOBOS_WOUNDS	4	4	Chocobo's Wounds	Chocobo's Wounds	scripts/quests/jeuno/Chocobos_Wounds.lua	+ Converted	CONFIRMED
+jeuno	SAVE_MY_SON	5	5	Save My Son	Save My Son	scripts/quests/jeuno/Save_My_Son.lua	+ Converted	CONFIRMED
+jeuno	A_CANDLELIGHT_VIGIL	6	6	A Candlelight Vigil	A Candlelight Vigil	scripts/quests/jeuno/A_Candlelight_Vigil.lua	+ Converted	CONFIRMED
+jeuno	THE_WONDER_MAGIC_SET	7	7	The Wonder Magic Set	The Wonder Magic Set	scripts/zones/Lower_Jeuno/npcs/Naruru.lua	+	UNVERIFIED
+jeuno	THE_KIND_CARDIAN	8	8	The Kind Cardian	The Kind Cardian	scripts/zones/Lower_Jeuno/npcs/Naruru.lua	+	UNVERIFIED
+jeuno	YOUR_CRYSTAL_BALL	9	9	Your Crystal Ball	Your Crystal Ball	scripts/quests/jeuno/Your_Crystal_Ball.lua	+ Converted	CONFIRMED
+jeuno	COLLECT_TARUT_CARDS	10	10	Collect Tarut Cards	Collect Tarut Cards	scripts/quests/jeuno/Collect_Tarut_Cards.lua	+ Converted	CONFIRMED
+jeuno	THE_OLD_MONUMENT	11	11	The Old Monument	The Old Monument	scripts/quests/jeuno/The_Old_Monument.lua	+ Converted	CONFIRMED
+jeuno	A_MINSTREL_IN_DESPAIR	12	12	A Minstrel in Despair	A Minstrel in Despair	scripts/quests/jeuno/A_Minstrel_In_Despair.lua	+ Converted	CONFIRMED
+jeuno	RUBBISH_DAY	13	13	Rubbish Day	Rubbish Day	scripts/quests/jeuno/Rubbish_Day.lua	+ Converted	CONFIRMED
+jeuno	NEVER_TO_RETURN	14	14	Never to Return	Never to Return	scripts/quests/jeuno/Never_to_Return.lua	+ Converted	CONFIRMED
+jeuno	COMMUNITY_SERVICE	15	15	Community Service	Community Service	scripts/quests/jeuno/Community_Service.lua	+ Converted	CONFIRMED
+jeuno	COOKS_PRIDE	16	16	Cook's Pride	Cook's Pride	scripts/quests/jeuno/Cooks_Pride.lua	+	CONFIRMED
+jeuno	TENSHODO_MEMBERSHIP	17	17	Tenshodo Membership	Tenshodo Membership	scripts/quests/jeuno/Tenshodo_Membership.lua	+ Converted	CONFIRMED
+jeuno	THE_LOST_CARDIAN	18	18	The Lost Cardian	The Lost Cardian	scripts/zones/Upper_Jeuno/npcs/Monberaux.lua	+	CONFIRMED
+jeuno	PATH_OF_THE_BEASTMASTER	19	19	Path of the Beastmaster	Path of the Beastmaster	scripts/quests/jeuno/Path_of_the_Beastmaster.lua	+ Converted	CONFIRMED
+jeuno	PATH_OF_THE_BARD	20	20	Path of the Bard	Path of the Bard	scripts/quests/jeuno/Path_of_the_Bard.lua	+ Converted	CONFIRMED
+jeuno	THE_CLOCKMASTER	21	21	The Clockmaster	The Clockmaster	scripts/quests/jeuno/The_Clockmaster.lua	+ Converted	CONFIRMED
+jeuno	CANDLE_MAKING	22	22	Candle-making	Candle-making	scripts/quests/jeuno/Candle_Making.lua	+ Converted	CONFIRMED
+jeuno	CHILDS_PLAY	23	23	Child's Play	Child's Play	scripts/quests/jeuno/Childs_Play.lua	+ Converted	CONFIRMED
+jeuno	NORTHWARD	24	24	Northward	Northward	scripts/quests/jeuno/Northward.lua	+ Converted	CONFIRMED
+jeuno	THE_ANTIQUE_COLLECTOR	25	25	The Antique Collector	The Antique Collector	scripts/quests/jeuno/The_Antique_Collector.lua	+ Converted	CONFIRMED
+jeuno	DEAL_WITH_TENSHODO	26	26	Deal with Tenshodo	Deal with Tenshodo	scripts/quests/jeuno/Deal_with_Tenshodo.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_I	27	27	The Gobbiebag Part I	The Gobbiebag Part I	scripts/quests/jeuno/The_Gobbiebag_Part_I.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_II	28	28	The Gobbiebag Part II	The Gobbiebag Part II	scripts/quests/jeuno/The_Gobbiebag_Part_II.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_III	29	29	The Gobbiebag Part III	The Gobbiebag Part III	scripts/quests/jeuno/The_Gobbiebag_Part_III.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_IV	30	30	The Gobbiebag Part IV	The Gobbiebag Part IV	scripts/quests/jeuno/The_Gobbiebag_Part_IV.lua	+ Converted	CONFIRMED
+jeuno	MYSTERIES_OF_BEADEAUX_I	31	31	Mysteries of Beadeaux I	Mysteries of Beadeaux I	scripts/quests/jeuno/Mysteries_of_Beadeaux_I.lua	+ Converted	CONFIRMED
+jeuno	MYSTERIES_OF_BEADEAUX_II	32	32	Mysteries of Beadeaux II	Mysteries of Beadeaux II	scripts/quests/jeuno/Mysteries_of_Beadeaux_II.lua	+ Converted	CONFIRMED
+jeuno	MYSTERY_OF_FIRE	33	33	Mystery of Fire			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_WATER	34	34	Mystery of Water			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_EARTH	35	35	Mystery of Earth			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_WIND	36	36	Mystery of Wind			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_ICE	37	37	Mystery of Ice			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_LIGHTNING	38	38	Mystery of Lightning			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_LIGHT	39	39	Mystery of Light			+ Converted	MARKER_LIES
+jeuno	MYSTERY_OF_DARKNESS	40	40	Mystery of Darkness			+ Converted	MARKER_LIES
+jeuno	FISTFUL_OF_FURY	41	41	Fistful of Fury	Fistful of Fury	scripts/quests/jeuno/Fistful_of_Fury.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBLIN_TAILOR	42	42	The Goblin Tailor	The Goblin Tailor	scripts/quests/jeuno/The_Goblin_Tailor.lua	+ Converted	CONFIRMED
+jeuno	PRETTY_LITTLE_THINGS	43	43	Pretty Little Things	Pretty Little Things	scripts/quests/jeuno/Pretty_Little_Things.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_WARRING_HANDS	44	44	Borghertz's Warring Hands	Borghertz's Warring Hands	scripts/quests/jeuno/Borghertzs_Warring_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_STRIKING_HANDS	45	45	Borghertz's Striking Hands	Borghertz's Striking Hands	scripts/quests/jeuno/Borghertzs_Striking_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_HEALING_HANDS	46	46	Borghertz's Healing Hands	Borghertz's Healing Hands	scripts/quests/jeuno/Borghertzs_Healing_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_SORCEROUS_HANDS	47	47	Borghertz's Sorcerous Hands	Borghertz's Sorcerous Hands	scripts/quests/jeuno/Borghertzs_Sorcerous_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_VERMILLION_HANDS	48	48	Borghertz's Vermillion Hands	Borghertz's Vermillion Hands	scripts/quests/jeuno/Borghertzs_Vermillion_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_SNEAKY_HANDS	49	49	Borghertz's Sneaky Hands	Borghertz's Sneaky Hands	scripts/quests/jeuno/Borghertzs_Sneaky_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_STALWART_HANDS	50	50	Borghertz's Stalwart Hands	Borghertz's Stalwart Hands	scripts/quests/jeuno/Borghertzs_Stalwart_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_SHADOWY_HANDS	51	51	Borghertz's Shadowy Hands	Borghertz's Shadowy Hands	scripts/quests/jeuno/Borghertzs_Shadowy_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_WILD_HANDS	52	52	Borghertz's Wild Hands	Borghertz's Wild Hands	scripts/quests/jeuno/Borghertzs_Wild_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_HARMONIOUS_HANDS	53	53	Borghertz's Harmonious Hands	Borghertz's Harmonious Hands	scripts/quests/jeuno/Borghertzs_Harmonious_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_CHASING_HANDS	54	54	Borghertz's Chasing Hands	Borghertz's Chasing Hands	scripts/quests/jeuno/Borghertzs_Chasing_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_LOYAL_HANDS	55	55	Borghertz's Loyal Hands	Borghertz's Loyal Hands	scripts/quests/jeuno/Borghertzs_Loyal_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_LURKING_HANDS	56	56	Borghertz's Lurking Hands	Borghertz's Lurking Hands	scripts/quests/jeuno/Borghertzs_Lurking_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_DRAGON_HANDS	57	57	Borghertz's Dragon Hands	Borghertz's Dragon Hands	scripts/quests/jeuno/Borghertzs_Dragon_Hands.lua	+ Converted	CONFIRMED
+jeuno	BORGHERTZS_CALLING_HANDS	58	58	Borghertz's Calling Hands	Borghertz's Calling Hands	scripts/quests/jeuno/Borghertzs_Calling_Hands.lua	+ Converted	CONFIRMED
+jeuno	AXE_THE_COMPETITION	59	59	Axe the Competition	Axe the Competition	scripts/quests/jeuno/Axe_the_Competition.lua	+ Converted	CONFIRMED
+jeuno	WINGS_OF_GOLD	60	60	Wings of Gold	Wings of Gold	scripts/quests/jeuno/Wings_of_Gold.lua	+ Converted	CONFIRMED
+jeuno	SCATTERED_INTO_SHADOW	61	61	Scattered Into Shadow	Scattered Into Shadow	scripts/quests/jeuno/Scattered_into_Shadow.lua	+ Converted	CONFIRMED
+jeuno	A_NEW_DAWN	62	62	A New Dawn	A New Dawn	scripts/zones/The_Eldieme_Necropolis/mobs/Sturm.lua	+	UNVERIFIED
+jeuno	PAINFUL_MEMORY	63	63	Painful Memory	Painful Memory	scripts/quests/jeuno/Painful_Memory.lua	+ Converted	CONFIRMED
+jeuno	THE_REQUIEM	64	64	The Requiem	The Requiem	scripts/zones/Lower_Jeuno/npcs/Mataligeat.lua	+	UNVERIFIED
+jeuno	THE_CIRCLE_OF_TIME	65	65	The Circle of Time	The Circle of Time	scripts/zones/Monastic_Cavern/npcs/Altar.lua	+	UNVERIFIED
+jeuno	SEARCHING_FOR_THE_RIGHT_WORDS	66	66	Searching for the Right Words	Searching for the Right Words	scripts/zones/Lower_Jeuno/npcs/Chululu.lua	+	UNVERIFIED
+jeuno	BEAT_AROUND_THE_BUSHIN	67	67	Beat Around the Bushin	Beat Around the Bushin	scripts/zones/Lower_Jeuno/npcs/Vola.lua	+	UNVERIFIED
+jeuno	DUCAL_HOSPITALITY	68	68	Ducal Hospitality	Ducal Hospitality	scripts/quests/jeuno/Ducal_Hospitality.lua	+ Converted	CONFIRMED
+jeuno	IN_THE_MOOD_FOR_LOVE	69	69	In the Mood for Love	In the Mood for Love	scripts/quests/jeuno/In_the_Mood_for_Love.lua	+ Converted	CONFIRMED
+jeuno	EMPTY_MEMORIES	70	70	Empty Memories	Empty Memories	scripts/quests/jeuno/Empty_Memories.lua	+ Converted	CONFIRMED
+jeuno	HOOK_LINE_AND_SINKER	71	71	Hook, Line, and Sinker	Hook, Line, and Sinker	scripts/quests/jeuno/Hook_Line_and_Sinker.lua	+ Converted	CONFIRMED
+jeuno	A_CHOCOBOS_TALE	72	72	A Chocobo's Tale	A Chocobo's Tale	scripts/quests/jeuno/A_Chocobos_Tale.lua	+ Converted	CONFIRMED
+jeuno	A_REPUTATION_IN_RUINS	73	73	A Reputation in Ruins	A Reputation in Ruins	scripts/quests/jeuno/A_Reputation_in_Ruins.lua	+ Converted	UNVERIFIED
+jeuno	THE_GOBBIEBAG_PART_V	74	74	The Gobbiebag Part V	The Gobbiebag Part V	scripts/quests/jeuno/The_Gobbiebag_Part_V.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_VI	75	75	The Gobbiebag Part VI	The Gobbiebag Part VI	scripts/quests/jeuno/The_Gobbiebag_Part_VI.lua	+ Converted	CONFIRMED
+jeuno	BEYOND_THE_SUN	76	76	Beyond the Sun	Beyond the Sun	scripts/quests/jeuno/LB05_2_Beyond_the_Sun.lua	+ Converted	CONFIRMED
+jeuno	UNLISTED_QUALITIES	77	77	Unlisted Qualities	Unlisted Qualities		+ Converted	MARKER_LIES
+jeuno	GIRL_IN_THE_LOOKING_GLASS	78	78	Girl in the Looking Glass	Girl in the Looking Glass		+ Converted	MARKER_LIES
+jeuno	MIRROR_MIRROR	79	79	Mirror, Mirror	Mirror, Mirror		+	MARKER_LIES
+jeuno	PAST_REFLECTIONS	80	80	Past Reflections	Past Reflections	scripts/zones/Windurst_Waters/npcs/Tosuka-Porika.lua	+ Converted	UNVERIFIED
+jeuno	BLIGHTED_GLOOM	81	81	Blighted Gloom	Blighted Gloom		+ Converted	MARKER_LIES
+jeuno	BLESSED_RADIANCE	82	82	Blessed Radiance	Blessed Radiance	scripts/zones/Windurst_Waters/npcs/Tosuka-Porika.lua	+ Converted	UNVERIFIED
+jeuno	MIRROR_IMAGES	83	83	Mirror Images	Mirror Images		+ Converted	MARKER_LIES
+jeuno	CHAMELEON_CAPERS	84	84	Chameleon Capers	Chameleon Capers		+ Converted	MARKER_LIES
+jeuno	REGAINING_TRUST	85	85	Regaining Trust	Regaining Trust		+ Converted	MARKER_LIES
+jeuno	STORMS_OF_FATE	86	86	Storms of Fate	Storms of Fate	scripts/quests/jeuno/Storms_of_Fate.lua	+ Converted	CONFIRMED
+jeuno	MIXED_SIGNALS	87	87	Mixed Signals	Mixed Signals		+ Converted	MARKER_LIES
+jeuno	SHADOWS_OF_THE_DEPARTED	88	88	Shadows of the Departed	Shadows of the Departed	scripts/quests/jeuno/Shadows_of_the_Departed.lua	+ Converted	CONFIRMED
+jeuno	APOCALYPSE_NIGH	89	89	Apocalypse Nigh	Apocalypse Nigh	scripts/quests/jeuno/Apocalypse_Nigh.lua	+ Converted	UNVERIFIED
+jeuno	LURE_OF_THE_WILDCAT	90	90	Lure of the Wildcat (Jeuno)	Lure of the Wildcat	scripts/quests/jeuno/Lure_of_the_Wildcat_Jeuno.lua	+ Converted	CONFIRMED
+jeuno	THE_ROAD_TO_AHT_URHGAN	91	91	The Road to Aht Urhgan	The Road to Aht Urhgan	scripts/quests/jeuno/The_Road_to_Aht_Urhgan.lua	+ Converted	CONFIRMED
+jeuno	CHOCOBO_ON_THE_LOOSE	92	92	Chocobo on the Loose!	Chocobo on the Loose!	scripts/quests/jeuno/Chocobo_on_the_Loose.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_VII	93	93	JNQuest93	The Gobbiebag Part VII	scripts/quests/jeuno/The_Gobbiebag_Part_VII.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_VIII	94	94	JNQuest94	The Gobbiebag Part VIII	scripts/quests/jeuno/The_Gobbiebag_Part_VIII.lua	+ Converted	CONFIRMED
+jeuno	LAKESIDE_MINUET	95	95	JNQuest95	Lakeside Minuet	scripts/quests/jeuno/Lakeside_Minuet.lua	+ Converted	CONFIRMED
+jeuno	THE_UNFINISHED_WALTZ	96	96	JNQuest96	The Unfinished Waltz	scripts/quests/jeuno/DNC_AF1_The_Unfinished_Waltz.lua	+ Converted	CONFIRMED
+jeuno	THE_ROAD_TO_DIVADOM	97	97	JNQuest97	The Road to Divadom	scripts/quests/jeuno/DNC_AF2_The_Road_to_Divadom.lua	+ Converted	CONFIRMED
+jeuno	COMEBACK_QUEEN	98			Comeback Queen	scripts/quests/jeuno/DNC_AF3_Comeback_Queen.lua	+ Converted	UNCOVERED
+jeuno	A_FURIOUS_FINALE	99	99	JNQuest99	A Furious Finale	scripts/quests/jeuno/A_Furious_Finale.lua	+ Converted	CONFIRMED
+jeuno	THE_MIRACULOUS_DALE	100	100	JNQuest	The Miraculous Dale	scripts/quests/jeuno/The_Miraculous_Dale.lua	+ Converted	CONFIRMED
+jeuno	CLASH_OF_THE_COMRADES	101	101	JNQuest	Clash of the Comrades		+ Converted	MARKER_LIES
+jeuno	UNLOCKING_A_MYTH_WARRIOR	102	102	JNQuest	Unlocking a Myth (Warrior)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_MONK	103	103	JNQuest	Unlocking a Myth (Monk)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_WHITE_MAGE	104	104	JNQuest	Unlocking a Myth (White Mage)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_BLACK_MAGE	105	105	JNQuest	Unlocking a Myth (Black Mage)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_RED_MAGE	106	106	JNQuest	Unlocking a Myth (Red Mage)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_THIEF	107	107	JNQuest	Unlocking a Myth (Thief)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_PALADIN	108	108	JNQuest	Unlocking a Myth (Paladin)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_DARK_KNIGHT	109	109	JNQuest	Unlocking a Myth (Dark Knight)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_BEASTMASTER	110	110	JNQuest	Unlocking a Myth (Beastmaster)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_BARD	111	111	JNQuest	Unlocking a Myth (Bard)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_RANGER	112	112	JNQuest	Unlocking a Myth (Ranger)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_SAMURAI	113	113	JNQuest	Unlocking a Myth (Samurai)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_NINJA	114	114	JNQuest	Unlocking a Myth (Ninja)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_DRAGOON	115	115	JNQuest	Unlocking a Myth (Dragoon)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_SUMMONER	116	116	JNQuest	Unlocking a Myth (Summoner)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_BLUE_MAGE	117	117	JNQuest	Unlocking a Myth (Blue Mage)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_CORSAIR	118	118	JNQuest	Unlocking a Myth (Corsair)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_PUPPETMASTER	119	119	JNQuest	Unlocking a Myth (Puppetmaster)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_DANCER	120	120	JNQuest	Unlocking a Myth (Dancer)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	UNLOCKING_A_MYTH_SCHOLAR	121	121	JNQuest	Unlocking a Myth (Scholar)	scripts/zones/Lower_Jeuno/npcs/Zalsuhm.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_IX	123	123	JNQuest	The Gobbiebag Part IX	scripts/quests/jeuno/The_Gobbiebag_Part_IX.lua	+ Converted	CONFIRMED
+jeuno	THE_GOBBIEBAG_PART_X	124	124	JNQuest	The Gobbiebag Part X	scripts/quests/jeuno/The_Gobbiebag_Part_X.lua	+ Converted	CONFIRMED
+jeuno	IN_DEFIANT_CHALLENGE	128	128	In Defiant Challenge	In Defiant Challenge	scripts/quests/jeuno/LB01_In_Defiant_Challenge.lua	+ Converted	CONFIRMED
+jeuno	ATOP_THE_HIGHEST_MOUNTAINS	129	129	Atop the Highest Mountains	Atop the Highest Mountains	scripts/quests/jeuno/LB02_Atop_the_Highest_Mountains.lua	+ Converted	CONFIRMED
+jeuno	WHENCE_BLOWS_THE_WIND	130	130	Whence Blows the Wind	Whence Blows the Wind	scripts/quests/jeuno/LB03_Whence_Blows_the_wind.lua	+ Converted	CONFIRMED
+jeuno	RIDING_ON_THE_CLOUDS	131	131	Riding on the Clouds	Riding on the Clouds	scripts/quests/jeuno/LB04_Riding_on_the_clouds.lua	+ Converted	CONFIRMED
+jeuno	SHATTERING_STARS	132	132	Shattering Stars	Shattering Stars	scripts/quests/jeuno/LB05_1_Shattering_Stars.lua	+ Converted	CONFIRMED
+jeuno	NEW_WORLDS_AWAIT	133			New Worlds Await	scripts/quests/jeuno/LB06_New_Worlds_Await.lua	+ Converted	UNCOVERED
+jeuno	EXPANDING_HORIZONS	134			Expanding Horizons	scripts/quests/jeuno/LB07_Expanding_Horizons.lua	+ Converted	UNCOVERED
+jeuno	BEYOND_THE_STARS	135			Beyond the Stars	scripts/quests/jeuno/LB08_Beyond_the_Stars.lua	+ Converted	UNCOVERED
+jeuno	DORMANT_POWERS_DISLODGED	136			Dormant Powers Dislodged	scripts/quests/jeuno/LB09_1_Dormant_Powers_Dislodged.lua	+ Converted	UNCOVERED
+jeuno	BEYOND_INFINITY	137			Beyond Infinity	scripts/quests/jeuno/LB10_Beyond_Infinity.lua	+ Converted	UNCOVERED
+jeuno	A_TRIAL_IN_TANDEM	160			A Trial in Tandem		+ Converted	UNCOVERED
+jeuno	A_TRIAL_IN_TANDEM_REDUX	161			A Trial in Tandem, Redux		+ Converted	UNCOVERED
+jeuno	YET_ANOTHER_TRIAL_IN_TANDEM	162			Yet Another Trial in Tandem		+ Converted	UNCOVERED
+jeuno	A_QUATERNARY_TRIAL_IN_TANDEM	163			A Quaternary Trial in Tandem		+ Converted	UNCOVERED
+jeuno	A_TRIAL_IN_TANDEM_REVISITED	164			A Trial in Tandem Revisited		+ Converted	UNCOVERED
+jeuno	ALL_IN_THE_CARDS	166			All in the Cards	scripts/quests/jeuno/All_in_the_Cards.lua	+ Converted	UNCOVERED
+jeuno	MARTIAL_MASTERY	167			Martial Mastery	scripts/quests/jeuno/Martial_Mastery.lua	+ Converted	UNCOVERED
+jeuno	VW_OP_115_VALKURM_DUSTER	168			VW Op. 115: Valkurm Duster	scripts/quests/jeuno/VW_OP_115_Valkurm_Duster.lua	+ Converted	UNCOVERED
+jeuno	VW_OP_118_BUBURIMU_SQUALL	169			VW Op. 118: Buburimu Squall	scripts/quests/jeuno/VW_OP_118_Buburimu_Squall.lua	+ Converted	UNCOVERED
+jeuno	PRELUDE_TO_PUISSANCE	170			Prelude to Puissance	scripts/quests/jeuno/LB09_2_Prelude_to_Puissance.lua	+ Converted	UNCOVERED
+jeuno	RESEARCHERS_FROM_THE_WEST	171			Researchers from the West	scripts/quests/jeuno/Researchers_from_the_West.lua		UNCOVERED
+jeuno	MIDDLE_LANDS_INVESTIGATION	172			Middle Lands Investigation	scripts/quests/jeuno/Middle_Lands_Investigation.lua		UNCOVERED
+jeuno	FURTHER_FOUNTS	173			Further Founts	scripts/quests/jeuno/Further_Founts.lua		UNCOVERED
+jeuno	BEAM_ME_UP_NO_NOT_THERE	174			Beam Me Up...No, Not There!			UNCOVERED
+jeuno	NOW_RECORDING	175			Now Recording...			UNCOVERED
+jeuno	TELEPORTS_BY_TWILIGHT	176			Teleports by Twilight	scripts/quests/jeuno/Teleports_by_Twilight.lua		UNCOVERED
+jeuno	SHIFTY_SHADES_OF_PREY	177			Shifty Shades of Prey	scripts/quests/jeuno/Shifty_Shades_of_Prey.lua		UNCOVERED
+jeuno	TO_KILL_MOCKING_BIRDS	178			To Kill Mocking Birds	scripts/quests/jeuno/To_Kill_Mocking_Birds.lua		UNCOVERED
+jeuno	FULL_SPEED_AHEAD	179			Full Speed Ahead!	scripts/quests/full_speed_ahead.lua	+	UNCOVERED
+otherAreas	RYCHARDE_THE_CHEF	0	0	Rycharde the Chef	Rycharde the Chef	scripts/quests/otherAreas/RQ1_Rycharde_the_Chef.lua	+ Converted	CONFIRMED
+otherAreas	WAY_OF_THE_COOK	1	1	Way of the Cook	Way of the Cook	scripts/quests/otherAreas/RQ2_Way_of_the_Cook.lua	+ Converted	CONFIRMED
+otherAreas	UNENDING_CHASE	2	2	Unending Chase	Unending Chase	scripts/quests/otherAreas/RQ3_Unending_Chase.lua	+ Converted	CONFIRMED
+otherAreas	HIS_NAME_IS_VALGEIR	3	3	His Name Is Valgeir	His Name Is Valgeir	scripts/quests/otherAreas/RQ4_His_Name_is_Valgeir.lua	+ Converted	CONFIRMED
+otherAreas	EXPERTISE	4	4	Expertise	Expertise	scripts/quests/otherAreas/RQ5_Expertise.lua	+ Converted	CONFIRMED
+otherAreas	THE_CLUE	5	5	The Clue	The Clue	scripts/quests/otherAreas/RQ6_The_Clue.lua	+ Converted	CONFIRMED
+otherAreas	THE_BASICS	6	6	The Basics	The Basics	scripts/quests/otherAreas/RQ7_The_Basics.lua	+ Converted	CONFIRMED
+otherAreas	ORLANDOS_ANTIQUES	7	7	Orlando's Antiques	Orlando's Antiques	scripts/quests/otherAreas/Orlandos_Antiques.lua	+ Converted	CONFIRMED
+otherAreas	THE_SAND_CHARM	8	8	The Sand Charm	The Sand Charm	scripts/quests/otherAreas/The_Sand_Charm.lua	+ Converted	CONFIRMED
+otherAreas	A_POTTERS_PREFERENCE	9	9	A Potter's Preference	A Potter's Preference	scripts/quests/otherAreas/A_Potters_Preference.lua	+ Converted	CONFIRMED
+otherAreas	THE_OLD_LADY	10	10	The Old Lady	The Old Lady	scripts/quests/otherAreas/The_Old_Lady.lua	+ Converted	CONFIRMED
+otherAreas	FISHERMANS_HEART	11	11	Fisherman's Heart	Fisherman's Heart	scripts/quests/otherAreas/Fishermans_Heart.lua	+ Converted	CONFIRMED
+otherAreas	DONATE_TO_RECYCLING	16	16	Donate to Recycling	Donate to Recycling	scripts/quests/otherAreas/Donate_to_Recycling.lua	+ Converted	CONFIRMED
+otherAreas	UNDER_THE_SEA	17	17	Under the Sea	Under the Sea	scripts/quests/otherAreas/Under_the_Sea.lua	+ Converted	CONFIRMED
+otherAreas	ONLY_THE_BEST	18	18	Only the Best	Only the Best	scripts/quests/otherAreas/Only_the_Best.lua	+ Converted	CONFIRMED
+otherAreas	AN_EXPLORERS_FOOTSTEPS	19	19	An Explorer's Footsteps	An Explorer's Footsteps	scripts/quests/otherAreas/An_Explorers_Footsteps.lua	+ Converted	CONFIRMED
+otherAreas	CARGO	20	20	Cargo	Cargo	scripts/quests/otherAreas/Cargo.lua	+ Converted	CONFIRMED
+otherAreas	THE_GIFT	21	21	The Gift	The Gift	scripts/quests/otherAreas/The_Gift.lua	+ Converted	CONFIRMED
+otherAreas	THE_REAL_GIFT	22	22	The Real Gift	The Real Gift	scripts/quests/otherAreas/The_Real_Gift.lua	+ Converted	CONFIRMED
+otherAreas	THE_RESCUE	23	23	The Rescue	The Rescue	scripts/quests/otherAreas/The_Rescue.lua	+ Converted	CONFIRMED
+otherAreas	ELDER_MEMORIES	24	24	Elder Memories	Elder Memories	scripts/quests/otherAreas/Elder_Memories.lua	+ Converted	CONFIRMED
+otherAreas	TEST_MY_METTLE	25	25	Test My Mettle	Test My Mettle	scripts/quests/otherAreas/Test_My_Mettle.lua	+ Converted	CONFIRMED
+otherAreas	INSIDE_THE_BELLY	26	26	Inside the Belly	Inside the Belly	scripts/quests/otherAreas/Inside_the_Belly.lua	+ Converted	CONFIRMED
+otherAreas	TRIAL_BY_LIGHTNING	27	27	Trial by Lightning	Trial by Lightning	scripts/quests/otherAreas/Trial_by_Lightning.lua	+ Converted	CONFIRMED
+otherAreas	TRIAL_SIZE_TRIAL_BY_LIGHTNING	28	28	Trial-Size Trial by Lightning	Trial-Size Trial by Lightning	scripts/quests/otherAreas/Trial_Size_Trial_by_Lightning.lua	+ Converted	CONFIRMED
+otherAreas	ITS_RAINING_MANNEQUINS	29	29	It's Raining Mannequins	It's Raining Mannequins	scripts/quests/otherAreas/Its_Raining_Mannequins.lua	+ Converted	CONFIRMED
+otherAreas	RECYCLING_RODS	30	30	Recycling Rods	Recycling Rods	scripts/quests/otherAreas/Recycling_Rods.lua	+ Converted	CONFIRMED
+otherAreas	PICTURE_PERFECT	31	31	Picture Perfect	Picture Perfect	scripts/zones/Bastok_Markets/npcs/Lamepaue.lua	+ Converted	UNVERIFIED
+otherAreas	WAKING_THE_BEAST	32	32	Waking the Beast	Waking the Beast	scripts/quests/otherAreas/Waking_the_Beast.lua	+ Converted	CONFIRMED
+otherAreas	SURVIVAL_OF_THE_WISEST	33	33	OTクエスト33	Survival of the Wisest	scripts/quests/otherAreas/Survival_of_the_Wisest.lua	+ Converted	UNVERIFIED
+otherAreas	MONSTROSITY	34	34	OTクエスト34	Monstrosity (Quest)	scripts/quests/otherAreas/Monstrosity.lua	+ Converted	CONFIRMED
+otherAreas	A_HARD_DAYS_KNIGHT	64	64	A Hard Day's Knight	A Hard Day's Knight	scripts/quests/otherAreas/A_Hard_Days_Knight.lua	+ Converted	CONFIRMED
+otherAreas	X_MARKS_THE_SPOT	65	65	X Marks the Spot	X Marks the Spot	scripts/quests/otherAreas/X_Marks_The_Spot.lua	+ Converted	CONFIRMED
+otherAreas	A_BITTER_PAST	66	66	A Bitter Past	A Bitter Past	scripts/quests/otherAreas/A_Bitter_Past.lua	+ Converted	CONFIRMED
+otherAreas	THE_CALL_OF_THE_SEA	67	67	The Call of the Sea	The Call of the Sea	scripts/quests/otherAreas/The_Call_of_the_Sea.lua	+ Converted	CONFIRMED
+otherAreas	PARADISE_SALVATION_AND_MAPS	68	68	Paradise, Salvation, and Maps	Paradise, Salvation, and Maps	scripts/quests/otherAreas/Paradise_Salvation_and_Maps.lua	+ Converted	CONFIRMED
+otherAreas	GO_GO_GOBMUFFIN	69	69	Go! Go! Gobmuffin!	Go! Go! Gobmuffin!	scripts/quests/otherAreas/Go_Go_Gobmuffin.lua	+ Converted	CONFIRMED
+otherAreas	THE_BIG_ONE	70	70	The Big One	The Big One (Quest)	scripts/quests/otherAreas/The_Big_One.lua	+ Converted	UNVERIFIED
+otherAreas	FLY_HIGH	71	71	Fly High	Fly High	scripts/quests/otherAreas/Fly_High.lua	+ Converted	CONFIRMED
+otherAreas	UNFORGIVEN	72	72	Unforgiven	Unforgiven	scripts/quests/otherAreas/Unforgiven.lua	+ Converted	CONFIRMED
+otherAreas	SECRETS_OF_OVENS_LOST	73	73	Secrets of Ovens Lost	Secrets of Ovens Lost	scripts/quests/otherAreas/Secrets_of_Ovens_Lost.lua	+ Converted	CONFIRMED
+otherAreas	PETALS_FOR_PARELBRIAUX	74	74	Petals for Parelbriaux	Petals for Parelbriaux	scripts/quests/otherAreas/Petals_for_Parelbriaux.lua	+ Converted	CONFIRMED
+otherAreas	ELDERLY_PURSUITS	75	75	Elderly Pursuits	Elderly Pursuits	scripts/quests/otherAreas/Elderly_Pursuits.lua	+ Converted	CONFIRMED
+otherAreas	IN_THE_NAME_OF_SCIENCE	76	76	In the Name of Science	In the Name of Science	scripts/zones/Tavnazian_Safehold/npcs/Meret.lua	+	UNVERIFIED
+otherAreas	BEHIND_THE_SMILE	77	77	Behind the Smile	Behind the Smile	scripts/quests/otherAreas/Behind_the_Smile.lua	+ Converted	CONFIRMED
+otherAreas	KNOCKING_ON_FORBIDDEN_DOORS	78	78	Knocking on Forbidden Doors	Knocking on Forbidden Doors	scripts/quests/otherAreas/Knocking_on_Forbidden_Doors.lua	+ Converted	CONFIRMED
+otherAreas	CONFESSIONS_OF_A_BELLMAKER	79	79	Confessions of a Bellmaker	Confessions of a Bellmaker	scripts/quests/otherAreas/Confessions_of_a_Bellmaker.lua	+ Converted	CONFIRMED
+otherAreas	IN_SEARCH_OF_THE_TRUTH	80	80	In Search of the Truth	In Search of the Truth	scripts/quests/otherAreas/In_Search_of_the_Truth.lua	+ Converted	CONFIRMED
+otherAreas	UNINVITED_GUESTS	81	81	Uninvited Guests	Uninvited Guests	scripts/quests/otherAreas/Uninvited_Guests.lua	+ Converted	CONFIRMED
+otherAreas	TANGO_WITH_A_TRACKER	82	82	Tango with a Tracker	Tango with a Tracker	scripts/quests/otherAreas/Tango_with_a_Tracker.lua	+ Converted	CONFIRMED
+otherAreas	REQUIEM_OF_SIN	83	83	Requiem of Sin	Requiem of Sin	scripts/quests/otherAreas/Requiem_of_Sin.lua	+ Converted	CONFIRMED
+otherAreas	VW_OP_026_TAVNAZIAN_TERRORS	84	84	OTクエスト84	VW Op. 026: Tavnazian Terrors	scripts/quests/otherAreas/VW_Op_026_Tavnazian_Terrors.lua	+ Converted	CONFIRMED
+otherAreas	VW_OP_004_BIBIKI_BOMBARDMENT	85	85	OTクエスト85	VW Op. 004: Bibiki Bombardment	scripts/quests/otherAreas/VW_Op_004_Bibiki_Bombardment.lua	+ Converted	CONFIRMED
+otherAreas	BOMBS_AWAY	96	96	Bombs Away!	Bombs Away!	scripts/quests/otherAreas/Bombs_Away.lua	+ Converted	CONFIRMED
+otherAreas	MITHRAN_DELICACIES	97	97	Mithran Delicacies	Mithran Delicacies	scripts/quests/otherAreas/Mithran_Delicacies.lua	+ Converted	CONFIRMED
+otherAreas	GIVE_A_MOOGLE_A_BREAK	100	100	Give a Moogle a Break	Give a Moogle a Break	scripts/quests/otherAreas/Give_a_Moogle_a_Break.lua	+ Converted	CONFIRMED
+otherAreas	THE_MOOGLE_PICNIC	101	101	The Moogle's Picnic!		scripts/quests/otherAreas/The_Moogles_Picnic.lua	+ Converted	CONFIRMED
+otherAreas	MOOGLES_IN_THE_WILD	102	102	Moogles in the Wild	Moogles in the Wild	scripts/quests/otherAreas/Moogles_in_the_Wild.lua	+ Converted	CONFIRMED
+otherAreas	MISSIONARY_MOBLIN	103	103	Missionary Moblin	Missionary Moblin	scripts/quests/otherAreas/Missionary_Moblin.lua	+ Converted	CONFIRMED
+otherAreas	FOR_THE_BIRDS	104	104	For the Birds	For the Birds	scripts/quests/otherAreas/For_The_Birds.lua	+ Converted	CONFIRMED
+otherAreas	BETTER_THE_DEMON_YOU_KNOW	105	105	Better the Demon You Know	Better the Demon You Know	scripts/quests/otherAreas/Better_The_Demon_You_Know.lua	+ Converted	CONFIRMED
+otherAreas	AN_UNDERSTANDING_OVERLORD	106	106	An Understanding Overlord?	An Understanding Overlord?	scripts/quests/otherAreas/An_Understanding_Overlord.lua	+ Converted	CONFIRMED
+otherAreas	AN_AFFABLE_ADAMANTKING	107	107	An Affable Adamantking?	An Affable Adamantking?	scripts/quests/otherAreas/An_Affable_Adamantking.lua	+ Converted	CONFIRMED
+otherAreas	A_MORAL_MANIFEST	108	108	A Moral Manifest?	A Moral Manifest?	scripts/zones/Altar_Room/Zone.lua	+	CONFIRMED
+otherAreas	A_GENEROUS_GENERAL	109	109	A Generous General?	A Generous General?	scripts/quests/otherAreas/A_Generous_General.lua	+ Converted	CONFIRMED
+otherAreas	RECORDS_OF_EMINENCE	110			Records of Eminence (Quest)	scripts/globals/roe_records.lua	+ Converted	UNCOVERED
+otherAreas	UNITY_CONCORD	111					+ Converted	UNCOVERED
+otherAreas	FULL_FIELDS	112			Full Fields	scripts/quests/otherAreas/Full_Fields.lua		UNCOVERED
+otherAreas	GREEN_GROVES	113			Green Groves	scripts/quests/otherAreas/Green_Groves.lua		UNCOVERED
+otherAreas	MINING_MISSIVE	114			Mining Missive	scripts/quests/otherAreas/Mining_Missive.lua		UNCOVERED
+otherAreas	POND_PROBING	115			Pond Probing	scripts/quests/otherAreas/Pond_Probing.lua		UNCOVERED
+otherAreas	COASTAL_CHAOS	116			Coastal Chaos	scripts/quests/otherAreas/Coastal_Chaos.lua		UNCOVERED
+otherAreas	SEED_SOWING	117			Seed Sowing	scripts/quests/otherAreas/Seed_Sowing.lua		UNCOVERED
+otherAreas	FLOTSAM_FINDING	118			Flotsam Finding	scripts/quests/otherAreas/Flotsam_Finding.lua		UNCOVERED
+otherAreas	COURTESY_CRUSTACEAN	119			Courtesy Crustacean	scripts/quests/otherAreas/Courtesy_Crustacean.lua		UNCOVERED
+otherAreas	TRINKET_FOR_THE_TYRANT	120			Trinket for the Tyrant	scripts/quests/otherAreas/Trinket_for_the_Tyrant.lua		UNCOVERED
+otherAreas	HYPNOTIC_HOSPITALITY	121			Hypnotic Hospitality	scripts/quests/otherAreas/Hypnotic_Hospitality.lua		UNCOVERED
+otherAreas	TITILLATING_TOMES	122			Titillating Tomes			UNCOVERED
+otherAreas	RELEASE_THE_FLEECE	123			Release the Fleece			UNCOVERED
+otherAreas	FEEDING_FRENZY	124			Feeding Frenzy			UNCOVERED
+otherAreas	CRY_NOT_CARETAKER	125			Cry Not, Caretaker			UNCOVERED
+otherAreas	CHACHAROONS_CHEER	126			Chacharoon's Cheer			UNCOVERED
+otherAreas	TRIAL_OF_THE_CHACHAROON	127			Trial of the Chacharoon			UNCOVERED
+otherAreas	DOCTOR_CHACHAROON	128			Doctor Chacharoon			UNCOVERED
+otherAreas	ROWING_TOGETHER	129			Rowing Together			UNCOVERED
+otherAreas	GLITTERING_GALS	130			Glittering Gals			UNCOVERED
+otherAreas	SALLY_FORTH	131			Sally Forth!			UNCOVERED
+outlands	THE_FIREBLOOM_TREE	1	1	The Firebloom Tree	The Firebloom Tree	scripts/quests/outlands/The_Fireblom_Tree.lua	+ Converted	CONFIRMED
+outlands	GREETINGS_TO_THE_GUARDIAN	2	2	Greetings to the Guardian	Greetings to the Guardian	scripts/quests/outlands/Greetings_to_the_Guardian.lua	+ Converted	CONFIRMED
+outlands	A_QUESTION_OF_TASTE	3	3	A Question of Taste	A Question of Taste	scripts/quests/outlands/A_Question_of_Taste.lua	+ Converted	CONFIRMED
+outlands	EVERYONES_GRUDGING	4	4	Everyone's Grudging	Everyone's Grudging	scripts/quests/outlands/Everyones_Grudging.lua	+ Converted	CONFIRMED
+outlands	YOU_CALL_THAT_A_KNIFE	6	6	You Call That a Knife?	You Call That a Knife?	scripts/quests/outlands/You_Call_That_a_Knife.lua	+ Converted	CONFIRMED
+outlands	MISSIONARY_MAN	7	7	Missionary Man	Missionary Man	scripts/zones/Kazham/npcs/Rauteinot.lua	+	CONFIRMED
+outlands	GULLIBLES_TRAVELS	8	8	Gullible's Travels	Gullible's Travels	scripts/quests/outlands/Gullibles_Travels.lua	+ Converted	CONFIRMED
+outlands	EVEN_MORE_GULLIBLES_TRAVELS	9	9	Even More Gullible's Travels	Even More Gullible's Travels	scripts/zones/Yuhtunga_Jungle/npcs/Blue_Rafflesia.lua	+	UNVERIFIED
+outlands	PERSONAL_HYGIENE	10	10	Personal Hygiene	Personal Hygiene	scripts/quests/outlands/Personal_Hygiene.lua	+ Converted	CONFIRMED
+outlands	THE_OPO_OPO_AND_I	11	11	The Opo-opo and I	The Opo-opo and I	scripts/zones/Kazham/npcs/Bubupp.lua	+	UNVERIFIED
+outlands	TRIAL_BY_FIRE	12	12	Trial by Fire	Trial by Fire	scripts/quests/outlands/Trial_by_Fire.lua	+ Converted	CONFIRMED
+outlands	CLOAK_AND_DAGGER	13	13	Cloak and Dagger	Cloak and Dagger	scripts/quests/outlands/Cloak_and_Dagger.lua	+ Converted	CONFIRMED
+outlands	A_DISCERNING_EYE	14	14	A Discerning Eye (Kazham)	A Discerning Eye (Bastok)	scripts/quests/outlands/A_Discerning_Eye.lua	+ Converted	CONFIRMED
+outlands	TRIAL_SIZE_TRIAL_BY_FIRE	15	15	Trial-Size Trial by Fire	Trial-Size Trial by Fire	scripts/quests/outlands/Trial_Size_Trial_by_Fire.lua	+ Converted	CONFIRMED
+outlands	VOIDWATCH_OPS_BORDER_CROSSING	100	100	FRクエスト100	Voidwatch Ops: Border Crossing	scripts/quests/outlands/Voidwatch_Ops_Border_Crossing.lua	+ Converted	CONFIRMED
+outlands	VW_OP_054_ELSHIMO_LIST	101	101	FRクエスト101	VW Op. 054: Elshimo List	scripts/quests/outlands/VW_OP_054_Elshimo_List.lua	+ Converted	CONFIRMED
+outlands	VW_OP_101_DETOUR_TO_ZEPWELL	102	102	FRクエスト102	VW Op. 101: Detour to Zepwell	scripts/quests/outlands/VW_Op_101_Detour_to_Zepwell.lua	+ Converted	CONFIRMED
+outlands	VW_OP_115_LI_TELOR_VARIANT	103	103	FRクエスト103	VW Op. 115: Li'Telor Variant	scripts/quests/outlands/VW_Op_115_Li_Telor_Variant.lua	+ Converted	CONFIRMED
+outlands	SKYWARD_HO_VOIDWATCHER	104	104	FRクエスト104	Skyward Ho, Voidwatcher!	scripts/quests/outlands/Skyward_Ho_Voidwatcher.lua	+ Converted	CONFIRMED
+outlands	THE_SAHAGINS_KEY	128	128	The Sahagin's Key			+	MARKER_LIES
+outlands	FORGE_YOUR_DESTINY	129	129	Forge Your Destiny	Forge Your Destiny	scripts/quests/outlands/Forge_Your_Destiny.lua	+ Converted	CONFIRMED
+outlands	BLACK_MARKET	130	130	Black Market	Black Market	scripts/quests/outlands/Black_Market.lua	+ Converted	CONFIRMED
+outlands	MAMA_MIA	131	131	Mama Mia	Mama Mia	scripts/quests/outlands/Mama_Mia.lua	+ Converted	CONFIRMED
+outlands	STOP_YOUR_WHINING	132	132	Stop Your Whining	Stop Your Whining	scripts/quests/outlands/Stop_Your_Whining.lua	+ Converted	CONFIRMED
+outlands	TRIAL_BY_WATER	133	133	Trial by Water	Trial by Water	scripts/quests/outlands/Trial_by_Water.lua	+ Converted	CONFIRMED
+outlands	EVERYONES_GRUDGE	134	134	Everyone's Grudge	Everyone's Grudge	scripts/quests/outlands/Everyones_Grudge.lua	+ Converted	CONFIRMED
+outlands	SECRET_OF_THE_DAMP_SCROLL	135	135	Secret of the Damp Scroll	Secret of the Damp Scroll	scripts/quests/outlands/Secret_of_the_Damp_Scroll.lua	+ Converted	CONFIRMED
+outlands	THE_SAHAGINS_STASH	136	136	The Sahagin's Stash	The Sahagin's Stash	scripts/quests/outlands/The_Sahagins_Stash.lua	+ Converted	CONFIRMED
+outlands	ITS_NOT_YOUR_VAULT	137	137	It's Not Your Vault	It's Not Your Vault	scripts/zones/Norg/npcs/Keal.lua	+	CONFIRMED
+outlands	LIKE_A_SHINING_SUBLIGAR	138	138	Like a Shining Subligar	Like a Shining Subligar	scripts/quests/outlands/Like_Shining_Subligar.lua	+ Converted	CONFIRMED
+outlands	LIKE_SHINING_LEGGINGS	139	139	Like Shining Leggings	Like Shining Leggings	scripts/quests/outlands/Like_Shining_Leggings.lua	+ Converted	CONFIRMED
+outlands	THE_SACRED_KATANA	140	140	The Sacred Katana	The Sacred Katana	scripts/quests/outlands/SAM_AF1_The_Sacred_Katana.lua	+ Converted	CONFIRMED
+outlands	YOMI_OKURI	141	141	Yomi Okuri	Yomi Okuri	scripts/quests/outlands/SAM_AF2_Yomi_Okuri.lua	+ Converted	CONFIRMED
+outlands	A_THIEF_IN_NORG	142	142	A Thief in Norg!?	A Thief in Norg!?	scripts/quests/outlands/SAM_AF3_A_Thief_in_Norg.lua	+ Converted	CONFIRMED
+outlands	TWENTY_IN_PIRATE_YEARS	143	143	20 in Pirate Years		scripts/zones/Norg/npcs/Ryoma.lua	+	CONFIRMED
+outlands	I_LL_TAKE_THE_BIG_BOX	144	144	I'll Take the Big Box	I'll Take the Big Box	scripts/zones/Selbina/Zone.lua	+	CONFIRMED
+outlands	TRUE_WILL	145	145	True Will	True Will	scripts/zones/Yhoator_Jungle/mobs/Kappa_Akuso.lua	+	UNVERIFIED
+outlands	THE_POTENTIAL_WITHIN	146	146	The Potential Within	The Potential Within	scripts/quests/outlands/The_Potential_Within.lua	+ Converted	CONFIRMED
+outlands	BUGI_SODEN	147	147	Bugi Soden	Bugi Soden	scripts/quests/outlands/Bugi_Soden.lua	+ Converted	CONFIRMED
+outlands	TRIAL_SIZE_TRIAL_BY_WATER	148	148	Trial-Size Trial by Water	Trial-Size Trial by Water	scripts/quests/outlands/Trial_Size_Trial_by_Water.lua	+ Converted	CONFIRMED
+outlands	AN_UNDYING_PLEDGE	149	149	An Undying Pledge	An Undying Pledge	scripts/quests/outlands/An_Undying_Pledge.lua	+ Converted	CONFIRMED
+outlands	WRATH_OF_THE_OPO_OPOS	160	160	Wrath of the Opo-opos	Wrath of the Opo-opos	scripts/quests/outlands/Wrath_of_the_Opo_Opos.lua	+ Converted	CONFIRMED
+outlands	WANDERING_SOULS	161	161	Wandering Souls	Wandering Souls	scripts/quests/outlands/Wandering_Souls.lua	+ Converted	CONFIRMED
+outlands	SOUL_SEARCHING	162	162	Soul Searching	Soul Searching	scripts/quests/outlands/Soul_Searching.lua	+ Converted	CONFIRMED
+outlands	DIVINE_MIGHT	163	163	Divine Might	Divine Might	scripts/quests/outlands/Divine_Might.lua	+ Converted	CONFIRMED
+outlands	DIVINE_MIGHT_REPEAT	164	164	FRクエスト164		scripts/quests/outlands/Divine_Might_Repeat.lua	+ Converted	CONFIRMED
+outlands	OPEN_SESAME	165	165	FRクエスト165	Open Sesame	scripts/quests/outlands/Open_Sesame.lua	+ Converted	CONFIRMED
+outlands	DONT_FORGET_THE_ANTIDOTE	192	192	Don't Forget the Antidote	Don't Forget the Antidote	scripts/quests/outlands/Dont_Forget_the_Antidote.lua	+ Converted	CONFIRMED
+outlands	THE_MISSING_PIECE	193	193	The Missing Piece	The Missing Piece	scripts/quests/outlands/The_Missing_Piece.lua	+ Converted	CONFIRMED
+outlands	TRIAL_BY_WIND	194	194	Trial by Wind	Trial by Wind	scripts/quests/outlands/Trial_by_Wind.lua	+ Converted	CONFIRMED
+outlands	THE_KUFTAL_TOUR	195	195	The Kuftal Tour	The Kuftal Tour	scripts/quests/outlands/The_Kuftal_Tour.lua	+ Converted	CONFIRMED
+outlands	THE_IMMORTAL_LU_SHANG	196	196	The Immortal Lu Shang	The Immortal Lu Shang	scripts/quests/outlands/The_Immortal_Lu_Shang.lua	+ Converted	CONFIRMED
+outlands	TRIAL_SIZE_TRIAL_BY_WIND	197	197	Trial-Size Trial by Wind	Trial-Size Trial by Wind	scripts/quests/outlands/Trial_Size_Trial_by_Wind.lua	+ Converted	CONFIRMED
+outlands	CHASING_DREAMS	199	199	Chasing Dreams	Chasing Dreams	scripts/quests/outlands/Chasing_Dreams.lua	+ Converted       -- CoP Quest	CONFIRMED
+outlands	THE_SEARCH_FOR_GOLDMANE	200	200	The Search for Goldmane	The Search for Goldmane	scripts/quests/outlands/The_Search_for_Goldmane.lua	+ Converted     -- CoP Quest	CONFIRMED
+outlands	INDOMITABLE_SPIRIT	201	201	Indomitable Spirit	Indomitable Spirit	scripts/quests/outlands/Indomitable_Spirit.lua	+ Converted	CONFIRMED
+ahtUrhgan	KEEPING_NOTES	0	0	Keeping Notes	Keeping Notes	scripts/quests/ahtUrhgan/Keeping_Notes.lua	+ Converted	CONFIRMED
+ahtUrhgan	ARTS_AND_CRAFTS	1	1	Arts and Crafts	Arts and Crafts	scripts/quests/ahtUrhgan/Arts_and_Crafts.lua	+ Converted	CONFIRMED
+ahtUrhgan	OLDUUM	2	2	Olduum	Olduum	scripts/quests/ahtUrhgan/Olduum.lua	+ Converted	CONFIRMED
+ahtUrhgan	GOT_IT_ALL	3	3	Got It All	Got It All	scripts/quests/ahtUrhgan/Got_It_All.lua	+ Converted	CONFIRMED
+ahtUrhgan	GET_THE_PICTURE	4	4	Get the Picture	Get the Picture	scripts/quests/ahtUrhgan/Get_the_Picture.lua	+ Converted	UNVERIFIED
+ahtUrhgan	AN_EMPTY_VESSEL	5	5	An Empty Vessel	An Empty Vessel	scripts/quests/ahtUrhgan/An_Empty_Vessel.lua	+ Converted	CONFIRMED
+ahtUrhgan	LUCK_OF_THE_DRAW	6	6	Luck of the Draw	Luck of the Draw	scripts/quests/ahtUrhgan/Luck_of_the_Draw.lua	+ Converted	CONFIRMED
+ahtUrhgan	NO_STRINGS_ATTACHED	7	7	No Strings Attached	No Strings Attached	scripts/quests/ahtUrhgan/No_Strings_Attached.lua	+ Converted	CONFIRMED
+ahtUrhgan	FINDING_FAULTS	8	8	Finding Faults	Finding Faults	scripts/quests/ahtUrhgan/Finding_Faults.lua	+ Converted	UNVERIFIED
+ahtUrhgan	GIVE_PEACE_A_CHANCE	9	9	Give Peace a Chance	Give Peace a Chance	scripts/quests/ahtUrhgan/Give_Peace_a_Chance.lua	+ Converted	CONFIRMED
+ahtUrhgan	THE_ART_OF_WAR	10	10	The Art of War	The Art of War	scripts/quests/ahtUrhgan/The_Art_of_War.lua	+ Converted	UNVERIFIED
+ahtUrhgan	A_TASTE_OF_HONEY	12	12	A Taste of Honey	A Taste of Honey	scripts/quests/ahtUrhgan/A_Taste_of_Honey.lua	+ Converted	CONFIRMED
+ahtUrhgan	SUCH_SWEET_SORROW	13	13	Such Sweet Sorrow	Such Sweet Sorrow	scripts/quests/ahtUrhgan/Such_Sweet_Sorrow.lua	+ Converted	CONFIRMED
+ahtUrhgan	FEAR_OF_THE_DARK_II	14	14	Fear of the Dark II	Fear of the Dark II	scripts/quests/ahtUrhgan/Fear_of_the_Dark_2.lua	+ Converted	CONFIRMED
+ahtUrhgan	COOK_A_ROON	15	15	Cook-a-roon?	Cook-a-roon?	scripts/quests/ahtUrhgan/Cook-a-roon.lua	+ Converted	CONFIRMED
+ahtUrhgan	THE_DIE_IS_CAST	16	16	The Die Is Cast	The Die Is Cast	scripts/quests/ahtUrhgan/The_Die_is_Cast.lua	+ Converted	CONFIRMED
+ahtUrhgan	TWO_HORN_THE_SAVAGE	17	17	Two Horn the Savage	Two Horn the Savage	scripts/quests/ahtUrhgan/Two_Horn_the_Savage.lua	+ Converted	CONFIRMED
+ahtUrhgan	TOTOROONS_TREASURE_HUNT	18	18	Totoroon's Treasure Hunt	Totoroon's Treasure Hunt	scripts/quests/ahtUrhgan/Totoroons_Treasure_Hunt.lua	+ Converted	UNVERIFIED
+ahtUrhgan	WHAT_FRIENDS_ARE_FOR	19	19	What Friends Are For	What Friends Are For	scripts/quests/ahtUrhgan/What_Friends_Are_For.lua	+ Converted	CONFIRMED
+ahtUrhgan	ROCK_BOTTOM	20	20	Rock Bottom	Rock Bottom	scripts/quests/ahtUrhgan/Rock_Bottom.lua	+ Converted	CONFIRMED
+ahtUrhgan	BEGINNINGS	21	21	Beginnings	Beginnings	scripts/quests/ahtUrhgan/BLU_AF1_Beginnings.lua	+ Converted	CONFIRMED
+ahtUrhgan	OMENS	22	22	Omens	Omens	scripts/quests/ahtUrhgan/BLU_AF2_Omens.lua	+ Converted	CONFIRMED
+ahtUrhgan	TRANSFORMATIONS	23	23	Transformations	Transformations	scripts/quests/ahtUrhgan/BLU_AF3_Transformations.lua	+ Converted	CONFIRMED
+ahtUrhgan	EQUIPPED_FOR_ALL_OCCASIONS	24	24	Equipped for All Occasions	Equipped for All Occasions	scripts/quests/ahtUrhgan/COR_AF1_Equipped_for_All_Occasions.lua	+ Converted	CONFIRMED
+ahtUrhgan	NAVIGATING_THE_UNFRIENDLY_SEAS	25	25	Navigating the Unfriendly Seas	Navigating the Unfriendly Seas	scripts/zones/Wajaom_Woodlands/npcs/Leypoint.lua	+	UNVERIFIED
+ahtUrhgan	AGAINST_ALL_ODDS	26	26	Against All Odds	Against All Odds	scripts/zones/Arrapago_Reef/Zone.lua	+	UNVERIFIED
+ahtUrhgan	THE_WAYWARD_AUTOMATON	27	27	The Wayward Automaton	The Wayward Automaton	scripts/zones/Caedarva_Mire/mobs/Caedarva_Toad.lua	+	UNVERIFIED
+ahtUrhgan	OPERATION_TEATIME	28	28	Operation Teatime	Operation Teatime	scripts/zones/Caedarva_Mire/npcs/qm10.lua	+	UNVERIFIED
+ahtUrhgan	PUPPETMASTER_BLUES	29	29	Puppetmaster Blues	Puppetmaster Blues	scripts/quests/ahtUrhgan/Puppetmaster_Blues.lua	+ Converted	CONFIRMED
+ahtUrhgan	MOMENT_OF_TRUTH	30	30	Moment of Truth	Moment of Truth	scripts/quests/ahtUrhgan/Moment_of_Truth.lua	+ Converted	CONFIRMED
+ahtUrhgan	THREE_MEN_AND_A_CLOSET	31	31	ATクエスト00	Three Men and a Closet	scripts/quests/ahtUrhgan/Three_Men_and_a_Closet.lua	+ Converted	CONFIRMED
+ahtUrhgan	FIVE_SECONDS_OF_FAME	32	32	ATクエスト00	Five Seconds of Fame	scripts/quests/ahtUrhgan/Five_Seconds_of_Fame.lua	+ Converted	UNVERIFIED
+ahtUrhgan	THE_BEAST_WITHIN	40	40	The Beast Within	The Beast Within	scripts/quests/ahtUrhgan/The_Beast_Within.lua	+ Converted	CONFIRMED
+ahtUrhgan	BREAKING_THE_BONDS_OF_FATE	41	41	Breaking the Bonds of Fate	Breaking the Bonds of Fate	scripts/quests/ahtUrhgan/Breaking_the_Bonds_of_Fate.lua	+ Converted	CONFIRMED
+ahtUrhgan	SAGA_OF_THE_SKYSERPENT	43	43	Saga of the Skyserpent	Saga of the Skyserpent	scripts/quests/ahtUrhgan/Saga_of_the_Skyserpent.lua	+ Converted	CONFIRMED
+ahtUrhgan	ODE_TO_THE_SERPENTS	44	44	ATクエスト00	Ode to the Serpents	scripts/quests/ahtUrhgan/Ode_to_the_Serpents.lua	+ Converted	CONFIRMED
+ahtUrhgan	WHEN_THE_BOW_BREAKS	45	45	ATクエスト00	When the Bow Breaks	scripts/quests/ahtUrhgan/When_the_Bow_Breaks.lua	+ Converted	CONFIRMED
+ahtUrhgan	FIST_OF_THE_PEOPLE	46	46	ATクエスト00	Fist of the People	scripts/quests/ahtUrhgan/Fist_of_the_People.lua	+ Converted	CONFIRMED
+ahtUrhgan	SOOTHING_WATERS	47	47	ATクエスト00	Soothing Waters	scripts/quests/ahtUrhgan/Soothing_Waters.lua	+ Converted	CONFIRMED
+ahtUrhgan	EMBERS_OF_HIS_PAST	48	48	ATクエスト00	Embers of His Past	scripts/quests/ahtUrhgan/Embers_of_His_Past.lua	+ Converted	CONFIRMED
+ahtUrhgan	THE_PRANKSTER	60	60	The Prankster	The Prankster	scripts/quests/ahtUrhgan/The_Prankster.lua	+ Converted	CONFIRMED
+ahtUrhgan	DELIVERING_THE_GOODS	61	61	Delivering the Goods	Delivering the Goods	scripts/quests/ahtUrhgan/Delivering_the_Goods.lua	+ Converted	CONFIRMED
+ahtUrhgan	VANISHING_ACT	62	62	Vanishing Act	Vanishing Act	scripts/quests/ahtUrhgan/Vanishing_Act.lua	+ Converted	CONFIRMED
+ahtUrhgan	STRIKING_A_BALANCE	63	63	Striking a Balance	Striking a Balance	scripts/quests/ahtUrhgan/Striking_a_Balance.lua	+ Converted	CONFIRMED
+ahtUrhgan	NOT_MEANT_TO_BE	64	64	Not Meant to Be	Not Meant to Be	scripts/quests/ahtUrhgan/Not_Meant_to_Be.lua	+ Converted	CONFIRMED
+ahtUrhgan	LED_ASTRAY	65	65	Led Astray	Led Astray	scripts/quests/ahtUrhgan/Led_Astray.lua	+ Converted	CONFIRMED
+ahtUrhgan	RAT_RACE	66	66	ATクエスト00	Rat Race	scripts/quests/ahtUrhgan/Rat_Race.lua	+ Converted	CONFIRMED
+ahtUrhgan	THE_PRINCE_AND_THE_HOPPER	67	67	ATクエスト00	The Prince and the Hopper	scripts/quests/ahtUrhgan/The_Prince_and_the_Hopper.lua	+ Converted	CONFIRMED
+ahtUrhgan	VW_OP_050_AHT_URGAN_ASSAULT	68	68	ATクエスト00		scripts/quests/ahtUrhgan/VW_Op_050_Aht_Urhgan_Assault.lua	+ Converted	CONFIRMED
+ahtUrhgan	VW_OP_068_SUBTERRAINEAN_SKIRMISH	69	69	ATクエスト00		scripts/quests/ahtUrhgan/VW_Op_068_Subterranean_Skirmish.lua	+ Converted	CONFIRMED
+ahtUrhgan	AN_IMPERIAL_HEIST	70	70	ATクエスト00	An Imperial Heist	scripts/quests/ahtUrhgan/An_Imperial_Heist.lua	+ Converted	UNVERIFIED
+ahtUrhgan	DUTIES_TASKS_AND_DEEDS	71	71	ATクエスト00	Duties, Tasks, and Deeds	scripts/quests/ahtUrhgan/Duties_Tasks_and_Deeds.lua	+ Converted	UNVERIFIED
+ahtUrhgan	FORGING_A_NEW_MYTH	72	72	ATクエスト00	Forging a New Myth	scripts/quests/ahtUrhgan/Forging_a_New_Myth.lua	+ Converted	UNVERIFIED
+ahtUrhgan	COMING_FULL_CIRCLE	73	73	ATクエスト00	Coming Full Circle	scripts/quests/ahtUrhgan/Coming_Full_Circle.lua	+ Converted	UNVERIFIED
+ahtUrhgan	WAKING_THE_COLOSSUS	74	74	ATクエスト00	Waking the Colossus	scripts/quests/ahtUrhgan/Waking_the_Colossus.lua	+ Converted	CONFIRMED
+ahtUrhgan	DIVINE_INTERFERENCE	75	75	ATクエスト00	Divine Interference	scripts/quests/ahtUrhgan/Divine_Interference.lua	+ Converted	CONFIRMED
+ahtUrhgan	THE_RIDER_COMETH	76	76	ATクエスト00	The Rider Cometh	scripts/quests/ahtUrhgan/The_Rider_Cometh.lua	+ Converted	CONFIRMED
+ahtUrhgan	UNWAVERING_RESOLVE	77	77	ATクエスト00	Unwavering Resolve	scripts/quests/ahtUrhgan/Unwavering_Resolve.lua	+ Converted	UNVERIFIED
+ahtUrhgan	A_STYGIAN_PACT	78	78	ATクエスト00	A Stygian Pact	scripts/quests/ahtUrhgan/A_Stygian_Pact.lua	+ Converted	UNVERIFIED
+ahtUrhgan	PROMOTION_PRIVATE_FIRST_CLASS	90	90	Promotion: Private First Class	Promotion: Private First Class	scripts/quests/ahtUrhgan/Promotion_Private_First_Class.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_SUPERIOR_PRIVATE	91	91	Promotion: Superior Private	Promotion: Superior Private	scripts/quests/ahtUrhgan/Promotion_Superior_Private.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_LANCE_CORPORAL	92	92	Promotion: Lance Corporal	Promotion: Lance Corporal	scripts/quests/ahtUrhgan/Promotion_Lance_Corporal.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_CORPORAL	93	93	Promotion: Corporal	Promotion: Corporal	scripts/quests/ahtUrhgan/Promotion_Corporal.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_SERGEANT	94	94	Promotion: Sergeant	Promotion: Sergeant	scripts/quests/ahtUrhgan/Promotion_Sergeant.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_SERGEANT_MAJOR	95	95	Promotion: Sergeant Major	Promotion: Sergeant Major	scripts/quests/ahtUrhgan/Promotion_Sergeant_Major.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_CHIEF_SERGEANT	96	96	ATクエスト00	Promotion: Chief Sergeant	scripts/quests/ahtUrhgan/Promotion_Chief_Sergeant.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_SECOND_LIEUTENANT	97	97	ATクエスト00	Promotion: Second Lieutenant	scripts/quests/ahtUrhgan/Promotion_Second_Lieutenant.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_FIRST_LIEUTENANT	98	98	ATクエスト00	Promotion: First Lieutenant	scripts/quests/ahtUrhgan/Promotion_First_Lieutenant.lua	+ Converted	CONFIRMED
+ahtUrhgan	PROMOTION_CAPTAIN	99	99	ATクエスト00	Promotion: Captain	scripts/quests/ahtUrhgan/Promotion_Captain.lua	+ Converted	CONFIRMED
+ahtUrhgan	SCOUTING_THE_ASHU_TALIF	101	101	Scouting the Ashu Talif	Scouting the Ashu Talif	scripts/quests/ahtUrhgan/Scouting_the_Ashu_Talif.lua	+ Converted	UNVERIFIED
+ahtUrhgan	ROYAL_PAINTER_ESCORT	102	102	Royal Painter Escort	Royal Painter Escort	scripts/quests/ahtUrhgan/Royal_Painter_Escort.lua	+ Converted	UNVERIFIED
+ahtUrhgan	TARGETING_THE_CAPTAIN	103	103	Targeting the Captain	Targeting the Captain	scripts/quests/ahtUrhgan/Targeting_the_Captain.lua	+ Converted	UNVERIFIED
+crystalWar	LOST_IN_TRANSLOCATION	0	0	Lost in Translocation	Lost in Translocation	scripts/quests/crystalWar/Lost_in_Translocation.lua	+ Converted	CONFIRMED
+crystalWar	MESSAGE_ON_THE_WINDS	1				scripts/quests/crystalWar/Message_on_the_Winds.lua	+ Converted	UNCOVERED
+crystalWar	THE_WEEKLY_ADVENTURER	2	2	The Weekly Adventurer	The Weekly Adventurer	scripts/quests/crystalWar/The_Weekly_Adventurer.lua	+ Converted	CONFIRMED
+crystalWar	HEALING_HERBS	3	3	Healing Herbs	Healing Herbs	scripts/quests/crystalWar/Healing_Herbs.lua	+ Converted	UNVERIFIED
+crystalWar	REDEEMING_ROCKS	4	4	Redeeming Rocks	Redeeming Rocks	scripts/zones/Vunkerl_Inlet_[S]/npcs/qm4.lua	+ Converted	UNVERIFIED
+crystalWar	THE_DAWN_OF_DELECTABILITY	5	5	The Dawn of Delectability	The Dawn of Delectability	scripts/quests/crystalWar/The_Dawn_of_Delectability.lua	+ Converted	CONFIRMED
+crystalWar	A_LITTLE_KNOWLEDGE	6	6	A Little Knowledge	A Little Knowledge	scripts/quests/crystalWar/A_Little_Knowledge.lua	+ Converted	CONFIRMED
+crystalWar	THE_FIGHTING_FOURTH	7	7	The Fighting Fourth	The Fighting Fourth	scripts/quests/crystalWar/WOTG_BAS_0_The_Fighting_Fourth.lua	+ Converted	CONFIRMED
+crystalWar	SNAKE_ON_THE_PLAINS	8	8	Snake on the Plains	Snake on the Plains	scripts/quests/crystalWar/WOTG_WIN_0_Snake_on_the_Plains.lua	+	CONFIRMED
+crystalWar	STEAMED_RAMS	9	9	Steamed Rams	Steamed Rams	scripts/quests/crystalWar/Steamed_Rams.lua	+ Converted	CONFIRMED
+crystalWar	SEEING_SPOTS	10	10	Seeing Spots	Seeing Spots	scripts/quests/crystalWar/Seeing_Spots.lua	+ Converted	CONFIRMED
+crystalWar	THE_FLIPSIDE_OF_THINGS	11	11	The Flipside of Things	The Flipside of Things	scripts/quests/crystalWar/The_Flipside_of_Things.lua	+ Converted	CONFIRMED
+crystalWar	BETTER_PART_OF_VALOR	12	12	Better Part of Valor	Better Part of Valor	scripts/quests/crystalWar/WOTG_BAS_1_Better_Part_of_Valor.lua	+ Converted	CONFIRMED
+crystalWar	FIRES_OF_DISCONTENT	13	13	Fires of Discontent	Fires of Discontent	scripts/quests/crystalWar/WOTG_BAS_2_Fires_of_Discontent.lua	+ Converted	CONFIRMED
+crystalWar	HAMMERING_HEARTS	14	14	Hammering Hearts	Hammering Hearts	scripts/quests/crystalWar/Hammering_Hearts.lua	+ Converted	CONFIRMED
+crystalWar	GIFTS_OF_THE_GRIFFON	15	15	Gifts of the Griffon	Gifts of the Griffon	scripts/quests/crystalWar/Gifts_of_the_Griffon.lua	+ Converted	CONFIRMED
+crystalWar	CLAWS_OF_THE_GRIFFON	16	16	Claws of the Griffon	Claws of the Griffon	scripts/quests/crystalWar/Claws_of_the_Griffon.lua	+ Converted	CONFIRMED
+crystalWar	THE_TIGRESS_STIRS	17	17	The Tigress Stirs	The Tigress Stirs	scripts/quests/crystalWar/WOTG_WIN_1_The_Tigress_Stirs.lua	+	CONFIRMED
+crystalWar	THE_TIGRESS_STRIKES	18	18	The Tigress Strikes	The Tigress Strikes	scripts/quests/crystalWar/WOTG_WIN_2_The_Tigress_Strikes.lua	+ Converted	CONFIRMED
+crystalWar	LIGHT_IN_THE_DARKNESS	19	19	Light in the Darkness	Light in the Darkness	scripts/quests/crystalWar/Light_in_the_Darkness.lua	+ Converted	CONFIRMED
+crystalWar	BURDEN_OF_SUSPICION	20	20	Burden of Suspicion	Burden of Suspicion	scripts/quests/crystalWar/WOTG_BAS_4_Burden_of_Suspicion.lua	+ Converted	CONFIRMED
+crystalWar	EVIL_AT_THE_INLET	21	21	Evil at the Inlet	Evil at the Inlet	scripts/zones/Crawlers_Nest_[S]/npcs/Rodeupansat.lua	+ Converted	CONFIRMED
+crystalWar	THE_FUMBLING_FRIAR	22	22	The Fumbling Friar	The Fumbling Friar	scripts/quests/crystalWar/The_Fumbling_Friar.lua	+ Converted	CONFIRMED
+crystalWar	REQUIEM_FOR_THE_DEPARTED	23	23	Requiem for the Departed	Requiem for the Departed	scripts/zones/Fort_Karugo-Narugo_[S]/npcs/Pecca-Pocca.lua	+ Converted	UNVERIFIED
+crystalWar	BOY_AND_THE_BEAST	24	24	Boy and the Beast	Boy and the Beast	scripts/quests/crystalWar/Boy_and_the_Beast.lua	+ Converted	CONFIRMED
+crystalWar	WRATH_OF_THE_GRIFFON	25	25	Wrath of the Griffon	Wrath of the Griffon	scripts/quests/crystalWar/Wrath_of_the_Griffon.lua	+ Converted	CONFIRMED
+crystalWar	THE_LOST_BOOK	26	26	The Lost Book	The Lost Book	scripts/quests/crystalWar/The_Lost_Book.lua	+ Converted	CONFIRMED
+crystalWar	KNOT_QUITE_THERE	27	27	Knot Quite There	Knot Quite There	scripts/quests/crystalWar/WOTG_WIN_3_Knot_Quite_There.lua	+ Converted	CONFIRMED
+crystalWar	A_MANIFEST_PROBLEM	28	28	A Manifest Problem	A Manifest Problem	scripts/quests/crystalWar/A_Manifest_Problem.lua	+ Converted	UNVERIFIED
+crystalWar	BEANS_AHOY	29	29	Beans Ahoy!	Beans Ahoy!	scripts/zones/Southern_San_dOria_[S]/npcs/Thierride.lua	+	CONFIRMED
+crystalWar	BEAST_FROM_THE_EAST	30	30	Beast from the East	Beast from the East	scripts/quests/crystalWar/Beast_from_the_East.lua	+ Converted	UNVERIFIED
+crystalWar	THE_SWARM	31	31	The Swarm	The Swarm	scripts/quests/crystalWar/The_Swarm.lua	+ Converted	UNVERIFIED
+crystalWar	ON_SABBATICAL	32	32	On Sabbatical	On Sabbatical	scripts/quests/crystalWar/SCH_AF1_On_Sabbatical.lua	+ Converted	CONFIRMED
+crystalWar	DOWNWARD_HELIX	33	33	Downward Helix	Downward Helix	scripts/quests/crystalWar/SCH_AF2_Downward_Helix.lua	+ Converted	CONFIRMED
+crystalWar	SEEING_BLOOD_RED	34	34	Seeing Blood-red	Seeing Blood-red	scripts/quests/crystalWar/SCH_AF3_Seeing_Blood_Red.lua	+ Converted	UNVERIFIED
+crystalWar	STORM_ON_THE_HORIZON	35	35	Storm on the Horizon	Storm on the Horizon	scripts/quests/crystalWar/WOTG_BAS_5_Storm_on_the_Horizon.lua	+ Converted	CONFIRMED
+crystalWar	FIRE_IN_THE_HOLE	36	36	Fire in the Hole	Fire in the Hole	scripts/quests/crystalWar/WOTG_BAS_6_Fire_in_the_Hole.lua	+ Converted	CONFIRMED
+crystalWar	PERILS_OF_THE_GRIFFON	37	37	Perils of the Griffon	Perils of the Griffon	scripts/quests/crystalWar/Perils_of_the_Griffon.lua	+ Converted	CONFIRMED
+crystalWar	IN_A_HAZE_OF_GLORY	38	38	In a Haze of Glory	In a Haze of Glory	scripts/quests/crystalWar/In_a_Haze_of_Glory.lua	+ Converted	CONFIRMED
+crystalWar	WHEN_ONE_MAN_IS_NOT_ENOUGH	39	39	When One Man Is Not Enough	When One Man Is Not Enough	scripts/quests/crystalWar/When_One_Man_Is_Not_Enough.lua	+ Converted	UNVERIFIED
+crystalWar	A_FEAST_FOR_GNATS	40	40	A Feast for Gnats	A Feast for Gnats	scripts/quests/crystalWar/A_Feast_for_Gnats.lua	+ Converted	UNVERIFIED
+crystalWar	SAY_IT_WITH_A_HANDBAG	41	41	Say It with a Handbag	Say It with a Handbag	scripts/zones/Southern_San_dOria/npcs/Kipopo.lua	+ TODO: Can be completed, but reward latent not implemented	UNVERIFIED
+crystalWar	QUELLING_THE_STORM	42	42	Quelling the Storm	Quelling the Storm	scripts/quests/crystalWar/WOTG_BAS_7_Quelling_the_Storm.lua	+ Converted	CONFIRMED
+crystalWar	HONOR_UNDER_FIRE	43	43	Honor Under Fire	Honor Under Fire	scripts/quests/crystalWar/WOTG_BAS_8_Honor_Under_Fire.lua	+ Converted	CONFIRMED
+crystalWar	THE_PRICE_OF_VALOR	44	44	The Price of Valor	The Price of Valor	scripts/quests/crystalWar/The_Price_of_Valor.lua	+ Converted	CONFIRMED
+crystalWar	BONDS_THAT_NEVER_DIE	45	45	Bonds That Never Die	Bonds That Never Die	scripts/quests/crystalWar/Bonds_That_Never_Die.lua	+ Converted	CONFIRMED
+crystalWar	THE_LONG_MARCH_NORTH	46	46	The Long March North	The Long March North	scripts/quests/crystalWar/The_Long_March_North.lua	+ Converted	UNVERIFIED
+crystalWar	THE_FORBIDDEN_PATH	47	47	The Forbidden Path	The Forbidden Path	scripts/quests/crystalWar/The_Forbidden_Path.lua	+ Converted	UNVERIFIED
+crystalWar	A_JEWELERS_LAMENT	48	48	A Jeweler's Lament	A Jeweler's Lament	scripts/quests/crystalWar/A_Jewelers_Lament.lua	+ Converted	UNVERIFIED
+crystalWar	BENEATH_THE_MASK	49	49	Beneath the Mask	Beneath the Mask	scripts/quests/crystalWar/WOTG_BAS_9_Beneath_the_Mask.lua	+ Converted	CONFIRMED
+crystalWar	WHAT_PRICE_LOYALTY	50	50	What Price Loyalty	What Price Loyalty	scripts/quests/crystalWar/WOTG_BAS_10_What_Price_Loyalty.lua	+ Converted	CONFIRMED
+crystalWar	SONGBIRDS_IN_A_SNOWSTORM	51	51	Songbirds in a Snowstorm	Songbirds in a Snowstorm	scripts/quests/crystalWar/Songbirds_in_a_Snowstorm.lua	+ Converted	CONFIRMED
+crystalWar	BLOOD_OF_HEROES	52	52	Blood of Heroes	Blood of Heroes	scripts/quests/crystalWar/Blood_of_Heroes.lua	+ Converted	CONFIRMED
+crystalWar	SINS_OF_THE_MOTHERS	53	53	Sins of the Mothers	Sins of the Mothers	scripts/quests/crystalWar/Sins_of_the_Mothers.lua	+ Converted	UNVERIFIED
+crystalWar	HOWL_FROM_THE_HEAVENS	54	54	Howl from the Heavens	Howl from the Heavens	scripts/quests/crystalWar/Howl_from_the_Heavens.lua	+ Converted	UNVERIFIED
+crystalWar	SUCCOR_TO_THE_SIDHE	55	55	Succor to the Sidhe	Succor to the Sidhe	scripts/quests/crystalWar/Succor_to_the_Sidhe.lua	+ Converted	UNVERIFIED
+crystalWar	THE_YOUNG_AND_THE_THREADLESS	56	56	The Young and the Threadless	The Young and the Threadless	scripts/quests/crystalWar/The_Young_and_the_Threadless.lua	+ Converted	CONFIRMED
+crystalWar	SON_AND_FATHER	57	57	Son and Father	Son and Father	scripts/quests/crystalWar/Son_and_Father.lua	+ Converted	UNVERIFIED
+crystalWar	THE_TRUTH_LIES_HID	58	58	The Truth Lies Hid	The Truth Lies Hid	scripts/quests/crystalWar/WOTG_BAS_11_The_Truth_Lies_Hid.lua	+ Converted	CONFIRMED
+crystalWar	BONDS_OF_MYTHRIL	59	59	Bonds of Mythril	Bonds of Mythril	scripts/quests/crystalWar/WOTG_BAS_12_Bonds_of_Mythril.lua	+ Converted	CONFIRMED
+crystalWar	CHASING_SHADOWS	60	60	Chasing Shadows	Chasing Shadows	scripts/quests/crystalWar/Chasing_Shadows.lua	+ Converted	CONFIRMED
+crystalWar	FACE_OF_THE_FUTURE	61	61	Face of the Future	Face of the Future	scripts/quests/crystalWar/Face_of_the_Future.lua	+ Converted	CONFIRMED
+crystalWar	MANIFEST_DESTINY	62	62	Manifest Destiny	Manifest Destiny	scripts/quests/crystalWar/Manifest_Destiny.lua	+ Converted	UNVERIFIED
+crystalWar	AT_JOURNEYS_END	63	63	At Journey's End	At Journey's End	scripts/quests/crystalWar/At_Journeys_End.lua	+ Converted	UNVERIFIED
+crystalWar	HER_MEMORIES_HOMECOMING_QUEEN	64	64	Her Memories: Homecoming Queen	Her Memories: Homecoming Queen	scripts/quests/crystalWar/Her_Memories_Homecoming_Queen.lua	+ Converted	CONFIRMED
+crystalWar	HER_MEMORIES_OLD_BEAN	65	65	Her Memories: Old Bean	Her Memories: Old Bean	scripts/quests/crystalWar/Her_Memories_Homecoming_Queen.lua	+ Converted	CONFIRMED
+crystalWar	HER_MEMORIES_THE_FAUX_PAS	66	66	Her Memories: The Faux Pas	Her Memories: The Faux Pas	scripts/quests/crystalWar/Her_Memories_Homecoming_Queen.lua	+ Converted	CONFIRMED
+crystalWar	HER_MEMORIES_THE_GRAVE_RESOLVE	67					+ Converted	UNCOVERED
+crystalWar	HER_MEMORIES_OPERATION_CUPID	68	68	Her Memories: Operation Cupid	Her Memories: Operation Cupid	scripts/quests/crystalWar/Her_Memories_Operation_Cupid.lua	+ Converted	CONFIRMED
+crystalWar	HER_MEMORIES_CARNELIAN_FOOTFALLS	69	69	Her Memories: Carnelian Footfalls	Her Memories: Carnelian Footfalls	scripts/quests/crystalWar/Her_Memories_Carnelian_Footfalls.lua	+ Converted	CONFIRMED
+crystalWar	HER_MEMORIES_AZURE_FOOTFALLS	70	70	Her Memories: Azure Footfalls	Her Memories: Azure Footfalls	scripts/quests/crystalWar/Her_Memories_Azure_Footfalls.lua	+ Converted	CONFIRMED
+crystalWar	HER_MEMORIES_VERDURE_FOOTFALLS	71	71	Her Memories: Verdure Footfalls	Her Memories: Verdure Footfalls	scripts/quests/crystalWar/Her_Memories_Verdure_Footfalls.lua	+ Converted	UNVERIFIED
+crystalWar	HER_MEMORIES_OF_MALIGN_MALADIES	72	72	Her Memories: Of Malign Maladies	Her Memories: Of Malign Maladies	scripts/quests/crystalWar/Her_Memories_Of_Malign_Maladies.lua	+ Converted	CONFIRMED
+crystalWar	CHAMPION_OF_THE_DAWN	73	73	Champion of the Dawn	Champion of the Dawn	scripts/quests/crystalWar/Champion_of_the_Dawn.lua	+ Converted	UNVERIFIED
+crystalWar	THE_DAWN_ALSO_RISES	74	74	The Dawn Also Rises	The Dawn Also Rises	scripts/quests/crystalWar/The_Dawn_Also_Rises.lua	+ Converted	UNVERIFIED
+crystalWar	A_FORBIDDEN_REUNION	75	75	A Forbidden Reunion	A Forbidden Reunion	scripts/quests/crystalWar/A_Forbidden_Reunion.lua	+ Converted	UNVERIFIED
+crystalWar	GUARDIAN_OF_THE_VOID	80	80	Guardian of the Void	Guardian of the Void	scripts/quests/crystalWar/Guardian_of_the_Void.lua	+ Converted	CONFIRMED
+crystalWar	DRAFTED_BY_THE_DUCHY	81	81	Drafted by the Duchy	Drafted by the Duchy	scripts/quests/crystalWar/Drafted_by_the_Duchy.lua	+ Converted	CONFIRMED
+crystalWar	BATTLE_ON_A_NEW_FRONT	82	82	Battle on a New Front	Battle on a New Front	scripts/quests/crystalWar/Battle_on_a_New_Front.lua	+ Converted	CONFIRMED
+crystalWar	VOIDWALKER_OP_126	83				scripts/quests/crystalWar/VW_Op_126_Qufim_Incursion.lua	+ Converted	UNCOVERED
+crystalWar	A_CAIT_CALLS	84	84	A Cait Calls	A Cait Calls	scripts/quests/crystalWar/A_Cait_Calls.lua	+ Converted	CONFIRMED
+crystalWar	THE_TRUTH_IS_OUT_THERE	85	85	The Truth Is Out There	The Truth Is Out There	scripts/quests/crystalWar/The_Truth_Is_Out_There.lua	+ Converted	CONFIRMED
+crystalWar	REDRAFTED_BY_THE_DUCHY	86				scripts/quests/crystalWar/Re-Drafted_by_the_Duchy.lua	+ Converted	UNCOVERED
+crystalWar	A_NEW_MENACE	87	87	A New Menace	A New Menace	scripts/quests/crystalWar/A_New_Menace.lua	+ Converted	CONFIRMED
+crystalWar	NO_REST_FOR_THE_WEARY	88	88	No Rest for the Weary	No Rest for the Weary	scripts/quests/crystalWar/No_Rest_for_the_Weary.lua	+ Converted	CONFIRMED
+crystalWar	A_WORLD_IN_FLUX	89	89	A World in Flux	A World in Flux	scripts/quests/crystalWar/A_World_in_Flux.lua	+ Converted	CONFIRMED
+crystalWar	BETWEEN_A_ROCK_AND_RIFT	90	90	Between a Rock and Rift	Between a Rock and Rift	scripts/quests/crystalWar/Between_a_Rock_and_Rift.lua	+ Converted	CONFIRMED
+crystalWar	A_FAREWELL_TO_FELINES	91	91	A Farewell to Felines	A Farewell to Felines	scripts/quests/crystalWar/A_Farewell_to_Felines.lua	+ Converted	CONFIRMED
+crystalWar	THIRD_TOUR_OF_DUCHY	92	92	Third Tour of Duchy	Third Tour of Duchy	scripts/quests/crystalWar/Third_Tour_of_Duchy.lua	+ Converted	CONFIRMED
+crystalWar	GLIMMER_OF_HOPE	93	93	Glimmer of Hope	Glimmer of Hope	scripts/quests/crystalWar/Glimmer_of_Hope.lua	+ Converted	CONFIRMED
+crystalWar	BRACE_FOR_THE_UNKNOWN	94	94	Brace for the Unknown	Brace for the Unknown	scripts/quests/crystalWar/Brace_for_the_Unknown.lua	+ Converted	CONFIRMED
+crystalWar	PROVENANCE	95	95	Provenance	Provenance (Quest)	scripts/quests/crystalWar/Provenance.lua	+ Converted	CONFIRMED
+crystalWar	CRYSTAL_GUARDIAN	96	96	Crystal Guardian	Crystal Guardian	scripts/quests/crystalWar/Crystal_Guardian.lua	+ Converted	CONFIRMED
+crystalWar	ENDINGS_AND_BEGINNINGS	97	97	Endings and Beginnings	Endings and Beginnings	scripts/quests/crystalWar/Endings_and_Beginnings.lua	+ Converted	CONFIRMED
+crystalWar	AD_INFINITUM	98	98	Ad Infinitum	Ad Infinitum	scripts/quests/crystalWar/Ad_Infinitum.lua	+ Converted	CONFIRMED
+abyssea	CATERING_CAPERS	0	0	Catering Capers	Catering Capers	scripts/quests/abyssea/Catering_Capers.lua		CONFIRMED
+abyssea	GIFT_OF_LIGHT	1	1	Gift of Light	Gift of Light	scripts/quests/abyssea/Gift_of_Light.lua		CONFIRMED
+abyssea	FEAR_OF_THE_DARK_III	2	2	Fear of the Dark III	Fear of the Dark III	scripts/quests/abyssea/Fear_of_the_Dark_III.lua		CONFIRMED
+abyssea	AN_EYE_FOR_REVENGE	3	3	An Eye for Revenge	An Eye for Revenge	scripts/quests/abyssea/An_Eye_for_Revenge.lua		CONFIRMED
+abyssea	UNBREAK_HIS_HEART	4	4	Unbreak His Heart	Unbreak His Heart	scripts/quests/abyssea/Unbreak_His_Heart.lua		CONFIRMED
+abyssea	EXPLOSIVE_ENDEAVORS	5	5	Explosive Endeavors	Explosive Endeavors	scripts/quests/abyssea/Explosive_Endeavors.lua		CONFIRMED
+abyssea	THE_ANGLING_ARMORER	6	6	The Angling Armorer	The Angling Armorer	scripts/quests/abyssea/The_Angling_Armorer.lua		CONFIRMED
+abyssea	WATER_OF_LIFE	7	7	Water of Life	Water of Life	scripts/quests/abyssea/Water_of_Life.lua		CONFIRMED
+abyssea	OUT_OF_TOUCH	8	8	Out of Touch	Out of Touch	scripts/quests/abyssea/Out_of_Touch.lua		CONFIRMED
+abyssea	LOST_MEMORIES	9	9	Lost Memories	Lost Memories	scripts/quests/abyssea/Lost_Memories.lua		CONFIRMED
+abyssea	HOPE_BLOOMS_ON_THE_BATTLEFIELD	10	10	Hope Blooms on the Battlefield	Hope Blooms on the Battlefield	scripts/quests/abyssea/Hope_Blooms_on_the_Battlefield.lua		CONFIRMED
+abyssea	OF_MALNOURISHED_MARTELLOS	11	11	Of Malnourished Martellos	Of Malnourished Martellos	scripts/quests/abyssea/Of_Malnourished_Martellos.lua		CONFIRMED
+abyssea	ROSE_ON_THE_HEATH	12	12	Rose on the Heath	Rose on the Heath	scripts/quests/abyssea/Rose_on_the_Heath.lua		CONFIRMED
+abyssea	FULL_OF_HIMSELF_ALCHEMIST	13	13	Full-of-Himself Alchemist	Full-of-Himself Alchemist	scripts/quests/abyssea/Full_of_Himself_Alchemist.lua		CONFIRMED
+abyssea	THE_WALKING_WOUNDED	14	14	The Walking Wounded	The Walking Wounded	scripts/quests/abyssea/The_Walking_Wounded.lua		CONFIRMED
+abyssea	SHADY_BUSINESS_REDUX	15	15	Shady Business Redux	Shady Business Redux	scripts/quests/abyssea/Shady_Business_Redux.lua		CONFIRMED
+abyssea	ADDLED_MIND_UNDYING_DREAMS	16	16	Addled Mind, Undying Dreams	Addled Mind, Undying Dreams	scripts/quests/abyssea/Addled_Mind_Undying_Dreams.lua		CONFIRMED
+abyssea	THE_SOUL_OF_THE_MATTER	17	17	The Soul of the Matter	The Soul of the Matter	scripts/quests/abyssea/The_Soul_of_the_Matter.lua		CONFIRMED
+abyssea	SECRET_AGENT_MAN	18	18	Secret Agent Man	Secret Agent Man	scripts/quests/abyssea/Secret_Agent_Man.lua		CONFIRMED
+abyssea	PLAYING_PAPARAZZI	19	19	Playing Paparazzi	Playing Paparazzi	scripts/quests/abyssea/Playing_Paparazzi.lua		CONFIRMED
+abyssea	HIS_BOX_HIS_BELOVED	20	20	His Box, His Beloved	His Box, His Beloved	scripts/quests/abyssea/His_Box_His_Beloved.lua		CONFIRMED
+abyssea	WEAPONS_NOT_WORRIES	21	21	Weapons, Not Worries	Weapons, Not Worries	scripts/quests/abyssea/Weapons_Not_Worries.lua		CONFIRMED
+abyssea	CLEANSING_THE_CANYON	22	22	Cleansing the Canyon	Cleansing the Canyon	scripts/quests/abyssea/Cleansing_the_Canyon.lua		CONFIRMED
+abyssea	SAVORY_SALVATION	23	23	Savory Salvation	Savory Salvation	scripts/quests/abyssea/Savory_Salvation.lua		CONFIRMED
+abyssea	BRINGING_DOWN_THE_MOUNTAIN	24	24	Bringing Down the Mountain	Bringing Down the Mountain	scripts/quests/abyssea/Bringing_Down_the_Mountain.lua		CONFIRMED
+abyssea	A_STERLING_SPECIMEN	25	25	A Sterling Specimen	A Sterling Specimen	scripts/quests/abyssea/A_Sterling_Specimen.lua		CONFIRMED
+abyssea	FOR_LOVE_OF_A_DAUGHTER	26	26	For Love of a Daughter	For Love of a Daughter	scripts/quests/abyssea/For_Love_of_a_Daughter.lua		CONFIRMED
+abyssea	SISTERS_IN_CRIME	27	27	Sisters in Crime	Sisters in Crime	scripts/quests/abyssea/Sisters_in_Crime.lua		CONFIRMED
+abyssea	WHEN_GOOD_CARDIANS_GO_BAD	28	28	When Good Cardians Go Bad	When Good Cardians Go Bad	scripts/quests/abyssea/When_Good_Cardians_Go_Bad.lua		CONFIRMED
+abyssea	TANGLING_WITH_TONGUE_TWISTERS	29	29	Tangling with Tongue-twisters	Tangling with Tongue-twisters	scripts/quests/abyssea/Tangling_with_Tongue-twisters.lua		CONFIRMED
+abyssea	A_WARD_TO_END_ALL_WARDS	30	30	A Ward to End All Wards	A Ward to End All Wards	scripts/quests/abyssea/A_Ward_to_End_All_Wards.lua		CONFIRMED
+abyssea	THE_BOXWATCHERS_BEHEST	31	31	The Boxwatcher's Behest	The Boxwatcher's Behest	scripts/quests/abyssea/The_Boxwatchers_Behest.lua		CONFIRMED
+abyssea	HIS_BRIDGE_HIS_BELOVED	32	32	His Bridge, His Beloved	His Bridge, His Beloved	scripts/quests/abyssea/His_Bridge_His_Beloved.lua		CONFIRMED
+abyssea	BAD_COMMUNICATION	33	33	Bad Communication	Bad Communication	scripts/quests/abyssea/Bad_Communication.lua		CONFIRMED
+abyssea	FAMILY_TIES	34	34	Family Ties	Family Ties	scripts/quests/abyssea/Family_Ties.lua		CONFIRMED
+abyssea	AQUA_PURA	35	35	Aqua Pura	Aqua Pura	scripts/quests/abyssea/Aqua_Pura.lua		CONFIRMED
+abyssea	AQUA_PURAGA	36	36	Aqua Puraga	Aqua Puraga	scripts/quests/abyssea/Aqua_Puraga.lua		CONFIRMED
+abyssea	WHITHER_THE_WHISKER	37	37	Whither the Whisker	Whither the Whisker	scripts/quests/abyssea/Whither_the_Whisker.lua		CONFIRMED
+abyssea	SCATTERED_SHELLS_SCATTERED_MIND	38	38	Scattered Shells, Scattered Mind	Scattered Shells, Scattered Mind	scripts/quests/abyssea/Scattered_Shells_Scattered_Mind.lua		CONFIRMED
+abyssea	WAYWARD_WARES	39	39	Wayward Wares	Wayward Wares	scripts/quests/abyssea/Wayward_Wares.lua		CONFIRMED
+abyssea	LOOKING_FOR_LOOKOUTS	40	40	Looking for Lookouts	Looking for Lookouts	scripts/quests/abyssea/Looking_for_Lookouts.lua		CONFIRMED
+abyssea	FLOWN_THE_COOP	41	41	Flown the Coop	Flown the Coop	scripts/quests/abyssea/Flown_the_Coop.lua		CONFIRMED
+abyssea	THREADBARE_TRIBULATIONS	42	42	Threadbare Tribulations	Threadbare Tribulations	scripts/quests/abyssea/Threadbare_Tribulations.lua		CONFIRMED
+abyssea	AN_OFFER_YOU_CANT_REFUSE	43	43	An Offer You Can't Refuse	An Offer You Can't Refuse	scripts/quests/abyssea/An_Offer_You_Cant_Refuse.lua		CONFIRMED
+abyssea	SOMETHING_IN_THE_AIR	44	44	Something in the Air	Something in the Air	scripts/quests/abyssea/Something_in_the_Air.lua		CONFIRMED
+abyssea	AN_ACRIDIDAEN_ANODYNE	45	45	An Acrididaen Anodyne	An Acrididaen Anodyne	scripts/quests/abyssea/An_Acrididaen_Anodyne.lua		CONFIRMED
+abyssea	HAZY_PROSPECTS	46	46	Hazy Prospects	Hazy Prospects	scripts/quests/abyssea/Hazy_Prospects.lua		CONFIRMED
+abyssea	FOR_WANT_OF_A_POT	47	47	For Want of a Pot	For Want of a Pot	scripts/zones/Windurst_Waters/npcs/Ranpi-Monpi.lua		UNVERIFIED
+abyssea	MISSING_IN_ACTION	48	48	Missing in Action	Missing in Action	scripts/quests/abyssea/Missing_in_Action.lua		CONFIRMED
+abyssea	I_DREAM_OF_FLOWERS	49	49	I Dream of Flowers	I Dream of Flowers	scripts/quests/abyssea/I_Dream_of_Flowers.lua		CONFIRMED
+abyssea	DESTINY_ODYSSEY	50	50	Destiny Odyssey	Destiny Odyssey	scripts/quests/abyssea/Destiny_Odyssey.lua		CONFIRMED
+abyssea	UNIDENTIFIED_RESEARCH_OBJECT	51	51	Unidentified Research Object	Unidentified Research Object	scripts/quests/abyssea/Unidentified_Research_Object.lua		CONFIRMED
+abyssea	COOKBOOK_OF_HOPE_RESTORING	52	52	Cookbook of Hope Restoring	Cookbook of Hope Restoring	scripts/quests/abyssea/Cookbook_of_Hope_Restoring.lua		CONFIRMED
+abyssea	SMOKE_OVER_THE_COAST	53	53	Smoke over the Coast	Smoke over the Coast	scripts/quests/abyssea/Smoke_over_the_Coast.lua		CONFIRMED
+abyssea	SOIL_AND_GREEN	54	54	Soil and Green	Soil and Green	scripts/quests/abyssea/Soil_and_Green.lua		CONFIRMED
+abyssea	DROPPING_THE_BOMB	55	55	Dropping the Bomb	Dropping the Bomb	scripts/quests/abyssea/Dropping_the_Bomb.lua		CONFIRMED
+abyssea	WANTED_MEDICAL_SUPPLIES	56	56	Wanted: Medical Supplies	Wanted: Medical Supplies	scripts/quests/abyssea/Wanted_Medical_Supplies.lua		CONFIRMED
+abyssea	VOICES_FROM_BEYOND	57	57	Voices from Beyond	Voices from Beyond	scripts/quests/abyssea/Voices_from_Beyond.lua		CONFIRMED
+abyssea	BENEVOLENCE_LOST	58	58	Benevolence Lost	Benevolence Lost	scripts/quests/abyssea/Benevolence_Lost.lua		CONFIRMED
+abyssea	BRUGAIRES_AMBITION	59	59	Brugaire's Ambition	Brugaire's Ambition	scripts/quests/abyssea/Brugaires_Ambition.lua		CONFIRMED
+abyssea	CHOCOBO_PANIC	60	60	Chocobo Panic	Chocobo Panic	scripts/quests/abyssea/Chocobo_Panic.lua		CONFIRMED
+abyssea	THE_EGG_ENTHUSIAST	61	61	The Egg Enthusiast	The Egg Enthusiast	scripts/quests/abyssea/The_Egg_Enthusiast.lua		CONFIRMED
+abyssea	GETTING_LUCKY	62	62	Getting Lucky	Getting Lucky	scripts/quests/abyssea/Getting_Lucky.lua		CONFIRMED
+abyssea	HER_FATHERS_LEGACY	63	63	Her Father's Legacy	Her Father's Legacy	scripts/quests/abyssea/Her_Fathers_Legacy.lua		CONFIRMED
+abyssea	THE_MYSTERIOUS_HEAD_PATROL	64	64	The Mysterious Head Patrol	The Mysterious Head Patrol	scripts/quests/abyssea/The_Mysterious_Head_Patrol.lua		CONFIRMED
+abyssea	MASTER_MISSING_MASTER_MISSED	65	65	Master Missing, Master Missed	Master Missing, Master Missed	scripts/quests/abyssea/Master_Missing_Master_Missed.lua		CONFIRMED
+abyssea	THE_PERILS_OF_KORORO	66	66	The Perils of Kororo	The Perils of Kororo	scripts/quests/abyssea/The_Perils_of_Kororo.lua		CONFIRMED
+abyssea	LET_THERE_BE_LIGHT	67	67	Let There Be Light	Let There Be Light	scripts/quests/abyssea/Let_There_Be_Light.lua		CONFIRMED
+abyssea	LOOK_OUT_BELOW	68	68	Look Out Below	Look Out Below	scripts/quests/abyssea/Look_Out_Below.lua		CONFIRMED
+abyssea	HOME_HOME_ON_THE_RANGE	69	69	Home, Home on the Range	Home, Home on the Range	scripts/quests/abyssea/Home_Home_on_the_Range.lua		CONFIRMED
+abyssea	IMPERIAL_ESPIONAGE	70	70	Imperial Espionage	Imperial Espionage	scripts/quests/abyssea/Imperial_Espionage.lua		CONFIRMED
+abyssea	IMPERIAL_ESPIONAGE_II	71	71	Imperial Espionage II	Imperial Espionage II	scripts/quests/abyssea/Imperial_Espionage_II.lua		CONFIRMED
+abyssea	BOREAL_BLOSSOMS	72	72	Boreal Blossoms	Boreal Blossoms	scripts/quests/abyssea/Boreal_Blossoms.lua		CONFIRMED
+abyssea	BROTHERS_IN_ARMS	73	73	Brothers in Arms	Brothers in Arms	scripts/quests/abyssea/Brothers_in_Arms.lua		CONFIRMED
+abyssea	SCOUTS_ASTRAY	74	74	Scouts Astray	Scouts Astray	scripts/quests/abyssea/Scouts_Astray.lua		CONFIRMED
+abyssea	FROZEN_FLAME_REDUX	75	75	Frozen Flame Redux	Frozen Flame Redux	scripts/quests/abyssea/Frozen_Flame_Redux.lua		CONFIRMED
+abyssea	SLIP_SLIDIN_AWAY	76	76	Slip Slidin' Away	Slip Slidin' Away	scripts/quests/abyssea/Slip_Slidin_Away.lua		CONFIRMED
+abyssea	CLASSROOMS_WITHOUT_BORDERS	77	77	Classrooms Without Borders	Classrooms Without Borders	scripts/quests/abyssea/Classrooms_Without_Borders.lua		CONFIRMED
+abyssea	THE_SECRET_INGREDIENT	78	78	The Secret Ingredient	The Secret Ingredient	scripts/quests/abyssea/The_Secret_Ingredient.lua		CONFIRMED
+abyssea	HELP_NOT_WANTED	79	79	Help Not Wanted	Help Not Wanted	scripts/quests/abyssea/Help_Not_Wanted.lua		CONFIRMED
+abyssea	THE_TITUS_TOUCH	80	80	The Titus Touch	The Titus Touch	scripts/quests/abyssea/The_Titus_Touch.lua		CONFIRMED
+abyssea	SLACKING_SUBORDINATES	81	81	Slacking Subordinates	Slacking Subordinates	scripts/quests/abyssea/Slacking_Subordinates.lua		CONFIRMED
+abyssea	MOTHERLY_LOVE	82	82	Motherly Love	Motherly Love	scripts/quests/abyssea/Motherly_Love.lua		CONFIRMED
+abyssea	LOOK_TO_THE_SKY	83	83	Look to the Sky	Look to the Sky	scripts/quests/abyssea/Look_to_the_Sky.lua		CONFIRMED
+abyssea	THE_UNMARKED_TOMB	84	84	The Unmarked Tomb	The Unmarked Tomb	scripts/quests/abyssea/The_Unmarked_Tomb.lua		CONFIRMED
+abyssea	PROOF_OF_THE_LION	85	85	Proof of the Lion	Proof of the Lion	scripts/quests/abyssea/Proof_of_the_Lion.lua		CONFIRMED
+abyssea	BRYGID_THE_STYLIST_STRIKES_BACK	86	86	Brygid the Stylist Strikes Back	Brygid the Stylist Strikes Back	scripts/quests/abyssea/Brygid_the_Stylist_Strikes_Back.lua		CONFIRMED
+abyssea	DOMINION_OP_01_ALTEPA	87	87	Dominion Op #01 (Altepa)	Dominion Op 01 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_01.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_02_ALTEPA	88	88	Dominion Op #02 (Altepa)	Dominion Op 02 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_02.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_03_ALTEPA	89	89	Dominion Op #03 (Altepa)	Dominion Op 03 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_03.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_04_ALTEPA	90	90	Dominion Op #04 (Altepa)	Dominion Op 04 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_04.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_05_ALTEPA	91	91	Dominion Op #05 (Altepa)	Dominion Op 05 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_05.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_06_ALTEPA	92	92	Dominion Op #06 (Altepa)	Dominion Op 06 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_06.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_07_ALTEPA	93	93	Dominion Op #07 (Altepa)	Dominion Op 07 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_07.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_08_ALTEPA	94	94	Dominion Op #08 (Altepa)	Dominion Op 08 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_08.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_09_ALTEPA	95	95	Dominion Op #09 (Altepa)	Dominion Op 09 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_09.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_10_ALTEPA	96	96	Dominion Op #10 (Altepa)	Dominion Op 10 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_10.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_11_ALTEPA	97	97	Dominion Op #11 (Altepa)	Dominion Op 11 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_11.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_12_ALTEPA	98	98	Dominion Op #12 (Altepa)	Dominion Op 12 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_12.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_13_ALTEPA	99	99	Dominion Op #13 (Altepa)	Dominion Op 13 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_13.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_14_ALTEPA	100	100	Dominion Op #14 (Altepa)	Dominion Op 14 (Altepa)	scripts/quests/abyssea/Altepa_Dominion_Op_14.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_01_ULEGUERAND	101	101	Dominion Op #01 (Uleguerand)	Dominion Op 01 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_01.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_02_ULEGUERAND	102	102	Dominion Op #02 (Uleguerand)	Dominion Op 02 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_02.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_03_ULEGUERAND	103	103	Dominion Op #03 (Uleguerand)	Dominion Op 03 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_03.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_04_ULEGUERAND	104	104	Dominion Op #04 (Uleguerand)	Dominion Op 04 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_04.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_05_ULEGUERAND	105	105	Dominion Op #05 (Uleguerand)	Dominion Op 05 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_05.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_06_ULEGUERAND	106	106	Dominion Op #06 (Uleguerand)	Dominion Op 06 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_06.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_07_ULEGUERAND	107	107	Dominion Op #07 (Uleguerand)	Dominion Op 07 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_07.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_08_ULEGUERAND	108	108	Dominion Op #08 (Uleguerand)	Dominion Op 08 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_08.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_09_ULEGUERAND	109	109	Dominion Op #09 (Uleguerand)	Dominion Op 09 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_09.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_10_ULEGUERAND	110	110	Dominion Op #10 (Uleguerand)	Dominion Op 10 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_10.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_11_ULEGUERAND	111	111	Dominion Op #11 (Uleguerand)	Dominion Op 11 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_11.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_12_ULEGUERAND	112	112	Dominion Op #12 (Uleguerand)	Dominion Op 12 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_12.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_13_ULEGUERAND	113	113	Dominion Op #13 (Uleguerand)	Dominion Op 13 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_13.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_14_ULEGUERAND	114	114	Dominion Op #14 (Uleguerand)	Dominion Op 14 (Uleguerand)	scripts/quests/abyssea/Uleguerand_Dominion_Op_14.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_01_GRAUBERG	115	115	Dominion Op #01 (Grauberg)	Dominion Op 01 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_01.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_02_GRAUBERG	116	116	Dominion Op #02 (Grauberg)	Dominion Op 02 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_02.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_03_GRAUBERG	117	117	Dominion Op #03 (Grauberg)	Dominion Op 03 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_03.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_04_GRAUBERG	118	118	Dominion Op #04 (Grauberg)	Dominion Op 04 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_04.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_05_GRAUBERG	119	119	Dominion Op #05 (Grauberg)	Dominion Op 05 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_05.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_06_GRAUBERG	120	120	Dominion Op #06 (Grauberg)	Dominion Op 06 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_06.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_07_GRAUBERG	121	121	Dominion Op #07 (Grauberg)	Dominion Op 07 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_07.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_08_GRAUBERG	122	122	Dominion Op #08 (Grauberg)	Dominion Op 08 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_08.lua	+ Converted	CONFIRMED
+abyssea	DOMINION_OP_09_GRAUBERG	123	123	Dominion Op #09 (Grauberg)	Dominion Op 09 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_09.lua	+ Converted	CONFIRMED
+abyssea	WARD_WARDEN_I_ATTOHWA	124			Ward Warden I (Attohwa)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	WARD_WARDEN_I_MISAREAUX	125			Ward Warden I (Misareaux)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	WARD_WARDEN_I_VUNKERL	126			Ward Warden I (Vunkerl)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	WARD_WARDEN_II_ATTOHWA	127			Ward Warden II (Attohwa)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	WARD_WARDEN_II_MISAREAUX	128			Ward Warden II (Misareaux)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	WARD_WARDEN_II_VUNKERL	129			Ward Warden II (Vunkerl)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	DESERT_RAIN_I_ATTOHWA	130			Desert Rain I (Attohwa)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	DESERT_RAIN_I_MISAREAUX	131			Desert Rain I (Misareaux)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	DESERT_RAIN_I_VUNKERL	132			Desert Rain I (Vunkerl)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	DESERT_RAIN_II_ATTOHWA	133			Desert Rain II (Attohwa)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	DESERT_RAIN_II_MISAREAUX	134			Desert Rain II (Misareaux)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	DESERT_RAIN_II_VUNKERL	135			Desert Rain II (Vunkerl)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	CRIMSON_CARPET_I_ATTOHWA	136			Crimson Carpet I (Attohwa)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	CRIMSON_CARPET_I_MISAREAUX	137			Crimson Carpet I (Misareaux)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	CRIMSON_CARPET_I_VUNKERL	138			Crimson Carpet I (Vunkerl)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	CRIMSON_CARPET_II_ATTOHWA	139			Crimson Carpet II (Attohwa)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	CRIMSON_CARPET_II_MISAREAUX	140			Crimson Carpet II (Misareaux)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	CRIMSON_CARPET_II_VUNKERL	141			Crimson Carpet II (Vunkerl)	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_LA_THEINE	142			Refuel and Replenish (La Theine)	scripts/quests/abyssea/Refuel_and_Replenish_La_Theine.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_KONSCHTAT	143			Refuel and Replenish (Konschtat)	scripts/quests/abyssea/Refuel_and_Replenish_Konschtat.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_TAHRONGI	144			Refuel and Replenish (Tahrongi)	scripts/quests/abyssea/Refuel_and_Replenish_Tahrongi.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_ATTOHWA	145			Refuel and Replenish (Attohwa)	scripts/quests/abyssea/Refuel_and_Replenish_Attohwa.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_MISAREAUX	146			Refuel and Replenish (Misareaux)	scripts/quests/abyssea/Refuel_and_Replenish_Misareaux.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_VUNKERL	147			Refuel and Replenish (Vunkerl)	scripts/quests/abyssea/Refuel_and_Replenish_Vunkerl.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_ALTEPA	148			Refuel and Replenish (Altepa)	scripts/quests/abyssea/Refuel_and_Replenish_Altepa.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_ULEGUERAND	149			Refuel and Replenish (Uleguerand)	scripts/quests/abyssea/Refuel_and_Replenish_Uleguerand.lua		UNCOVERED
+abyssea	REFUEL_AND_REPLENISH_GRAUBERG	150			Refuel and Replenish (Grauberg)	scripts/quests/abyssea/Refuel_and_Replenish_Grauberg.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_LA_THEINE	151			A Mightier Martello (La Theine)	scripts/quests/abyssea/A_Mightier_Martello_La_Theine.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_KONSCHTAT	152			A Mightier Martello (Konschtat)	scripts/quests/abyssea/A_Mightier_Martello_Konschtat.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_TAHRONGI	153			A Mightier Martello (Tahrongi)	scripts/quests/abyssea/A_Mightier_Martello_Tahrongi.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_ATTOHWA	154			A Mightier Martello (Attohwa)	scripts/quests/abyssea/A_Mightier_Martello_Attohwa.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_MISAREAUX	155			A Mightier Martello (Misareaux)	scripts/quests/abyssea/A_Mightier_Martello_Misareaux.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_VUNKERL	156			A Mightier Martello (Vunkerl)	scripts/quests/abyssea/A_Mightier_Martello_Vunkerl.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_ALTEPA	157			A Mightier Martello (Altepa)	scripts/quests/abyssea/A_Mightier_Martello_Altepa.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_ULEGUERAND	158			A Mightier Martello (Uleguerand)	scripts/quests/abyssea/A_Mightier_Martello_Uleguerand.lua		UNCOVERED
+abyssea	A_MIGHTIER_MARTELLO_GRAUBERG	159			A Mightier Martello (Grauberg)	scripts/quests/abyssea/A_Mightier_Martello_Grauberg.lua		UNCOVERED
+abyssea	A_JOURNEY_BEGINS	160			A Journey Begins	scripts/quests/abyssea/A_Journey_Begins.lua	+ Converted	UNCOVERED
+abyssea	THE_TRUTH_BECKONS	161			The Truth Beckons	scripts/quests/abyssea/The_Truth_Beckons.lua	+ Converted	UNCOVERED
+abyssea	DAWN_OF_DEATH	162			Dawn of Death	scripts/quests/abyssea/Dawn_of_Death.lua	+ Converted	UNCOVERED
+abyssea	A_GOLDSTRUCK_GIGAS	163			A Goldstruck Gigas	scripts/quests/abyssea/A_Goldstruck_Gigas.lua	+ Converted	UNCOVERED
+abyssea	TO_PASTE_A_PEISTE	164			To Paste a Peiste	scripts/quests/abyssea/To_Paste_a_Peiste.lua	+ Converted	UNCOVERED
+abyssea	MEGADRILE_MENACE	165			Megadrile Menace	scripts/quests/abyssea/Megadrile_Menace.lua	+ Converted	UNCOVERED
+abyssea	THE_FORBIDDEN_FRONTIER	166			The Forbidden Frontier	scripts/quests/abyssea/The_Forbidden_Frontier.lua	+ Converted	UNCOVERED
+abyssea	FIRST_CONTACT	167			First Contact	scripts/quests/abyssea/First_Contact.lua	+ Converted	UNCOVERED
+abyssea	AN_OFFICER_AND_A_PIRATE	168			An Officer and a Pirate	scripts/quests/abyssea/An_Officer_and_a_Pirate.lua	+ Converted	UNCOVERED
+abyssea	HEART_OF_MADNESS	169			Heart of Madness	scripts/quests/abyssea/Heart_of_Madness.lua	+ Converted	UNCOVERED
+abyssea	TENUOUS_EXISTENCE	170			Tenuous Existence	scripts/quests/abyssea/Tenuous_Existence.lua	+ Converted	UNCOVERED
+abyssea	CHAMPIONS_OF_ABYSSEA	171			Champions of Abyssea	scripts/quests/abyssea/Champions_of_Abyssea.lua	+ Converted	UNCOVERED
+abyssea	THE_BEAST_OF_BASTORE	172			The Beast of Bastore	scripts/quests/abyssea/The_Beast_of_Bastore.lua	+ Converted	UNCOVERED
+abyssea	A_DELECTABLE_DEMON	173			A Delectable Demon	scripts/quests/abyssea/A_Delectable_Demon.lua	+ Converted	UNCOVERED
+abyssea	A_FLUTTERY_FIEND	174			A Fluttery Fiend	scripts/quests/abyssea/A_Fluttery_Fiend.lua	+ Converted	UNCOVERED
+abyssea	SCARS_OF_ABYSSEA	175			Scars of Abyssea (Quest)	scripts/quests/abyssea/Scars_of_Abyssea.lua	+ Converted	UNCOVERED
+abyssea	A_BEAKED_BLUSTERER	176			A Beaked Blusterer	scripts/quests/abyssea/A_Beaked_Blusterer.lua	+ Converted	UNCOVERED
+abyssea	A_MAN_EATING_MITE	177			A Man-eating Mite	scripts/quests/abyssea/A_Man-eating_Mite.lua	+ Converted	UNCOVERED
+abyssea	AN_ULCEROUS_URAGNITE	178			An Ulcerous Uragnite	scripts/quests/abyssea/An_Ulcerous_Uragnite.lua	+ Converted	UNCOVERED
+abyssea	HEROES_OF_ABYSSEA	179			Heroes of Abyssea (Quest)	scripts/quests/abyssea/Heroes_of_Abyssea.lua	+ Converted	UNCOVERED
+abyssea	A_SEA_DOGS_SUMMONS	180			A Sea Dog's Summons	scripts/quests/abyssea/A_Sea_Dogs_Summons.lua	+ Converted	UNCOVERED
+abyssea	DEATH_AND_REBIRTH	181			Death and Rebirth	scripts/quests/abyssea/Death_and_Rebirth.lua	+ Converted	UNCOVERED
+abyssea	EMISSARIES_OF_GOD	182			Emissaries of God	scripts/quests/abyssea/Emissaries_of_God.lua	+ Converted	UNCOVERED
+abyssea	BENEATH_A_BLOOD_RED_SKY	183			Beneath a Blood-red Sky	scripts/quests/abyssea/Beneath_a_Blood_Red_Sky.lua	+ Converted	UNCOVERED
+abyssea	THE_WYRM_GOD	184			The Wyrm God	scripts/quests/abyssea/The_Wyrm_God.lua	+ Converted	UNCOVERED
+abyssea	MEANWHILE_BACK_ON_ABYSSEA	185			Meanwhile, Back on Abyssea	scripts/quests/abyssea/Meanwhile_Back_on_Abyssea.lua	+ Converted	UNCOVERED
+abyssea	A_MOONLIGHT_REQUITE	186			A Moonlight Requite	scripts/quests/abyssea/A_Moonlight_Requite.lua		UNCOVERED
+abyssea	DOMINION_OP_10_GRAUBERG	187			Dominion Op 10 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_10.lua	+ Converted	UNCOVERED
+abyssea	DOMINION_OP_11_GRAUBERG	188			Dominion Op 11 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_11.lua	+ Converted	UNCOVERED
+abyssea	DOMINION_OP_12_GRAUBERG	189			Dominion Op 12 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_12.lua	+ Converted	UNCOVERED
+abyssea	DOMINION_OP_13_GRAUBERG	190			Dominion Op 13 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_13.lua	+ Converted	UNCOVERED
+abyssea	DOMINION_OP_14_GRAUBERG	191			Dominion Op 14 (Grauberg)	scripts/quests/abyssea/Grauberg_Dominion_Op_14.lua	+ Converted	UNCOVERED
+adoulin	TWITHERYM_DUST	0			Twitherym Dust	scripts/quests/adoulin/Twitherym_Dust.lua		UNCOVERED
+adoulin	TO_CATCH_A_PREDATOR	1			To Catch a Predator	scripts/quests/adoulin/To_Catch_a_Predator.lua		UNCOVERED
+adoulin	EMPTY_NEST	2			Empty Nest	scripts/quests/adoulin/Empty_Nest.lua		UNCOVERED
+adoulin	DONT_CLAM_UP_ON_ME_NOW	5			Don't Clam Up on Me Now	scripts/quests/adoulin/Dont_Clam_Up_on_Me_Now.lua		UNCOVERED
+adoulin	HOP_TO_IT	6			Hop to It	scripts/quests/adoulin/Hop_to_It.lua		UNCOVERED
+adoulin	BOILING_OVER	9			Boiling Over	scripts/quests/adoulin/Boiling_Over.lua		UNCOVERED
+adoulin	POISONING_THE_WELL	10			Poisoning the Well	scripts/quests/adoulin/Poisoning_the_Well.lua		UNCOVERED
+adoulin	UNSULLIED_LANDS	12			Unsullied Lands	scripts/quests/adoulin/Unsullied_Lands.lua		UNCOVERED
+adoulin	NO_RIME_LIKE_THE_PRESENT	16			No Rime Like the Present	scripts/quests/adoulin/No_Rime_Like_the_Present.lua		UNCOVERED
+adoulin	A_GEOTHERMAL_EXPEDITION	18			A Geothermal Expedition	scripts/quests/adoulin/A_Geothermal_Expedition.lua		UNCOVERED
+adoulin	ENDEAVORING_TO_AWAKEN	22			Endeavoring to Awaken	scripts/quests/adoulin/Endeavoring_to_Awaken.lua	+ Converted	UNCOVERED
+adoulin	FORGING_NEW_BONDS	23			Forging New Bonds	scripts/quests/adoulin/Forging_New_Bonds.lua	+ Converted	UNCOVERED
+adoulin	LEGACIES_LOST_AND_FOUND	24			Legacies Lost and Found	scripts/quests/adoulin/Legacies_Lost_and_Found.lua	+ Converted	UNCOVERED
+adoulin	DESTINYS_DEVICE	25			Destiny's Device	scripts/quests/adoulin/Destinys_Device.lua	+ Converted	UNCOVERED
+adoulin	GRANDDADDY_DEAREST	26			Granddaddy Dearest	scripts/quests/adoulin/Granddaddy_Dearest.lua		UNCOVERED
+adoulin	WAYWARD_WAYPOINTS	27			Wayward Waypoints	scripts/zones/Western_Adoulin/npcs/Shipilolo.lua		UNCOVERED
+adoulin	ONE_GOOD_TURN	28			One Good Turn...			UNCOVERED
+adoulin	FAILURE_IS_NOT_AN_OPTION	29			F.A.I.L.ure Is Not an Option	scripts/zones/Western_Adoulin/npcs/Clautaire.lua		UNCOVERED
+adoulin	ORDER_UP	30			Order Up	scripts/zones/Western_Adoulin/npcs/Marjoirelle.lua		UNCOVERED
+adoulin	IT_NEVER_GOES_OUT_OF_STYLE	31			It Never Goes Out of Style	scripts/quests/adoulin/It_Never_Goes_Out_of_Style.lua		UNCOVERED
+adoulin	WATER_WATER_EVERYWHERE	32			Water, Water, Everywhere	scripts/quests/adoulin/Water_Water_Everywhere.lua		UNCOVERED
+adoulin	DIRT_CHEAP	33			Dirt Cheap	scripts/quests/adoulin/Dirt_Cheap.lua		UNCOVERED
+adoulin	FLOWER_POWER	34			Flower Power	scripts/quests/adoulin/Flower_Power.lua		UNCOVERED
+adoulin	ELEMENTARY_MY_DEAR_SYLVIE	35			Elementary, My Dear Sylvie	scripts/quests/adoulin/Elementary_My_Dear_Sylvie.lua	+ Converted	UNCOVERED
+adoulin	FOR_WHOM_THE_BELL_TOLLS	36			For Whom the Bell Tolls	scripts/quests/adoulin/For_Whom_the_Bell_Tolls.lua	+ Converted	UNCOVERED
+adoulin	THE_BLOODLINE_OF_ZACARIAH	37			The Bloodline of Zacariah	scripts/quests/adoulin/The_Bloodline_of_Zacariah.lua	+ Converted	UNCOVERED
+adoulin	THE_COMMUNION	38			The Communion	scripts/quests/adoulin/The_Communion.lua	+ Converted	UNCOVERED
+adoulin	FLAVORS_OF_OUR_LIVES	46			Flavors of Our Lives	scripts/quests/adoulin/Flavors_of_Our_Lives.lua	+ Converted	UNCOVERED
+adoulin	WESTERN_WAYPOINTS_HO	50			Western Waypoints, Ho!	scripts/quests/adoulin/Western_Waypoints_Ho.lua		UNCOVERED
+adoulin	WESEASTERN_WAYPOINTS_HO	51				scripts/quests/adoulin/Wes_Eastern_Waypoints_Ho.lua		UNCOVERED
+adoulin	GRIND_TO_SAWDUST	53			Grind to Sawdust	scripts/quests/adoulin/Grind_to_Sawdust.lua		UNCOVERED
+adoulin	BREAKING_THE_ICE	54			Breaking the Ice	scripts/quests/adoulin/Breaking_the_Ice.lua	+ Converted	UNCOVERED
+adoulin	IM_ON_A_BOAT	55			I'm on a Boat	scripts/quests/adoulin/Im_on_a_Boat.lua	+ Converted	UNCOVERED
+adoulin	A_STONES_THROW_AWAY	56			A Stone's Throw Away	scripts/quests/adoulin/A_Stones_Throw_Away.lua	+ Converted	UNCOVERED
+adoulin	HIDE_AND_GO_PEAK	57			Hide and Go Peak	scripts/quests/adoulin/Hide_and_Go_Peak.lua	+ Converted	UNCOVERED
+adoulin	THE_WHOLE_PLACE_IS_ABUZZ	58			The Whole Place Is Abuzz	scripts/quests/adoulin/The_Whole_Place_Is_Abuzz.lua		UNCOVERED
+adoulin	OROBON_APPETIT	59			Orobon Appetit	scripts/quests/adoulin/Orobon_Appetit.lua		UNCOVERED
+adoulin	TALK_ABOUT_WRINKLY_SKIN	60			Talk About Wrinkly Skin	scripts/quests/adoulin/Talk_About_Wrinkly_Skin.lua		UNCOVERED
+adoulin	NO_LOVE_LOST	61			No Love Lost	scripts/quests/adoulin/No_Love_Lost.lua		UNCOVERED
+adoulin	DID_YOU_FEEL_THAT	62			Did You Feel That?			UNCOVERED
+adoulin	DONT_EVER_LEAF_ME	70			Don't Ever Leaf Me	scripts/zones/Western_Adoulin/npcs/Barenngo.lua		UNCOVERED
+adoulin	KEEP_YOUR_BLOOMERS_ON_ERISA	71			Keep Your Bloomers On, Erisa			UNCOVERED
+adoulin	SCAREDYCATS	72				scripts/zones/Western_Adoulin/npcs/Bilp.lua		UNCOVERED
+adoulin	RAPTOR_RAPTURE	73			Raptor Rapture	scripts/zones/Western_Adoulin/Zone.lua		UNCOVERED
+adoulin	EXOTIC_DELICACIES	74			Exotic Delicacies	scripts/quests/adoulin/Exotic_Delicacies.lua	+ Converted	UNCOVERED
+adoulin	A_PIONEERS_BEST_IMAGINARY_FRIEND	75			A Pioneer's Best (Imaginary) Friend	scripts/quests/adoulin/A_Pioneers_Best_Imaginary_Friend.lua	+	UNCOVERED
+adoulin	HUNGER_STRIKES	76			Hunger Strikes	scripts/quests/adoulin/Hunger_Strikes.lua	+ Converted	UNCOVERED
+adoulin	THE_OLD_MAN_AND_THE_HARPOON	77			The Old Man and the Harpoon	scripts/quests/adoulin/The_Old_Man_and_the_Harpoon.lua	+	UNCOVERED
+adoulin	A_CERTAIN_SUBSTITUTE_PATROLMAN	78			A Certain Substitute Patrolman	scripts/quests/adoulin/A_Certain_Substitute_Patrolman.lua	+ Converted	UNCOVERED
+adoulin	IT_SETS_MY_HEART_AFLUTTER	79			It Sets My Heart Aflutter	scripts/quests/adoulin/It_Sets_My_Heart_Aflutter.lua	+ Converted	UNCOVERED
+adoulin	TRANSPORTING	82			Transporting	scripts/quests/adoulin/Transporting.lua	+ Converted	UNCOVERED
+adoulin	THE_STARVING	84			The Starving	scripts/quests/adoulin/The_Starving.lua	+ Converted	UNCOVERED
+adoulin	FERTILE_GROUND	85			Fertile Ground	scripts/zones/Western_Adoulin/npcs/Shipilolo.lua		UNCOVERED
+adoulin	ALWAYS_MORE_QUOTH_THE_RAVENOUS	88			"Always more," Quoth the Ravenous	scripts/quests/adoulin/Always_More_Quoth_the_Ravenous.lua	+ Converted	UNCOVERED
+adoulin	MEGALOMANIAC	89				scripts/quests/adoulin/Meg_alomaniac.lua		UNCOVERED
+adoulin	THE_LONGEST_WAY_ROUND	91			The Longest Way Round...	scripts/quests/adoulin/The_Longest_Way_Round.lua	+ Converted	UNCOVERED
+adoulin	A_GOOD_PAIR_OF_CROCS	93			A Good Pair of Crocs	scripts/quests/adoulin/A_Good_Pair_of_Crocs.lua	+ Converted	UNCOVERED
+adoulin	CAFETERIA	94				scripts/quests/adoulin/Cafe_teria.lua		UNCOVERED
+adoulin	A_SHOT_IN_THE_DARK	96			A Shot in the Dark	scripts/quests/adoulin/A_Shot_in_the_Dark.lua	+ Converted	UNCOVERED
+adoulin	OPEN_THE_FLOODGATES	100			Open the Floodgates	scripts/quests/adoulin/Open_the_Floodgates.lua		UNCOVERED
+adoulin	NO_LAUGHING_MATTER	102			No Laughing Matter	scripts/quests/adoulin/No_Laughing_Matter.lua		UNCOVERED
+adoulin	ALL_THE_WAY_TO_THE_BANK	103			All the Way to the Bank	scripts/zones/Western_Adoulin/npcs/Defliaa.lua		UNCOVERED
+adoulin	TO_LAUGH_IS_TO_LOVE	104			To Laugh Is to Love			UNCOVERED
+adoulin	A_BARREL_OF_LAUGHS	105			A Barrel of Laughs			UNCOVERED
+adoulin	VEGETABLE_VEGETABLE_REVOLUTION	108			Vegetable Vegetable Revolution	scripts/quests/adoulin/Vegetable_Vegetable_Revolution.lua		UNCOVERED
+adoulin	VEGETABLE_VEGETABLE_EVOLUTION	109			Vegetable Vegetable Evolution	scripts/quests/adoulin/Vegetable_Vegetable_Evolution.lua		UNCOVERED
+adoulin	VEGETABLE_VEGETABLE_CRISIS	110			Vegetable Vegetable Crisis	scripts/zones/Western_Adoulin/npcs/Chanteillie.lua		UNCOVERED
+adoulin	VEGETABLE_VEGETABLE_FRUSTRATION	111			Vegetable Vegetable Frustration	scripts/quests/adoulin/Vegetable_Vegetable_Frustration.lua		UNCOVERED
+adoulin	A_THIRST_FOR_THE_AGES	114			A Thirst for the Ages	scripts/zones/Western_Adoulin/npcs/Nikkhail.lua		UNCOVERED
+adoulin	A_THIRST_FOR_THE_EONS	115			A Thirst for the Eons			UNCOVERED
+adoulin	A_THIRST_FOR_ETERNITY	116			A Thirst for Eternity			UNCOVERED
+adoulin	A_THIRST_BEFORE_TIME	117			A Thirst Before Time			UNCOVERED
+adoulin	DANCES_WITH_LUOPANS	118			Dances with Luopans	scripts/zones/Ceizak_Battlegrounds/Zone.lua		UNCOVERED
+adoulin	CHILDREN_OF_THE_RUNE	119			Children of the Rune	scripts/zones/Yahse_Hunting_Grounds/npcs/Yahse_Wildflower.lua		UNCOVERED
+adoulin	FLOWERS_FOR_SVENJA	120			Flowers for Svenja			UNCOVERED
+adoulin	THORN_IN_THE_SIDE	121			Thorn in the Side			UNCOVERED
+adoulin	DO_NOT_GO_INTO_THE_LIGHT	122			Do Not Go Into the Light	scripts/zones/Western_Adoulin/npcs/Chanteillie.lua		UNCOVERED
+adoulin	VELKKOVERT_OPERATIONS	123			Velkkovert Operations	scripts/quests/adoulin/Velkkovert_Operations.lua		UNCOVERED
+adoulin	HYPOCRITICAL_OATH	124			Hypocritical Oath	scripts/zones/Western_Adoulin/npcs/Grevan.lua		UNCOVERED
+adoulin	THE_GOOD_THE_BAD_THE_CLEMENT	125			The Good, the Bad, the Clement			UNCOVERED
+adoulin	LERENES_LAMENT	126			Lerene's Lament	scripts/quests/adoulin/Lerenes_Lament.lua	+ Converted	UNCOVERED
+adoulin	THE_SECRET_TO_SUCCESS	127			The Secret to Success			UNCOVERED
+adoulin	NO_MERCY_FOR_THE_WICKED	128			No Mercy for the Wicked			UNCOVERED
+adoulin	MISTRESS_OF_CEREMONIES	129			Mistress of Ceremonies			UNCOVERED
+adoulin	SAVED_BY_THE_BELL	131			Saved by the Bell			UNCOVERED
+adoulin	QUIESCENCE	132			Quiescence			UNCOVERED
+adoulin	SICK_AND_TIRED	133			Sick and Tired			UNCOVERED
+adoulin	GEOMANCERRIFIC	134			Geomancerrific			UNCOVERED
+adoulin	RUNE_FENCING_THE_NIGHT_AWAY	135			Rune Fencing the Night Away			UNCOVERED
+adoulin	THE_WEATHERSPOON_INQUISITION	136			The Weatherspoon Inquisition			UNCOVERED
+adoulin	EYE_OF_THE_BEHOLDER	137			Eye of the Beholder			UNCOVERED
+adoulin	THE_CURIOUS_CASE_OF_MELVIEN	138			The Curious Case of Melvien	scripts/zones/Western_Adoulin/npcs/Mastan.lua		UNCOVERED
+adoulin	NOTSOCLEAN_BILL	139				scripts/zones/Western_Adoulin/npcs/Grevan.lua		UNCOVERED
+adoulin	IN_THE_LAND_OF_THE_BLIND	140			In the Land of the Blind			UNCOVERED
+adoulin	THE_WEATHERSPOON_WAR	141			The Weatherspoon War	scripts/zones/Western_Adoulin/npcs/Flapano.lua		UNCOVERED
+adoulin	TREASURES_OF_THE_EARTH	142			Treasures of the Earth			UNCOVERED
+adoulin	EPIPHANY	143			Epiphany			UNCOVERED
+coalition	PROCURE_CEIZAK_BATTLEGROUNDS	0						UNCOVERED
+coalition	PROCURE_FORET_DE_HENNETIEL	1						UNCOVERED
+coalition	PROCURE_MORIMAR_BASALT_FIELDS	2						UNCOVERED
+coalition	PROCURE_YORCIA_WEALD	3						UNCOVERED
+coalition	PROCURE_MARJAMI_RAVINE	4						UNCOVERED
+coalition	PROCURE_KAMIHR_DRIFTS	5						UNCOVERED
+coalition	PROCURE_CIRDAS_CAVERNS	6						UNCOVERED
+coalition	PROCURE_OUTER_RAKAZNAR	7						UNCOVERED
+coalition	CLEAR_CEIZAK_BATTLEGROUNDS	8						UNCOVERED
+coalition	CLEAR_FORET_DE_HENNETIEL	9						UNCOVERED
+coalition	CLEAR_MORIMAR_BASALT_FIELDS	10						UNCOVERED
+coalition	CLEAR_YORCIA_WEALD	11						UNCOVERED
+coalition	CLEAR_MARJAMI_RAVINE	12						UNCOVERED
+coalition	CLEAR_KAMIHR_DRIFTS	13						UNCOVERED
+coalition	CLEAR_CIRDAS_CAVERNS	14						UNCOVERED
+coalition	CLEAR_OUTER_RAKAZNAR	15						UNCOVERED
+coalition	PROVIDE_FORET_DE_HENNETIEL	16						UNCOVERED
+coalition	PROVIDE_MORIMAR_BASALT_FIELDS	17						UNCOVERED
+coalition	PROVIDE_YORCIA_WEALD	18						UNCOVERED
+coalition	PROVIDE_MARJAMI_RAVINE	19						UNCOVERED
+coalition	PROVIDE_KAMIHR_DRIFTS	20						UNCOVERED
+coalition	DELIVER_FORET_DE_HENNETIEL	21						UNCOVERED
+coalition	DELIVER_MORIMAR_BASALT_FIELDS	22						UNCOVERED
+coalition	DELIVER_YORCIA_WEALD	23						UNCOVERED
+coalition	DELIVER_MARJAMI_RAVINE	24						UNCOVERED
+coalition	DELIVER_KAMIHR_DRIFTS	25						UNCOVERED
+coalition	SUPPORT_CEIZAK_BATTLEGROUNDS	26						UNCOVERED
+coalition	SUPPORT_FORET_DE_HENNETIEL	27						UNCOVERED
+coalition	SUPPORT_MORIMAR_BASALT_FIELDS	28						UNCOVERED
+coalition	SUPPORT_YORCIA_WEALD	29						UNCOVERED
+coalition	SUPPORT_MARJAMI_RAVINE	30						UNCOVERED
+coalition	SUPPORT_KAMIHR_DRIFTS	31						UNCOVERED
+coalition	GATHER_RALA_WATERWAYS	32						UNCOVERED
+coalition	GATHER_CEIZAK_BATTLEGROUNDS	33						UNCOVERED
+coalition	GATHER_YAHSE_HUNTING_GROUNDS	34						UNCOVERED
+coalition	GATHER_FORET_DE_HENNETIEL	35						UNCOVERED
+coalition	GATHER_MORIMAR_BASALT_FIELDS	36						UNCOVERED
+coalition	GATHER_YORCIA_WEALD	37						UNCOVERED
+coalition	GATHER_MARJAMI_RAVINE	38						UNCOVERED
+coalition	GATHER_KAMIHR_DRIFTS	39						UNCOVERED
+coalition	GATHER_SIH_GATES	40						UNCOVERED
+coalition	GATHER_MOH_GATES	41						UNCOVERED
+coalition	GATHER_CIRDAS_CAVERNS	42						UNCOVERED
+coalition	GATHER_DHO_GATES	43						UNCOVERED
+coalition	GATHER_WOH_GATES	44						UNCOVERED
+coalition	GATHER_OUTER_RAKAZNAR	45						UNCOVERED
+coalition	GATHER_RAKAZNAR_INNER_COURT	46						UNCOVERED
+coalition	SURVEY_CEIZAK_BATTLEGROUNDS	48						UNCOVERED
+coalition	SURVEY_FORET_DE_HENNETIEL	49						UNCOVERED
+coalition	SURVEY_MORIMAR_BASALT_FIELDS	50						UNCOVERED
+coalition	SURVEY_YORCIA_WEALD	51						UNCOVERED
+coalition	SURVEY_MARJAMI_RAVINE	52						UNCOVERED
+coalition	SURVEY_KAMIHR_DRIFTS	53						UNCOVERED
+coalition	SURVEY_SIH_GATES	54						UNCOVERED
+coalition	SURVEY_CIRDAS_CAVERNS	55						UNCOVERED
+coalition	SURVEY_DHO_GATES	56						UNCOVERED
+coalition	ANALYZE_FORET_DE_HENNETIEL	57						UNCOVERED
+coalition	ANALYZE_MORIMAR_BASALT_FIELDS	58						UNCOVERED
+coalition	ANALYZE_YORCIA_WEALD	59						UNCOVERED
+coalition	ANALYZE_MARJAMI_RAVINE	60						UNCOVERED
+coalition	ANALYZE_KAMIHR_DRIFTS	61						UNCOVERED
+coalition	ANALYZE_CIRDAS_CAVERNS	62						UNCOVERED
+coalition	ANALYZE_OUTER_RAKAZNAR	63						UNCOVERED
+coalition	PRESERVE_CEIZAK_BATTLEGROUNDS	64						UNCOVERED
+coalition	PRESERVE_YAHSE_HUNTING_GROUNDS	65						UNCOVERED
+coalition	PRESERVE_FORET_DE_HENNETIEL	66						UNCOVERED
+coalition	PRESERVE_MORIMAR_BASALT_FIELDS	67						UNCOVERED
+coalition	PRESERVE_YORCIA_WEALD	68						UNCOVERED
+coalition	PRESERVE_MARJAMI_RAVINE	69						UNCOVERED
+coalition	PRESERVE_KAMIHR_DRIFTS	70						UNCOVERED
+coalition	PRESERVE_CIRDAS_CAVERNS	71						UNCOVERED
+coalition	PRESERVE_OUTER_RAKAZNAR	72						UNCOVERED
+coalition	PATROL_RALA_WATERWAYS	73						UNCOVERED
+coalition	PATROL_SIH_GATES	74						UNCOVERED
+coalition	PATROL_MOH_GATES	75						UNCOVERED
+coalition	PATROL_CIRDAS_CAVERNS	76						UNCOVERED
+coalition	PATROL_DHO_GATES	77						UNCOVERED
+coalition	PATROL_WOH_GATES	78						UNCOVERED
+coalition	PATROL_OUTER_RAKAZNAR	79						UNCOVERED
+coalition	RECOVER_CEIZAK_BATTLEGROUNDS	80						UNCOVERED
+coalition	RECOVER_FORET_DE_HENNETIEL	81						UNCOVERED
+coalition	RECOVER_MORIMAR_BASALT_FIELDS	82						UNCOVERED
+coalition	RECOVER_YORCIA_WEALD	83						UNCOVERED
+coalition	RECOVER_MARJAMI_RAVINE	84						UNCOVERED
+coalition	RECOVER_KAMIHR_DRIFTS	85						UNCOVERED
+coalition	RESEARCH_RALA_WATERWAYS	86						UNCOVERED
+coalition	RESEARCH_CEIZAK_BATTLEGROUNDS	87						UNCOVERED
+coalition	RESEARCH_FORET_DE_HENNETIEL	88						UNCOVERED
+coalition	RESEARCH_MORIMAR_BASALT_FIELDS	89						UNCOVERED
+coalition	RESEARCH_YORCIA_WEALD	90						UNCOVERED
+coalition	RESEARCH_MARJAMI_RAVINE	91						UNCOVERED
+coalition	RESEARCH_KAMIHR_DRIFTS	92						UNCOVERED
+coalition	BOOST_FORET_DE_HENNETIEL	93						UNCOVERED
+coalition	BOOST_MARJAMI_RAVINE	94						UNCOVERED
+coalition	BOOST_KAMIHR_DRIFTS	95						UNCOVERED

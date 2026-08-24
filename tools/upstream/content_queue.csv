@@ -1,0 +1,102 @@
+sha,date,new_text_keys,applies_clean,blocked_on,zones,subject
+6d6b007523,2026-02-05,1,yes,,Uleguerand_Range,White Coney Audit
+13fcc0aa8f,2026-02-06,1,yes,,Waughroon_Shrine,SAM AF3 Audit
+d0baeec999,2026-02-16,1,yes,,Yhoator_Jungle,NIN AF3 Audit
+81805e041e,2026-03-05,1,yes,,Navukgo_Execution_Chamber,PUP LB (Achieving True Power)
+ec482c38ff,2026-04-02,1,yes,,Aht_Urhgan_Whitegate,Quest Cleanup Promotion Superior Private
+aba8a3899e,2026-04-08,1,yes,,Lufaise_Meadows,"[lua, sql] Fixes COP 7-1 full inventory message and NPC"
+3f0bcf75da,2026-05-28,1,yes,,Monarch_Linn,Add Bugard in the Clouds battlefield and Hotupuku implementation
+132695d56a,2026-08-11,1,yes,,Lower_Jeuno,TOAU Quest Audits
+f3864e4d7a,2026-02-03,2,yes,,Xarcabard,BLM AF 1 Audit
+f05b772d33,2026-02-04,2,yes,,Valkurm_Dunes,Samurai AF2 part 2 Audit
+47cbe24ffe,2026-02-24,2,yes,,Bastok_Markets_[S];Grauberg_[S],[lua] Bastok [S] + Grauberg [S] locked doors
+8e8398c862,2026-03-02,2,yes,,Arrapago_Reef;Talacca_Cove,Corsair LB (Breaking the Bonds of Fate)
+0a3958e825,2026-03-06,2,yes,,Caedarva_Mire,PUP AF1 fight Caedarva Toad
+da420bb080,2026-07-17,2,yes,,Bibiki_Bay,[lua] NPC Tswe Panipahr (Manaclipper) cleanup
+4cd618176d,2026-08-03,2,yes,,Ifrits_Cauldron,Flame Spout Trade Fix
+affb7ade2c,2026-02-14,3,yes,,FeiYin,[npc] WHM AF3 QM Position
+eab1ea383e,2026-02-18,3,yes,,Garlaige_Citadel,RDM AF3 part 2 Audit
+8bcd3b16ee,2026-07-14,3,yes,,RuAun_Gardens,Add Goblin Footprint in RuAun
+3891fe732f,2026-07-18,3,yes,,Aht_Urhgan_Whitegate,Adjust Locker lease when switching access
+05fad3f936,2026-02-25,4,yes,,Bastok_Markets_[S];Southern_San_dOria_[S];Windurst_Waters_[S],[lua] WoTG 41 - Her Memories - Lua Cleanup
+c52fc35f4d,2026-08-02,5,yes,,Garlaige_Citadel,Fix Garlaige Incinerator Door
+8ae8829bcf,2026-02-15,6,yes,,Xarcabard,Ranger AF3 Audit
+d59e51a64f,2026-03-12,7,yes,,Abyssea-Empyreal_Paradox;Port_Jeuno;RuLude_Gardens,[lua] Abyssea Minor Clean up
+11e91561ae,2026-07-04,8,yes,,Heavens_Tower;Metalworks;Northern_San_dOria,[lua] Remove Expeditionary Force KI on Nation Swap
+2761d66d60,2026-05-09,12,yes,,Jade_Sepulcher;Mamook,Moment of Truth implementation
+ffd222113a,2026-03-05,0,no,scripts/actions/mobskills/fission.lua,Spire_of_Vahzl,"[lua, sql] Implement Pulling the Plug ENM"
+cb6178d986,2026-04-08,0,no,sql/mob_groups.sql,Open_sea_route_to_Al_Zahbi;Open_sea_route_to_Mhaura;Ship_bound_for_Mhaura;Ship_bound_for_Mhaura_Pirates,Boat Audit Pt. 1 revisions
+256d6fd5f2,2026-04-09,0,no,scripts/actions/mobskills/ocher_blast.lua;scripts/actions/mobskills/ocher_blast_alt.lua;scripts/enum/mob_skill.lua,Riverne-Site_A01,[lua] [sql] Ouryu Cometh
+ae66f530fc,2026-04-16,0,no,scripts/actions/mobskills/teraflare.lua;scripts/enum/mob_skill.lua;scripts/zones/Riverne-Site_A01/mobs/Ouryu.lua,Riverne-Site_A01;Riverne-Site_B01,[lua] [sql] The Wyrmking Descends
+e90b78a9f0,2026-04-30,0,no,scripts/zones/West_Sarutabaruta/mobs/Tom_Tit_Tat.lua,West_Sarutabaruta,[lua] Enable spawning of both Tom Tit Tat copies
+0c9fbf0af0,2026-05-04,0,no,scripts/enum/mob_mod.lua;sql/mob_spawn_points.sql;src/map/mob_modifier.h,Newton_Movalpolos;Oldton_Movalpolos,[core][lua][sql] Movalpolis Patrols and Guards
+1fdd0c2088,2026-05-15,0,no,scripts/enum/mob_skill.lua;sql/mob_pools.sql;sql/mob_skills.sql,Horlais_Peak,"Stage 1 Maat Migration to Individualized Luas (War, Rng, Blm)"
+e78eafcdd0,2026-05-20,0,no,sql/npc_list.sql,Batallia_Downs,Merge pull request #10067 from sruon/30260429_1_NPCs
+48c7a96e6f,2026-05-24,0,no,scripts/enum/item.lua;scripts/quests/abyssea/An_Eye_for_Revenge.lua;scripts/quests/abyssea/Lost_Memories.lua,Abyssea-La_Theine,"[quests] Added Abyssea quests 2, 3, and 9 (#10091)"
+706c2fe199,2026-05-27,0,no,sql/mob_pools.sql,Jugner_Forest_[S],[lua] [sql] Implement Voirloup
+0323bd0439,2026-06-02,0,no,scripts/globals/mobs.lua,South_Gustaberg;The_Boyahda_Tree,[lua] Fixup Carnero/Aquarius/LL spawn to match retail spawn slots
+d204326d72,2026-06-05,0,no,scripts/actions/mobskills/aerial_blast.lua;scripts/actions/mobskills/diamond_dust.lua;scripts/actions/mobskills/earthen_fury.lua,Balgas_Dais;QuBia_Arena,Stage 2 Maat Migration to Individualized Lua
+6e479b253b,2026-06-07,0,no,sql/mob_spawn_slots.sql,Batallia_Downs,"[sql, lua] Add spawn slot and levels to Batallia Downs"
+85fe7e31ba,2026-06-10,0,no,scripts/zones/Ship_bound_for_Mhaura_Pirates/mobs/Silverhook.lua;scripts/zones/Ship_bound_for_Selbina_Pirates/mobs/Blackbeard.lua,Ship_bound_for_Mhaura_Pirates;Ship_bound_for_Selbina_Pirates,Pirates Spawning Behavior
+4e07f64f99,2026-06-19,0,no,scripts/globals/assault/container.lua;scripts/globals/assault/npc_handler.lua;scripts/globals/instance.lua,Caedarva_Mire;Leujaoam_Sanctum,"[lua, cpp] Leujaoam Cleansing Assault; Lootbox Logic"
+ec936a6b35,2026-07-06,0,no,scripts/actions/mobskills/flying_hip_press.lua;scripts/actions/mobskills/stormwind.lua;scripts/zones/Newton_Movalpolos/mobs/Bugbear_Matman.lua,Cape_Teriggan;Mine_Shaft_2716;Newton_Movalpolos,Skill Specific fTP Binding
+9efb5449b4,2026-07-10,0,no,scripts/zones/Behemoths_Dominion/mobs/Behemoth.lua;scripts/zones/Behemoths_Dominion/mobs/King_Behemoth.lua;scripts/zones/Dragons_Aery/mobs/Fafnir.lua,Behemoths_Dominion;Dragons_Aery;Valley_of_Sorrows,Remove duplicate QM logic in Zilart King scripts
+cbbf0f2121,2026-07-12,0,no,scripts/zones/Valley_of_Sorrows/npcs/qm0.lua;scripts/zones/Valley_of_Sorrows/npcs/qm1.lua;scripts/zones/Valley_of_Sorrows/npcs/qm_adamantoise.lua,Valley_of_Sorrows,Fix Valley of Sorrows QMs
+1600c6ba9e,2026-07-14,0,no,scripts/zones/Sacrarium/mobs/Fomor_Beastmaster.lua;scripts/zones/Sacrarium/mobs/Fomor_Dark_Knight.lua;scripts/zones/Sacrarium/mobs/Fomor_Paladin.lua,Lufaise_Meadows;Misareaux_Coast;Phomiuna_Aqueducts;Sacrarium,[lua] Move fomorParty superlink to onMobInit
+cd345bb401,2026-07-20,0,no,scripts/zones/Kazham/npcs/Magriffon.lua;sql/npc_list.sql,Kazham;Southern_San_dOria,[sql][lua] Rename event Raminel to avoid onSpawn
+55125a2fea,2026-07-25,0,no,scripts/zones/Gusgen_Mines/mobs/Juggler_Hecatomb.lua;scripts/zones/Maze_of_Shakhrami/mobs/Argus.lua;scripts/zones/Ranguemont_Pass/Zone.lua,Gusgen_Mines;Labyrinth_of_Onzozo;Maze_of_Shakhrami;Ranguemont_Pass,NM placeholder fixes and cleanup
+6194f08f49,2026-08-13,0,no,scripts/zones/Batallia_Downs_[S]/Zone.lua;scripts/zones/Rolanberry_Fields_[S]/Zone.lua,Batallia_Downs_[S];Rolanberry_Fields_[S];Sauromugue_Champaign_[S],[lua] Open the Rampart Gates for mounted players in the [S] areas
+2e25cf2ea4,2026-01-03,1,no,scripts/actions/mobskills/self-destruct_cluster_2.lua;scripts/actions/mobskills/self-destruct_cluster_3.lua,Monarch_Linn,[lua] [sql] ENM Fire in the Sky
+2d9b845774,2026-02-13,1,no,scripts/quests/abyssea/An_Officer_and_a_Pirate.lua;scripts/quests/abyssea/First_Contact.lua;scripts/quests/abyssea/Tenuous_Existence.lua,La_Theine_Plateau,[lua] Abyssea - Main story quests Part 2
+1e5040d39a,2026-03-07,1,no,scripts/zones/Boneyard_Gully/mobs/Shikaree_X_ROS_TWT.lua;scripts/zones/Boneyard_Gully/mobs/Shikaree_Y_ROS_TWT.lua,Boneyard_Gully,"[lua, sql] Tango With A Tracker adjustments"
+a561523612,2026-03-10,1,no,scripts/actions/mobskills/fast_blade.lua,Port_San_dOria;Windurst_Waters,Fix Fast Blade mobskill message and add safety to COR AF3
+5fe5925e87,2026-04-05,1,no,scripts/battlefields/Mine_Shaft_2716/pulling_the_strings.lua;scripts/enum/mob_skill.lua;sql/mob_skills.sql,Mine_Shaft_2716,[lua] [sql] Moblin Fantocciniman + Marionette Dice
+0cd9023c07,2026-04-08,1,no,scripts/enum/mob_skill.lua,Carpenters_Landing,Behind the Smile quest implementation
+2deb0371df,2026-04-12,1,no,scripts/battlefields/Mine_Shaft_2716/return_to_the_depths.lua;scripts/quests/bastok/Return_to_the_Depths.lua,Mine_Shaft_2716,Return to the Depths implementation
+d493517793,2026-05-25,1,no,scripts/zones/VeLugannon_Palace/npcs/qm1.lua,VeLugannon_Palace,[lua] Curtana/Brigandish Blade/Bartholomew Knife retail improvements (#10120)
+7b0c9975cf,2026-06-12,1,no,scripts/actions/mobskills/tackle.lua;scripts/enum/mob_skill.lua;scripts/mixins/families/maat.lua,Chamber_of_Oracles;Horlais_Peak;Waughroon_Shrine,Final Stage Maat Migration to Individualized Luas
+2796f526b3,2026-06-14,1,no,sql/mob_pools.sql,Phanauet_Channel,Stubborn Dredvodd Audits
+4366bb16a6,2026-07-09,1,no,sql/npc_list.sql,Yhoator_Jungle,Fix Yhoator mismatched QMs
+59091656d2,2026-07-11,1,no,scripts/zones/Upper_Delkfutts_Tower/mobs/Porphyrion.lua;sql/npc_list.sql,Upper_Delkfutts_Tower,Document Upper Delkfutts Tower Key ??? npc
+24956c5512,2026-07-17,1,no,scripts/actions/mobskills/dynamic_assault.lua;scripts/actions/mobskills/dynamic_implosion.lua;scripts/actions/mobskills/mana_storm.lua,Dynamis-Xarcabard,Update Dynamis Lord
+a306f81ecb,2026-07-17,1,no,scripts/zones/Bibiki_Bay/npcs/Tswe_Panipahr.lua,Bibiki_Bay,Handle onEventUpdate for Manaclipper ticket seller
+dc72a83fd3,2026-07-18,1,no,sql/mob_spawn_points.sql,Korroloka_Tunnel,NIN Unlock Quest Audits
+7b52048fea,2026-08-02,1,no,scripts/quests/jeuno/Scattered_into_Shadow.lua,Castle_Oztroja,Scattered into Shadow Fixes
+6ac5b8ec08,2026-08-06,1,no,scripts/zones/FeiYin/DefaultActions.lua;sql/mob_spawn_points.sql,FeiYin;Outer_Horutoto_Ruins,[lua][sql] Windurst 8-2 audit
+cc0b1d9b47,2026-02-04,2,no,sql/mob_pools.sql,Misareaux_Coast,[lua] [sql] Gration & Additional Gigas Fixes
+c6c7f9aa9c,2026-03-04,2,no,scripts/battlefields/Talacca_Cove/puppetmaster_blues.lua;scripts/globals/quests.lua,Mount_Zhayolm,PUP AF3 Puppetmaster Blues
+8ea8c0cdf6,2026-03-10,2,no,scripts/battlefields/Boneyard_Gully/requiem_of_sin.lua;scripts/zones/Boneyard_Gully/mobs/Shikaree_X_ROS_TWT.lua;scripts/zones/Boneyard_Gully/mobs/Shikaree_Y_ROS_TWT.lua,Boneyard_Gully,"[lua, sql] Implement Requiem of Sin battlefield"
+14813751f2,2026-03-30,2,no,scripts/enum/mob_skill.lua;sql/mob_groups.sql;sql/mob_skill_lists.sql,Uleguerand_Range;Waughroon_Shrine,Audit Uleguerand Range NMs
+cfdc9ca394,2026-04-21,2,no,scripts/enum/item.lua,Castle_Zvahl_Keep_[S],[lua] Bonds of Mythril quest
+7c4e99e60f,2026-05-23,2,no,scripts/globals/besieged.lua;scripts/zones/Al_Zahbi/mobs/Lamia_Commandress.lua;scripts/zones/Al_Zahbi/mobs/Mamool_Ja_Cataphract.lua,Al_Zahbi;Bhaflau_Thickets;Wajaom_Woodlands,"[lua, sql] Besieged mobs / Al Zahbi NPCs (#10095)"
+fb7d21ab3a,2026-05-25,2,no,scripts/enum/item.lua,Nashmau,Rararoon shop
+66013b70f1,2026-06-07,2,no,scripts/enum/mob_skill.lua;sql/mob_pools.sql,Arrapago_Reef,Arrapago Reef NM Audits
+2b5f62a5c3,2026-06-22,2,no,scripts/zones/Arrapago_Reef/mobs/Lamia_No19.lua,Arrapago_Reef,Use listener to try to not to call all players in a zone every tick
+19859722be,2026-07-11,2,no,sql/mob_pools.sql;sql/npc_list.sql,Konschtat_Highlands,Audit Konchtat Highlands ??? npcs and associated quests
+d2164ed20c,2026-07-21,2,no,scripts/globals/hobbies/clamming/logic.lua,Bibiki_Bay,[lua] Clamming fixes; Remove KI on zone-out; Increase point cooldown (#10837)
+547431d2bf,2026-08-08,2,no,scripts/quests/ahtUrhgan/Promotion_Corporal.lua;scripts/quests/ahtUrhgan/Promotion_Private_First_Class.lua;scripts/quests/ahtUrhgan/Promotion_Superior_Private.lua,South_Gustaberg,Title Fixes + Cold Light of Day Audit
+d7ce0f4d56,2026-03-16,3,no,scripts/actions/mobskills/burning_blade.lua;scripts/actions/mobskills/shining_blade.lua;scripts/enum/mob_skill.lua,Aht_Urhgan_Whitegate;The_Ashu_Talif,COR AF3 Fight (Against All Odds)
+bf2857a1f1,2026-04-12,3,no,scripts/actions/mobskills/hane_fubuki.lua;scripts/actions/mobskills/happobarai.lua;scripts/actions/mobskills/hiden_sokyaku.lua,Full_Moon_Fountain;LaLoff_Amphitheater;The_Ashu_Talif,"[lua, sql] Rework ToAU 15 Black Coffin battlefield"
+8978126639,2026-05-22,3,no,scripts/events/handler.lua;sql/mob_groups.sql;sql/mob_pools.sql,Alzadaal_Undersea_Ruins;RuAun_Gardens;The_Boyahda_Tree,Strange Happenings event
+1c65b73953,2026-06-23,3,no,scripts/items/rebirth_feather.lua;scripts/items/revive_feather.lua,Attohwa_Chasm,add mimeo stone quest and update rewards
+bf4953b6ee,2026-07-23,3,no,scripts/zones/Gusgen_Mines/npcs/qm1.lua;scripts/zones/Maze_of_Shakhrami/npcs/qm1.lua;scripts/zones/Ordelles_Caves/npcs/qm1.lua,Gusgen_Mines;Maze_of_Shakhrami;Ordelles_Caves,Clean Up / Fix RSE Sachet NM Code
+bca3fa628e,2026-08-08,3,no,scripts/zones/Gusgen_Mines/npcs/Degga.lua;scripts/zones/Maze_of_Shakhrami/npcs/Ahko_Mhalijikhari.lua;scripts/zones/Ordelles_Caves/npcs/Rojaireaut.lua,Gusgen_Mines;Maze_of_Shakhrami;Ordelles_Caves;Port_Bastok,Eco-Warrior IF
+ecb93a54e0,2026-07-29,4,no,scripts/actions/mobskills/earth_blade.lua;scripts/actions/mobskills/fire_blade.lua;scripts/actions/mobskills/frost_blade.lua,Quicksand_Caves;Stellar_Fulcrum,ZM8-13 Audits
+52e5ad69f7,2026-05-24,5,no,sql/npc_list.sql,Mount_Zhayolm,[npc][lua] Halvung Gates Key Item check
+eebb71208a,2026-06-08,5,no,scripts/quests/crystalWar/Steamed_Rams.lua;scripts/quests/crystalWar/WOTG_BAS_0_The_Fighting_Fourth.lua,Bastok_Markets_[S];West_Sarutabaruta_[S];Windurst_Waters_[S],[lua] Convert Snake on the Plains to IF
+2c729a3bde,2026-07-12,5,no,scripts/globals/quests.lua;scripts/zones/Konschtat_Highlands/DefaultActions.lua,Konschtat_Highlands,"[lua] Fix quest getMustZone, Bastok Mom quests, Konschtat signposts"
+d84de43aa8,2026-08-01,5,no,scripts/zones/Misareaux_Coast/mobs/Gration.lua,FeiYin;Misareaux_Coast,Fix Gration Ready time / Add Dried Up Fountain QM msg.
+6b9735b280,2026-02-17,6,no,scripts/globals/abyssea.lua,Abyssea-Empyreal_Paradox,[lua]  Abyssea - Main story quests Part 4
+ab2cec16fb,2026-04-28,10,no,scripts/enum/mob_skill.lua;scripts/zones/Carpenters_Landing/mobs/Bullheaded_Grosvez.lua;sql/mob_groups.sql,Carpenters_Landing;Navukgo_Execution_Chamber,Puppetmaster LB Fight
+d293d4e0d2,2026-02-25,11,no,scripts/globals/quests.lua,Jade_Sepulcher,BLU LB (The Beast Within)
+f8b22d23b6,2026-05-24,11,no,sql/mob_pools.sql,Aydeewa_Subterrane,Aydeewa NM Audits
+a39b72a899,2026-06-26,12,no,scripts/zones/Cirdas_Caverns/DefaultActions.lua;scripts/zones/Morimar_Basalt_Fields/DefaultActions.lua,Cirdas_Caverns;Dho_Gates;Foret_de_Hennetiel;Marjami_Ravine,[lua] Add SoA survival skill obstacle traversing
+28440aee7e,2026-07-23,12,no,scripts/zones/QuBia_Arena/mobs/Yukvok_of_Clan_Death.lua;scripts/zones/Xarcabard/DefaultActions.lua;sql/mob_groups.sql,Batallia_Downs;Horlais_Peak;Northern_San_dOria;QuBia_Arena,Sandy 9-1 and 9-2 audits
+484030505b,2026-05-11,15,no,scripts/enum/item.lua;src/map/packets/s2c/CMakeLists.txt,Bastok_Mines;Northern_San_dOria;Windurst_Walls,Linkshell Concierge support
+25eb02485b,2026-03-28,18,no,scripts/enum/mob_skill.lua;scripts/zones/Jade_Sepulcher/mobs/Raubahn.lua;sql/mob_skills.sql,Jade_Sepulcher;Talacca_Cove,The Bonds of Fate (Qultada)
+fd909cba89,2026-04-08,19,no,scripts/zones/Apollyon/Zone.lua;scripts/zones/Temenos/Zone.lua,Apollyon;Temenos,[documentation] Moves all of the old limbus to documentation folder
+09144b9a34,2026-07-27,21,no,src/common/ipc_structs.h;src/login/login_helpers.cpp;src/login/login_helpers.h,Residential_Area;Residential_Area_199;Residential_Area_214;Residential_Area_219,Port Zone to YAML based enum
+4ddb4cbe2d,2026-07-27,22,no,sql/mob_groups.sql;sql/mob_pools.sql;sql/mob_spawn_points.sql,Behemoths_Dominion;Cape_Teriggan;Cloister_of_Frost;La_Theine_Plateau,ZM5 Audits
+f47090c1de,2026-07-17,30,no,scripts/zones/Phanauet_Channel/Zone.lua;scripts/zones/Phanauet_Channel/mobs/Stubborn_Dredvodd.lua;scripts/zones/Phanauet_Channel/mobs/Vodyanoi.lua,Carpenters_Landing;Phanauet_Channel,Barge fixes and NM Adjustments
+9d695fb764,2026-07-05,31,no,scripts/globals/expeditionary_force.lua,Beadeaux;Castle_Oztroja;Castle_Zvahl_Baileys;Castle_Zvahl_Keep,[lua] Enable Expeditionary Force with Treasure
+93b014fa90,2026-07-05,61,no,scripts/globals/expeditionary_force.lua,Beaucedine_Glacier;Buburimu_Peninsula;Cape_Teriggan;Eastern_Altepa_Desert,[lua] Expeditionary Force Battle Logic

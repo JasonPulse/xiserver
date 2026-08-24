@@ -199,7 +199,7 @@ Carbuncle Debacle	Summoner Artifact Quests	implemented	scripts/battlefields/Cloi
 Cargo	Other Quests	implemented	scripts/quests/otherAreas/Cargo.lua		csids_ok		https://www.bg-wiki.com/ffxi/Cargo
 Catch It If You Can!	Port Windurst Quests	implemented	scripts/quests/windurst/Catch_It_If_You_Can.lua		csids_ok		https://www.bg-wiki.com/ffxi/Catch_It_If_You_Can%21
 Catering Capers	Abyssea - La Theine Quests	implemented	scripts/quests/abyssea/Catering_Capers.lua		csids_ok		https://www.bg-wiki.com/ffxi/Catering_Capers
-Chacharoon's Cheer	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Chacharoon%27s_Cheer
+Chacharoon's Cheer	Mog Garden Quests	implemented	scripts/quests/otherAreas/Chacharoons_Cheer.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Chacharoon%27s_Cheer
 Chameleon Capers	Fellowship Quests	MISSING					https://www.bg-wiki.com/ffxi/Chameleon_Capers
 Champion of the Dawn	Avatar Quests	implemented	scripts/quests/crystalWar/Champion_of_the_Dawn.lua		CSID_MISSING(87:1320)		https://www.bg-wiki.com/ffxi/Champion_of_the_Dawn
 Champions of Abyssea	Abyssea Quests	implemented	scripts/quests/abyssea/Champions_of_Abyssea.lua		csids_ok		https://www.bg-wiki.com/ffxi/Champions_of_Abyssea
@@ -239,7 +239,7 @@ Crimson Carpet I (Vunkerl)	Abyssea - Vunkerl Quests	implemented	scripts/zones/Ab
 Crimson Carpet II (Attohwa)	Abyssea - Attohwa Quests	implemented	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua				https://www.bg-wiki.com/ffxi/Crimson_Carpet_II_%28Attohwa%29
 Crimson Carpet II (Misareaux)	Abyssea - Misareaux Quests	implemented	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua				https://www.bg-wiki.com/ffxi/Crimson_Carpet_II_%28Misareaux%29
 Crimson Carpet II (Vunkerl)	Abyssea - Vunkerl Quests	implemented	scripts/zones/Abyssea-Attohwa/npcs/Resistance_Sapper.lua				https://www.bg-wiki.com/ffxi/Crimson_Carpet_II_%28Vunkerl%29
-Cry Not, Caretaker	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Cry_Not%2C_Caretaker
+Cry Not, Caretaker	Mog Garden Quests	implemented	scripts/quests/otherAreas/Cry_Not_Caretaker.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Cry_Not%2C_Caretaker
 Crying Over Onions	Port Windurst Quests	implemented	scripts/quests/windurst/SOB5_Crying_Over_Onions.lua		csids_ok		https://www.bg-wiki.com/ffxi/Crying_Over_Onions
 Crystal Guardian	Crystal War Quests	MISSING					https://www.bg-wiki.com/ffxi/Crystal_Guardian
 Curses, Foiled A-Golem!?	Windurst Quests	implemented	scripts/quests/windurst/Curses_Foiled_A_Golem.lua		csids_ok		https://www.bg-wiki.com/ffxi/Curses%2C_Foiled_A-Golem%21%3F
@@ -268,7 +268,7 @@ Distant Loyalties	San d'Oria Quests	implemented	scripts/quests/sandoria/Distant_
 Divine Interference	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Divine_Interference.lua		CSID_MISSING(50:930,50:931,50:932)		https://www.bg-wiki.com/ffxi/Divine_Interference
 Divine Might	Outlands Quests	implemented	scripts/quests/outlands/Divine_Might.lua		csids_ok		https://www.bg-wiki.com/ffxi/Divine_Might
 Do Not Go Into the Light	Adoulin Quests	implemented	scripts/zones/Western_Adoulin/npcs/Chanteillie.lua				https://www.bg-wiki.com/ffxi/Do_Not_Go_Into_the_Light
-Doctor Chacharoon	Mog Garden Quests	MISSING					https://www.bg-wiki.com/ffxi/Doctor_Chacharoon
+Doctor Chacharoon	Mog Garden Quests	implemented	scripts/quests/otherAreas/Doctor_Chacharoon.lua		csids_ok		https://www.bg-wiki.com/ffxi/Doctor_Chacharoon
 Dominion Op 01 (Altepa)	Abyssea - Altepa Quests	implemented	scripts/quests/abyssea/Grauberg_Dominion_Op_01.lua				https://www.bg-wiki.com/ffxi/Dominion_Op_01_%28Altepa%29
 Dominion Op 01 (Grauberg)	Abyssea - Grauberg Quests	implemented	scripts/quests/abyssea/Grauberg_Dominion_Op_01.lua				https://www.bg-wiki.com/ffxi/Dominion_Op_01_%28Grauberg%29
 Dominion Op 01 (Uleguerand)	Abyssea - Uleguerand Quests	implemented	scripts/quests/abyssea/Grauberg_Dominion_Op_01.lua				https://www.bg-wiki.com/ffxi/Dominion_Op_01_%28Uleguerand%29
@@ -365,7 +365,7 @@ Fear of Flying	Bastok Quests	implemented	scripts/quests/bastok/Fear_of_Flying.lu
 Fear of the Dark	Northern San d'Oria Quests	implemented	scripts/quests/sandoria/Fear_of_the_Dark.lua		csids_ok		https://www.bg-wiki.com/ffxi/Fear_of_the_Dark
 Fear of the Dark II	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Fear_of_the_Dark_II.lua		csids_ok		https://www.bg-wiki.com/ffxi/Fear_of_the_Dark_II
 Fear of the Dark III	Abyssea - La Theine Quests	implemented	scripts/quests/abyssea/Fear_of_the_Dark_III.lua		csids_ok		https://www.bg-wiki.com/ffxi/Fear_of_the_Dark_III
-Feeding Frenzy	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Feeding_Frenzy
+Feeding Frenzy	Mog Garden Quests	implemented	scripts/quests/otherAreas/Feeding_Frenzy.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Feeding_Frenzy
 Fertile Ground	Adoulin Quests	implemented	scripts/zones/Western_Adoulin/npcs/Shipilolo.lua				https://www.bg-wiki.com/ffxi/Fertile_Ground
 Finding Faults	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Finding_Faults.lua		csids_ok		https://www.bg-wiki.com/ffxi/Finding_Faults
 Fire and Brimstone	Ranger Artifact Quests	implemented	scripts/zones/The_Eldieme_Necropolis/npcs/Gravestone.lua				https://www.bg-wiki.com/ffxi/Fire_and_Brimstone
@@ -415,7 +415,7 @@ Girl in the Looking Glass	Fellowship Quests	MISSING					https://www.bg-wiki.com/
 Give Peace a Chance	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Give_Peace_a_Chance.lua		csids_ok		https://www.bg-wiki.com/ffxi/Give_Peace_a_Chance
 Give a Moogle a Break	Mog House Quests	implemented	scripts/quests/otherAreas/Give_a_Moogle_a_Break.lua				https://www.bg-wiki.com/ffxi/Give_a_Moogle_a_Break
 Glimmer of Hope	Crystal War Quests	MISSING					https://www.bg-wiki.com/ffxi/Glimmer_of_Hope
-Glittering Gals	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Glittering_Gals
+Glittering Gals	Mog Garden Quests	implemented	scripts/quests/otherAreas/Glittering_Gals.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Glittering_Gals
 Glyph Hanger	Map Quests	implemented	scripts/quests/windurst/Glyph_Hanger.lua		csids_ok		https://www.bg-wiki.com/ffxi/Glyph_Hanger
 Go With the Flow	Jeuno Quests	MISSING					https://www.bg-wiki.com/ffxi/Go_With_the_Flow
 Go! Go! Gobmuffin!	Map Quests	implemented	scripts/quests/otherAreas/Go_Go_Gobmuffin.lua		csids_ok		https://www.bg-wiki.com/ffxi/Go%21_Go%21_Gobmuffin%21
@@ -681,7 +681,7 @@ Refuel and Replenish (Tahrongi)	Abyssea - Tahrongi Quests	MISSING					https://ww
 Refuel and Replenish (Uleguerand)	Abyssea - Uleguerand Quests	MISSING					https://www.bg-wiki.com/ffxi/Refuel_and_Replenish_%28Uleguerand%29
 Refuel and Replenish (Vunkerl)	Abyssea - Vunkerl Quests	MISSING					https://www.bg-wiki.com/ffxi/Refuel_and_Replenish_%28Vunkerl%29
 Regaining Trust	Fellowship Quests	MISSING					https://www.bg-wiki.com/ffxi/Regaining_Trust
-Release the Fleece	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Release_the_Fleece
+Release the Fleece	Mog Garden Quests	implemented	scripts/quests/otherAreas/Release_the_Fleece.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Release_the_Fleece
 Remembrance of Flowers Past	Jeuno Quests	MISSING					https://www.bg-wiki.com/ffxi/Remembrance_of_Flowers_Past
 Requiem for the Departed	Crystal War Quests	implemented	scripts/zones/The_Eldieme_Necropolis_[S]/npcs/Heptachiond.lua				https://www.bg-wiki.com/ffxi/Requiem_for_the_Departed
 Requiem of Sin	Other Quests	implemented	scripts/quests/otherAreas/Requiem_of_Sin.lua		csids_ok		https://www.bg-wiki.com/ffxi/Requiem_of_Sin
@@ -693,7 +693,7 @@ Rock Bottom	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Rock_Bottom.l
 Rock Racketeer	Windurst Quests	implemented	scripts/quests/windurst/Rock_Racketeer.lua		csids_ok		https://www.bg-wiki.com/ffxi/Rock_Racketeer
 Rose on the Heath	Abyssea - Konschtat Quests	implemented	scripts/quests/abyssea/Rose_on_the_Heath.lua		csids_ok		https://www.bg-wiki.com/ffxi/Rose_on_the_Heath
 Rosel the Armorer	San d'Oria Quests	implemented	scripts/quests/sandoria/Rosel_the_Armorer.lua		csids_ok		https://www.bg-wiki.com/ffxi/Rosel_the_Armorer
-Rowing Together	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Rowing_Together
+Rowing Together	Mog Garden Quests	implemented	scripts/quests/otherAreas/Rowing_Together.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Rowing_Together
 Royal Painter Escort	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Royal_Painter_Escort.lua		CSID_MISSING(53:510)		https://www.bg-wiki.com/ffxi/Royal_Painter_Escort
 Rubbish Day	Jeuno Quests	implemented	scripts/quests/jeuno/Rubbish_Day.lua		csids_ok		https://www.bg-wiki.com/ffxi/Rubbish_Day
 Rune Fencer Relic Armor	Adoulin Quests	MISSING					https://www.bg-wiki.com/ffxi/Rune_Fencer_Relic_Armor
@@ -701,7 +701,7 @@ Rune Fencing the Night Away	Adoulin Quests	MISSING					https://www.bg-wiki.com/f
 Rycharde the Chef	Mhaura Quests	implemented	scripts/quests/otherAreas/RQ1_Rycharde_the_Chef.lua		csids_ok		https://www.bg-wiki.com/ffxi/Rycharde_the_Chef
 Saga of the Skyserpent	Aht Urhgan Quests	implemented	scripts/quests/ahtUrhgan/Saga_of_the_Skyserpent.lua		CSID_MISSING(50:953)		https://www.bg-wiki.com/ffxi/Saga_of_the_Skyserpent
 Sahagin Key	Mini-Quests	MISSING					https://www.bg-wiki.com/ffxi/Sahagin_Key
-Sally Forth!	Mog Garden Quests	MISSING				scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Sally_Forth%21
+Sally Forth!	Mog Garden Quests	implemented	scripts/quests/otherAreas/Sally_Forth.lua		csids_ok	scripts/zones/Mog_Garden/npcs/Green_Thumb_Moogle.lua	https://www.bg-wiki.com/ffxi/Sally_Forth%21
 Save My Sister	Jeuno Quests	implemented	scripts/quests/jeuno/Save_My_Sister.lua		csids_ok		https://www.bg-wiki.com/ffxi/Save_My_Sister
 Save My Son	Jeuno Quests	implemented	scripts/quests/jeuno/Save_My_Son.lua		csids_ok		https://www.bg-wiki.com/ffxi/Save_My_Son
 Save the Clock Tower	Jeuno Quests	implemented	scripts/quests/jeuno/Save_the_Clock_Tower.lua		csids_ok		https://www.bg-wiki.com/ffxi/Save_the_Clock_Tower
@@ -950,7 +950,7 @@ Trial by Ice	Avatar Quests	implemented	scripts/zones/Northern_San_dOria/npcs/Gul
 Trial by Lightning	Avatar Quests	implemented	scripts/quests/otherAreas/Trial_by_Lightning.lua				https://www.bg-wiki.com/ffxi/Trial_by_Lightning
 Trial by Water	Avatar Quests	implemented	scripts/quests/outlands/Trial_by_Water.lua		csids_ok		https://www.bg-wiki.com/ffxi/Trial_by_Water
 Trial by Wind	Avatar Quests	implemented	scripts/quests/outlands/Trial_by_Wind.lua		csids_ok		https://www.bg-wiki.com/ffxi/Trial_by_Wind
-Trial of the Chacharoon	Mog Garden Quests	MISSING					https://www.bg-wiki.com/ffxi/Trial_of_the_Chacharoon
+Trial of the Chacharoon	Mog Garden Quests	implemented	scripts/quests/otherAreas/Trial_of_the_Chacharoon.lua		csids_ok		https://www.bg-wiki.com/ffxi/Trial_of_the_Chacharoon
 Trial-Size Trial by Earth	Avatar Quests	implemented	scripts/quests/bastok/Trial_Size_Trial_by_Earth.lua		csids_ok		https://www.bg-wiki.com/ffxi/Trial-Size_Trial_by_Earth
 Trial-Size Trial by Fire	Avatar Quests	implemented	scripts/quests/outlands/Trial_Size_Trial_by_Fire.lua		csids_ok		https://www.bg-wiki.com/ffxi/Trial-Size_Trial_by_Fire
 Trial-Size Trial by Ice	Avatar Quests	implemented	scripts/quests/sandoria/Trial_Size_Trial_by_Ice.lua		csids_ok		https://www.bg-wiki.com/ffxi/Trial-Size_Trial_by_Ice

@@ -2,7 +2,7 @@
 -- Area: Northern San d'Oria
 --  NPC: Olbergieut
 -- !pos 91 0 121 231
--- Starts and Finishes Quest: Gates of Paradise
+-- Starts and Finishes Quest: Gates to Paradise
 -----------------------------------
 local ID = zones[xi.zone.NORTHERN_SAN_DORIA]
 -----------------------------------
