@@ -51,7 +51,7 @@ quest.sections =
                     -- bg-wiki: the glimmer offers the warp again if it was declined.
                     player:setPos(0, 0, 0, 0, xi.zone.PROVENANCE)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },

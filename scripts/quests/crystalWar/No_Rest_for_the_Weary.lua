@@ -62,7 +62,9 @@ local zones =
 
 --- The Shadowreign officers hand over the alarum that opens the gate.
 for zoneId, _ in pairs(xi.vwChain.officers) do
-    if xi.vwChain.shadowreign[zoneId] then
+    local officerCsid = xi.vwChain.officerCsid(zoneId, 'again')
+
+    if xi.vwChain.shadowreign[zoneId] and officerCsid ~= nil then
         zones[zoneId] = zones[zoneId] or {}
 
         zones[zoneId]['Voidwatch_Officer'] =
@@ -72,13 +74,13 @@ for zoneId, _ in pairs(xi.vwChain.officers) do
                     return
                 end
 
-                return quest:progressEvent(xi.vwChain.officerCsid(player:getZoneID(), 'again'))
+                return quest:progressEvent(officerCsid)
             end,
         }
 
         zones[zoneId].onEventFinish =
         {
-            [xi.vwChain.officerCsid(zoneId, 'again')] = function(player, csid, option, npc)
+            [officerCsid] = function(player, csid, option, npc)
                 npcUtil.giveKeyItem(player, xi.ki.VOIDWATCH_ALARUM)
             end,
         }

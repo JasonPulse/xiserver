@@ -162,7 +162,7 @@ quest.sections =
                     player:delKeyItem(xi.ki.WYVERN_EGG)
                     npcUtil.giveKeyItem(player, xi.ki.WYVERN_EGG_SHELL)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },

@@ -131,28 +131,34 @@ local zones =
 
 --- The nation officers close the quest out with the first alarum.
 for zoneId, _ in pairs(nationOfficerZones) do
-    zones[zoneId] = zones[zoneId] or {}
+    -- nationOfficerZones is its own list, so a zone in it without an officer entry
+    -- is possible; resolving here skips that zone instead of firing a nil csid.
+    local officerCsid = xi.vwChain.officerCsid(zoneId, 'first')
 
-    zones[zoneId]['Voidwatch_Officer'] =
-    {
-        onTrigger = function(player, npc)
-            if quest:getVar(player, 'Briefed') ~= 1 then
-                return
-            end
+    if officerCsid ~= nil then
+        zones[zoneId] = zones[zoneId] or {}
 
-            return quest:progressEvent(xi.vwChain.officerCsid(player:getZoneID(), 'first'))
-        end,
-    }
+        zones[zoneId]['Voidwatch_Officer'] =
+        {
+            onTrigger = function(player, npc)
+                if quest:getVar(player, 'Briefed') ~= 1 then
+                    return
+                end
 
-    zones[zoneId].onEventFinish =
-    {
-        [xi.vwChain.officerCsid(zoneId, 'first')] = function(player, csid, option, npc)
-            if quest:complete(player) then
-                quest:setVar(player, 'Briefed', 0)
-                npcUtil.giveKeyItem(player, xi.ki.VOIDWATCH_ALARUM)
-            end
-        end,
-    }
+                return quest:progressEvent(officerCsid)
+            end,
+        }
+
+        zones[zoneId].onEventFinish =
+        {
+            [officerCsid] = function(player, csid, option, npc)
+                if quest:complete(player) then
+                    quest:setVar(player, 'Briefed', 0)
+                    npcUtil.giveKeyItem(player, xi.ki.VOIDWATCH_ALARUM)
+                end
+            end,
+        }
+    end
 end
 
 local acceptedSection =

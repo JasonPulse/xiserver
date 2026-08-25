@@ -136,7 +136,6 @@ local pondFinish = function(player, csid, option, npc)
     end
 end
 
-
 quest.sections =
 {
     {

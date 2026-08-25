@@ -78,7 +78,7 @@ quest.sections =
                         npcUtil.giveKeyItem(player, xi.ki.KUPOFRIEDS_CORUNDUM_1)
                     end
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },

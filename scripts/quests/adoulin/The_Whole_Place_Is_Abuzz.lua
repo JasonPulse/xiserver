@@ -58,7 +58,7 @@ local swarmActions =
             npcUtil.giveKeyItem(player, xi.ki.FULL_LAND_OF_MILK_AND_HONEY_HIVE)
             quest:setVar(player, 'Bees', 0)
 
-            return true
+            return quest:noAction()
         end
 
         -- "click on the Pollinating Swarm and then /heal": the bees only come to a
@@ -66,13 +66,13 @@ local swarmActions =
         if not player:hasStatusEffect(xi.effect.HEALING) then
             player:printToPlayer('The swarm scatters as you approach. Perhaps they would settle if you rested a while.', xi.msg.channel.NS_SAY)
 
-            return true
+            return quest:noAction()
         end
 
         quest:setVar(player, 'Bees', bees + 1)
         player:printToPlayer(string.format('A bee settles into the hive. (%d of %d)', bees + 1, beesWanted), xi.msg.channel.NS_SAY)
 
-        return true
+        return quest:noAction()
     end,
 }
 
@@ -93,7 +93,7 @@ quest.sections =
                     quest:setVar(player, 'Bees', 0)
                     npcUtil.giveKeyItem(player, xi.ki.LAND_OF_MILK_AND_HONEY_HIVE)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },
@@ -118,7 +118,7 @@ quest.sections =
                         npcUtil.giveKeyItem(player, xi.ki.LAND_OF_MILK_AND_HONEY_HIVE)
                     end
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },
@@ -136,7 +136,7 @@ quest.sections =
                         player:delKeyItem(xi.ki.FULL_LAND_OF_MILK_AND_HONEY_HIVE)
                     end
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },

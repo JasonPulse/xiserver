@@ -158,7 +158,7 @@ quest.sections =
                     -- records is that the compost has been put to use.
                     quest:setVar(player, 'Prog', 1)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
 
@@ -229,7 +229,7 @@ quest.sections =
 
                     quest:setVar(player, 'Prog', 2)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
 

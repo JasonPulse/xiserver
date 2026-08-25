@@ -71,7 +71,7 @@ local function deliveryZones()
                     quest:setVar(player, 'Delivered', 1)
                     player:printToPlayer('You hand over the small bag of Adoulinian delicacies, and it is received with obvious delight.', xi.msg.channel.NS_SAY)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         }
@@ -98,7 +98,7 @@ local accepted =
                     quest:setVar(player, 'Target', math.random(#subordinates))
                     player:printToPlayer('Anastase accepts the tray and presses a small bag into your hands, naming one of his researchers in the Middle Lands.', xi.msg.channel.NS_SAY)
 
-                    return true
+                    return quest:noAction()
                 end
 
                 -- Leg four: report the delivery.
@@ -106,7 +106,7 @@ local accepted =
                     quest:setVar(player, 'Reported', 1)
                     player:printToPlayer('Anastase listens to your account of the visit, plainly relieved.', xi.msg.channel.NS_SAY)
 
-                    return true
+                    return quest:noAction()
                 end
             end,
         },
@@ -131,7 +131,7 @@ accepted[xi.zone.WESTERN_ADOULIN] =
             quest:setVar(player, 'Delivered', 0)
             quest:setVar(player, 'Reported', 0)
 
-            return true
+            return quest:noAction()
         end,
     },
 }
@@ -157,7 +157,7 @@ quest.sections =
                     quest:setVar(player, 'Reported', 0)
                     npcUtil.giveKeyItem(player, xi.ki.TRAY_OF_ADOULINIAN_DELICACIES)
 
-                    return true
+                    return quest:noAction()
                 end,
             },
         },

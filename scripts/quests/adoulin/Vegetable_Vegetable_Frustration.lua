@@ -161,7 +161,10 @@ quest.sections =
 
                     if prog == progAdvice then
                         return quest:progressEvent(5212)
-                    elseif prog == progWarned and not player:hasKeyItem(xi.ki.PACKET_OF_MIDRASS_EXPLOSIVES) then
+                    elseif
+                        prog == progWarned and
+                        not player:hasKeyItem(xi.ki.PACKET_OF_MIDRASS_EXPLOSIVES)
+                    then
                         return quest:progressEvent(5213)
                     elseif prog == progReported then
                         return quest:progressEvent(5214)
@@ -227,7 +230,10 @@ quest.sections =
                         return quest:progressEvent(126)
                     elseif prog == progExplosives then
                         return quest:progressEvent(126)
-                    elseif prog == progWarned and player:hasKeyItem(xi.ki.PACKET_OF_MIDRASS_EXPLOSIVES) then
+                    elseif
+                        prog == progWarned and
+                        player:hasKeyItem(xi.ki.PACKET_OF_MIDRASS_EXPLOSIVES)
+                    then
                         local bomb = GetMobByID(incensedPineapple)
 
                         if bomb ~= nil and not bomb:isSpawned() then
@@ -237,7 +243,7 @@ quest.sections =
                             bomb:updateClaim(player)
                         end
 
-                        return true
+                        return quest:noAction()
                     elseif prog == progBeaten then
                         return quest:progressEvent(128)
                     end

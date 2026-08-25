@@ -39,7 +39,9 @@ end
 local zones = {}
 
 for zoneId, _ in pairs(xi.vwChain.officers) do
-    if eligibleZone(zoneId) then
+    local officerCsid = xi.vwChain.officerCsid(zoneId, 'again')
+
+    if eligibleZone(zoneId) and officerCsid ~= nil then
         zones[zoneId] =
         {
             ['Voidwatch_Officer'] =
@@ -51,13 +53,13 @@ for zoneId, _ in pairs(xi.vwChain.officers) do
                         return
                     end
 
-                    return quest:progressEvent(xi.vwChain.officerCsid(player:getZoneID(), 'again'))
+                    return quest:progressEvent(officerCsid)
                 end,
             },
 
             onEventFinish =
             {
-                [xi.vwChain.officerCsid(zoneId, 'again')] = giveAlarum,
+                [officerCsid] = giveAlarum,
             },
         }
     end

@@ -51,23 +51,30 @@ local zones = xi.vwChain.killHandlers(quest, targets)
 -- Any Voidwatch Officer reports the step in. The csid is looked up per zone because
 -- every officer carries the same roles under different numbers.
 for zoneId, _ in pairs(xi.vwChain.officers) do
-    zones[zoneId] = zones[zoneId] or {}
+    -- Resolved once, at build time: the handler is only registered for a zone that
+    -- has an officer, so the closure captures a plain csid rather than looking it
+    -- up again on every trigger.
+    local officerCsid = xi.vwChain.officerCsid(zoneId, 'again')
 
-    zones[zoneId]['Voidwatch_Officer'] =
-    {
-        onTrigger = function(player, npc)
-            if not stepIsDone(player) then
-                return
-            end
+    if officerCsid ~= nil then
+        zones[zoneId] = zones[zoneId] or {}
 
-            return quest:progressEvent(xi.vwChain.officerCsid(player:getZoneID(), 'again'))
-        end,
-    }
+        zones[zoneId]['Voidwatch_Officer'] =
+        {
+            onTrigger = function(player, npc)
+                if not stepIsDone(player) then
+                    return
+                end
 
-    zones[zoneId].onEventFinish =
-    {
-        [xi.vwChain.officerCsid(zoneId, 'again')] = payOut,
-    }
+                return quest:progressEvent(officerCsid)
+            end,
+        }
+
+        zones[zoneId].onEventFinish =
+        {
+            [officerCsid] = payOut,
+        }
+    end
 end
 
 local acceptedSection =

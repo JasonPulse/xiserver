@@ -37,20 +37,22 @@ end
 local zones = {}
 
 for zoneId, _ in pairs(xi.vwChain.officers) do
-    if eligibleZone(zoneId) then
+    local officerCsid = xi.vwChain.officerCsid(zoneId, 'again')
+
+    if eligibleZone(zoneId) and officerCsid ~= nil then
         zones[zoneId] =
         {
             ['Voidwatch_Officer'] =
             {
                 onTrigger = function(player, npc)
                     -- No further gate: bg-wiki asks only that the officer be present day.
-                    return quest:progressEvent(xi.vwChain.officerCsid(player:getZoneID(), 'again'))
+                    return quest:progressEvent(officerCsid)
                 end,
             },
 
             onEventFinish =
             {
-                [xi.vwChain.officerCsid(zoneId, 'again')] = giveAlarum,
+                [officerCsid] = giveAlarum,
             },
         }
     end
