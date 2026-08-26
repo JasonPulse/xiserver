@@ -18,6 +18,7 @@ quest.reward =
     fameArea = xi.fameArea.JEUNO,
     gil      = 1200,
     item     = xi.item.TIME_HAMMER,
+    gil      = 1200,
     title    = xi.title.TIMEKEEPER,
 }
 
