@@ -5,6 +5,7 @@
 -- https://ffxiclopedia.wikia.com/wiki/Logging
 -- https://ffxiclopedia.wikia.com/wiki/Mining
 -----------------------------------
+require('scripts/globals/coalition_assignments')
 require('scripts/globals/hobbies/helm/data')
 require('scripts/globals/missions')
 require('scripts/globals/npc_util')
@@ -139,6 +140,16 @@ xi.helm.result = function(player, helmType, broke, itemID)
     -- AMK mission 4 (index 3)
     if xi.settings.main.ENABLE_AMK == 1 then
         xi.amk.helpers.helmTrade(player, helmType, broke)
+    end
+
+    -- Coalition Assignments: Procuring Resources. Client message 7376 is
+    -- explicit that "Only materials gathered in the field are valid", so this
+    -- sits on the successful-result path and nowhere else.
+    if
+        itemID > 0 and
+        broke ~= 1
+    then
+        xi.coalitionAssignments.onHelmSuccess(player, helmType)
     end
 
     -- Item results

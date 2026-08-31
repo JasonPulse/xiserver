@@ -1,6 +1,8 @@
 -----------------------------------
 -- Global version of onMobDeath
 -----------------------------------
+require('scripts/globals/coalition_assignments')
+require('scripts/globals/colonization_reives')
 require('scripts/globals/magic')
 require('scripts/globals/missions')
 require('scripts/globals/quests')
@@ -13,6 +15,12 @@ xi.mob = xi.mob or {}
 xi.mob.onMobDeathEx = function(mob, player, isKiller, isWeaponSkillKill)
     -- Adventurer Appreciation Campaign census counter
     player:incrementCharVar('[AAC]KILLS', 1)
+
+    -- Coalition Assignments. Patrol counts the quarry named by the client for
+    -- this zone (message 7385); Clear counts a Colonization Reive that this
+    -- death completed. Both no-op unless the player is running that assignment.
+    xi.coalitionAssignments.onMobKill(player, mob:getFamily())
+    xi.reives.creditColonization(mob, player)
 
     -- Escha vorseal cap progression: kills in the Eschan zones count
     -- toward the retail unlock milestones, NMs on their own counter

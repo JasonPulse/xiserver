@@ -92,6 +92,37 @@ xi.reives.onMobSpawn = function(mob)
 end
 
 -----------------------------------
+-- Credit a Coalition Assignment "Clear" for the reive this death just finished.
+--
+-- Client message 7378: "You must head for <zone> and destroy obstacles there.
+-- The assignment will be considered completed if you participate in a
+-- successful Colonization Reive."
+--
+-- This runs from the global onMobDeathEx hook, which the core calls once per
+-- alliance member, so everyone who took part gets the credit rather than only
+-- the killer. It fires before the obstacle's own onMobDeath disables the reive,
+-- which is why it re-checks the objective itself instead of waiting to be told.
+-----------------------------------
+xi.reives.creditColonization = function(mob, player)
+    local zoneID   = mob:getZoneID()
+    local zoneData = xi.reives.zoneData[zoneID]
+
+    if zoneData == nil then
+        return false
+    end
+
+    local reiveNum = xi.reives.findReiveNumByObstacle(zoneID, mob:getID())
+    if
+        reiveNum == nil or
+        not xi.reives.checkObjectiveStatus(zoneID, reiveNum)
+    then
+        return false
+    end
+
+    return xi.coalitionAssignments.onFieldTrigger(player, xi.coalitionAssignments.kind.CLEAR)
+end
+
+-----------------------------------
 -- Added to a reive obstacle's onMobDeath script. Handles disabling of reives.
 -----------------------------------
 xi.reives.onMobDeath = function(mob)

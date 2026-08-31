@@ -1,101 +1,84 @@
 -----------------------------------
 -- Area: Western Adoulin
 --  NPC: Task Delegator
--- Type: Coalition Assignments / Lights grantor + Edification (simplified stub).
+-- Type: Coalition Assignments
 --
--- Retail: hands out Coalition Assignments ("Lights") — daily/weekly tasks
--- that pay imprimaturs. Edification (paying imprimaturs to advance rank) is
--- handled by per-coalition rep NPCs that don't exist in our npc_list.
+-- Four of the six delegators stand in Western Adoulin and one script serves all
+-- four, because the server keys a zone script by NPC name. Which coalition a
+-- given desk belongs to is settled by its entity id, and that mapping is the
+-- client's own: each delegator owns one event whose constant table begins
+-- `WkLocal[0] = data[0]`, and data[0] is the coalition index. Reading the four
+-- Western desks in id order gives 0, 2, 4, 5, which is Pioneers, Couriers,
+-- Inventors and Mummers, and that agrees with bg-wiki's map pins (Pioneers E-8,
+-- Couriers G-7, Mummers G-11, Inventors J-10).
 --
--- Our stub does both jobs from one NPC:
---   1. Once-per-Vana'diel-day claim adds CURRENCY_REWARD to the imprimaturs
---      balance and IMPRIMATURS_REWARD to the lifetime-spent counter (which
---      drives SOA mission gates and Iyvah Halohm's display).
---   2. If the player has pinned a coalition via the EDIFY_TARGET_VAR CharVar
---      (e.g. `!setvar Coalition_Edify_Target 1` for Pioneers) and has enough
---      imprimaturs, advance them by one rank and report the result. No pin
---      = no auto-spend, so players don't accidentally burn imprimaturs.
+-- The engine is scripts/globals/coalition_assignments.lua. Read its header for
+-- how the assignment economy works and what is still unverified about the event
+-- handshake.
 --
--- Requires Civil_Registrar registration first.
---
--- Tunables: edit the constants below if the pacing feels off.
+-- WHAT THIS FILE REPLACED. The previous version paid a flat 100 imprimaturs
+-- once a Vana'diel day and bumped the lifetime-spent counter by 10, as a
+-- stand-in for assignments that did not exist. Both are gone: imprimaturs now
+-- accrue on retail's own timer and the spent counter moves when an assignment
+-- is reported. The old edification path is gone too, and deliberately: it
+-- advanced the same per-coalition rank CharVar that personal standing now
+-- drives, so leaving it in would have let the two fight over one value. On
+-- retail those are different axes, personal fame against coalition expansion
+-- (client messages 7420 and 7421).
 -----------------------------------
-require('scripts/globals/coalition')
+require('scripts/globals/coalition_assignments')
+-----------------------------------
+local ID = zones[xi.zone.WESTERN_ADOULIN]
 -----------------------------------
 ---@type TNpcEntity
 local entity = {}
 
-local dailyClaimVar     = 'Coalition_Task_Daily'
-local imprimatursReward = 10  -- credited to spent counter
-local currencyReward    = 100 -- credited to imprimaturs balance
+local coalitionByOffset =
+{
+    [0] = xi.coalition.PIONEERS,  -- E-8,  event 2007, data[0] = 0
+    [1] = xi.coalition.COURIERS,  -- G-7,  event 2009, data[0] = 2
+    [2] = xi.coalition.INVENTORS, -- J-10, event 2011, data[0] = 4
+    [3] = xi.coalition.MUMMERS,   -- G-11, event 2012, data[0] = 5
+}
 
-local function isRegistered(player)
-    for coalitionId, _ in pairs(xi.coalition.varNames) do
-        if xi.coalition.getRank(player, coalitionId) > 0 then
-            return true
-        end
-    end
-
-    return false
+local function coalitionOf(npc)
+    return coalitionByOffset[npc:getID() - ID.npc.TASK_DELEGATOR_OFFSET]
 end
 
-local function processDailyClaim(player)
-    local today     = VanadielUniqueDay()
-    local lastClaim = player:getCharVar(dailyClaimVar)
-
-    if lastClaim >= today then
-        player:printToPlayer('You have already completed an assignment today.')
+entity.onTrade = function(player, npc, trade)
+    local coalition = coalitionOf(npc)
+    if coalition == nil then
         return
     end
 
-    xi.coalition.addImprimatursBalance(player, currencyReward)
-    xi.coalition.addImprimatursSpent(player, imprimatursReward)
-    player:setCharVar(dailyClaimVar, today)
-
-    player:printToPlayer(string.format(
-        'Assignment complete. You receive %d imprimaturs (lifetime spent now %d).',
-        currencyReward, xi.coalition.getImprimatursSpent(player)))
-end
-
-local function processEdification(player)
-    local pinned = player:getCharVar(xi.coalition.EDIFY_TARGET_VAR)
-    if pinned < xi.coalition.PIONEERS or pinned > xi.coalition.MUMMERS then
-        return
-    end
-
-    local ok, coalitionOrReason, coalitionOrNewRank, cost = xi.coalition.edify(player)
-    if ok then
-        local coalition = coalitionOrReason
-        local newRank   = coalitionOrNewRank
-        player:printToPlayer(string.format(
-            'You have been edified — %s advance to rank %d (spent %d imprimaturs).',
-            xi.coalition.displayNames[coalition], newRank, cost))
-        return
-    end
-
-    local reason    = coalitionOrReason
-    local coalition = coalitionOrNewRank
-
-    if reason == 'maxed' then
-        player:printToPlayer(string.format(
-            '%s rank is already at the maximum (%d).',
-            xi.coalition.displayNames[coalition], xi.coalition.MAX_RANK))
-    elseif reason == 'insufficient' then
-        player:printToPlayer(string.format(
-            'You need %d imprimaturs to advance %s to rank %d.',
-            cost, xi.coalition.displayNames[coalition],
-            xi.coalition.getRank(player, coalition) + 1))
-    end
+    xi.coalitionAssignments.delegator.onTrade(player, coalition, trade)
 end
 
 entity.onTrigger = function(player, npc)
-    if not isRegistered(player) then
-        player:printToPlayer('Speak to a Civil Registrar to enroll with the coalitions before accepting assignments.')
+    local coalition = coalitionOf(npc)
+    if coalition == nil then
         return
     end
 
-    processDailyClaim(player)
-    processEdification(player)
+    xi.coalitionAssignments.delegator.onTrigger(player, coalition)
+end
+
+entity.onEventUpdate = function(player, csid, option, npc)
+    local coalition = coalitionOf(npc)
+    if coalition == nil then
+        return
+    end
+
+    xi.coalitionAssignments.delegator.onEventUpdate(player, csid, option, coalition)
+end
+
+entity.onEventFinish = function(player, csid, option, npc)
+    local coalition = coalitionOf(npc)
+    if coalition == nil then
+        return
+    end
+
+    xi.coalitionAssignments.delegator.onEventFinish(player, csid, option, coalition)
 end
 
 return entity

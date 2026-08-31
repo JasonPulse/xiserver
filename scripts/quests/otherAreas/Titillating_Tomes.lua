@@ -3,51 +3,73 @@
 -----------------------------------
 -- Log ID: 4, Quest ID: 122
 -- Green Thumb Moogle : Mog Garden, entity 17924125
+-- Cutscene holder    : Mog Garden, entity 17924176
 -- !addquest 4 122
 -----------------------------------
--- Retail (bg-wiki and FFXIclopedia "Titillating Tomes").
--- |Start=Green Thumb Moogle, Mog Garden  |Fame=Other  |Repeatable=No
+-- Retail (bg-wiki "Titillating Tomes").
+-- |Start=Green Thumb Moogle, Mog Garden  |Fame=Other
 -- |Previous=Hypnotic Hospitality  |Next=Glittering Gals
--- |Title=Wibbly Wobbly Woozy Warrior
--- |Reward=Straw Hat (corresponding to your character's sex)
+-- |Title=Wibbly Wobbly Woozy Warrior  |Reward=Straw Hat
 -- |Item Reqs=Drill Calamary, Calico Comet, Philosopher's Stone
---   "Once you have achieved Rank 7 in all geological locations (that is, you have
---    bought the MHMU treatises for all sections of your Mog Garden except monster
---    rearing), zone into your Mog Garden and talk to your Green Thumb Moogle."
---   1. "Talk to your Green Thumb Moogle for a cutscene with The Great Kupellion. You
---      will be tasked with getting a drill calamary, philosopher's stone, and calico
---      comet."
---   2. "Trade all the items at once to the Moogle in order to complete the quest."
+--   1. "Once you have achieved Rank 7 in all geological locations (that is, you have
+--      bought the MHMU treatises for all sections of your Mog Garden except monster
+--      rearing), zone into your Mog Garden and talk to your Green Thumb Moogle."
+--   2. "He will ask for the following items: Drill Calamary can be obtained from the
+--      Coastal Fishing Net, Calico Comet from the Pond Dredger, Philosopher's Stone
+--      from the Mineral Vein."
+--   3. "Trade all the items at once to the Moogle in order to complete the quest."
 --
--- THE GATE. bg-wiki lists the requirement as the five MHMU treatises, one per
--- geological location, which is exactly rank 7 in all five. That is what
--- xi.mog_garden.allLocationsMaxRank checks, so this quest reads the rank system rather
--- than the key items directly and stays correct if the book ids ever move.
+-- THE GATE IS THE ONE THE RANK SYSTEM WAS BUILT FOR. bg-wiki spells out that monster
+-- rearing is excluded, which is why xi.mog_garden.geologicalLocations lists five
+-- families and not six, and why xi.mog_garden.allLocationsMaxRank reads only those
+-- five. Nothing here re-derives it.
 --
--- WHERE THE THREE ITEMS COME FROM, and why they are reachable. All three drop from a
--- rank 7 gathering point with no bait, serum or assistant, which bg-wiki is explicit
--- about, and all three are in the rank 7 pools in scripts/globals/mog_garden/yields.lua:
---   Drill Calamary      coastal fishing net, rank 7 special list (slots 4 and 8)
---   Calico Comet        pond dredger, rank 7 special list (slots 4 and 8)
---   Philosopher's Stone mineral vein, rank 7 biominerals, tier 4 only
--- The vein restriction is real and worth knowing before this reads as broken: a rank 7
--- garden still yields nothing above rank 2 from Mineral Vein #1, so the stone only
--- comes out of Mineral Vein #4.
+-- CSIDS. These were decoded offline with xidat/csidmsg.py over zone 280 and then
+-- read back against output/dialog-table-280.xml. THE HANDOFF DOC'S ATTRIBUTION WAS
+-- WRONG and is not used: it lists 2041 offer / 2042 reminder / 2043 turn-in, and the
+-- decode contradicts the last two outright.
 --
--- CSIDS VERIFIED ON THE LIVE CLIENT, with one exception noted below:
---   2042 -> the reminder, which names all three items
---   2043 -> the trade turn-in
---   2041 -> the opening cutscene, and the one csid here that would not render
---           standalone. It is a multi-actor scene (The Great Kupellion, entity
---           17924191, comes to the garden) and those actors are not spawned for a bare
---           !cs, so nothing renders. It is taken from POSITION: 2042 and 2043 are both
---           verified and consecutive, and 2041 sits immediately before them exactly
---           where bg-wiki puts the opening cutscene. This is the same situation as
---           Hypnotic Hospitality's 2032, handled the same way.
+--   2042  THE TURN-IN, and this one is proven. It emits 8068 "You're due a dab of
+--         deference, thanks to the effort you've exerted in easing this endemic,
+--         kupo." and 8069 "I also wrapped up writing to the reeling relatives of our
+--         suffering scholars!" Both belong to this quest and to no other: the
+--         "endemic" and the "suffering scholars" are the MHMU's wibbly wobbly
+--         woozies. It sits on the Moogle himself.
 --
--- FFXIclopedia records both cutscenes as held on the Goblin Footprint entity
--- (17924208), which is hidden on zone load. They play from the Green Thumb Moogle
--- here, which is where bg-wiki's walkthrough puts the conversation.
+--   2041  THE OFFER, and this one is INFERRED rather than proven. Read the reasoning
+--         before changing it. The offer scene is messages 8055 to 8065, anchored by
+--         8060, which names all three items through params: "≺item≻ filched from the
+--         fishing net, ≺item≻ plucked from the pond, and ≺item≻ veiled within veins".
+--         A sweep of csidmsg.py across ALL 166 entities in zone 280 attributes 8060
+--         to no csid at all, because the sweep is positional and under-reports inside
+--         large programs. What ties 2041 to that scene is a co-reference: 2041 is a
+--         4990-byte program on holder 17924176 and it emits 8018, which describes
+--         "Kupogaard, the most prolific of professors to publish prose on the
+--         hardships of husbandry", while 8059 inside the offer scene says "The rife
+--         resources remarked upon in the compilations you--<ahem> Kupogaard created".
+--         Same character, same conversation. 2041 is also the only large program in
+--         the numeric run and sits exactly where bg-wiki puts the offer.
+--         ONE `!cs 2041` ON A PUPPET CONFIRMS OR REFUTES THIS. Until then it is
+--         flagged here rather than presented as decoded.
+--
+--   NO REMINDER IS WIRED. The reminder is 8066/8067 ("The MHMU needs ... If we don't
+--   get them, the wibbly wobbly woozies will continue to whittle away at our
+--   wisemen's wits, kupo!") and the same sweep attributes it to no csid either.
+--   Rather than reuse the offer or invent an id, mid-quest talk is left to fall
+--   through to the Moogle's own script. The quest is completable without it; a
+--   fabricated csid would render nothing and look like content.
+--
+-- ITEMS, every one resolved by id, because three of the four are the container-word
+-- trap that a name-only lookup misses:
+--   Drill Calamary        xi.item.DRILL_CALAMARY      17006
+--   Calico Comet          xi.item.CALICO_COMET         5715
+--   Philosopher's Stone   xi.item.PHILOSOPHERS_STONE    942
+--   Straw Hat             STRAW_HAT_M 27733 / STRAW_HAT_F 27734, a gendered pair
+--
+-- The hat is handed over by hand rather than through quest.reward because it is two
+-- item ids; xi.mog_garden.genderedReward picks the half matching the character.
+-----------------------------------
+require('scripts/globals/mog_garden')
 -----------------------------------
 
 local quest = Quest:new(xi.questLog.OTHER_AREAS, xi.quest.id.otherAreas.TITILLATING_TOMES)
@@ -57,7 +79,9 @@ quest.reward =
     title = xi.title.WIBBLY_WOBBLY_WOOZY_WARRIOR,
 }
 
-local kupellionsRequest =
+-- "Trade all the items at once", so this is an exact three-item hand-over. The order
+-- is 8060's own: fishing net, pond, vein.
+local scholarsCure =
 {
     xi.item.DRILL_CALAMARY,
     xi.item.CALICO_COMET,
@@ -77,8 +101,10 @@ quest.sections =
         {
             ['Green_Thumb_Moogle'] =
             {
+                -- 8060 renders the three items from params, so they are passed
+                -- rather than left for the event to find.
                 onTrigger = function(player, npc)
-                    return quest:progressEvent(2041)
+                    return quest:progressEvent(2041, scholarsCure[1], scholarsCure[2], scholarsCure[3])
                 end,
             },
 
@@ -101,26 +127,18 @@ quest.sections =
             ['Green_Thumb_Moogle'] =
             {
                 onTrade = function(player, npc, trade)
-                    if npcUtil.tradeHasExactly(trade, kupellionsRequest) then
-                        return quest:progressEvent(2043)
+                    if npcUtil.tradeHasExactly(trade, scholarsCure) then
+                        return quest:progressEvent(2042)
                     end
-                end,
-
-                onTrigger = function(player, npc)
-                    return quest:event(2042)
                 end,
             },
 
             onEventFinish =
             {
-                [2043] = function(player, csid, option, npc)
-                    -- Straw Hat comes in a male and a female cut, the female id one
-                    -- above the male, so the gender subtracts straight off it.
-                    local strawHat = xi.item.STRAW_HAT_F - player:getGender()
+                [2042] = function(player, csid, option, npc)
+                    local hat = xi.mog_garden.genderedReward(player, xi.item.STRAW_HAT_M, xi.item.STRAW_HAT_F)
 
-                    -- Hand the hat over before taking the three items, so a full
-                    -- inventory costs the player nothing. giveItem tells them why.
-                    if not npcUtil.giveItem(player, strawHat) then
+                    if not npcUtil.giveItem(player, hat) then
                         return
                     end
 

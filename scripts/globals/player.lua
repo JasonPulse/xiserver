@@ -1,6 +1,7 @@
 require('scripts/globals/abyssea')
 require('scripts/globals/assault')
 require('scripts/globals/besieged')
+require('scripts/globals/coalition_assignments')
 require('scripts/globals/daily_reset')
 require('scripts/globals/empyrean')
 require('scripts/globals/gear_sets')
@@ -327,12 +328,17 @@ xi.player.onPlayerMount = function(player)
 end
 
 xi.player.onPlayerEmote = function(player, emoteId)
-    if
-        emoteId == xi.emote.CHEER and
-        player:hasStatusEffect(xi.effect.FULL_SPEED_AHEAD)
-    then
+    if emoteId ~= xi.emote.CHEER then
+        return
+    end
+
+    if player:hasStatusEffect(xi.effect.FULL_SPEED_AHEAD) then
         xi.fsa.onCheer(player)
     end
+
+    -- Coalition Assignments: Morale Boosting. No-ops unless the player is
+    -- running one and is stood by the frontier station worker.
+    xi.coalitionAssignments.onCheer(player)
 end
 
 xi.player.onPlayerVolunteer = function(player, text)

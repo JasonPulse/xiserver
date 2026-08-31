@@ -39,6 +39,7 @@ zones[xi.zone.MARJAMI_RAVINE] =
     },
     npc =
     {
+        STATION_WORKER         = GetFirstID('Station_Worker'),
         SCALABLE_AREA_OFFSET   = GetFirstID('Scalable_Area_0'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7e0'),
     },

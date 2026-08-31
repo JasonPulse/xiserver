@@ -2,6 +2,8 @@
 -- Waypoint Teleporters
 -- https://www.bg-wiki.com/ffxi/Waypoint
 -----------------------------------
+require('scripts/globals/coalition_assignments')
+-----------------------------------
 xi = xi or {}
 xi.waypoint = xi.waypoint or {}
 
@@ -341,6 +343,11 @@ end
 
 xi.waypoint.onEventFinish = function(player, csid, option, npc)
     if option > 0 and option <= 303 then
+        -- Client message 7395: a Supply Delivery consignment is "quite fragile,
+        -- so you must avoid waypoints to ensure that they do not break". This
+        -- no-ops unless the player is actually carrying one.
+        xi.coalitionAssignments.onWaypointUse(player)
+
         if player:getCurrentMission(xi.mission.log_id.SOA) == xi.mission.id.soa.ONWARD_TO_ADOULIN then
             player:setPos(169.638, 0.491, -27.128, 207, xi.zone.CEIZAK_BATTLEGROUNDS)
         else

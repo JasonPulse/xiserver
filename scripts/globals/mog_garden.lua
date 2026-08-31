@@ -232,6 +232,38 @@ xi.mog_garden.visitDays = function(player)
     return player:getCharVar(visitCountVar)
 end
 
+-- Male races, keyed by xi.race. Mithra and Galka are single gender, which is why
+-- this is a lookup rather than the parity of the race id.
+local maleRaces =
+{
+    [xi.race.HUME_M]   = true,
+    [xi.race.ELVAAN_M] = true,
+    [xi.race.TARU_M]   = true,
+    [xi.race.GALKA]    = true,
+}
+
+--- Pick the right half of a gendered armour pair. Three Mog Garden quests pay out
+--- kit that bg-wiki describes as "same as your character's gender": Titillating
+--- Tomes' Straw Hat, Doctor Chacharoon's Work Gloves and Rowing Together's Thatch
+--- Boots, each of which is two item ids in scripts/enum/item.lua.
+---
+--- This reads xi.race rather than player:getGender() deliberately. The binding
+--- exists, but scripts/specs/core/CBaseEntity.lua annotates its return as a bare
+--- `integer` with no encoding, and nothing in scripts/ documents which value means
+--- which. Race IS enumerated here, and it settles the question outright, so the
+--- mapping above cannot silently hand out the wrong half.
+---@param player CBaseEntity
+---@param maleItem integer
+---@param femaleItem integer
+---@return integer
+xi.mog_garden.genderedReward = function(player, maleItem, femaleItem)
+    if maleRaces[player:getRace()] then
+        return maleItem
+    end
+
+    return femaleItem
+end
+
 -- Purchasing ───────────────────────────────────────────────────────────────
 
 --- The book that would raise one location by a rank, or nil at rank 7.

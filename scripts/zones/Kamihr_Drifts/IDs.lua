@@ -37,6 +37,7 @@ zones[xi.zone.KAMIHR_DRIFTS] =
     },
     npc =
     {
+        STATION_WORKER         = GetFirstID('Station_Worker'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7f0'),
     },
 }

@@ -39,6 +39,7 @@ zones[xi.zone.EASTERN_ADOULIN] =
     },
     npc =
     {
+        TASK_DELEGATOR_OFFSET = GetFirstID('Task_Delegator'),
     },
 }
 

@@ -32,6 +32,7 @@ zones[xi.zone.YORCIA_WEALD] =
     },
     npc =
     {
+        STATION_WORKER         = GetFirstID('Station_Worker'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7b0'),
     },
 }

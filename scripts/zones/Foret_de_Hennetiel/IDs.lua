@@ -42,6 +42,7 @@ zones[xi.zone.FORET_DE_HENNETIEL] =
     },
     npc =
     {
+        STATION_WORKER         = GetFirstID('Station_Worker'),
         CASTOFF_POINT_OFFSET   = GetFirstID('Castoff_Point_0'),
         REIVE_COLLISION_OFFSET = GetFirstID('_7a0'),
     },

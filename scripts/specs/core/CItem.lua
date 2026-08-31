@@ -131,6 +131,11 @@ function CItem:getWeaponskillPoints()
 end
 
 ---@nodiscard
+---@return integer
+function CItem:getWeaponskillPointsNeeded()
+end
+
+---@nodiscard
 ---@return boolean
 function CItem:isTwoHanded()
 end
