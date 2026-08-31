@@ -1,6 +1,0 @@
-bg-wiki quests (denominator): 1069
-  implemented                 : 985
-  NO IMPLEMENTATION           : 84
-  implemented but csid absent : 0
-  wiki page not cached        : 1069
-  MISSING w/ start-NPC script : 0   <- READ THESE FIRST, may already be implemented
