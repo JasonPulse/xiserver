@@ -63,6 +63,7 @@ function content:onEventFinishBattlefield(player, csid, option, npc)
     player:setPos(unpack(playerCoords[area]))
     volker:setSpawn(unpack(volkerCoords[area]))
     volker:spawn()
+    volker:setMobLevel(75)
 end
 
 content.groups =
