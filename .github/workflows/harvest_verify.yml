@@ -1,0 +1,33 @@
+name: Harvest Verify
+
+on:
+  pull_request:
+    branches:
+      - base
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  Build:
+    uses: ./.github/workflows/runner_build.yml
+    with:
+      runner: ubuntu-24.04
+      compiler: gcc
+      compiler_version: 14
+      build_type: Release
+      upload_artifact: true
+
+  Test:
+    needs: Build
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+      actions: read
+      statuses: write
+    uses: ./.github/workflows/runner_test.yml
+    with:
+      runner: ubuntu-24.04
+      build_type: Release
