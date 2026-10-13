@@ -67,7 +67,10 @@ xi.chocoboRaising.condenseEvents = function(events)
             for _, cs in ipairs(eventCSList) do
                 table.insert(currentEventCSTable, cs)
             end
-        elseif eventDay == currentEndDay + 1 and compareTables(eventCSList, currentEventCSTable) then
+        elseif
+            eventDay == currentEndDay + 1 and
+            compareTables(eventCSList, currentEventCSTable)
+        then
             -- Next day, but same exact CS table. Extend the span.
             currentEndDay = eventDay
         else

@@ -1269,7 +1269,7 @@ c0c7eeaffb,2026-07-01,D,cpp,2,,,Update CHAT_NAME documentation to match XiPacket
 9e539e3a24,2026-07-02,D,other,1,,,Misc: Add tracy* to gitignore
 aeb8432018,2026-07-02,D,other,1,,,Tracy: Build capture tools on Mac/Linux
 d279951a3a,2026-07-02,D,tools,1,,,Tracy: Add port support to capture.py
-1a67a808fa,2026-07-03,C,other,1,adopted,upstream-harvest-2026-10,Fix aiso CI: Use new aiso directory instead of old one
+1a67a808fa,2026-07-03,C,other,1,skip,needs upstream newer asio package; our asio 1.32.0 keeps headers at asio/include,Fix aiso CI: Use new aiso directory instead of old one
 1d1c9dd6ed,2026-07-03,C,cpp,1,conflict,does not apply cleanly onto 9e6f10c2fb,Fix Trusts not getting interrupted
 31aed360f2,2026-07-03,D,lua,1,,,[test] Remove changing wall groundskeeper aggro from aggro test
 35dbd73d86,2026-07-03,D,cpp+sql+tools,11,,,Support forced rename flow in lobby
@@ -2219,7 +2219,7 @@ b65080ccea,2026-08-25,C,lua,1,conflict,,Fix max duration of Hard Membrane
 b6e263589d,2026-08-25,D,lua,1,,,[lua] Allow digging skillups on full inventory
 bc69e123ff,2026-08-25,D,lua,1,,,"[lua] Add the red ""you must wait longer"" message to msg basic enum"
 f0dbba7ae9,2026-08-25,D,lua,1,,,[lua] Only roll digging skillup with a successful dig
-f42d66ca65,2026-08-25,C,lua,1,adopted,upstream-harvest-2026-10,Fix Clock Master gil reward
+f42d66ca65,2026-08-25,C,lua,1,skip,already fixed in our The_Clockmaster.lua; pick duplicated the gil key,Fix Clock Master gil reward
 0af87168b0,2026-08-26,D,lua,1,,,Add Event Items to ENUM
 49c04053ac,2026-08-26,C,lua+sql,18,conflict,,[lua] Sky NM bug fixes; Kirin audit
 4ccd2eb456,2026-08-26,D,lua+mod,2,,,Gustaberg Tour Era Module
