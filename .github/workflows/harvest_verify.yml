@@ -11,13 +11,52 @@ concurrency:
 
 jobs:
   Build:
-    uses: ./.github/workflows/runner_build.yml
-    with:
-      runner: ubuntu-24.04
-      compiler: gcc
-      compiler_version: 14
-      build_type: Release
-      upload_artifact: true
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install --assume-yes --no-install-recommends --quiet \
+            binutils-dev \
+            libluajit-5.1-dev \
+            libmariadb-dev-compat \
+            libssl-dev \
+            libzmq3-dev \
+            luajit \
+            mariadb-client \
+            tzdata \
+            zlib1g-dev \
+            ninja-build \
+            g++-14
+          echo "CC=/usr/bin/gcc-14" >> $GITHUB_ENV
+          echo "CXX=/usr/bin/g++-14" >> $GITHUB_ENV
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Configure CMake
+        run: |
+          cmake -G Ninja -S . -B build --fresh \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DPCH_ENABLE=ON \
+            -DWARNINGS_AS_ERRORS=TRUE
+
+      - name: Build, keep going past failures
+        run: cmake --build build -- -k 0 2>&1 | tee build.log; exit ${PIPESTATUS[0]}
+
+      - name: List every failing file
+        if: ${{ failure() }}
+        run: grep -nE "error:|FAILED:|undefined reference" build.log || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ format('LSB_{0}_{1}_{2}', runner.os, 'Release', github.sha) }}
+          path: xi_*
 
   Test:
     needs: Build

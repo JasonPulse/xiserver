@@ -2344,7 +2344,7 @@ e0225c5c14,2026-09-02,D,lua,3,,,[lua] mobMagicalMove Clean Up + Alpha Multiplier
 e2dbf90c7f,2026-09-02,D,mod,1,,,"Old NM respawn timers: drop persistence, add Simurgh and Atkorkamuy"
 039952008f,2026-09-03,C,sql,1,adopted,upstream-harvest-2026-10,[sql] Fix some Magic Burst Bonus traits using the wrong (capped) mod
 0d241cafee,2026-09-03,D,sql,1,,,[sql] BLU traits: use uncapped Magic Burst Bonus mod instead of capped
-2641de4bb8,2026-09-03,B,cpp,1,adopted,upstream-harvest-2026-10,[core] Fetch increased merit cost when increasing merits
+2641de4bb8,2026-09-03,B,cpp,1,skip,needs upstream nextUpgradeCost refactor; our RaiseMerit already sets next before count++,[core] Fetch increased merit cost when increasing merits
 2863f798a8,2026-09-03,D,cpp,1,,,Protect Mentor flag
 4dc870ca70,2026-09-03,D,cpp+lua+mod,5,,,Migrate Automaton Magic Cooldowns to Lookup Table
 70831014b8,2026-09-03,D,cpp,1,,,Bound delivery box indexing
