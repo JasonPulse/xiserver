@@ -2675,7 +2675,7 @@ void FishingAction(CCharEntity* PChar, const GP_CLI_COMMAND_FISHING_2_MODE mode,
 
     if (PChar->fishingToken == 0)
     {
-        PChar->animation = xi::Animation::NewFishingStop;
+        PChar->animation = ANIMATION_FISHING_STOP;
         return;
     }
 
@@ -2683,7 +2683,7 @@ void FishingAction(CCharEntity* PChar, const GP_CLI_COMMAND_FISHING_2_MODE mode,
     {
         case GP_CLI_COMMAND_FISHING_2_MODE::RequestCheckHook:
         {
-            if (PChar->animation != xi::Animation::NewFishingStart)
+            if (PChar->animation != ANIMATION_FISHING_START)
             {
                 CatchNothing(PChar, FISHINGFAILTYPE_NONE);
                 return;
