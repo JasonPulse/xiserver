@@ -2676,7 +2676,7 @@ f35a1bd237,2026-09-22,D,other,14,,,Roam regions: fixing more holes (#11565)
 744e0bbe07,2026-09-23,D,lua+mod,5,,,Add item ENUMs to Guild Test items
 770d84d89b,2026-09-23,B,cpp,1,conflict,,[core] use dynamic cast to fetch grip to check add effects
 79202e6ab0,2026-09-23,D,lua,1,,,Boost Kraken NM's base damage multi
-8515ae371c,2026-09-23,C,other,1,adopted,upstream-harvest-2026-10,[ci] Fix Windows caching
+8515ae371c,2026-09-23,C,other,1,skip,"Windows CI only; forces PCH off, which diverges from our PCH-on Docker build",[ci] Fix Windows caching
 b3833d86e5,2026-09-23,C,lua,2,adopted,upstream-harvest-2026-10,Fix Copy/Pasted ISNM Loot Pool
 cb5c240b1f,2026-09-23,C,lua+mod,97,skip-large,"97 files, structural",[Summoner] Fix Bloodpact Mob Enmity Behavior
 cfe5af5b39,2026-09-23,D,lua,2,content-queued,"content + 1 IDs.lua, port text block with port_ids_lua.py",[lua] Pso'Xja avatar door should not be openable
