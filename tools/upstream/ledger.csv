@@ -382,7 +382,7 @@ df7fa93e39,2026-03-29,D,lua+sql,4,,,Implement Upper Delkfutt's Tower spawn slots
 c1f0f0c919,2026-03-30,D,lua+sql,3,,,Implement cape Teriggan spawn slots
 cd6085f8f7,2026-03-30,D,sql,2,,,Implement Ve'Lugannon Palace spawn slots
 3bd97fcd30,2026-03-31,C,lua,2,adopted,upstream-harvest-2026-10,[lua] Fix edge cases that report incorrect misses for mob/weaponskill
-7ac7f64457,2026-03-31,B,cpp+lua,14,adopted,upstream-harvest-2026-10,"[core] [lua] Actually enforce ""must zone"" and not just /logout"
+7ac7f64457,2026-03-31,B,cpp+lua,14,skip,conflicts with our CharZoneOut ResetLocalVars mustZone design; persisted charvar broke SoA 1-1 xi_test,"[core] [lua] Actually enforce ""must zone"" and not just /logout"
 b97af9bec6,2026-03-31,A,cpp,1,adopted,confirmed present in base (empty cherry-pick),Fix stackoverflow from reentrant action queue
 1b3e4abe82,2026-04-01,D,cpp+lua,25,,,Exdata definitions
 27d9d96ac9,2026-04-02,D,lua,20,,,Replace magic numbers in TOAU shops
