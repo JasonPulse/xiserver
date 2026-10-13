@@ -29,6 +29,7 @@
 #include "battlefield.h"
 #include "battleutils.h"
 #include "grades.h"
+#include "instance.h"
 #include "items/item_weapon.h"
 #include "lua/luautils.h"
 #include "map_engine.h"
@@ -803,6 +804,8 @@ void CalculateMobStats(CMobEntity* PMob, bool recover)
         ((CItemWeapon*)PMob->m_Weapons[SLOT_MAIN])->resetDelay();
     }
 
+    PMob->m_dualWield = false;
+
     // Deprecate MOBMOD_DUAL_WIELD later, replace if check with value from DB
     if (PMob->getMobMod(MOBMOD_DUAL_WIELD))
     {
@@ -994,7 +997,7 @@ void CalculateMobStats(CMobEntity* PMob, bool recover)
 
     if (PMob->m_Type & MOBTYPE_NOTORIOUS)
     {
-        SetupNMMob(PMob);
+        PMob->setMobMod(MOBMOD_NO_DESPAWN, 1);
     }
 
     if (zoneType & ZONE_TYPE::INSTANCED)
@@ -1035,11 +1038,11 @@ void SetupJob(CMobEntity* PMob)
     JOBTYPE sJob = PMob->GetSJob();
     JOBTYPE job{};
 
-    if (grade::GetJobGrade(mJob, 1) > 0 || mJob == JOB_NIN) // check if mainjob gives mp or is NIN
+    if (grade::GetJobGrade(mJob, 1) > 0 || mJob == JOB_NIN || mJob == JOB_BRD) // Check if main job is a caster.
     {
         job = mJob;
     }
-    else // if mainjob had no MP (and isn't NIN), use subjob in switch cases.
+    else // If main job is not a caster, check sub job.
     {
         job = sJob;
     }
@@ -1251,6 +1254,11 @@ uint8 JobSkillRankToBaseEvaRank(JOBTYPE mjob, JOBTYPE sjob)
     uint8 mainEvasionSkillRank = battleutils::GetSkillRank(SKILL_EVASION, mjob);
     uint8 subEvasionSkillRank  = battleutils::GetSkillRank(SKILL_EVASION, sjob);
 
+    if (sjob == JOB_NON)
+    {
+        subEvasionSkillRank = mainEvasionSkillRank;
+    }
+
     switch (std::min(mainEvasionSkillRank, subEvasionSkillRank))
     {
         case 1:
@@ -1343,33 +1351,6 @@ void SetupEventMob(CMobEntity* PMob)
     PMob->m_maxRoamDistance = 0.5f; // always go back to spawn
 
     PMob->setMobMod(MOBMOD_NO_DESPAWN, 1);
-}
-
-void SetupNMMob(CMobEntity* PMob)
-{
-    JOBTYPE mJob = PMob->GetMJob();
-    uint8   mLvl = PMob->GetMLevel();
-
-    PMob->setMobMod(MOBMOD_NO_DESPAWN, 1);
-
-    // NMs cure earlier
-    PMob->defaultMobMod(MOBMOD_HP_HEAL_CHANCE, 50);
-    PMob->defaultMobMod(MOBMOD_HEAL_CHANCE, 40);
-
-    // give a gil bonus if accurate value was not set
-    if (PMob->getMobMod(MOBMOD_GIL_MAX) == 0)
-    {
-        PMob->defaultMobMod(MOBMOD_GIL_BONUS, 100);
-    }
-
-    if (mLvl >= 25)
-    {
-        if (mJob == JOB_WHM)
-        {
-            // whm nms have stronger regen effect
-            PMob->addModifier(Mod::REGEN, mLvl / 4);
-        }
-    }
 }
 
 void SetupDungeonInstanceMob(CMobEntity* PMob)
@@ -1836,7 +1817,12 @@ auto InstantiateAlly(uint32 groupid, uint16 zoneID, CInstance* instance) -> CMob
         PMob->m_TrueDetection = rset->get<bool>("true_detection");
         PMob->setMobMod(MOBMOD_DETECTION, rset->get<int16>("detects"));
 
-        if (CZone* PZone = zoneutils::GetZone(zoneID))
+        if (instance)
+        {
+            instance->AssignDynamicTargIDandLongID(PMob);
+            instance->InsertMOB(PMob);
+        }
+        else if (CZone* PZone = zoneutils::GetZone(zoneID))
         {
             PZone->GetZoneEntities()->AssignDynamicTargIDandLongID(PMob);
             PZone->GetZoneEntities()->InsertMOB(PMob);

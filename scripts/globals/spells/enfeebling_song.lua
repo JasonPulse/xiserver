@@ -73,7 +73,7 @@ xi.spells.enfeebling.calculateSongPower = function(caster, spellEffect, basePowe
     if spellEffect == xi.effect.REQUIEM then
         power = power + utils.clamp(gearBoost - 1, 0, 20) + caster:getJobPointLevel(xi.jp.REQUIEM_EFFECT) * 3
     elseif spellEffect == xi.effect.ELEGY then
-        power = power + gearBoost * 6375 / 256 -- Simplified numbers of: 25.5 * 10000/1024
+        power = power + math.floor(gearBoost * 25.6) * 10000 / 1024
     elseif spellEffect == xi.effect.THRENODY then
         power = power + gearBoost * 5
     elseif spellEffect == xi.effect.NOCTURNE then
@@ -193,9 +193,10 @@ xi.spells.enfeebling.useEnfeeblingSong = function(caster, target, spell)
     if
         spellEffect == xi.effect.CHARM_I and
         (not target:isMob() or
-        target:getMobMod(xi.mobMod.CHARMABLE) <= 0)
+        target:getMobMod(xi.mobMod.CHARMABLE) <= 0 or
+        target:getMaster() ~= nil)
     then
-        spell:setMsg(xi.msg.basic.MAGIC_RESIST)
+        spell:setMsg(xi.msg.basic.MAGIC_NO_EFFECT)
         return spellEffect
     end
 

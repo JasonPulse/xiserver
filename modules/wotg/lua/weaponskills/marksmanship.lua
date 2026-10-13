@@ -132,9 +132,11 @@ m:addOverride('xi.actions.weaponskills.coronach.onUseWeaponSkill', function(play
     params.overrideVE          = 240
     params.rangedAccuracyBonus = 100
 
-    xi.aftermath.addStatusEffect(player, tp, xi.slot.MAIN, xi.aftermath.type.RELIC)
-
     local damage, criticalHit, tpHits, extraHits = xi.weaponskills.doRangedWeaponskill(player, target, wsID, params, tp, action, primary)
+
+    -- Apply aftermath
+    xi.aftermath.addStatusEffect(player, tp, xi.slot.RANGED, xi.aftermath.type.RELIC)
+
     return tpHits, extraHits, criticalHit, damage
 end)
 
@@ -150,7 +152,8 @@ m:addOverride('xi.actions.weaponskills.trueflight.onUseWeaponSkill', function(pl
     params.includemab = true
     params.dStat      = xi.mod.AGI
 
-    xi.aftermath.addStatusEffect(player, tp, xi.slot.MAIN, xi.aftermath.type.MYTHIC)
+    -- Apply aftermath
+    xi.aftermath.addStatusEffect(player, tp, xi.slot.RANGED, xi.aftermath.type.MYTHIC)
 
     local damage, criticalHit, tpHits, extraHits = xi.weaponskills.doMagicWeaponskill(player, target, wsID, params, tp, action, primary)
     return tpHits, extraHits, criticalHit, damage
@@ -168,7 +171,8 @@ m:addOverride('xi.actions.weaponskills.leaden_salute.onUseWeaponSkill', function
     params.includemab = true
     params.dStat      = xi.mod.AGI
 
-    xi.aftermath.addStatusEffect(player, tp, xi.slot.MAIN, xi.aftermath.type.MYTHIC)
+    -- Apply aftermath
+    xi.aftermath.addStatusEffect(player, tp, xi.slot.RANGED, xi.aftermath.type.MYTHIC)
 
     local damage, criticalHit, tpHits, extraHits = xi.weaponskills.doMagicWeaponskill(player, target, wsID, params, tp, action, primary)
     return tpHits, extraHits, criticalHit, damage

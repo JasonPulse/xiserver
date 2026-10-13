@@ -43,6 +43,7 @@
 #include "lua_trade_container.h"
 #include "lua_treasure_pool.h"
 #include "lua_trigger_area.h"
+#include "lua_weaponskill.h"
 #include "lua_zone.h"
 
 #include "ai/ai_container.h"
@@ -350,6 +351,7 @@ void init(IPP mapIPP, bool isRunningInCI)
         CLuaLootContainer::Register();
         CLuaMobSkill::Register();
         CLuaPetSkill::Register();
+        CLuaWeaponSkill::Register();
         CLuaTriggerArea::Register();
         CLuaSpell::Register();
         CLuaStatusEffect::Register();
@@ -1941,7 +1943,13 @@ void OnGameIn(CCharEntity* PChar, bool zoning)
 
     ShowTraceFmt("luautils::OnGameIn: {}", PChar->getName());
 
-    callGlobal<void>("xi.player.onGameIn", PChar, PChar->GetPlayTime(false) == 0s, zoning);
+    // game time of 0 is not reliable to determine if the char needs the starter fame/gear
+    // You can DC in the intro CS when logging in and your playtime is non-zero
+    // However, in charCreate, it adds NEW_ADVENTURER title. so lets check that to determine if charCreate needs to be called
+    // `xi.player.onGameIn` calls `xi.player.charCreate` when the 2nd param is true
+    bool needsFirstLogin = !charutils::hasTitle(PChar, 206); // 206 == xi.title.NEW_ADVENTURER
+
+    callGlobal<void>("xi.player.onGameIn", PChar, needsFirstLogin, zoning);
 }
 
 void OnZoneIn(CCharEntity* PChar)
@@ -3906,6 +3914,35 @@ CBattleEntity* OnMobSkillTarget(CBattleEntity* PTarget, CBaseEntity* PMob, CMobS
     }
 
     return PTarget;
+}
+
+std::optional<timer::duration> OnMobSkillReadyTime(CBattleEntity* PTarget, CBaseEntity* PMob, CMobSkill* PMobSkill)
+{
+    TracyZoneScoped;
+
+    auto zone = PMob->loc.zone->getName();
+    auto name = PMob->getName();
+
+    auto onMobSkillReadyTime = lua["xi"]["zones"][zone]["mobs"][name]["onMobSkillReadyTime"];
+    if (!onMobSkillReadyTime.valid())
+    {
+        return std::nullopt;
+    }
+
+    auto result = onMobSkillReadyTime(PTarget, PMob, PMobSkill);
+    if (!result.valid())
+    {
+        sol::error err = result;
+        ShowError("luautils::onMobSkillReadyTime: %s", err.what());
+        return std::nullopt;
+    }
+
+    if (result.get_type(0) == sol::type::number)
+    {
+        return std::chrono::milliseconds(result.template get<uint16>(0));
+    }
+
+    return std::nullopt;
 }
 
 // onMobSkillFinalize always executes once per uninterrupted mobskill use, independently of any target being found.

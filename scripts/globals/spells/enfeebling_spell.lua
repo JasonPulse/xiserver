@@ -192,7 +192,13 @@ end
 
 -- Calculate potency.
 xi.spells.enfeebling.calculatePotency = function(caster, target, spellId, spellEffect, skillType, statUsed)
-    local potency    = pTable[spellId][column.BASE_POTENCY]
+    local potency = pTable[spellId][column.BASE_POTENCY]
+
+    -- Ninjutsu debuffs have fixed potency per tier and are not affected by dINT or enfeebling potency gear.
+    if skillType == xi.skill.NINJUTSU then
+        return potency
+    end
+
     local statDiff   = caster:getStat(statUsed) - target:getStat(statUsed)
     local skillLevel = caster:getSkillLevel(skillType)
 
@@ -320,13 +326,8 @@ end
 xi.spells.enfeebling.calculateDuration = function(caster, target, spellId, spellEffect, skillType)
     local duration = pTable[spellId][column.BASE_DURATION] -- Get base duration.
 
-    -- BIND spells have a special random duration the follows a normal distribution with mean=30 and std=12
     if spellEffect == xi.effect.BIND then
-        -- Use the Box-Muller transform to change uniform dist sample to the normal dist sample
-        local z0 = math.sqrt(-2 * math.log(math.random())) * math.cos(2 * math.pi * math.random())
-
-        ---@cast duration integer
-        duration = utils.clamp(math.floor(30 + z0 * 12), 1, duration)
+        duration = math.random(13, 60)
     end
 
     -- Additions to base duration.
@@ -392,7 +393,7 @@ xi.spells.enfeebling.useEnfeeblingSpell = function(caster, target, spell)
     local spellElement = spell:getElement()
     local skillType    = spell:getSkillType()
     local spellEffect  = pTable[spellId][column.EFFECT_ID]
-    local tier         = pTable[spellId][column.TIER]
+    local tier         = pTable[spellId][column.EFFECT_TIER] or 0
 
     ------------------------------
     -- STEP 1: Check spell nullification.

@@ -96,10 +96,10 @@ INSERT INTO `item_latents` VALUES (11367,23,50,49,4277); -- atk+50 Tonosama Rice
 INSERT INTO `item_latents` VALUES (11367,23,50,49,4278); -- atk+50 Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (11367,23,60,49,5928); -- atk+60 Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (11367,23,60,49,5929); -- atk+60 Ojo Rice Ball
-INSERT INTO `item_latents` VALUES (11367,230,5,49,4604); -- beast killer 5% (guesstimated) Rogue Rice Ball
-INSERT INTO `item_latents` VALUES (11367,232,5,49,4604); -- arcana killer 5% (guesstimated) Naval Rice Ball
+INSERT INTO `item_latents` VALUES (11367,228,4,49,4604); -- aquan killer 4% Naval Rice Ball
+INSERT INTO `item_latents` VALUES (11367,230,4,49,4604); -- beast killer 4% Rogue Rice Ball
 INSERT INTO `item_latents` VALUES (11367,288,1,49,4277); -- double attack 1% Tonosama Rice Ball
-INSERT INTO `item_latents` VALUES (11367,288,5,49,4278); -- double attack 5% Shogun Rice Ball
+INSERT INTO `item_latents` VALUES (11367,288,2,49,4278); -- double attack 2% Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (11367,302,1,49,5928); -- triple attack 1% Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (11367,302,2,49,5929); -- triple attack 2% Ojo Rice Ball
 
@@ -552,7 +552,7 @@ INSERT INTO `item_latents` VALUES (13557,13,3,53,0);     -- MND +3 in areas insi
 
 -- Gold Musketeer's Ring
 INSERT INTO `item_latents` VALUES (13558,1,4,53,0);      -- DEF +4 in areas inside own nation's control
-INSERT INTO `item_latents` VALUES (13558,10,2,53,0);     -- VIT +3 in areas inside own nation's control
+INSERT INTO `item_latents` VALUES (13558,10,3,53,0);     -- VIT +3 in areas inside own nation's control
 INSERT INTO `item_latents` VALUES (13558,11,2,53,0);     -- AGI +2 in areas inside own nation's control
 
 -- Patriarch Protector's Ring
@@ -768,10 +768,10 @@ INSERT INTO `item_latents` VALUES (13910,23,50,49,4277); -- atk+50 Tonosama Rice
 INSERT INTO `item_latents` VALUES (13910,23,50,49,4278); -- atk+50 Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (13910,23,60,49,5928); -- atk+60 Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (13910,23,60,49,5929); -- atk+60 Ojo Rice Ball
-INSERT INTO `item_latents` VALUES (13910,230,5,49,4604); -- beast killer 5% (guesstimated) Rogue Rice Ball
-INSERT INTO `item_latents` VALUES (13910,232,5,49,4604); -- arcana killer 5% (guesstimated) Naval Rice Ball
+INSERT INTO `item_latents` VALUES (13910,228,4,49,4604); -- aquan killer 4% Naval Rice Ball
+INSERT INTO `item_latents` VALUES (13910,230,4,49,4604); -- beast killer 4% Rogue Rice Ball
 INSERT INTO `item_latents` VALUES (13910,288,1,49,4277); -- double attack 1% Tonosama Rice Ball
-INSERT INTO `item_latents` VALUES (13910,288,5,49,4278); -- double attack 5% Shogun Rice Ball
+INSERT INTO `item_latents` VALUES (13910,288,2,49,4278); -- double attack 2% Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (13910,302,1,49,5928); -- triple attack 1% Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (13910,302,2,49,5929); -- triple attack 2% Ojo Rice Ball
 
@@ -797,10 +797,10 @@ INSERT INTO `item_latents` VALUES (13949,23,50,49,4277); -- atk+50 Tonosama Rice
 INSERT INTO `item_latents` VALUES (13949,23,50,49,4278); -- atk+50 Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (13949,23,60,49,5928); -- atk+60 Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (13949,23,60,49,5929); -- atk+60 Ojo Rice Ball
-INSERT INTO `item_latents` VALUES (13949,230,5,49,4604); -- beast killer 5% (guesstimated) Rogue Rice Ball
-INSERT INTO `item_latents` VALUES (13949,232,5,49,4604); -- arcana killer 5% (guesstimated) Naval Rice Ball
+INSERT INTO `item_latents` VALUES (13949,228,4,49,4604); -- aquan killer 4% Naval Rice Ball
+INSERT INTO `item_latents` VALUES (13949,230,4,49,4604); -- beast killer 4% Rogue Rice Ball
 INSERT INTO `item_latents` VALUES (13949,288,1,49,4277); -- double attack 1% Tonosama Rice Ball
-INSERT INTO `item_latents` VALUES (13949,288,5,49,4278); -- double attack 5% Shogun Rice Ball
+INSERT INTO `item_latents` VALUES (13949,288,2,49,4278); -- double attack 2% Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (13949,302,1,49,5928); -- triple attack 1% Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (13949,302,2,49,5929); -- triple attack 2% Ojo Rice Ball
 
@@ -819,10 +819,10 @@ INSERT INTO `item_latents` VALUES (13972,23,50,49,4277); -- atk+50 Tonosama Rice
 INSERT INTO `item_latents` VALUES (13972,23,50,49,4278); -- atk+50 Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (13972,23,60,49,5928); -- atk+60 Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (13972,23,60,49,5929); -- atk+60 Ojo Rice Ball
-INSERT INTO `item_latents` VALUES (13972,230,5,49,4604); -- beast killer 5% (guesstimated) Rogue Rice Ball
-INSERT INTO `item_latents` VALUES (13972,232,5,49,4604); -- arcana killer 5% (guesstimated) Naval Rice Ball
+INSERT INTO `item_latents` VALUES (13972,228,4,49,4604); -- aquan killer 4% Naval Rice Ball
+INSERT INTO `item_latents` VALUES (13972,230,4,49,4604); -- beast killer 4% Rogue Rice Ball
 INSERT INTO `item_latents` VALUES (13972,288,1,49,4277); -- double attack 1% Tonosama Rice Ball
-INSERT INTO `item_latents` VALUES (13972,288,5,49,4278); -- double attack 5% Shogun Rice Ball
+INSERT INTO `item_latents` VALUES (13972,288,2,49,4278); -- double attack 2% Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (13972,302,1,49,5928); -- triple attack 1% Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (13972,302,2,49,5929); -- triple attack 2% Ojo Rice Ball
 
@@ -1237,7 +1237,7 @@ INSERT INTO `item_latents` VALUES (14783,10,4,26,1);     -- VIT+4 during Nightti
 INSERT INTO `item_latents` VALUES (14806,4,40,53,1);     -- convmptohp 40 in areas outside own nation's control
 
 -- Diabolos's Earring
-INSERT INTO `item_latents` VALUES (14814,25,-3,52,8);    -- cumulative acc-3 in Dark weather
+INSERT INTO `item_latents` VALUES (14814,25,-3,52,8);    -- ACC-3 in Dark weather (cancels base +3)
 INSERT INTO `item_latents` VALUES (14814,30,2,52,8);     -- magic acc+2 in Dark weather
 
 -- Rasetsu Tekko
@@ -1282,10 +1282,10 @@ INSERT INTO `item_latents` VALUES (14901,23,50,49,4277); -- atk+50 Tonosama Rice
 INSERT INTO `item_latents` VALUES (14901,23,50,49,4278); -- atk+50 Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (14901,23,60,49,5928); -- atk+60 Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (14901,23,60,49,5929); -- atk+60 Ojo Rice Ball
-INSERT INTO `item_latents` VALUES (14901,230,5,49,4604); -- beast killer 5% (guesstimated) Rogue Rice Ball
-INSERT INTO `item_latents` VALUES (14901,232,5,49,4604); -- arcana killer 5% (guesstimated) Naval Rice Ball
+INSERT INTO `item_latents` VALUES (14901,228,4,49,4604); -- aquan killer 4% Naval Rice Ball
+INSERT INTO `item_latents` VALUES (14901,230,4,49,4604); -- beast killer 4% Rogue Rice Ball
 INSERT INTO `item_latents` VALUES (14901,288,1,49,4277); -- double attack 1% Tonosama Rice Ball
-INSERT INTO `item_latents` VALUES (14901,288,5,49,4278); -- double attack 5% Shogun Rice Ball
+INSERT INTO `item_latents` VALUES (14901,288,2,49,4278); -- double attack 2% Shogun Rice Ball
 INSERT INTO `item_latents` VALUES (14901,302,1,49,5928); -- triple attack 1% Hinesama Rice Ball
 INSERT INTO `item_latents` VALUES (14901,302,2,49,5929); -- triple attack 2% Ojo Rice Ball
 
@@ -1544,8 +1544,8 @@ INSERT INTO `item_latents` VALUES (15504,25,3,53,0);     -- ACC +3 in areas insi
 INSERT INTO `item_latents` VALUES (15506,369,1,1,85);    -- Refresh when HP >=85%
 
 -- Diabolos's Torque
-INSERT INTO `item_latents` VALUES (15516,24,7,52,8);     -- ranged acc+8 in Dark weather
-INSERT INTO `item_latents` VALUES (15516,26,-16,52,8);   -- cumulative ranged acc-8 in Dark weather
+INSERT INTO `item_latents` VALUES (15516,24,8,52,8);     -- RATT+8 in Dark weather
+INSERT INTO `item_latents` VALUES (15516,26,-8,52,8);    -- RACC-8 in Dark weather (cancels base +8)
 
 -- Storm Muffler
 INSERT INTO `item_latents` VALUES (15519,370,1,58,0);    -- Regen +1

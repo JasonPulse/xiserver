@@ -63,11 +63,13 @@ function content:setupBattlefield(battlefield)
     local prishePos = prisheCoords[battlefieldArea]
     prishe:setSpawn(prishePos.x, prishePos.y, prishePos.z, prishePos.r)
     prishe:spawn()
+    prishe:setMobLevel(75)
 
     local selhteus    = battlefield:insertEntity(12, true, true)
     local selhteusPos = selhteusCoords[battlefieldArea]
     selhteus:setSpawn(selhteusPos.x, selhteusPos.y, selhteusPos.z, selhteusPos.r)
     selhteus:spawn()
+    selhteus:setMobLevel(75)
 end
 
 function content:onEventFinishBattlefield(player, csid, option, npc)
@@ -110,7 +112,7 @@ content.groups =
                 if ally:isMob() then
                     ally:resetLocalVars()
 
-                    if ally:getPool() == xi.mobPools.PRISHE_DAWN then
+                    if ally:getPool() == xi.mobPool.PRISHE_DAWN then
                         local prishePos = prisheCoords[battlefieldArea]
                         ally:setPos(prishePos.x, prishePos.y, prishePos.z, prishePos.r)
 
@@ -118,7 +120,7 @@ content.groups =
                         ally:setLocalVar('[helperNpc]engageWaitTime', 180)
                         ally:setLocalVar('engageWait', GetSystemTime() + 180)
 
-                    elseif ally:getPool() == xi.mobPools.SELHTEUS_DAWN then
+                    elseif ally:getPool() == xi.mobPool.SELHTEUS_DAWN then
                         local selhteusPos = selhteusCoords[battlefieldArea]
                         ally:setPos(selhteusPos.x, selhteusPos.y, selhteusPos.z, selhteusPos.r)
                     end

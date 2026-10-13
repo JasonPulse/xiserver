@@ -65,6 +65,13 @@ CPetSkillState::CPetSkillState(CPetEntity* PEntity, uint16 targid, uint16 wsid)
 
     m_castTime = m_PSkill->getActivationTime();
 
+    auto targetID = PTarget->id;
+
+    if (m_PEntity->objtype != TYPE_PC && settings::get<bool>("map.HIDE_READIES_TARGET"))
+    {
+        targetID = m_PEntity->id;
+    }
+
     if (m_castTime > 0s)
     {
         action_t action{
@@ -73,7 +80,7 @@ CPetSkillState::CPetSkillState(CPetEntity* PEntity, uint16 targid, uint16 wsid)
             .actionid   = static_cast<uint32_t>(FourCC::SkillUse),
             .targets    = {
                 {
-                    .actorId = PTarget->id,
+                    .actorId = targetID,
                     .results = {
                         {
                             .param     = m_PSkill->getMobSkillID() > 0 ? m_PSkill->getMobSkillID() : m_PSkill->getID(),
@@ -115,6 +122,12 @@ bool CPetSkillState::Update(timer::time_point tick)
 {
     if (m_PEntity && m_PEntity->isAlive() && (tick > GetEntryTime() + m_castTime && !IsCompleted()))
     {
+        // Check for stun/sleep/hysteria/etc at the moment of skill completion - Cleanup handles the interrupt
+        if (m_PEntity->StatusEffectContainer->HasPreventActionEffect() || m_PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_HYSTERIA))
+        {
+            return true;
+        }
+
         action_t action{};
         m_PEntity->OnPetSkillFinished(*this, action);
         // Only send packet if action was populated (e.g. interrupts return early)

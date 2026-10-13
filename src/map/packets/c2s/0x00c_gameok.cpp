@@ -82,6 +82,10 @@ void GP_CLI_COMMAND_GAMEOK::process(MapSession* PSession, CCharEntity* PChar) co
     charutils::SendInventory(PChar);
     blacklistutils::SendBlacklist(PChar);
 
+    // Retail sends the party list only AFTER GAMEOK
+    // The copy pushed during zone-in can be lost while the client loads
+    PChar->ReloadPartyInc();
+
     // TODO: While in mog house; treasure pool is not created.
     if (PChar->PTreasurePool != nullptr)
     {

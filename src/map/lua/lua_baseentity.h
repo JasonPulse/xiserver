@@ -76,6 +76,7 @@ public:
     // Variables
     int32  getCharVar(const std::string& varName);
     auto   getCharVarsWithPrefix(const std::string& prefix) -> sol::table;
+    auto   getCharVarsWithSuffix(const std::string& suffix) -> sol::table;
     void   setCharVar(const std::string& varname, int32 value, const sol::object& expiry);
     void   setCharVarExpiration(const std::string& varName, uint32 expiry); // Sets character variable expiration timestamp
     void   incrementCharVar(const std::string& varname, int32 value);       // Increments/decrements/sets a character variable
@@ -176,7 +177,7 @@ public:
     auto sendGuild(uint16 guildId, uint8 open, uint8 close, uint8 holiday) const -> bool; // Sends guild shop menu
     void openSendBox() const;                                                             // Opens send box (to deliver items)
     void leaveGame();
-    void sendEmote(const CLuaBaseEntity* target, uint8 emID, uint8 emMode) const;
+    void sendEmote(const CLuaBaseEntity* target, uint8 emID, uint8 emMode, bool othersOnly) const;
 
     // Location and Positioning
     int16 getWorldAngle(sol::variadic_args va);                                                // return angle (rot) between two points (vector from a to b), aligned to absolute cardinal degree
@@ -208,7 +209,6 @@ public:
     void sendEmptyEntityUpdateToPlayer(CLuaBaseEntity* entityToUpdate);
 
     void forceRezone();
-    void forceLogout();
 
     auto  getPos() -> sol::table;
     void  showPosition();
@@ -697,6 +697,7 @@ public:
 
     bool   delStatusEffect(uint16 StatusID, const sol::object& SubType, const sol::object& SourceType, const sol::object& SourceTypeParam);
     void   delStatusEffectsByFlag(uint32 flag, const sol::object& silent);
+    void   delStatusEffectsByType(uint16 type);
     bool   delStatusEffectSilent(uint16 StatusID); // Removes Status Effect, suppresses message
     uint16 eraseStatusEffect();
     uint8  eraseAllStatusEffect();
@@ -857,6 +858,7 @@ public:
     uint32 getMobFlags();
 
     void setNpcFlags(uint32 flags);
+    void setNpcAlwaysRelevant(bool alwaysRelevant);
 
     void   spawn(const sol::object& despawnSec, const sol::object& respawnSec);
     bool   isSpawned();
@@ -875,6 +877,7 @@ public:
     void setAggressive(bool aggressive);
     void setTrueDetection(bool truedetection);
     void setUnkillable(bool unkillable);
+    auto getUnkillable() -> bool;
     void setUntargetable(bool untargetable);
     bool getUntargetable();
     void setIsAggroable(bool isAggroable);
@@ -897,6 +900,7 @@ public:
 
     uint32 getBattleTime();
     auto   getCrystalElement() const -> ELEMENT;
+    void   setCrystalElement(ELEMENT crystalElement);
 
     uint16 getBehavior();
     void   setBehavior(uint16 behavior);
@@ -935,8 +939,8 @@ public:
     uint16 getStealItem();
     uint16 getDespoilItem();                // gets ItemID of droplist despoil item from mob (steal item if no despoil item)
     uint16 getDespoilDebuff(uint16 itemID); // gets the status effect id to apply to the mob on successful despoil
-    bool   itemStolen();                    // sets mob's ItemStolen var = true
-    bool   itemDespoiled();                 // sets mob's ItemDespoiled var = true
+    void   itemStolen(bool stolen);         // sets mob's ItemStolen var
+    void   itemDespoiled(bool despoiled);   // sets mob's ItemDespoiled var
     int16  getTHlevel();                    // Returns the Monster's current Treasure Hunter Tier
     void   setTHlevel(int16 newLevel);      // Sets the Monster's current Treasure Hunter Tier
 

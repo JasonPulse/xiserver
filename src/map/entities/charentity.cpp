@@ -1666,6 +1666,11 @@ void CCharEntity::OnAbility(CAbilityState& state, action_t& action)
         if (PAbility->getMeritModID() > 0 && !(PAbility->getAddType() & ADDTYPE_MERIT))
         {
             recastReduction = std::chrono::seconds(PMeritPoints->GetMeritValue((MERIT_TYPE)PAbility->getMeritModID(), this));
+
+            if (PAbility->getID() == ABILITY_THIRD_EYE && StatusEffectContainer->HasStatusEffect(EFFECT_SEIGAN))
+            {
+                recastReduction = recastReduction / 2;
+            }
         }
 
         auto* charge         = ability::GetCharge(this, static_cast<uint16>(PAbility->getRecastId()));
@@ -3263,6 +3268,11 @@ void CCharEntity::setLocked(bool locked)
 
 auto CCharEntity::getCharVar(const std::string& varName) const -> int32
 {
+    if (varName.length() > 64)
+    {
+        ShowErrorFmt("CCharEntity::getCharVar: Charvar '{}' longer than 60 characters. Please shorten your variable name.", varName);
+    }
+
     if (auto charVar = charVarCache.find(varName); charVar != charVarCache.end())
     {
         std::pair cachedVarData = charVar->second;
@@ -3310,8 +3320,42 @@ auto CCharEntity::getCharVarsWithPrefix(const std::string& prefix) -> std::vecto
     return charVars;
 }
 
+auto CCharEntity::getCharVarsWithSuffix(const std::string& suffix) -> std::vector<std::pair<std::string, int32>>
+{
+    const auto currentTimestamp = earth_time::timestamp();
+
+    std::vector<std::pair<std::string, int32>> charVars;
+
+    const auto rset = db::preparedStmt("SELECT varname, value, expiry FROM char_vars WHERE charid = ? AND varname LIKE ?",
+                                       this->id,
+                                       fmt::format("%{}", suffix));
+    if (rset && rset->rowsCount())
+    {
+        while (rset->next())
+        {
+            const auto varname = rset->get<std::string>("varname");
+            const auto value   = rset->get<int32>("value");
+            const auto expiry  = rset->get<uint32>("expiry");
+
+            if (expiry == 0 || expiry > currentTimestamp)
+            {
+                charVarCache[varname] = { value, expiry };
+
+                charVars.emplace_back(varname, value);
+            }
+        }
+    }
+
+    return charVars;
+}
+
 void CCharEntity::setCharVar(const std::string& charVarName, int32 value, uint32 expiry /* = 0 */)
 {
+    if (charVarName.length() > 64)
+    {
+        ShowErrorFmt("CCharEntity::setCharVar: Charvar '{}' longer than 60 characters. Please shorten your variable name.", charVarName);
+    }
+
     charVarCache[charVarName] = { value, expiry };
     charutils::PersistCharVar(this->id, charVarName, value, expiry);
 }

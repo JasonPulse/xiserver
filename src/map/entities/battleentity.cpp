@@ -466,8 +466,9 @@ uint32 CBattleEntity::GetWeaponDelay(bool tp)
         float hasteMultiplier     = 1.0f;
         float delayModMultiplier  = 1.0f + getMod(Mod::DELAYP) / 100.0f;
 
-        // H2H
-        if (weapon->isHandToHand())
+        // H2H (Mobs do not benefit from Martial Arts)
+        // TODO: Do Trusts benefit from Martial Arts?
+        if (weapon->isHandToHand() && objtype != TYPE_MOB)
         {
             martialArts = getMod(Mod::MARTIAL_ARTS) * 1000 / 60; // TODO: Job points?
         }
@@ -795,14 +796,29 @@ uint16 CBattleEntity::GetSubWeaponRank()
 
 uint16 CBattleEntity::GetRangedWeaponRank()
 {
-    uint16 wDamage = GetRangedWeaponDmg();
-    // Check ranged slot first, otherwise use ammo if it's null
+    // Weapon rank uses only the ranged weapon's damage (or ammo for throwing),
+    // not the combined ranged + ammo total that GetRangedWeaponDmg() returns.
+    uint16 wDamage = 0;
+
+    // Check ranged slot first, otherwise use ammo if it's null (throwing weapons)
     CItemEquipment* item = m_Weapons[SLOT_RANGED] ? m_Weapons[SLOT_RANGED] : m_Weapons[SLOT_AMMO];
 
     if (auto* weapon = dynamic_cast<CItemWeapon*>(item))
     {
+        if ((weapon->getReqLvl() > GetMLevel()) && objtype == TYPE_PC)
+        {
+            uint16 scaleddmg = weapon->getDamage();
+            scaleddmg *= GetMLevel() * 3;
+            scaleddmg /= 4;
+            scaleddmg /= weapon->getReqLvl();
+            wDamage = scaleddmg;
+        }
+        else
+        {
+            wDamage = weapon->getDamage();
+        }
+
         wDamage += weapon->getModifier(Mod::RANGED_DMG_RANK);
-        wDamage -= weapon->getModifier(Mod::DMG_RATING); // Company sword, Maneater, etc don't boost weapon rank
     }
 
     return wDamage / 9;
@@ -1516,9 +1532,9 @@ uint8 CBattleEntity::GetMLevel() const
     return m_mlvl;
 }
 
-JOBTYPE CBattleEntity::GetSJob() const
+JOBTYPE CBattleEntity::GetSJob(bool ignoreRestriction) const
 {
-    if (StatusEffectContainer->HasStatusEffect({ EFFECT_OBLIVISCENCE, EFFECT_SJ_RESTRICTION }))
+    if (!ignoreRestriction && StatusEffectContainer->HasStatusEffect({ EFFECT_OBLIVISCENCE, EFFECT_SJ_RESTRICTION }))
     {
         return JOB_NON;
     }
@@ -2908,7 +2924,7 @@ bool CBattleEntity::OnAttack(CAttackState& state, action_t& action)
                     }
                     else
                     {
-                        int16     naturalh2hDMG = 0;
+                        int32     naturalh2hDMG = 0;
                         auto*     targ_weapon   = dynamic_cast<CItemWeapon*>(PTarget->m_Weapons[SLOT_MAIN]);
                         SKILLTYPE skilltype     = SKILLTYPE::SKILL_NONE;
 
@@ -2928,7 +2944,7 @@ bool CBattleEntity::OnAttack(CAttackState& state, action_t& action)
 
                         if (PTarget->objtype == TYPE_PC && skilltype == SKILLTYPE::SKILL_HAND_TO_HAND)
                         {
-                            naturalh2hDMG = (int16)((PTarget->GetSkill(SKILL_HAND_TO_HAND) * 0.11f) + 3);
+                            naturalh2hDMG = std::floor<int32>((PTarget->GetSkill(SKILL_HAND_TO_HAND) * 0.11f) + 3);
                         }
                         else if (PTarget->objtype == TYPE_MOB && targ_weapon && targ_weapon->getSkillType() == SKILLTYPE::SKILL_HAND_TO_HAND) // This is how Attack Round checks for h2h penalty
                         {
@@ -2952,16 +2968,17 @@ bool CBattleEntity::OnAttack(CAttackState& state, action_t& action)
                         float attBonus = 1.0f;
                         if (PTarget->objtype == TYPE_PC && PTarget->GetMJob() == JOB_MNK && PTarget->StatusEffectContainer->HasStatusEffect(EFFECT_COUNTERSTANCE))
                         {
-                            auto*  PChar        = static_cast<CCharEntity*>(PTarget);
-                            uint8  csJpModifier = PChar->PJobPoints->GetJobPointValue(JP_COUNTERSTANCE_EFFECT) * 2;
-                            uint16 targetDex    = PTarget->DEX();
+                            auto* PChar        = static_cast<CCharEntity*>(PTarget);
+                            float csJpModifier = static_cast<float>(PChar->PJobPoints->GetJobPointValue(JP_COUNTERSTANCE_EFFECT) * 2);
+                            float targetDex    = static_cast<float>(PTarget->DEX());
 
-                            attBonus += ((static_cast<float>(targetDex) / 100) * csJpModifier);
+                            attBonus += std::max((targetDex / 100.f) * csJpModifier, 0.f);
                         }
 
                         float DamageRatio     = battleutils::GetDamageRatio(PTarget, this, attack.IsCritical(), attBonus, skilltype, SLOT_MAIN, false);
-                        int16 extraCounterDMG = (int16)(PTarget->getMod(Mod::COUNTER_DAMAGE));
-                        auto  damage          = (int32)((PTarget->GetMainWeaponDmg() + naturalh2hDMG + extraCounterDMG + battleutils::GetFSTR(PTarget, this, SLOT_MAIN)) * mobH2HPenalty * DamageRatio);
+                        int32 extraCounterDMG = PTarget->getMod(Mod::COUNTER_DAMAGE);
+                        int32 damage          = std::max(PTarget->GetMainWeaponDmg() + naturalh2hDMG + extraCounterDMG + battleutils::GetFSTR(PTarget, this, SLOT_MAIN), 0);
+                        damage                = std::floor(damage * mobH2HPenalty * DamageRatio);
 
                         actionResult.spikesParam =
                             battleutils::TakePhysicalDamage(PTarget, this, attack.GetAttackType(), damage, false, SLOT_MAIN, 1, nullptr, true, false, true);

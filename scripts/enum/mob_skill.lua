@@ -77,6 +77,7 @@ xi.mobSkill =
     BAD_BREATH_1                  =  319,
 
     THOUSAND_NEEDLES_1            =  322,
+    WILD_CARROT_1                 =  323,
 
     DRILL_BRANCH                  =  328,
     PINECONE_BOMB                 =  329,
@@ -103,6 +104,12 @@ xi.mobSkill =
     PLAGUE_BREATH_1               =  371,
     INFRASONICS_1                 =  372,
     SECRETION_1                   =  373,
+
+    FOUL_BREATH_1                 =  376,
+    FROST_BREATH_1                =  377,
+    THUNDERBOLT_RAPTOR            =  378,
+
+    SCYTHE_TAIL_1                 =  380,
 
     TAIL_ROLL                     =  382,
     TUSK                          =  383,
@@ -251,6 +258,7 @@ xi.mobSkill =
 
     CURSED_SPHERE_1               =  659,
     VENOM_1                       =  660,
+    SNOW_CLOUD_1                  =  661,
 
     KICK_BACK                     =  668,
     IMPLOSION                     =  669,
@@ -531,6 +539,7 @@ xi.mobSkill =
     TIDAL_DIVE                    = 1357,
     PLASMA_CHARGE                 = 1358,
 
+    WILD_GINSENG                  = 1362,
     HUNGRY_CRUNCH                 = 1363,
 
     SINUATE_RUSH                  = 1367,
@@ -619,6 +628,8 @@ xi.mobSkill =
     PROBOSCIS_SHOWER              = 1708,
 
     FORCEFUL_BLOW                 = 1731, -- Used with Mamool's weapons break.
+
+    FIRESPIT                      = 1733,
 
     LAVA_SPIT                     = 1785,
 

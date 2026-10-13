@@ -604,7 +604,16 @@ int32 CalculateEnspellDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender,
     {
         // see https://www.ffxiah.com/forum/topic/56613/rune-enhancement-damage-formula-testing/ for data and comments
         double       runeDPS = 0.0;
-        CItemWeapon* PWeapon = static_cast<CItemWeapon*>(static_cast<CCharEntity*>(PAttacker)->getEquip(SLOT_MAIN));
+        CItemWeapon* PWeapon = nullptr;
+
+        // Prefer player equip if attacker is a player
+        if (auto* PChar = dynamic_cast<CCharEntity*>(PAttacker))
+        {
+            if (auto* equip = PChar->getEquip(SLOT_MAIN))
+            {
+                PWeapon = dynamic_cast<CItemWeapon*>(equip);
+            }
+        }
 
         if (PWeapon == nullptr) // h2h, though base DPS is so low it will never hit non-zero enspell damage numbers with current rune count and modifiers.
         {
@@ -759,8 +768,8 @@ int32 CalculateEnspellDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender,
 
 int32 CalculateSpikeDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, action_result_t* Action, uint16 damageTaken)
 {
-    const auto spikeElement = static_cast<ELEMENT>(static_cast<uint8>(GetSpikesDamageType(Action->spikesEffect)) - (uint8)DAMAGE_TYPE::ELEMENTAL);
-    int32      damage       = Action->spikesParam;
+    auto  spikeElement = static_cast<ELEMENT>(static_cast<uint8>(GetSpikesDamageType(Action->spikesEffect)) - (uint8)DAMAGE_TYPE::ELEMENTAL);
+    int32 damage       = Action->spikesParam;
 
     if (PDefender->getMod(Mod::SPIKES_DMG_BONUS) > 0)
     {
@@ -771,6 +780,12 @@ int32 CalculateSpikeDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, a
     {
         // drain same as damage taken
         damage = damageTaken;
+    }
+
+    if (static_cast<uint8>(Action->spikesEffect) > static_cast<uint8>(ELEMENT::ELEMENT_DARK))
+    {
+        ShowWarningFmt("CalculateSpikeDamage: Spike Element from PDefender ({}, id {}) out of range, got {}. Setting to Fire.", PDefender->getName(), PDefender->id, static_cast<int32>(spikeElement));
+        spikeElement = ELEMENT::ELEMENT_FIRE;
     }
 
     damage = MagicDmgTaken(PAttacker, damage, spikeElement); // apply MDT/MDT2/DT, liement to whoever is taking damage
@@ -830,7 +845,7 @@ auto HandleSpikesDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, acti
             const float DamageRatio = GetDamageRatio(PDefender, PAttacker, crit, 1.0f, skilltype, SLOT_MAIN, false);
             uint16      dmg         = static_cast<uint32>((PDefender->GetMainWeaponDmg() + battleutils::GetFSTR(PDefender, PAttacker, SLOT_MAIN)) * DamageRatio);
             dmg                     = attackutils::CheckForDamageMultiplier(static_cast<CCharEntity*>(PDefender), dynamic_cast<CItemWeapon*>(PDefender->m_Weapons[SLOT_MAIN]), dmg, PHYSICAL_ATTACK_TYPE::NORMAL, SLOT_MAIN);
-            const uint16 bonus      = dmg * (PDefender->getMod(Mod::RETALIATION) / 100);
+            const uint16 bonus      = std::floor<uint16>(static_cast<float>(dmg) * (static_cast<float>(PDefender->getMod(Mod::RETALIATION)) / 100.f));
             dmg                     = dmg + bonus;
 
             // TP and stoneskin are handled inside TakePhysicalDamage
@@ -1693,37 +1708,20 @@ float GetRangedDamageRatio(CBattleEntity* PAttacker, CBattleEntity* PDefender, b
         ShowError("battleutils::GetRangedDamageRatio() failed to run lua calls");
     }
 
-    return pDIF;
+    return std::max(pDIF, 0.f);
 }
 
-int16 CalculateBaseTP(int32 delay)
+int16 CalculateBaseTP(CBattleEntity* PEntity, int32 delay)
 {
-    int16 x = 1;
-    if (delay <= 180)
+    int16 baseTPReturn = 0;
+
+    auto calculateBaseTPGainFunc = lua["xi"]["combat"]["tp"]["calculateTPReturn"];
+    if (calculateBaseTPGainFunc.valid())
     {
-        x = (int16)(61 + ((delay - 180) * 63.0f) / 360);
+        baseTPReturn = calculateBaseTPGainFunc(PEntity, delay);
     }
-    else if (delay <= 540)
-    {
-        x = (int16)(61 + ((delay - 180) * 88.0f) / 360);
-    }
-    else if (delay <= 630)
-    {
-        x = (int16)(149 + ((delay - 540) * 20.0f) / 360);
-    }
-    else if (delay <= 720)
-    {
-        x = (int16)(154 + ((delay - 630) * 28.0f) / 360);
-    }
-    else if (delay <= 900)
-    {
-        x = (int16)(161 + ((delay - 720) * 24.0f) / 360);
-    }
-    else
-    {
-        x = (int16)(173 + ((delay - 900) * 28.0f) / 360);
-    }
-    return x;
+
+    return baseTPReturn;
 }
 
 bool TryInterruptSpell(CBattleEntity* PAttacker, CBattleEntity* PDefender, CSpell* PSpell)
@@ -1732,6 +1730,12 @@ bool TryInterruptSpell(CBattleEntity* PAttacker, CBattleEntity* PDefender, CSpel
     if (PDefender->objtype == TYPE_TRUST ||                                   // Caster is a trust.
         PDefender->StatusEffectContainer->HasStatusEffect(EFFECT_MANAFONT) || // Caster has Manafont.
         (SKILLTYPE)PSpell->getSkillType() == SKILL_SINGING)                   // Spell is a song.
+    {
+        return false;
+    }
+
+    // Early return: Chainspell prevents interruptions.
+    if (PDefender->StatusEffectContainer->HasStatusEffect(EFFECT_CHAINSPELL))
     {
         return false;
     }
@@ -2101,7 +2105,7 @@ int32 TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHY
         {
             int32 delay = PAttacker->GetRangedWeaponDelay(true);
 
-            baseTp = CalculateBaseTP(delay * 120 / 1000);
+            baseTp = CalculateBaseTP(PAttacker, delay * 120 / 1000);
         }
         else
         {
@@ -2121,7 +2125,7 @@ int32 TakePhysicalDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, PHY
                 ratio = 2.0f;
             }
 
-            baseTp = CalculateBaseTP(delay * 60.0f / 1000.0f / ratio);
+            baseTp = CalculateBaseTP(PAttacker, delay * 60.0f / 1000.0f / ratio);
         }
 
         if (giveTPtoAttacker)
@@ -2289,7 +2293,7 @@ int32 TakeWeaponskillDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, 
         if (isRanged)
         {
             int32 delay = PAttacker->GetRangedWeaponDelay(true);
-            baseTp      = CalculateBaseTP((delay * 120) / 1000);
+            baseTp      = CalculateBaseTP(PAttacker, (delay * 120) / 1000);
         }
         else
         {
@@ -2310,7 +2314,7 @@ int32 TakeWeaponskillDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, 
                 ratio = 2.0f;
             }
 
-            baseTp = CalculateBaseTP(delay * 60 / 1000 / ratio);
+            baseTp = CalculateBaseTP(PAttacker, delay * 60 / 1000 / ratio);
         }
 
         // add tp to attacker
@@ -2712,7 +2716,7 @@ float GetDamageRatio(CBattleEntity* PAttacker, CBattleEntity* PDefender, bool is
         ShowError("battleutils::GetDamageRatio() failed to run lua calls");
     }
 
-    return pDIF;
+    return std::max(pDIF, 0.f);
 }
 
 /************************************************************************
@@ -3707,7 +3711,7 @@ Mod GetResistanceRankModFromElement(ELEMENT& element)
         { ELEMENT_WATER, Mod::WATER_RES_RANK },
         { ELEMENT_WIND, Mod::WIND_RES_RANK },
         { ELEMENT_EARTH, Mod::EARTH_RES_RANK },
-        { ELEMENT_THUNDER, Mod::EARTH_RES_RANK },
+        { ELEMENT_THUNDER, Mod::THUNDER_RES_RANK },
         { ELEMENT_ICE, Mod::ICE_RES_RANK },
         { ELEMENT_LIGHT, Mod::LIGHT_RES_RANK },
         { ELEMENT_DARK, Mod::DARK_RES_RANK },
@@ -3773,7 +3777,7 @@ int32 TakeSkillchainDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, i
         PDefender->setModifier(Mod::SENGIKORI_SC_DMG_DEBUFF, 0); // Consume the effect
     }
 
-    float damageReductionMult = (10000.0f - static_cast<float>(resistance)) / 10000.0f;
+    float damageReductionMult = (10000.0f + static_cast<float>(resistance)) / 10000.0f;
 
     damage = std::floor(static_cast<float>(damage) * damageReductionMult);
     damage = MagicDmgTaken(PDefender, damage, appliedEle);
@@ -4235,8 +4239,8 @@ uint16 doSoulEaterEffect(CCharEntity* m_PChar, uint32 damage)
         // Souleater's HP consumed is 10% (base) + x% from gear (ONLY HIGHEST) + x% from gear augments.
         float souleaterBonus    = m_PChar->getMaxGearMod(Mod::SOULEATER_EFFECT) * 0.01;
         float souleaterBonusII  = m_PChar->getMod(Mod::SOULEATER_EFFECT_II) * 0.01;
-        float stalwartSoulBonus = 1 - static_cast<float>(m_PChar->getMod(Mod::STALWART_SOUL)) / 100;
-        float bonusDamage       = m_PChar->health.hp * (0.1f + souleaterBonus + souleaterBonusII);
+        float stalwartSoulBonus = 1.f - std::max(static_cast<float>(m_PChar->getMod(Mod::STALWART_SOUL)) / 100, 0.f);
+        float bonusDamage       = m_PChar->health.hp * (0.1f + std::max(souleaterBonus + souleaterBonusII, 0.f));
 
         if (bonusDamage >= 1)
         {
@@ -5359,6 +5363,11 @@ void DoWildCardToEntity(CCharEntity* PCaster, CCharEntity* PTarget, const uint8 
 {
     // No matter the roll, all basic abilities are reset
     PTarget->PRecastContainer->ResetAbilities();
+
+    if (roll >= 3)
+    {
+        PTarget->updatemask |= UPDATE_HP;
+    }
 
     switch (roll)
     {

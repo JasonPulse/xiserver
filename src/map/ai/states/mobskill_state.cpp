@@ -93,13 +93,20 @@ CMobSkillState::CMobSkillState(CBattleEntity* PEntity, uint16 targid, uint16 wsi
             PActionTarget = m_PEntity;
         }
 
+        auto targetID = PActionTarget ? PActionTarget->id : m_PEntity->id;
+
+        if (m_PEntity->objtype != TYPE_PC && settings::get<bool>("map.HIDE_READIES_TARGET"))
+        {
+            targetID = m_PEntity->id;
+        }
+
         action_t action{
             .actorId    = m_PEntity->id,
             .actiontype = ActionCategory::SkillStart,
             .actionid   = static_cast<uint32_t>(FourCC::SkillUse),
             .targets    = {
                 {
-                    .actorId = PActionTarget ? PActionTarget->id : m_PEntity->id,
+                    .actorId = targetID,
                     .results = {
                         {
                             .param     = m_PSkill->getID(),
@@ -143,9 +150,15 @@ void CMobSkillState::SpendCost()
         else if (m_PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_MEIKYO_SHISUI) &&
                  m_PEntity->GetLocalVar("[MeikyoShisui]MobSkillCount") > 0)
         {
-            auto currentCount = m_PEntity->GetLocalVar("[MeikyoShisui]MobSkillCount");
-            m_PEntity->SetLocalVar("[MeikyoShisui]MobSkillCount", currentCount - 1);
-            m_spentTP = m_PEntity->addTP(-1000);
+            auto currentCount = m_PEntity->GetLocalVar("[MeikyoShisui]MobSkillCount") - 1;
+            m_PEntity->SetLocalVar("[MeikyoShisui]MobSkillCount", currentCount);
+
+            m_spentTP = 3000; // Unknown how mobs behave like this
+
+            if (currentCount == 0)
+            {
+                m_PEntity->health.tp = 0;
+            }
         }
         else
         {
@@ -168,8 +181,8 @@ bool CMobSkillState::Update(timer::time_point tick)
 
     if (m_PEntity && m_PEntity->isAlive() && (tick >= GetEntryTime() + m_castTime && !IsCompleted()))
     {
-        // Check for stun/sleep/etc at the moment of skill completion - Cleanup handles the interrupt
-        if (m_PEntity->StatusEffectContainer->HasPreventActionEffect())
+        // Check for stun/sleep/hysteria/etc at the moment of skill completion - Cleanup handles the interrupt
+        if (m_PEntity->StatusEffectContainer->HasPreventActionEffect() || m_PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_HYSTERIA))
         {
             return true;
         }
@@ -258,7 +271,7 @@ void CMobSkillState::reduceTpOnInterrupt() const
         // charm -> build tp -> leave -> stun -> interrupt TP move with weapon bash -> charm and check TP. Note that weapon bash incurs damage and thus adds TP.
         // Note: this is very incomplete. Further testing shows that other statuses also reduce TP but in addition it seems that specific mobskills may reduce TP more or less than these numbers
         // Thus while incomplete, is better than nothing.
-        if (m_PEntity->StatusEffectContainer && m_PEntity->StatusEffectContainer->HasPreventActionEffect())
+        if (m_PEntity->StatusEffectContainer && m_PEntity->StatusEffectContainer->HasPreventActionEffect() && !m_PEntity->StatusEffectContainer->HasStatusEffect(EFFECT_MEIKYO_SHISUI))
         {
             int16 tp = m_spentTP;
             if (tp >= 2900)

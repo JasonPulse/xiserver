@@ -95,6 +95,13 @@ CMagicState::CMagicState(CBattleEntity* PEntity, uint16 targid, SpellID spellid,
     m_castTime = battleutils::CalculateSpellCastTime(m_PEntity, this);
     m_startPos = m_PEntity->loc.p;
 
+    auto targetID = PTarget->id;
+
+    if (m_PEntity->objtype != TYPE_PC && settings::get<bool>("map.HIDE_READIES_TARGET"))
+    {
+        targetID = m_PEntity->id;
+    }
+
     action_t action{
         .actorId    = m_PEntity->id,
         .actiontype = ActionCategory::MagicStart,
@@ -102,7 +109,7 @@ CMagicState::CMagicState(CBattleEntity* PEntity, uint16 targid, SpellID spellid,
         .spellgroup = m_PSpell->getSpellGroup(),
         .targets    = {
             {
-                .actorId = PTarget->id,
+                .actorId = targetID,
                 .results = {
                     {
                         .param     = static_cast<int32_t>(m_PSpell->getID()),
@@ -574,8 +581,9 @@ bool CMagicState::HasMoved()
         return false;
     }
 
-    return floorf(m_startPos.x * 10 + 0.5f) / 10 != floorf(m_PEntity->loc.p.x * 10 + 0.5f) / 10 ||
-           floorf(m_startPos.z * 10 + 0.5f) / 10 != floorf(m_PEntity->loc.p.z * 10 + 0.5f) / 10;
+    float charDistance = distance(m_startPos, m_PEntity->loc.p, true);
+
+    return charDistance > 0.3;
 }
 
 void CMagicState::TryInterrupt(CBattleEntity* PAttacker)

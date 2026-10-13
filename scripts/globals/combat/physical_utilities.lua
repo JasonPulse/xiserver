@@ -722,9 +722,9 @@ xi.combat.physical.calculateRangedPDIF = function(actor, target, weaponType, wsA
 
     if tpIgnoresDefense then
         ignoreDefenseFactor = 1 - tpFactor
-    end
 
-    targetDefense = math.floor(targetDefense * ignoreDefenseFactor)
+        targetDefense = math.max(1, math.floor(targetDefense * ignoreDefenseFactor))
+    end
 
     if targetDefense ~= 0 then
         baseRatio = actorAttack / targetDefense
@@ -1073,7 +1073,7 @@ xi.combat.physical.calculateGuardRate = function(defender, attacker)
     -- Two data points showed that Guard was approximately 1% better, so skillDelta is at _least_ 6 lower on the same target
     -- The target was a lvl 43 chigoe, using the same parry skill vs guard skill with the known parrying rate data
     -- This is a placeholder and is likely more accurate than the previous code.
-    if skillDelta <= 5 then
+    if skillDelta <= 6 then
         guardRate = math.floor(10 + skillDelta / (36 / 9))
     else
         guardRate = math.floor(10 + skillDelta / (60 / 9))

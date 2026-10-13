@@ -638,8 +638,9 @@ end
 ---@param target CBaseEntity
 ---@param emID integer
 ---@param emMode integer
+---@param othersOnly boolean
 ---@return nil
-function CBaseEntity:sendEmote(target, emID, emMode)
+function CBaseEntity:sendEmote(target, emID, emMode, othersOnly)
 end
 
 ---@nodiscard
@@ -782,10 +783,6 @@ end
 
 ---@return nil
 function CBaseEntity:forceRezone()
-end
-
----@return nil
-function CBaseEntity:forceLogout()
 end
 
 ---@nodiscard
@@ -3017,6 +3014,11 @@ end
 function CBaseEntity:delStatusEffectsByFlag(flag, silent)
 end
 
+---@param type xi.effectType
+---@return nil
+function CBaseEntity:delStatusEffectsByType(type)
+end
+
 ---@param StatusID integer
 ---@return boolean
 function CBaseEntity:delStatusEffectSilent(StatusID)
@@ -3775,6 +3777,11 @@ end
 function CBaseEntity:setNpcFlags(flags)
 end
 
+---@param alwaysRelevant boolean
+---@return nil
+function CBaseEntity:setNpcAlwaysRelevant(alwaysRelevant)
+end
+
 ---@param despawnSec integer?
 ---@param respawnSec integer?
 ---@return nil
@@ -3849,6 +3856,11 @@ end
 ---@param unkillable boolean
 ---@return nil
 function CBaseEntity:setUnkillable(unkillable)
+end
+
+---@nodiscard
+---@return boolean
+function CBaseEntity:getUnkillable()
 end
 
 ---@param untargetable boolean
@@ -3946,8 +3958,13 @@ function CBaseEntity:getBattleTime()
 end
 
 ---@nodiscard
----@return integer
+---@return xi.element
 function CBaseEntity:getCrystalElement()
+end
+
+---@param element xi.element
+---@return nil
+function CBaseEntity:setCrystalElement(element)
 end
 
 ---@nodiscard
@@ -4122,14 +4139,14 @@ end
 function CBaseEntity:getDespoilDebuff(itemID)
 end
 
----@nodiscard
----@return boolean
-function CBaseEntity:itemStolen()
+---@param stolen boolean
+---@return nil
+function CBaseEntity:itemStolen(stolen)
 end
 
----@nodiscard
----@return boolean
-function CBaseEntity:itemDespoiled()
+---@param despoiled boolean
+---@return nil
+function CBaseEntity:itemDespoiled(despoiled)
 end
 
 ---@nodiscard

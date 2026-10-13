@@ -135,7 +135,7 @@ local function tryTaruEmote(elapsedTime, timerTable, phase)
     end
 
     if event.emote then
-        panicTaru:sendEmote(qm4, event.emote, xi.emoteMode.MOTION)
+        panicTaru:sendEmote(qm4, event.emote, xi.emoteMode.MOTION, false)
     end
 
     if event.animationString then

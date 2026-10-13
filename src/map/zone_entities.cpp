@@ -360,17 +360,37 @@ void CZoneEntities::FindPartyForMob(CBaseEntity* PEntity)
                 continue;
             }
 
-            if (
-                PCurrentMob->PParty && PCurrentMob->allegiance == PMob->allegiance &&
-                ((forceLink && PCurrentMob->ShouldForceLink()) ||
-                 (PCurrentMob->m_Link && PCurrentMob->m_Family == PMob->m_Family) ||
-                 (sublink && sublink == PCurrentMob->getMobMod(MOBMOD_SUBLINK))))
+            if (PCurrentMob->PParty == nullptr || PCurrentMob->allegiance != PMob->allegiance)
             {
-                if (PCurrentMob->PMaster == nullptr || PCurrentMob->PMaster->objtype == TYPE_MOB)
-                {
-                    PCurrentMob->PParty->AddMember(PMob);
-                    return;
-                }
+                continue;
+            }
+
+            // Determine if these mobs should be in the same party.
+            // Force-link mobs with SUPERLINK only group with mobs sharing the same
+            // SUPERLINK value (used by BCNMs/Dynamis to link all mobs in an instance).
+            // Otherwise, mobs link by family or sublink as normal.
+            bool  match     = false;
+            int16 superlink = PMob->getMobMod(MOBMOD_SUPERLINK);
+            if (superlink)
+            {
+                match = PCurrentMob->getMobMod(MOBMOD_SUPERLINK) == superlink;
+            }
+            else if (forceLink)
+            {
+                match = PCurrentMob->ShouldForceLink() &&
+                        ((PCurrentMob->m_Link && PCurrentMob->m_Family == PMob->m_Family) ||
+                         (sublink && sublink == PCurrentMob->getMobMod(MOBMOD_SUBLINK)));
+            }
+            else
+            {
+                match = (PCurrentMob->m_Link && PCurrentMob->m_Family == PMob->m_Family) ||
+                        (sublink && sublink == PCurrentMob->getMobMod(MOBMOD_SUBLINK));
+            }
+
+            if (match && (PCurrentMob->PMaster == nullptr || PCurrentMob->PMaster->objtype == TYPE_MOB))
+            {
+                PCurrentMob->PParty->AddMember(PMob);
+                return;
             }
         }
         PMob->PParty = new CParty(PMob);
@@ -761,7 +781,7 @@ void CZoneEntities::SpawnMOBs(CCharEntity* PChar)
         const auto tapAggro = [&]()
         {
             // Check to skip aggro routine
-            if (PChar->isDead() || PChar->visibleGmLevel >= 3 || PCurrentMob->PMaster)
+            if (PCurrentMob->isDead() || PChar->isDead() || PChar->visibleGmLevel >= 3 || PCurrentMob->PMaster)
             {
                 return;
             }
@@ -868,11 +888,12 @@ void CZoneEntities::SpawnNPCs(CCharEntity* PChar)
     {
         auto& spawnList = PChar->SpawnNPCList;
 
-        const auto id              = PCurrentEntity->id;
-        const auto itr             = spawnList.find(id);
-        const auto isInSpawnList   = itr != spawnList.end();
-        const auto isInRange       = isWithinDistance(PChar->loc.p, PCurrentEntity->loc.p, ENTITY_RENDER_DISTANCE);
-        const auto isVisibleStatus = PCurrentEntity->status == STATUS_TYPE::NORMAL || PCurrentEntity->status == STATUS_TYPE::UPDATE;
+        const auto id               = PCurrentEntity->id;
+        const auto itr              = spawnList.find(id);
+        const auto isInSpawnList    = itr != spawnList.end();
+        const auto isInRange        = isWithinDistance(PChar->loc.p, PCurrentEntity->loc.p, ENTITY_RENDER_DISTANCE);
+        const auto isVisibleStatus  = PCurrentEntity->status == STATUS_TYPE::NORMAL || PCurrentEntity->status == STATUS_TYPE::UPDATE;
+        const auto isAlwaysRelevant = PCurrentEntity->objtype == TYPE_NPC && static_cast<CNpcEntity*>(PCurrentEntity)->m_alwaysRelevant;
 
         const auto tryAddToSpawnList = [&]()
         {
@@ -892,7 +913,7 @@ void CZoneEntities::SpawnNPCs(CCharEntity* PChar)
             }
         };
 
-        if (isVisibleStatus && isInRange)
+        if (isVisibleStatus && (isInRange || isAlwaysRelevant))
         {
             tryAddToSpawnList();
         }
@@ -1310,33 +1331,6 @@ void CZoneEntities::TOTDChange(vanadiel_time::TOTD TOTD)
     TracyZoneScoped;
 
     m_zone->spawnHandler()->onTOTDChange(TOTD);
-
-    SCRIPTTYPE ScriptType = SCRIPT_NONE;
-
-    switch (TOTD)
-    {
-        case vanadiel_time::TOTD::DAWN:
-            ScriptType = SCRIPT_TIME_DAWN;
-            break;
-        case vanadiel_time::TOTD::DAY:
-            ScriptType = SCRIPT_TIME_DAY;
-            break;
-        case vanadiel_time::TOTD::DUSK:
-            ScriptType = SCRIPT_TIME_DUSK;
-            break;
-        case vanadiel_time::TOTD::EVENING:
-            ScriptType = SCRIPT_TIME_EVENING;
-            break;
-        default:
-            break;
-    }
-    if (ScriptType != SCRIPT_NONE)
-    {
-        FOR_EACH_PAIR_CAST_SECOND(CCharEntity*, PChar, m_charList)
-        {
-            charutils::CheckEquipLogic(PChar, ScriptType, TOTD);
-        }
-    }
 }
 
 void CZoneEntities::SavePlayTime()
