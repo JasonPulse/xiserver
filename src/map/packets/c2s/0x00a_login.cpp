@@ -108,6 +108,7 @@ void GP_CLI_COMMAND_LOGIN::process(MapSession* PSession, CCharEntity* PChar) con
 
         charutils::updateSession(PSession, PChar, currentZone);
         charutils::loadDeathTimestamp(PChar);
+        charutils::loadZoningFlag(PChar);
         charutils::SaveCharPosition(PChar);
         charutils::SaveZonesVisited(PChar);
         charutils::SavePlayTime(PChar);
