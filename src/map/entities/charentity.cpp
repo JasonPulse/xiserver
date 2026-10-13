@@ -1667,7 +1667,7 @@ void CCharEntity::OnAbility(CAbilityState& state, action_t& action)
         {
             recastReduction = std::chrono::seconds(PMeritPoints->GetMeritValue((MERIT_TYPE)PAbility->getMeritModID(), this));
 
-            if (PAbility->getID() == ABILITY_THIRD_EYE && StatusEffectContainer->HasStatusEffect(xi::StatusEffect::Seigan))
+            if (PAbility->getID() == ABILITY_THIRD_EYE && StatusEffectContainer->HasStatusEffect(EFFECT_SEIGAN))
             {
                 recastReduction = recastReduction / 2;
             }

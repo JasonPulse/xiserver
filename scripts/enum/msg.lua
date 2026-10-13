@@ -195,6 +195,7 @@ xi.msg.basic =
     SHADOW_ABSORB                   = 31,  -- .. of <target>'s shadows absorb the damage and disappear.
     NOT_ENOUGH_MP                   = 34,  -- The <player> does not have enough MP to cast (NULL).
     NO_NINJA_TOOLS                  = 35,  -- The <player> lacks the ninja tools to cast (NULL).
+    WAIT_LONGER_RED                 = 38,  -- You must wait longer to perform that action (but in red)
     UNABLE_TO_CAST_SPELLS           = 49,  -- The <player> is unable to cast spells.
     SKILL_REACHES_LEVEL             = 53,  -- <target>'s <skill> skill reaches level <level>.
     PARRIED                         = 70,  -- <target> parries <attacker>'s attack with his/her weapon.

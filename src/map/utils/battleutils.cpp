@@ -1735,7 +1735,7 @@ bool TryInterruptSpell(CBattleEntity* PAttacker, CBattleEntity* PDefender, CSpel
     }
 
     // Early return: Chainspell prevents interruptions.
-    if (PDefender->StatusEffectContainer->HasStatusEffect(xi::StatusEffect::Chainspell))
+    if (PDefender->StatusEffectContainer->HasStatusEffect(EFFECT_CHAINSPELL))
     {
         return false;
     }

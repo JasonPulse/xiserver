@@ -258,6 +258,7 @@ xi.mobSkill =
 
     CURSED_SPHERE_1               =  659,
     VENOM_1                       =  660,
+    SNOW_CLOUD_1                  =  661,
 
     KICK_BACK                     =  668,
     IMPLOSION                     =  669,

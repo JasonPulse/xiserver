@@ -1666,7 +1666,7 @@ ffa7af13af,2026-07-18,D,sql,1,,,Adjust Charybdis' job to Warrior
 9c229e0e10,2026-07-19,D,cpp,2,,,Core: Improve tombstone reports on Mac
 9f0ecf54bd,2026-07-19,C,lua,1,adopted,"upstream-harvest-2026-10, empty after earlier picks",Quests: Fix WOTG-WIN-1 reminder text
 a797a734ae,2026-07-19,C,lua,10,conflict,does not apply cleanly onto 9e6f10c2fb,Gigas BST Fixes
-ba0769e253,2026-07-19,D,lua,5,,,Introduce `npcUtil.tradeMatches()` and apply usage to some missions
+ba0769e253,2026-07-19,D,lua,5,adopted,"upstream-harvest-2026-10, dependency for npcUtil.tradeMatches; kept our ASA 05",Introduce `npcUtil.tradeMatches()` and apply usage to some missions
 bd4fd739f9,2026-07-19,D,other,6,,,Chore: Un-vendor wepoll
 be4a712ce7,2026-07-19,D,lua,1,,,Adjust Default Mog Locker State
 bfbd36d127,2026-07-19,D,cfg+lua,2,,,[lua] Add forced gathering wait server setting
@@ -2167,7 +2167,7 @@ d8aac24390,2026-08-20,D,tools,1,,,Right-align numeric values and format files in
 ab876e7aee,2026-08-21,D,lua,1,,,Make RSE gear not re-obtainable ever
 b3a0eaebea,2026-08-21,D,cpp+lua+mod,4,,,Refactors experience points.lua
 e56582c86a,2026-08-21,D,lua+sql,9,,,Angra Mainyu fight behavior
-f915c5da5a,2026-08-21,C,lua+sql,2,adopted,upstream-harvest-2026-10,[lua] Fix Aern Ranged Attack Message
+f915c5da5a,2026-08-21,C,lua+sql,2,skip,new file targets upstream mobRangedMove/processDamage API we lack,[lua] Fix Aern Ranged Attack Message
 0d3d357af3,2026-08-22,D,cpp,377,skip-large,"377 files, structural",Type content tags as an enum
 3145bff6db,2026-08-22,D,mod,1,,,[lua][module] Adjusts Ominous Cloud era list of accepted items module
 78fd41da1e,2026-08-22,D,lua+sql,4,,,[lua] [sql] Implement data-backed break rates for NQ/HQ HELM gear
